@@ -1,0 +1,16 @@
+{
+  "schemaFileName": "CAR_D99B_IFTMBF.xsd",
+  "sefFileName": "CAR_D99B_IFTMBF.sef",
+  "escapeChar": "?",
+  "subelementDelimiter": ":",
+  "elementDelimiter": "+",
+  "recordDelimiter": "0x27",
+  "isFieldValueTrimRightSpace":"false",
+  "isFieldValueTrimLeadingSpace":"false",
+  "devName": "Ben",
+  "isOutgoingEDI": true,
+  "ediVersionInfo": "d99b",
+  "teamName": "CAR",
+  "msgName": "IFTMBF",
+  "ediCustomerSpecialInfo": "ALL"
+}

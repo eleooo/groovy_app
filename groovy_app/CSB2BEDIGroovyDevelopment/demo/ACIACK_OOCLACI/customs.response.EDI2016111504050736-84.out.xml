@@ -1,0 +1,44 @@
+<ns0:CustomsManifestResponse xmlns:ns0="http://www.cargosmart.com/CustomsManifestResponse">
+    <ns0:Header>
+        <ns0:MsgDT>
+            <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-14T23:01:00+08:00</ns1:GMT>
+        </ns0:MsgDT>
+        <ns0:MsgDirection>I</ns0:MsgDirection>
+        <ns0:MsgType>CMANRES</ns0:MsgType>
+        <ns0:SenderID>CSACI</ns0:SenderID>
+        <ns0:ReceiverID>CARGOSMART</ns0:ReceiverID>
+        <ns0:Action>ACC</ns0:Action>
+        <ns0:InterchangeMessageID>ZIAN82968800H8752ZIAN82968800ISVBH59XXXX</ns0:InterchangeMessageID>
+        <ns0:TargetCustomCountryCode>CA</ns0:TargetCustomCountryCode>
+    </ns0:Header>
+    <ns0:Body>
+        <ns0:TransactionInformation>
+            <ns0:MessageID>EDI2016111504050736-84,ec2010d7-2a40-4f31-84fc-dcd745635870</ns0:MessageID>
+        </ns0:TransactionInformation>
+        <ns0:GeneralInformation>
+            <ns0:UMR>H8752ZIAN82968800ISVBH59XXXX</ns0:UMR>
+            <ns0:Issuer>
+                <ns0:SCAC>8752</ns0:SCAC>
+            </ns0:Issuer>
+        </ns0:GeneralInformation>
+        <ns0:CarrierInformation>
+            <ns0:SCACCode>8752</ns0:SCACCode>
+        </ns0:CarrierInformation>
+        <ns0:Report>
+            <ns1:SCAC xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">8752</ns1:SCAC>
+            <ns1:TransmissionDT xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">2016-11-14T23:01:00+08:00</ns1:TransmissionDT>
+            <ns1:TotalManifests xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">1</ns1:TotalManifests>
+            <ns1:TotalPorts xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">1</ns1:TotalPorts>
+            <ns1:TotalBills xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">1</ns1:TotalBills>
+            <ns1:TotalHBL xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">0</ns1:TotalHBL>
+            <ns1:TotalAmendments xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">0</ns1:TotalAmendments>
+            <ns1:TotalGH xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">0</ns1:TotalGH>
+            <ns1:TotalBillsRejected xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">1</ns1:TotalBillsRejected>
+            <ns1:TotalBillsAccepted xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">0</ns1:TotalBillsAccepted>
+            <ns1:TotalRecords xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">1</ns1:TotalRecords>
+            <ns1:TotalExportTxn xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">0</ns1:TotalExportTxn>
+            <ns1:TotalExportTxnRejected xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">0</ns1:TotalExportTxnRejected>
+            <ns1:TotalExportTxnAccepted xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">0</ns1:TotalExportTxnAccepted>
+        </ns0:Report>
+    </ns0:Body>
+</ns0:CustomsManifestResponse>

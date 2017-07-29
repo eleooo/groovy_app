@@ -1,0 +1,17 @@
+{
+  "schemaFileName": "CS-SYSINT-CUST-SI-304-4010-20170104-yucl.xsd",
+  "sefFileName": "CS-SYSINT-CUST-SI-304-4010-20170104-yucl.sef",
+  "escapeChar": "",
+  "x12ReplacementChar":"0x20",
+  "subelementDelimiter": "",
+  "elementDelimiter": "*",
+  "recordDelimiter": "~",
+  "isFieldValueTrimRightSpace":"false",
+  "isFieldValueTrimLeadingSpace":"false",
+  "devName": "Claire",
+  "isOutgoingEDI": false,
+  "ediVersionInfo": "4010",
+  "teamName": "CUS",
+  "msgName": "304",
+  "ediCustomerSpecialInfo": "CS"
+}

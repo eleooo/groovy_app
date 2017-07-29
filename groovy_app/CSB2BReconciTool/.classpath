@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_77"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/activation.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/b2b-beluga-ediparser-1.8.9.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/commons-compress-1.9.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/commons-configuration-1.5.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/commons-net-3.3.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/csb2b-edi-common-core-1.0.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/groovy-all-2.4.3.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/gson-2.3.1.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/java-diff-utils-1.2.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/juniversalchardet-1.0.3.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/mail.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/poi-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/poi-ooxml-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/poi-ooxml-schemas-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/stax-api-1.0.1.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/xdb6.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="/CSB2BEDIGroovyDevelopment/lib/simple-java-mail-4.2.3-java6-release.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

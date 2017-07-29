@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by XMLSpy 2007 Enterprise Ed. Release 3, Concurrent for 15 users (with SMP from 2006-11-17 to 2007-11-18) (Orient Overseas Container Line Ltd.) -->
+<ShippingInstructions>
+	<InterchangeControlHeader>
+		<ControlNumber>100001</ControlNumber>
+		<SenderId>GEMINICORP</SenderId>
+		<ReceiverId>CARGOSMART</ReceiverId>
+		<DateTime>20080918083000</DateTime>
+		<ControlVersion>4010</ControlVersion>
+		<UsageIndicator>P</UsageIndicator>
+		<MessageSessionId>100001</MessageSessionId>
+	</InterchangeControlHeader>
+	<SIBillOfLading>
+		<GeneralInfo>
+			<TransactionInfo>
+				<BatchNumber>1</BatchNumber>
+				<MessageSender>GEMINICORP</MessageSender>
+				<MessageRecipient>CARGOSMART</MessageRecipient>
+				<MessageID>SIXML</MessageID>
+				<DateCreated TimeZone="UTC">20160406083000</DateCreated>
+				<FileName/>
+				<DataSource>a</DataSource>
+				<Version>a</Version>
+			</TransactionInfo>
+			<ActionType>NEW</ActionType>
+			<BLNumber>3038818360</BLNumber>
+			<SIReferenceNumber>TPE7002181111111111111111111131</SIReferenceNumber>
+			<SCAC>OOLU</SCAC>
+			<OwnedBy>GEMINICORP</OwnedBy>
+		</GeneralInfo>
+		<BLDetails>
+			<BookingInfo>
+				<BookingNumber>1003855</BookingNumber>
+			</BookingInfo>
+			<UserReferences>
+				<References>
+					<ReferenceNumber>100000</ReferenceNumber>
+					<ReferenceType>BN</ReferenceType>
+					<ReferenceDescription>Booking Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>111111</ReferenceNumber>
+					<ReferenceType>SO</ReferenceType>
+					<ReferenceDescription>Shipper order number </ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>22222</ReferenceNumber>
+					<ReferenceType>ON</ReferenceType>
+					<ReferenceDescription>Purchase order number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>33333</ReferenceNumber>
+					<ReferenceType>FF</ReferenceType>
+					<ReferenceDescription>Forwarder's/Agent's reference</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>44444</ReferenceNumber>
+					<ReferenceType>IV</ReferenceType>
+					<ReferenceDescription>Invoice number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>555555</ReferenceNumber>
+					<ReferenceType>CT</ReferenceType>
+					<ReferenceDescription>Contract Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>666666</ReferenceNumber>
+					<ReferenceType>CR</ReferenceType>
+					<ReferenceDescription>Customer Reference Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>77777</ReferenceNumber>
+					<ReferenceType>SI</ReferenceType>
+					<ReferenceDescription>Shipper's Identifying Number For Shipment (SID) </ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>88888</ReferenceNumber>
+					<ReferenceType>BM</ReferenceType>
+					<ReferenceDescription>Bill of Lading Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>99999</ReferenceNumber>
+					<ReferenceType>FI</ReferenceType>
+					<ReferenceDescription>File Identifier</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>101010</ReferenceNumber>
+					<ReferenceType>FI</ReferenceType>
+					<ReferenceDescription>Export Reference Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>121212</ReferenceNumber>
+					<ReferenceType>CG</ReferenceType>
+					<ReferenceDescription>Consignee’s order number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>131313</ReferenceNumber>
+					<ReferenceType>GN</ReferenceType>
+					<ReferenceDescription>Government Reference Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>141414</ReferenceNumber>
+					<ReferenceType>TN</ReferenceType>
+					<ReferenceDescription>Transaction Reference Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>151515</ReferenceNumber>
+					<ReferenceType>EX</ReferenceType>
+					<ReferenceDescription>Export Permit Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceNumber>161616</ReferenceNumber>
+					<ReferenceType>PR</ReferenceType>
+					<ReferenceDescription>Quotation Number</ReferenceDescription>
+				</References>
+			</UserReferences>
+			<CarrierRateReferences>
+				<ReferenceNumber>DUMMY123456</ReferenceNumber>
+				<ReferenceType>TS</ReferenceType>
+				<ReferenceDescription>Dummy for testing</ReferenceDescription>
+			</CarrierRateReferences>
+			<LegalParties>
+				<Party>
+					<PartyType>SH</PartyType>
+					<PartyName>OOCL LOGISTICS (TAIWAN) LTD. O/B</PartyName>
+					<CompanyID>cdeddfaerewa</CompanyID>
+					<CarrierCustomerCode>FSH</CarrierCustomerCode>
+					<PartyLocation>
+						<Address>
+							<AddressLines>OVERSEAS TECHNOLOGY LIMITED C/O</AddressLines>
+							<AddressLines>VELO ENTERPRISE CO., LTD.</AddressLines>
+							<AddressLines>TEL: 886 2 25067088 FAX: 886 2</AddressLines>
+							<AddressLines>25064958</AddressLines>
+						</Address>
+						<Street>zhuhai software park</Street>
+						<City>Changhwa</City>
+						<County>Jija</County>
+						<StateProvince>Changhwa</StateProvince>
+						<CountryCode>TW</CountryCode>
+						<CountryName>Taiwan</CountryName>
+						<LocationCode>
+							<MutuallyDefinedCode>121212</MutuallyDefinedCode>
+							<UNLocationCode>TWCHW</UNLocationCode>
+							<SchedKDCode Type="D">12345</SchedKDCode>
+						</LocationCode>
+						<PostalCode>519000</PostalCode>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>first</FirstName>
+						<LastName>last</LastName>
+						<Phone>
+							<CountryCode>086</CountryCode>
+							<AreaCode>756</AreaCode>
+							<Number>999999</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>086</CountryCode>
+							<AreaCode>756</AreaCode>
+							<Number>563201</Number>
+						</Fax>
+						<Email>1111.0000@2222.333</Email>
+						<Type>InBound</Type>
+					</ContactPerson>
+					<PartyText>shipper text</PartyText>
+				</Party>
+				<Party>
+					<PartyType>CN</PartyType>
+					<PartyName>SERFAS</PartyName>
+					<CompanyID/>
+					<CarrierCustomerCode>GEMINIBE</CarrierCustomerCode>
+					<PartyLocation>
+						<Address>
+							<AddressLines>29752 AVENIDA DE LAS BANDERAS</AddressLines>
+							<AddressLines>RANCHO SANTA MARGARITA,</AddressLines>
+							<AddressLines>CA 92688</AddressLines>
+						</Address>
+						<Street/>
+						<City/>
+						<County/>
+						<StateProvinceCode/>
+						<StateProvince/>
+						<CountryCode/>
+						<CountryName/>
+						<LocationCode>
+							<MutuallyDefinedCode/>
+							<UNLocationCode/>
+							<SchedKDCode Type="K">1234</SchedKDCode>
+						</LocationCode>
+						<PostalCode/>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>DORIS</FirstName>
+						<LastName>HERNANDEZ</LastName>
+						<Phone>
+							<CountryCode>1</CountryCode>
+							<AreaCode>949</AreaCode>
+							<Number>8376187</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>1</CountryCode>
+							<AreaCode>800</AreaCode>
+							<Number>8259641</Number>
+						</Fax>
+						<Email/>
+						<Type>InBound</Type>
+					</ContactPerson>
+					<PartyText/>
+					<FMCNumber/>
+				</Party>
+				<Party>
+					<PartyType>N2</PartyType>
+					<PartyName>(N2 for Party)</PartyName>
+					<CompanyID/>
+					<CarrierCustomerCode/>
+					<PartyLocation>
+						<Address>
+							<AddressLines>320 PINE AVENUE</AddressLines>
+							<AddressLines>SUITE 1010</AddressLines>
+							<AddressLines>LONG BEACH, CA. 90802</AddressLines>
+						</Address>
+						<Street/>
+						<City/>
+						<County/>
+						<StateProvinceCode/>
+						<StateProvince/>
+						<CountryCode/>
+						<CountryName/>
+						<LocationCode>
+							<MutuallyDefinedCode/>
+							<UNLocationCode/>
+							<SchedKDCode Type="K">1234</SchedKDCode>
+						</LocationCode>
+						<PostalCode/>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>LORIE</FirstName>
+						<LastName>ADAMS</LastName>
+						<Phone>
+							<CountryCode>1</CountryCode>
+							<AreaCode>562</AreaCode>
+							<Number>4367979</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>1</CountryCode>
+							<AreaCode>562</AreaCode>
+							<Number>4367979</Number>
+						</Fax>
+						<Email/>
+						<Type>InBound</Type>
+					</ContactPerson>
+					<PartyText/>
+					<FMCNumber/>
+				</Party>
+				<Party>
+					<PartyType>FW</PartyType>
+					<PartyName>Forwarder</PartyName>
+					<CompanyID/>
+					<CarrierCustomerCode/>
+					<PartyLocation>
+						<Address>
+							<AddressLines>320 PINE AVENUE</AddressLines>
+							<AddressLines>SUITE 1010</AddressLines>
+							<AddressLines>LONG BEACH, CA. 90802</AddressLines>
+						</Address>
+						<Street/>
+						<City/>
+						<County/>
+						<StateProvinceCode/>
+						<StateProvince/>
+						<CountryCode/>
+						<CountryName/>
+						<LocationCode>
+							<MutuallyDefinedCode/>
+							<UNLocationCode/>
+							<SchedKDCode Type="K">1234</SchedKDCode>
+						</LocationCode>
+						<PostalCode/>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>LORIE</FirstName>
+						<LastName>ADAMS</LastName>
+						<Phone>
+							<CountryCode>1</CountryCode>
+							<AreaCode>562</AreaCode>
+							<Number>4367979</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>1</CountryCode>
+							<AreaCode>562</AreaCode>
+							<Number>4367979</Number>
+						</Fax>
+						<Email/>
+						<Type>InBound</Type>
+					</ContactPerson>
+					<PartyText/>
+					<FMCNumber>1234</FMCNumber>
+				</Party>
+			</LegalParties>
+			<RouteInformation>
+				<VesselVoyageInformation>
+					<ServiceName Code="ASW">1234</ServiceName>
+					<VoyageNumberDirection>33E35</VoyageNumberDirection>
+					<VesselInformation>
+						<VesselCode CallSign="2333" LloydsCode="9262716">String</VesselCode>
+						<VesselName>NYK ARGUS</VesselName>
+						<VesselRegistrationCountry/>
+					</VesselInformation>
+					<External>
+						<VesselCode Type="L">1234</VesselCode>
+						<VoyageNumber>15E25</VoyageNumber>
+					</External>
+					<PreCarriage>dummy carrier</PreCarriage>
+					<VesselVoyageText>NYK ARGUS 33E35</VesselVoyageText>
+					<TrafficMode>
+						<Description>traffi</Description>
+						<OutBound>LCL</OutBound>
+						<InBound>LCL</InBound>
+					</TrafficMode>
+					<Haulage>Pier-to-Door</Haulage>
+				</VesselVoyageInformation>
+				<Location>
+					<FunctionCode>POL</FunctionCode>
+					<LocationName>SHEKOU</LocationName>
+					<LocationDetails>
+						<Address>
+							<AddressLines>1230654789</AddressLines>
+							<AddressLines>560213</AddressLines>
+						</Address>
+						<Street>dftretretfe</Street>
+						<City>Shekou</City>
+						<County>Shenzhen</County>
+						<StateProvinceCode>GD</StateProvinceCode>
+						<StateProvince>Guangdong</StateProvince>
+						<CountryCode>CN</CountryCode>
+						<CountryName>China</CountryName>
+						<LocationCode>
+							<MutuallyDefinedCode>57018</MutuallyDefinedCode>
+							<UNLocationCode>USLAX</UNLocationCode>
+							<SchedKDCode Type="K">1234</SchedKDCode>
+						</LocationCode>
+						<PostalCode>235689</PostalCode>
+					</LocationDetails>
+				</Location>
+				<Location>
+					<FunctionCode>POD</FunctionCode>
+					<LocationName>JIUZHOU</LocationName>
+					<LocationDetails>
+						<Address>
+							<AddressLines>148499449</AddressLines>
+							<AddressLines>560289</AddressLines>
+						</Address>
+						<Street>gewsdetretfe</Street>
+						<City>ZhuJi</City>
+						<County>ZhieP</County>
+						<StateProvinceCode>GD</StateProvinceCode>
+						<StateProvince>Guangdong</StateProvince>
+						<CountryCode>CN</CountryCode>
+						<LocationCode>
+							<MutuallyDefinedCode/>
+							<UNLocationCode>OOLAX</UNLocationCode>
+							<SchedKDCode Type="K">1234</SchedKDCode>
+						</LocationCode>
+						<PostalCode/>
+					</LocationDetails>
+				</Location>
+			</RouteInformation>
+			<EquipmentInformation>
+				<Containers>
+					<AssociatedBookingNumber>1003861</AssociatedBookingNumber>
+					<ContainerType>22T0</ContainerType>
+					<ContainerNumber CheckDigit="1">OOLU902402</ContainerNumber>
+					<SealNumber Type="HS" Name="GIL">OOLJ258143</SealNumber>
+					<Weight Units="KGS" Qualifier="GROSS">12328.2431</Weight>
+					<Volume Units="CBM">75.0963</Volume>
+					<TrafficMode>
+						<Description/>
+						<OutBound>LCL</OutBound>
+						<InBound>LCL</InBound>
+					</TrafficMode>
+				</Containers>
+			</EquipmentInformation>
+			<CargoInformation>
+				<CargoItems>
+					<CargoNature>GC</CargoNature>
+					<Package Type="CO">1258</Package>
+					<PackageDescription>Seieoering</PackageDescription>
+					<PackageMaterial>Edodooe</PackageMaterial>
+					<Weight Units="KGS" Qualifier="GROSS">12328.2431</Weight>
+					<Volume Units="CBM">75.0963</Volume>
+					<CargoDescription>
+						<DescriptionLine>CARGO DESCRIPTION 11</DescriptionLine>
+						<DescriptionLine>CARGO DESCRIPTION LINE 2</DescriptionLine>
+						<DescriptionLine>CARGO DESCRIPTION LINE 3</DescriptionLine>
+					</CargoDescription>
+					<MarksAndNumbers>
+						<MarksAndNumbersLine>MARKS 1</MarksAndNumbersLine>
+						<MarksAndNumbersLine>MARKS 2</MarksAndNumbersLine>
+						<MarksAndNumbersLine>MARKS 3</MarksAndNumbersLine>
+					</MarksAndNumbers>
+					<HarmonizedTariffSchedule>111111</HarmonizedTariffSchedule>
+					<Remarks>NO WOOD PACKAGING</Remarks>
+					<CargoDetails>
+						<AssociatedBookingNumber>1003861</AssociatedBookingNumber>
+						<ContainerNumber CheckDigit="1">OOLU902402</ContainerNumber>
+						<Package Type="CT">1232</Package>
+						<Weight Qualifier="GROSS" Units="KGS">9116.8</Weight>
+						<Volume Units="CBM">67.76</Volume>
+						<MarksAndNumbers>
+							<MarksAndNumbersLine>DEPT. 18/MODULAR CAT #0030</MarksAndNumbersLine>
+							<MarksAndNumbersLine>PRE-LIT TREES</MarksAndNumbersLine>
+							<MarksAndNumbersLine>(H) 6.5'FT GREEN COLORADO PINE</MarksAndNumbersLine>
+							<MarksAndNumbersLine>MULTI</MarksAndNumbersLine>
+							<MarksAndNumbersLine>WAL-MART</MarksAndNumbersLine>
+							<MarksAndNumbersLine>DEPARTMENT #: 00018</MarksAndNumbersLine>
+							<MarksAndNumbersLine>SUPPLIER STOCK #: M-PCD042301</MarksAndNumbersLine>
+							<MarksAndNumbersLine>SHIPPING CASE QUANTITY : 1 PC</MarksAndNumbersLine>
+							<MarksAndNumbersLine>CASE GROSS WEIGHT : KGS</MarksAndNumbersLine>
+							<MarksAndNumbersLine>CASE VOLUMN : CBM</MarksAndNumbersLine>
+							<MarksAndNumbersLine>MADE IN CHINA</MarksAndNumbersLine>
+						</MarksAndNumbers>
+					</CargoDetails>
+				</CargoItems>
+			</CargoInformation>
+		</BLDetails>
+		<SummaryDetails>
+			<BLInformation BLType="OBL" FreightType="NonFreighted">
+				<BLNumber>OOLU20070383</BLNumber>
+				<OnBoardBLDate Type="OnBoardVessel">20080518000000</OnBoardBLDate>
+				<DraftInformation>
+					<ModeOfTransmission>ELECTRONICALLY</ModeOfTransmission>
+					<Recipient Type="SHP"/>
+					<FaxNumber>
+						<CountryCode>086</CountryCode>
+						<AreaCode>756</AreaCode>
+						<Number>236598</Number>
+					</FaxNumber>
+				</DraftInformation>
+				<OriginalBL>
+					<ModeOfTransmission>ELECTRONICALLY</ModeOfTransmission>
+					<OtherInformation>DUMMY</OtherInformation>
+				</OriginalBL>
+				<PaymentStatus>Collect</PaymentStatus>
+				<BLCargoDescription>blcargodescription</BLCargoDescription>
+				<Remarks>
+					<RemarksLines>THIS SHIPMENT CONTAINS NO WOOD PACKAGING MATERIAL</RemarksLines>
+					<RemarksLines>LOCAL CHARGE WILL SETTLE PAYMENT IN USD AT HONG KONG</RemarksLines>
+				</Remarks>
+				<SpecialInstructions>
+					<SpecialHandling>1111</SpecialHandling>
+					<SpecialHandling>222222</SpecialHandling>
+					<SpecialHandling>333333</SpecialHandling>
+				</SpecialInstructions>
+				<SIDistribution>
+					<SIBillOfLadingDistribution DocType="BC" FreightType="NonFreighted">
+						<PartyRole>SH</PartyRole>
+						<NumberOfCopies>1
+						</NumberOfCopies>
+					</SIBillOfLadingDistribution>
+				</SIDistribution>
+			</BLInformation>
+			<Certifications>
+				<CertificationClauseText Code="01">20</CertificationClauseText>
+				<CertificationClauseText Code="02">2222</CertificationClauseText>
+			</Certifications>
+			<Charges Code="10" Category="20" SubCategory="30" Type="COLLECT">
+				<PayableAt>Destination</PayableAt>
+				<PaidBy>
+					<PartyType>N2</PartyType>
+					<PartyName>(N2 for PaidBy)</PartyName>
+					<CompanyID>2365874520</CompanyID>
+					<CarrierCustomerCode>23657023</CarrierCustomerCode>
+					<PartyLocation>
+						<Address>
+							<AddressLines>111111</AddressLines>
+							<AddressLines>22222</AddressLines>
+						</Address>
+						<Street>dummystreet</Street>
+						<City>zhuhai</City>
+						<County>zhuhai</County>
+						<StateProvinceCode>GD</StateProvinceCode>
+						<StateProvince>Guangdong</StateProvince>
+						<CountryCode>CN</CountryCode>
+						<CountryName>China</CountryName>
+						<LocationCode>
+							<MutuallyDefinedCode>123456</MutuallyDefinedCode>
+							<UNLocationCode>CNZHA</UNLocationCode>
+							<SchedKDCode Type="D">12365</SchedKDCode>
+						</LocationCode>
+						<PostalCode>519000</PostalCode>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>FIR</FirstName>
+						<LastName>LAST</LastName>
+						<Phone>
+							<CountryCode>086</CountryCode>
+							<AreaCode>756</AreaCode>
+							<Number>45698</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>265</CountryCode>
+							<AreaCode>2365</AreaCode>
+							<Number>569874230</Number>
+						</Fax>
+						<Email>2365.02@21.36</Email>
+						<Type>OutBound</Type>
+					</ContactPerson>
+				</PaidBy>
+			</Charges>
+			<PaperWork>
+				<RequestedDocuments DocumentType="OBL">
+					<NoOfCopies>6</NoOfCopies>
+					<ModeOfTransmission>EDI</ModeOfTransmission>
+					<FaxNumber>
+						<CountryCode>236</CountryCode>
+						<AreaCode>23659</AreaCode>
+						<Number>23601456</Number>
+					</FaxNumber>
+					<OtherInformation>OTHERS</OtherInformation>
+				</RequestedDocuments>
+			</PaperWork>
+		</SummaryDetails>
+	</SIBillOfLading>
+</ShippingInstructions>

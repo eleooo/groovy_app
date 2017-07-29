@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ContainerMovement xmlns:ns0="http://www.cargosmart.com/route">
+    <ns0:Header>
+        <ns1:MsgDT xmlns:ns1="http://www.cargosmart.com/common">
+            <ns1:GMT>2016-10-31T01:21:16.373+08:00</ns1:GMT>
+            <ns1:LocDT TimeZone="HKT" CSTimeZone="HKT">2016-10-31T09:21:16.373+08:00</ns1:LocDT>
+        </ns1:MsgDT>
+        <ns1:MsgDirection xmlns:ns1="http://www.cargosmart.com/common">O</ns1:MsgDirection>
+        <ns1:MsgType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:MsgType>
+        <ns1:SenderID xmlns:ns1="http://www.cargosmart.com/common">CargoSmart</ns1:SenderID>
+        <ns1:ReceiverID xmlns:ns1="http://www.cargosmart.com/common">EMERSONAPLL</ns1:ReceiverID>
+        <ns1:Action xmlns:ns1="http://www.cargosmart.com/common">NEW</ns1:Action>
+        <ns1:Version xmlns:ns1="http://www.cargosmart.com/common">24</ns1:Version>
+        <ns1:InterchangeMessageID xmlns:ns1="http://www.cargosmart.com/common">EMERSONAPLL_CT_20161031092116_97650510</ns1:InterchangeMessageID>
+        <ns1:DataSource xmlns:ns1="http://www.cargosmart.com/common">CS2 db</ns1:DataSource>
+    </ns0:Header>
+    <ns0:Body>
+        <ns0:TransactionInformation>
+            <ns1:MessageID xmlns:ns1="http://www.cargosmart.com/common">EMERSONAPLL_CT_20161031092116_97650510_97650510</ns1:MessageID>
+            <ns1:InterchangeTransactionID xmlns:ns1="http://www.cargosmart.com/common">97650510</ns1:InterchangeTransactionID>
+        </ns0:TransactionInformation>
+        <ns0:Event>
+            <ns0:CarrEventCode>Full received by carrier</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_rcvd</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Laden Container received by carrier</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>NS - Cincinnati</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Cincinnati</ns0:City>
+                    <ns0:County>Hamilton</ns0:County>
+                    <ns0:State>Ohio</ns0:State>
+                    <ns0:Country>United States</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">USCVG</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">D</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">4102</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2540449</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">OH</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">NA</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-28T14:49:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="EDT">2016-10-28T10:49:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CurrentShipmentLeg>1</ns0:CurrentShipmentLeg>
+            <ns0:CarrierUniqueMovementID>30000081396960-1-26</ns0:CarrierUniqueMovementID>
+            <ns0:ContraIndicator>INITIAL</ns0:ContraIndicator>
+            <ns0:CS1Event>CS020</ns0:CS1Event>
+            <ns0:ResendInformation>
+                <ns0:Description>CO - Missing BL Number</ns0:Description>
+                <ns0:EDIFileName>EDXAPLUNET20161029011605.315</ns0:EDIFileName>
+            </ns0:ResendInformation>
+        </ns0:Event>
+        <ns0:GeneralInformation>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Truck</ns0:TransportMode>
+            <ns0:TransportCarrier>EAGLE SYSTEMS INC.</ns0:TransportCarrier>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:Label>Cargo Received</ns0:Label>
+            <ns0:ProposedAction>ADD_CNTR_STATUS_NOTIFY</ns0:ProposedAction>
+            <ns0:TimeOfIssue>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-28T14:49:00+08:00</ns1:GMT>
+            </ns0:TimeOfIssue>
+            <ns0:IsCSCustomer>1</ns0:IsCSCustomer>
+        </ns0:GeneralInformation>
+        <ns0:Container>
+            <ns0:ContainerNumber>OOLU789394</ns0:ContainerNumber>
+            <ns0:ContainerCheckDigit>1</ns0:ContainerCheckDigit>
+            <ns0:CarrCntrSizeType>42G1</ns0:CarrCntrSizeType>
+            <ns0:CSContainerSizeType>42GP</ns0:CSContainerSizeType>
+            <ns0:Seal>
+                <ns1:SealType xmlns:ns1="http://www.cargosmart.com/common">TM</ns1:SealType>
+                <ns1:SealNumber xmlns:ns1="http://www.cargosmart.com/common">N325544</ns1:SealNumber>
+            </ns0:Seal>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">C</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:CSS_CNTR_UUID>2000000003992882395</ns0:CSS_CNTR_UUID>
+            <ns0:CS1ContainerSizeType>40GP</ns0:CS1ContainerSizeType>
+            <ns0:EmptyReturnFacilityCode>SHA17</ns0:EmptyReturnFacilityCode>
+        </ns0:Container>
+        <ns0:BookingGeneralInfo>
+            <ns0:CarrierBookingNumber>2579854100</ns0:CarrierBookingNumber>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">C</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:BookingOffice>Chicago</ns0:BookingOffice>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">PK</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">14</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">1X40'CONTAINER S.T.C. 
+COMPRESSOR PARTS</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BookingGeneralInfo>
+        <ns0:BLGeneralInfo>
+            <ns0:BLNumber>2579854100</ns0:BLNumber>
+            <ns0:BLIssueDT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common">2016-11-10T00:00:00+08:00</ns1:LocDT>
+            </ns0:BLIssueDT>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">C</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:BLSVVD>
+                <ns1:Service xmlns:ns1="http://www.cargosmart.com/common">CC4</ns1:Service>
+                <ns1:Vessel xmlns:ns1="http://www.cargosmart.com/common">NAQ</ns1:Vessel>
+                <ns1:VesselName xmlns:ns1="http://www.cargosmart.com/common">NYK AQUARIUS</ns1:VesselName>
+                <ns1:Voyage xmlns:ns1="http://www.cargosmart.com/common">077</ns1:Voyage>
+                <ns1:Direction xmlns:ns1="http://www.cargosmart.com/common">W</ns1:Direction>
+                <ns0:ServiceName>CENTRAL CHINA 4</ns0:ServiceName>
+            </ns0:BLSVVD>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">PK</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">14</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">1X40'CONTAINER S.T.C. COMPRESSOR PARTS</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BLGeneralInfo>
+        <ns0:Route>
+            <ns0:POR>
+                <ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Sidney</ns1:LocationName>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Sidney</ns1:City>
+                    <ns1:County>Shelby</ns1:County>
+                    <ns1:State>Ohio</ns1:State>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>USSDN</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>USSDN</ns1:UNLocationCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>CVG21</ns1:FacilityCode>
+                    <ns1:FacilityName>NS - Cincinnati</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2547082</ns1:CSParentCityID>
+                    <ns1:CSStateCode>OH</ns1:CSStateCode>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>NA</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+            </ns0:POR>
+            <ns0:FND>
+                <ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Shanghai</ns1:LocationName>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Shanghai</ns1:City>
+                    <ns1:Country>China</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>CNSHA</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>CNSHA</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>57035</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>SHA07</ns1:FacilityCode>
+                    <ns1:FacilityName>Shanghai Port Container Co., Ltd. (WaiGaoQiao)</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2530967</ns1:CSParentCityID>
+                    <ns1:CSStateCode>SH</ns1:CSStateCode>
+                    <ns1:CSCountryCode>CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>AS</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+                <ns0:ArrivalDT Indicator="E">
+                    <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-26T09:00:00+08:00</ns1:GMT>
+                    <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-11-26T17:00:00+08:00</ns1:LocDT>
+                </ns0:ArrivalDT>
+            </ns0:FND>
+            <ns0:FirstPOL>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Los Angeles</ns1:PortName>
+                    <ns1:PortCode>LAS</ns1:PortCode>
+                    <ns1:City>Los Angeles</ns1:City>
+                    <ns1:County>Los Angeles</ns1:County>
+                    <ns1:State>California</ns1:State>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>USLAX</ns1:UNLocationCode>
+                        <ns1:SchedKDType>D</ns1:SchedKDType>
+                        <ns1:SchedKDCode>2704</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:CSPortID>426</ns1:CSPortID>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>LAS03</ns1:FacilityCode>
+                    <ns1:FacilityName>Yusen Terminals, Inc. (Yti)</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSStateCode>CA</ns0:CSStateCode>
+                <ns0:CSParentCityID>2532344</ns0:CSParentCityID>
+            </ns0:FirstPOL>
+            <ns0:LastPOD>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Shanghai</ns1:PortName>
+                    <ns1:PortCode>SHA</ns1:PortCode>
+                    <ns1:City>Shanghai</ns1:City>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>CNSHA</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>57035</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>China</ns1:Country>
+                    <ns1:CSPortID>102</ns1:CSPortID>
+                    <ns1:CSCountryCode>CN</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>SHA07</ns1:FacilityCode>
+                    <ns1:FacilityName>Shanghai Port Container Co., Ltd. (WaiGaoQiao)</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSStateCode>SH</ns0:CSStateCode>
+                <ns0:CSParentCityID>2530967</ns0:CSParentCityID>
+            </ns0:LastPOD>
+            <ns0:ArrivalAtFinalHub Indicator="E">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-26T09:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-11-26T17:00:00+08:00</ns1:LocDT>
+            </ns0:ArrivalAtFinalHub>
+            <ns0:FullReturnCutoffDT Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-28T12:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EDT" CSTimeZone="EDT">2016-10-28T08:00:00+08:00</ns1:LocDT>
+            </ns0:FullReturnCutoffDT>
+            <ns0:CargoReceiptDT Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-28T14:49:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="EDT">2016-10-28T10:49:00+08:00</ns1:LocDT>
+            </ns0:CargoReceiptDT>
+            <ns0:CargoDeliveryDT Indicator="E">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-26T09:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-11-26T17:00:00+08:00</ns1:LocDT>
+            </ns0:CargoDeliveryDT>
+            <ns0:OceanLeg>
+                <ns0:LegSeq>1</ns0:LegSeq>
+                <ns0:POL>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Los Angeles</ns1:PortName>
+                        <ns1:City>Los Angeles</ns1:City>
+                        <ns1:County>Los Angeles</ns1:County>
+                        <ns1:State>California</ns1:State>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>USLAX</ns1:UNLocationCode>
+                            <ns1:SchedKDType>D</ns1:SchedKDType>
+                            <ns1:SchedKDCode>2704</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>United States</ns1:Country>
+                        <ns1:CSPortID>426</ns1:CSPortID>
+                        <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>LAS03</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:DepartureDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-10T11:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="PST" CSTimeZone="PST">2016-11-10T03:00:00+08:00</ns1:LocDT>
+                    </ns0:DepartureDT>
+                    <ns0:CSStateCode>CA</ns0:CSStateCode>
+                    <ns0:CSParentCityID>2532344</ns0:CSParentCityID>
+                </ns0:POL>
+                <ns0:POD>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Shanghai</ns1:PortName>
+                        <ns1:City>Shanghai</ns1:City>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>CNSHA</ns1:UNLocationCode>
+                            <ns1:SchedKDType>K</ns1:SchedKDType>
+                            <ns1:SchedKDCode>57035</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>China</ns1:Country>
+                        <ns1:CSPortID>102</ns1:CSPortID>
+                        <ns1:CSCountryCode>CN</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>SHA07</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:ArrivalDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-26T01:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-11-26T09:00:00+08:00</ns1:LocDT>
+                    </ns0:ArrivalDT>
+                    <ns0:CSStateCode>SH</ns0:CSStateCode>
+                    <ns0:CSParentCityID>2530967</ns0:CSParentCityID>
+                </ns0:POD>
+                <ns0:SVVD>
+                    <ns0:Loading>
+                        <ns0:Service>CC4</ns0:Service>
+                        <ns0:ServiceName>CENTRAL CHINA 4</ns0:ServiceName>
+                        <ns0:Vessel>NAQ</ns0:Vessel>
+                        <ns0:VesselName>NYK AQUARIUS</ns0:VesselName>
+                        <ns0:Voyage>077</ns0:Voyage>
+                        <ns0:Direction>West</ns0:Direction>
+                        <ns0:LloydsNumber>9262704</ns0:LloydsNumber>
+                        <ns0:CallSign>HPPZ</ns0:CallSign>
+                        <ns0:RegistrationCountry>Panama</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>PA</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>077W</ns0:ExternalVoyage>
+                    </ns0:Loading>
+                    <ns0:Discharge>
+                        <ns0:Service>CC4</ns0:Service>
+                        <ns0:ServiceName>CENTRAL CHINA 4</ns0:ServiceName>
+                        <ns0:Vessel>NAQ</ns0:Vessel>
+                        <ns0:VesselName>NYK AQUARIUS</ns0:VesselName>
+                        <ns0:Voyage>077</ns0:Voyage>
+                        <ns0:Direction>West</ns0:Direction>
+                        <ns0:LloydsNumber>9262704</ns0:LloydsNumber>
+                        <ns0:CallSign>HPPZ</ns0:CallSign>
+                        <ns0:RegistrationCountry>Panama</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>PA</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>077W</ns0:ExternalVoyage>
+                    </ns0:Discharge>
+                </ns0:SVVD>
+            </ns0:OceanLeg>
+            <ns0:Outbound_intermodal_indicator>1</ns0:Outbound_intermodal_indicator>
+        </ns0:Route>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>CSBKG</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>CS5324990445</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription>CS Reference Number</ns0:ReferenceDescription>
+        </ns0:ExternalReference>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>GEN</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>X20161028884057</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription>Government Export Number</ns0:ReferenceDescription>
+        </ns0:ExternalReference>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>SC</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>PE156082v056</ns0:ReferenceNumber>
+        </ns0:ExternalReference>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">BPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Emerson Climate Technologies, Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">COPEUS289872633</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6851520000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:ContactEmailAddress>sharon.martin@emerson.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Sidney</ns1:City>
+                <ns1:County>Shelby</ns1:County>
+                <ns1:State>Ohio</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>45365</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>410 Stolle Drive</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Emerson Climate Technologies, Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">COPEUS289872633</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6851520000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Sidney</ns1:City>
+                <ns1:County>Shelby</ns1:County>
+                <ns1:State>Ohio</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>45365</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>410 Stolle Drive</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Emerson Climate Technologies (Suzhou) Company Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">EMERUS69743219</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6668257000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Suzhou</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:PostalCode>215021</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Chuangtou Lndustrial&#xD;
+No.20 Building,Loufeng North Area</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Emerson Climate Technologies, Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">COPEUS289872633</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6851520000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Sidney</ns1:City>
+                <ns1:County>Shelby</ns1:County>
+                <ns1:State>Ohio</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>45365</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>410 Stolle Drive</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Emerson Electric Corporation</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">EMERUS69743219</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3146229000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>JohnKenneth</ns1:FirstName>
+                <ns1:LastName>Villaflor</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>937</ns1:AreaCode>
+                    <ns1:Number>4983891</ns1:Number>
+                </ns1:ContactPhone>
+                <ns1:ContactEmailAddress>JohnKenneth.Villaflor@emerson.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Saint Louis</ns1:City>
+                <ns1:County>Saint Louis</ns1:County>
+                <ns1:State>Missouri</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>63136</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>8000 West Florissant Avenue&#xD;
+3946</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CCP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Emerson Electric Corporation</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">EMERUS69743219</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3146229000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Jorge</ns1:FirstName>
+                <ns1:LastName>Longa</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>314</ns1:AreaCode>
+                    <ns1:Number>5532657</ns1:Number>
+                </ns1:ContactPhone>
+                <ns1:ContactEmailAddress>jorge.longa@emrsn.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Saint Louis</ns1:City>
+                <ns1:County>Saint Louis</ns1:County>
+                <ns1:State>Missouri</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>63136</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>8000 West Florissant Avenue&#xD;
+3946</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">NPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">EMERSON CLIMATE TECHNOLOGIES (SUZHOU) CO., LTD.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6795638000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Suzhou</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:PostalCode>215021</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>No69 Suhong W Rd</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Emerson Climate Technologies, Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">COPEUS289872633</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6851520000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Sidney</ns1:City>
+                <ns1:County>Shelby</ns1:County>
+                <ns1:State>Ohio</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>45365</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>410 Stolle Drive</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Emerson Climate Technologies, Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">COPEUS289872633</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6851520000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Sidney</ns1:City>
+                <ns1:County>Shelby</ns1:County>
+                <ns1:State>Ohio</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>45365</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>410 Stolle Drive</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Emerson Electric Corporation</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">EMERUS69743219</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3146229000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Jason</ns1:FirstName>
+                <ns1:LastName>Hawk</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>314</ns1:AreaCode>
+                    <ns1:Number>5531082</ns1:Number>
+                </ns1:ContactPhone>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Saint Louis</ns1:City>
+                <ns1:County>Saint Louis</ns1:County>
+                <ns1:State>Missouri</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>63136</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>8000 West Florissant Avenue&#xD;
+3946</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">EMERSON CLIMATE TECHNOLOGIES (SUZHOU) CO., LTD.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6795638000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Suzhou</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:PostalCode>215021</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>No69 Suhong W Rd</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Cargo>
+            <ns1:CargoNature xmlns:ns1="http://www.cargosmart.com/common">GC</ns1:CargoNature>
+            <ns1:CargoDescription xmlns:ns1="http://www.cargosmart.com/common">Parts for compressors</ns1:CargoDescription>
+            <ns1:Packaging xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:PackageType>PK</ns1:PackageType>
+                <ns1:PackageQty>14</ns1:PackageQty>
+                <ns1:PackageDesc>1X40'CONTAINER S.T.C. 
+COMPRESSOR PARTS</ns1:PackageDesc>
+            </ns1:Packaging>
+            <ns1:GrossWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>7464.89</ns1:Weight>
+                <ns1:WeightUnit>KGS</ns1:WeightUnit>
+            </ns1:GrossWeight>
+            <ns1:NetWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>0</ns1:Weight>
+            </ns1:NetWeight>
+            <ns1:Volume xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Volume>12.73</ns1:Volume>
+                <ns1:VolumeUnit>CBM</ns1:VolumeUnit>
+            </ns1:Volume>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>1</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>X20161028884057</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+        </ns0:Cargo>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>Full received by carrier</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_rcvd</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Laden Container received by carrier</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>NS - Cincinnati</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Cincinnati</ns0:City>
+                    <ns0:County>Hamilton</ns0:County>
+                    <ns0:State>Ohio</ns0:State>
+                    <ns0:Country>United States</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">USCVG</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">D</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">4102</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2540449</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">OH</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">NA</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-28T14:49:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="EDT">2016-10-28T10:49:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>30000081396960-1-26</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Truck</ns0:TransportMode>
+            <ns0:TransportCarrier>EAGLE SYSTEMS INC.</ns0:TransportCarrier>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS020</ns0:CS1Event>
+        </ns0:MileStones>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>ssm_vsl_arr_last_pod_est</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>vsl_arrived</ns0:CSEventCode>
+                <ns0:DimensionType>Port</ns0:DimensionType>
+                <ns0:DimensionValue>LastPOD</ns0:DimensionValue>
+                <ns0:EstActIndicator>E</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:Location>
+                <ns0:LocationName>Shanghai</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Shanghai</ns0:City>
+                    <ns0:Country>CHINA</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNSHA</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57035</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2530967</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">SH</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>102</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-26T01:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-11-26T09:00:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>361813532-1</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS277</ns0:CS1Event>
+        </ns0:MileStones>
+        <ns0:AssociatedExternalReference>
+            <ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">GEN</ns1:CSReferenceType>
+            <ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">x20161028884057</ns1:ReferenceNumber>
+            <ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">Government Export Number</ns1:ReferenceDescription>
+            <ns0:MsgType>SI</ns0:MsgType>
+        </ns0:AssociatedExternalReference>
+        <ns0:AssociatedExternalReference>
+            <ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">SR</ns1:CSReferenceType>
+            <ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">5526801</ns1:ReferenceNumber>
+            <ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">Shipper Reference</ns1:ReferenceDescription>
+            <ns0:MsgType>SI</ns0:MsgType>
+        </ns0:AssociatedExternalReference>
+        <ns0:AssociatedExternalReference>
+            <ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">GEN</ns1:CSReferenceType>
+            <ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">X20161028884057</ns1:ReferenceNumber>
+            <ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">Government Export Number</ns1:ReferenceDescription>
+            <ns0:MsgType>BC</ns0:MsgType>
+        </ns0:AssociatedExternalReference>
+        <ns0:AssociatedExternalReference>
+            <ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">CSBKG</ns1:CSReferenceType>
+            <ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">CS5324990445</ns1:ReferenceNumber>
+            <ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">CS Reference Number</ns1:ReferenceDescription>
+            <ns0:MsgType>BC</ns0:MsgType>
+        </ns0:AssociatedExternalReference>
+        <ns0:AssociatedExternalReference>
+            <ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">GEN</ns1:CSReferenceType>
+            <ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">X20161028884057</ns1:ReferenceNumber>
+            <ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">Government Export Number</ns1:ReferenceDescription>
+            <ns0:MsgType>BL</ns0:MsgType>
+        </ns0:AssociatedExternalReference>
+        <ns0:AssociatedExternalReference>
+            <ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">SIR</ns1:CSReferenceType>
+            <ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">OOC167437697</ns1:ReferenceNumber>
+            <ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">Shipping Instruction Reference</ns1:ReferenceDescription>
+            <ns0:MsgType>BL</ns0:MsgType>
+        </ns0:AssociatedExternalReference>
+        <ns0:AssociatedExternalReference>
+            <ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">FR</ns1:CSReferenceType>
+            <ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">na</ns1:ReferenceNumber>
+            <ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">Forwarder Reference</ns1:ReferenceDescription>
+            <ns0:MsgType>BL</ns0:MsgType>
+        </ns0:AssociatedExternalReference>
+        <ns0:AssociatedExternalReference>
+            <ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">CSBKG</ns1:CSReferenceType>
+            <ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">CS5324990445</ns1:ReferenceNumber>
+            <ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">CS Reference Number</ns1:ReferenceDescription>
+            <ns0:MsgType>BL</ns0:MsgType>
+        </ns0:AssociatedExternalReference>
+        <ns0:AssociatedExternalReference>
+            <ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">SR</ns1:CSReferenceType>
+            <ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">5526801</ns1:ReferenceNumber>
+            <ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">Shipper Reference</ns1:ReferenceDescription>
+            <ns0:MsgType>BL</ns0:MsgType>
+        </ns0:AssociatedExternalReference>
+    </ns0:Body>
+</ns0:ContainerMovement>

@@ -1,0 +1,11 @@
+20170203 - Gawing - XmlBeanParser - fixed xml string one line format. 
+20170206 - Gawing - XmlBeanParser - fixed empty element fail issue. 
+20170207 - Gawing - XmlBeanParser - performance fine tune.
+20170303 - Gawing - XmlBeanParser - fixed backslash issue.
+20170424 - Gawing - XmlBeanParser - remove xml comment and bug fix for empty tag in MultiElement
+20170517 - Gawing - XmlBeanParser - translate &apos;
+20170519 - David - add api B2BKukriWrapper
+20170523 - David - update KukriWrapper, add simple-java-mail-4.2.3-java6-release.jar for email sending in groovy.
+20170607 - David - update KukriWrapper, get file name change, and close connection in wrapper.
+           Gawing - update XmlBeanParser for array null issue.
+           

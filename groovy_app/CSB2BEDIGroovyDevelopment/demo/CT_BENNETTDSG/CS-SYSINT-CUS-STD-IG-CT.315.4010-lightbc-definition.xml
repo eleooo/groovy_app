@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Beluga Parser Definition XML -->
+<!-- Created By: David -->
+<E2XDefinition ElementDelimiter="*" ElementType="delimited"
+		EscapeChar="" OutXMLTargetNameSpace=""
+		OutXMLTargetNameSpacePrefix="" RecordDelimiter="~"
+		SubElementDelimiter="" isFieldValueTrimRightSpace="true"
+		isOutputForesightXML="true" isSuppressEmptyNodes="true" isX12="true"
+		xmlns="http://www.cargosmart.com/b2b/transformparser/e2x" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+						<Component Name="T-315"
+								ObjID="I01" ObjOrd="1" ObjType="e"
+								OutXMLTargetNameSapce="http://www.tibco.com/ns/Foresight/2010/20"
+								TagIdentifier="I01" maxOccurs="unbounded">
+								<Component Name="S-ISA" ObjID="ISA" ObjType="s"
+										TagIdentifier="ISA" minOccurs="0">
+										<Field Name="E-I01_ISA_01" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I02_ISA_02" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I03_ISA_03" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I04_ISA_04" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I05_ISA_05" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I06_ISA_06" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I05_ISA_07" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I07_ISA_08" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I08_ISA_09" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I09_ISA_10" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I10_ISA_11" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I11_ISA_12" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I12_ISA_13" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I13_ISA_14" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I14_ISA_15" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I15_ISA_16" ObjType="e" minOccurs="0"/>
+								</Component>
+								<Component Name="S-GS" ObjID="GS" ObjType="s"
+										TagIdentifier="GS" minOccurs="0">
+										<Field Name="E-479_GS_01" ObjType="e" minOccurs="0"/>
+										<Field Name="E-142_GS_02" ObjType="e" minOccurs="0"/>
+										<Field Name="E-124_GS_03" ObjType="e" minOccurs="0"/>
+										<Field Name="E-373_GS_04" ObjType="e" minOccurs="0"/>
+										<Field Name="E-337_GS_05" ObjType="e" minOccurs="0"/>
+										<Field Name="E-28_GS_06" ObjType="e" minOccurs="0"/>
+										<Field Name="E-455_GS_07" ObjType="e" minOccurs="0"/>
+										<Field Name="E-480_GS_08" ObjType="e" minOccurs="0"/>
+								</Component>
+								<Component Name="ST-Loop" maxOccurs="unbounded">
+									<Component Name="S-ST_1" ObjID="ST" ObjOrd="1"
+											ObjType="s" TagIdentifier="ST">
+											<Field Name="E-143_1_01" ObjType="e"/>
+											<Field Name="E-329_1_02" ObjType="e"/>
+									</Component>
+									<Component Name="S-B4_2" ObjID="B4" ObjOrd="2"
+											ObjType="s" TagIdentifier="B4">
+											<Field Name="E-152_2_01" ObjType="e" minOccurs="0"/>
+											<Field Name="E-71_2_02" ObjType="e" minOccurs="0"/>
+											<Field Name="E-157_2_03" ObjType="e"/>
+											<Field Name="E-373_2_04" ObjType="e"/>
+											<Field Name="E-161_2_05" ObjType="e"/>
+											<Field Name="E-159_2_06" ObjType="e" minOccurs="0"/>
+											<Field Name="E-206_2_07" ObjType="e" minOccurs="0"/>
+											<Field Name="E-207_2_08" ObjType="e" minOccurs="0"/>
+											<Field Name="E-578_2_09" ObjType="e" minOccurs="0"/>
+											<Field Name="E-24_2_10" ObjType="e" minOccurs="0"/>
+											<Field Name="E-310_2_11" ObjType="e" minOccurs="0"/>
+											<Field Name="E-309_2_12" ObjType="e" minOccurs="0"/>
+											<Field Name="E-761_2_13" ObjType="e" minOccurs="0"/>
+									</Component>
+									<Component Name="S-N9_3" ObjID="N9" ObjOrd="3"
+											ObjType="s" TagIdentifier="N9" maxOccurs="999" minOccurs="0">
+											<Field Name="E-128_3_01" ObjType="e"/>
+											<Field Name="E-127_3_02" ObjType="e"/>
+											<Field Name="E-369_3_03" ObjType="e" minOccurs="0"/>
+											<Field Name="E-373_3_04" ObjType="e" minOccurs="0"/>
+											<Field Name="E-337_3_05" ObjType="e" minOccurs="0"/>
+											<Field Name="E-623_3_06" ObjType="e" minOccurs="0"/>
+											<Field Name="C-C040_3_07" ObjID="C040" ObjType="c" minOccurs="0">
+													<SubField Name="E-128_3_07.01" ObjType="e" minOccurs="0"/>
+													<SubField Name="E-127_3_07.02" ObjType="e" minOccurs="0"/>
+											</Field>
+									</Component>
+									<Component Name="S-Q2_4" ObjID="Q2" ObjOrd="4"
+											ObjType="s" TagIdentifier="Q2" minOccurs="0">
+											<Field Name="E-597_4_01" ObjType="e" minOccurs="0"/>
+											<Field Name="E-26_4_02" ObjType="e" minOccurs="0"/>
+											<Field Name="E-373_4_03" ObjType="e" minOccurs="0"/>
+											<Field Name="E-373_4_04" ObjType="e" minOccurs="0"/>
+											<Field Name="E-373_4_05" ObjType="e" minOccurs="0"/>
+											<Field Name="E-80_4_06" ObjType="e" minOccurs="0"/>
+											<Field Name="E-81_4_07" ObjType="e" minOccurs="0"/>
+											<Field Name="E-187_4_08" ObjType="e" minOccurs="0"/>
+											<Field Name="E-55_4_09" ObjType="e" minOccurs="0"/>
+											<Field Name="E-128_4_10" ObjType="e" minOccurs="0"/>
+											<Field Name="E-127_4_11" ObjType="e" minOccurs="0"/>
+											<Field Name="E-897_4_12" ObjType="e" minOccurs="0"/>
+											<Field Name="E-182_4_13" ObjType="e" minOccurs="0"/>
+											<Field Name="E-183_4_14" ObjType="e" minOccurs="0"/>
+											<Field Name="E-184_4_15" ObjType="e" minOccurs="0"/>
+											<Field Name="E-188_4_16" ObjType="e" minOccurs="0"/>
+									</Component>
+									<Component Name="S-SG_5" ObjID="SG" ObjOrd="5"
+											ObjType="s" TagIdentifier="SG" maxOccurs="15" minOccurs="0">
+											<Field Name="E-157_5_01" ObjType="e" minOccurs="0"/>
+											<Field Name="E-641_5_02" ObjType="e" minOccurs="0"/>
+											<Field Name="E-35_5_03" ObjType="e" minOccurs="0"/>
+											<Field Name="E-373_5_04" ObjType="e" minOccurs="0"/>
+											<Field Name="E-337_5_05" ObjType="e" minOccurs="0"/>
+											<Field Name="E-623_5_06" ObjType="e" minOccurs="0"/>
+									</Component>
+									<Component Name="L-R4_6" ObjID="R4" ObjType="l"
+											TagIdentifier="R4" maxOccurs="20" minOccurs="0">
+											<Component Name="S-R4_6" ObjID="R4" ObjOrd="6"
+													ObjType="s" TagIdentifier="R4" minOccurs="0">
+													<Field Name="E-115_6_01" ObjType="e"/>
+													<Field Name="E-309_6_02" ObjType="e" minOccurs="0"/>
+													<Field Name="E-310_6_03" ObjType="e" minOccurs="0"/>
+													<Field Name="E-114_6_04" ObjType="e" minOccurs="0"/>
+													<Field Name="E-26_6_05" ObjType="e" minOccurs="0"/>
+													<Field Name="E-174_6_06" ObjType="e" minOccurs="0"/>
+													<Field Name="E-113_6_07" ObjType="e" minOccurs="0"/>
+													<Field Name="E-156_6_08" ObjType="e" minOccurs="0"/>
+											</Component>
+											<Component Name="S-DTM_7" ObjID="DTM" ObjOrd="7"
+													ObjType="s" TagIdentifier="DTM" maxOccurs="15" minOccurs="0">
+													<Field Name="E-374_7_01" ObjType="e"/>
+													<Field Name="E-373_7_02" ObjType="e" minOccurs="0"/>
+													<Field Name="E-337_7_03" ObjType="e" minOccurs="0"/>
+													<Field Name="E-623_7_04" ObjType="e" minOccurs="0"/>
+													<Field Name="E-1250_7_05" ObjType="e" minOccurs="0"/>
+													<Field Name="E-1251_7_06" ObjType="e" minOccurs="0"/>
+											</Component>
+									</Component>
+									<Component Name="S-V9_8" ObjID="V9" ObjOrd="8"
+											ObjType="s" TagIdentifier="V9" maxOccurs="10" minOccurs="0">
+											<Field Name="E-304_8_01" ObjType="e"/>
+											<Field Name="E-106_8_02" ObjType="e" minOccurs="0"/>
+											<Field Name="E-373_8_03" ObjType="e" minOccurs="0"/>
+											<Field Name="E-337_8_04" ObjType="e" minOccurs="0"/>
+											<Field Name="E-19_8_05" ObjType="e" minOccurs="0"/>
+											<Field Name="E-156_8_06" ObjType="e" minOccurs="0"/>
+											<Field Name="E-26_8_07" ObjType="e" minOccurs="0"/>
+											<Field Name="E-641_8_08" ObjType="e" minOccurs="0"/>
+											<Field Name="E-154_8_09" ObjType="e" minOccurs="0"/>
+											<Field Name="E-380_8_10" ObjType="e" minOccurs="0"/>
+											<Field Name="E-1274_8_11" ObjType="e" minOccurs="0"/>
+											<Field Name="E-61_8_12" ObjType="e" minOccurs="0"/>
+											<Field Name="E-623_8_13" ObjType="e" minOccurs="0"/>
+											<Field Name="E-380_8_14" ObjType="e" minOccurs="0"/>
+											<Field Name="E-154_8_15" ObjType="e" minOccurs="0"/>
+											<Field Name="E-86_8_16" ObjType="e" minOccurs="0"/>
+											<Field Name="E-86_8_17" ObjType="e" minOccurs="0"/>
+											<Field Name="E-86_8_18" ObjType="e" minOccurs="0"/>
+											<Field Name="E-81_8_19" ObjType="e" minOccurs="0"/>
+											<Field Name="E-82_8_20" ObjType="e" minOccurs="0"/>
+									</Component>
+									<Component Name="S-SE_9" ObjID="SE" ObjOrd="9"
+											ObjType="s" TagIdentifier="SE">
+											<Field Name="E-96_9_01" ObjType="e" AutoFillEDISegmentCount="true" AutoFillEDISegmentCountStartTag="ST" AutoFillEDISegmentCountEndTag="SE"/>
+											<Field Name="E-329_9_02" ObjType="e" />
+									</Component>
+								</Component>
+								<Component Name="S-GE" ObjID="GE" ObjType="s"
+										TagIdentifier="GE" minOccurs="0">
+										<Field Name="E-97_GE_01" ObjType="e" minOccurs="0"/>
+										<Field Name="E-28_GE_02" ObjType="e" minOccurs="0"/>
+								</Component>
+								<Component Name="S-IEA" ObjID="IEA" ObjType="s"
+										TagIdentifier="IEA" minOccurs="0">
+										<Field Name="E-I16_IEA_01" ObjType="e" minOccurs="0"/>
+										<Field Name="E-I12_IEA_02" ObjType="e" minOccurs="0"/>
+								</Component>
+						</Component>
+</E2XDefinition>

@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BillOfLading xmlns="http://www.cargosmart.com/billoflading">
+    <Header>
+        <cs:MsgDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+            <cs:GMT>2014-07-21T00:48:37</cs:GMT>
+            <cs:LocDT CSTimeZone="HKT" TimeZone="HKT">2014-07-21T08:48:37</cs:LocDT>
+        </cs:MsgDT>
+        <ns0:MsgDirection xmlns:ns0="http://www.cargosmart.com/common">O</ns0:MsgDirection>
+        <ns0:MsgType xmlns:ns0="http://www.cargosmart.com/common">BL</ns0:MsgType>
+        <ns0:SenderID xmlns:ns0="http://www.cargosmart.com/common">CargoSmart</ns0:SenderID>
+        <ns0:ReceiverID xmlns:ns0="http://www.cargosmart.com/common">HDPOIN</ns0:ReceiverID>
+        <ns0:Action xmlns:ns0="http://www.cargosmart.com/common">NEW</ns0:Action>
+        <ns0:Version xmlns:ns0="http://www.cargosmart.com/common">13</ns0:Version>
+        <ns0:InterchangeMessageID xmlns:ns0="http://www.cargosmart.com/common">HDPOIN_BL_2549026920_OOLU_20140721084211_27906558</ns0:InterchangeMessageID>
+        <ns0:DataSource xmlns:ns0="http://www.cargosmart.com/common">CS2 db</ns0:DataSource>
+    </Header>
+    <Body>
+        <TransactionInformation>
+            <ns0:MessageID xmlns:ns0="http://www.cargosmart.com/common">HDPOIN_BL_2549026920_OOLU_20140721084211_27906558_999999999981401160</ns0:MessageID>
+            <ns0:InterchangeTransactionID xmlns:ns0="http://www.cargosmart.com/common">999999999981401160</ns0:InterchangeTransactionID>
+            <Action>NEW</Action>
+        </TransactionInformation>
+        <EventInformation>
+            <ns0:EventCode xmlns:ns0="http://www.cargosmart.com/common">bl_upload</ns0:EventCode>
+            <ns0:EventDescription xmlns:ns0="http://www.cargosmart.com/common">NEW</ns0:EventDescription>
+            <ns0:EventDT xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:GMT>2014-07-21T00:47:00</ns0:GMT>
+                <ns0:LocDT TimeZone="GMT" CSTimeZone="CCT">2014-07-21T00:47:00</ns0:LocDT>
+            </ns0:EventDT>
+        </EventInformation>
+        <GeneralInformation>
+            <SPCompanyID>ORIEHK41514112426815</SPCompanyID>
+            <SCACCode>OOLU</SCACCode>
+            <BLNumber>2549026920</BLNumber>
+            <BLType>Original</BLType>
+            <ShipmentCargoType>GC</ShipmentCargoType>
+            <TrafficMode>
+                <ns0:OutBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:OutBound>
+                <ns0:InBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:InBound>
+            </TrafficMode>
+            <CustomsClearanceDT/>
+            <ContactOfficeCode>HOU</ContactOfficeCode>
+            <BLReceiptDT>
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-07T03:31:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CST">2014-07-07T11:31:00</ns0:LocDT>
+            </BLReceiptDT>
+            <BLIssueDT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common">2014-07-11T00:00:00</ns0:LocDT>
+            </BLIssueDT>
+            <BLCreationDT>
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-07T03:49:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="GMT">2014-07-07T03:49:00</ns0:LocDT>
+            </BLCreationDT>
+            <BLChangeDT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="GMT">2014-07-21T00:47:00</ns0:LocDT>
+            </BLChangeDT>
+            <BLOnboardDT>
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-11T00:00:00</ns0:GMT>
+            </BLOnboardDT>
+            <OriginalBLReleaseOffice>CQG</OriginalBLReleaseOffice>
+            <BLPaymentOffice>Lisle</BLPaymentOffice>
+            <BLPaymentOfficeUNLoc>USLSA</BLPaymentOfficeUNLoc>
+            <CaptureOffice>PLE</CaptureOffice>
+            <CaptureOfficePhoneNumber>(1) 925-3586625</CaptureOfficePhoneNumber>
+            <PaymentReceiptDT/>
+            <CarrierBookingNumber>2549026920</CarrierBookingNumber>
+            <BLGrossWeight>
+                <ns0:Weight xmlns:ns0="http://www.cargosmart.com/common">0</ns0:Weight>
+            </BLGrossWeight>
+            <BLNetWeight>
+                <ns0:Weight xmlns:ns0="http://www.cargosmart.com/common">0</ns0:Weight>
+            </BLNetWeight>
+            <BLVolume>
+                <ns0:Volume xmlns:ns0="http://www.cargosmart.com/common">0</ns0:Volume>
+            </BLVolume>
+            <BLSVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+            </BLSVVD>
+            <OutBoundROESVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ROEPortOfLoad>Xiamen</ROEPortOfLoad>
+            </OutBoundROESVVD>
+            <InBoundROESVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ROEPortOfDischarge>Los Angeles</ROEPortOfDischarge>
+            </InBoundROESVVD>
+            <SIContactPerson/>
+            <TradeCode>TPT</TradeCode>
+            <BookingOffice>ZIA</BookingOffice>
+            <BookingOfficeName>Xiamen</BookingOfficeName>
+            <BookingOfficeUNLoc>CNXMN</BookingOfficeUNLoc>
+            <LabelActions>
+                <Seq>1</Seq>
+                <Label>OB Freight Completed</Label>
+                <ProposedAction>UPDATE_FREIGHT_CHARGE</ProposedAction>
+                <ActionType>U</ActionType>
+                <TimeOfIssue>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-21T00:47:00</ns0:GMT>
+                </TimeOfIssue>
+            </LabelActions>
+            <LabelActions>
+                <Seq>2</Seq>
+                <Label>Freight Completed</Label>
+                <ProposedAction>UPDATE_FREIGHT_CHARGE</ProposedAction>
+                <ActionType>U</ActionType>
+                <TimeOfIssue>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-21T00:47:00</ns0:GMT>
+                </TimeOfIssue>
+            </LabelActions>
+            <PartnerID>MLOGISTICS</PartnerID>
+        </GeneralInformation>
+        <BLStatus Type="BL_STATUS">
+            <Status>BL Ready</Status>
+            <StatusDT>
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-21T00:47:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="GMT" CSTimeZone="CCT">2014-07-21T00:47:00</ns0:LocDT>
+            </StatusDT>
+        </BLStatus>
+        <BLStatus Type="CGO_REL_STATUS">
+            <Status>Held</Status>
+            <StatusDT/>
+        </BLStatus>
+        <BLStatus Type="IB_COLL_STATUS">
+            <Status>Cleared</Status>
+            <StatusDT/>
+        </BLStatus>
+        <BLStatus Type="ORIG_BL_STATUS">
+            <Status>Held</Status>
+            <StatusDT/>
+        </BLStatus>
+        <BLStatus Type="OBL_REL_STATUS">
+            <Status>Held</Status>
+            <StatusDT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CQG">2014-07-14T10:39:00</ns0:LocDT>
+            </StatusDT>
+        </BLStatus>
+        <BLStatus Type="CARR_REL_STATUS">
+            <Status>Held</Status>
+            <StatusDT/>
+        </BLStatus>
+        <BLStatus Type="IB_FRT_STATUS">
+            <Status>Cleared</Status>
+            <StatusDT/>
+        </BLStatus>
+        <BLStatus Type="CUST_CLR_STATUS">
+            <Status>Held</Status>
+            <StatusDT/>
+        </BLStatus>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">NPT</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Expeditors International of Washington Inc.</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">EXPEUS2103348379</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3124971023</ns0:CarrierCustomerCode>
+            <ns0:Contact xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:FirstName>Sharon</ns0:FirstName>
+                <ns0:ContactPhone>
+                    <ns0:CountryCode>1</ns0:CountryCode>
+                    <ns0:AreaCode>678</ns0:AreaCode>
+                    <ns0:Number>8263565</ns0:Number>
+                </ns0:ContactPhone>
+            </ns0:Contact>
+            <ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:City>Atlanta</ns0:City>
+                <ns0:County>Fulton</ns0:County>
+                <ns0:State>Georgia</ns0:State>
+                <ns0:Country>US</ns0:Country>
+                <ns0:LocationCode>
+                    <ns0:UNLocationCode>USATL</ns0:UNLocationCode>
+                </ns0:LocationCode>
+                <ns0:PostalCode>30354</ns0:PostalCode>
+                <ns0:AddressLines>
+                    <ns0:AddressLine>300 tradeport drive suite 300</ns0:AddressLine>
+                </ns0:AddressLines>
+            </ns0:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">ANP</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Home Depot (USA) Inc.</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">THEHUS1750219479</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3150918009</ns0:CarrierCustomerCode>
+            <ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:City>Atlanta</ns0:City>
+                <ns0:County>Fulton</ns0:County>
+                <ns0:State>Georgia</ns0:State>
+                <ns0:Country>US</ns0:Country>
+                <ns0:LocationCode>
+                    <ns0:UNLocationCode>USATL</ns0:UNLocationCode>
+                </ns0:LocationCode>
+                <ns0:PostalCode>30339</ns0:PostalCode>
+                <ns0:AddressLines>
+                    <ns0:AddressLine>2455 Paces Ferry Road</ns0:AddressLine>
+                </ns0:AddressLines>
+            </ns0:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">FWD</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Damco China Limited Xiamen Branch</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">APMGCN40063905</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">7097735000</ns0:CarrierCustomerCode>
+            <ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:City>Xiamen</ns0:City>
+                <ns0:County>Xiamen</ns0:County>
+                <ns0:State>Fujian</ns0:State>
+                <ns0:Country>CN</ns0:Country>
+                <ns0:LocationCode>
+                    <ns0:UNLocationCode>CNXMN</ns0:UNLocationCode>
+                </ns0:LocationCode>
+                <ns0:AddressLines>
+                    <ns0:AddressLine>No 8, Lujiang Road, 20 Floor, International Banck Plaza</ns0:AddressLine>
+                </ns0:AddressLines>
+            </ns0:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">CTP</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Home Depot (USA) Inc.</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">THEHUS1750219479</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3150918009</ns0:CarrierCustomerCode>
+            <ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:City>Atlanta</ns0:City>
+                <ns0:County>Fulton</ns0:County>
+                <ns0:State>Georgia</ns0:State>
+                <ns0:Country>US</ns0:Country>
+                <ns0:LocationCode>
+                    <ns0:UNLocationCode>USATL</ns0:UNLocationCode>
+                </ns0:LocationCode>
+                <ns0:PostalCode>30339</ns0:PostalCode>
+                <ns0:AddressLines>
+                    <ns0:AddressLine>2455 Paces Ferry Road</ns0:AddressLine>
+                </ns0:AddressLines>
+            </ns0:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">CCP</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Home Depot (USA) Inc.</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">THEHUS1750219479</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3150918009</ns0:CarrierCustomerCode>
+            <ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:City>Atlanta</ns0:City>
+                <ns0:County>Fulton</ns0:County>
+                <ns0:State>Georgia</ns0:State>
+                <ns0:Country>US</ns0:Country>
+                <ns0:LocationCode>
+                    <ns0:UNLocationCode>USATL</ns0:UNLocationCode>
+                </ns0:LocationCode>
+                <ns0:PostalCode>30339</ns0:PostalCode>
+                <ns0:AddressLines>
+                    <ns0:AddressLine>2455 Paces Ferry Road</ns0:AddressLine>
+                </ns0:AddressLines>
+            </ns0:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">CGN</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Home Depot (USA) Inc.</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">THEHUS1750219479</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3150918009</ns0:CarrierCustomerCode>
+            <ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:City>Atlanta</ns0:City>
+                <ns0:County>Fulton</ns0:County>
+                <ns0:State>Georgia</ns0:State>
+                <ns0:Country>US</ns0:Country>
+                <ns0:LocationCode>
+                    <ns0:UNLocationCode>USATL</ns0:UNLocationCode>
+                </ns0:LocationCode>
+                <ns0:PostalCode>30339</ns0:PostalCode>
+                <ns0:AddressLines>
+                    <ns0:AddressLine>2455 Paces Ferry Road</ns0:AddressLine>
+                </ns0:AddressLines>
+            </ns0:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">SHP</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Quanzhou Hongjia Composite Materials Ltd</ns0:PartyName>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">7495650000</ns0:CarrierCustomerCode>
+            <ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:City>Quanzhou</ns0:City>
+                <ns0:County>Quanzhou</ns0:County>
+                <ns0:State>Fujian</ns0:State>
+                <ns0:Country>CN</ns0:Country>
+                <ns0:LocationCode>
+                    <ns0:UNLocationCode>CNQZJ</ns0:UNLocationCode>
+                </ns0:LocationCode>
+                <ns0:AddressLines>
+                    <ns0:AddressLine>Yida Industrial Area, Fengzhou Town</ns0:AddressLine>
+                </ns0:AddressLines>
+            </ns0:Address>
+        </Party>
+        <CarrierRate>
+            <ns0:CSCarrierRateType xmlns:ns0="http://www.cargosmart.com/common">SC</ns0:CSCarrierRateType>
+            <ns0:CarrierRateNumber xmlns:ns0="http://www.cargosmart.com/common">PE143240v002</ns0:CarrierRateNumber>
+        </CarrierRate>
+        <ExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">BL</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">2549026920</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">B/L Reference Number</ns0:ReferenceDescription>
+        </ExternalReference>
+        <ExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">MB</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">2549026920</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">Master Booking Number</ns0:ReferenceDescription>
+        </ExternalReference>
+        <ExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">SIR</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">XIM000288049</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">Shipping Instruction Reference</ns0:ReferenceDescription>
+        </ExternalReference>
+        <Route>
+            <Haulage>
+                <ns0:OutBound xmlns:ns0="http://www.cargosmart.com/common">M</ns0:OutBound>
+                <ns0:InBound xmlns:ns0="http://www.cargosmart.com/common">M</ns0:InBound>
+            </Haulage>
+            <IsOBDropAndPoll>false</IsOBDropAndPoll>
+            <ArrivalAtFinalHub Indicator="E">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-08-04T15:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CDT" CSTimeZone="CDT">2014-08-04T10:00:00</ns0:LocDT>
+            </ArrivalAtFinalHub>
+            <ArrivalAtFND Indicator="E">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-08-04T15:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CDT">2014-08-04T10:00:00</ns0:LocDT>
+            </ArrivalAtFND>
+            <FullReturnCutoffDT>
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-08T10:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2014-07-08T18:00:00</ns0:LocDT>
+            </FullReturnCutoffDT>
+            <DepartureDT>
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-11T08:20:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2014-07-11T16:20:00</ns0:LocDT>
+            </DepartureDT>
+            <ArrivalDT>
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-28T21:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="PDT" CSTimeZone="PDT">2014-07-28T14:00:00</ns0:LocDT>
+            </ArrivalDT>
+            <POR>
+                <ns0:CityDetails xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:City>Xiamen</ns0:City>
+                    <ns0:County>Xiamen</ns0:County>
+                    <ns0:State>Fujian</ns0:State>
+                    <ns0:Country>China</ns0:Country>
+                    <ns0:LocationCode>
+                        <ns0:MutuallyDefinedCode>CNXMN</ns0:MutuallyDefinedCode>
+                        <ns0:UNLocationCode>CNXMN</ns0:UNLocationCode>
+                        <ns0:SchedKDType>K</ns0:SchedKDType>
+                        <ns0:SchedKDCode>57069</ns0:SchedKDCode>
+                    </ns0:LocationCode>
+                </ns0:CityDetails>
+                <cs:Facility xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                    <cs:FacilityCode>ZIA05</cs:FacilityCode>
+                    <cs:FacilityName>Xiamen Hairun Container Terminal (Haicang)</cs:FacilityName>
+                </cs:Facility>
+                <cs:CSStandardCity xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                    <cs:CSParentCityID>2533037</cs:CSParentCityID>
+                    <cs:CSStateCode>FJ</cs:CSStateCode>
+                    <cs:CSCountryCode>CN</cs:CSCountryCode>
+                    <cs:CSContinentCode>AS</cs:CSContinentCode>
+                </cs:CSStandardCity>
+            </POR>
+            <FND>
+                <ns0:CityDetails xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:City>Houston</ns0:City>
+                    <ns0:County>Harris</ns0:County>
+                    <ns0:State>Texas</ns0:State>
+                    <ns0:Country>United States</ns0:Country>
+                    <ns0:LocationCode>
+                        <ns0:MutuallyDefinedCode>USHOU</ns0:MutuallyDefinedCode>
+                        <ns0:UNLocationCode>USHOU</ns0:UNLocationCode>
+                        <ns0:SchedKDType>D</ns0:SchedKDType>
+                        <ns0:SchedKDCode>5301</ns0:SchedKDCode>
+                    </ns0:LocationCode>
+                </ns0:CityDetails>
+                <cs:Facility xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                    <cs:FacilityCode>HOU20</cs:FacilityCode>
+                    <cs:FacilityName>BNSF</cs:FacilityName>
+                </cs:Facility>
+                <cs:CSStandardCity xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                    <cs:CSParentCityID>2550140</cs:CSParentCityID>
+                    <cs:CSStateCode>TX</cs:CSStateCode>
+                    <cs:CSCountryCode>US</cs:CSCountryCode>
+                    <cs:CSContinentCode>NA</cs:CSContinentCode>
+                </cs:CSStandardCity>
+            </FND>
+            <FirstPOL>
+                <ns0:Port xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:PortName>Xiamen</ns0:PortName>
+                    <ns0:PortCode>ZIA</ns0:PortCode>
+                    <ns0:City>Xiamen</ns0:City>
+                    <ns0:County>Xiamen</ns0:County>
+                    <ns0:State>Fujian</ns0:State>
+                    <ns0:LocationCode>
+                        <ns0:UNLocationCode>CNXMN</ns0:UNLocationCode>
+                        <ns0:SchedKDType>K</ns0:SchedKDType>
+                        <ns0:SchedKDCode>57069</ns0:SchedKDCode>
+                    </ns0:LocationCode>
+                    <ns0:Country>China</ns0:Country>
+                    <ns0:CSPortID>123</ns0:CSPortID>
+                    <ns0:CSCountryCode>CN</ns0:CSCountryCode>
+                </ns0:Port>
+                <cs:Facility xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                    <cs:FacilityCode>ZIA05</cs:FacilityCode>
+                    <cs:FacilityName>Xiamen Hairun Container Terminal (Haicang)</cs:FacilityName>
+                </cs:Facility>
+                <OutboundSVVD>
+                    <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                    <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                    <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                    <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                    <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                    <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                    <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+                    <ns0:VesselNationality xmlns:ns0="http://www.cargosmart.com/common">Singapore</ns0:VesselNationality>
+                    <DirectionName>East</DirectionName>
+                    <VesselNationalityCode>SG</VesselNationalityCode>
+                </OutboundSVVD>
+                <DepartureDT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CST">2014-07-11T16:20:00</ns0:LocDT>
+                </DepartureDT>
+                <CSStateCode>FJ</CSStateCode>
+                <CSParentCityID>2533037</CSParentCityID>
+            </FirstPOL>
+            <LastPOD>
+                <ns0:Port xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:PortName>Los Angeles</ns0:PortName>
+                    <ns0:PortCode>LAS</ns0:PortCode>
+                    <ns0:City>Los Angeles</ns0:City>
+                    <ns0:County>Los Angeles</ns0:County>
+                    <ns0:State>California</ns0:State>
+                    <ns0:LocationCode>
+                        <ns0:UNLocationCode>USLAX</ns0:UNLocationCode>
+                        <ns0:SchedKDType>D</ns0:SchedKDType>
+                        <ns0:SchedKDCode>2704</ns0:SchedKDCode>
+                    </ns0:LocationCode>
+                    <ns0:Country>United States</ns0:Country>
+                    <ns0:CSPortID>426</ns0:CSPortID>
+                    <ns0:CSCountryCode>US</ns0:CSCountryCode>
+                </ns0:Port>
+                <cs:Facility xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                    <cs:FacilityCode>LAS02</cs:FacilityCode>
+                    <cs:FacilityName>Eagle Marine Services Los Angeles</cs:FacilityName>
+                </cs:Facility>
+                <InboundSVVD>
+                    <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                    <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                    <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                    <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                    <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                    <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                    <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+                    <ns0:VesselNationality xmlns:ns0="http://www.cargosmart.com/common">Singapore</ns0:VesselNationality>
+                    <DirectionName>East</DirectionName>
+                    <VesselNationalityCode>SG</VesselNationalityCode>
+                </InboundSVVD>
+                <ArrivalDT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="PDT">2014-07-28T14:00:00</ns0:LocDT>
+                </ArrivalDT>
+                <CSStateCode>CA</CSStateCode>
+                <CSParentCityID>2532344</CSParentCityID>
+            </LastPOD>
+            <OceanLeg>
+                <ns0:LegSeq xmlns:ns0="http://www.cargosmart.com/common">1</ns0:LegSeq>
+                <ns0:POL xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:Port>
+                        <ns0:PortName>Xiamen</ns0:PortName>
+                        <ns0:PortCode>ZIA</ns0:PortCode>
+                        <ns0:City>Xiamen</ns0:City>
+                        <ns0:County>Xiamen</ns0:County>
+                        <ns0:State>Fujian</ns0:State>
+                        <ns0:LocationCode>
+                            <ns0:UNLocationCode>CNXMN</ns0:UNLocationCode>
+                            <ns0:SchedKDType>K</ns0:SchedKDType>
+                            <ns0:SchedKDCode>57069</ns0:SchedKDCode>
+                        </ns0:LocationCode>
+                        <ns0:Country>China</ns0:Country>
+                        <ns0:CSPortID>123</ns0:CSPortID>
+                        <ns0:CSCountryCode>CN</ns0:CSCountryCode>
+                    </ns0:Port>
+                    <ns0:Facility>
+                        <ns0:FacilityCode>ZIA05</ns0:FacilityCode>
+                        <ns0:FacilityName>Xiamen Hairun Container Terminal (Haicang)</ns0:FacilityName>
+                    </ns0:Facility>
+                </ns0:POL>
+                <ns0:POD xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:Port>
+                        <ns0:PortName>Los Angeles</ns0:PortName>
+                        <ns0:PortCode>LAS</ns0:PortCode>
+                        <ns0:City>Los Angeles</ns0:City>
+                        <ns0:County>Los Angeles</ns0:County>
+                        <ns0:State>California</ns0:State>
+                        <ns0:LocationCode>
+                            <ns0:UNLocationCode>USLAX</ns0:UNLocationCode>
+                            <ns0:SchedKDType>D</ns0:SchedKDType>
+                            <ns0:SchedKDCode>2704</ns0:SchedKDCode>
+                        </ns0:LocationCode>
+                        <ns0:Country>United States</ns0:Country>
+                        <ns0:CSPortID>426</ns0:CSPortID>
+                        <ns0:CSCountryCode>US</ns0:CSCountryCode>
+                    </ns0:Port>
+                    <ns0:Facility>
+                        <ns0:FacilityCode>LAS02</ns0:FacilityCode>
+                        <ns0:FacilityName>Eagle Marine Services Los Angeles</ns0:FacilityName>
+                    </ns0:Facility>
+                </ns0:POD>
+                <ns0:SVVD xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:Loading>
+                        <ns0:Service>SC1</ns0:Service>
+                        <ns0:Vessel>DBL</ns0:Vessel>
+                        <ns0:VesselName>APL DUBLIN</ns0:VesselName>
+                        <ns0:Voyage>008</ns0:Voyage>
+                        <ns0:Direction>E</ns0:Direction>
+                        <ns0:LloydsNumber>9601314</ns0:LloydsNumber>
+                        <ns0:CallSign>9V9404</ns0:CallSign>
+                        <ns0:CallNumber>1</ns0:CallNumber>
+                        <ns0:VesselNationality>Singapore</ns0:VesselNationality>
+                    </ns0:Loading>
+                    <ns0:Discharge>
+                        <ns0:Service>SC1</ns0:Service>
+                        <ns0:Vessel>DBL</ns0:Vessel>
+                        <ns0:VesselName>APL DUBLIN</ns0:VesselName>
+                        <ns0:Voyage>008</ns0:Voyage>
+                        <ns0:Direction>E</ns0:Direction>
+                        <ns0:LloydsNumber>9601314</ns0:LloydsNumber>
+                        <ns0:CallSign>9V9404</ns0:CallSign>
+                        <ns0:CallNumber>1</ns0:CallNumber>
+                        <ns0:VesselNationality>Singapore</ns0:VesselNationality>
+                    </ns0:Discharge>
+                    <ns0:VesselVoyageType>OUTBOUND</ns0:VesselVoyageType>
+                </ns0:SVVD>
+                <cs:DepartureDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading" Indicator="A">
+                    <cs:GMT>2014-07-11T08:20:00</cs:GMT>
+                    <cs:LocDT CSTimeZone="CCT" TimeZone="CST">2014-07-11T16:20:00</cs:LocDT>
+                </cs:DepartureDT>
+                <cs:DepartureDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading" Indicator="E">
+                    <cs:GMT>2014-07-11T07:00:00</cs:GMT>
+                    <cs:LocDT CSTimeZone="CCT" TimeZone="CST">2014-07-11T15:00:00</cs:LocDT>
+                </cs:DepartureDT>
+                <cs:ArrivalDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading" Indicator="E">
+                    <cs:GMT>2014-07-28T21:00:00</cs:GMT>
+                    <cs:LocDT CSTimeZone="PDT" TimeZone="PDT">2014-07-28T14:00:00</cs:LocDT>
+                </cs:ArrivalDT>
+                <CarrierExtractDT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="HKT">2014-07-21T08:48:36</ns0:LocDT>
+                </CarrierExtractDT>
+                <LoadingDirectionName>East</LoadingDirectionName>
+                <LoadingVesselNationalityCode>SG</LoadingVesselNationalityCode>
+                <DischargeDirectionName>East</DischargeDirectionName>
+                <DischargeVesselNationalityCode>SG</DischargeVesselNationalityCode>
+                <POLCSStateCode>FJ</POLCSStateCode>
+                <PODCSStateCode>CA</PODCSStateCode>
+                <POLCSParentCityID>2533037</POLCSParentCityID>
+                <PODCSParentCityID>2532344</PODCSParentCityID>
+            </OceanLeg>
+            <ActualCargoReceiptDT>
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-07-05T14:40:00+08:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="" CSTimeZone="CCT">2014-07-05T22:40:00+08:00</ns0:LocDT>
+            </ActualCargoReceiptDT>
+        </Route>
+        <Container>
+            <ns0:ContainerNumber xmlns:ns0="http://www.cargosmart.com/common">OOLU537967</ns0:ContainerNumber>
+            <ns0:ContainerCheckDigit xmlns:ns0="http://www.cargosmart.com/common">7</ns0:ContainerCheckDigit>
+            <ns0:CSContainerSizeType xmlns:ns0="http://www.cargosmart.com/common">L5G1</ns0:CSContainerSizeType>
+            <ns0:CarrCntrSizeType xmlns:ns0="http://www.cargosmart.com/common">L5G1</ns0:CarrCntrSizeType>
+            <ns0:IsSOC xmlns:ns0="http://www.cargosmart.com/common">false</ns0:IsSOC>
+            <cs:GrossWeight xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                <cs:Weight>8939.82</cs:Weight>
+                <cs:WeightUnit>KGS</cs:WeightUnit>
+            </cs:GrossWeight>
+            <cs:Seal xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                <cs:SealType>SH</cs:SealType>
+                <cs:SealNumber>OOLAWB4013</cs:SealNumber>
+            </cs:Seal>
+            <cs:Haulage xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                <cs:OutBound>M</cs:OutBound>
+                <cs:InBound>M</cs:InBound>
+            </cs:Haulage>
+            <DisplaySequenceNumber>1</DisplaySequenceNumber>
+            <CustomsClearanceDT/>
+            <CustomsClearanceLocCity>Los Angeles</CustomsClearanceLocCity>
+            <CustomsClearanceLocCode>2704</CustomsClearanceLocCode>
+            <CustomsClearanceLocType>IB</CustomsClearanceLocType>
+            <CustomsClearanceLocDesc>LOS ANGELES, CA - 7 PACIFIC REGION</CustomsClearanceLocDesc>
+            <CustomsRefDT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CST">2014-07-11T00:00:00</ns0:LocDT>
+            </CustomsRefDT>
+            <PieceCount>
+                <ns0:PieceCount xmlns:ns0="http://www.cargosmart.com/common">419</ns0:PieceCount>
+                <ns0:PieceCountUnit xmlns:ns0="http://www.cargosmart.com/common">PK</ns0:PieceCountUnit>
+            </PieceCount>
+            <InlandMoveIDPrefix>V16</InlandMoveIDPrefix>
+            <SIContainerNumber>OOLU537967</SIContainerNumber>
+            <SIContainerCheckDigit>7</SIContainerCheckDigit>
+            <SIDeclaredGrossWeight>
+                <ns0:Weight xmlns:ns0="http://www.cargosmart.com/common">8939.82</ns0:Weight>
+                <ns0:WeightUnit xmlns:ns0="http://www.cargosmart.com/common">KGS</ns0:WeightUnit>
+            </SIDeclaredGrossWeight>
+            <LastTransferToBookingNo>2549026920</LastTransferToBookingNo>
+            <BLSeal>
+                <ns0:SealType xmlns:ns0="http://www.cargosmart.com/common">SH</ns0:SealType>
+                <ns0:SealNumber xmlns:ns0="http://www.cargosmart.com/common">OOLAWB4013</ns0:SealNumber>
+            </BLSeal>
+            <CS1ContainerSizeType>45HQ</CS1ContainerSizeType>
+            <OOCLCntrSizeType>45HQ</OOCLCntrSizeType>
+            <CPRSWayBillNumber> </CPRSWayBillNumber>
+        </Container>
+        <ContainerFlowInstruction>
+            <EmptyReturn>
+                <NumberOfContainers>1</NumberOfContainers>
+                <ISOSizeType>L5G1</ISOSizeType>
+                <CSContainerSizeType>L5G1</CSContainerSizeType>
+                <ContainerNumbers>
+                    <ContainerNumber>OOLU537967</ContainerNumber>
+                    <CheckDigit>7</CheckDigit>
+                </ContainerNumbers>
+                <Facility>
+                    <ns0:FacilityCode xmlns:ns0="http://www.cargosmart.com/common">HOU02</ns0:FacilityCode>
+                    <ns0:FacilityName xmlns:ns0="http://www.cargosmart.com/common">Eagle Trans</ns0:FacilityName>
+                </Facility>
+                <MvmtDT/>
+                <Address/>
+                <Contact/>
+            </EmptyReturn>
+        </ContainerFlowInstruction>
+        <Cargo>
+            <ns0:CargoNature xmlns:ns0="http://www.cargosmart.com/common">GC</ns0:CargoNature>
+            <ns0:CargoDescription xmlns:ns0="http://www.cargosmart.com/common">SONOMA 38" GAS FIRE TABLE</ns0:CargoDescription>
+            <cs:Packaging xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                <cs:PackageType>PK</cs:PackageType>
+                <cs:PackageQty>419</cs:PackageQty>
+                <cs:PackageDesc>SONOMA 38" GAS FIRE TABLE P.O. NO.: 52107892 L/C NO.: FINAL DESTINATION AS BAYTOWN (36C) DISTRIBUTION CENTER FREIGHT COLLECTHTS : 7321110000 8306299000</cs:PackageDesc>
+            </cs:Packaging>
+            <cs:GrossWeight xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                <cs:Weight>8939.82</cs:Weight>
+                <cs:WeightUnit>KGS</cs:WeightUnit>
+            </cs:GrossWeight>
+            <cs:Volume xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+                <cs:Volume>67.195</cs:Volume>
+                <cs:VolumeUnit>CBM</cs:VolumeUnit>
+            </cs:Volume>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>1</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>1000038472</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>2</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>THD (IN TRI)</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>3</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>DEPT# 028</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>4</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>PURCHASE</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>5</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>ORDER#</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>6</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>52107892</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>7</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>DESCRIPTION:</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>8</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>SONOMA 38"</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>9</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>GAS FIRE</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>10</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>TABLE</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>11</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>COUNTRY OF</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>12</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>ORIGIN: MADE</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>13</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>IN</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>14</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>1 1000038472</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>15</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>1000047966</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:SeqNumber>16</ns0:SeqNumber>
+                <ns0:MarksAndNumbersLine>--DO--</ns0:MarksAndNumbersLine>
+            </ns0:MarksAndNumbers>
+            <CurrentContainerNumber>OOLU537967</CurrentContainerNumber>
+            <CurrentContainerCheckDigit>7</CurrentContainerCheckDigit>
+            <TrafficModel>
+                <ns0:OutBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:OutBound>
+                <ns0:InBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:InBound>
+            </TrafficModel>
+            <CgoPkgName>Package</CgoPkgName>
+            <CgoPkgCodeCount>1</CgoPkgCodeCount>
+            <CustomsRefDT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common">2014-07-11T00:00:00</ns0:LocDT>
+            </CustomsRefDT>
+            <Seal>
+                <ns0:SealType xmlns:ns0="http://www.cargosmart.com/common">SH</ns0:SealType>
+                <ns0:SealNumber xmlns:ns0="http://www.cargosmart.com/common">OOLAWB4013</ns0:SealNumber>
+            </Seal>
+            <GCPackageUnit>
+                <ns0:PackageSeqNumber xmlns:ns0="http://www.cargosmart.com/common">1</ns0:PackageSeqNumber>
+                <ns0:PackageUnitQuantity xmlns:ns0="http://www.cargosmart.com/common">419</ns0:PackageUnitQuantity>
+                <ns0:PackageUnitDescription xmlns:ns0="http://www.cargosmart.com/common">SONOMA 38" GAS FIRE TABLE P.O. NO.: 52107892 L/C NO.: FINAL DESTINATION AS BAYTOWN (36C) DISTRIBUTION CENTER FREIGHT COLLECT HTS : 7321110000 8306299000</ns0:PackageUnitDescription>
+            </GCPackageUnit>
+        </Cargo>
+        <DnD Type="Detention">
+            <ContainerNumber>OOLU537967</ContainerNumber>
+            <ContainerCheckDigit>7</ContainerCheckDigit>
+            <FreeTimeStartDT/>
+            <FreeTime>20</FreeTime>
+            <FreeTimeType>W</FreeTimeType>
+        </DnD>
+        <DnD Type="Demurrage">
+            <ContainerNumber>OOLU537967</ContainerNumber>
+            <ContainerCheckDigit>7</ContainerCheckDigit>
+            <FreeTimeStartDT>
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2014-08-05T05:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CST">2014-08-05T00:00:00</ns0:LocDT>
+            </FreeTimeStartDT>
+            <FreeTime>5</FreeTime>
+            <FreeTimeType>W</FreeTimeType>
+        </DnD>
+        <FreightCharge>
+            <DisplaySeqNumber>2</DisplaySeqNumber>
+            <ChargeType>0</ChargeType>
+            <UnBill>false</UnBill>
+            <PayableElseWhere>false</PayableElseWhere>
+            <ChargeCode>BUC</ChargeCode>
+            <ChargePrintLable>BUNKER CHARGE</ChargePrintLable>
+            <Basis>1</Basis>
+            <FreightRate>120</FreightRate>
+            <CalculateMethod>45HQ</CalculateMethod>
+            <ChargeAmount Currency="USD">120</ChargeAmount>
+            <PaymentCurrency>USD</PaymentCurrency>
+            <InvoiceNumber>3806034100</InvoiceNumber>
+            <ControlOfficeCode>380</ControlOfficeCode>
+            <CollectionOfficeCode>OBK</CollectionOfficeCode>
+            <TotalAmount Currency="USD">120</TotalAmount>
+            <TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1">120</TotalAmtInPmtCurrency>
+            <SVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+            </SVVD>
+            <IBVoyRef>008E</IBVoyRef>
+            <IsApprovedForCustomer>true</IsApprovedForCustomer>
+            <ChargeDesc>Bunker Charge</ChargeDesc>
+            <PayByInformation>
+                <PayerName>Home Depot (USA) Inc.</PayerName>
+                <CarrierCustomerCode>3150918009</CarrierCustomerCode>
+                <CityDetails>
+                    <ns0:City xmlns:ns0="http://www.cargosmart.com/common">Atlanta</ns0:City>
+                    <ns0:County xmlns:ns0="http://www.cargosmart.com/common">Fulton</ns0:County>
+                    <ns0:State xmlns:ns0="http://www.cargosmart.com/common">Georgia</ns0:State>
+                    <ns0:Country xmlns:ns0="http://www.cargosmart.com/common">United States</ns0:Country>
+                </CityDetails>
+            </PayByInformation>
+            <RatePercentage>100</RatePercentage>
+        </FreightCharge>
+        <FreightCharge>
+            <DisplaySeqNumber>4</DisplaySeqNumber>
+            <ChargeType>1</ChargeType>
+            <UnBill>false</UnBill>
+            <PayableElseWhere>false</PayableElseWhere>
+            <ChargeCode>DOC</ChargeCode>
+            <ChargePrintLable>O/B DOC FEE</ChargePrintLable>
+            <Basis>1</Basis>
+            <FreightRate>450</FreightRate>
+            <CalculateMethod>Lump Sum</CalculateMethod>
+            <ChargeAmount Currency="CNY">450</ChargeAmount>
+            <PaymentCurrency>CNY</PaymentCurrency>
+            <InvoiceNumber>4146679407</InvoiceNumber>
+            <ControlOfficeCode>414</ControlOfficeCode>
+            <CollectionOfficeCode>ZIA</CollectionOfficeCode>
+            <TotalAmount Currency="CNY">450</TotalAmount>
+            <TotalAmtInPmtCurrency Currency="CNY" ExchangeRate="1">450</TotalAmtInPmtCurrency>
+            <SVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+            </SVVD>
+            <OBVoyRef>008E</OBVoyRef>
+            <IsApprovedForCustomer>true</IsApprovedForCustomer>
+            <ChargeDesc>Outbound Documentation Fee</ChargeDesc>
+            <PayByInformation>
+                <PayerName>Damco China Limited Xiamen Branch</PayerName>
+                <CarrierCustomerCode>7097735000</CarrierCustomerCode>
+                <CityDetails>
+                    <ns0:City xmlns:ns0="http://www.cargosmart.com/common">Xiamen</ns0:City>
+                    <ns0:County xmlns:ns0="http://www.cargosmart.com/common">Xiamen</ns0:County>
+                    <ns0:State xmlns:ns0="http://www.cargosmart.com/common">Fujian</ns0:State>
+                    <ns0:Country xmlns:ns0="http://www.cargosmart.com/common">China</ns0:Country>
+                </CityDetails>
+            </PayByInformation>
+            <RatePercentage>100</RatePercentage>
+        </FreightCharge>
+        <FreightCharge>
+            <DisplaySeqNumber>1</DisplaySeqNumber>
+            <ChargeType>0</ChargeType>
+            <UnBill>false</UnBill>
+            <PayableElseWhere>false</PayableElseWhere>
+            <ChargeCode>Ocean Freight</ChargeCode>
+            <ChargePrintLable>Ocean Freight</ChargePrintLable>
+            <Basis>1</Basis>
+            <FreightRate>2825</FreightRate>
+            <CalculateMethod>45HQ</CalculateMethod>
+            <ChargeAmount Currency="USD">2825</ChargeAmount>
+            <PaymentCurrency>USD</PaymentCurrency>
+            <InvoiceNumber>3806034100</InvoiceNumber>
+            <ControlOfficeCode>380</ControlOfficeCode>
+            <CollectionOfficeCode>OBK</CollectionOfficeCode>
+            <TotalAmount Currency="USD">2825</TotalAmount>
+            <TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1">2825</TotalAmtInPmtCurrency>
+            <SVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+            </SVVD>
+            <IBVoyRef>008E</IBVoyRef>
+            <IsApprovedForCustomer>true</IsApprovedForCustomer>
+            <ChargeDesc>Ocean Freight</ChargeDesc>
+            <PayByInformation>
+                <PayerName>Home Depot (USA) Inc.</PayerName>
+                <CarrierCustomerCode>3150918009</CarrierCustomerCode>
+                <CityDetails>
+                    <ns0:City xmlns:ns0="http://www.cargosmart.com/common">Atlanta</ns0:City>
+                    <ns0:County xmlns:ns0="http://www.cargosmart.com/common">Fulton</ns0:County>
+                    <ns0:State xmlns:ns0="http://www.cargosmart.com/common">Georgia</ns0:State>
+                    <ns0:Country xmlns:ns0="http://www.cargosmart.com/common">United States</ns0:Country>
+                </CityDetails>
+            </PayByInformation>
+            <RatePercentage>100</RatePercentage>
+        </FreightCharge>
+        <FreightCharge>
+            <DisplaySeqNumber>3</DisplaySeqNumber>
+            <ChargeType>1</ChargeType>
+            <UnBill>false</UnBill>
+            <PayableElseWhere>false</PayableElseWhere>
+            <ChargeCode>THC</ChargeCode>
+            <ChargePrintLable>ORIG TRML HANDLG</ChargePrintLable>
+            <Basis>1</Basis>
+            <FreightRate>1600</FreightRate>
+            <CalculateMethod>45HQ</CalculateMethod>
+            <ChargeAmount Currency="CNY">1600</ChargeAmount>
+            <PaymentCurrency>CNY</PaymentCurrency>
+            <InvoiceNumber>4146679407</InvoiceNumber>
+            <ControlOfficeCode>414</ControlOfficeCode>
+            <CollectionOfficeCode>ZIA</CollectionOfficeCode>
+            <TotalAmount Currency="CNY">1600</TotalAmount>
+            <TotalAmtInPmtCurrency Currency="CNY" ExchangeRate="1">1600</TotalAmtInPmtCurrency>
+            <SVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+            </SVVD>
+            <OBVoyRef>008E</OBVoyRef>
+            <IsApprovedForCustomer>true</IsApprovedForCustomer>
+            <ChargeDesc>Terminal Handling Charge at Origin</ChargeDesc>
+            <PayByInformation>
+                <PayerName>Damco China Limited Xiamen Branch</PayerName>
+                <CarrierCustomerCode>7097735000</CarrierCustomerCode>
+                <CityDetails>
+                    <ns0:City xmlns:ns0="http://www.cargosmart.com/common">Xiamen</ns0:City>
+                    <ns0:County xmlns:ns0="http://www.cargosmart.com/common">Xiamen</ns0:County>
+                    <ns0:State xmlns:ns0="http://www.cargosmart.com/common">Fujian</ns0:State>
+                    <ns0:Country xmlns:ns0="http://www.cargosmart.com/common">China</ns0:Country>
+                </CityDetails>
+            </PayByInformation>
+            <RatePercentage>100</RatePercentage>
+        </FreightCharge>
+        <FreightChargeCNTR>
+            <DisplaySeqNumber>2</DisplaySeqNumber>
+            <ChargeType>0</ChargeType>
+            <UnBill>false</UnBill>
+            <PayableElseWhere>false</PayableElseWhere>
+            <ChargeCode>BUC</ChargeCode>
+            <ChargePrintLable>BUNKER CHARGE</ChargePrintLable>
+            <Basis>1</Basis>
+            <FreightRate>120</FreightRate>
+            <CalculateMethod>45HQ</CalculateMethod>
+            <ChargeAmount Currency="USD">120</ChargeAmount>
+            <PaymentCurrency>USD</PaymentCurrency>
+            <InvoiceNumber>3806034100</InvoiceNumber>
+            <ControlOfficeCode>380</ControlOfficeCode>
+            <CollectionOfficeCode>OBK</CollectionOfficeCode>
+            <TotalAmount Currency="USD">120</TotalAmount>
+            <TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1">120</TotalAmtInPmtCurrency>
+            <SVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+            </SVVD>
+            <IBVoyRef>008E</IBVoyRef>
+            <IsApprovedForCustomer>true</IsApprovedForCustomer>
+            <ChargeDesc>Bunker Charge</ChargeDesc>
+            <PayByInformation>
+                <PayerName>Home Depot (USA) Inc.</PayerName>
+                <CarrierCustomerCode>3150918009</CarrierCustomerCode>
+                <CityDetails>
+                    <ns0:City xmlns:ns0="http://www.cargosmart.com/common">Atlanta</ns0:City>
+                    <ns0:County xmlns:ns0="http://www.cargosmart.com/common">Fulton</ns0:County>
+                    <ns0:State xmlns:ns0="http://www.cargosmart.com/common">Georgia</ns0:State>
+                    <ns0:Country xmlns:ns0="http://www.cargosmart.com/common">United States</ns0:Country>
+                    <ns0:LocationCode xmlns:ns0="http://www.cargosmart.com/common"/>
+                </CityDetails>
+            </PayByInformation>
+            <RatePercentage>100</RatePercentage>
+            <ContainerNumber>OOLU537967</ContainerNumber>
+            <ContainerCheckDigit>7</ContainerCheckDigit>
+            <CarrCntrSizeType>L5G1</CarrCntrSizeType>
+            <OOCLCntrSizeType>45HQ</OOCLCntrSizeType>
+        </FreightChargeCNTR>
+        <FreightChargeCNTR>
+            <DisplaySeqNumber>1</DisplaySeqNumber>
+            <ChargeType>0</ChargeType>
+            <UnBill>false</UnBill>
+            <PayableElseWhere>false</PayableElseWhere>
+            <ChargeCode>Ocean Freight</ChargeCode>
+            <ChargePrintLable>Ocean Freight</ChargePrintLable>
+            <Basis>1</Basis>
+            <FreightRate>2825</FreightRate>
+            <CalculateMethod>45HQ</CalculateMethod>
+            <ChargeAmount Currency="USD">2825</ChargeAmount>
+            <PaymentCurrency>USD</PaymentCurrency>
+            <InvoiceNumber>3806034100</InvoiceNumber>
+            <ControlOfficeCode>380</ControlOfficeCode>
+            <CollectionOfficeCode>OBK</CollectionOfficeCode>
+            <TotalAmount Currency="USD">2825</TotalAmount>
+            <TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1">2825</TotalAmtInPmtCurrency>
+            <SVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+            </SVVD>
+            <IBVoyRef>008E</IBVoyRef>
+            <IsApprovedForCustomer>true</IsApprovedForCustomer>
+            <ChargeDesc>Ocean Freight</ChargeDesc>
+            <PayByInformation>
+                <PayerName>Home Depot (USA) Inc.</PayerName>
+                <CarrierCustomerCode>3150918009</CarrierCustomerCode>
+                <CityDetails>
+                    <ns0:City xmlns:ns0="http://www.cargosmart.com/common">Atlanta</ns0:City>
+                    <ns0:County xmlns:ns0="http://www.cargosmart.com/common">Fulton</ns0:County>
+                    <ns0:State xmlns:ns0="http://www.cargosmart.com/common">Georgia</ns0:State>
+                    <ns0:Country xmlns:ns0="http://www.cargosmart.com/common">United States</ns0:Country>
+                    <ns0:LocationCode xmlns:ns0="http://www.cargosmart.com/common"/>
+                </CityDetails>
+            </PayByInformation>
+            <RatePercentage>100</RatePercentage>
+            <ContainerNumber>OOLU537967</ContainerNumber>
+            <ContainerCheckDigit>7</ContainerCheckDigit>
+            <CarrCntrSizeType>L5G1</CarrCntrSizeType>
+            <OOCLCntrSizeType>45HQ</OOCLCntrSizeType>
+        </FreightChargeCNTR>
+        <FreightChargeCNTR>
+            <DisplaySeqNumber>3</DisplaySeqNumber>
+            <ChargeType>1</ChargeType>
+            <UnBill>false</UnBill>
+            <PayableElseWhere>false</PayableElseWhere>
+            <ChargeCode>THC</ChargeCode>
+            <ChargePrintLable>ORIG TRML HANDLG</ChargePrintLable>
+            <Basis>1</Basis>
+            <FreightRate>1600</FreightRate>
+            <CalculateMethod>45HQ</CalculateMethod>
+            <ChargeAmount Currency="CNY">1600</ChargeAmount>
+            <PaymentCurrency>CNY</PaymentCurrency>
+            <InvoiceNumber>4146679407</InvoiceNumber>
+            <ControlOfficeCode>414</ControlOfficeCode>
+            <CollectionOfficeCode>ZIA</CollectionOfficeCode>
+            <TotalAmount Currency="CNY">1600</TotalAmount>
+            <TotalAmtInPmtCurrency Currency="CNY" ExchangeRate="1">1600</TotalAmtInPmtCurrency>
+            <SVVD>
+                <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SC1</ns0:Service>
+                <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">DBL</ns0:Vessel>
+                <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">APL DUBLIN</ns0:VesselName>
+                <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">008</ns0:Voyage>
+                <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+                <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9601314</ns0:LloydsNumber>
+                <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">9V9404</ns0:CallSign>
+            </SVVD>
+            <OBVoyRef>008E</OBVoyRef>
+            <IsApprovedForCustomer>true</IsApprovedForCustomer>
+            <ChargeDesc>Terminal Handling Charge at Origin</ChargeDesc>
+            <PayByInformation>
+                <PayerName>Damco China Limited Xiamen Branch</PayerName>
+                <CarrierCustomerCode>7097735000</CarrierCustomerCode>
+                <CityDetails>
+                    <ns0:City xmlns:ns0="http://www.cargosmart.com/common">Xiamen</ns0:City>
+                    <ns0:County xmlns:ns0="http://www.cargosmart.com/common">Xiamen</ns0:County>
+                    <ns0:State xmlns:ns0="http://www.cargosmart.com/common">Fujian</ns0:State>
+                    <ns0:Country xmlns:ns0="http://www.cargosmart.com/common">China</ns0:Country>
+                    <ns0:LocationCode xmlns:ns0="http://www.cargosmart.com/common"/>
+                </CityDetails>
+            </PayByInformation>
+            <RatePercentage>100</RatePercentage>
+            <ContainerNumber>OOLU537967</ContainerNumber>
+            <ContainerCheckDigit>7</ContainerCheckDigit>
+            <CarrCntrSizeType>L5G1</CarrCntrSizeType>
+            <OOCLCntrSizeType>45HQ</OOCLCntrSizeType>
+        </FreightChargeCNTR>
+    </Body>
+</BillOfLading>

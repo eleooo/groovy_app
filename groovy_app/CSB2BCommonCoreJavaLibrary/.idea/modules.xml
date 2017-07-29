@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CSB2BEDICommonCoreLibrary.iml" filepath="$PROJECT_DIR$/CSB2BEDICommonCoreLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CSB2BEDIGroovyDevelopment/CSB2BEDIGroovyDevelopment.iml" filepath="$PROJECT_DIR$/../CSB2BEDIGroovyDevelopment/CSB2BEDIGroovyDevelopment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../CSB2BEDIGroovyDevelopment/CSB2BReconciTool.iml" filepath="$PROJECT_DIR$/../CSB2BEDIGroovyDevelopment/CSB2BReconciTool.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ContainerMovement xmlns:ns0="http://www.cargosmart.com/route">
+    <ns0:Header>
+        <ns1:MsgDT xmlns:ns1="http://www.cargosmart.com/common">
+            <ns1:GMT>2017-03-02T07:10:57.133+08:00</ns1:GMT>
+            <ns1:LocDT TimeZone="HKT" CSTimeZone="HKT">2017-03-02T15:10:57.133+08:00</ns1:LocDT>
+        </ns1:MsgDT>
+        <ns1:MsgDirection xmlns:ns1="http://www.cargosmart.com/common">O</ns1:MsgDirection>
+        <ns1:MsgType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:MsgType>
+        <ns1:SenderID xmlns:ns1="http://www.cargosmart.com/common">CargoSmart</ns1:SenderID>
+        <ns1:ReceiverID xmlns:ns1="http://www.cargosmart.com/common">BNZLBPI</ns1:ReceiverID>
+        <ns1:Action xmlns:ns1="http://www.cargosmart.com/common">NEW</ns1:Action>
+        <ns1:Version xmlns:ns1="http://www.cargosmart.com/common">24</ns1:Version>
+        <ns1:InterchangeMessageID xmlns:ns1="http://www.cargosmart.com/common">BNZLBPI_CT_20170302151057_2002857293650</ns1:InterchangeMessageID>
+        <ns1:DataSource xmlns:ns1="http://www.cargosmart.com/common">CS2 db</ns1:DataSource>
+    </ns0:Header>
+    <ns0:Body>
+        <ns0:TransactionInformation>
+            <ns1:MessageID xmlns:ns1="http://www.cargosmart.com/common">BNZLBPI_CT_20170302151057_2002857293650_2002857293650</ns1:MessageID>
+            <ns1:InterchangeTransactionID xmlns:ns1="http://www.cargosmart.com/common">2002857293650</ns1:InterchangeTransactionID>
+        </ns0:TransactionInformation>
+        <ns0:Event>
+            <ns0:CarrEventCode>ssm_vsl_arr_last_pod_est</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>vsl_arrived</ns0:CSEventCode>
+                <ns0:DimensionType>Port</ns0:DimensionType>
+                <ns0:DimensionValue>LastPOD</ns0:DimensionValue>
+                <ns0:EstActIndicator>E</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:Location>
+                <ns0:LocationName>Charleston</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Charleston</ns0:City>
+                    <ns0:County>Charleston</ns0:County>
+                    <ns0:State>South Carolina</ns0:State>
+                    <ns0:Country>United States</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">USCHS</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">D</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">1601</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2540801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">SC</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">NA</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>421</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-05T13:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="EST">2017-02-05T08:00:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CurrentShipmentLeg>2</ns0:CurrentShipmentLeg>
+            <ns0:CarrierUniqueMovementID>74989359-2</ns0:CarrierUniqueMovementID>
+            <ns0:ContraIndicator>UPDATED</ns0:ContraIndicator>
+            <ns0:CS1Event>CS277</ns0:CS1Event>
+        </ns0:Event>
+        <ns0:GeneralInformation>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:Label>CS277</ns0:Label>
+        </ns0:GeneralInformation>
+        <ns0:Container>
+            <ns0:ContainerNumber>OOLU441340</ns0:ContainerNumber>
+            <ns0:ContainerCheckDigit>0</ns0:ContainerCheckDigit>
+            <ns0:CarrCntrSizeType>42G1</ns0:CarrCntrSizeType>
+            <ns0:CSContainerSizeType>42GP</ns0:CSContainerSizeType>
+            <ns0:Seal>
+                <ns1:SealType xmlns:ns1="http://www.cargosmart.com/common">HS</ns1:SealType>
+                <ns1:SealNumber xmlns:ns1="http://www.cargosmart.com/common">OOLEHG7133</ns1:SealNumber>
+            </ns0:Seal>
+            <ns0:CS1ContainerSizeType>40GP</ns0:CS1ContainerSizeType>
+            <ns0:EmptyReturnFacilityCode>CHS05</ns0:EmptyReturnFacilityCode>
+        </ns0:Container>
+        <ns0:BookingGeneralInfo>
+            <ns0:CarrierBookingNumber>2582033990</ns0:CarrierBookingNumber>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:BookingOffice>Penang</ns0:BookingOffice>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">CS</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">3318</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">LATEX GLOVES(NON MEDICAL 
+GLOVES FOR
+GENERAL PURPOSES)
+P.O.NO.: 66036,CUSTOMER 
+ORDER#151772
+LOT NO.:3516125004
+P.I.NO.: 2000034494COUNTRY OF ORIGIN: THAILAND
+SHIPPER DECLARED
+THIS SHIPMENT CONTAINS NO 
+SOLID WOOD PACKING MATERIALS'
+"GOODS TRUCKED FROM THAILAND 
+AND SHIPPED VIA PENANG,
+MALAYSIA"Harmonized Code : 4015.19.1010</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BookingGeneralInfo>
+        <ns0:BLGeneralInfo>
+            <ns0:BLNumber>2582033990</ns0:BLNumber>
+            <ns0:BLIssueDT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common">2017-01-02T00:00:00+08:00</ns1:LocDT>
+            </ns0:BLIssueDT>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:CustomsClearanceLocationCode>1601</ns0:CustomsClearanceLocationCode>
+            <ns0:BLSVVD>
+                <ns1:Service xmlns:ns1="http://www.cargosmart.com/common">PEN2</ns1:Service>
+                <ns1:Vessel xmlns:ns1="http://www.cargosmart.com/common">TV7</ns1:Vessel>
+                <ns1:VesselName xmlns:ns1="http://www.cargosmart.com/common">TEERA BHUM</ns1:VesselName>
+                <ns1:Voyage xmlns:ns1="http://www.cargosmart.com/common">100</ns1:Voyage>
+                <ns1:Direction xmlns:ns1="http://www.cargosmart.com/common">S</ns1:Direction>
+            </ns0:BLSVVD>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">CS</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">3318</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">LATEX GLOVES(NON MEDICAL GLOVES FOR GENERAL PURPOSES) P.O.NO.: 66036,CUSTOMER ORDER#151772 LOT NO.:3516125004 P.I.NO.: 2000034494COUNTRY OF ORIGIN: THAILAND SHIPPER DECLARED THIS SHIPMENT CONTAINS NO SOLID WOOD PACKING MATERIALS' "GOODS TRUCKED FROM THAILAND AND SHIPPED VIA PENANG, MALAYSIA"Harmonized Code : 4015.19.1010</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BLGeneralInfo>
+        <ns0:Route>
+            <ns0:POR>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Penang</ns1:City>
+                    <ns1:State>Pulau Pinang</ns1:State>
+                    <ns1:Country>Malaysia</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>MYPEN</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>MYPEN</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>55735</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>PEN01</ns1:FacilityCode>
+                    <ns1:FacilityName>Port Penang</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2549814</ns1:CSParentCityID>
+                    <ns1:CSCountryCode>MY</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>AS</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+            </ns0:POR>
+            <ns0:FND>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Charleston</ns1:City>
+                    <ns1:County>Charleston</ns1:County>
+                    <ns1:State>South Carolina</ns1:State>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>USCHS</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>USCHS</ns1:UNLocationCode>
+                        <ns1:SchedKDType>D</ns1:SchedKDType>
+                        <ns1:SchedKDCode>1601</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>CHS05</ns1:FacilityCode>
+                    <ns1:FacilityName>Wando Welch Terminal</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2540801</ns1:CSParentCityID>
+                    <ns1:CSStateCode>SC</ns1:CSStateCode>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>NA</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+                <ns0:ArrivalDT Indicator="E">
+                    <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-09T17:00:00+08:00</ns1:GMT>
+                    <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EST">2017-02-09T12:00:00+08:00</ns1:LocDT>
+                </ns0:ArrivalDT>
+                <ns0:ArrivalDT Indicator="A">
+                    <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-09T07:13:00+08:00</ns1:GMT>
+                    <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EST">2017-02-09T02:13:00+08:00</ns1:LocDT>
+                </ns0:ArrivalDT>
+            </ns0:FND>
+            <ns0:FirstPOL>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Penang</ns1:PortName>
+                    <ns1:PortCode>PEN</ns1:PortCode>
+                    <ns1:City>Penang</ns1:City>
+                    <ns1:State>Pulau Pinang</ns1:State>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>MYPEN</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>55735</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>Malaysia</ns1:Country>
+                    <ns1:CSPortID>284</ns1:CSPortID>
+                    <ns1:CSCountryCode>MY</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>PEN01</ns1:FacilityCode>
+                    <ns1:FacilityName>Port Penang</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSParentCityID>2549814</ns0:CSParentCityID>
+            </ns0:FirstPOL>
+            <ns0:LastPOD>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Charleston</ns1:PortName>
+                    <ns1:PortCode>CHS</ns1:PortCode>
+                    <ns1:City>Charleston</ns1:City>
+                    <ns1:County>Charleston</ns1:County>
+                    <ns1:State>South Carolina</ns1:State>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>USCHS</ns1:UNLocationCode>
+                        <ns1:SchedKDType>D</ns1:SchedKDType>
+                        <ns1:SchedKDCode>1601</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:CSPortID>421</ns1:CSPortID>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>CHS05</ns1:FacilityCode>
+                    <ns1:FacilityName>Wando Welch Terminal</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSStateCode>SC</ns0:CSStateCode>
+                <ns0:CSParentCityID>2540801</ns0:CSParentCityID>
+            </ns0:LastPOD>
+            <ns0:ArrivalAtFinalHub Indicator="E">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-09T17:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EST">2017-02-09T12:00:00+08:00</ns1:LocDT>
+            </ns0:ArrivalAtFinalHub>
+            <ns0:ArrivalAtFinalHub Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-09T07:13:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EST">2017-02-09T02:13:00+08:00</ns1:LocDT>
+            </ns0:ArrivalAtFinalHub>
+            <ns0:FullReturnCutoffDT Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-12-30T17:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="MYT" CSTimeZone="MYT">2016-12-31T01:00:00+08:00</ns1:LocDT>
+            </ns0:FullReturnCutoffDT>
+            <ns0:CargoDeliveryDT Indicator="E">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-09T17:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EST">2017-02-09T12:00:00+08:00</ns1:LocDT>
+            </ns0:CargoDeliveryDT>
+            <ns0:CargoDeliveryDT Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-09T07:13:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EST">2017-02-09T02:13:00+08:00</ns1:LocDT>
+            </ns0:CargoDeliveryDT>
+            <ns0:OceanLeg>
+                <ns0:LegSeq>1</ns0:LegSeq>
+                <ns0:POL>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Penang</ns1:PortName>
+                        <ns1:City>Penang</ns1:City>
+                        <ns1:State>Pulau Pinang</ns1:State>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>MYPEN</ns1:UNLocationCode>
+                            <ns1:SchedKDType>K</ns1:SchedKDType>
+                            <ns1:SchedKDCode>55735</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>Malaysia</ns1:Country>
+                        <ns1:CSPortID>284</ns1:CSPortID>
+                        <ns1:CSCountryCode>MY</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>PEN01</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:DepartureDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-01-02T20:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="MYT" CSTimeZone="MYT">2017-01-03T04:00:00+08:00</ns1:LocDT>
+                    </ns0:DepartureDT>
+                    <ns0:DepartureDT Indicator="A">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-01-02T04:12:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="MYT" CSTimeZone="MYT">2017-01-02T12:12:00+08:00</ns1:LocDT>
+                    </ns0:DepartureDT>
+                    <ns0:CSParentCityID>2549814</ns0:CSParentCityID>
+                </ns0:POL>
+                <ns0:POD>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Singapore</ns1:PortName>
+                        <ns1:City>Singapore</ns1:City>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+                            <ns1:SchedKDType>K</ns1:SchedKDType>
+                            <ns1:SchedKDCode>55976</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>Singapore</ns1:Country>
+                        <ns1:CSPortID>355</ns1:CSPortID>
+                        <ns1:CSCountryCode>SG</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>SIN01</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:ArrivalDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-01-04T18:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="SGT" CSTimeZone="SGT">2017-01-05T02:00:00+08:00</ns1:LocDT>
+                    </ns0:ArrivalDT>
+                    <ns0:ArrivalDT Indicator="A">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-01-04T18:20:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="SGT" CSTimeZone="SGT">2017-01-05T02:20:00+08:00</ns1:LocDT>
+                    </ns0:ArrivalDT>
+                    <ns0:CSParentCityID>2530507</ns0:CSParentCityID>
+                </ns0:POD>
+                <ns0:SVVD>
+                    <ns0:Loading>
+                        <ns0:Service>PEN2</ns0:Service>
+                        <ns0:Vessel>TV7</ns0:Vessel>
+                        <ns0:VesselName>TEERA BHUM</ns0:VesselName>
+                        <ns0:Voyage>100</ns0:Voyage>
+                        <ns0:Direction>South</ns0:Direction>
+                        <ns0:LloydsNumber>9300130</ns0:LloydsNumber>
+                        <ns0:CallSign>9VBE2</ns0:CallSign>
+                        <ns0:RegistrationCountry>Singapore</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>SG</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>16100</ns0:ExternalVoyage>
+                    </ns0:Loading>
+                    <ns0:Discharge>
+                        <ns0:Service>PEN2</ns0:Service>
+                        <ns0:Vessel>TV7</ns0:Vessel>
+                        <ns0:VesselName>TEERA BHUM</ns0:VesselName>
+                        <ns0:Voyage>100</ns0:Voyage>
+                        <ns0:Direction>South</ns0:Direction>
+                        <ns0:LloydsNumber>9300130</ns0:LloydsNumber>
+                        <ns0:CallSign>9VBE2</ns0:CallSign>
+                        <ns0:RegistrationCountry>Singapore</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>SG</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>16100</ns0:ExternalVoyage>
+                    </ns0:Discharge>
+                </ns0:SVVD>
+            </ns0:OceanLeg>
+            <ns0:OceanLeg>
+                <ns0:LegSeq>2</ns0:LegSeq>
+                <ns0:POL>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Singapore</ns1:PortName>
+                        <ns1:City>Singapore</ns1:City>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+                            <ns1:SchedKDType>K</ns1:SchedKDType>
+                            <ns1:SchedKDCode>55976</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>Singapore</ns1:Country>
+                        <ns1:CSPortID>355</ns1:CSPortID>
+                        <ns1:CSCountryCode>SG</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>SIN01</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:DepartureDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-01-07T10:30:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="SGT">2017-01-07T18:30:00+08:00</ns1:LocDT>
+                    </ns0:DepartureDT>
+                    <ns0:DepartureDT Indicator="A">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-01-07T10:58:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="SGT" CSTimeZone="SGT">2017-01-07T18:58:00+08:00</ns1:LocDT>
+                    </ns0:DepartureDT>
+                    <ns0:CSParentCityID>2530507</ns0:CSParentCityID>
+                </ns0:POL>
+                <ns0:POD>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Charleston</ns1:PortName>
+                        <ns1:City>Charleston</ns1:City>
+                        <ns1:County>Charleston</ns1:County>
+                        <ns1:State>South Carolina</ns1:State>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>USCHS</ns1:UNLocationCode>
+                            <ns1:SchedKDType>D</ns1:SchedKDType>
+                            <ns1:SchedKDCode>1601</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>United States</ns1:Country>
+                        <ns1:CSPortID>421</ns1:CSPortID>
+                        <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>CHS05</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:ArrivalDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-09T01:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EST" CSTimeZone="EST">2017-02-08T20:00:00+08:00</ns1:LocDT>
+                    </ns0:ArrivalDT>
+                    <ns0:ArrivalDT Indicator="A">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-09T01:26:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EST" CSTimeZone="EST">2017-02-08T20:26:00+08:00</ns1:LocDT>
+                    </ns0:ArrivalDT>
+                    <ns0:CSStateCode>SC</ns0:CSStateCode>
+                    <ns0:CSParentCityID>2540801</ns0:CSParentCityID>
+                </ns0:POD>
+                <ns0:SVVD>
+                    <ns0:Loading>
+                        <ns0:Service>CEC</ns0:Service>
+                        <ns0:ServiceName>EAST COAST EXPRESS</ns0:ServiceName>
+                        <ns0:Vessel>BCL</ns0:Vessel>
+                        <ns0:VesselName>APL BARCELONA</ns0:VesselName>
+                        <ns0:Voyage>024</ns0:Voyage>
+                        <ns0:Direction>East</ns0:Direction>
+                        <ns0:LloydsNumber>9462043</ns0:LloydsNumber>
+                        <ns0:CallSign>9V9402</ns0:CallSign>
+                        <ns0:RegistrationCountry>Singapore</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>SG</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>024E</ns0:ExternalVoyage>
+                    </ns0:Loading>
+                    <ns0:Discharge>
+                        <ns0:Service>CEC</ns0:Service>
+                        <ns0:ServiceName>EAST COAST EXPRESS</ns0:ServiceName>
+                        <ns0:Vessel>BCL</ns0:Vessel>
+                        <ns0:VesselName>APL BARCELONA</ns0:VesselName>
+                        <ns0:Voyage>024</ns0:Voyage>
+                        <ns0:Direction>West</ns0:Direction>
+                        <ns0:LloydsNumber>9462043</ns0:LloydsNumber>
+                        <ns0:CallSign>9V9402</ns0:CallSign>
+                        <ns0:RegistrationCountry>Singapore</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>SG</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>024W</ns0:ExternalVoyage>
+                    </ns0:Discharge>
+                </ns0:SVVD>
+            </ns0:OceanLeg>
+        </ns0:Route>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>CSBKG</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>CS4832355017</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription>CS Reference Number</ns0:ReferenceDescription>
+        </ns0:ExternalReference>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>SC</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>PE163342v010</ns0:ReferenceNumber>
+        </ns0:ExternalReference>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">BPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Top Glove Medical (Thailand)Co Ltd</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6536768000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:ContactEmailAddress>meaw@topglove.co.th</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Songkhla</ns1:City>
+                <ns1:Country>TH</ns1:Country>
+                <ns1:PostalCode>90320</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>188, Moo 5, Tambon Sumnakkham, Amphur Sadao,&#xD;
+Kanchanawanich Road,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Top Glove Medical (Thailand)Co Ltd</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6536768000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Songkhla</ns1:City>
+                <ns1:Country>TH</ns1:Country>
+                <ns1:PostalCode>90320</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>188, Moo 5, Tambon Sumnakkham, Amphur Sadao,&#xD;
+Kanchanawanich Road,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Bunzl International Services, Inc</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6530022000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Saint Louis</ns1:City>
+                <ns1:County>Saint Louis</ns1:County>
+                <ns1:State>Missouri</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>63146</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>11973 Westline Industrial Drive, Suite 125,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Asia Logistics Co., Ltd.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6714202000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Hat Yai</ns1:City>
+                <ns1:Country>TH</ns1:Country>
+                <ns1:PostalCode>90110</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>638/3-4&#xD;
+Petkasem Rd.,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Bunzl International Services, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7549680000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Accounting</ns1:FirstName>
+                <ns1:LastName>Accounting</ns1:LastName>
+                <ns1:ContactEmailAddress>Import.Payments@bunzlusa.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Saint Louis</ns1:City>
+                <ns1:County>Saint Louis</ns1:County>
+                <ns1:State>Missouri</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>63141</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Suite 200&#xD;
+One City Place Drive</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CCP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Bunzl International Services, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7549680000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Accounting</ns1:FirstName>
+                <ns1:LastName>Accounting</ns1:LastName>
+                <ns1:ContactEmailAddress>Import.Payments@bunzlusa.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Saint Louis</ns1:City>
+                <ns1:County>Saint Louis</ns1:County>
+                <ns1:State>Missouri</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>63141</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Suite 200&#xD;
+One City Place Drive</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">NPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Bunzl International Services, Inc</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6530022000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Saint Louis</ns1:City>
+                <ns1:County>Saint Louis</ns1:County>
+                <ns1:State>Missouri</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>63146</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>11973 Westline Industrial Drive, Suite 125,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">ANP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">FedEx Trade Networks Transport &amp; Brokerage, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6396944000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Columbus</ns1:City>
+                <ns1:County>Franklin</ns1:County>
+                <ns1:State>Ohio</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>43230</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Suite B&#xD;
+845 Claycraft Road</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Bunzl International Services, Inc</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6530022000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Saint Louis</ns1:City>
+                <ns1:County>Saint Louis</ns1:County>
+                <ns1:State>Missouri</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>63146</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>11973 Westline Industrial Drive, Suite 125,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Bunzl International Services, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7549680000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Accounting</ns1:FirstName>
+                <ns1:LastName>Accounting</ns1:LastName>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Saint Louis</ns1:City>
+                <ns1:County>Saint Louis</ns1:County>
+                <ns1:State>Missouri</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>63141</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Suite 200&#xD;
+One City Place Drive</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Top Glove Medical (Thailand)Co Ltd</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6536768000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Songkhla</ns1:City>
+                <ns1:Country>TH</ns1:Country>
+                <ns1:PostalCode>90320</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>188, Moo 5, Tambon Sumnakkham, Amphur Sadao,&#xD;
+Kanchanawanich Road,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Top Glove Medical (Thailand)Co Ltd</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6536768000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Songkhla</ns1:City>
+                <ns1:Country>TH</ns1:Country>
+                <ns1:PostalCode>90320</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>188, Moo 5, Tambon Sumnakkham, Amphur Sadao,&#xD;
+Kanchanawanich Road,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Cargo>
+            <ns1:CargoNature xmlns:ns1="http://www.cargosmart.com/common">GC</ns1:CargoNature>
+            <ns1:CargoDescription xmlns:ns1="http://www.cargosmart.com/common">LATEX GLOVES</ns1:CargoDescription>
+            <ns1:Packaging xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:PackageType>CS</ns1:PackageType>
+                <ns1:PackageQty>3318</ns1:PackageQty>
+                <ns1:PackageDesc>LATEX GLOVES(NON MEDICAL 
+GLOVES FOR
+GENERAL PURPOSES)
+P.O.NO.: 66036,CUSTOMER 
+ORDER#151772
+LOT NO.:3516125004
+P.I.NO.: 2000034494COUNTRY OF ORIGIN: THAILAND
+SHIPPER DECLARED
+THIS SHIPMENT CONTAINS NO 
+SOLID WOOD PACKING MATERIALS'
+"GOODS TRUCKED FROM THAILAND 
+AND SHIPPED VIA PENANG,
+MALAYSIA"Harmonized Code : 4015.19.1010</ns1:PackageDesc>
+            </ns1:Packaging>
+            <ns1:GrossWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>18889.56</ns1:Weight>
+                <ns1:WeightUnit>KGS</ns1:WeightUnit>
+            </ns1:GrossWeight>
+            <ns1:NetWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>0</ns1:Weight>
+            </ns1:NetWeight>
+            <ns1:Volume xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Volume>60.79</ns1:Volume>
+                <ns1:VolumeUnit>CBM</ns1:VolumeUnit>
+            </ns1:Volume>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>1</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>NIL MARK</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+        </ns0:Cargo>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>ssm_vsl_arr_last_pod_est</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>vsl_arrived</ns0:CSEventCode>
+                <ns0:DimensionType>Port</ns0:DimensionType>
+                <ns0:DimensionValue>LastPOD</ns0:DimensionValue>
+                <ns0:EstActIndicator>E</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:Location>
+                <ns0:LocationName>Charleston</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Charleston</ns0:City>
+                    <ns0:County>Charleston</ns0:County>
+                    <ns0:State>South Carolina</ns0:State>
+                    <ns0:Country>United States</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">USCHS</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">D</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">1601</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2540801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">SC</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">NA</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>421</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2017-02-05T13:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="EST">2017-02-05T08:00:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>74989359-2</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS277</ns0:CS1Event>
+        </ns0:MileStones>
+    </ns0:Body>
+</ns0:ContainerMovement>

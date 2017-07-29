@@ -1,0 +1,14 @@
+{
+  "schemaFileName": "CUS_D99B_IFTMIN_CS_170127_IFTMIN.xsd",
+  "sefFileName": "CUS_D99B_IFTMIN_CS_170127.sef",
+  "escapeChar": "?",
+  "subelementDelimiter": ":",
+  "elementDelimiter": "+",
+  "recordDelimiter": "0x27",
+  "devName": "Claire",
+  "isOutgoingEDI": false,
+  "ediVersionInfo": "d99b",
+  "teamName": "CUS",
+  "msgName": "IFTMIN",
+  "ediCustomerSpecialInfo": "CS"
+}

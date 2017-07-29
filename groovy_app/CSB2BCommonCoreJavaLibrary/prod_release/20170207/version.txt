@@ -1,0 +1,3 @@
+20170203 - XmlBeanParser - fixed xml string one line format. 
+20170206 - XmlBeanParser - fixed empty element fail issue. 
+20170207 - XmlBeanParser - performance fine tune.

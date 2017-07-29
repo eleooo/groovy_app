@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:CustomsRCNotification xmlns:ns0="http://www.cargosmart.com/CustomsManifestResponse">
+    <ns0:Header>
+        <ns0:MsgDT>
+            <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-12-27T20:26:00Z</ns1:GMT>
+        </ns0:MsgDT>
+        <ns0:MsgDirection>I</ns0:MsgDirection>
+        <ns0:MsgType>CMANNFT</ns0:MsgType>
+        <ns0:SenderID>CSACI</ns0:SenderID>
+        <ns0:ReceiverID>CARGOSMART</ns0:ReceiverID>
+        <ns0:Action>NTF</ns0:Action>
+        <ns0:InterchangeMessageID>000041713</ns0:InterchangeMessageID>
+        <ns0:TargetCustomCountryCode>CA</ns0:TargetCustomCountryCode>
+    </ns0:Header>
+    <ns0:Body>
+        <ns0:StatusNotification>
+            <ns0:StatusCode>SU07</ns0:StatusCode>
+            <ns0:StatusDescription>Cargo Complete</ns0:StatusDescription>
+            <ns0:StatusDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-12-27T00:00:00Z</ns1:GMT>
+            </ns0:StatusDT>
+            <ns0:NotificationSeqence>16122720260001</ns0:NotificationSeqence>
+        </ns0:StatusNotification>
+        <ns0:GeneralInformation>
+            <ns0:UMR>H8FXX16120687IDZK4AYTUGSXXXX</ns0:UMR>
+            <ns0:Issuer>
+                <ns0:SCAC>8FXX</ns0:SCAC>
+            </ns0:Issuer>
+        </ns0:GeneralInformation>
+        <ns0:CarrierInformation>
+            <ns0:SCACCode>8FXX</ns0:SCACCode>
+        </ns0:CarrierInformation>
+        <ns0:ManifestInfo>
+            <ns0:BLRefNum>16120XXX</ns0:BLRefNum>
+        </ns0:ManifestInfo>
+        <ns0:Report>
+            <ns1:SCAC xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">8FXX</ns1:SCAC>
+            <ns1:TransmissionDT xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">2016-12-27T20:26:00Z</ns1:TransmissionDT>
+            <ns1:TotalPorts xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">4820</ns1:TotalPorts>
+            <ns1:TotalRecords xmlns:ns1="http://www.cargosmart.com/CustomsManifestTypes">4820</ns1:TotalRecords>
+        </ns0:Report>
+    </ns0:Body>
+</ns0:CustomsRCNotification>

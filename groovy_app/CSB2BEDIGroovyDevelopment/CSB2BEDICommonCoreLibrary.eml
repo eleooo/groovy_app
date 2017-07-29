@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="1.8" jdk_type="JavaSDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$/../CSB2BCommonCoreJavaLibrary"/>
+	<lib name="activation.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/activation.jar!/"/>
+	</lib>
+	<lib name="commons-compress-1.9.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/commons-compress-1.9.jar!/"/>
+	</lib>
+	<lib name="mail.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/mail.jar!/"/>
+	</lib>
+	<lib name="ojdbc6.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/ojdbc6.jar!/"/>
+	</lib>
+	<lib name="xdb6.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/xdb6.jar!/"/>
+	</lib>
+	<lib name="dom4j-1.6.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/dom4j-1.6.1.jar!/"/>
+	</lib>
+	<lib name="commons-lang3-3.3.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/commons-lang3-3.3.2.jar!/"/>
+	</lib>
+	<lib name="gson-2.3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/gson-2.3.1.jar!/"/>
+	</lib>
+	<lib name="groovy-all-2.4.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/groovy-all-2.4.3.jar!/"/>
+	</lib>
+	<lib name="simple-java-mail-4.2.3-java6-release.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/simple-java-mail-4.2.3-java6-release.jar!/"/>
+	</lib>
+	<lib name="B2B-Framework-SERVICE-1.1-20170601.084017-147.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/../CSB2BCommonCoreJavaLibrary/lib/B2B-Framework-SERVICE-1.1-20170601.084017-147.jar!/"/>
+	</lib>
+</component>

@@ -1,0 +1,2137 @@
+package cs.b2b.core.mapping.bean.edi.custom.iocm
+
+public class EDI_ICOM {
+
+	public static final Set<String> MultiElementList = ["Loop_AAAA","VY04","VY06","VY07","VY09","VY10","CT01_CT01","INTMDL01","BA11_BA11","PA11","PA12","CG11","IT31_IT31","DG31","ID31","BK11","BC11","WB11","CTDG","CT04","CS01","IT21_IT21","DG21","ID21","BA21_BA21","PA21","PA22","CG21","BK21","BC21","WB21","BA01_BA01","BA05","BA07","PA01","PA02","PA03","PA04","CG01","CT11_CT11","CT14","INTMDL11","LP01_LP01","DG11","ID11","IT01_IT01","IT03","DG01","ID01","CT21_CT21","CT24","INTMDL21","LP11","BK01","BC01","WB01"];
+
+	public HEADER1 HEADER; 
+	public List<Loop_AAAA2> Loop_AAAA; 
+}
+
+class HEADER1 {
+	public String FileId_01;
+}
+class AAAA3 {
+	public String FileId_01;
+	public String ExternalCustomsId_02;
+	public String TestingIndicator_03;
+	public String Filler_04;
+	public String EDICustomsMessageId_05;
+	public String EDICustomsId_06;
+	public String FileCreationDate_07;
+	public String FileCreationTime_08;
+	public String EDIPartnerName_09;
+	public String EDIPartnerDate_10;
+	public String EDIPartnerTime_11;
+	public String ReferenceNo_12;
+	public String ReferenceNoOfAnOriginalMessage_13;
+	public String MessageFunction_14;
+	public String SequenceNo_15;
+	public String SenderReference_16;
+	public String SenderReferenceVersion_17;
+	public String FileName_18;
+}
+class MI014 {
+	public String UserID_01;
+	public String UserCode_02;
+	public String UserPassword_03;
+	public String SCAC_04;
+	public String SenderId_05;
+	public String RecipientId_06;
+	public String Filler_07;
+}
+class VY015 {
+	public String ServiceCode_01;
+	public String VesselCode_02;
+	public String VoyageNo_03;
+	public String Direction_04;
+	public String CallPort_05;
+	public String CallNumber_06;
+	public String NextPort_07;
+	public String LastPort_08;
+	public String ETADate_09;
+	public String ETATime_10;
+	public String ATADate_11;
+	public String ATATime_12;
+	public String ETDDate_13;
+	public String ETDTime_14;
+	public String ATDDate_15;
+	public String ATDTime_16;
+	public String ATDDateOfLastPort_17;
+	public String ATDTimeOfLastPort_18;
+	public String NoOfMessager_19;
+	public String MajorCargoType_20;
+	public String Filler_21;
+	public String ModeOfTransportation_22;
+	public String VesselStayNumber_23;
+	public String PortOfInitialArrival_24;
+	public String ExternalVoyageNumber_25;
+	public String NoOfCrew_26;
+	public String AtTerminal_27;
+	public String ImportExportIndicator_28;
+}
+class VY026 {
+	public String VesselName_01;
+	public String LloydsNumber_02;
+	public String CallSign_03;
+	public String VesselOwnerName_04;
+	public String Flag_05;
+	public String VesselRegistrationDate_06;
+	public String VesselRegistrationNumber_07;
+}
+class VY02C7 {
+	public String ChineseVesselName_01;
+	public String ChineseTrafficMode_02;
+	public String ChineseCorporationName_03;
+	public String Filler_04;
+}
+class VY038 {
+	public String VesselNetTon_01;
+	public String VesselGrossTon_02;
+	public String VesselCargoWeight_03;
+	public String VesselCargoWeightUnit_04;
+	public String SummerDeadWeightTon_05;
+	public String VesselSummerDraught_06;
+	public String VesselWinterDraught_07;
+	public String VesselCaptain_08;
+	public String VesselLength_09;
+	public String VesselLengthUnit_10;
+	public String VesselOperator_11;
+	public String VesselCharterCode_12;
+	public String CertificateNumberOfSafetyOfShip_13;
+	public String ExpiryDateOfCertificateSafetyOfShip_14;
+	public String CertificateNumberOfSafetyOfRadio_15;
+	public String ExpiryDateOfCertificateSafetyOfRadio_16;
+	public String CertificateNumberOfSafetyOfEquipments_17;
+	public String ExpiryDateOfCertificateSafetyOfEquipment_18;
+	public String CertificateNumberOfLoadLine_19;
+	public String ExpiryDateOfCertificateLoadLine_20;
+	public String CertificateNumberOfDerat_21;
+	public String ExpiryDateOfCertificateDerat_22;
+	public String CertificateNumberOfMaritimeDeclarationOfHealth_23;
+	public String ExpiryDateOfCertificateMaritimeDeclarationOfHealth_24;
+	public String CertificateNumberOfCivilLiabilityOfOil_25;
+	public String ExpiryDateOfCertificateCivilLiabilityOfOil_26;
+}
+class VY049 {
+	public String PortSequenceNo1_01;
+	public String PortCode1_02;
+	public String PortQualifier1_03;
+	public String CallNo1_04;
+	public String ETADate1_05;
+	public String ETATime1_06;
+	public String ATADate1_07;
+	public String ATATime1_08;
+	public String OverseasPortIndicator1_09;
+	public String PortSequenceNo2_10;
+	public String PortCode2_11;
+	public String PortQualifier2_12;
+	public String CallNo2_13;
+	public String ETADate2_14;
+	public String ETATime2_15;
+	public String ATADate2_16;
+	public String ATATime2_17;
+	public String OverseasPortIndicator2_18;
+	public String PortSequenceNo3_19;
+	public String PortCode3_20;
+	public String PortQualifier3_21;
+	public String CallNo3_22;
+	public String ETADate3_23;
+	public String ETATime3_24;
+	public String ATADate3_25;
+	public String ATATime3_26;
+	public String OverseasPortIndicator3_27;
+	public String PortSequenceNo4_28;
+	public String PortCode4_29;
+	public String PortQualifier4_30;
+	public String CallNo4_31;
+	public String ETADate4_32;
+	public String ETATime4_33;
+	public String ATADate4_34;
+	public String ATATime4_35;
+	public String OverseasPortIndicator4_36;
+	public String PortSequenceNo5_37;
+	public String PortCode5_38;
+	public String PortQualifier5_39;
+	public String CallNo5_40;
+	public String ETADate5_41;
+	public String ETATime5_42;
+	public String ATADate5_43;
+	public String ATATime5_44;
+	public String OverseasPortIndicator5_45;
+}
+class VY0510 {
+	public String BerthName_01;
+	public String VesselReportNumber_02;
+	public String CarrierAssignedCode_03;
+	public String FullPartManifestIndicator_04;
+	public String BerthId_05;
+	public String FirstCountryOfDestination_06;
+	public String CustomsStatePortCode_07;
+	public String CustomsOfficeCode_08;
+	public String CountryDescription_09;
+	public String CargoCarrierCode_10;
+	public String OperationPlace_11;
+	public String BerthWhafBuoyCode_12;
+	public String TotalNoOfConsignments_13;
+	public String TotalNoOfEmptyContainers_14;
+	public String TotalNoOfFullContainers_15;
+	public String ShippingCoCode_16;
+	public String VesselNumber_17;
+	public String CallingFacility_18;
+	public String MainManifestNumber_19;
+	public String ConsolidatedReferenceNo_20;
+	public String TransactionSetControlNumber_21;
+	public String UVRN_22;
+}
+class VY05DE11 {
+	public String BerthName_01;
+	public String BerthId_02;
+	public String Filler_03;
+	public String CallingFacility_04;
+	public String Filler_05;
+	public String UVRN_06;
+}
+class VY0612 {
+	public String PartyQualifier_01;
+	public String AgentCode_02;
+	public String Name_03;
+	public String Address1_04;
+	public String Address2_05;
+	public String Address3_06;
+	public String Address4_07;
+	public String CityName_08;
+	public String State_09;
+	public String PostalCode_10;
+	public String Country_11;
+	public String ConsortiumPartnerCarrierCode_12;
+	public String SlotCharterId_13;
+	public String ContactPerson_14;
+	public String TelephoneNo_15;
+	public String AgentBranchCode_16;
+	public String Filler_17;
+}
+class VY0713 {
+	public String PortCode_01;
+	public String PortQualifier_02;
+	public String FacilityCode_03;
+	public String ETADate_04;
+	public String ETATime_05;
+	public String ATADate_06;
+	public String ATATime_07;
+	public String StevedoreCode_08;
+	public String TotalTonWeight_09;
+	public String CTOEstablishmentId_10;
+	public String CargoDischargeIndicator_11;
+	public String LineActionCode_12;
+	public String ETDDate_13;
+	public String ETDTime_14;
+	public String CustomsOfficeEntry1_15;
+	public String CustomsOfficeEntry2_16;
+	public String CustomsOfficeEntry3_17;
+	public String CustomsOfficeEntry4_18;
+	public String CustomsOfficeEntry5_19;
+	public String CustomsOfficeEntry6_20;
+	public String CustomsOfficeEntry7_21;
+	public String CustomsOfficeEntry8_22;
+	public String CustomsOfficeEntry9_23;
+	public String CustomsOfficeEntry10_24;
+	public String Filler_25;
+}
+class VY0814 {
+	public String LastForeignPort_01;
+	public String DateOfDepartureFromTheLastForeignPort_02;
+	public String ForeignLoadPortToUSCS_03;
+	public String ATDDateAtForeignLoadPort_04;
+	public String ATDTimeAtForeignLoadPort_05;
+	public String ReferenceNumberforPKG_06;
+	public String LoadingContainerCount_07;
+	public String DischargeContainerCount_08;
+	public String CallPortDescription_09;
+	public String EntryPoint_10;
+	public String VesselType_11;
+	public String VesselCapacity_12;
+	public String VesselYearBuilt_13;
+	public String PlaceOfRegistration_14;
+	public String VesselLongName_15;
+	public String CustomsOfficeDeclared_16;
+	public String CustomsOfficeActual_17;
+	public String CountryOfCustomsOfficeDeclared_18;
+	public String Filler_19;
+}
+class VY0915 {
+	public String EquipmentType_01;
+	public String TotalNoOfContainer_02;
+	public String TotalNoOfTEU_03;
+	public String Filler_04;
+}
+class VY1016 {
+	public String PortSequenceNo_01;
+	public String TerminalName_02;
+	public String Filler_03;
+}
+class VY1117 {
+	public String ReceiverCode1_01;
+	public String ReceiverCode2_02;
+	public String ReceiverCode3_03;
+	public String ReceiverCode4_04;
+	public String ReceiverCode5_05;
+	public String ReceiverCode6_06;
+	public String ReceiverCode7_07;
+	public String ReceiverCode8_08;
+	public String Filler_09;
+}
+class CT0119 {
+	public String SequenceNo_01;
+	public String ContainerNo_02;
+	public String VINNumber_03;
+	public String OOCLOwnedIndicator_04;
+	public String ResponsiblePartyCodeForNonOOCLConatiner_05;
+	public String FCLIndicator_06;
+	public String LCLIndicator_07;
+	public String FCXIndicator_08;
+	public String BreakBulkIndicator_09;
+	public String TrafficMode_10;
+	public String NoofPackage_11;
+	public String PackageUnit_12;
+	public String Bay_13;
+	public String Row_14;
+	public String Tier_15;
+	public String SizeType_16;
+	public String CabotageIndicator_17;
+	public String ContainerStatus_18;
+	public String ContainerMovement_19;
+	public String ContainerCheckDigit_20;
+	public String ContainerTareWeight_21;
+	public String ContainerTareWeightUnit_22;
+	public String ContainerGrossWeight_23;
+	public String ContainerGrossWeightUnit_24;
+	public String ContainerMaterial_25;
+	public String ReeferIndicator_26;
+	public String NegativeTemperatureInd_27;
+	public String ReeferTemperature_28;
+	public String ReeferTemperatureUnit_29;
+	public String OverHeight_30;
+	public String OverLength_31;
+	public String OverwidthRight_32;
+	public String OverwidthLeft_33;
+	public String UnderbondIndicator_34;
+	public String SOCIndicator_35;
+	public String DirectDeliveryIndicator_36;
+	public String ContainerRemarks_37;
+	public String SpecialHandleCode_38;
+	public String ArticleNumber_39;
+	public String InlandMoveType_40;
+	public String InlandMoveID_41;
+	public String PlaceOfDelivery_42;
+	public String PortofDischarge_43;
+	public String PortofLoading_44;
+	public String FinalDestination_45;
+}
+class CT0220 {
+	public String SequenceNo_01;
+	public String UnderbondMovementType_02;
+	public String FromPremiseID_03;
+	public String ToPremiseID_04;
+	public String UnderbondLloydsNumber_05;
+	public String UnderbondVoyageNumber_06;
+	public String PersonalEffectInd_07;
+	public String TimberInd_08;
+	public String WarehouseCode_09;
+	public String OverHeight_10;
+	public String OverwidthRight_11;
+	public String OverwidthLeft_12;
+	public String ContainerType_13;
+	public String UnderbondRequestReason_14;
+	public String UnderbondModeofMovement_15;
+	public String UnderbondTransshipmentOverseasDestinationPort_16;
+	public String LineAction_17;
+	public String AttachedEquipmentInd_18;
+	public String ProhibitedPackagingInd_19;
+	public String QuarantineCode_20;
+	public String ContainerOperator_21;
+	public String OverlengthFrontLeft_22;
+	public String OverlengthBackRight_23;
+	public String TrafficModeDescription_24;
+	public String ContainerWeight_25;
+	public String BNumber_26;
+	public String ContainerGrossWeight_27;
+	public String ContainerGrossWeightUnit_28;
+	public String RackIndicator_29;
+	public String Filler_30;
+}
+class CT0321 {
+	public String SequenceNo_01;
+	public String ContainerOperator_02;
+	public String BlockCode_03;
+	public String Filler_04;
+	public String VesselCode_05;
+	public String VoyageNo_06;
+	public String Direction_07;
+	public String CallPort_08;
+	public String VesselName_09;
+	public String LloydsNumber_10;
+	public String Activity_11;
+	public String EventDate_12;
+	public String EventTime_13;
+	public String CurrentLocation_14;
+	public String CurrentLocationName_15;
+	public String BookingNumber_16;
+	public String IEISEntryDate_17;
+	public String IEISEntryTime_18;
+	public String HarmonizedCode_19;
+	public String CargoNature_20;
+	public String FullDescription_21;
+}
+class SL0122 {
+	public String SequenceNo_01;
+	public String Type1_02;
+	public String SealNo1_03;
+	public String Type2_04;
+	public String SealNo2_05;
+	public String Type3_06;
+	public String SealNo3_07;
+	public String Type4_08;
+	public String SealNo4_09;
+	public String Type5_10;
+	public String SealNo5_11;
+	public String Type6_12;
+	public String SealNo6_13;
+	public String Type7_14;
+	public String SealNo7_15;
+	public String Type8_16;
+	public String SealNo8_17;
+	public String Type9_18;
+	public String SealNo9_19;
+	public String Type10_20;
+	public String SealNo10_21;
+	public String Type11_22;
+	public String SealNo11_23;
+	public String Type12_24;
+	public String SealNo12_25;
+}
+class INTMDL0123 {
+	public String SequenceNo_01;
+	public String InboundIntermodelFacility_02;
+}
+class BA1125 {
+	public String SequenceNo_01;
+	public String BLNoOrBKNo_02;
+	public String MasterBLNumber_03;
+	public String CustomsOfficeofManifestOrigin_04;
+	public String CustomsOfficeofManifestDestination_05;
+	public String PortofLoadingOriginal_06;
+	public String SpecificCircumstanceIndicator_07;
+	public String TrafficMode_08;
+	public String Filler_09;
+	public String PlaceofReceiptDescription_10;
+	public String PlaceofReceiptCityCode_11;
+	public String PlaceofReceiptStateCode_12;
+	public String PlaceofReceiptCountryCode_13;
+	public String FinalDestination_14;
+	public String FinalDestinationCityCode_15;
+	public String FinalDestinationStateCode_16;
+	public String FinalDestinationCountryCode_17;
+	public String ShipperExportDeclarationFlag_18;
+	public String PreviousPOLATD_19;
+	public String BLBoundType_20;
+	public String BLType_21;
+	public String NVOCCType_22;
+	public String TransportMovementCode_23;
+	public String CustomsProcedureCode_24;
+	public String FDAIndicator_25;
+	public String FIRMSCode_26;
+	public String GroupCode_27;
+	public String SCAC_28;
+	public String StorageRequestCode_29;
+	public String ModeofTransport_30;
+	public String TallyFlag_31;
+}
+class BA1226 {
+	public String SequenceNo_01;
+	public String TSPortofLoadDischarge_02;
+	public String PortofDischarge_03;
+	public String PortofDischargeStateCode_04;
+	public String PartnerCode_05;
+	public String ReeferCargo_06;
+	public String FruitandVegetable_07;
+	public String Placeoflodgmentofdocuments_08;
+	public String SeawayBillInd_09;
+	public String WasterCargo_10;
+	public String WoodPackage_11;
+	public String TotalGrossWeight_12;
+	public String GrossWeightUnit_13;
+	public String TotalNumberofPackage_14;
+	public String PackageUnit_15;
+	public String TotalNumberofContainer_16;
+	public String UnloadPlace_17;
+	public String PackageUnitAbbreviation_18;
+	public String ArticleNumber_19;
+	public String InlandMoveType_20;
+	public String InlandMoveID_21;
+}
+class BA1327 {
+	public String SequenceNo_01;
+	public String PortofLoadingDescription_02;
+	public String PortofLoadingStateCode_03;
+	public String PortofLoadingCountryCode_04;
+	public String PortofDischargeDescription_05;
+	public String PortofDischargeCountryCode_06;
+	public String CallingFacility_07;
+	public String TransshipmentIndicator_08;
+	public String FinalDestinationCountryName_09;
+	public String ExportLicenseNumber_10;
+	public String OnboardDate_11;
+	public String BLIssueDate_12;
+	public String CustomsReturnReferenceNumber_13;
+	public String ReferenceNumber_14;
+	public String OriginalReferenceNo_15;
+	public String EstimatedDateofLoading_16;
+	public String EstimatedTimeofLoading_17;
+	public String SupplementaryIndicator_18;
+	public String SupplementaryReferenceNumber_19;
+	public String FacilityDescription_20;
+	public String PlaceofReceiptUNLOCODE_21;
+	public String FinalDestinationUNLOCODE_22;
+	public String PortofLoading_23;
+	public String PortofDischarge_24;
+	public String PlaceofReceiptCountryName_25;
+	public String FreightForwarderIndicator_26;
+	public String FirstLocalPort_27;
+	public String PreCarriagePortofLoading_28;
+	public String SONo_29;
+	public String IEType_30;
+	public String Yard_31;
+	public String DischargePlace_32;
+	public String MasterBLReference_33;
+	public String TotalGrossWeight_34;
+	public String GrossWeightUnit_35;
+	public String TSPortofLoadCountryCode_36;
+	public String ChangeDescription_37;
+	public String ReferenceNumberforPKG_38;
+	public String MasterBLSCAC_39;
+	public String HouseBLNumber_40;
+	public String TransshipmentPlaceCode_41;
+	public String PlaceofDestinationTransitCode_42;
+	public String HouseBLSCAC_43;
+	public String Filler_44;
+}
+class BA1428 {
+	public String SequenceNo_01;
+	public String E2ndNotifyParty1_02;
+	public String E2ndNotifyParty2_03;
+	public String E2ndNotifyParty3_04;
+	public String E2ndNotifyParty4_05;
+	public String E2ndNotifyParty5_06;
+	public String E2ndNotifyParty6_07;
+	public String E2ndNotifyParty7_08;
+	public String E2ndNotifyParty8_09;
+	public String CargoValue_10;
+	public String Filler_11;
+}
+class BA1529 {
+	public String SequenceNo_01;
+	public String ExportClearanceNumber_02;
+	public String ExemptionGoodCode_03;
+	public String CustomsReferenceNumber_04;
+	public String NoOfContainer_05;
+	public String LineAction_06;
+	public String InterchangeControlReference_07;
+	public String SenderReference_08;
+	public String SenderReferenceVersion_09;
+	public String MessageFunctionCode_10;
+	public String PrincipalAgentID_11;
+	public String ResponsiblePartyClientID_12;
+	public String ExportType_13;
+	public String CustomsOffice_14;
+	public String DocumentDate_15;
+	public String Filler_16;
+}
+class PA1130 {
+	public String SequenceNo_01;
+	public String PartyCode_02;
+	public String AgentCode_03;
+	public String State_04;
+	public String Country_05;
+	public String Name_06;
+	public String PostalCode_07;
+	public String TelephoneNo_08;
+	public String FaxNo_09;
+	public String ContactFirstName_10;
+	public String ContactLastName_11;
+	public String CityName_12;
+	public String EmailID_13;
+	public String SAPID_14;
+	public String LongName_15;
+	public String IDDCountryCode_16;
+	public String IDDAreaCode_17;
+	public String AgentBranchCode_18;
+	public String BranchId_19;
+	public String Filler_20;
+}
+class PA1231 {
+	public String SequenceNo_01;
+	public String PartyCode_02;
+	public String Address1_03;
+	public String Address2_04;
+	public String Address3_05;
+	public String Address4_06;
+}
+class CG1132 {
+	public String SequenceNo_01;
+	public String ChargeType_02;
+	public String FreightType_03;
+	public String FreightChargeType_04;
+	public String FreightTypeReferenceCode_05;
+	public String BLFreightCalculationMethod_06;
+	public String TotalAmount_07;
+	public String PaymentLocation_08;
+	public String Payer_09;
+	public String PayerRole_10;
+	public String Prepaid_11;
+	public String DisplayinBL_12;
+	public String Basis_13;
+	public String Rate_14;
+	public String Currency_15;
+	public String BaseRate_16;
+	public String BaseRateCurrency_17;
+	public String PaymentCurrency_18;
+	public String BasisUnit_19;
+	public String PayableElsewhere_20;
+	public String MethodofPayment_21;
+	public String PrepaidAmount_22;
+	public String Filler_23;
+}
+class IT3134 {
+	public String SequenceNo_01;
+	public String CountryofOriginofGoods_02;
+	public String NoofPackage_03;
+	public String PackageUnit_04;
+	public String BriefDescriptions_05;
+	public String FullDescriptions_06;
+	public String NetWeight_07;
+	public String NetWeightUnit_08;
+	public String GrossWeight_09;
+	public String GrossWeightUnit_10;
+	public String Length_11;
+	public String LengthUnit_12;
+	public String Width_13;
+	public String WidthUnit_14;
+	public String Height_15;
+	public String HeightUnit_16;
+	public String Volume_17;
+	public String VolumeUnit_18;
+	public String TransshipmentInd_19;
+	public String FumigationInd_20;
+	public String PerishableInd_21;
+	public String FlammableLiquidInd_22;
+	public String PersonalEffectInd_23;
+	public String TimberInd_24;
+	public String HazardousInd_25;
+	public String ReeferInd_26;
+	public String NegativeTemperatureInd_27;
+	public String ReeferTemperature_28;
+	public String ReeferTemperatureUnit_29;
+	public String DGInd_30;
+	public String HarmonizedCode_31;
+	public String CustomsStatusofGoods_32;
+	public String CargoNature_33;
+	public String ArticleNumber_34;
+	public String InlandMoveID_35;
+}
+class IT3235 {
+	public String SequenceNo_01;
+	public String LineAction_02;
+	public String PackageCodeDescription_03;
+	public String CargoCode_04;
+	public String TariffNumber_05;
+	public String GensetType_06;
+	public String VentilationValue_07;
+	public String VentilationScale_08;
+	public String Filler_09;
+}
+class DG3136 {
+	public String SequenceNo_01;
+	public String ItemSequenceNo_02;
+	public String IMCOClass_03;
+	public String UNNo_04;
+	public String FlashPointNegativeInd_05;
+	public String FlashPoint_06;
+	public String FlashPointUnit_07;
+	public String DangerousGoodsLabel1_08;
+	public String DangerousGoodsLabel2_09;
+	public String DangerousGoodsLabel3_10;
+	public String DangerousGoodsLabel4_11;
+	public String TechnicalName_12;
+	public String EmergencyContactName_13;
+	public String EmergencyContactNumber1_14;
+	public String ProperShippingName_15;
+	public String IMCOPage_16;
+	public String PackageGroup_17;
+	public String MFAG_18;
+	public String GrossWeight_19;
+	public String GrossWeightUnit_20;
+	public String NoofPackages_21;
+	public String PackagingCode_22;
+	public String EmergencyScheduledReference_23;
+	public String MarinePollutant_24;
+	public String NetExplosiveWeight_25;
+	public String NetExplosiveWeightUnit_26;
+	public String HandlingCode_27;
+	public String HandlingInstruction_28;
+	public String EmergencyContactNumber2_29;
+	public String NetWeight_30;
+	public String NetWeightUnit_31;
+	public String PackageCodeDescription_32;
+	public String FlashPointIndicator_33;
+	public String StorageRequestCode_34;
+	public String PackageGroupDescription_35;
+	public String SubsidiaryRisk1_36;
+	public String SubsidiaryRisk2_37;
+}
+class ID3137 {
+	public String SequenceNo_01;
+	public String MarksandNos_02;
+	public String ItemDescriptions_03;
+}
+class IT31_IT3133 {
+	public IT3134 IT31; 
+	public IT3235 IT32; 
+	public List<DG3136> DG31; 
+	public List<ID3137> ID31; 
+}
+class PV1138 {
+	public String SequenceNo_01;
+	public String VesselCode_02;
+	public String VoyageNo_03;
+	public String Direction_04;
+	public String ETADate_05;
+	public String ATADate_06;
+	public String VesselCallSign_07;
+	public String VesselShippingCoCode_08;
+	public String LloydsNumber_09;
+	public String VesselNumber_10;
+	public String VesselName_11;
+	public String ExternalVoyageNumber_12;
+	public String UVRN_13;
+	public String VesselFlag_14;
+	public String ETATime_15;
+	public String ETDDate_16;
+	public String ETDTime_17;
+	public String Filler_18;
+}
+class TS1139 {
+	public String SequenceNo_01;
+	public String TSVesselCode_02;
+	public String TSVesselLloydsNumber_03;
+	public String TSCallsign_04;
+	public String TSVoyageNumber_05;
+	public String TSUVRN_06;
+	public String TSVesselName_07;
+	public String TSVesselFlag_08;
+	public String TSVesselNumber_09;
+	public String TSNextDischargePort_10;
+	public String TSVesselETD_11;
+	public String Filler_12;
+}
+class BK1140 {
+	public String SequenceNo_01;
+	public String BookingNo_02;
+}
+class BC1141 {
+	public String SequenceNo_01;
+	public String SizeType_02;
+	public String NumberofContainer_03;
+	public String FullDescription_04;
+	public String NumberofPackage_05;
+	public String PackageUnit_06;
+	public String GrossWeight_07;
+	public String GrossWeightUnit_08;
+	public String Volume_09;
+	public String VolumeUnit_10;
+	public String CargoNature_11;
+	public String FCLIndicator_12;
+	public String ContainerStatus_13;
+	public String ReeferIndicator_14;
+	public String NegativeTemperatureInd_15;
+	public String ReeferTemperature_16;
+	public String ReeferTemperatureUnit_17;
+	public String IMCOClass_18;
+	public String UNNo_19;
+	public String Filler_20;
+}
+class WB1142 {
+	public String SequenceNo_01;
+	public String CPWaybillNo_02;
+	public String CPWaybillInlandMoveID_03;
+	public String CustomsEntryPort_04;
+	public String CustomsDestinationPort_05;
+}
+class BA11_BA1124 {
+	public BA1125 BA11; 
+	public BA1226 BA12; 
+	public BA1327 BA13; 
+	public BA1428 BA14; 
+	public BA1529 BA15; 
+	public List<PA1130> PA11; 
+	public List<PA1231> PA12; 
+	public List<CG1132> CG11; 
+	public List<IT31_IT3133> IT31_IT31; 
+	public PV1138 PV11; 
+	public TS1139 TS11; 
+	public List<BK1140> BK11; 
+	public List<BC1141> BC11; 
+	public List<WB1142> WB11; 
+}
+class CTDG43 {
+	public String SequenceNo_01;
+	public String IMCOClass_02;
+	public String UNNo_03;
+	public String ProperShippingName_04;
+	public String FlashpointNegativeIndicator_05;
+	public String FlashPoint_06;
+	public String FlashPointUnit_07;
+	public String LastCargoSpecialInfo_08;
+	public String FlashPointIndicator_09;
+	public String Filler_10;
+}
+class CT0444 {
+	public String SequenceNo_01;
+	public String VIN_02;
+	public String NoOfRack_03;
+	public String RackTypeDesc_04;
+}
+class CS0145 {
+	public String SequenceNo_01;
+	public String ExportCustomsStatus_02;
+	public String MiscStandardType1_03;
+	public String MiscTerminalType1_04;
+	public String MiscValue1_05;
+	public String MiscStandardType2_06;
+	public String MiscTerminalType2_07;
+	public String MiscValue2_08;
+	public String MiscStandardType3_09;
+	public String MiscTerminalType3_10;
+	public String MiscValue3_11;
+	public String Filler_12;
+}
+class IT2147 {
+	public String SequenceNo_01;
+	public String CountryofOriginofGoods_02;
+	public String NoofPackage_03;
+	public String PackageUnit_04;
+	public String BriefDescriptions_05;
+	public String FullDescriptions_06;
+	public String NetWeight_07;
+	public String NetWeightUnit_08;
+	public String GrossWeight_09;
+	public String GrossWeightUnit_10;
+	public String Length_11;
+	public String LengthUnit_12;
+	public String Width_13;
+	public String WidthUnit_14;
+	public String Height_15;
+	public String HeightUnit_16;
+	public String Volume_17;
+	public String VolumeUnit_18;
+	public String TransshipmentInd_19;
+	public String FumigationInd_20;
+	public String PerishableInd_21;
+	public String FlammableLiquidInd_22;
+	public String PersonalEffectInd_23;
+	public String TimberInd_24;
+	public String HazardousInd_25;
+	public String ReeferInd_26;
+	public String NegativeTemperatureInd_27;
+	public String ReeferTemperature_28;
+	public String ReeferTemperatureUnit_29;
+	public String DGInd_30;
+	public String HarmonizedCode_31;
+	public String CustomsStatusofGoods_32;
+	public String CargoNature_33;
+	public String ArticleNumber_34;
+	public String InlandMoveID_35;
+}
+class IT2248 {
+	public String SequenceNo_01;
+	public String LineAction_02;
+	public String PackageCodeDescription_03;
+	public String CargoCode_04;
+	public String TariffNumber_05;
+	public String GensetType_06;
+	public String VentilationValue_07;
+	public String VentilationScale_08;
+	public String Filler_09;
+}
+class DG2149 {
+	public String SequenceNo_01;
+	public String ItemSequenceNo_02;
+	public String IMCOClass_03;
+	public String UNNo_04;
+	public String FlashPointNegativeInd_05;
+	public String FlashPoint_06;
+	public String FlashPointUnit_07;
+	public String DangerousGoodsLabel1_08;
+	public String DangerousGoodsLabel2_09;
+	public String DangerousGoodsLabel3_10;
+	public String DangerousGoodsLabel4_11;
+	public String TechnicalName_12;
+	public String EmergencyContactName_13;
+	public String EmergencyContactNumber1_14;
+	public String ProperShippingName_15;
+	public String IMCOPage_16;
+	public String PackageGroup_17;
+	public String MFAG_18;
+	public String GrossWeight_19;
+	public String GrossWeightUnit_20;
+	public String NoofPackages_21;
+	public String PackagingCode_22;
+	public String EmergencyScheduledReference_23;
+	public String MarinePollutant_24;
+	public String NetExplosiveWeight_25;
+	public String NetExplosiveWeightUnit_26;
+	public String HandlingCode_27;
+	public String HandlingInstruction_28;
+	public String EmergencyContactNumber2_29;
+	public String NetWeight_30;
+	public String NetWeightUnit_31;
+	public String PackageCodeDescription_32;
+	public String FlashPointIndicator_33;
+	public String StorageRequestCode_34;
+	public String PackageGroupDescription_35;
+	public String SubsidiaryRisk1_36;
+	public String SubsidiaryRisk2_37;
+}
+class ID2150 {
+	public String SequenceNo_01;
+	public String MarksandNos_02;
+	public String ItemDescriptions_03;
+}
+class BA2152 {
+	public String SequenceNo_01;
+	public String BLNoOrBKNo_02;
+	public String MasterBLNumber_03;
+	public String CustomsOfficeofManifestOrigin_04;
+	public String CustomsOfficeofManifestDestination_05;
+	public String PortofLoadingOriginal_06;
+	public String SpecificCircumstanceIndicator_07;
+	public String TrafficMode_08;
+	public String Filler_09;
+	public String PlaceofReceiptDescription_10;
+	public String PlaceofReceiptCityCode_11;
+	public String PlaceofReceiptStateCode_12;
+	public String PlaceofReceiptCountryCode_13;
+	public String FinalDestination_14;
+	public String FinalDestinationCityCode_15;
+	public String FinalDestinationStateCode_16;
+	public String FinalDestinationCountryCode_17;
+	public String ShipperExportDeclarationFlag_18;
+	public String PreviousPOLATD_19;
+	public String BLBoundType_20;
+	public String BLType_21;
+	public String NVOCCType_22;
+	public String TransportMovementCode_23;
+	public String CustomsProcedureCode_24;
+	public String FDAIndicator_25;
+	public String FIRMSCode_26;
+	public String GroupCode_27;
+	public String SCAC_28;
+	public String StorageRequestCode_29;
+	public String ModeofTransport_30;
+	public String TallyFlag_31;
+}
+class BA2253 {
+	public String SequenceNo_01;
+	public String TSPortofLoadDischarge_02;
+	public String PortofDischarge_03;
+	public String PortofDischargeStateCode_04;
+	public String PartnerCode_05;
+	public String ReeferCargo_06;
+	public String FruitandVegetable_07;
+	public String Placeoflodgmentofdocuments_08;
+	public String SeawayBillInd_09;
+	public String WasterCargo_10;
+	public String WoodPackage_11;
+	public String TotalGrossWeight_12;
+	public String GrossWeightUnit_13;
+	public String TotalNumberofPackage_14;
+	public String PackageUnit_15;
+	public String TotalNumberofContainer_16;
+	public String UnloadPlace_17;
+	public String PackageUnitAbbreviation_18;
+	public String ArticleNumber_19;
+	public String InlandMoveType_20;
+	public String InlandMoveID_21;
+}
+class BA2354 {
+	public String SequenceNo_01;
+	public String PortofLoadingDescription_02;
+	public String PortofLoadingStateCode_03;
+	public String PortofLoadingCountryCode_04;
+	public String PortofDischargeDescription_05;
+	public String PortofDischargeCountryCode_06;
+	public String CallingFacility_07;
+	public String TransshipmentIndicator_08;
+	public String FinalDestinationCountryName_09;
+	public String ExportLicenseNumber_10;
+	public String OnboardDate_11;
+	public String BLIssueDate_12;
+	public String CustomsReturnReferenceNumber_13;
+	public String ReferenceNumber_14;
+	public String OriginalReferenceNo_15;
+	public String EstimatedDateofLoading_16;
+	public String EstimatedTimeofLoading_17;
+	public String SupplementaryIndicator_18;
+	public String SupplementaryReferenceNumber_19;
+	public String FacilityDescription_20;
+	public String PlaceofReceiptUNLOCODE_21;
+	public String FinalDestinationUNLOCODE_22;
+	public String PortofLoading_23;
+	public String PortofDischarge_24;
+	public String PlaceofReceiptCountryName_25;
+	public String FreightForwarderIndicator_26;
+	public String FirstLocalPort_27;
+	public String PreCarriagePortofLoading_28;
+	public String SONo_29;
+	public String IEType_30;
+	public String Yard_31;
+	public String DischargePlace_32;
+	public String MasterBLReference_33;
+	public String TotalGrossWeight_34;
+	public String GrossWeightUnit_35;
+	public String TSPortofLoadCountryCode_36;
+	public String ChangeDescription_37;
+	public String ReferenceNumberforPKG_38;
+	public String MasterBLSCAC_39;
+	public String HouseBLNumber_40;
+	public String TransshipmentPlaceCode_41;
+	public String PlaceofDestinationTransitCode_42;
+	public String HouseBLSCAC_43;
+	public String Filler_44;
+}
+class BA2455 {
+	public String SequenceNo_01;
+	public String E2ndNotifyParty1_02;
+	public String E2ndNotifyParty2_03;
+	public String E2ndNotifyParty3_04;
+	public String E2ndNotifyParty4_05;
+	public String E2ndNotifyParty5_06;
+	public String E2ndNotifyParty6_07;
+	public String E2ndNotifyParty7_08;
+	public String E2ndNotifyParty8_09;
+	public String CargoValue_10;
+	public String Filler_11;
+}
+class BA2556 {
+	public String SequenceNo_01;
+	public String ExportClearanceNumber_02;
+	public String ExemptionGoodCode_03;
+	public String CustomsReferenceNumber_04;
+	public String NoOfContainer_05;
+	public String LineAction_06;
+	public String InterchangeControlReference_07;
+	public String SenderReference_08;
+	public String SenderReferenceVersion_09;
+	public String MessageFunctionCode_10;
+	public String PrincipalAgentID_11;
+	public String ResponsiblePartyClientID_12;
+	public String ExportType_13;
+	public String CustomsOffice_14;
+	public String DocumentDate_15;
+	public String Filler_16;
+}
+class PA2157 {
+	public String SequenceNo_01;
+	public String PartyCode_02;
+	public String AgentCode_03;
+	public String State_04;
+	public String Country_05;
+	public String Name_06;
+	public String PostalCode_07;
+	public String TelephoneNo_08;
+	public String FaxNo_09;
+	public String ContactFirstName_10;
+	public String ContactLastName_11;
+	public String CityName_12;
+	public String EmailID_13;
+	public String SAPID_14;
+	public String LongName_15;
+	public String IDDCountryCode_16;
+	public String IDDAreaCode_17;
+	public String AgentBranchCode_18;
+	public String BranchId_19;
+	public String Filler_20;
+}
+class PA2258 {
+	public String SequenceNo_01;
+	public String PartyCode_02;
+	public String Address1_03;
+	public String Address2_04;
+	public String Address3_05;
+	public String Address4_06;
+}
+class CG2159 {
+	public String SequenceNo_01;
+	public String ChargeType_02;
+	public String FreightType_03;
+	public String FreightChargeType_04;
+	public String FreightTypeReferenceCode_05;
+	public String BLFreightCalculationMethod_06;
+	public String TotalAmount_07;
+	public String PaymentLocation_08;
+	public String Payer_09;
+	public String PayerRole_10;
+	public String Prepaid_11;
+	public String DisplayinBL_12;
+	public String Basis_13;
+	public String Rate_14;
+	public String Currency_15;
+	public String BaseRate_16;
+	public String BaseRateCurrency_17;
+	public String PaymentCurrency_18;
+	public String BasisUnit_19;
+	public String PayableElsewhere_20;
+	public String MethodofPayment_21;
+	public String PrepaidAmount_22;
+	public String Filler_23;
+}
+class PV2160 {
+	public String SequenceNo_01;
+	public String VesselCode_02;
+	public String VoyageNo_03;
+	public String Direction_04;
+	public String ETADate_05;
+	public String ATADate_06;
+	public String VesselCallSign_07;
+	public String VesselShippingCoCode_08;
+	public String LloydsNumber_09;
+	public String VesselNumber_10;
+	public String VesselName_11;
+	public String ExternalVoyageNumber_12;
+	public String UVRN_13;
+	public String VesselFlag_14;
+	public String ETATime_15;
+	public String ETDDate_16;
+	public String ETDTime_17;
+	public String Filler_18;
+}
+class TS2161 {
+	public String SequenceNo_01;
+	public String TSVesselCode_02;
+	public String TSVesselLloydsNumber_03;
+	public String TSCallsign_04;
+	public String TSVoyageNumber_05;
+	public String TSUVRN_06;
+	public String TSVesselName_07;
+	public String TSVesselFlag_08;
+	public String TSVesselNumber_09;
+	public String TSNextDischargePort_10;
+	public String TSVesselETD_11;
+	public String Filler_12;
+}
+class BK2162 {
+	public String SequenceNo_01;
+	public String BookingNo_02;
+}
+class BC2163 {
+	public String SequenceNo_01;
+	public String SizeType_02;
+	public String NumberofContainer_03;
+	public String FullDescription_04;
+	public String NumberofPackage_05;
+	public String PackageUnit_06;
+	public String GrossWeight_07;
+	public String GrossWeightUnit_08;
+	public String Volume_09;
+	public String VolumeUnit_10;
+	public String CargoNature_11;
+	public String FCLIndicator_12;
+	public String ContainerStatus_13;
+	public String ReeferIndicator_14;
+	public String NegativeTemperatureInd_15;
+	public String ReeferTemperature_16;
+	public String ReeferTemperatureUnit_17;
+	public String IMCOClass_18;
+	public String UNNo_19;
+	public String Filler_20;
+}
+class WB2164 {
+	public String SequenceNo_01;
+	public String CPWaybillNo_02;
+	public String CPWaybillInlandMoveID_03;
+	public String CustomsEntryPort_04;
+	public String CustomsDestinationPort_05;
+}
+class BA21_BA2151 {
+	public BA2152 BA21; 
+	public BA2253 BA22; 
+	public BA2354 BA23; 
+	public BA2455 BA24; 
+	public BA2556 BA25; 
+	public List<PA2157> PA21; 
+	public List<PA2258> PA22; 
+	public List<CG2159> CG21; 
+	public PV2160 PV21; 
+	public TS2161 TS21; 
+	public List<BK2162> BK21; 
+	public List<BC2163> BC21; 
+	public List<WB2164> WB21; 
+}
+class IT21_IT2146 {
+	public IT2147 IT21; 
+	public IT2248 IT22; 
+	public List<DG2149> DG21; 
+	public List<ID2150> ID21; 
+	public List<BA21_BA2151> BA21_BA21; 
+}
+class CT01_CT0118 {
+	public CT0119 CT01; 
+	public CT0220 CT02; 
+	public CT0321 CT03; 
+	public SL0122 SL01; 
+	public List<INTMDL0123> INTMDL01; 
+	public List<BA11_BA1124> BA11_BA11; 
+	public List<CTDG43> CTDG; 
+	public List<CT0444> CT04; 
+	public List<CS0145> CS01; 
+	public List<IT21_IT2146> IT21_IT21; 
+}
+class BA0166 {
+	public String SequenceNo_01;
+	public String BLNoOrBKNo_02;
+	public String MasterBLNumber_03;
+	public String CustomsOfficeofManifestOrigin_04;
+	public String CustomsOfficeofManifestDestination_05;
+	public String PortofLoadingOriginal_06;
+	public String SpecificCircumstanceIndicator_07;
+	public String TrafficMode_08;
+	public String Filler_09;
+	public String PlaceofReceiptDescription_10;
+	public String PlaceofReceiptCityCode_11;
+	public String PlaceofReceiptStateCode_12;
+	public String PlaceofReceiptCountryCode_13;
+	public String FinalDestination_14;
+	public String FinalDestinationCityCode_15;
+	public String FinalDestinationStateCode_16;
+	public String FinalDestinationCountryCode_17;
+	public String ShipperExportDeclarationFlag_18;
+	public String PreviousPOLATD_19;
+	public String BLBoundType_20;
+	public String BLType_21;
+	public String NVOCCType_22;
+	public String TransportMovementCode_23;
+	public String CustomsProcedureCode_24;
+	public String FDAIndicator_25;
+	public String FIRMSCode_26;
+	public String GroupCode_27;
+	public String SCAC_28;
+	public String StorageRequestCode_29;
+	public String ModeofTransport_30;
+	public String TallyFlag_31;
+}
+class BA0267 {
+	public String SequenceNo_01;
+	public String TSPortofLoadDischarge_02;
+	public String PortofDischarge_03;
+	public String PortofDischargeStateCode_04;
+	public String PartnerCode_05;
+	public String ReeferCargo_06;
+	public String FruitandVegetable_07;
+	public String Placeoflodgmentofdocuments_08;
+	public String SeawayBillInd_09;
+	public String WasterCargo_10;
+	public String WoodPackage_11;
+	public String TotalGrossWeight_12;
+	public String GrossWeightUnit_13;
+	public String TotalNumberofPackage_14;
+	public String PackageUnit_15;
+	public String TotalNumberofContainer_16;
+	public String UnloadPlace_17;
+	public String PackageUnitAbbreviation_18;
+	public String ArticleNumber_19;
+	public String InlandMoveType_20;
+	public String InlandMoveID_21;
+}
+class BA0368 {
+	public String SequenceNo_01;
+	public String PortofLoadingDescription_02;
+	public String PortofLoadingStateCode_03;
+	public String PortofLoadingCountryCode_04;
+	public String PortofDischargeDescription_05;
+	public String PortofDischargeCountryCode_06;
+	public String CallingFacility_07;
+	public String TransshipmentIndicator_08;
+	public String FinalDestinationCountryName_09;
+	public String ExportLicenseNumber_10;
+	public String OnboardDate_11;
+	public String BLIssueDate_12;
+	public String CustomsReturnReferenceNumber_13;
+	public String ReferenceNumber_14;
+	public String OriginalReferenceNo_15;
+	public String EstimatedDateofLoading_16;
+	public String EstimatedTimeofLoading_17;
+	public String SupplementaryIndicator_18;
+	public String SupplementaryReferenceNumber_19;
+	public String FacilityDescription_20;
+	public String PlaceofReceiptUNLOCODE_21;
+	public String FinalDestinationUNLOCODE_22;
+	public String PortofLoading_23;
+	public String PortofDischarge_24;
+	public String PlaceofReceiptCountryName_25;
+	public String FreightForwarderIndicator_26;
+	public String FirstLocalPort_27;
+	public String PreCarriagePortofLoading_28;
+	public String SONo_29;
+	public String IEType_30;
+	public String Yard_31;
+	public String DischargePlace_32;
+	public String MasterBLReference_33;
+	public String TotalGrossWeight_34;
+	public String GrossWeightUnit_35;
+	public String TSPortofLoadCountryCode_36;
+	public String ChangeDescription_37;
+	public String ReferenceNumberforPKG_38;
+	public String MasterBLSCAC_39;
+	public String HouseBLNumber_40;
+	public String TransshipmentPlaceCode_41;
+	public String PlaceofDestinationTransitCode_42;
+	public String HouseBLSCAC_43;
+	public String Filler_44;
+}
+class BA03DE69 {
+	public String SequenceNo_01;
+	public String PortofLoadingDescription_02;
+	public String PortofLoadingStateCode_03;
+	public String PortofLoadingCountryCode_04;
+	public String PortofDischargeDescription_05;
+	public String PortofDischargeCountryCode_06;
+	public String CallingFacility_07;
+	public String TransshipmentIndicator_08;
+	public String FinalDestinationCountryName_09;
+	public String ExportLicenseNumber_10;
+	public String OnboardDate_11;
+	public String BLIssueDate_12;
+	public String CustomsReturnReferenceNumber_13;
+	public String ReferenceNumber_14;
+	public String OriginalReferenceNo_15;
+	public String EstimatedDateofLoading_16;
+	public String EstimatedTimeofLoading_17;
+	public String SupplementaryIndicator_18;
+	public String SupplementaryReferenceNumber_19;
+	public String FacilityDescription_20;
+	public String PlaceofReceiptUNLOCODE_21;
+	public String FinalDestinationUNLOCODE_22;
+	public String PortofLoading_23;
+	public String PortofDischarge_24;
+	public String PlaceofReceiptCountryName_25;
+	public String FreightForwarderIndicator_26;
+	public String FirstLocalPort_27;
+	public String PreCarriagePortofLoading_28;
+	public String Filler_29;
+	public String FirstCustomsOfficeOfEntryWithinEU_30;
+	public String FirstPortOfEntryWithinEU_31;
+	public String FirstCustomsOfficeOfEntryWithEta_32;
+	public String FirstCustomsOfficeOfEntryWithEtd_33;
+	public String TransshipmentPolEtd_34;
+	public String EmptyReturnContainerDepot_35;
+	public String FirstPortOfEntryWithinEUName_36;
+	public String FeederName_37;
+	public String TransshipmentVesselService_38;
+	public String TransshipmentVesselExternalVoyageNumber_39;
+	public String TransshipmentVesselFlag_40;
+	public String TransshipmentVesselLloydsNumber_41;
+	public String TransshipmentVesselName_42;
+}
+class BA0470 {
+	public String SequenceNo_01;
+	public String E2ndNotifyParty1_02;
+	public String E2ndNotifyParty2_03;
+	public String E2ndNotifyParty3_04;
+	public String E2ndNotifyParty4_05;
+	public String E2ndNotifyParty5_06;
+	public String E2ndNotifyParty6_07;
+	public String E2ndNotifyParty7_08;
+	public String E2ndNotifyParty8_09;
+	public String CargoValue_10;
+	public String TSPortDescription_11;
+	public String Filler_12;
+}
+class BA0571 {
+	public String SequenceNo_01;
+	public String ExportClearanceNumber_02;
+	public String ExemptionGoodCode_03;
+	public String CustomsReferenceNumber_04;
+	public String NoOfContainer_05;
+	public String LineAction_06;
+	public String InterchangeControlReference_07;
+	public String SenderReference_08;
+	public String SenderReferenceVersion_09;
+	public String MessageFunctionCode_10;
+	public String PrincipalAgentID_11;
+	public String ResponsiblePartyClientID_12;
+	public String ExportType_13;
+	public String CustomsOffice_14;
+	public String DocumentDate_15;
+	public String Filler_16;
+}
+class BA0672 {
+	public String SequenceNo_01;
+	public String ImporterQualifier_02;
+	public String ImporterNumber_03;
+	public String DateofBirth_04;
+	public String ISFImporter_05;
+	public String ISFBondIndicator_06;
+	public String CountryofIssuance_07;
+	public String Agent_08;
+	public String SuretyCode_09;
+	public String USCBPEntryNumber_10;
+	public String ShipmentTypeCode_11;
+	public String RoutingCountryCode1_12;
+	public String RoutingCountryCode2_13;
+	public String RoutingCountryCode3_14;
+	public String RoutingCountryCode4_15;
+	public String RoutingCountryCode5_16;
+	public String RoutingCountryCode6_17;
+	public String RoutingCountryCode7_18;
+	public String RoutingCountryCode8_19;
+	public String RoutingCountryCode9_20;
+	public String RoutingCountryCode10_21;
+	public String RoutingCountryCode11_22;
+	public String RoutingCountryCode12_23;
+	public String RoutingCountryCode13_24;
+	public String RoutingCountryCode14_25;
+	public String RoutingCountryCode15_26;
+	public String RoutingCountryCode16_27;
+	public String RoutingCountryCode17_28;
+	public String RoutingCountryCode18_29;
+	public String RoutingCountryCode19_30;
+	public String RoutingCountryCode20_31;
+	public String ControlRefNo_32;
+	public String UniqueConsignmentReference_33;
+	public String Filler_34;
+}
+class BA0773 {
+	public String SequenceNo_01;
+	public String ExportLicenseNumber_02;
+	public String NumberofPackage_03;
+	public String PackageUnit_04;
+	public String GrossWeight_05;
+	public String GrossWeightUnit_06;
+	public String Splitshipmentindicator_07;
+	public String Sequentialnumberofsplitshipment_08;
+	public String Combinedpackingcode_09;
+	public String NumberofCombinedPackage_10;
+	public String CombinedPackageUnit_11;
+	public String Filler_12;
+}
+class PA0174 {
+	public String SequenceNo_01;
+	public String PartyCode_02;
+	public String AgentCode_03;
+	public String State_04;
+	public String Country_05;
+	public String Name_06;
+	public String PostalCode_07;
+	public String TelephoneNo_08;
+	public String FaxNo_09;
+	public String ContactFirstName_10;
+	public String ContactLastName_11;
+	public String CityName_12;
+	public String EmailID_13;
+	public String SAPID_14;
+	public String LongName_15;
+	public String IDDCountryCode_16;
+	public String IDDAreaCode_17;
+	public String AgentBranchCode_18;
+	public String BranchId_19;
+	public String Filler_20;
+}
+class PA0275 {
+	public String SequenceNo_01;
+	public String PartyCode_02;
+	public String Address1_03;
+	public String Address2_04;
+	public String Address3_05;
+	public String Address4_06;
+}
+class PA0376 {
+	public String SequenceNo_01;
+	public String PartyCode_02;
+	public String AddressQualifier1_03;
+	public String Address1_04;
+	public String AddressQualifier2_05;
+	public String Address2_06;
+	public String AddressQualifier3_07;
+	public String Address3_08;
+	public String AddressQualifier4_09;
+	public String Address4_10;
+	public String AddressQualifier5_11;
+	public String Address5_12;
+	public String AddressQualifier6_13;
+	public String Address6_14;
+	public String Filler_15;
+}
+class PA0477 {
+	public String SequenceNo_01;
+	public String PartyCode_02;
+	public String HarmonizedNumber1_03;
+	public String CountryofOrigin1_04;
+	public String HarmonizedNumber2_05;
+	public String CountryofOrigin2_06;
+	public String HarmonizedNumber3_07;
+	public String CountryofOrigin3_08;
+	public String HarmonizedNumber4_09;
+	public String CountryofOrigin4_10;
+	public String HarmonizedNumber5_11;
+	public String CountryofOrigin5_12;
+	public String HarmonizedNumber6_13;
+	public String CountryofOrigin6_14;
+	public String HarmonizedNumber7_15;
+	public String CountryofOrigin7_16;
+	public String HarmonizedNumber8_17;
+	public String CountryofOrigin8_18;
+	public String HarmonizedNumber9_19;
+	public String CountryofOrigin9_20;
+	public String HarmonizedNumber10_21;
+	public String CountryofOrigin10_22;
+	public String HarmonizedNumber11_23;
+	public String CountryofOrigin11_24;
+	public String HarmonizedNumber12_25;
+	public String CountryofOrigin12_26;
+	public String HarmonizedNumber13_27;
+	public String CountryofOrigin13_28;
+	public String HarmonizedNumber14_29;
+	public String CountryofOrigin14_30;
+	public String HarmonizedNumber15_31;
+	public String CountryofOrigin15_32;
+	public String HarmonizedNumber16_33;
+	public String CountryofOrigin16_34;
+	public String HarmonizedNumber17_35;
+	public String CountryofOrigin17_36;
+	public String HarmonizedNumber18_37;
+	public String CountryofOrigin18_38;
+	public String HarmonizedNumber19_39;
+	public String CountryofOrigin19_40;
+	public String Filler_41;
+}
+class CG0178 {
+	public String SequenceNo_01;
+	public String ChargeType_02;
+	public String FreightType_03;
+	public String FreightChargeType_04;
+	public String FreightTypeReferenceCode_05;
+	public String BLFreightCalculationMethod_06;
+	public String TotalAmount_07;
+	public String PaymentLocation_08;
+	public String Payer_09;
+	public String PayerRole_10;
+	public String Prepaid_11;
+	public String DisplayinBL_12;
+	public String Basis_13;
+	public String Rate_14;
+	public String Currency_15;
+	public String BaseRate_16;
+	public String BaseRateCurrency_17;
+	public String PaymentCurrency_18;
+	public String BasisUnit_19;
+	public String PayableElsewhere_20;
+	public String MethodofPayment_21;
+	public String PrepaidAmount_22;
+	public String Filler_23;
+}
+class CT1180 {
+	public String SequenceNo_01;
+	public String ContainerNo_02;
+	public String VINNumber_03;
+	public String OOCLOwnedIndicator_04;
+	public String ResponsiblePartyCodeForNonOOCLConatiner_05;
+	public String FCLIndicator_06;
+	public String LCLIndicator_07;
+	public String FCXIndicator_08;
+	public String BreakBulkIndicator_09;
+	public String TrafficMode_10;
+	public String NoofPackage_11;
+	public String PackageUnit_12;
+	public String Bay_13;
+	public String Row_14;
+	public String Tier_15;
+	public String SizeType_16;
+	public String CabotageIndicator_17;
+	public String ContainerStatus_18;
+	public String ContainerMovement_19;
+	public String ContainerCheckDigit_20;
+	public String ContainerTareWeight_21;
+	public String ContainerTareWeightUnit_22;
+	public String ContainerGrossWeight_23;
+	public String ContainerGrossWeightUnit_24;
+	public String ContainerMaterial_25;
+	public String ReeferIndicator_26;
+	public String NegativeTemperatureInd_27;
+	public String ReeferTemperature_28;
+	public String ReeferTemperatureUnit_29;
+	public String OverHeight_30;
+	public String OverLength_31;
+	public String OverwidthRight_32;
+	public String OverwidthLeft_33;
+	public String UnderbondIndicator_34;
+	public String SOCIndicator_35;
+	public String DirectDeliveryIndicator_36;
+	public String ContainerRemarks_37;
+	public String SpecialHandleCode_38;
+	public String ArticleNumber_39;
+	public String InlandMoveType_40;
+	public String InlandMoveID_41;
+	public String PlaceOfDelivery_42;
+	public String PortofDischarge_43;
+	public String PortofLoading_44;
+	public String FinalDestination_45;
+}
+class CT1281 {
+	public String SequenceNo_01;
+	public String UnderbondMovementType_02;
+	public String FromPremiseID_03;
+	public String ToPremiseID_04;
+	public String UnderbondLloydsNumber_05;
+	public String UnderbondVoyageNumber_06;
+	public String PersonalEffectInd_07;
+	public String TimberInd_08;
+	public String WarehouseCode_09;
+	public String OverHeight_10;
+	public String OverwidthRight_11;
+	public String OverwidthLeft_12;
+	public String ContainerType_13;
+	public String UnderbondRequestReason_14;
+	public String UnderbondModeofMovement_15;
+	public String UnderbondTransshipmentOverseasDestinationPort_16;
+	public String LineAction_17;
+	public String AttachedEquipmentInd_18;
+	public String ProhibitedPackagingInd_19;
+	public String QuarantineCode_20;
+	public String ContainerOperator_21;
+	public String OverlengthFrontLeft_22;
+	public String OverlengthBackRight_23;
+	public String TrafficModeDescription_24;
+	public String ContainerWeight_25;
+	public String BNumber_26;
+	public String ContainerGrossWeight_27;
+	public String ContainerGrossWeightUnit_28;
+	public String RackIndicator_29;
+	public String Filler_30;
+}
+class SL1182 {
+	public String SequenceNo_01;
+	public String Type1_02;
+	public String SealNo1_03;
+	public String Type2_04;
+	public String SealNo2_05;
+	public String Type3_06;
+	public String SealNo3_07;
+	public String Type4_08;
+	public String SealNo4_09;
+	public String Type5_10;
+	public String SealNo5_11;
+	public String Type6_12;
+	public String SealNo6_13;
+	public String Type7_14;
+	public String SealNo7_15;
+	public String Type8_16;
+	public String SealNo8_17;
+	public String Type9_18;
+	public String SealNo9_19;
+	public String Type10_20;
+	public String SealNo10_21;
+	public String Type11_22;
+	public String SealNo11_23;
+	public String Type12_24;
+	public String SealNo12_25;
+}
+class CT1483 {
+	public String SequenceNo_01;
+	public String VIN_02;
+	public String NoOfRack_03;
+	public String RackTypeDesc_04;
+}
+class INTMDL1184 {
+	public String SequenceNo_01;
+	public String InboundIntermodelFacility_02;
+}
+class LP0186 {
+	public String SequenceNo_01;
+	public String BLNumber_02;
+	public String ContainerSequence_03;
+	public String ItemSequence_04;
+	public String LoadingSequence_05;
+	public String NoofPackage_06;
+	public String PackageUnit_07;
+	public String Weight_08;
+	public String WeightUnit_09;
+	public String Measurement_10;
+	public String MeasurementUnit_11;
+}
+class IT1187 {
+	public String SequenceNo_01;
+	public String CountryofOriginofGoods_02;
+	public String NoofPackage_03;
+	public String PackageUnit_04;
+	public String BriefDescriptions_05;
+	public String FullDescriptions_06;
+	public String NetWeight_07;
+	public String NetWeightUnit_08;
+	public String GrossWeight_09;
+	public String GrossWeightUnit_10;
+	public String Length_11;
+	public String LengthUnit_12;
+	public String Width_13;
+	public String WidthUnit_14;
+	public String Height_15;
+	public String HeightUnit_16;
+	public String Volume_17;
+	public String VolumeUnit_18;
+	public String TransshipmentInd_19;
+	public String FumigationInd_20;
+	public String PerishableInd_21;
+	public String FlammableLiquidInd_22;
+	public String PersonalEffectInd_23;
+	public String TimberInd_24;
+	public String HazardousInd_25;
+	public String ReeferInd_26;
+	public String NegativeTemperatureInd_27;
+	public String ReeferTemperature_28;
+	public String ReeferTemperatureUnit_29;
+	public String DGInd_30;
+	public String HarmonizedCode_31;
+	public String CustomsStatusofGoods_32;
+	public String CargoNature_33;
+	public String ArticleNumber_34;
+	public String InlandMoveID_35;
+}
+class IT1288 {
+	public String SequenceNo_01;
+	public String LineAction_02;
+	public String PackageCodeDescription_03;
+	public String CargoCode_04;
+	public String TariffNumber_05;
+	public String GensetType_06;
+	public String VentilationValue_07;
+	public String VentilationScale_08;
+	public String Filler_09;
+}
+class DG1189 {
+	public String SequenceNo_01;
+	public String ItemSequenceNo_02;
+	public String IMCOClass_03;
+	public String UNNo_04;
+	public String FlashPointNegativeInd_05;
+	public String FlashPoint_06;
+	public String FlashPointUnit_07;
+	public String DangerousGoodsLabel1_08;
+	public String DangerousGoodsLabel2_09;
+	public String DangerousGoodsLabel3_10;
+	public String DangerousGoodsLabel4_11;
+	public String TechnicalName_12;
+	public String EmergencyContactName_13;
+	public String EmergencyContactNumber1_14;
+	public String ProperShippingName_15;
+	public String IMCOPage_16;
+	public String PackageGroup_17;
+	public String MFAG_18;
+	public String GrossWeight_19;
+	public String GrossWeightUnit_20;
+	public String NoofPackages_21;
+	public String PackagingCode_22;
+	public String EmergencyScheduledReference_23;
+	public String MarinePollutant_24;
+	public String NetExplosiveWeight_25;
+	public String NetExplosiveWeightUnit_26;
+	public String HandlingCode_27;
+	public String HandlingInstruction_28;
+	public String EmergencyContactNumber2_29;
+	public String NetWeight_30;
+	public String NetWeightUnit_31;
+	public String PackageCodeDescription_32;
+	public String FlashPointIndicator_33;
+	public String StorageRequestCode_34;
+	public String PackageGroupDescription_35;
+	public String SubsidiaryRisk1_36;
+	public String SubsidiaryRisk2_37;
+}
+class ID1190 {
+	public String SequenceNo_01;
+	public String MarksandNos_02;
+	public String ItemDescriptions_03;
+}
+class LP01_LP0185 {
+	public LP0186 LP01; 
+	public IT1187 IT11; 
+	public IT1288 IT12; 
+	public List<DG1189> DG11; 
+	public List<ID1190> ID11; 
+}
+class CT11_CT1179 {
+	public CT1180 CT11; 
+	public CT1281 CT12; 
+	public SL1182 SL11; 
+	public List<CT1483> CT14; 
+	public List<INTMDL1184> INTMDL11; 
+	public List<LP01_LP0185> LP01_LP01; 
+}
+class IT0192 {
+	public String SequenceNo_01;
+	public String CountryofOriginofGoods_02;
+	public String NoofPackage_03;
+	public String PackageUnit_04;
+	public String BriefDescriptions_05;
+	public String FullDescriptions_06;
+	public String NetWeight_07;
+	public String NetWeightUnit_08;
+	public String GrossWeight_09;
+	public String GrossWeightUnit_10;
+	public String Length_11;
+	public String LengthUnit_12;
+	public String Width_13;
+	public String WidthUnit_14;
+	public String Height_15;
+	public String HeightUnit_16;
+	public String Volume_17;
+	public String VolumeUnit_18;
+	public String TransshipmentInd_19;
+	public String FumigationInd_20;
+	public String PerishableInd_21;
+	public String FlammableLiquidInd_22;
+	public String PersonalEffectInd_23;
+	public String TimberInd_24;
+	public String HazardousInd_25;
+	public String ReeferInd_26;
+	public String NegativeTemperatureInd_27;
+	public String ReeferTemperature_28;
+	public String ReeferTemperatureUnit_29;
+	public String DGInd_30;
+	public String HarmonizedCode_31;
+	public String CustomsStatusofGoods_32;
+	public String CargoNature_33;
+	public String ArticleNumber_34;
+	public String InlandMoveID_35;
+}
+class IT0293 {
+	public String SequenceNo_01;
+	public String LineAction_02;
+	public String PackageCodeDescription_03;
+	public String CargoCode_04;
+	public String TariffNumber_05;
+	public String GensetType_06;
+	public String VentilationValue_07;
+	public String VentilationScale_08;
+	public String Filler_09;
+}
+class IT0394 {
+	public String SequenceNo_01;
+	public String DescriptionRecordNo_02;
+	public String CargoDescription_03;
+	public String Filler_04;
+}
+class DG0195 {
+	public String SequenceNo_01;
+	public String ItemSequenceNo_02;
+	public String IMCOClass_03;
+	public String UNNo_04;
+	public String FlashPointNegativeInd_05;
+	public String FlashPoint_06;
+	public String FlashPointUnit_07;
+	public String DangerousGoodsLabel1_08;
+	public String DangerousGoodsLabel2_09;
+	public String DangerousGoodsLabel3_10;
+	public String DangerousGoodsLabel4_11;
+	public String TechnicalName_12;
+	public String EmergencyContactName_13;
+	public String EmergencyContactNumber1_14;
+	public String ProperShippingName_15;
+	public String IMCOPage_16;
+	public String PackageGroup_17;
+	public String MFAG_18;
+	public String GrossWeight_19;
+	public String GrossWeightUnit_20;
+	public String NoofPackages_21;
+	public String PackagingCode_22;
+	public String EmergencyScheduledReference_23;
+	public String MarinePollutant_24;
+	public String NetExplosiveWeight_25;
+	public String NetExplosiveWeightUnit_26;
+	public String HandlingCode_27;
+	public String HandlingInstruction_28;
+	public String EmergencyContactNumber2_29;
+	public String NetWeight_30;
+	public String NetWeightUnit_31;
+	public String PackageCodeDescription_32;
+	public String FlashPointIndicator_33;
+	public String StorageRequestCode_34;
+	public String PackageGroupDescription_35;
+	public String SubsidiaryRisk1_36;
+	public String SubsidiaryRisk2_37;
+}
+class ID0196 {
+	public String SequenceNo_01;
+	public String MarksandNos_02;
+	public String ItemDescriptions_03;
+}
+class CT2198 {
+	public String SequenceNo_01;
+	public String ContainerNo_02;
+	public String VINNumber_03;
+	public String OOCLOwnedIndicator_04;
+	public String ResponsiblePartyCodeForNonOOCLConatiner_05;
+	public String FCLIndicator_06;
+	public String LCLIndicator_07;
+	public String FCXIndicator_08;
+	public String BreakBulkIndicator_09;
+	public String TrafficMode_10;
+	public String NoofPackage_11;
+	public String PackageUnit_12;
+	public String Bay_13;
+	public String Row_14;
+	public String Tier_15;
+	public String SizeType_16;
+	public String CabotageIndicator_17;
+	public String ContainerStatus_18;
+	public String ContainerMovement_19;
+	public String ContainerCheckDigit_20;
+	public String ContainerTareWeight_21;
+	public String ContainerTareWeightUnit_22;
+	public String ContainerGrossWeight_23;
+	public String ContainerGrossWeightUnit_24;
+	public String ContainerMaterial_25;
+	public String ReeferIndicator_26;
+	public String NegativeTemperatureInd_27;
+	public String ReeferTemperature_28;
+	public String ReeferTemperatureUnit_29;
+	public String OverHeight_30;
+	public String OverLength_31;
+	public String OverwidthRight_32;
+	public String OverwidthLeft_33;
+	public String UnderbondIndicator_34;
+	public String SOCIndicator_35;
+	public String DirectDeliveryIndicator_36;
+	public String ContainerRemarks_37;
+	public String SpecialHandleCode_38;
+	public String ArticleNumber_39;
+	public String InlandMoveType_40;
+	public String InlandMoveID_41;
+	public String PlaceOfDelivery_42;
+	public String PortofDischarge_43;
+	public String PortofLoading_44;
+	public String FinalDestination_45;
+}
+class CT2299 {
+	public String SequenceNo_01;
+	public String UnderbondMovementType_02;
+	public String FromPremiseID_03;
+	public String ToPremiseID_04;
+	public String UnderbondLloydsNumber_05;
+	public String UnderbondVoyageNumber_06;
+	public String PersonalEffectInd_07;
+	public String TimberInd_08;
+	public String WarehouseCode_09;
+	public String OverHeight_10;
+	public String OverwidthRight_11;
+	public String OverwidthLeft_12;
+	public String ContainerType_13;
+	public String UnderbondRequestReason_14;
+	public String UnderbondModeofMovement_15;
+	public String UnderbondTransshipmentOverseasDestinationPort_16;
+	public String LineAction_17;
+	public String AttachedEquipmentInd_18;
+	public String ProhibitedPackagingInd_19;
+	public String QuarantineCode_20;
+	public String ContainerOperator_21;
+	public String OverlengthFrontLeft_22;
+	public String OverlengthBackRight_23;
+	public String TrafficModeDescription_24;
+	public String ContainerWeight_25;
+	public String BNumber_26;
+	public String ContainerGrossWeight_27;
+	public String ContainerGrossWeightUnit_28;
+	public String RackIndicator_29;
+	public String Filler_30;
+}
+class SL21100 {
+	public String SequenceNo_01;
+	public String Type1_02;
+	public String SealNo1_03;
+	public String Type2_04;
+	public String SealNo2_05;
+	public String Type3_06;
+	public String SealNo3_07;
+	public String Type4_08;
+	public String SealNo4_09;
+	public String Type5_10;
+	public String SealNo5_11;
+	public String Type6_12;
+	public String SealNo6_13;
+	public String Type7_14;
+	public String SealNo7_15;
+	public String Type8_16;
+	public String SealNo8_17;
+	public String Type9_18;
+	public String SealNo9_19;
+	public String Type10_20;
+	public String SealNo10_21;
+	public String Type11_22;
+	public String SealNo11_23;
+	public String Type12_24;
+	public String SealNo12_25;
+}
+class CT24101 {
+	public String SequenceNo_01;
+	public String VIN_02;
+	public String NoOfRack_03;
+	public String RackTypeDesc_04;
+}
+class INTMDL21102 {
+	public String SequenceNo_01;
+	public String InboundIntermodelFacility_02;
+}
+class LP11103 {
+	public String SequenceNo_01;
+	public String ContainerNo_02;
+	public String ContainerSequence_03;
+	public String ItemSequence_04;
+	public String LoadingSequence_05;
+	public String NoofPackage_06;
+	public String PackageUnit_07;
+	public String Weight_08;
+	public String WeightUnit_09;
+	public String Measurement_10;
+	public String MeasurementUnit_11;
+}
+class CT21_CT2197 {
+	public CT2198 CT21; 
+	public CT2299 CT22; 
+	public SL21100 SL21; 
+	public List<CT24101> CT24; 
+	public List<INTMDL21102> INTMDL21; 
+	public List<LP11103> LP11; 
+}
+class IT01_IT0191 {
+	public IT0192 IT01; 
+	public IT0293 IT02; 
+	public List<IT0394> IT03; 
+	public List<DG0195> DG01; 
+	public List<ID0196> ID01; 
+	public List<CT21_CT2197> CT21_CT21; 
+}
+class PV01104 {
+	public String SequenceNo_01;
+	public String VesselCode_02;
+	public String VoyageNo_03;
+	public String Direction_04;
+	public String ETADate_05;
+	public String ATADate_06;
+	public String VesselCallSign_07;
+	public String VesselShippingCoCode_08;
+	public String LloydsNumber_09;
+	public String VesselNumber_10;
+	public String VesselName_11;
+	public String ExternalVoyageNumber_12;
+	public String UVRN_13;
+	public String VesselFlag_14;
+	public String ETATime_15;
+	public String ETDDate_16;
+	public String ETDTime_17;
+	public String Filler_18;
+}
+class TS01105 {
+	public String SequenceNo_01;
+	public String TSVesselCode_02;
+	public String TSVesselLloydsNumber_03;
+	public String TSCallsign_04;
+	public String TSVoyageNumber_05;
+	public String TSUVRN_06;
+	public String TSVesselName_07;
+	public String TSVesselFlag_08;
+	public String TSVesselNumber_09;
+	public String TSNextDischargePort_10;
+	public String TSVesselETD_11;
+	public String Filler_12;
+}
+class BK01106 {
+	public String SequenceNo_01;
+	public String BookingNo_02;
+}
+class BC01107 {
+	public String SequenceNo_01;
+	public String SizeType_02;
+	public String NumberofContainer_03;
+	public String FullDescription_04;
+	public String NumberofPackage_05;
+	public String PackageUnit_06;
+	public String GrossWeight_07;
+	public String GrossWeightUnit_08;
+	public String Volume_09;
+	public String VolumeUnit_10;
+	public String CargoNature_11;
+	public String FCLIndicator_12;
+	public String ContainerStatus_13;
+	public String ReeferIndicator_14;
+	public String NegativeTemperatureInd_15;
+	public String ReeferTemperature_16;
+	public String ReeferTemperatureUnit_17;
+	public String IMCOClass_18;
+	public String UNNo_19;
+	public String Filler_20;
+}
+class WB01108 {
+	public String SequenceNo_01;
+	public String CPWaybillNo_02;
+	public String CPWaybillInlandMoveID_03;
+	public String CustomsEntryPort_04;
+	public String CustomsDestinationPort_05;
+}
+class BA01_BA0165 {
+	public BA0166 BA01; 
+	public BA0267 BA02; 
+	public BA0368 BA03; 
+	public BA03DE69 BA03DE; 
+	public BA0470 BA04; 
+	public List<BA0571> BA05; 
+	public BA0672 BA06; 
+	public List<BA0773> BA07; 
+	public List<PA0174> PA01; 
+	public List<PA0275> PA02; 
+	public List<PA0376> PA03; 
+	public List<PA0477> PA04; 
+	public List<CG0178> CG01; 
+	public List<CT11_CT1179> CT11_CT11; 
+	public List<IT01_IT0191> IT01_IT01; 
+	public PV01104 PV01; 
+	public TS01105 TS01; 
+	public List<BK01106> BK01; 
+	public List<BC01107> BC01; 
+	public List<WB01108> WB01; 
+}
+class S9999109 {
+	public String FileId_01;
+	public String RecordCount_02;
+	public String ContainerCount_03;
+	public String BLCount_04;
+	public String SenderId_05;
+	public String Filler_06;
+}
+class Loop_AAAA2 {
+	public AAAA3 AAAA; 
+	public MI014 MI01; 
+	public VY015 VY01; 
+	public VY026 VY02; 
+	public VY02C7 VY02C; 
+	public VY038 VY03; 
+	public List<VY049> VY04; 
+	public VY0510 VY05; 
+	public VY05DE11 VY05DE; 
+	public List<VY0612> VY06; 
+	public List<VY0713> VY07; 
+	public VY0814 VY08; 
+	public List<VY0915> VY09; 
+	public List<VY1016> VY10; 
+	public VY1117 VY11; 
+	public List<CT01_CT0118> CT01_CT01; 
+	public List<BA01_BA0165> BA01_BA01; 
+	public S9999109 S9999; 
+}

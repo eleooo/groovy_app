@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+    <Header>
+        <MessageType MessageVersion="1.0">BookingRequest</MessageType>
+        <DocumentIdentifier>100001</DocumentIdentifier>
+        <DateTime DateType="Document">0510190700</DateTime>
+        <Parties>
+            <PartnerInformation PartnerRole="Sender">
+                <PartnerIdentifier Agency="AssignedBySender">ELITESG</PartnerIdentifier>
+                <PartnerName>Sender Name</PartnerName>
+                <ContactInformation>
+                    <ContactName>Sender Contact</ContactName>
+                    <CommunicationValue CommunicationType="Telephone">973-555-2000</CommunicationValue>
+                </ContactInformation>
+                <AddressInformation>
+                    <AddressLine>Sender Address</AddressLine>
+                </AddressInformation>
+            </PartnerInformation>
+            <PartnerInformation PartnerRole="Recipient">
+                <PartnerIdentifier Agency="AssignedByRecipient">INTTRA</PartnerIdentifier>
+            </PartnerInformation>
+        </Parties>
+    </Header>
+    <MessageBody>
+        <MessageProperties>
+            <ShipmentID>
+                <ShipmentIdentifier MessageStatus="Original">ShipmentID</ShipmentIdentifier>
+            </ShipmentID>
+            <DateTime DateType="Message">200510190600</DateTime>
+            <ContactInformation>
+                <ContactName>CONTACT NAME</ContactName>
+                <CommunicationValue CommunicationType="Email">pushnotifty4@con.com</CommunicationValue>
+            </ContactInformation>
+            <PushNotificationContactInformation>
+                <CommunicationValue CommunicationType="Email">pushnotifty1@con.com</CommunicationValue>
+                <CommunicationValue CommunicationType="Email">pushnotifty2@con.com</CommunicationValue>
+                <CommunicationValue CommunicationType="Email">pushnotifty3@con.com</CommunicationValue>
+            </PushNotificationContactInformation>
+            <ReferenceInformation ReferenceType="PurchaseOrderNumber">PONUMBER1</ReferenceInformation>
+            <ReferenceInformation ReferenceType="ShipperIdentifyingNumber">SHIPPER Reference</ReferenceInformation>
+            <Instructions>
+                <ShipmentComments CommentType="General">General Booking Comments</ShipmentComments>
+                <ShipmentComments CommentType="TemperatureControl">Control settings for refridgerated cargo</ShipmentComments>
+            </Instructions>
+            <HaulageDetails MovementType="DoorToDoor" ServiceType="FullLoad"/>
+            <TransportationDetails TransportStage="Main" TransportMode="Maritime">
+                <ConveyanceInformation>
+                    <ConveyanceName>Vessel123456789</ConveyanceName>
+                    <VoyageTripNumber>Voyage</VoyageTripNumber>
+                    <CarrierSCAC>OOLU</CarrierSCAC>
+                </ConveyanceInformation>
+                <Location LocationType="PlaceOfReceipt">
+                    <LocationCode Agency="ScheduleK">57035</LocationCode>
+                    <LocationName>Shanghai</LocationName>
+                    <DateTime DateType="EstimatedDeparture">20051102</DateTime>
+                    <DateTime DateType="EquipmentPositioning">200511011000</DateTime>
+                    <DateTime DateType="EquipmentPickup">20091203</DateTime>
+                </Location>
+                <Location LocationType="PortOfLoading">
+                    <LocationCode Agency="UN">CNSHA</LocationCode>
+                    <LocationName>Shanghai</LocationName>
+                    <DateTime DateType="EstimatedDeparture">20051102</DateTime>
+                </Location>
+                <Location LocationType="PlaceOfDelivery">
+                    <LocationCode Agency="ScheduleD">5205</LocationCode>
+                    <LocationName>VERO BEACH, FL</LocationName>
+                    <DateTime DateType="EstimatedArrival">20051207</DateTime>
+                </Location>
+                <Location LocationType="PortOfDischarge">
+                    <LocationCode Agency="UN">USMIA</LocationCode>
+                    <LocationName>MIAMI, FL</LocationName>
+                    <DateTime DateType="EstimatedArrival">20051202</DateTime>
+                </Location>
+            </TransportationDetails>
+            <Parties>
+                <PartnerInformation PartnerRole="Carrier">
+                    <PartnerIdentifier Agency="AssignedBySender">OOLU</PartnerIdentifier>
+                    <PartnerName>String</PartnerName>
+                    <AddressInformation>
+                        <AddressLine>CARRIER ADDRESS LINE 1</AddressLine>
+                        <AddressLine>CARRIER ADDRESS LINE 2</AddressLine>
+                        <AddressLine>CARRIER ADDRESS LINE 3</AddressLine>
+                        <AddressLine>CARRIER ADDRESS LINE 4</AddressLine>
+                    </AddressInformation>
+                </PartnerInformation>
+                <PartnerInformation PartnerRole="ShipFrom">
+                    <PartnerName>SHIP FROM PARTY</PartnerName>
+                    <ContactInformation>
+                        <ContactName>SHIP FROM CONTACT</ContactName>
+                        <CommunicationValue CommunicationType="Telephone">973-555-2000</CommunicationValue>
+                    </ContactInformation>
+                    <AddressInformation>
+                        <AddressLine>SF ADDRESS LINE 1</AddressLine>
+                    </AddressInformation>
+                </PartnerInformation>
+                <PartnerInformation PartnerRole="ShipTo">
+                    <PartnerName>SHIP TO PARTY</PartnerName>
+                    <ContactInformation>
+                        <ContactName>SHIP TO CONTACT</ContactName>
+                        <CommunicationValue CommunicationType="Telephone">973-555-2001</CommunicationValue>
+                    </ContactInformation>
+                    <AddressInformation>
+                        <AddressLine>SHIP TO ADDRESS LINE 1</AddressLine>
+                    </AddressInformation>
+                </PartnerInformation>
+                <PartnerInformation PartnerRole="BookingParty">
+                    <PartnerIdentifier Agency="AssignedByRecipient">800045</PartnerIdentifier>
+                    <PartnerName>BOOKING PARTY</PartnerName>
+                    <ContactInformation>
+                        <ContactName>BOOKING CONTACT</ContactName>
+                        <CommunicationValue CommunicationType="Telephone">973-555-2000</CommunicationValue>
+                    </ContactInformation>
+                </PartnerInformation>
+                <PartnerInformation PartnerRole="Sender">
+                    <PartnerIdentifier Agency="AssignedByRecipient">800045</PartnerIdentifier>
+                    <PartnerName>BOOKING PARTY</PartnerName>
+                    <ContactInformation>
+                        <ContactName>BOOKING CONTACTfffafa</ContactName>
+                        <CommunicationValue CommunicationType="Telephone">973-555-2000</CommunicationValue>
+                    </ContactInformation>
+                </PartnerInformation>
+            </Parties>
+        </MessageProperties>
+        <MessageDetails>
+            <EquipmentDetails>
+                <LineNumber>1</LineNumber>
+                <EquipmentType>
+                    <EquipmentTypeCode>22G0</EquipmentTypeCode>
+                </EquipmentType>
+                <EquipmentCount>1</EquipmentCount>
+                <EquipmentTemperature UOM="String">80.0</EquipmentTemperature>
+                <EquipmentAirFlow UOM="String">3</EquipmentAirFlow>
+            </EquipmentDetails>
+            <EquipmentDetails>
+                <LineNumber>2</LineNumber>
+                <EquipmentType>
+                    <EquipmentTypeCode>42G0</EquipmentTypeCode>
+                </EquipmentType>
+                <EquipmentCount>1</EquipmentCount>
+            </EquipmentDetails>
+            <GoodsDetails>
+                <LineNumber>1</LineNumber>
+                <PackageDetail>
+                    <NumberOfPackages>100</NumberOfPackages>
+                    <PackageTypeCode>PCS</PackageTypeCode>
+                </PackageDetail>
+                <PackageDetailComments CommentType="GoodsDescription">COMMODITY DESCRIPTION</PackageDetailComments>
+                <HumidityPercentage>52</HumidityPercentage>
+                <PackageDetailWeight UOM="KGM">1000</PackageDetailWeight>
+                <HazardousGoods PackingGroupCode="GreatDanger">
+                    <IMOClassCode>3.2</IMOClassCode>
+                    <IMDGPageNumber>4056</IMDGPageNumber>
+                    <UNDGNumber>1111</UNDGNumber>
+                    <FlashpointTemperature UOM="CEL">200</FlashpointTemperature>
+                    <HazardousGoodsComments CommentType="General">General Hazmat Comments</HazardousGoodsComments>
+                    <HazardousGoodsComments CommentType="ProperShippingName">Proper Shipping Name</HazardousGoodsComments>
+                    <EmergencyResponseContact>
+                        <ContactInformation>
+                            <ContactName>Emergency Contact</ContactName>
+                            <CommunicationValue CommunicationType="Telephone">973-555-2000</CommunicationValue>
+                        </ContactInformation>
+                    </EmergencyResponseContact>
+                </HazardousGoods>
+            </GoodsDetails>
+        </MessageDetails>
+    </MessageBody>
+</Message>

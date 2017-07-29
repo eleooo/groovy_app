@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ContainerMovement xmlns:ns0="http://www.cargosmart.com/route">
+	<ns0:Header>
+		<ns1:MsgDT xmlns:ns1="http://www.cargosmart.com/common">
+			<ns1:GMT>2016-11-03T15:55:54.802+08:00</ns1:GMT>
+			<ns1:LocDT TimeZone="HKT" CSTimeZone="HKT">2016-11-03T23:55:54.802+08:00</ns1:LocDT>
+		</ns1:MsgDT>
+		<ns1:MsgDirection xmlns:ns1="http://www.cargosmart.com/common">O</ns1:MsgDirection>
+		<ns1:MsgType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:MsgType>
+		<ns1:SenderID xmlns:ns1="http://www.cargosmart.com/common">CargoSmart</ns1:SenderID>
+		<ns1:ReceiverID xmlns:ns1="http://www.cargosmart.com/common">ACS-PHILIPS</ns1:ReceiverID>
+		<ns1:Action xmlns:ns1="http://www.cargosmart.com/common">NEW</ns1:Action>
+		<ns1:Version xmlns:ns1="http://www.cargosmart.com/common">24</ns1:Version>
+		<ns1:InterchangeMessageID xmlns:ns1="http://www.cargosmart.com/common">ACS-PHILIPS_CT_20161103235554_98331508</ns1:InterchangeMessageID>
+		<ns1:DataSource xmlns:ns1="http://www.cargosmart.com/common">CS2 db</ns1:DataSource>
+	</ns0:Header>
+	<ns0:Body>
+		<ns0:TransactionInformation>
+			<ns1:MessageID xmlns:ns1="http://www.cargosmart.com/common">ACS-PHILIPS_CT_20161103235554_98331508_98331508</ns1:MessageID>
+			<ns1:InterchangeTransactionID xmlns:ns1="http://www.cargosmart.com/common">98331508</ns1:InterchangeTransactionID>
+		</ns0:TransactionInformation>
+		<ns0:Event>
+			<ns0:CarrEventCode>Loaded on board at first port of load</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_loaded_first_pol</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container is on board vessel</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Xiamen</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Xiamen</ns0:City>
+					<ns0:County>Xiamen</ns0:County>
+					<ns0:State>Fujian</ns0:State>
+					<ns0:Country>China</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNXMN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57069</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2533037</ns1:CSParentCityID>
+					<ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">FJ</ns1:CSStateCode>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>123</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-03T14:54:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-11-03T22:54:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CurrentShipmentLeg>2</ns0:CurrentShipmentLeg>
+			<ns0:CarrierUniqueMovementID>30000082061742-1-37</ns0:CarrierUniqueMovementID>
+			<ns0:ContraIndicator>INITIAL</ns0:ContraIndicator>
+			<ns0:CS1Event>CS060</ns0:CS1Event>
+		</ns0:Event>
+		<ns0:GeneralInformation>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Vessel</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:Label>Loaded at First POL</ns0:Label>
+			<ns0:ProposedAction>ADD_CNTR_STATUS_NOTIFY</ns0:ProposedAction>
+			<ns0:TimeOfIssue>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-03T14:54:00+08:00</ns1:GMT>
+			</ns0:TimeOfIssue>
+			<ns0:IsCSCustomer>1</ns0:IsCSCustomer>
+		</ns0:GeneralInformation>
+		<ns0:Container>
+			<ns0:ContainerNumber>OOLU283704</ns0:ContainerNumber>
+			<ns0:ContainerCheckDigit>0</ns0:ContainerCheckDigit>
+			<ns0:CarrCntrSizeType>22G1</ns0:CarrCntrSizeType>
+			<ns0:CSContainerSizeType>22GP</ns0:CSContainerSizeType>
+			<ns0:Seal>
+				<ns1:SealType xmlns:ns1="http://www.cargosmart.com/common">HS</ns1:SealType>
+				<ns1:SealNumber xmlns:ns1="http://www.cargosmart.com/common">OOLDXB5553</ns1:SealNumber>
+			</ns0:Seal>
+			<ns0:Haulage>
+				<ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+				<ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+			</ns0:Haulage>
+			<ns0:CSS_CNTR_UUID>2000000003984254839</ns0:CSS_CNTR_UUID>
+			<ns0:CS1ContainerSizeType>20GP</ns0:CS1ContainerSizeType>
+			<ns0:EmptyReturnFacilityCode>MDS19</ns0:EmptyReturnFacilityCode>
+		</ns0:Container>
+		<ns0:BookingGeneralInfo>
+			<ns0:CarrierBookingNumber>2579773330</ns0:CarrierBookingNumber>
+			<ns0:Haulage>
+				<ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+				<ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+			</ns0:Haulage>
+			<ns0:BookingOffice>Xiamen</ns0:BookingOffice>
+			<ns0:Packaging>
+				<ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">PL</ns1:PackageType>
+				<ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">18</ns1:PackageQty>
+				<ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">LED LAMP</ns1:PackageDesc>
+			</ns0:Packaging>
+		</ns0:BookingGeneralInfo>
+		<ns0:BLGeneralInfo>
+			<ns0:BLNumber>2579773330</ns0:BLNumber>
+			<ns0:BLIssueDT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common">2016-11-04T00:00:00+08:00</ns1:LocDT>
+			</ns0:BLIssueDT>
+			<ns0:Haulage>
+				<ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+				<ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+			</ns0:Haulage>
+			<ns0:BLSVVD>
+				<ns1:Service xmlns:ns1="http://www.cargosmart.com/common">CIX3</ns1:Service>
+				<ns1:Vessel xmlns:ns1="http://www.cargosmart.com/common">OSF</ns1:Vessel>
+				<ns1:VesselName xmlns:ns1="http://www.cargosmart.com/common">OOCL SAN FRANCISCO</ns1:VesselName>
+				<ns1:Voyage xmlns:ns1="http://www.cargosmart.com/common">118</ns1:Voyage>
+				<ns1:Direction xmlns:ns1="http://www.cargosmart.com/common">W</ns1:Direction>
+				<ns0:ServiceName>CHINA INDIA EXPRESS 3</ns0:ServiceName>
+			</ns0:BLSVVD>
+			<ns0:Packaging>
+				<ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">PL</ns1:PackageType>
+				<ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">18</ns1:PackageQty>
+				<ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">LED LAMP</ns1:PackageDesc>
+			</ns0:Packaging>
+		</ns0:BLGeneralInfo>
+		<ns0:Route>
+			<ns0:POR>
+				<ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Xiamen</ns1:LocationName>
+				<ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:City>Xiamen</ns1:City>
+					<ns1:County>Xiamen</ns1:County>
+					<ns1:State>Fujian</ns1:State>
+					<ns1:Country>China</ns1:Country>
+					<ns1:LocationCode>
+						<ns1:MutuallyDefinedCode>CNXMN</ns1:MutuallyDefinedCode>
+						<ns1:UNLocationCode>CNXMN</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>57069</ns1:SchedKDCode>
+					</ns1:LocationCode>
+				</ns1:CityDetails>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>ZIA01</ns1:FacilityCode>
+					<ns1:FacilityName>Hai Tian Phase 2 Terminal</ns1:FacilityName>
+				</ns1:Facility>
+				<ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:CSParentCityID>2533037</ns1:CSParentCityID>
+					<ns1:CSStateCode>FJ</ns1:CSStateCode>
+					<ns1:CSCountryCode>CN</ns1:CSCountryCode>
+					<ns1:CSContinentCode>AS</ns1:CSContinentCode>
+				</ns1:CSStandardCity>
+			</ns0:POR>
+			<ns0:FND>
+				<ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Chennai</ns1:LocationName>
+				<ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:City>Chennai</ns1:City>
+					<ns1:State>Tamil Nadu</ns1:State>
+					<ns1:Country>India</ns1:Country>
+					<ns1:LocationCode>
+						<ns1:MutuallyDefinedCode>INMAA</ns1:MutuallyDefinedCode>
+						<ns1:UNLocationCode>INMAA</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>53357</ns1:SchedKDCode>
+					</ns1:LocationCode>
+				</ns1:CityDetails>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>MDS02</ns1:FacilityCode>
+					<ns1:FacilityName>Chennai International Terminals Pvt Ltd</ns1:FacilityName>
+				</ns1:Facility>
+				<ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:CSParentCityID>2534606</ns1:CSParentCityID>
+					<ns1:CSStateCode>TN</ns1:CSStateCode>
+					<ns1:CSCountryCode>IN</ns1:CSCountryCode>
+					<ns1:CSContinentCode>AS</ns1:CSContinentCode>
+				</ns1:CSStandardCity>
+			</ns0:FND>
+			<ns0:FirstPOL>
+				<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:PortName>Xiamen</ns1:PortName>
+					<ns1:PortCode>ZIA</ns1:PortCode>
+					<ns1:City>Xiamen</ns1:City>
+					<ns1:County>Xiamen</ns1:County>
+					<ns1:State>Fujian</ns1:State>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>CNXMN</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>57069</ns1:SchedKDCode>
+					</ns1:LocationCode>
+					<ns1:Country>China</ns1:Country>
+					<ns1:CSPortID>123</ns1:CSPortID>
+					<ns1:CSCountryCode>CN</ns1:CSCountryCode>
+				</ns1:Port>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>ZIA01</ns1:FacilityCode>
+					<ns1:FacilityName>Hai Tian Phase 2 Terminal</ns1:FacilityName>
+				</ns1:Facility>
+				<ns0:CSStateCode>FJ</ns0:CSStateCode>
+				<ns0:CSParentCityID>2533037</ns0:CSParentCityID>
+			</ns0:FirstPOL>
+			<ns0:LastPOD>
+				<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:PortName>Chennai</ns1:PortName>
+					<ns1:PortCode>MDS</ns1:PortCode>
+					<ns1:City>Chennai</ns1:City>
+					<ns1:State>Tamil Nadu</ns1:State>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>INMAA</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>53357</ns1:SchedKDCode>
+					</ns1:LocationCode>
+					<ns1:Country>India</ns1:Country>
+					<ns1:CSPortID>191</ns1:CSPortID>
+					<ns1:CSCountryCode>IN</ns1:CSCountryCode>
+				</ns1:Port>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>MDS02</ns1:FacilityCode>
+					<ns1:FacilityName>Chennai International Terminals Pvt Ltd</ns1:FacilityName>
+				</ns1:Facility>
+				<ns0:CSStateCode>TN</ns0:CSStateCode>
+				<ns0:CSParentCityID>2534606</ns0:CSParentCityID>
+			</ns0:LastPOD>
+			<ns0:ArrivalAtFinalHub Indicator="E">
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-20T11:00:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="IST" CSTimeZone="INT">2016-11-20T16:30:00+08:00</ns1:LocDT>
+			</ns0:ArrivalAtFinalHub>
+			<ns0:FullReturnCutoffDT Indicator="A">
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-03T04:00:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-11-03T12:00:00+08:00</ns1:LocDT>
+			</ns0:FullReturnCutoffDT>
+			<ns0:CargoReceiptDT Indicator="A">
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-31T12:27:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-10-31T20:27:00+08:00</ns1:LocDT>
+			</ns0:CargoReceiptDT>
+			<ns0:CargoDeliveryDT Indicator="E">
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-20T11:00:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="IST" CSTimeZone="INT">2016-11-20T16:30:00+08:00</ns1:LocDT>
+			</ns0:CargoDeliveryDT>
+			<ns0:OceanLeg>
+				<ns0:LegSeq>1</ns0:LegSeq>
+				<ns0:POL>
+					<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:PortName>Xiamen</ns1:PortName>
+						<ns1:City>Xiamen</ns1:City>
+						<ns1:County>Xiamen</ns1:County>
+						<ns1:State>Fujian</ns1:State>
+						<ns1:LocationCode>
+							<ns1:UNLocationCode>CNXMN</ns1:UNLocationCode>
+							<ns1:SchedKDType>K</ns1:SchedKDType>
+							<ns1:SchedKDCode>57069</ns1:SchedKDCode>
+						</ns1:LocationCode>
+						<ns1:Country>China</ns1:Country>
+						<ns1:CSPortID>123</ns1:CSPortID>
+						<ns1:CSCountryCode>CN</ns1:CSCountryCode>
+					</ns1:Port>
+					<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:FacilityCode>ZIA01</ns1:FacilityCode>
+					</ns1:Facility>
+					<ns0:DepartureDT Indicator="E">
+						<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-03T20:00:00+08:00</ns1:GMT>
+						<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-11-04T04:00:00+08:00</ns1:LocDT>
+					</ns0:DepartureDT>
+					<ns0:CSStateCode>FJ</ns0:CSStateCode>
+					<ns0:CSParentCityID>2533037</ns0:CSParentCityID>
+				</ns0:POL>
+				<ns0:POD>
+					<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:PortName>Singapore</ns1:PortName>
+						<ns1:City>Singapore</ns1:City>
+						<ns1:LocationCode>
+							<ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+							<ns1:SchedKDType>K</ns1:SchedKDType>
+							<ns1:SchedKDCode>55976</ns1:SchedKDCode>
+						</ns1:LocationCode>
+						<ns1:Country>Singapore</ns1:Country>
+						<ns1:CSPortID>355</ns1:CSPortID>
+						<ns1:CSCountryCode>SG</ns1:CSCountryCode>
+					</ns1:Port>
+					<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:FacilityCode>SIN01</ns1:FacilityCode>
+					</ns1:Facility>
+					<ns0:ArrivalDT Indicator="E">
+						<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-10T09:00:00+08:00</ns1:GMT>
+						<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="SGT" CSTimeZone="SGT">2017-11-10T10:00:00+08:00</ns1:LocDT>
+					</ns0:ArrivalDT>
+					<ns0:CSParentCityID>2530507</ns0:CSParentCityID>
+				</ns0:POD>
+				<ns0:SVVD>
+					<ns0:Loading>
+						<ns0:Service>CIX3</ns0:Service>
+						<ns0:ServiceName>CHINA INDIA EXPRESS 3</ns0:ServiceName>
+						<ns0:Vessel>OSF</ns0:Vessel>
+						<ns0:VesselName>OOCL SAN FRANCISCO</ns0:VesselName>
+						<ns0:Voyage>118</ns0:Voyage>
+						<ns0:Direction>West</ns0:Direction>
+						<ns0:LloydsNumber>9199268</ns0:LloydsNumber>
+						<ns0:CallSign>VRWN4</ns0:CallSign>
+						<ns0:RegistrationCountry>Hong Kong SAR of China</ns0:RegistrationCountry>
+						<ns0:ExternalVoyage>W118</ns0:ExternalVoyage>
+					</ns0:Loading>
+					<ns0:Discharge>
+						<ns0:Service>CIX3</ns0:Service>
+						<ns0:ServiceName>CHINA INDIA EXPRESS 3</ns0:ServiceName>
+						<ns0:Vessel>OSF</ns0:Vessel>
+						<ns0:VesselName>OOCL SAN FRANCISCO</ns0:VesselName>
+						<ns0:Voyage>118</ns0:Voyage>
+						<ns0:Direction>West</ns0:Direction>
+						<ns0:LloydsNumber>9199268</ns0:LloydsNumber>
+						<ns0:CallSign>VRWN4</ns0:CallSign>
+						<ns0:RegistrationCountry>Hong Kong SAR of China</ns0:RegistrationCountry>
+						<ns0:ExternalVoyage>W118</ns0:ExternalVoyage>
+					</ns0:Discharge>
+				</ns0:SVVD>
+			</ns0:OceanLeg>
+			<ns0:OceanLeg>
+				<ns0:LegSeq>2</ns0:LegSeq>
+				<ns0:POL>
+					<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:PortName>Singapore</ns1:PortName>
+						<ns1:City>Singapore</ns1:City>
+						<ns1:LocationCode>
+							<ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+							<ns1:SchedKDType>K</ns1:SchedKDType>
+							<ns1:SchedKDCode>55976</ns1:SchedKDCode>
+						</ns1:LocationCode>
+						<ns1:Country>Singapore</ns1:Country>
+						<ns1:CSPortID>355</ns1:CSPortID>
+						<ns1:CSCountryCode>SG</ns1:CSCountryCode>
+					</ns1:Port>
+					<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:FacilityCode>SIN01</ns1:FacilityCode>
+					</ns1:Facility>
+					<ns0:CSParentCityID>2530507</ns0:CSParentCityID>
+				</ns0:POL>
+				<ns0:POD>
+					<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:PortName>Chennai</ns1:PortName>
+						<ns1:City>Chennai</ns1:City>
+						<ns1:State>Tamil Nadu</ns1:State>
+						<ns1:LocationCode>
+							<ns1:UNLocationCode>INMAA</ns1:UNLocationCode>
+							<ns1:SchedKDType>K</ns1:SchedKDType>
+							<ns1:SchedKDCode>53357</ns1:SchedKDCode>
+						</ns1:LocationCode>
+						<ns1:Country>India</ns1:Country>
+						<ns1:CSPortID>191</ns1:CSPortID>
+						<ns1:CSCountryCode>IN</ns1:CSCountryCode>
+					</ns1:Port>
+					<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:FacilityCode>MDS02</ns1:FacilityCode>
+					</ns1:Facility>
+					<ns0:CSStateCode>TN</ns0:CSStateCode>
+					<ns0:CSParentCityID>2534606</ns0:CSParentCityID>
+				</ns0:POD>
+			</ns0:OceanLeg>
+		</ns0:Route>
+		<ns0:ExternalReference>
+			<ns0:CSReferenceType>CSBKG</ns0:CSReferenceType>
+			<ns0:ReferenceNumber>CS4504631996</ns0:ReferenceNumber>
+			<ns0:ReferenceDescription>CS Reference Number</ns0:ReferenceDescription>
+		</ns0:ExternalReference>
+		<ns0:ExternalReference>
+			<ns0:CSReferenceType>SC</ns0:CSReferenceType>
+			<ns0:ReferenceNumber>IAT16503v022</ns0:ReferenceNumber>
+		</ns0:ExternalReference>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">BPT</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Xiamen Penavico International Freight and Forwarding Company Limited</ns1:PartyName>
+			<ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">XIAMCN1821239896</ns1:CSCompanyID>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3079892000</ns1:CarrierCustomerCode>
+			<ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:ContactEmailAddress>fengtt@PENALOGI.COM</ns1:ContactEmailAddress>
+			</ns1:Contact>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Xiamen</ns1:City>
+				<ns1:Country>CN</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>Xianyu Baoshui Islands Nansan Road No.4</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">XIAMEN YANKON ENERGETIC LIGHTING CO.,LTD</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7379263000</ns1:CarrierCustomerCode>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Xiamen</ns1:City>
+				<ns1:Country>CN</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>NO.88, HOUXIANG ROAD,&#xD;HAICANG DISTRICT</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Philips India Limited</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7556526000</ns1:CarrierCustomerCode>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Mohali</ns1:City>
+				<ns1:State>Chandigarh</ns1:State>
+				<ns1:Country>IN</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>Mohali Light Factory&#xD;Industrial Focal Point, Post Box No. 6 Phase IX, S.A.S Nagar,</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Xiamen Penavico International Freight and Forwarding Company Limited</ns1:PartyName>
+			<ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">XIAMCN1821239896</ns1:CSCompanyID>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3079892000</ns1:CarrierCustomerCode>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Xiamen</ns1:City>
+				<ns1:Country>CN</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>Xianyu Baoshui Islands Nansan Road No.4</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Philips Lighting Hong Kong Limited</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7819478000</ns1:CarrierCustomerCode>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Kowloon Bay, Kowloon</ns1:City>
+				<ns1:Country>HK</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>20th Floor, Tower II, Enterprise Square,&#xD;No.9 Sheung Yuet Road</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CCP</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Philips Lighting Hong Kong Limited</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7819478000</ns1:CarrierCustomerCode>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Kowloon Bay, Kowloon</ns1:City>
+				<ns1:Country>HK</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>20th Floor, Tower II, Enterprise Square,&#xD;No.9 Sheung Yuet Road</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">NPT</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Philips Electronics India Ltd</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7277442000</ns1:CarrierCustomerCode>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Gurgaon</ns1:City>
+				<ns1:State>Haryana</ns1:State>
+				<ns1:Country>IN</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>8Th Floor, Dlf 9-B Dlf Cyber City Dlf Phase-3 Gurgaon-122 002 Haryana (India)</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Philips Lighting Hong Kong Limited</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7819478000</ns1:CarrierCustomerCode>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Kowloon Bay, Kowloon</ns1:City>
+				<ns1:Country>HK</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>20th Floor, Tower II, Enterprise Square,&#xD;No.9 Sheung Yuet Road</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+			<ns0:PartyLevel>BL</ns0:PartyLevel>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Philips Lighting Hong Kong Limited - DIVISION: CHINA SOURCING GROUP</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7859548000</ns1:CarrierCustomerCode>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Hong Kong</ns1:City>
+				<ns1:Country>HK</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>20th Floor, Tower II, Enterprise Square,&#xD;No.9 Sheung Yuet Road</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+			<ns0:PartyLevel>BL</ns0:PartyLevel>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Xiamen Penavico International Freight and Forwarding Company Limited</ns1:PartyName>
+			<ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">XIAMCN1821239896</ns1:CSCompanyID>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3079892000</ns1:CarrierCustomerCode>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Xiamen</ns1:City>
+				<ns1:Country>CN</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>Xianyu Baoshui Islands Nansan Road No.4</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+			<ns0:PartyLevel>BL</ns0:PartyLevel>
+		</ns0:Party>
+		<ns0:Cargo>
+			<ns1:CargoNature xmlns:ns1="http://www.cargosmart.com/common">GC</ns1:CargoNature>
+			<ns1:CargoDescription xmlns:ns1="http://www.cargosmart.com/common">LED LAMPS</ns1:CargoDescription>
+			<ns1:Packaging xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:PackageType>PL</ns1:PackageType>
+				<ns1:PackageQty>18</ns1:PackageQty>
+				<ns1:PackageDesc>LED LAMP</ns1:PackageDesc>
+			</ns1:Packaging>
+			<ns1:GrossWeight xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:Weight>3767.8</ns1:Weight>
+				<ns1:WeightUnit>KGS</ns1:WeightUnit>
+			</ns1:GrossWeight>
+			<ns1:NetWeight xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:Weight>0</ns1:Weight>
+			</ns1:NetWeight>
+			<ns1:Volume xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:Volume>21.71</ns1:Volume>
+				<ns1:VolumeUnit>CBM</ns1:VolumeUnit>
+			</ns1:Volume>
+			<ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:SeqNumber>1</ns1:SeqNumber>
+				<ns1:MarksAndNumbersLine>PHILIPS</ns1:MarksAndNumbersLine>
+			</ns1:MarksAndNumbers>
+		</ns0:Cargo>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Outbound intermodal leg arrived</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_arrived_at_ob_iml</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container at first vessel loading port</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Xiamen</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Xiamen</ns0:City>
+					<ns0:County>Xiamen</ns0:County>
+					<ns0:State>Fujian</ns0:State>
+					<ns0:Country>China</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNXMN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57069</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2533037</ns1:CSParentCityID>
+					<ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">FJ</ns1:CSStateCode>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>123</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-31T12:27:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-10-31T20:27:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>30000081679863-1-31</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS040</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Loaded on board at first port of load</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_loaded_first_pol</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container is on board vessel</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Xiamen</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Xiamen</ns0:City>
+					<ns0:County>Xiamen</ns0:County>
+					<ns0:State>Fujian</ns0:State>
+					<ns0:Country>China</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNXMN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57069</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2533037</ns1:CSParentCityID>
+					<ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">FJ</ns1:CSStateCode>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>123</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-11-03T14:54:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-11-03T22:54:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>30000082061742-1-37</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Vessel</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS060</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Full received by carrier</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_rcvd</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Laden Container received by carrier</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Hai Tian Phase 2 Terminal</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Xiamen</ns0:City>
+					<ns0:County>Xiamen</ns0:County>
+					<ns0:State>Fujian</ns0:State>
+					<ns0:Country>China</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNXMN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57069</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2533037</ns1:CSParentCityID>
+					<ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">FJ</ns1:CSStateCode>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-31T12:27:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-10-31T20:27:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>30000081679863-1-26</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS020</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:AssociatedExternalReference>
+			<ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">CSBKG</ns1:CSReferenceType>
+			<ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">CS4504631996</ns1:ReferenceNumber>
+			<ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">CS Reference Number</ns1:ReferenceDescription>
+			<ns0:MsgType>BC</ns0:MsgType>
+		</ns0:AssociatedExternalReference>
+		<ns0:AssociatedExternalReference>
+			<ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">CSBKG</ns1:CSReferenceType>
+			<ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">CS4504631996</ns1:ReferenceNumber>
+			<ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">CS Reference Number</ns1:ReferenceDescription>
+			<ns0:MsgType>BL</ns0:MsgType>
+		</ns0:AssociatedExternalReference>
+		<ns0:AssociatedExternalReference>
+			<ns1:CSReferenceType xmlns:ns1="http://www.cargosmart.com/common">SIR</ns1:CSReferenceType>
+			<ns1:ReferenceNumber xmlns:ns1="http://www.cargosmart.com/common">OOC167467213</ns1:ReferenceNumber>
+			<ns1:ReferenceDescription xmlns:ns1="http://www.cargosmart.com/common">Shipping Instruction Reference</ns1:ReferenceDescription>
+			<ns0:MsgType>BL</ns0:MsgType>
+		</ns0:AssociatedExternalReference>
+	</ns0:Body>
+</ns0:ContainerMovement>

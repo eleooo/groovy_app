@@ -1,0 +1,16 @@
+{
+  "schemaFileName": "CAR_D99B_IFTMCS_CMACGM_IFTMCS.xsd",
+  "sefFileName": "CAR_D99B_IFTMCS_CMACGM.sef",
+  "escapeChar": "?",
+  "subelementDelimiter": ":",
+  "elementDelimiter": "+",
+  "recordDelimiter": "0x27",
+  "isFieldValueTrimRightSpace":"false",
+  "isFieldValueTrimLeadingSpace":"false",
+  "devName": "Ben",
+  "isOutgoingEDI": false,
+  "ediVersionInfo": "d99b",
+  "teamName": "CAR",
+  "msgName": "IFTMCS",
+  "ediCustomerSpecialInfo": "CMACGM"
+}

@@ -1,0 +1,1934 @@
+package cs.b2b.core.mapping.bean.edi.x12.v4010.T304_CS
+
+public class EDI_CS_T304 {
+
+	public static final Set<String> MultiElementList = ["Loop_ST","Y6","N9","YNQ","V1","Loop_M1","DTM","Loop_N1","N2","N3","G61","Loop_R4","R2A","R2","K1","L11","H3","L5","X1","X2","Loop_C8","C8C","SUP","Loop_LX","Y2","Loop_N7","M7","M7A","LH6","Loop_L1","Loop_H1","H2","Loop_N7.Loop_LH1","LH2","LH3","LFH","LEP","LHT","LHR","PER","Loop_PO4","MEA","MAN","Loop_L0","Loop_L0.QTY","Loop_PAL","L12","Loop_SAC","Loop_L9","PWK","ISS","V9"];
+
+	public ISA1 ISA; 
+	public GS2 GS; 
+	public List<Loop_ST3> Loop_ST; 
+	public GE179 GE; 
+	public IEA180 IEA; 
+}
+class ISA1 {
+	public String I01_01;
+	public String I02_02;
+	public String I03_03;
+	public String I04_04;
+	public String I05_05;
+	public String I06_06;
+	public String I05_07;
+	public String I07_08;
+	public String I08_09;
+	public String I09_10;
+	public String I10_11;
+	public String I11_12;
+	public String I12_13;
+	public String I13_14;
+	public String I14_15;
+	public String I15_16;
+}
+class GS2 {
+	public String E479_01;
+	public String E142_02;
+	public String E124_03;
+	public String E373_04;
+	public String E337_05;
+	public String E28_06;
+	public String E455_07;
+	public String E480_08;
+}
+class ST4 {
+	public String E143_01;
+	public String E329_02;
+}
+class B25 {
+	public String E375_01;
+	public String E140_02;
+	public String E154_03;
+	public String E145_04;
+	public String E188_05;
+	public String E146_06;
+	public String E147_07;
+	public String E86_08;
+	public String E460_09;
+	public String E501_10;
+	public String E335_11;
+	public String E591_12;
+}
+class B2A6 {
+	public String E353_01;
+	public String E346_02;
+}
+class Y67 {
+	public String E313_01;
+	public String E151_02;
+	public String E275_03;
+}
+class G18 {
+	public String E311_01;
+	public String E312_02;
+	public String E312_03;
+}
+class G29 {
+	public String E312_01;
+	public String E352_02;
+}
+class G310 {
+	public String E315_01;
+	public String E317_02;
+	public String E93_03;
+	public String E201_04;
+	public String E782_05;
+	public String E73_06;
+}
+class C040_0712 {
+	public String E128_01;
+	public String E127_02;
+	public String E128_03;
+	public String E127_04;
+	public String E128_05;
+	public String E127_06;
+}
+class N911 {
+	public String E128_01;
+	public String E127_02;
+	public String E369_03;
+	public String E373_04;
+	public String E337_05;
+	public String E623_06;
+	public C040_0712 C040_07;
+}
+class YNQ13 {
+	public String E1321_01;
+	public String E1073_02;
+	public String E1250_03;
+	public String E1251_04;
+	public String E933_05;
+	public String E933_06;
+	public String E933_07;
+	public String E1270_08;
+	public String E1271_09;
+	public String E933_10;
+}
+class V114 {
+	public String E597_01;
+	public String E182_02;
+	public String E26_03;
+	public String E55_04;
+	public String E140_05;
+	public String E249_06;
+	public String E854_07;
+	public String E897_08;
+	public String E91_09;
+}
+class V315 {
+	public String E318_01;
+	public String E373_02;
+	public String E316_03;
+	public String E373_04;
+}
+class M016 {
+	public String E250_01;
+	public String E373_02;
+	public String E373_03;
+	public String E373_04;
+}
+class CUR17 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class M119 {
+	public String E26_01;
+	public String E14_02;
+	public String E74_03;
+	public String E122_04;
+	public String E98_05;
+	public String E61_06;
+	public String E122_07;
+	public String E782_08;
+	public String E1004_09;
+	public String E954_10;
+	public String E1004_11;
+	public String E954_12;
+}
+class CUR20 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_M118 {
+	public M119 M1; 
+	public CUR20 CUR; 
+}
+class M221 {
+	public String E139_01;
+	public String E138_02;
+	public String E137_03;
+	public String E335_04;
+	public String E136_05;
+	public String E32_06;
+	public String E309_07;
+	public String E310_08;
+}
+class C222 {
+	public String E8_01;
+	public String E66_02;
+	public String E67_03;
+	public String E20_04;
+	public String E7_05;
+	public String E107_06;
+	public String E373_07;
+}
+class ITD23 {
+	public String E336_01;
+	public String E333_02;
+	public String E338_03;
+	public String E370_04;
+	public String E351_05;
+	public String E446_06;
+	public String E386_07;
+	public String E362_08;
+	public String E388_09;
+	public String E389_10;
+	public String E342_11;
+	public String E352_12;
+	public String E765_13;
+	public String E107_14;
+	public String E954_15;
+}
+class DTM24 {
+	public String E374_01;
+	public String E373_02;
+	public String E337_03;
+	public String E623_04;
+	public String E1250_05;
+	public String E1251_06;
+}
+class N126 {
+	public String E98_01;
+	public String E93_02;
+	public String E66_03;
+	public String E67_04;
+	public String E706_05;
+	public String E98_06;
+}
+class N227 {
+	public String E93_01;
+	public String E93_02;
+}
+class N328 {
+	public String E166_01;
+	public String E166_02;
+}
+class N429 {
+	public String E19_01;
+	public String E156_02;
+	public String E116_03;
+	public String E26_04;
+	public String E309_05;
+	public String E310_06;
+}
+class G6130 {
+	public String E366_01;
+	public String E93_02;
+	public String E365_03;
+	public String E364_04;
+	public String E443_05;
+}
+class Loop_N125 {
+	public N126 N1; 
+	public List<N227> N2; 
+	public List<N328> N3; 
+	public N429 N4; 
+	public List<G6130> G61; 
+}
+class R432 {
+	public String E115_01;
+	public String E309_02;
+	public String E310_03;
+	public String E114_04;
+	public String E26_05;
+	public String E174_06;
+	public String E113_07;
+	public String E156_08;
+}
+class DTM33 {
+	public String E374_01;
+	public String E373_02;
+	public String E337_03;
+	public String E623_04;
+	public String E1250_05;
+	public String E1251_06;
+}
+class Loop_R431 {
+	public R432 R4; 
+	public List<DTM33> DTM; 
+}
+class R2A34 {
+	public String E133_01;
+	public String E1431_02;
+	public String E91_03;
+	public String E140_04;
+	public String E309_05;
+	public String E310_06;
+	public String E56_07;
+	public String E1_08;
+	public String E742_09;
+	public String E98_10;
+}
+class R235 {
+	public String E140_01;
+	public String E133_02;
+	public String E19_03;
+	public String E154_04;
+	public String E177_05;
+	public String E91_06;
+	public String E296_07;
+	public String E296_08;
+	public String E76_09;
+	public String E373_10;
+	public String E369_11;
+	public String E56_12;
+	public String E742_13;
+}
+class K136 {
+	public String E61_01;
+	public String E61_02;
+}
+class L1137 {
+	public String E127_01;
+	public String E128_02;
+	public String E352_03;
+}
+class H338 {
+	public String E152_01;
+	public String E153_02;
+	public String E241_03;
+	public String E242_04;
+	public String E257_05;
+}
+class L539 {
+	public String E213_01;
+	public String E79_02;
+	public String E22_03;
+	public String E23_04;
+	public String E103_05;
+	public String E87_06;
+	public String E88_07;
+	public String E23_08;
+	public String E22_09;
+	public String E595_10;
+}
+class X140 {
+	public String E83_01;
+	public String E50_02;
+	public String E51_03;
+	public String E373_04;
+	public String E52_05;
+	public String E48_06;
+	public String E26_07;
+	public String E141_08;
+	public String E210_09;
+	public String E80_10;
+	public String E148_11;
+	public String E47_12;
+	public String E355_13;
+	public String E212_14;
+	public String E1306_15;
+	public String E67_16;
+}
+class X241 {
+	public String E70_01;
+	public String E373_02;
+	public String E373_03;
+	public String E70_04;
+	public String E373_05;
+	public String E373_06;
+}
+class C843 {
+	public String E213_01;
+	public String E246_02;
+	public String E247_03;
+	public String E1302_04;
+}
+class C8C44 {
+	public String E247_01;
+	public String E247_02;
+	public String E247_03;
+}
+class SUP45 {
+	public String E749_01;
+	public String E246_02;
+	public String E3_03;
+	public String E744_04;
+}
+class Loop_C842 {
+	public C843 C8; 
+	public List<C8C44> C8C; 
+	public List<SUP45> SUP; 
+}
+class LX47 {
+	public String E554_01;
+}
+class Y248 {
+	public String E95_01;
+	public String E78_02;
+	public String E56_03;
+	public String E24_04;
+	public String E91_05;
+	public String E177_06;
+	public String E140_07;
+	public String E464_08;
+	public String E465_09;
+	public String E466_10;
+}
+class N750 {
+	public String E206_01;
+	public String E207_02;
+	public String E81_03;
+	public String E187_04;
+	public String E167_05;
+	public String E232_06;
+	public String E205_07;
+	public String E183_08;
+	public String E184_09;
+	public String E102_10;
+	public String E40_11;
+	public String E140_12;
+	public String E319_13;
+	public String E219_14;
+	public String E567_15;
+	public String E571_16;
+	public String E188_17;
+	public String E761_18;
+	public String E56_19;
+	public String E65_20;
+	public String E189_21;
+	public String E24_22;
+	public String E140_23;
+	public String E301_24;
+}
+class C001_0352 {
+	public String E355_01;
+	public String E1018_02;
+	public String E649_03;
+	public String E355_04;
+	public String E1018_05;
+	public String E649_06;
+	public String E355_07;
+	public String E1018_08;
+	public String E649_09;
+	public String E355_10;
+	public String E1018_11;
+	public String E649_12;
+	public String E355_13;
+	public String E1018_14;
+	public String E649_15;
+}
+class QTY51 {
+	public String E673_01;
+	public String E380_02;
+	public C001_0352 C001_03;
+	public String E61_04;
+}
+class L453 {
+	public String E82_01;
+	public String E189_02;
+	public String E65_03;
+	public String E90_04;
+	public String E380_05;
+	public String E1271_06;
+}
+class C001_0255 {
+	public String E355_01;
+	public String E1018_02;
+	public String E649_03;
+	public String E355_04;
+	public String E1018_05;
+	public String E649_06;
+	public String E355_07;
+	public String E1018_08;
+	public String E649_09;
+	public String E355_10;
+	public String E1018_11;
+	public String E649_12;
+	public String E355_13;
+	public String E1018_14;
+	public String E649_15;
+}
+class N1254 {
+	public String E829_01;
+	public C001_0255 C001_02;
+}
+class M756 {
+	public String E225_01;
+	public String E225_02;
+	public String E225_03;
+	public String E225_04;
+	public String E98_05;
+}
+class M7A57 {
+	public String E225_01;
+	public String E225_02;
+	public String E373_03;
+	public String E98_04;
+	public String E93_05;
+	public String E352_06;
+}
+class W0958 {
+	public String E40_01;
+	public String E408_02;
+	public String E355_03;
+	public String E408_04;
+	public String E355_05;
+	public String E3_06;
+	public String E1122_07;
+	public String E488_08;
+	public String E380_09;
+}
+class LH659 {
+	public String E93_01;
+	public String E272_02;
+	public String E273_03;
+	public String E273_04;
+}
+class L161 {
+	public String E213_01;
+	public String E60_02;
+	public String E122_03;
+	public String E58_04;
+	public String E191_05;
+	public String E117_06;
+	public String E120_07;
+	public String E150_08;
+	public String E121_09;
+	public String E39_10;
+	public String E16_11;
+	public String E276_12;
+	public String E257_13;
+	public String E74_14;
+	public String E122_15;
+	public String E372_16;
+	public String E220_17;
+	public String E221_18;
+	public String E954_19;
+	public String E100_20;
+	public String E610_21;
+}
+class CUR62 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_L160 {
+	public L161 L1; 
+	public CUR62 CUR; 
+}
+class L763 {
+	public String E213_01;
+	public String E168_02;
+	public String E171_03;
+	public String E172_04;
+	public String E169_05;
+	public String E170_06;
+	public String E59_07;
+	public String E173_08;
+	public String E46_09;
+	public String E373_10;
+	public String E119_11;
+	public String E227_12;
+	public String E294_13;
+	public String E295_14;
+	public String E19_15;
+	public String E156_16;
+}
+class X164 {
+	public String E83_01;
+	public String E50_02;
+	public String E51_03;
+	public String E373_04;
+	public String E52_05;
+	public String E48_06;
+	public String E26_07;
+	public String E141_08;
+	public String E210_09;
+	public String E80_10;
+	public String E148_11;
+	public String E47_12;
+	public String E355_13;
+	public String E212_14;
+	public String E1306_15;
+	public String E67_16;
+}
+class X265 {
+	public String E70_01;
+	public String E373_02;
+	public String E373_03;
+	public String E70_04;
+	public String E373_05;
+	public String E373_06;
+}
+class C040_0767 {
+	public String E128_01;
+	public String E127_02;
+	public String E128_03;
+	public String E127_04;
+	public String E128_05;
+	public String E127_06;
+}
+class N966 {
+	public String E128_01;
+	public String E127_02;
+	public String E369_03;
+	public String E373_04;
+	public String E337_05;
+	public String E623_06;
+	public C040_0767 C040_07;
+}
+class H169 {
+	public String E62_01;
+	public String E209_02;
+	public String E208_03;
+	public String E64_04;
+	public String E63_05;
+	public String E200_06;
+	public String E77_07;
+	public String E355_08;
+	public String E254_09;
+}
+class H270 {
+	public String E64_01;
+	public String E274_02;
+}
+class Loop_H168 {
+	public H169 H1; 
+	public List<H270> H2; 
+}
+class LH172 {
+	public String E355_01;
+	public String E80_02;
+	public String E277_03;
+	public String E200_04;
+	public String E22_05;
+	public String E355_06;
+	public String E380_07;
+	public String E595_08;
+	public String E665_09;
+	public String E254_10;
+	public String E1375_11;
+}
+class LH273 {
+	public String E215_01;
+	public String E983_02;
+	public String E218_03;
+	public String E222_04;
+	public String E759_05;
+	public String E355_06;
+	public String E408_07;
+	public String E355_08;
+	public String E408_09;
+	public String E355_10;
+	public String E408_11;
+}
+class LH374 {
+	public String E224_01;
+	public String E984_02;
+	public String E985_03;
+	public String E1073_04;
+}
+class LFH75 {
+	public String E808_01;
+	public String E809_02;
+	public String E809_03;
+	public String E1023_04;
+	public String E355_05;
+	public String E380_06;
+	public String E380_07;
+}
+class LEP76 {
+	public String E806_01;
+	public String E807_02;
+	public String E156_03;
+	public String E127_04;
+}
+class LH477 {
+	public String E238_01;
+	public String E364_02;
+	public String E254_03;
+	public String E230_04;
+	public String E230_05;
+	public String E230_06;
+	public String E271_07;
+	public String E267_08;
+	public String E805_09;
+	public String E986_10;
+	public String E364_11;
+	public String E355_12;
+}
+class LHT78 {
+	public String E215_01;
+	public String E218_02;
+	public String E222_03;
+}
+class LHR79 {
+	public String E128_01;
+	public String E127_02;
+	public String E373_03;
+}
+class PER80 {
+	public String E366_01;
+	public String E93_02;
+	public String E365_03;
+	public String E364_04;
+	public String E365_05;
+	public String E364_06;
+	public String E365_07;
+	public String E364_08;
+	public String E443_09;
+}
+class Loop_LH171 {
+	public LH172 LH1; 
+	public List<LH273> LH2; 
+	public List<LH374> LH3; 
+	public List<LFH75> LFH; 
+	public List<LEP76> LEP; 
+	public LH477 LH4; 
+	public List<LHT78> LHT; 
+	public List<LHR79> LHR; 
+	public List<PER80> PER; 
+}
+class Loop_N749 {
+	public N750 N7; 
+	public QTY51 QTY; 
+	public L453 L4; 
+	public N1254 N12; 
+	public List<M756> M7; 
+	public List<M7A57> M7A; 
+	public W0958 W09; 
+	public List<LH659> LH6; 
+	public List<Loop_L160> Loop_L1; 
+	public L763 L7; 
+	public List<X164> X1; 
+	public List<X265> X2; 
+	public List<N966> N9; 
+	public List<Loop_H168> Loop_H1; 
+	public List<Loop_LH171> Loop_LH1; 
+}
+class L1181 {
+	public String E127_01;
+	public String E128_02;
+	public String E352_03;
+}
+class K182 {
+	public String E61_01;
+	public String E61_02;
+}
+class PO484 {
+	public String E356_01;
+	public String E357_02;
+	public String E355_03;
+	public String E103_04;
+	public String E187_05;
+	public String E384_06;
+	public String E355_07;
+	public String E385_08;
+	public String E355_09;
+	public String E82_10;
+	public String E189_11;
+	public String E65_12;
+	public String E355_13;
+	public String E810_14;
+	public String E752_15;
+	public String E350_16;
+	public String E350_17;
+	public String E1470_18;
+}
+class C001_0486 {
+	public String E355_01;
+	public String E1018_02;
+	public String E649_03;
+	public String E355_04;
+	public String E1018_05;
+	public String E649_06;
+	public String E355_07;
+	public String E1018_08;
+	public String E649_09;
+	public String E355_10;
+	public String E1018_11;
+	public String E649_12;
+	public String E355_13;
+	public String E1018_14;
+	public String E649_15;
+}
+class MEA85 {
+	public String E737_01;
+	public String E738_02;
+	public String E739_03;
+	public C001_0486 C001_04;
+	public String E740_05;
+	public String E741_06;
+	public String E935_07;
+	public String E936_08;
+	public String E752_09;
+	public String E1373_10;
+}
+class MAN87 {
+	public String E88_01;
+	public String E87_02;
+	public String E87_03;
+	public String E88_04;
+	public String E87_05;
+	public String E87_06;
+}
+class C040_0789 {
+	public String E128_01;
+	public String E127_02;
+	public String E128_03;
+	public String E127_04;
+	public String E128_05;
+	public String E127_06;
+}
+class N988 {
+	public String E128_01;
+	public String E127_02;
+	public String E369_03;
+	public String E373_04;
+	public String E337_05;
+	public String E623_06;
+	public C040_0789 C040_07;
+}
+class Loop_PO483 {
+	public PO484 PO4; 
+	public List<MEA85> MEA; 
+	public List<MAN87> MAN; 
+	public List<N988> N9; 
+}
+class L091 {
+	public String E213_01;
+	public String E220_02;
+	public String E221_03;
+	public String E81_04;
+	public String E187_05;
+	public String E183_06;
+	public String E184_07;
+	public String E80_08;
+	public String E211_09;
+	public String E458_10;
+	public String E188_11;
+	public String E56_12;
+	public String E380_13;
+	public String E211_14;
+	public String E1073_15;
+}
+class C001_0493 {
+	public String E355_01;
+	public String E1018_02;
+	public String E649_03;
+	public String E355_04;
+	public String E1018_05;
+	public String E649_06;
+	public String E355_07;
+	public String E1018_08;
+	public String E649_09;
+	public String E355_10;
+	public String E1018_11;
+	public String E649_12;
+	public String E355_13;
+	public String E1018_14;
+	public String E649_15;
+}
+class MEA92 {
+	public String E737_01;
+	public String E738_02;
+	public String E739_03;
+	public C001_0493 C001_04;
+	public String E740_05;
+	public String E741_06;
+	public String E935_07;
+	public String E936_08;
+	public String E752_09;
+	public String E1373_10;
+}
+class PO495 {
+	public String E356_01;
+	public String E357_02;
+	public String E355_03;
+	public String E103_04;
+	public String E187_05;
+	public String E384_06;
+	public String E355_07;
+	public String E385_08;
+	public String E355_09;
+	public String E82_10;
+	public String E189_11;
+	public String E65_12;
+	public String E355_13;
+	public String E810_14;
+	public String E752_15;
+	public String E350_16;
+	public String E350_17;
+	public String E1470_18;
+}
+class C001_0497 {
+	public String E355_01;
+	public String E1018_02;
+	public String E649_03;
+	public String E355_04;
+	public String E1018_05;
+	public String E649_06;
+	public String E355_07;
+	public String E1018_08;
+	public String E649_09;
+	public String E355_10;
+	public String E1018_11;
+	public String E649_12;
+	public String E355_13;
+	public String E1018_14;
+	public String E649_15;
+}
+class MEA96 {
+	public String E737_01;
+	public String E738_02;
+	public String E739_03;
+	public C001_0497 C001_04;
+	public String E740_05;
+	public String E741_06;
+	public String E935_07;
+	public String E936_08;
+	public String E752_09;
+	public String E1373_10;
+}
+class MAN98 {
+	public String E88_01;
+	public String E87_02;
+	public String E87_03;
+	public String E88_04;
+	public String E87_05;
+	public String E87_06;
+}
+class C040_07100 {
+	public String E128_01;
+	public String E127_02;
+	public String E128_03;
+	public String E127_04;
+	public String E128_05;
+	public String E127_06;
+}
+class N999 {
+	public String E128_01;
+	public String E127_02;
+	public String E369_03;
+	public String E373_04;
+	public String E337_05;
+	public String E623_06;
+	public C040_07100 C040_07;
+}
+class Loop_PO494 {
+	public PO495 PO4; 
+	public List<MEA96> MEA; 
+	public List<MAN98> MAN; 
+	public List<N999> N9; 
+}
+class C001_03102 {
+	public String E355_01;
+	public String E1018_02;
+	public String E649_03;
+	public String E355_04;
+	public String E1018_05;
+	public String E649_06;
+	public String E355_07;
+	public String E1018_08;
+	public String E649_09;
+	public String E355_10;
+	public String E1018_11;
+	public String E649_12;
+	public String E355_13;
+	public String E1018_14;
+	public String E649_15;
+}
+class QTY101 {
+	public String E673_01;
+	public String E380_02;
+	public C001_03102 C001_03;
+	public String E61_04;
+}
+class L4103 {
+	public String E82_01;
+	public String E189_02;
+	public String E65_03;
+	public String E90_04;
+	public String E380_05;
+	public String E1271_06;
+}
+class LH6104 {
+	public String E93_01;
+	public String E272_02;
+	public String E273_03;
+	public String E273_04;
+}
+class PAL106 {
+	public String E883_01;
+	public String E884_02;
+	public String E885_03;
+	public String E356_04;
+	public String E395_05;
+	public String E355_06;
+	public String E82_07;
+	public String E189_08;
+	public String E65_09;
+	public String E355_10;
+	public String E384_11;
+	public String E355_12;
+	public String E385_13;
+	public String E355_14;
+	public String E399_15;
+	public String E810_16;
+}
+class C001_03108 {
+	public String E355_01;
+	public String E1018_02;
+	public String E649_03;
+	public String E355_04;
+	public String E1018_05;
+	public String E649_06;
+	public String E355_07;
+	public String E1018_08;
+	public String E649_09;
+	public String E355_10;
+	public String E1018_11;
+	public String E649_12;
+	public String E355_13;
+	public String E1018_14;
+	public String E649_15;
+}
+class QTY107 {
+	public String E673_01;
+	public String E380_02;
+	public C001_03108 C001_03;
+	public String E61_04;
+}
+class Loop_PAL105 {
+	public PAL106 PAL; 
+	public QTY107 QTY; 
+}
+class C001_05111 {
+	public String E355_01;
+	public String E1018_02;
+	public String E649_03;
+	public String E355_04;
+	public String E1018_05;
+	public String E649_06;
+	public String E355_07;
+	public String E1018_08;
+	public String E649_09;
+	public String E355_10;
+	public String E1018_11;
+	public String E649_12;
+	public String E355_13;
+	public String E1018_14;
+	public String E649_15;
+}
+class CTP110 {
+	public String E687_01;
+	public String E236_02;
+	public String E212_03;
+	public String E380_04;
+	public C001_05111 C001_05;
+	public String E648_06;
+	public String E649_07;
+	public String E782_08;
+	public String E639_09;
+	public String E499_10;
+	public String E289_11;
+}
+class CUR112 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_CTP109 {
+	public CTP110 CTP; 
+	public CUR112 CUR; 
+}
+class L5113 {
+	public String E213_01;
+	public String E79_02;
+	public String E22_03;
+	public String E23_04;
+	public String E103_05;
+	public String E87_06;
+	public String E88_07;
+	public String E23_08;
+	public String E22_09;
+	public String E595_10;
+}
+class LIN114 {
+	public String E350_01;
+	public String E235_02;
+	public String E234_03;
+	public String E235_04;
+	public String E234_05;
+	public String E235_06;
+	public String E234_07;
+	public String E235_08;
+	public String E234_09;
+	public String E235_10;
+	public String E234_11;
+	public String E235_12;
+	public String E234_13;
+	public String E235_14;
+	public String E234_15;
+	public String E235_16;
+	public String E234_17;
+	public String E235_18;
+	public String E234_19;
+	public String E235_20;
+	public String E234_21;
+	public String E235_22;
+	public String E234_23;
+	public String E235_24;
+	public String E234_25;
+	public String E235_26;
+	public String E234_27;
+	public String E235_28;
+	public String E234_29;
+	public String E235_30;
+	public String E234_31;
+}
+class L12115 {
+	public String E592_01;
+	public String E352_02;
+}
+class C040_07117 {
+	public String E128_01;
+	public String E127_02;
+	public String E128_03;
+	public String E127_04;
+	public String E128_05;
+	public String E127_06;
+}
+class N9116 {
+	public String E128_01;
+	public String E127_02;
+	public String E369_03;
+	public String E373_04;
+	public String E337_05;
+	public String E623_06;
+	public C040_07117 C040_07;
+}
+class YNQ118 {
+	public String E1321_01;
+	public String E1073_02;
+	public String E1250_03;
+	public String E1251_04;
+	public String E933_05;
+	public String E933_06;
+	public String E933_07;
+	public String E1270_08;
+	public String E1271_09;
+	public String E933_10;
+}
+class L1120 {
+	public String E213_01;
+	public String E60_02;
+	public String E122_03;
+	public String E58_04;
+	public String E191_05;
+	public String E117_06;
+	public String E120_07;
+	public String E150_08;
+	public String E121_09;
+	public String E39_10;
+	public String E16_11;
+	public String E276_12;
+	public String E257_13;
+	public String E74_14;
+	public String E122_15;
+	public String E372_16;
+	public String E220_17;
+	public String E221_18;
+	public String E954_19;
+	public String E100_20;
+	public String E610_21;
+}
+class CUR121 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_L1119 {
+	public L1120 L1; 
+	public CUR121 CUR; 
+}
+class L7122 {
+	public String E213_01;
+	public String E168_02;
+	public String E171_03;
+	public String E172_04;
+	public String E169_05;
+	public String E170_06;
+	public String E59_07;
+	public String E173_08;
+	public String E46_09;
+	public String E373_10;
+	public String E119_11;
+	public String E227_12;
+	public String E294_13;
+	public String E295_14;
+	public String E19_15;
+	public String E156_16;
+}
+class SAC124 {
+	public String E248_01;
+	public String E1300_02;
+	public String E559_03;
+	public String E1301_04;
+	public String E610_05;
+	public String E378_06;
+	public String E332_07;
+	public String E118_08;
+	public String E355_09;
+	public String E380_10;
+	public String E380_11;
+	public String E331_12;
+	public String E127_13;
+	public String E770_14;
+	public String E352_15;
+	public String E819_16;
+}
+class CUR125 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_SAC123 {
+	public SAC124 SAC; 
+	public CUR125 CUR; 
+}
+class L9127 {
+	public String E150_01;
+	public String E782_02;
+}
+class CUR128 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_L9126 {
+	public L9127 L9; 
+	public CUR128 CUR; 
+}
+class X1129 {
+	public String E83_01;
+	public String E50_02;
+	public String E51_03;
+	public String E373_04;
+	public String E52_05;
+	public String E48_06;
+	public String E26_07;
+	public String E141_08;
+	public String E210_09;
+	public String E80_10;
+	public String E148_11;
+	public String E47_12;
+	public String E355_13;
+	public String E212_14;
+	public String E1306_15;
+	public String E67_16;
+}
+class X2130 {
+	public String E70_01;
+	public String E373_02;
+	public String E373_03;
+	public String E70_04;
+	public String E373_05;
+	public String E373_06;
+}
+class C8132 {
+	public String E213_01;
+	public String E246_02;
+	public String E247_03;
+	public String E1302_04;
+}
+class C8C133 {
+	public String E247_01;
+	public String E247_02;
+	public String E247_03;
+}
+class SUP134 {
+	public String E749_01;
+	public String E246_02;
+	public String E3_03;
+	public String E744_04;
+}
+class Loop_C8131 {
+	public C8132 C8; 
+	public List<C8C133> C8C; 
+	public List<SUP134> SUP; 
+}
+class H1136 {
+	public String E62_01;
+	public String E209_02;
+	public String E208_03;
+	public String E64_04;
+	public String E63_05;
+	public String E200_06;
+	public String E77_07;
+	public String E355_08;
+	public String E254_09;
+}
+class H2137 {
+	public String E64_01;
+	public String E274_02;
+}
+class Loop_H1135 {
+	public H1136 H1; 
+	public List<H2137> H2; 
+}
+class LH1139 {
+	public String E355_01;
+	public String E80_02;
+	public String E277_03;
+	public String E200_04;
+	public String E22_05;
+	public String E355_06;
+	public String E380_07;
+	public String E595_08;
+	public String E665_09;
+	public String E254_10;
+	public String E1375_11;
+}
+class LH2140 {
+	public String E215_01;
+	public String E983_02;
+	public String E218_03;
+	public String E222_04;
+	public String E759_05;
+	public String E355_06;
+	public String E408_07;
+	public String E355_08;
+	public String E408_09;
+	public String E355_10;
+	public String E408_11;
+}
+class LH3141 {
+	public String E224_01;
+	public String E984_02;
+	public String E985_03;
+	public String E1073_04;
+}
+class LFH142 {
+	public String E808_01;
+	public String E809_02;
+	public String E809_03;
+	public String E1023_04;
+	public String E355_05;
+	public String E380_06;
+	public String E380_07;
+}
+class LEP143 {
+	public String E806_01;
+	public String E807_02;
+	public String E156_03;
+	public String E127_04;
+}
+class LH4144 {
+	public String E238_01;
+	public String E364_02;
+	public String E254_03;
+	public String E230_04;
+	public String E230_05;
+	public String E230_06;
+	public String E271_07;
+	public String E267_08;
+	public String E805_09;
+	public String E986_10;
+	public String E364_11;
+	public String E355_12;
+}
+class LHT145 {
+	public String E215_01;
+	public String E218_02;
+	public String E222_03;
+}
+class LHR146 {
+	public String E128_01;
+	public String E127_02;
+	public String E373_03;
+}
+class PER147 {
+	public String E366_01;
+	public String E93_02;
+	public String E365_03;
+	public String E364_04;
+	public String E365_05;
+	public String E364_06;
+	public String E365_07;
+	public String E364_08;
+	public String E443_09;
+}
+class Loop_LH1138 {
+	public LH1139 LH1; 
+	public List<LH2140> LH2; 
+	public List<LH3141> LH3; 
+	public List<LFH142> LFH; 
+	public List<LEP143> LEP; 
+	public LH4144 LH4; 
+	public List<LHT145> LHT; 
+	public List<LHR146> LHR; 
+	public List<PER147> PER; 
+}
+class N1149 {
+	public String E98_01;
+	public String E93_02;
+	public String E66_03;
+	public String E67_04;
+	public String E706_05;
+	public String E98_06;
+}
+class N2150 {
+	public String E93_01;
+	public String E93_02;
+}
+class N3151 {
+	public String E166_01;
+	public String E166_02;
+}
+class N4152 {
+	public String E19_01;
+	public String E156_02;
+	public String E116_03;
+	public String E26_04;
+	public String E309_05;
+	public String E310_06;
+}
+class G61153 {
+	public String E366_01;
+	public String E93_02;
+	public String E365_03;
+	public String E364_04;
+	public String E443_05;
+}
+class Loop_N1148 {
+	public N1149 N1; 
+	public List<N2150> N2; 
+	public List<N3151> N3; 
+	public N4152 N4; 
+	public List<G61153> G61; 
+}
+class Loop_L090 {
+	public L091 L0; 
+	public List<MEA92> MEA; 
+	public List<Loop_PO494> Loop_PO4; 
+	public List<QTY101> QTY; 
+	public L4103 L4; 
+	public List<LH6104> LH6; 
+	public List<Loop_PAL105> Loop_PAL; 
+	public Loop_CTP109 Loop_CTP; 
+	public List<L5113> L5; 
+	public LIN114 LIN; 
+	public List<L12115> L12; 
+	public List<N9116> N9; 
+	public List<YNQ118> YNQ; 
+	public List<Loop_L1119> Loop_L1; 
+	public L7122 L7; 
+	public List<Loop_SAC123> Loop_SAC; 
+	public List<Loop_L9126> Loop_L9; 
+	public List<X1129> X1; 
+	public List<X2130> X2; 
+	public List<Loop_C8131> Loop_C8; 
+	public List<Loop_H1135> Loop_H1; 
+	public Loop_LH1138 Loop_LH1; 
+	public List<Loop_N1148> Loop_N1; 
+}
+class Loop_LX46 {
+	public LX47 LX; 
+	public List<Y248> Y2; 
+	public List<Loop_N749> Loop_N7; 
+	public List<L1181> L11; 
+	public List<K182> K1; 
+	public List<Loop_PO483> Loop_PO4; 
+	public List<Loop_L090> Loop_L0; 
+}
+class L3155 {
+	public String E81_01;
+	public String E187_02;
+	public String E60_03;
+	public String E122_04;
+	public String E58_05;
+	public String E191_06;
+	public String E117_07;
+	public String E150_08;
+	public String E183_09;
+	public String E184_10;
+	public String E80_11;
+	public String E188_12;
+	public String E171_13;
+	public String E74_14;
+	public String E122_15;
+}
+class CUR156 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class C001_04158 {
+	public String E355_01;
+	public String E1018_02;
+	public String E649_03;
+	public String E355_04;
+	public String E1018_05;
+	public String E649_06;
+	public String E355_07;
+	public String E1018_08;
+	public String E649_09;
+	public String E355_10;
+	public String E1018_11;
+	public String E649_12;
+	public String E355_13;
+	public String E1018_14;
+	public String E649_15;
+}
+class MEA157 {
+	public String E737_01;
+	public String E738_02;
+	public String E739_03;
+	public C001_04158 C001_04;
+	public String E740_05;
+	public String E741_06;
+	public String E935_07;
+	public String E936_08;
+	public String E752_09;
+	public String E1373_10;
+}
+class C002_08160 {
+	public String E704_01;
+	public String E704_02;
+	public String E704_03;
+	public String E704_04;
+	public String E704_05;
+}
+class PWK159 {
+	public String E755_01;
+	public String E756_02;
+	public String E757_03;
+	public String E98_04;
+	public String E66_05;
+	public String E67_06;
+	public String E352_07;
+	public C002_08160 C002_08;
+	public String E1525_09;
+}
+class SUP161 {
+	public String E749_01;
+	public String E246_02;
+	public String E3_03;
+	public String E744_04;
+}
+class L1163 {
+	public String E213_01;
+	public String E60_02;
+	public String E122_03;
+	public String E58_04;
+	public String E191_05;
+	public String E117_06;
+	public String E120_07;
+	public String E150_08;
+	public String E121_09;
+	public String E39_10;
+	public String E16_11;
+	public String E276_12;
+	public String E257_13;
+	public String E74_14;
+	public String E122_15;
+	public String E372_16;
+	public String E220_17;
+	public String E221_18;
+	public String E954_19;
+	public String E100_20;
+	public String E610_21;
+}
+class CUR164 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_L1162 {
+	public L1163 L1; 
+	public CUR164 CUR; 
+}
+class TDS166 {
+	public String E610_01;
+	public String E610_02;
+	public String E610_03;
+	public String E610_04;
+}
+class CUR167 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_TDS165 {
+	public TDS166 TDS; 
+	public CUR167 CUR; 
+}
+class SAC169 {
+	public String E248_01;
+	public String E1300_02;
+	public String E559_03;
+	public String E1301_04;
+	public String E610_05;
+	public String E378_06;
+	public String E332_07;
+	public String E118_08;
+	public String E355_09;
+	public String E380_10;
+	public String E380_11;
+	public String E331_12;
+	public String E127_13;
+	public String E770_14;
+	public String E352_15;
+	public String E819_16;
+}
+class CUR170 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_SAC168 {
+	public SAC169 SAC; 
+	public CUR170 CUR; 
+}
+class L9172 {
+	public String E150_01;
+	public String E782_02;
+}
+class CUR173 {
+	public String E98_01;
+	public String E100_02;
+	public String E280_03;
+	public String E98_04;
+	public String E100_05;
+	public String E669_06;
+	public String E374_07;
+	public String E373_08;
+	public String E337_09;
+	public String E374_10;
+	public String E373_11;
+	public String E337_12;
+	public String E374_13;
+	public String E373_14;
+	public String E337_15;
+	public String E374_16;
+	public String E373_17;
+	public String E337_18;
+	public String E374_19;
+	public String E373_20;
+	public String E337_21;
+}
+class Loop_L9171 {
+	public L9172 L9; 
+	public CUR173 CUR; 
+}
+class ISS174 {
+	public String E382_01;
+	public String E355_02;
+	public String E81_03;
+	public String E355_04;
+	public String E183_05;
+	public String E355_06;
+	public String E380_07;
+	public String E81_08;
+}
+class V9175 {
+	public String E304_01;
+	public String E106_02;
+	public String E373_03;
+	public String E337_04;
+	public String E19_05;
+	public String E156_06;
+	public String E26_07;
+	public String E641_08;
+	public String E154_09;
+	public String E380_10;
+	public String E1274_11;
+	public String E61_12;
+	public String E623_13;
+	public String E380_14;
+	public String E154_15;
+	public String E86_16;
+	public String E86_17;
+	public String E86_18;
+	public String E81_19;
+	public String E82_20;
+}
+class K1176 {
+	public String E61_01;
+	public String E61_02;
+}
+class L11177 {
+	public String E127_01;
+	public String E128_02;
+	public String E352_03;
+}
+class Loop_L3154 {
+	public L3155 L3; 
+	public CUR156 CUR; 
+	public List<MEA157> MEA; 
+	public List<PWK159> PWK; 
+	public List<SUP161> SUP; 
+	public List<Loop_L1162> Loop_L1; 
+	public Loop_TDS165 Loop_TDS; 
+	public List<Loop_SAC168> Loop_SAC; 
+	public List<Loop_L9171> Loop_L9; 
+	public List<ISS174> ISS; 
+	public List<V9175> V9; 
+	public List<K1176> K1; 
+	public List<L11177> L11; 
+}
+class SE178 {
+	public String E96_01;
+	public String E329_02;
+}
+class Loop_ST3 {
+	public ST4 ST; 
+	public B25 B2; 
+	public B2A6 B2A; 
+	public List<Y67> Y6; 
+	public G18 G1; 
+	public G29 G2; 
+	public G310 G3; 
+	public List<N911> N9; 
+	public List<YNQ13> YNQ; 
+	public List<V114> V1; 
+	public V315 V3; 
+	public M016 M0; 
+	public CUR17 CUR; 
+	public List<Loop_M118> Loop_M1; 
+	public M221 M2; 
+	public C222 C2; 
+	public ITD23 ITD; 
+	public List<DTM24> DTM; 
+	public List<Loop_N125> Loop_N1; 
+	public List<Loop_R431> Loop_R4; 
+	public List<R2A34> R2A; 
+	public List<R235> R2; 
+	public List<K136> K1; 
+	public List<L1137> L11; 
+	public List<H338> H3; 
+	public List<L539> L5; 
+	public List<X140> X1; 
+	public List<X241> X2; 
+	public List<Loop_C842> Loop_C8; 
+	public List<Loop_LX46> Loop_LX; 
+	public Loop_L3154 Loop_L3; 
+	public SE178 SE; 
+}
+class GE179 {
+	public String E97_01;
+	public String E28_02;
+}
+class IEA180 {
+	public String I16_01;
+	public String I12_02;
+}

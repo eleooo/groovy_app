@@ -1,0 +1,481 @@
+.VER 1.61
+.INI
+BC_CUST_IFTMBC_D99B,,D 99B,UN,D99B,Booking confirmation message
+.PRIVATE FORESIGHT
+.CTL
+.TDVER F98E
+.DATE 08/27/114:10:02:11
+.PUBLIC
+.STD ,LS,RE
+.SETS
+IFTMBC=[!UNH,M][!BGM,M][CTA][COM*1,,9][DTM*1,,9][TSR*1,,9][FTX*1,,99][CNT*1,,9][GDS,,9]{:99[LOC][DTM*1,,9]}{:99[RFF*1][DTM*1,,9]}[TCC*1,,9]{:99[TDT*1][DTM*1,,9][TSR*1,,9]{:99[LOC][DTM*1,,9]}{:9[RFF*1][DTM*1]}}{:99[NAD*1][LOC,,9]{:9[CTA][COM*1,,9]}{:99[TSR*1][RFF*1][LOC][TPL*1][FTX*1,,9]}}{:999[GID][HAN][TMP*1][RNG*1][TMD][LOC,,9][FTX*1,,9][PCD*1,,9]{:9[NAD*2][DTM*1]}[GDS,,9]{:99[MEA*1][EQN*1]}{:99[DIM*1][EQN*1]}{:9[RFF*1][DTM*1,,9]}{:9[DOC*1][DTM*1,,9]}{:99[DGS*1][FTX*1,,99]{:9[CTA][COM*1,,9]}{:9[MEA*2][EQN*1]}}}{:999[EQD][EQN*1][TMD][MEA*2,,9][DIM*1,,9][HAN][TMP*1][RNG*1,,9][FTX*1,,9][RFF*1,,9]{:9[NAD*2][DTM*1]}{:99[DGS][FTX*1,,9]{:9[CTA][COM*1,,9]}}}[!UNT,M]
+.SEGS
+BGM=[C002][C106][1225][4343]
+CNT=[C270],@M
+COM=[C076],@M[::3]
+CTA=[3139][C056]
+DGS=[8273][C205][C234][C223][8339][8364][8410][8126][C235][C236][8255][8325][8211],....*1.........
+DIM=[!6145,M][C211],.@M*1
+DOC=[C002][C503][3153][1220][1218],@M....
+DTM=[C507],@M
+EQD=[!8053,M][C237][C224][8077][8249][8169]
+EQN=[C523],@M
+FTX=[!4451,M][4453][C107][C108][3453][4447],....*1..
+GDS=[C703]
+GID=[1496][C213][C213][C213][C213][C213]
+HAN=[C524][C218]
+LOC=[!3227,M][C517][C519][C553][5479]
+MEA=[!6311,M][C502][C174][7383],...*1.,...*2.
+NAD=[!3035,M][C082][C058][C080][C059][3164][C819][3251][3207],...*1.*1.*1....,...*2.*1.*2....
+PCD=[C501],@M
+RFF=[C506],@M
+RNG=[!6167,M][C280],..*1
+TCC=[C200][C203][C528][C554],....*1
+TDT=[!8051,M][8028][C220][C228][C040][8101][C401][C222][8281],........*1.
+TMD=[C219][8332][8341]
+TMP=[!6245,M][C239],..*1
+TPL=[C222],@M
+TSR=[C536][C233][C537][C703],..*1..
+UNB=[!S001,M][!S002,M][!S003,M][!S004,M][!0020,M][S005][0026][0029][0031][0032][0035]
+UNE=[!0060,M][!0048,M]
+UNG=[!0038,M][!S006,M][!S007,M][!S004,M][!0048,M][!0051,M][!S008,M][0058]
+UNH=[!0062,M][S009][0068][S010]
+UNT=[!0074,M][!0062,M]
+UNZ=[!0036,M][!0020,M]
+.COMS
+C002=[1001][1131][3055][1000]
+C040=[3127][1131][3055][3128]
+C056=[3413][3412]
+C058=[!3124,M][!3124,M][!3124,M][!3124,M][!3124,M],.C+C[0]+C[0]+C[0]+C[0],.+C+C+C+C
+C059=[!3042,M][!3042,M][!3042,M][!3042,M],+C+C+C+C,.+C+C+C
+C076=[!3148,M][!3155,M]
+C080=[!3036,M][!3036,M][!3036,M][!3036,M][!3036,M][3045],.+C+C+C+C.
+C082=[!3039,M][1131][3055]
+C106=[1004][1056][1060]
+C107=[!4441,M][1131][3055]
+C108=[!4440,M][!4440,M][!4440,M][!4440,M][!4440,M],.+C+C+C+C
+C174=[6411][6314][6162][6152][6432],@....,@M....
+C200=[8023][1131][3055][8022][4237][7140]
+C203=[!5243,M][1131][3055][5242][5275][1131][3055][5275][1131][3055]
+C205=[!8351,M][8078][8092]
+C211=[6411][6168][6140][6008],@M...
+C213=[7224][7065][1131][3055][7064][7233]
+C218=[7419][1131][3055][7418]
+C219=[8335][8334]
+C220=[8067][8066]
+C222=[8213][1131][3055][8212][8453],.[:20]....
+C223=[7106][6411],.[:7].
+C224=[8155][1131][3055][8154]
+C228=[8179][8178]
+C233=[!7273,M][1131][3055][!7273,M][1131][3055],...+C..
+C234=[7124][7088]
+C235=[8158][8186]
+C236=[8246][8246][8246]
+C237=[8260][1131][3055][3207]
+C239=[6246][6411],.[:7].
+C270=[!6069,M][!6066,M][6411]
+C280=[6411][6162][6152],@M..
+C401=[!8457,M][!8459,M][7130]
+C501=[!5245,M][5482][5249][1131][3055]
+C502=[6313][6321][6155][6154]
+C503=[1004][1373][1366][3453][1056][1060]
+C506=[!1153,M][1154][1156][4000][1060]
+C507=[!2005,M][2380][2379]
+C517=[3225][1131][3055][3224]
+C519=[3223][1131][3055][3222]
+C523=[6350][6353]
+C524=[4079][1131][3055][4078]
+C528=[7357][1131][3055]
+C536=[!4065,M][1131][3055]
+C537=[!4219,M][1131][3055]
+C553=[3233][1131][3055][3232]
+C554=[!5243,M][1131][3055],+C..
+C703=[!7085,M][1131][3055]
+C819=[3229][1131][3055][3228]
+S001=[!0001,M][!0002,M]
+S002=[!0004,M][0007][0008]
+S003=[!0010,M][0007][0014]
+S004=[!0017,M][!0019,M]
+S005=[!0022,M][0025]
+S006=[!0040,M][0007]
+S007=[!0044,M][0007]
+S008=[!0052,M][!0054,M][0057]
+S009=[!0065,M][!0052,M][!0054,M][!0051,M][0057][0110][0113]
+S010=[!0070,M][0073]
+S016=[!0115,M][0116][0118][!0051,M],...+C
+S017=[!0121,M][0122][0124][!0051,M],...+C
+S018=[!0127,M][0128][0130][!0051,M],...+C
+.ELMS
+0001=A,4,4
+0002=N,1,1
+0004=AN,1,35
+0007=AN,1,4
+0008=AN,1,14
+0010=AN,1,35
+0014=AN,1,14
+0017=N,6,6
+0019=N,4,4
+0020=AN,1,14
+0022=AN,1,14
+0025=AN,2,2
+0026=AN,1,14
+0029=A,1,1
+0031=N,1,1
+0032=AN,1,35
+0035=N,1,1
+0036=N,1,6
+0038=AN,1,6
+0040=AN,1,35
+0044=AN,1,35
+0048=AN,1,14
+0051=AN,1,3
+0052=AN,1,3
+0054=AN,1,3
+0057=AN,1,6
+0058=AN,1,14
+0060=N,1,6
+0062=AN,1,14
+0065=AN,1,6
+0068=AN,1,35
+0070=R,1,2
+0073=A,1,1
+0074=AN,1,10
+0110=AN,1,6
+0113=AN,1,6
+0115=AN,1,14
+0116=AN,1,3
+0118=AN,1,3
+0121=AN,1,14
+0122=AN,1,3
+0124=AN,1,3
+0127=AN,1,14
+0128=AN,1,3
+0130=AN,1,3
+1000=AN,1,35
+1001=AN,1,3
+1004=AN,1,35
+1056=AN,1,9
+1060=AN,1,6
+1131=AN,1,3
+1153=AN,1,3
+1154=AN,1,35
+1156=AN,1,6
+1218=R,1,2
+1220=R,1,2
+1225=AN,1,3
+1366=AN,1,70
+1373=AN,1,3
+1496=AN,1,5
+2005=AN,1,3
+2379=AN,1,3
+2380=AN,1,35
+3035=AN,1,3
+3036=AN,1,35
+3039=AN,1,35
+3042=AN,1,35
+3045=AN,1,3
+3055=AN,1,3
+3124=AN,1,35
+3127=AN,1,17
+3128=AN,1,35
+3139=AN,1,3
+3148=AN,1,512
+3153=AN,1,3
+3155=AN,1,3
+3164=AN,1,35
+3207=AN,1,3
+3222=AN,1,70
+3223=AN,1,25
+3224=AN,1,256
+3225=AN,1,25
+3227=AN,1,3
+3228=AN,1,35
+3229=AN,1,9
+3232=AN,1,70
+3233=AN,1,25
+3251=AN,1,17
+3412=AN,1,35
+3413=AN,1,17
+3453=AN,1,3
+4000=AN,1,35
+4065=AN,1,3
+4078=AN,1,70
+4079=AN,1,3
+4219=AN,1,3
+4237=AN,1,3
+4343=AN,1,3
+4440=AN,1,512
+4441=AN,1,17
+4447=AN,1,3
+4451=AN,1,3
+4453=AN,1,3
+5242=AN,1,35
+5243=AN,1,9
+5245=AN,1,3
+5249=AN,1,3
+5275=AN,1,6
+5479=AN,1,3
+5482=AN,1,10
+6008=R,1,15
+6066=R,1,18
+6069=AN,1,3
+6140=R,1,15
+6145=AN,1,3
+6152=R,1,18
+6154=AN,1,70
+6155=AN,1,17
+6162=R,1,18
+6167=AN,1,3
+6168=R,1,15
+6245=AN,1,3
+6246=AN,3,7
+6311=AN,1,3
+6313=AN,1,3
+6314=AN,1,18
+6321=AN,1,3
+6350=R,1,15
+6353=AN,1,3
+6411=AN,1,3
+6432=R,1,2
+7064=AN,1,35
+7065=AN,1,17
+7085=AN,1,3
+7088=AN,1,8
+7106=AN,3,7
+7124=AN,4,4
+7130=AN,1,17
+7140=AN,1,35
+7224=AN,1,8
+7233=AN,1,3
+7273=AN,1,3
+7357=AN,1,18
+7383=AN,1,3
+7418=AN,1,35
+7419=AN,1,4
+8022=AN,1,26
+8023=AN,1,17
+8028=AN,1,17
+8051=AN,1,3
+8053=AN,1,3
+8066=AN,1,17
+8067=AN,1,3
+8077=AN,1,3
+8078=AN,1,7
+8092=AN,1,10
+8101=AN,1,3
+8126=AN,1,10
+8154=AN,1,35
+8155=AN,1,10
+8158=AN,1,4
+8169=AN,1,3
+8178=AN,1,17
+8179=AN,1,8
+8186=AN,4,4
+8211=AN,1,3
+8212=AN,1,35
+8213=AN,1,9
+8246=AN,1,4
+8249=AN,1,3
+8255=AN,1,3
+8260=AN,1,17
+8273=AN,1,3
+8281=AN,1,3
+8325=AN,1,3
+8332=AN,1,26
+8334=AN,1,35
+8335=AN,1,3
+8339=AN,1,3
+8341=AN,1,3
+8351=AN,1,7
+8364=AN,1,6
+8410=AN,1,4
+8453=AN,1,3
+8457=AN,1,3
+8459=AN,1,3
+.OBJVARS
+///UNB//=UNB
+///UNG//=UNG
+///UNH//=UNH1
+.TEXT,SETS
+IFTMBC,0,Booking confirmation message
+IFTMBC,2,A message from the party providing forwarding and/or transport  services to the party booking those services giving the  confirmation information to the booking of the consignment  concerned. A confirmation might read that the booking of a  consignment is accepted, pending, conditionally accepted or  rejected.  The conditions under which requested services take place may be  given in this message.  This message can also be used between vessel operators, vessel  sharing partners and cargo receiving and handling facilities  such as marine terminals, inland receiving depots, rail ramps  and truck terminals to confirm cargo particulars and equipment  requirements of the transport provider to the service provider  responsible for dispatching empty equipment and receiving the  cargo. 
+.TEXT,SEGS
+BGM,0,BEGINNING OF MESSAGE
+BGM,1,To indicate the type and function of a message and to transmit the identifying number. 
+CNT,0,CONTROL TOTAL
+CNT,1,To provide control total.  
+COM,0,COMMUNICATION CONTACT
+COM,1,To identify a communication number of a department or a person to whom communication should be directed. 
+CTA,0,CONTACT INFORMATION
+CTA,1,To identify a person or a department to whom communication should be directed.  
+DGS,0,DANGEROUS GOODS
+DGS,1,To identify dangerous goods.  
+DIM,0,DIMENSIONS
+DIM,1,To specify dimensions.  
+DOC,0,DOCUMENT/MESSAGE DETAILS
+DOC,1,To identify documents and details directly related to it. 
+DTM,0,DATE/TIME/PERIOD
+DTM,1,To specify date, and/or time, or period.  
+EQD,0,EQUIPMENT DETAILS
+EQD,1,To identify a unit of equipment.  
+EQN,0,NUMBER OF UNITS
+EQN,1,To specify the number of units.  
+FTX,0,FREE TEXT
+FTX,1,To provide free form or coded text information.   
+GDS,0,NATURE OF CARGO
+GDS,1,To indicate the type of cargo as a general classification. 
+GID,0,GOODS ITEM DETAILS
+GID,1,To indicate totals of a goods item.  
+HAN,0,HANDLING INSTRUCTIONS
+HAN,1,To specify handling and where necessary, notify hazards. 
+LOC,0,PLACE/LOCATION IDENTIFICATION
+LOC,1,To identify a place or a location and/or related locations.  
+MEA,0,MEASUREMENTS
+MEA,1,To specify physical measurements, including dimension tolerances, weights and counts.  
+NAD,0,NAME AND ADDRESS
+NAD,1,To specify the name/address and their related function, either by C082 only and/or unstructured by C058 or structured by C080 thru 3207.  
+PCD,0,PERCENTAGE DETAILS
+PCD,1,To specify percentage information. 
+RFF,0,REFERENCE
+RFF,1,To specify a reference. 
+RNG,0,RANGE DETAILS
+RNG,1,To identify a range.  
+TCC,0,TRANSPORT CHARGE/RATE CALCULATIONS
+TCC,1,To specify charges. 
+TDT,0,DETAILS OF TRANSPORT
+TDT,1,To specify the transport details such as mode of transport, means of transport, its conveyance reference number and the identification of the means of transport. The segment may be pointed to by the TPL segment. 
+TMD,0,TRANSPORT MOVEMENT DETAILS
+TMD,1,To specify operational transport movement details for a goods item or equipment (which may differ from the contractual conditions). 
+TMP,0,TEMPERATURE
+TMP,1,To specify the temperature setting.  
+TPL,0,TRANSPORT PLACEMENT
+TPL,1,To specify placement of goods or equipment in relation to the transport used. The segment serves as a pointer to the TDT segment group. 
+TSR,0,TRANSPORT SERVICE REQUIREMENTS
+TSR,1,To specify the contract and carriage conditions and service and priority requirements for the transport. 
+UNB,0,INTERCHANGE HEADER
+UNB,1,To start, identify and specify an interchange.
+UNE,0,FUNCTIONAL GROUP TRAILER
+UNE,1,To end and check the completeness of a functional group.
+UNG,0,FUNCTIONAL GROUP HEADER
+UNG,1,To head, identify and specify a functional group.
+UNH,0,MESSAGE HEADER
+UNH,1,To head, identify and specify a message.   
+UNH~0,2,Data element S009/0057 is retained for upward compatibility. The use of S016 and/or S017 is encouraged in preference.\r\n\r\nThe combination of the values carried in data elements 0062 and S009 shall be used to identify uniquely the message within its group (if used) or if not used, within its interchange, for the purpose of acknowledgement.\r\n\r\n
+UNT,0,MESSAGE TRAILER
+UNT,1,To end and check the completeness of a message.   
+UNT~0,2,0062, the value shall be identical to the value in 0062 in the corresponding UNH segment.\r\n\r\n
+UNZ,0,INTERCHANGE TRAILER
+UNZ,1,To end and check the completeness of an interchange.
+.TEXT,ELMS
+0007,1,Qualifier referring to the source of codes for the  identifiers of interchanging partners.
+0010,1,Name or coded representation of the recipient of a data  interchange.
+0017,1,Local date when an interchange or a functional group was  prepared.
+0019,1,Local time of day when an interchange or a functional group  was prepared.
+0022,0,Recipient's reference/password
+0025,0,Recipient's reference/password qualifier
+0032,0,Cummunications agreement ID
+0040,0,Application sender's identification
+0051,0,Controlling agency, coded
+0051,1,Code identifying a controlling agency.
+0052,0,Message version number
+0054,0,Message release number
+0054,1,Release number within the current message version number.
+0065,0,Message type
+0070,0,Sequence of transfers
+0070,1,Number assigned by the sender indicating the transfer sequence of a message related to the same topic. The message could be an addition or a change to an earlier transfer related to the same topic.
+0073,0,First and last transfer
+0073,1,Indication used for the first and last message in a sequence of messages related to the same topic.
+0074,1,The number of segments in a message body, plus the message header segment and message trailer segment.
+0110,0,Code list directory version number
+0110,1,Version number of the code list directory.
+0113,0,Message type sub-function identification
+0113,1,Code identifying a sub-function of a message type.
+0115,0,Message subset identification
+0115,1,Coded identification of a message subset, assigned by its controlling agency.
+0116,0,Message subset version number
+0116,1,Version number of the message subset.
+0118,0,Message subset release number
+0118,1,Release number within the message subset version number.
+0121,0,Message implementation guideline identification
+0121,1,Coded identification of the message implementation guideline, assigned by its controlling agency.
+0122,0,Message implementation guideline version number
+0122,1,Version number of the message implementation guideline.
+0124,0,Message implementation guideline release number
+0124,1,Release number within the message implementation guideline version number.
+0127,0,Scenario identification
+0127,1,Code identifying scenario.
+0128,0,Scenario version number
+0128,1,Version number of a scenario.
+0130,0,Scenario release number
+0130,1,Release number within the scenario version number.
+.TEXT,COMS
+C002,0,DOCUMENT/MESSAGE NAME
+C040,0,CARRIER
+C056,0,DEPARTMENT OR EMPLOYEE DETAILS
+C058,0,NAME AND ADDRESS
+C059,0,STREET
+C076,0,COMMUNICATION CONTACT
+C080,0,PARTY NAME
+C082,0,PARTY IDENTIFICATION DETAILS
+C106,0,DOCUMENT/MESSAGE IDENTIFICATION
+C107,0,TEXT REFERENCE
+C108,0,TEXT LITERAL
+C174,0,VALUE/RANGE
+C200,0,CHARGE
+C203,0,RATE/TARIFF CLASS
+C205,0,HAZARD CODE
+C211,0,DIMENSIONS
+C213,0,NUMBER AND TYPE OF PACKAGES
+C218,0,HAZARDOUS MATERIAL
+C219,0,MOVEMENT TYPE
+C220,0,MODE OF TRANSPORT
+C222,0,TRANSPORT IDENTIFICATION
+C223,0,DANGEROUS GOODS SHIPMENT FLASHPOINT
+C224,0,EQUIPMENT SIZE AND TYPE
+C228,0,TRANSPORT MEANS
+C233,0,SERVICE
+C234,0,UNDG INFORMATION
+C235,0,HAZARD IDENTIFICATION PLACARD DETAILS
+C236,0,DANGEROUS GOODS LABEL
+C237,0,EQUIPMENT IDENTIFICATION
+C239,0,TEMPERATURE SETTING
+C270,0,CONTROL
+C280,0,RANGE
+C401,0,EXCESS TRANSPORTATION INFORMATION
+C501,0,PERCENTAGE DETAILS
+C502,0,MEASUREMENT DETAILS
+C503,0,DOCUMENT/MESSAGE DETAILS
+C506,0,REFERENCE
+C507,0,DATE/TIME/PERIOD
+C517,0,LOCATION IDENTIFICATION
+C519,0,RELATED LOCATION ONE IDENTIFICATION
+C523,0,NUMBER OF UNIT DETAILS
+C524,0,HANDLING INSTRUCTIONS
+C528,0,COMMODITY/RATE DETAIL
+C536,0,CONTRACT AND CARRIAGE CONDITION
+C537,0,TRANSPORT PRIORITY
+C553,0,RELATED LOCATION TWO IDENTIFICATION
+C553,1, Identification of second related location by code or name.
+C554,0,RATE/TARIFF CLASS DETAIL
+C703,0,NATURE OF CARGO
+C819,0,COUNTRY SUB-ENTITY DETAILS
+S001,0,SYNTAX IDENTIFIER
+S002,0,INTERCHANGE SENDER
+S003,0,INTERCHANGE RECIPIENT
+S004,0,DATE/TIME OF PREPARATION
+S004,1,Date/time of preparation of the interchange.
+S005,0,RECIPIENTS REFERENCE PASSWORD
+S005,1,Reference or password as agreed between the communicating  partners.
+S006,0,APPLICATION SENDER'S IDENTIFICATION
+S007,0,APPLICATION RECIPIENTS IDENTIFICATION
+S008,0,MESSAGE VERSION
+S009,0,MESSAGE IDENTIFIER
+S009,1,Identification of the type, version, etc. of the message being interchanged. 
+S010,0,STATUS OF THE TRANSFER
+S010,1,Statement that the message is one in a sequence of transfers relating to the same topic.  
+S016,0,MESSAGE SUBSET IDENTIFICATION
+S016,1,Identification of a message subset by its identifier, version, release and source. 
+S017,0,MESSAGE IMPLEMENTATION GUIDELINE IDENTIFICATION
+S017,1,Identification of a message implementation guideline by its identifier, version, release and source.
+S018,0,SCENARIO IDENTIFICATION
+S018,1,Identification of a scenario. 

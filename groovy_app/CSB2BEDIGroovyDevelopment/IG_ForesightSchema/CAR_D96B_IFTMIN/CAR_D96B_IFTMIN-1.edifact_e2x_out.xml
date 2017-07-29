@@ -1,0 +1,1373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IFTMIN>
+    <UNA>
+        <UNA_01>:</UNA_01>
+        <UNA_02>+</UNA_02>
+        <UNA_03>,</UNA_03>
+        <UNA_04>?</UNA_04>
+        <UNA_05/>
+        <UNA_06>'</UNA_06>
+    </UNA>
+    <UNB>
+        <S001_01>
+            <E0001_01>UNOC</E0001_01>
+            <E0002_02>2</E0002_02>
+        </S001_01>
+        <S002_02>
+            <E0004_01>CARGOSMART</E0004_01>
+            <E0007_02>01</E0007_02>
+        </S002_02>
+        <S003_03>
+            <E0010_01>HAPAG-LLOYD</E0010_01>
+            <E0007_02>ZZ</E0007_02>
+        </S003_03>
+        <S004_04>
+            <E0017_01>170508</E0017_01>
+            <E0019_02>0534</E0019_02>
+        </S004_04>
+        <E0020_05>16347</E0020_05>
+        <E0029_08>A</E0029_08>
+        <E0031_09>1</E0031_09>
+    </UNB>
+    <Group_UNH>
+        <UNH>
+            <E0062_01>1634700001</E0062_01>
+            <S009_02>
+                <E0065_01>IFTMIN</E0065_01>
+                <E0052_02>D</E0052_02>
+                <E0054_03>96B</E0054_03>
+                <E0051_04>UN</E0051_04>
+            </S009_02>
+        </UNH>
+        <BGM>
+            <C002_01>
+                <E1001_01>340</E1001_01>
+            </C002_01>
+            <C106_02>
+                <E1004_01>CNJ090210727</E1004_01>
+            </C106_02>
+            <E1225_03>9</E1225_03>
+        </BGM>
+        <DTM>
+            <C507_01>
+                <E2005_01>137</E2005_01>
+                <E2380_02>20170508133424</E2380_02>
+                <E2379_03>204</E2379_03>
+            </C507_01>
+        </DTM>
+        <FTX>
+            <E4451_01>AAS</E4451_01>
+            <C108_04>
+                <E4440_01>Rufus Wilmot Griswold February 13, 1815 August 27, 1857 was an</E4440_01>
+                <E4440_02>American anthologist, editor, poet, and critic. Born in Vermont,</E4440_02>
+                <E4440_03>Griswold left home when he was 15. He worked as a journalist, editor,</E4440_03>
+                <E4440_04>and critic in Philadelphia, New York City, and elsewhere. He built up</E4440_04>
+                <E4440_05>a strong literary reputation, in part due to his 1842 collection The</E4440_05>
+            </C108_04>
+        </FTX>
+        <FTX>
+            <E4451_01>AAS</E4451_01>
+            <C108_04>
+                <E4440_01>Poets and Poetry of America. This anthology, the most comprehensive of</E4440_01>
+                <E4440_02>its time, included what he deemed the bedeemed the best examples of</E4440_02>
+                <E4440_03>American poetry. rema</E4440_03>
+            </C108_04>
+        </FTX>
+        <FTX>
+            <E4451_01>AAS</E4451_01>
+            <C108_04>
+                <E4440_01>Edgar Allan Poe, whose poetry had been included in Griswold's</E4440_01>
+                <E4440_02>anthology, published a critical response that questioned which poets</E4440_02>
+                <E4440_03>were included. This began a rivalry which grew when Griswold succeeded</E4440_03>
+                <E4440_04>Poe as editor of Graham's Magazine at a higher salary than Poe's.</E4440_04>
+                <E4440_05>Later, the two competed for the attention of poet Frances Sargent</E4440_05>
+            </C108_04>
+        </FTX>
+        <FTX>
+            <E4451_01>AAS</E4451_01>
+            <C108_04>
+                <E4440_01>Osgood. They never reconciled their differences and, after Poe's</E4440_01>
+                <E4440_02>mysterious death in 1849, Griswold wrote an unsympathetic obituary.</E4440_02>
+                <E4440_03>Claiming to be Poe's chos oth</E4440_03>
+            </C108_04>
+        </FTX>
+        <DOC>
+            <C002_01>
+                <E1001_01>707</E1001_01>
+            </C002_01>
+            <E1220_04>20</E1220_04>
+        </DOC>
+        <DOC>
+            <C002_01>
+                <E1001_01>710</E1001_01>
+            </C002_01>
+            <E1220_04>20</E1220_04>
+        </DOC>
+        <DOC>
+            <C002_01>
+                <E1001_01>707</E1001_01>
+            </C002_01>
+            <E1220_04>20</E1220_04>
+        </DOC>
+        <DOC>
+            <C002_01>
+                <E1001_01>707</E1001_01>
+            </C002_01>
+            <E1220_04>20</E1220_04>
+        </DOC>
+        <DOC>
+            <C002_01>
+                <E1001_01>707</E1001_01>
+            </C002_01>
+            <E1220_04>20</E1220_04>
+        </DOC>
+        <DOC>
+            <C002_01>
+                <E1001_01>707</E1001_01>
+            </C002_01>
+            <E1220_04>20</E1220_04>
+        </DOC>
+        <DOC>
+            <C002_01>
+                <E1001_01>707</E1001_01>
+            </C002_01>
+            <E1220_04>20</E1220_04>
+        </DOC>
+        <DOC>
+            <C002_01>
+                <E1001_01>707</E1001_01>
+            </C002_01>
+            <E1220_04>20</E1220_04>
+        </DOC>
+        <DOC>
+            <C002_01>
+                <E1001_01>707</E1001_01>
+            </C002_01>
+            <E1220_04>20</E1220_04>
+        </DOC>
+        <Group3_RFF>
+            <RFF>
+                <C506_01>
+                    <E1153_01>CT</E1153_01>
+                    <E1154_02>123456789012345678901234567890</E1154_02>
+                </C506_01>
+            </RFF>
+        </Group3_RFF>
+        <Group3_RFF>
+            <RFF>
+                <C506_01>
+                    <E1153_01>FN</E1153_01>
+                    <E1154_02>823456789012345678901234567890</E1154_02>
+                </C506_01>
+            </RFF>
+        </Group3_RFF>
+        <Group3_RFF>
+            <RFF>
+                <C506_01>
+                    <E1153_01>BM</E1153_01>
+                    <E1154_02>023456789012345678901234567890</E1154_02>
+                </C506_01>
+            </RFF>
+        </Group3_RFF>
+        <Group3_RFF>
+            <RFF>
+                <C506_01>
+                    <E1153_01>BM</E1153_01>
+                    <E1154_02>223456789012345678901234567890</E1154_02>
+                </C506_01>
+            </RFF>
+        </Group3_RFF>
+        <Group3_RFF>
+            <RFF>
+                <C506_01>
+                    <E1153_01>SRN</E1153_01>
+                    <E1154_02>923456789012345678901234567890</E1154_02>
+                </C506_01>
+            </RFF>
+        </Group3_RFF>
+        <Group3_RFF>
+            <RFF>
+                <C506_01>
+                    <E1153_01>BN</E1153_01>
+                    <E1154_02>20091102-1</E1154_02>
+                </C506_01>
+            </RFF>
+        </Group3_RFF>
+        <Group3_RFF>
+            <RFF>
+                <C506_01>
+                    <E1153_01>BN</E1153_01>
+                    <E1154_02>56789012345678901234567890</E1154_02>
+                </C506_01>
+            </RFF>
+        </Group3_RFF>
+        <Group6_CPI>
+            <CPI>
+                <C229_01>
+                    <E5237_01>4</E5237_01>
+                </C229_01>
+                <E4237_03>P</E4237_03>
+            </CPI>
+        </Group6_CPI>
+        <Group8_TDT>
+            <TDT>
+                <E8051_01>20</E8051_01>
+                <E8028_02>an</E8028_02>
+                <C220_03>
+                    <E8067_01>1</E8067_01>
+                </C220_03>
+                <C222_08>
+                    <E8212_04>himself</E8212_04>
+                </C222_08>
+            </TDT>
+            <Group9_LOC>
+                <LOC>
+                    <E3227_01>88</E3227_01>
+                    <C517_02>
+                        <E3225_01>JPCNS</E3225_01>
+                        <E3224_04>CHINASE,KAGOSIMA (KAGOSHIMA),JAPAN</E3224_04>
+                    </C517_02>
+                    <C553_04>
+                        <E3233_01>JP</E3233_01>
+                        <E1131_02>162</E1131_02>
+                        <E3055_03>5</E3055_03>
+                        <E3232_04>JAPAN</E3232_04>
+                    </C553_04>
+                </LOC>
+            </Group9_LOC>
+            <Group9_LOC>
+                <LOC>
+                    <E3227_01>7</E3227_01>
+                    <C517_02>
+                        <E3225_01>CNSZX</E3225_01>
+                        <E3224_04>Shenzhen,Shenzhen,Guangdong,China</E3224_04>
+                    </C517_02>
+                    <C553_04>
+                        <E3233_01>CN</E3233_01>
+                        <E1131_02>162</E1131_02>
+                        <E3055_03>5</E3055_03>
+                        <E3232_04>China</E3232_04>
+                    </C553_04>
+                </LOC>
+            </Group9_LOC>
+            <Group9_LOC>
+                <LOC>
+                    <E3227_01>9</E3227_01>
+                    <C517_02>
+                        <E3225_01>BDCGP</E3225_01>
+                        <E3224_04>Chittagong</E3224_04>
+                    </C517_02>
+                    <C553_04>
+                        <E3233_01>BD</E3233_01>
+                        <E1131_02>162</E1131_02>
+                        <E3055_03>5</E3055_03>
+                        <E3232_04>Bangladesh</E3232_04>
+                    </C553_04>
+                </LOC>
+            </Group9_LOC>
+            <Group9_LOC>
+                <LOC>
+                    <E3227_01>11</E3227_01>
+                    <C517_02>
+                        <E3225_01>CNSZX</E3225_01>
+                        <E3224_04>Shenzhen</E3224_04>
+                    </C517_02>
+                    <C553_04>
+                        <E3233_01>CN</E3233_01>
+                        <E1131_02>162</E1131_02>
+                        <E3055_03>5</E3055_03>
+                        <E3232_04>China</E3232_04>
+                    </C553_04>
+                </LOC>
+            </Group9_LOC>
+        </Group8_TDT>
+        <Group11_NAD>
+            <NAD>
+                <E3035_01>CA</E3035_01>
+                <C082_02>
+                    <E3039_01>HLCU</E3039_01>
+                </C082_02>
+            </NAD>
+        </Group11_NAD>
+        <Group11_NAD>
+            <NAD>
+                <E3035_01>CZ</E3035_01>
+                <C082_02>
+                    <E3039_01>SIY000217</E3039_01>
+                </C082_02>
+                <C080_04>
+                    <E3036_01>Born in Vermont, Griswold left hom</E3036_01>
+                    <E3036_02>e when he was 15. He worked as a j</E3036_02>
+                </C080_04>
+                <C059_05>
+                    <E3042_01>ournalist, editor, and critic in P</E3042_01>
+                    <E3042_02>hiladelphia, New York City, and el</E3042_02>
+                    <E3042_03>sewhere. He built up a strong lite</E3042_03>
+                </C059_05>
+            </NAD>
+        </Group11_NAD>
+        <Group11_NAD>
+            <NAD>
+                <E3035_01>CN</E3035_01>
+                <C082_02>
+                    <E3039_01>CN34567891</E3039_01>
+                </C082_02>
+                <C080_04>
+                    <E3036_01>rary reputation, in part due to hi</E3036_01>
+                    <E3036_02>s 1842 collection The Poets and Po</E3036_02>
+                </C080_04>
+                <C059_05>
+                    <E3042_01>etry of America. This anthology, t</E3042_01>
+                    <E3042_02>he most comprehensive of its time,</E3042_02>
+                    <E3042_03>included what he deemed the best e</E3042_03>
+                </C059_05>
+            </NAD>
+        </Group11_NAD>
+        <Group11_NAD>
+            <NAD>
+                <E3035_01>FW</E3035_01>
+                <C082_02>
+                    <E3039_01>FW34567891</E3039_01>
+                </C082_02>
+                <C080_04>
+                    <E3036_01>xamples of American poetry. He pro</E3036_01>
+                    <E3036_02>duced revised versions and similar</E3036_02>
+                </C080_04>
+                <C059_05>
+                    <E3042_01>anthologies for the remainder of</E3042_01>
+                    <E3042_02>his life, although many of the poe</E3042_02>
+                    <E3042_03>ts he promoted have since faded in</E3042_03>
+                </C059_05>
+            </NAD>
+        </Group11_NAD>
+        <Group11_NAD>
+            <NAD>
+                <E3035_01>N1</E3035_01>
+                <C082_02>
+                    <E3039_01>NP34567891</E3039_01>
+                </C082_02>
+                <C080_04>
+                    <E3036_01>to obscurity. Many writers hoped t</E3036_01>
+                    <E3036_02>o have their work included in one</E3036_02>
+                </C080_04>
+                <C059_05>
+                    <E3042_01>of these editions, although they c</E3042_01>
+                    <E3042_02>ommented harshly on Griswold's abr</E3042_02>
+                    <E3042_03>asive character. Griswold was marr</E3042_03>
+                </C059_05>
+            </NAD>
+        </Group11_NAD>
+        <Group11_NAD>
+            <NAD>
+                <E3035_01>N2</E3035_01>
+                <C082_02>
+                    <E3039_01>AN34567891</E3039_01>
+                </C082_02>
+                <C080_04>
+                    <E3036_01>ied three times: his first wife di</E3036_01>
+                    <E3036_02>ed young, his second marriage ende</E3036_02>
+                </C080_04>
+                <C059_05>
+                    <E3042_01>d in a public and controversial di</E3042_01>
+                    <E3042_02>vorce, and his third wife left him</E3042_02>
+                    <E3042_03>after the previous divorce was al</E3042_03>
+                </C059_05>
+            </NAD>
+        </Group11_NAD>
+        <Group11_NAD>
+            <NAD>
+                <E3035_01>N2</E3035_01>
+                <C082_02>
+                    <E3039_01>AN34567891</E3039_01>
+                </C082_02>
+                <C080_04>
+                    <E3036_01>most repealed.Edgar Allan Poe, who</E3036_01>
+                    <E3036_02>se poetry had been included in Gri</E3036_02>
+                </C080_04>
+                <C059_05>
+                    <E3042_01>swold's anthology, published a cri</E3042_01>
+                    <E3042_02>tical response that questioned whi</E3042_02>
+                    <E3042_03>ch poets were included. This began</E3042_03>
+                </C059_05>
+            </NAD>
+        </Group11_NAD>
+        <Group11_NAD>
+            <NAD>
+                <E3035_01>SI</E3035_01>
+                <C082_02>
+                    <E3039_01>SIY000217</E3039_01>
+                </C082_02>
+                <C080_04>
+                    <E3036_01>Paper Chase International Inc.Ltda</E3036_01>
+                    <E3036_02>2220 Parklake Drive Suite 5282</E3036_02>
+                </C080_04>
+                <E3164_06>Tianjin</E3164_06>
+                <E3229_07>Tianjin</E3229_07>
+                <E3251_08>0756</E3251_08>
+                <E3207_09>CN</E3207_09>
+            </NAD>
+            <Group12_CTA>
+                <CTA>
+                    <E3139_01>SI</E3139_01>
+                    <C056_02>
+                        <E3412_02>Paper Administrator</E3412_02>
+                    </C056_02>
+                </CTA>
+                <COM>
+                    <C076_01>
+                        <E3148_01>11-222-7653731</E3148_01>
+                        <E3155_02>TE</E3155_02>
+                    </C076_01>
+                </COM>
+                <COM>
+                    <C076_01>
+                        <E3148_01>cs2qa1test@oocl.com</E3148_01>
+                        <E3155_02>EM</E3155_02>
+                    </C076_01>
+                </COM>
+            </Group12_CTA>
+        </Group11_NAD>
+        <Group18_GID>
+            <GID>
+                <E1496_01>1</E1496_01>
+                <C213_02>
+                    <E7224_01>1234567</E7224_01>
+                    <E7065_02>BL</E7065_02>
+                </C213_02>
+            </GID>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>Rufus Wilmot Griswold February 13, 1815 August 27, 1857 was an </E4440_01>
+                    <E4440_02>American anthologist, editor, poet, and critic. Born in Vermont, </E4440_02>
+                    <E4440_03>Griswold left home when he was 15. He worked as a journalist, editor, </E4440_03>
+                    <E4440_04>and critic in Philadelphia, New York City, and elsewhere. He built up </E4440_04>
+                    <E4440_05>a strong literary reputation, in part due to his 1842 collection The </E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>Poets and Poetry of America. This anthology, the most comprehensive of</E4440_01>
+                    <E4440_02> its time, included what he deemed the best examples of American </E4440_02>
+                    <E4440_03>poetry. He produced revised versions and similar anthologies for the </E4440_03>
+                    <E4440_04>remainder of his life, although many of the poets he promoted have </E4440_04>
+                    <E4440_05>since faded into obscurity. Many writers hoped to have their work </E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>included in one of these editions, although they commented harshly on </E4440_01>
+                    <E4440_02>Griswold's abrasive character. Griswold was married three times: his </E4440_02>
+                    <E4440_03>first wife died young, his second marriage ended in a public and </E4440_03>
+                    <E4440_04>controversial divorce, and his third wife left him after the previous </E4440_04>
+                    <E4440_05>divorce was almost repealed.</E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>Edgar Allan Poe, whose poetry had been included in Griswold's </E4440_01>
+                    <E4440_02>anthology, published a critical response that questioned which poets </E4440_02>
+                    <E4440_03>were included. This began a rivalry which grew when Griswold succeeded</E4440_03>
+                    <E4440_04> Poe as editor of Graham's Magazine at a higher salary than Poe's. </E4440_04>
+                    <E4440_05>Later, the two competed for the attention of poet Frances Sargent </E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>Osgood. They never reconciled their differences and, after Poe's </E4440_01>
+                    <E4440_02>mysterious death in 1849, Griswold wrote an unsympathetic obituary. </E4440_02>
+                    <E4440_03>Claiming to be Poe's chosen literary executor, he began a campaign to </E4440_03>
+                    <E4440_04>harm Poe's reputation that lasted until his own death eight years </E4440_04>
+                    <E4440_05>later.</E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>Griswold considered himself an expert in American poetry and was an </E4440_01>
+                    <E4440_02>early proponent of its inclusion on the school curriculum. He also </E4440_02>
+                    <E4440_03>supported the introduction of copyright legislation, speaking to </E4440_03>
+                    <E4440_04>Congress on behalf of the publishing industry, although he was not </E4440_04>
+                    <E4440_05>above pirating other people's work. A fellow editor remarked, "even </E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>while haranguing the loudest, [he] is purloining the fastest".[1]</E4440_01>
+                    <E4440_02>Griswold was born on February 13, 1815,[2] in Vermont, near Rutland, </E4440_02>
+                    <E4440_03>and raised a strict Calvinist[3] in the hamlet of Benson.[4] He was </E4440_03>
+                    <E4440_04>the twelfth of fourteen children and his father was a farmer and </E4440_04>
+                    <E4440_05>shoemaker.[4] In 1822, the family sold the Benson farm and moved to </E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>nearby Hubbardton.[5] As a child, Griswold was complex, unpredictable,</E4440_01>
+                    <E4440_02> and reckless.[6] He left home when he was 15, calling himself a </E4440_02>
+                    <E4440_03>"solitary soul, wandering through the world, a homeless, joyless </E4440_03>
+                    <E4440_04>outcast".[7]</E4440_04>
+                    <E4440_05>Griswold moved to Albany, New York, to live with a 22-year-old </E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>flute-playing journalist named George C. Foster, a writer best known </E4440_01>
+                    <E4440_02>for his work New-York by Gas-Light.[4] Griswold lived with Foster </E4440_02>
+                    <E4440_03>until he was 17, and the two may have had a romantic relationship.[7] </E4440_03>
+                    <E4440_04>When Griswold moved away, Foster wrote to him begging him to return, </E4440_04>
+                    <E4440_05>signing his letter "come to me if you love me".[8] Griswold attempted </E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>to enroll at the Rensselaer School in 1830, but was not allowed to </E4440_01>
+                    <E4440_02>take any classes after he was caught attempting to play a prank on a </E4440_02>
+                    <E4440_03>professor.[9]</E4440_03>
+                    <E4440_04>Early career and first marriage</E4440_04>
+                    <E4440_05>After a brief spell as a printer's apprentice, Griswold moved to </E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>Syracuse where,[7] with some friends, he started a newspaper called </E4440_01>
+                    <E4440_02>The Porcupine. This publication purposefully targeted locals for what </E4440_02>
+                    <E4440_03>was later remembered as merely malicious critique.[10]</E4440_03>
+                    <E4440_04>He moved to New York City in 1836 and, in March of that year, was </E4440_04>
+                    <E4440_05>introduced to 19-year-old Caroline Searles, whom he later married.[11]</E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01> He was employed as an editor for various publications in the New York</E4440_01>
+                    <E4440_02> area. In October, he considered running for office as a Whig but did </E4440_02>
+                    <E4440_03>not receive the party's support.[12] In 1837 he was licensed as a </E4440_03>
+                    <E4440_04>Baptist clergyman, although he never had a permanent congregation.[13]</E4440_04>
+                    <E4440_05>Griswold married Caroline on August 12, 1837,[14] and the couple had </E4440_05>
+                </C108_04>
+            </FTX>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>two daughters. Following the birth of cargo description description </E4440_01>
+                    <E4440_02>description description description description description </E4440_02>
+                    <E4440_03>description description description description desc</E4440_03>
+                </C108_04>
+            </FTX>
+            <Group20_MEA>
+                <MEA>
+                    <E6311_01>WT</E6311_01>
+                    <C502_02>
+                        <E6313_01>G</E6313_01>
+                    </C502_02>
+                    <C174_03>
+                        <E6411_01>KGM</E6411_01>
+                        <E6314_02>999999999.9999</E6314_02>
+                    </C174_03>
+                </MEA>
+            </Group20_MEA>
+            <Group20_MEA>
+                <MEA>
+                    <E6311_01>VOL</E6311_01>
+                    <C502_02>
+                        <E6313_01>AAW</E6313_01>
+                    </C502_02>
+                    <C174_03>
+                        <E6411_01>CBM</E6411_01>
+                        <E6314_02>9999.9999</E6314_02>
+                    </C174_03>
+                </MEA>
+            </Group20_MEA>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Rufus Wilmot Griswold </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>February 13, 1815 August 27, </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>1857 was an American </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>anthologist, editor, poet, </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>and critic. Born in Vermont, </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Griswold left home when he </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>was 15. He worked as a </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>journalist, editor, and </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>critic in Philadelphia, New </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>York City, and elsewhere. He </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>built up a strong literary </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>reputation, in part due to </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>his 1842 collection The Poets </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>and Poetry of America. This </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>anthology, the most </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>comprehensive of its time, </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>included what he deemed the </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>best examples of American </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>poetry. He produced revised </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>versions and similar </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>anthologies for the remainder </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>of his life, although many of </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>the poets he promoted have </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>since faded into obscurity. </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Many writers hoped to have </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>their work included in one of </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>these editions, although they </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>commented harshly on </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Griswold's abrasive </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>character. Griswold was </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>married three times: his </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>first wife died young, his </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>second marriage ended in a </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>public and controversial </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>divorce, and his third wife </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>left him after the previous </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>divorce was almost repealed.</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Edgar Allan Poe, whose poetry </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>had been included in </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Griswold's anthology, </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>published a critical response </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>that questioned which poets </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>were included. This began a </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>rivalry which grew when </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Griswold succeeded Poe as </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>editor of Graham's Magazine </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>at a higher salary than </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Poe's. Later, the two </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>competed for the attention of </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>poet Frances Sargent Osgood. </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>They never reconciled their </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>differences and, after Poe's </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>mysterious death in 1849, </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Griswold wrote an </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>unsympathetic obituary. </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Claiming to be Poe's chosen </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>literary executor, he began a </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>campaign to harm Poe's </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>reputation that lasted until </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>his own death eight years </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>later.</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Griswold considered himself </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>an expert in American poetry </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>and was an early proponent of </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>its inclusion on the school </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>curriculum. He also supported </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>the introduction of copyright </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>legislation, speaking to </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Congress on behalf of the </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>publishing industry, although </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>he was not above pirating </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>other people's work. A fellow </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>editor remarked, "even while </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>haranguing the loudest, [he] </E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>is purloining the fastest".1</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>Griswold marks an</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group29_SGP>
+                <SGP>
+                    <C237_01>
+                        <E8260_01>HLCU0911021</E8260_01>
+                    </C237_01>
+                    <E7224_02>1234567</E7224_02>
+                </SGP>
+                <Group30_MEA>
+                    <MEA>
+                        <E6311_01>WT</E6311_01>
+                        <C502_02>
+                            <E6313_01>G</E6313_01>
+                        </C502_02>
+                        <C174_03>
+                            <E6411_01>KGM</E6411_01>
+                            <E6314_02>999999999.9999</E6314_02>
+                        </C174_03>
+                    </MEA>
+                </Group30_MEA>
+            </Group29_SGP>
+        </Group18_GID>
+        <Group18_GID>
+            <GID>
+                <E1496_01>2</E1496_01>
+                <C213_02>
+                    <E7224_01>21</E7224_01>
+                    <E7065_02>BA</E7065_02>
+                </C213_02>
+            </GID>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01>  /\</E4440_01>
+                    <E4440_02> /  \</E4440_02>
+                    <E4440_03>|    |</E4440_03>
+                    <E4440_04> \  /</E4440_04>
+                    <E4440_05>  \/</E4440_05>
+                </C108_04>
+            </FTX>
+            <Group20_MEA>
+                <MEA>
+                    <E6311_01>WT</E6311_01>
+                    <C502_02>
+                        <E6313_01>G</E6313_01>
+                    </C502_02>
+                    <C174_03>
+                        <E6411_01>KGM</E6411_01>
+                        <E6314_02>50</E6314_02>
+                    </C174_03>
+                </MEA>
+            </Group20_MEA>
+            <Group20_MEA>
+                <MEA>
+                    <E6311_01>VOL</E6311_01>
+                    <C502_02>
+                        <E6313_01>AAW</E6313_01>
+                    </C502_02>
+                    <C174_03>
+                        <E6411_01>CBM</E6411_01>
+                        <E6314_02>50</E6314_02>
+                    </C174_03>
+                </MEA>
+            </Group20_MEA>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>  /\</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01> /  \</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>|    |</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01> \  /</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>  \/</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group29_SGP>
+                <SGP>
+                    <C237_01>
+                        <E8260_01>HLCU0911032</E8260_01>
+                    </C237_01>
+                    <E7224_02>21</E7224_02>
+                </SGP>
+                <Group30_MEA>
+                    <MEA>
+                        <E6311_01>WT</E6311_01>
+                        <C502_02>
+                            <E6313_01>G</E6313_01>
+                        </C502_02>
+                        <C174_03>
+                            <E6411_01>KGM</E6411_01>
+                            <E6314_02>100</E6314_02>
+                        </C174_03>
+                    </MEA>
+                </Group30_MEA>
+            </Group29_SGP>
+        </Group18_GID>
+        <Group18_GID>
+            <GID>
+                <E1496_01>3</E1496_01>
+                <C213_02>
+                    <E7224_01>22</E7224_01>
+                    <E7065_02>BK</E7065_02>
+                </C213_02>
+            </GID>
+            <FTX>
+                <E4451_01>AAA</E4451_01>
+                <C108_04>
+                    <E4440_01> cargo</E4440_01>
+                    <E4440_02>and</E4440_02>
+                    <E4440_03> description</E4440_03>
+                </C108_04>
+            </FTX>
+            <Group20_MEA>
+                <MEA>
+                    <E6311_01>WT</E6311_01>
+                    <C502_02>
+                        <E6313_01>G</E6313_01>
+                    </C502_02>
+                    <C174_03>
+                        <E6411_01>LBS</E6411_01>
+                        <E6314_02>50</E6314_02>
+                    </C174_03>
+                </MEA>
+            </Group20_MEA>
+            <Group20_MEA>
+                <MEA>
+                    <E6311_01>VOL</E6311_01>
+                    <C502_02>
+                        <E6313_01>AAW</E6313_01>
+                    </C502_02>
+                    <C174_03>
+                        <E6411_01>CBF</E6411_01>
+                        <E6314_02>50</E6314_02>
+                    </C174_03>
+                </MEA>
+            </Group20_MEA>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01> marks</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01>and</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group23_PCI>
+                <PCI>
+                    <C210_02>
+                        <E7102_01> numbers</E7102_01>
+                    </C210_02>
+                </PCI>
+            </Group23_PCI>
+            <Group29_SGP>
+                <SGP>
+                    <C237_01>
+                        <E8260_01>HLCU0911032</E8260_01>
+                    </C237_01>
+                    <E7224_02>22</E7224_02>
+                </SGP>
+                <Group30_MEA>
+                    <MEA>
+                        <E6311_01>WT</E6311_01>
+                        <C502_02>
+                            <E6313_01>G</E6313_01>
+                        </C502_02>
+                        <C174_03>
+                            <E6411_01>KGM</E6411_01>
+                            <E6314_02>100</E6314_02>
+                        </C174_03>
+                    </MEA>
+                </Group30_MEA>
+            </Group29_SGP>
+        </Group18_GID>
+        <Group37_EQD>
+            <EQD>
+                <E8053_01>CN</E8053_01>
+                <C237_02>
+                    <E8260_01>HLCU0911021</E8260_01>
+                </C237_02>
+                <C224_03>
+                    <E8155_01>22GP</E8155_01>
+                </C224_03>
+                <E8077_04>1</E8077_04>
+            </EQD>
+            <SEL>
+                <E9308_01>consignee1</E9308_01>
+                <C215_02>
+                    <E9303_01>CN</E9303_01>
+                </C215_02>
+            </SEL>
+        </Group37_EQD>
+        <Group37_EQD>
+            <EQD>
+                <E8053_01>CN</E8053_01>
+                <C237_02>
+                    <E8260_01>HLCU0911032</E8260_01>
+                </C237_02>
+                <C224_03>
+                    <E8155_01>40RE</E8155_01>
+                </C224_03>
+            </EQD>
+            <SEL>
+                <E9308_01>customs123</E9308_01>
+                <C215_02>
+                    <E9303_01>CU</E9303_01>
+                </C215_02>
+            </SEL>
+            <SEL>
+                <E9308_01>forwarder</E9308_01>
+                <C215_02>
+                    <E9303_01>FW</E9303_01>
+                </C215_02>
+            </SEL>
+        </Group37_EQD>
+        <UNT>
+            <E0074_01>160</E0074_01>
+            <E0062_02>1634700001</E0062_02>
+        </UNT>
+    </Group_UNH>
+    <UNZ>
+        <E0036_01>1</E0036_01>
+        <E0020_02>16347</E0020_02>
+    </UNZ>
+</IFTMIN>

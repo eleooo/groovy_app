@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="commons-configuration-1.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/commons-configuration-1.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-net-3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/java-diff-utils-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/juniversalchardet-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-3.10.1-20140818.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-ooxml-3.10.1-20140818.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/poi-ooxml-schemas-3.10.1-20140818.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

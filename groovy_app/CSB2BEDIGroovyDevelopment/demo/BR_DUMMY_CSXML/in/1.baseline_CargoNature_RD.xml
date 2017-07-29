@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid XML Studio 6.1.18.0 - FREE Community Edition (http://www.liquid-technologies.com) -->
+<Booking>
+	<InterchangeControlHeader>
+		<ControlNumber>ControlNum</ControlNumber>
+		<SenderId>DUMMY_BRXML</SenderId>
+		<ReceiverId>CARGOSMART</ReceiverId>
+		<DateTime>20150101112233</DateTime>
+		<ControlVersion>v5.9</ControlVersion>
+		<UsageIndicator>T</UsageIndicator>
+		<MessageSessionId>123456</MessageSessionId>
+	</InterchangeControlHeader>
+	<Request>
+		<GeneralInfo>
+			<TransactionInfo>
+				<BatchNumber>2147483647</BatchNumber>
+				<MessageSender>DUMMY_BRXML</MessageSender>
+				<MessageRecipient>CARGOSMART</MessageRecipient>
+				<MessageID>BRXML</MessageID>
+				<DateCreated TimeZone="LOCAL">20060131004112</DateCreated>
+				<FileName>sample_br.xml</FileName>
+				<Version>1.0</Version>
+			</TransactionInfo>
+			<ActionType>NEW</ActionType>
+			<CSReferenceNumber>CS067dm31363</CSReferenceNumber>
+			<BookingNumber>BookingNumber1111111111111111111111</BookingNumber>
+			<SCAC>OOLU</SCAC>
+			<Offices>
+				<BookingRegion>BKR</BookingRegion>
+				<BookingOffice>BKO</BookingOffice>
+				<BookingOfficeName>BookingOfficeName111111111111111111</BookingOfficeName>
+				<BLIssuingOffice>BLO</BLIssuingOffice>
+				<CargoOrigin>String</CargoOrigin>
+			</Offices>
+			<Amended>
+				<NotificationEmailID>Notifi01</NotificationEmailID>
+				<By>Amended</By>
+				<Date TimeZone="HKT">20060131004115</Date>
+			</Amended>
+			<Requested>
+			  <NotificationEmailID>Notifi02</NotificationEmailID>
+				<By>Request</By>
+				<Date TimeZone="HKT">20060131004116</Date>
+			</Requested>
+		</GeneralInfo>
+		<ShipmentDetails>
+			<UserReferences>
+				<References>
+					<ReferenceType>PO</ReferenceType>
+					<ReferenceNumber>PO-ReferenceNumber11111111111111111</ReferenceNumber>
+					<ReferenceDescription>PO-ReferenceDescription1111111111111111111111111111111111111</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceType>SI</ReferenceType>
+					<ReferenceNumber>SI-ReferenceNumber</ReferenceNumber>
+					<ReferenceDescription>Shipper’s Identifying Number For Shipment (SID)</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceType>CR</ReferenceType>
+					<ReferenceNumber>CR-ReferenceNumber</ReferenceNumber>
+					<ReferenceDescription>Customer Reference Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceType>BM</ReferenceType>
+					<ReferenceNumber>BM-ReferenceNumber</ReferenceNumber>
+					<ReferenceDescription>Bill of Lading Number</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceType>BN</ReferenceType>
+					<ReferenceNumber>BN-ReferenceNumber</ReferenceNumber>
+					<ReferenceDescription>Booking Number</ReferenceDescription>
+				</References>
+					<References>
+				<ReferenceType>FN</ReferenceType>
+					<ReferenceNumber>FN-ReferenceNumber</ReferenceNumber>
+					<ReferenceDescription>Forwarder’s/Agent’s reference</ReferenceDescription>
+				</References>
+				<References>
+					<ReferenceType>TS</ReferenceType>
+					<ReferenceNumber>TS-ReferenceNumber</ReferenceNumber>
+					<ReferenceDescription>Tariff Number</ReferenceDescription>
+				</References>
+			<References>
+				<ReferenceType>CT</ReferenceType>
+					<ReferenceNumber>CT-ReferenceNumber</ReferenceNumber>
+					<ReferenceDescription>Service Contract Number</ReferenceDescription>
+				</References>
+			</UserReferences>
+			<LegalParties>
+				<Party>
+					<PartyType>BP</PartyType>
+					<PartyName>BookingParty1111111111111111111111111111111111111111111111111111111111</PartyName>
+					<CustomerUserID>String</CustomerUserID>
+					<CarrierCustomerCode>CS1234567</CarrierCustomerCode>
+					<PartyLocation>
+						<Address>
+							<AddressLines>PartyLocation-Address-AddressLines1</AddressLines>
+							<AddressLines>PartyLocation-Address-AddressLines2</AddressLines>
+							<AddressLines>PartyLocation-Address-AddressLines3</AddressLines>
+							<AddressLines>PartyLocation-Address-AddressLines4</AddressLines>
+							<AddressLines>PartyLocation-Address-AddressLines5</AddressLines>
+						</Address>
+						<Street>Street11111111111111111111111111111111111111111111</Street>
+						<City>City</City>
+						<County>County</County>
+						<StateProvinceCode>Str</StateProvinceCode>
+						<StateProvince>String</StateProvince>
+						<CountryCode>US</CountryCode>
+						<CountryName>United State</CountryName>
+							<LocationCode>
+							<MutuallyDefinedCode>MutuallyDefinedCode</MutuallyDefinedCode>
+							<UNLocationCode>UNLoc</UNLocationCode>
+							<SchedKDCode Type="K">ScheK</SchedKDCode>
+						</LocationCode>
+						<PostalCode>90745</PostalCode>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>FirstName11111</FirstName>
+						<LastName>LastName111111</LastName>
+						<Phone>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>Number1111111111111111</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>String</Number>
+						</Fax>
+						<Email>FirstName@yahoo.com</Email>
+					</ContactPerson>
+				</Party>
+				<Party>
+					<PartyType>CA</PartyType>
+					<PartyName>Carrier</PartyName>
+					<PartyLocation>
+						<Street>1800 Century Park East</Street>
+						<City>Los Angeles</City>
+						<StateProvince>California</StateProvince>
+						<CountryCode>US</CountryCode>
+						<CountryName>United State</CountryName>
+						<PostalCode>90067</PostalCode>
+					</PartyLocation>
+				</Party>
+				<Party>
+					<PartyType>SH</PartyType>
+					<PartyName>Shipper</PartyName>
+					<CarrierCustomerCode>CS1234567</CarrierCustomerCode>
+					<PartyLocation>
+						<Street>1800 Century Park East</Street>
+						<City>Los Angeles</City>
+						<StateProvince>California</StateProvince>
+						<CountryCode>US</CountryCode>
+						<CountryName>United State</CountryName>
+						<PostalCode>90067</PostalCode>
+					</PartyLocation>
+				</Party>
+				<Party>
+					<PartyType>CN</PartyType>
+					<PartyName>Consignee</PartyName>
+					<CarrierCustomerCode>CS1234567</CarrierCustomerCode>
+					<PartyLocation>
+						<Street>1800 Century Park East</Street>
+						<City>Los Angeles</City>
+						<StateProvince>California</StateProvince>
+						<CountryCode>US</CountryCode>
+						<CountryName>United State</CountryName>
+						<PostalCode>90067</PostalCode>
+					</PartyLocation>
+				</Party>
+				<Party>
+					<PartyType>FW</PartyType>
+					<PartyName>Forward</PartyName>
+					<CarrierCustomerCode>CS1234567</CarrierCustomerCode>
+					<PartyLocation>
+						<Street>1800 Century Park East</Street>
+						<City>Los Angeles</City>
+						<StateProvince>California</StateProvince>
+						<CountryCode>US</CountryCode>
+						<CountryName>United State</CountryName>
+						<PostalCode>90067</PostalCode>
+					</PartyLocation>
+				</Party>
+				<Party>
+					<PartyType>NP</PartyType>
+					<PartyName>Notify Party</PartyName>
+					<CarrierCustomerCode>CS1234567</CarrierCustomerCode>
+					<PartyLocation>
+						<Street>1800 Century Park East</Street>
+						<City>Los Angeles</City>
+						<StateProvince>California</StateProvince>
+						<CountryCode>US</CountryCode>
+						<CountryName>United State</CountryName>
+						<PostalCode>90067</PostalCode>
+					</PartyLocation>
+				</Party>
+				<Party>
+					<PartyType>N2</PartyType>
+					<PartyName>Notify Part2</PartyName>
+					<CarrierCustomerCode>CS1234567</CarrierCustomerCode>
+					<PartyLocation>
+						<Street>1800 Century Park East</Street>
+						<City>Los Angeles</City>
+						<StateProvince>California</StateProvince>
+						<CountryCode>US</CountryCode>
+						<CountryName>United State</CountryName>
+						<PostalCode>90067</PostalCode>
+					</PartyLocation>
+				</Party>
+			</LegalParties>
+			<RouteInformation>
+				<IntendedDates>
+					<From TimeZone="HKT">20051002000000</From>
+					<To TimeZone="HKT">20051030000000</To>
+					<Range>S</Range>
+				</IntendedDates>
+				<Location>
+					<FunctionCode>POR</FunctionCode>
+					<LocationName>RouteInformation-POR-LocationName</LocationName>
+					<LocationDetails>
+						<Street>102 Road</Street>
+						<City>Los Angeles</City>
+						<CountryCode>US</CountryCode>
+						<CountryName>United State</CountryName>
+						<LocationCode>
+						  <MutuallyDefinedCode>String</MutuallyDefinedCode>
+							<UNLocationCode>USLAX</UNLocationCode>
+							<SchedKDCode Type="K">Strin</SchedKDCode>
+						</LocationCode>
+					</LocationDetails>
+				</Location>
+				<Location>
+					<FunctionCode>FND</FunctionCode>
+					<LocationName>RouteInformation-FND-LocationName</LocationName>
+					<LocationDetails>
+						<Street>102 Road</Street>
+						<City>Xiamen</City>
+						<CountryName>China</CountryName>
+						<LocationCode>
+						   <MutuallyDefinedCode>Strin2</MutuallyDefinedCode>
+							<UNLocationCode>CNXMN</UNLocationCode>
+							<SchedKDCode Type="D">Strin</SchedKDCode>
+						</LocationCode>
+					</LocationDetails>
+				</Location>
+				<Intermodal>
+					<VesselVoyageInformation>
+						<ServiceName>5Digi</ServiceName>
+						<VoyageNumberDirection>048E</VoyageNumberDirection>
+					</VesselVoyageInformation>
+					<Location>
+						<FunctionCode>POL</FunctionCode>
+						<LocationName>LOS ANGELES</LocationName>
+						<LocationDetails>
+								<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>102 Road</Street>
+							<City>Los Angeles</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>US</CountryCode>
+							<CountryName>United Stated</CountryName>
+							<LocationCode>
+							  <MutuallyDefinedCode>String</MutuallyDefinedCode>
+								<UNLocationCode>USLAX</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<PostalCode>String</PostalCode>
+						</LocationDetails>
+					</Location>
+					<Location>
+						<FunctionCode>POD</FunctionCode>
+						<LocationName>Xiamen</LocationName>
+						<LocationDetails>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>103 Road</Street>
+							<City>Xiamen</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>US</CountryCode>
+							<CountryName>China</CountryName>
+							<LocationCode>
+							  <MutuallyDefinedCode>String</MutuallyDefinedCode>
+								<UNLocationCode>CNXMN</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+						</LocationDetails>
+					</Location>
+				</Intermodal>
+			<Intermodal>
+					<VesselVoyageInformation>
+						<ServiceName>5Digi</ServiceName>
+						<VoyageNumberDirection>048E</VoyageNumberDirection>
+					</VesselVoyageInformation>
+					<Location>
+						<FunctionCode>POL</FunctionCode>
+						<LocationName>LOS ANGELES</LocationName>
+						<LocationDetails>
+								<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>102 Road</Street>
+							<City>Los Angeles</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>US</CountryCode>
+							<CountryName>United Stated</CountryName>
+							<LocationCode>
+							  <MutuallyDefinedCode>String</MutuallyDefinedCode>
+								<UNLocationCode>USHYO</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<PostalCode>String</PostalCode>
+						</LocationDetails>
+					</Location>
+					<Location>
+						<FunctionCode>POD</FunctionCode>
+						<LocationName>Xiamen</LocationName>
+						<LocationDetails>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>103 Road</Street>
+							<City>Xiamen</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>US</CountryCode>
+							<CountryName>China</CountryName>
+							<LocationCode>
+							  <MutuallyDefinedCode>String</MutuallyDefinedCode>
+								<UNLocationCode>USHZI</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+						</LocationDetails>
+					</Location>
+				</Intermodal>
+			</RouteInformation>
+			<EquipmentInformation>
+				<Containers>
+					<ContainerType>20A0</ContainerType>
+					<Quantity>5</Quantity>
+					<Weight Units="KGS" Qualifier="GROSS">100.99</Weight>
+						<Weight Units="LBS" Qualifier="NET">50.99</Weight>
+					<SOCIndicator>1</SOCIndicator>
+					<OutBound>
+						<EmptyPickupDate TimeZone="HKT">20150601000000</EmptyPickupDate>
+						<FullReturnDate TimeZone="HKT">20150602000000</FullReturnDate>
+						<Appointment>
+							<Quantity>20</Quantity>
+							<Company>Appointment-Company</Company>
+							<Location>
+								<Address>
+									<AddressLines>Appointment-AddressLines11111111111</AddressLines>
+									<AddressLines>Appointment-AddressLines22222222222</AddressLines>
+									<AddressLines>Appointment-AddressLines33333333333</AddressLines>
+								</Address>
+								<Street>Appointment-Street11111111111111111111111111111111</Street>
+								<City>String</City>
+								<County>String</County>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<LocationCode>
+									<MutuallyDefinedCode>String</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<PostalCode>String</PostalCode>
+							</Location>
+							<ContactPerson>
+								<FirstName>Appointment-FirstName</FirstName>
+								<LastName>Appointment-LastName</LastName>
+								<Phone>
+									<CountryCode>Str</CountryCode>
+									<AreaCode>Strin</AreaCode>
+									<Number>Appointment-Phone</Number>
+								</Phone>
+								<Fax>
+									<CountryCode>Str</CountryCode>
+									<AreaCode>Strin</AreaCode>
+									<Number>Appointment-Fax</Number>
+								</Fax>
+								<Email>ABC@cargosmart.com</Email>
+								<Type>OutBound</Type>
+							</ContactPerson>
+							<AppointmentDate TimeZone="String">20150603000000</AppointmentDate>
+						</Appointment>
+						<isMerchantHaulage>1</isMerchantHaulage>
+					</OutBound>
+					<InBound>
+						<EmptyReturnDate TimeZone="HKT">20150604000000</EmptyReturnDate>
+						<DestinationDateTime TimeZone="HKT">20150605000000</DestinationDateTime>
+						<isMerchantHaulage>1</isMerchantHaulage>
+					</InBound>
+				</Containers>
+				<Containers>
+					<ContainerType>20A0</ContainerType>
+					<Quantity>1</Quantity>
+					<Weight Units="TON" Qualifier="GROSS">200.99</Weight>
+						<Weight Units="TON" Qualifier="NET">20.99</Weight>
+					<SOCIndicator>0</SOCIndicator>
+					<OutBound>
+						<EmptyPickupDate TimeZone="HKT">20150601000000</EmptyPickupDate>
+						<FullReturnDate TimeZone="HKT">20150602000000</FullReturnDate>
+						<Appointment>
+							<Quantity>20</Quantity>
+							<Company>Appointment-Compan2</Company>
+							<Location>
+								<Address>
+									<AddressLines>Appointment-AddressLines11111111111</AddressLines>
+									<AddressLines>Appointment-AddressLines22222222222</AddressLines>
+									<AddressLines>Appointment-AddressLines33333333333</AddressLines>
+								</Address>
+								<Street>Appointment-Street11111111111111111111111111111111</Street>
+								<City>String</City>
+								<County>String</County>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<LocationCode>
+									<MutuallyDefinedCode>String</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<PostalCode>String</PostalCode>
+							</Location>
+							<ContactPerson>
+								<FirstName>Appointment-FirstName</FirstName>
+								<LastName>Appointment-LastName</LastName>
+								<Phone>
+									<CountryCode>Str</CountryCode>
+									<AreaCode>Strin</AreaCode>
+									<Number>Appointment-Phone</Number>
+								</Phone>
+								<Fax>
+									<CountryCode>Str</CountryCode>
+									<AreaCode>Strin</AreaCode>
+									<Number>Appointment-Fax</Number>
+								</Fax>
+								<Email>ABC@cargosmart.com</Email>
+								<Type>OutBound</Type>
+							</ContactPerson>
+							<AppointmentDate TimeZone="String">20150603000000</AppointmentDate>
+						</Appointment>
+						<isMerchantHaulage>1</isMerchantHaulage>
+					</OutBound>
+					<InBound>
+						<EmptyReturnDate TimeZone="HKT">20150604000000</EmptyReturnDate>
+						<DestinationDateTime TimeZone="HKT">20150605000000</DestinationDateTime>
+						<isMerchantHaulage>1</isMerchantHaulage>
+					</InBound>
+				</Containers>
+			</EquipmentInformation>
+			<CargoInformation>
+				<CargoDetails>
+					<CargoNature>RD</CargoNature>
+					<CargoDescription>CargoDescription11111111111111111111111111111111111111111111</CargoDescription>
+					<Packaging>
+						<PackageType>4B</PackageType>
+						<Quantity>100</Quantity>
+						<Material>Material111111111111111111111111111</Material>
+					</Packaging>
+					<Weight Qualifier="NET" Units="LBS">100.999</Weight>
+					<Weight Qualifier="GROSS" Units="KGS">200.999</Weight>
+					<HarmonizedTariffSchedule>Harmon</HarmonizedTariffSchedule>
+					<Remarks>
+						<RemarksLines>CargoRemarks1</RemarksLines>
+						<RemarksLines>CargoRemarks2</RemarksLines>
+						<RemarksLines>11111111111111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222222222222222222222222333333333333333333333333333333333333333333333333333333333333333333333344444444444444444444444444444</RemarksLines>
+					</Remarks>
+					<TrafficMode>
+						<Description>TMDesc</Description>
+						<OutBound>FCL</OutBound>
+						<InBound>LCL</InBound>
+					</TrafficMode>
+					<ReeferSettings GenSetType="NR" AtmosphereType="CA" CO2="20" VentSettingCode="10OPN" DehumidityInd="S" SensitiveCargoInd="1" PreCooling="1" O2="30">
+						<Temperature Units="C">103.14</Temperature>
+						<Ventilation Units="cbmPerHour">30</Ventilation>
+						<DehumidityPercentage>23</DehumidityPercentage>
+						<SensitiveCargoDesc>String</SensitiveCargoDesc>
+						<Remarks>
+							<RemarksLines>String</RemarksLines>
+						</Remarks>
+						<EmergencyContact>
+							<FirstName>String</FirstName>
+							<LastName>String</LastName>
+							<Phone>
+								<CountryCode>Str</CountryCode>
+								<AreaCode>Strin</AreaCode>
+								<Number>String</Number>
+							</Phone>
+							<Fax>
+								<CountryCode>Str</CountryCode>
+								<AreaCode>Strin</AreaCode>
+								<Number>String</Number>
+							</Fax>
+							<Email>String</Email>
+							<Type>OutBound</Type>
+						</EmergencyContact>
+					</ReeferSettings>
+					<DangerousCargo>
+						<DangerousCargoInfo>
+							<HazardousMaterial>
+								<IMCOClass>IMCOC</IMCOClass>
+								<IMCOPage>IMCOP</IMCOPage>
+								<UNNumber>UNNumber</UNNumber>
+								<FlashPoint Units="C">3.1</FlashPoint>
+								<MFAGTableNumber>Stri</MFAGTableNumber>
+								<MaterialDescription>MaterialDescription111111111111111111111111111111111111111111111111111</MaterialDescription>
+								<EmergencyResponseCode>Strin</EmergencyResponseCode>
+								<EMSNumber>EMSNum</EMSNumber>
+								<ProperShippingName>ProperShippingName11111111111111111111111111111111111111111111111111111111111111</ProperShippingName>
+								<TechnicalShippingName>TechnicalShippingName11111111111111111111111111111</TechnicalShippingName>
+								<DGElevationTemperature Units="C">3.14</DGElevationTemperature>
+								<Weight Units="KGS" Qualifier="GROSS">3.142</Weight>
+								<Weight Units="TON" Qualifier="NET">3.143</Weight>
+								<Indicators>
+									<IsReportableQuantity>0</IsReportableQuantity>
+									<IsEmptyUnclean>0</IsEmptyUnclean>
+									<IsLimitedQuantity>0</IsLimitedQuantity>
+									<IsMarinePollutant>0</IsMarinePollutant>
+									<IsInhalationHazardous>0</IsInhalationHazardous>
+								</Indicators>
+								<Package>
+									<PackagingGroupCode>Strin</PackagingGroupCode>
+									<InnerPackaging Units="BX">1021</InnerPackaging>
+									<OuterPackaging Units="BA">1022</OuterPackaging>
+								</Package>
+								<Remarks>
+									<RemarksLines>HazardousMaterial-RemarksLines1111111111111111111111111111111111111111111111111111111111111111111111</RemarksLines>
+								</Remarks>
+							</HazardousMaterial>
+							<EmergencyContact>
+								<FirstName>String</FirstName>
+								<LastName>String</LastName>
+								<Phone>
+									<CountryCode>Str</CountryCode>
+									<AreaCode>Strin</AreaCode>
+									<Number>String</Number>
+								</Phone>
+								<Fax>
+									<CountryCode>Str</CountryCode>
+									<AreaCode>Strin</AreaCode>
+									<Number>String</Number>
+								</Fax>
+								<Email>CDE@cargosmart.com</Email>
+								<Type>OutBound</Type>
+							</EmergencyContact>
+						</DangerousCargoInfo>
+					</DangerousCargo>
+					<AwkwardCargo>
+						<AwkwardCargoInfo>
+							<AwkwardCargoDetails>
+								<Height Units="C">100.11</Height>
+								<Width Units="N">100.22</Width>
+								<Length Units="F">100.33</Length>
+								<Remarks>
+									<RemarksLines>AwkwardCargo-RemarksLines1111111111111111111111111</RemarksLines>
+								</Remarks>
+							</AwkwardCargoDetails>
+						</AwkwardCargoInfo>
+					</AwkwardCargo>
+				</CargoDetails>
+				<CargoDetails>
+					<CargoNature>RD</CargoNature>
+					<CargoDescription>GenralCargo Testing</CargoDescription>
+					<Packaging>
+						<PackageType>AA</PackageType>
+						<Quantity>100</Quantity>
+						<Material>Plastic</Material>
+					</Packaging>
+					<Weight Qualifier="NET" Units="TON">20</Weight>
+					<Weight Qualifier="GROSS" Units="TON">200</Weight>
+					<Remarks>
+						<RemarksLines>CargoRemarks1</RemarksLines>
+						<RemarksLines>CargoRemarks2</RemarksLines>
+						<RemarksLines>11111111111111111111111111111111111111111111111111111111111111111111112222222222222222222222222222222222222222222222222222222222222222222222333333333333333333333333333333333333333333333333333333333333333333333344444444444444444444444444444</RemarksLines>
+					</Remarks>
+					<TrafficMode>
+						<Description>TMDesc</Description>
+						<OutBound>FCL</OutBound>
+						<InBound>FCL</InBound>
+					</TrafficMode>
+						<AwkwardCargo>
+						<AwkwardCargoInfo>
+							<AwkwardCargoDetails>
+								<Height Units="M">100.44</Height>
+								<Width Units="N">100.55</Width>
+								<Length Units="F">100.66</Length>
+								<Remarks>
+									<RemarksLines>AwkwardCargo-RemarksLines1111111111111111111111111</RemarksLines>
+								</Remarks>
+							</AwkwardCargoDetails>
+						</AwkwardCargoInfo>
+					</AwkwardCargo>
+				</CargoDetails>
+			</CargoInformation>
+		</ShipmentDetails>
+		<SummaryDetails>
+			<Remarks>
+				<Type>01</Type>
+				<Content>
+					<RemarksLines>SummaryDetails-RemarksLines</RemarksLines>
+						<RemarksLines>2222222222222222222</RemarksLines>
+							<RemarksLines>333333333333333</RemarksLines>
+				</Content>
+			</Remarks>
+			<SpecialHandling>
+				<Code>OFU</Code>
+				<SpecialInstructions>SpecialHandling-SpecialIns-OFU</SpecialInstructions>
+			</SpecialHandling>
+			<SpecialHandling>
+				<Code>OSB</Code>
+				<SpecialInstructions>SpecialHandling-SpecialIns-OSB</SpecialInstructions>
+			</SpecialHandling>
+			<SpecialHandling>
+				<Code>OOD</Code>
+				<SpecialInstructions>SpecialHandling-SpecialIns-OOD</SpecialInstructions>
+			</SpecialHandling>
+		</SummaryDetails>
+	</Request>
+</Booking>

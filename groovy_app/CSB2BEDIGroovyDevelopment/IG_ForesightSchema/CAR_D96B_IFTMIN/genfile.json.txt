@@ -1,0 +1,16 @@
+{
+  "schemaFileName": "CAR_D96B_IFTMIN.xsd",
+  "sefFileName": "CAR_D96B_IFTMIN.sef",
+  "escapeChar": "?",
+  "subelementDelimiter": ":",
+  "elementDelimiter": "+",
+  "recordDelimiter": "0x27",
+  "isFieldValueTrimRightSpace":"false",
+  "isFieldValueTrimLeadingSpace":"false",
+  "devName": "Ben",
+  "isOutgoingEDI": true,
+  "ediVersionInfo": "d96b",
+  "teamName": "CAR",
+  "msgName": "IFTMIN",
+  "ediCustomerSpecialInfo": "ALL"
+}

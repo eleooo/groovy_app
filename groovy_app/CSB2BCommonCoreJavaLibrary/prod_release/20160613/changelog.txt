@@ -1,0 +1,9 @@
+init project on 2016-06-13, by David Liang.
+The jar use for common b2b edi mapping engine.
+
+features:
+1, activation.jar + mail.jar = pop3 email receive and send feature.
+2, commons-compress-1.9.jar = zip / unzip support multiple files operation.
+3, dom4j-1.6.1.jar = xml schema validation
+4, ojdbc6.jar + xdb6.jar = jdbc db operation
+5, groovy-all-2.4.6.jar = groovy mapping engine

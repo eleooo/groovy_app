@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n1:HouseBillCloseXML xmlns:n1="http://www.cargosmart.com/HouseBillClose" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.cargosmart.com/HouseBillClose CS-SYSINT-STD-IG-CUSTOMS-HOUSEBILLCLOSE_Draft.xsd">
+	<n1:InterchangeControlHeader>
+		<n1:ControlNumber>001</n1:ControlNumber>
+		<n1:SenderId>OOCLACI</n1:SenderId>
+		<n1:ReceiverId>CARGOSMART</n1:ReceiverId>
+		<n1:DateTime>20170504105022</n1:DateTime>
+		<n1:ControlVersion>1</n1:ControlVersion>
+		<n1:UsageIndicator>P</n1:UsageIndicator>
+		<n1:MessageSessionId>0</n1:MessageSessionId>
+	</n1:InterchangeControlHeader>
+	<n1:HouseBillClose>
+		<n1:GeneralInformation>
+			<n1:TransactionInformation>
+				<n1:BatchNumber>1</n1:BatchNumber>
+				<n1:MessageSender>OOCLACI</n1:MessageSender>
+				<n1:MessageRecipient>CARGOSMART</n1:MessageRecipient>
+				<n1:MessageID>0009</n1:MessageID>
+				<n1:DateCreated>20170504105022</n1:DateCreated>
+				<n1:FileName>Sample.xml</n1:FileName>
+				<n1:Version>1</n1:Version>
+			</n1:TransactionInformation>
+			<n1:ActionType>NEW</n1:ActionType>
+			<n1:Version>1</n1:Version>
+			<n1:Issuer>
+				<n1:IssuerID>SMARUS772643806</n1:IssuerID>
+				<n1:SCAC>8759</n1:SCAC>
+			</n1:Issuer>
+	</n1:GeneralInformation>
+		<n1:ManifestInfo>
+			<n1:PreviousCargoControlNumber>9082001334004</n1:PreviousCargoControlNumber>
+			<n1:FreightForwarderCode>8F49</n1:FreightForwarderCode>
+			<n1:CargoControlNumber>000000011</n1:CargoControlNumber>
+			<n1:CargoControlNumber>000000012</n1:CargoControlNumber>
+			<n1:CargoControlNumber>000000013</n1:CargoControlNumber>
+		</n1:ManifestInfo>
+	</n1:HouseBillClose>
+</n1:HouseBillCloseXML>

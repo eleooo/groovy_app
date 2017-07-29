@@ -1,0 +1,14 @@
+{
+  "schemaFileName": "CS-SYSINT-CUST-BC-IFTMBC_D99B_20151020_IFTMBC.xsd",
+  "sefFileName": "CS-SYSINT-CUST-BC-IFTMBC_D99B_20151020.sef",
+  "escapeChar": "?",
+  "subelementDelimiter": ":",
+  "elementDelimiter": "+",
+  "recordDelimiter": "0x27 0x0d 0x0a",
+  "devName": "David",
+  "isOutgoingEDI": true,
+  "ediVersionInfo": "d99b",
+  "teamName": "CUS",
+  "msgName": "IFTMBC",
+  "ediCustomerSpecialInfo": "CS"
+}

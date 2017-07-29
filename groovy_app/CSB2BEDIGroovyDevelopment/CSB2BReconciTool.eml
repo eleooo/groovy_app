@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="1.8" jdk_type="JavaSDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$/../CSB2BReconciTool"/>
+	<lib name="activation.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/activation.jar!/"/>
+	</lib>
+	<lib name="b2b-beluga-ediparser-1.8.9.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/b2b-beluga-ediparser-1.8.9.jar!/"/>
+	</lib>
+	<lib name="commons-collections-3.2.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-collections-3.2.1.jar!/"/>
+	</lib>
+	<lib name="commons-compress-1.9.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-compress-1.9.jar!/"/>
+	</lib>
+	<lib name="commons-configuration-1.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-configuration-1.5.jar!/"/>
+	</lib>
+	<lib name="commons-io-1.4.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-io-1.4.jar!/"/>
+	</lib>
+	<lib name="commons-lang-2.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-lang-2.3.jar!/"/>
+	</lib>
+	<lib name="commons-lang3-3.3.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-lang3-3.3.2.jar!/"/>
+	</lib>
+	<lib name="commons-logging-1.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-logging-1.1.jar!/"/>
+	</lib>
+	<lib name="commons-net-3.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-net-3.3.jar!/"/>
+	</lib>
+	<lib name="csb2b-edi-common-core-1.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/csb2b-edi-common-core-1.0.jar!/"/>
+	</lib>
+	<lib name="dom4j-1.6.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/dom4j-1.6.1.jar!/"/>
+	</lib>
+	<lib name="groovy-all-2.4.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/groovy-all-2.4.3.jar!/"/>
+	</lib>
+	<lib name="gson-2.3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/gson-2.3.1.jar!/"/>
+	</lib>
+	<lib name="java-diff-utils-1.2.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/java-diff-utils-1.2.jar!/"/>
+	</lib>
+	<lib name="juniversalchardet-1.0.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/juniversalchardet-1.0.3.jar!/"/>
+	</lib>
+	<lib name="log4j-1.2.17.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/log4j-1.2.17.jar!/"/>
+	</lib>
+	<lib name="mail.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/mail.jar!/"/>
+	</lib>
+	<lib name="ojdbc6.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/ojdbc6.jar!/"/>
+	</lib>
+	<lib name="poi-3.10.1-20140818.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/poi-3.10.1-20140818.jar!/"/>
+	</lib>
+	<lib name="poi-ooxml-3.10.1-20140818.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/poi-ooxml-3.10.1-20140818.jar!/"/>
+	</lib>
+	<lib name="poi-ooxml-schemas-3.10.1-20140818.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/poi-ooxml-schemas-3.10.1-20140818.jar!/"/>
+	</lib>
+	<lib name="stax-api-1.0.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/stax-api-1.0.1.jar!/"/>
+	</lib>
+	<lib name="xdb6.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/xdb6.jar!/"/>
+	</lib>
+	<lib name="xmlbeans-2.6.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/xmlbeans-2.6.0.jar!/"/>
+	</lib>
+</component>

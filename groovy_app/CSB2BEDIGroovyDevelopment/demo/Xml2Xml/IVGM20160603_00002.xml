@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<n1:SubmitVGM xmlns:n1="http://xml.inttra.com/vgm/services/01/publication">
+    <MessageGuid>63180_5</MessageGuid>
+    <MessageDateTime>2016-06-03T02:36:07</MessageDateTime>
+    <MessageVersion>0.8</MessageVersion>
+    <TenantID>INTTRA</TenantID>
+    <State>Original</State>
+    <Submitter>
+        <PartyID>
+            <IDType>INTTRACompanyID</IDType>
+            <ID>NL-HQ</ID>
+        </PartyID>
+        <PartyName1>YUSEN LOGISTICS HEADQUARTER</PartyName1>
+    </Submitter>
+    <SubmitterReference>CTN070030</SubmitterReference>
+    <ContainerNumber>NYKS1234567</ContainerNumber>
+    <VerifiedGrossMass>
+        <Mass>122.000</Mass>
+        <UOM>1</UOM>
+    </VerifiedGrossMass>
+    <VerificationDetails>
+        <VerificationSignature>AAA</VerificationSignature>
+        <VerificationDateTime>2016-06-03T10:28:00</VerificationDateTime>
+        <Delegated>false</Delegated>
+    </VerificationDetails>
+    <VGMDeterminationDateTime>2016-06-03T10:28:00</VGMDeterminationDateTime>
+    <VGMDeterminationMethod>Method1</VGMDeterminationMethod>
+    <WeighingParty>
+        <PartyName1>A.ALI CO. LTD</PartyName1>
+    </WeighingParty>
+    <Carrier>
+        <PartyID>
+            <IDType>PartnerAlias</IDType>
+            <ID>NYKS</ID>
+        </PartyID>
+        <PartyName1>NYK LINE</PartyName1>
+    </Carrier>
+    <Forwarder>
+        <PartyID>
+            <IDType>INTTRACompanyID</IDType>
+            <ID>NL-HQ</ID>
+        </PartyID>
+        <PartyName1>YUSEN LOGISTICS HEADQUARTER</PartyName1>
+    </Forwarder>
+    <BookingNumber>1234567</BookingNumber>
+    <ContainerDetails>
+        <ShipperOwned>false</ShipperOwned>
+        <ISOContainerType>42G0</ISOContainerType>
+    </ContainerDetails>
+</n1:SubmitVGM>

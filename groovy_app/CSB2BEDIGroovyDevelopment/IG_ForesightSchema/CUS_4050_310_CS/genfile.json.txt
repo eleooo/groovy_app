@@ -1,0 +1,17 @@
+{
+  "schemaFileName": "CS-SYSINT-CUS-BL-310-4050_20140730_Kubo_310.xsd",
+  "sefFileName": "CS-SYSINT-CUS-BL-310-4050_20140730_Kubo.sef",
+  "escapeChar": "",
+  "x12ReplacementChar":"0x20",
+  "subelementDelimiter": "",
+  "elementDelimiter": "*",
+  "recordDelimiter": "~",
+  "isFieldValueTrimRightSpace":"false",
+  "isFieldValueTrimLeadingSpace":"false",
+  "devName": "Gawing",
+  "isOutgoingEDI": true,
+  "ediVersionInfo": "4050",
+  "teamName": "CUS",
+  "msgName": "310",
+  "ediCustomerSpecialInfo": "CS"
+}

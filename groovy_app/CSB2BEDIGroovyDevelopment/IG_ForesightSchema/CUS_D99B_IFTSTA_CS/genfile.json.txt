@@ -1,0 +1,17 @@
+{
+  "schemaFileName": "IFTSTA_D99B_CUST_20160624.xsd",
+  "sefFileName": "IFTSTA_D99B_CUST_20160624.sef",
+  "escapeChar": "?",
+  "x12ReplacementChar":"",
+  "subelementDelimiter": ":",
+  "elementDelimiter": "+",
+  "recordDelimiter": "0x27 0x0d 0x0a",
+  "isFieldValueTrimRightSpace":"false",
+  "isFieldValueTrimLeadingSpace":"false",
+  "devName": "Tracy",
+  "isOutgoingEDI": true,
+  "ediVersionInfo": "d99b",
+  "teamName": "CUS",
+  "msgName": "IFTSTA",
+  "ediCustomerSpecialInfo": "CS"
+}

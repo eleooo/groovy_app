@@ -1,0 +1,14 @@
+{
+  "schemaFileName": "CS-SYSINT-CUST-BR-IFTMBF_D96B_20150911aLAMJA.xsd",
+  "sefFileName": "CS-SYSINT-CUST-BR-IFTMBF_D96B_20150911aLAMJA.sef",
+  "escapeChar": "?",
+  "subelementDelimiter": ":",
+  "elementDelimiter": "+",
+  "recordDelimiter": "0x27",
+  "devName": "Alisa",
+  "isOutgoingEDI": false,
+  "ediVersionInfo": "d96b",
+  "teamName": "CUS",
+  "msgName": "IFTMBF",
+  "ediCustomerSpecialInfo": "CS"
+}

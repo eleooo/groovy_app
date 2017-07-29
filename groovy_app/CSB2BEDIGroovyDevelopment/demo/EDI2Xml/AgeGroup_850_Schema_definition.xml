@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- B2B Parser UIF Delimited Definition -->
+<!-- Created By: David -->
+<E2XDefinition ElementType="delimited" RecordDelimiter="~" ElementDelimiter="*" xmlns="http://www.cargosmart.com/b2b/transformparser/e2x" isSuppressEmptyNodes="true" OutXMLTargetNameSpace="http://www.oocllogistics.com/AgeGroup_850_4dot10" OutXMLTargetNameSpacePrefix="ns0" >
+	<Component Name="AgeGroup_PO_MSG_Root" >
+		<Component Name="Header" >
+			<Component Name="ISA" minOccurs="1" maxOccurs="1" TagIdentifier="ISA" >
+				<Field Name="ISA01" />
+				<Field Name="ISA02" />
+				<Field Name="ISA03" />
+				<Field Name="ISA04" />
+				<Field Name="ISA05" />
+				<Field Name="ISA06" />
+				<Field Name="ISA07" />
+				<Field Name="ISA08" />
+				<Field Name="ISA09" />
+				<Field Name="ISA10" />
+				<Field Name="ISA11" />
+				<Field Name="ISA12" />
+				<Field Name="ISA13" />
+				<Field Name="ISA14" />
+				<Field Name="ISA15" />
+				<Field Name="ISA16" />
+			</Component>
+			<Component Name="GS" TagIdentifier="GS" >
+				<Field Name="GS01" />
+				<Field Name="GS02" />
+				<Field Name="GS03" />
+				<Field Name="GS04" />
+				<Field Name="GS05" />
+				<Field Name="GS06" />
+				<Field Name="GS07" />
+				<Field Name="GS08" />
+			</Component>
+		</Component>
+		<Component Name="Detail" minOccurs="0" maxOccurs="unbounded" >
+			<Component Name="ST" TagIdentifier="ST" >
+				<Field Name="ST01" />
+				<Field Name="ST02" />
+			</Component>
+			<Component Name="BEG" minOccurs="1" maxOccurs="1" TagIdentifier="BEG" >
+				<Field Name="BEG01" />
+				<Field Name="BEG02" />
+				<Field Name="BEG03" />
+				<Field Name="BEG04" />
+				<Field Name="BEG05" />
+			</Component>
+			<Component Name="REF" minOccurs="0" maxOccurs="unbounded" TagIdentifier="REF" >
+				<Field Name="REF01" />
+				<Field Name="REF02" />
+				<Field Name="REF03" />
+			</Component>
+			<Component Name="PER" minOccurs="0" maxOccurs="3" TagIdentifier="PER" >
+				<Field Name="PER01" />
+				<Field Name="PER02" />
+				<Field Name="PER03" />
+				<Field Name="PER04" />
+				<Field Name="PER05" />
+				<Field Name="PER06" />
+			</Component>
+			<Component Name="FOB" minOccurs="0" maxOccurs="1" TagIdentifier="FOB" >
+				<Field Name="FOB01" />
+				<Field Name="FOB02" />
+				<Field Name="FOB03" />
+				<Field Name="FOB04" />
+				<Field Name="FOB05" />
+				<Field Name="FOB06" />
+				<Field Name="FOB07" />
+			</Component>
+			<Component Name="DTM" minOccurs="0" maxOccurs="10" TagIdentifier="DTM" >
+				<Field Name="DTM01" />
+				<Field Name="DTM02" />
+			</Component>
+			<Component Name="TD5" minOccurs="0" maxOccurs="12" TagIdentifier="TD5" >
+				<Field Name="TD501" />
+				<Field Name="TD502" />
+				<Field Name="TD503" />
+				<Field Name="TD504" />
+				<Field Name="TD505" />
+			</Component>
+			<Component Name="MSG" minOccurs="0" maxOccurs="1000" TagIdentifier="MSG" >
+				<Field Name="MSG01" />
+			</Component>
+			<Component Name="NameAndAddressLoop" minOccurs="0" maxOccurs="200" >
+				<Component Name="N1" TagIdentifier="N1" >
+					<Field Name="N101" />
+					<Field Name="N102" />
+					<Field Name="N103" />
+					<Field Name="N104" />
+				</Component>
+				<Component Name="N3" minOccurs="0" maxOccurs="2" TagIdentifier="N3" >
+					<Field Name="N301" />
+					<Field Name="N302" />
+				</Component>
+				<Component Name="N4" minOccurs="0" maxOccurs="unbounded" TagIdentifier="N4" >
+					<Field Name="N401" />
+					<Field Name="N402" />
+					<Field Name="N403" />
+					<Field Name="N404" />
+				</Component>
+			</Component>
+			<Component Name="PO1Loop" minOccurs="0" maxOccurs="10000" >
+				<Component Name="PO1" TagIdentifier="PO1" >
+					<Field Name="PO101" />
+					<Field Name="PO102" />
+					<Field Name="PO103" />
+					<Field Name="PO104" />
+					<Field Name="PO105" />
+					<Field Name="PO106" />
+					<Field Name="PO107" />
+					<Field Name="PO108" />
+					<Field Name="PO109" />
+					<Field Name="PO110" />
+					<Field Name="PO111" />
+					<Field Name="PO112" />
+					<Field Name="PO113" />
+					<Field Name="PO114" />
+					<Field Name="PO115" />
+					<Field Name="PO116" />
+					<Field Name="PO117" />
+					<Field Name="PO118" />
+					<Field Name="PO119" />
+					<Field Name="PO120" />
+					<Field Name="PO121" />
+					<Field Name="PO122" />
+					<Field Name="PO123" />
+					<Field Name="PO124" />
+					<Field Name="PO125" />
+				</Component>
+				<Component Name="PO3" minOccurs="0" TagIdentifier="PO3" >
+					<Field Name="PO301" />
+					<Field Name="PO302" />
+					<Field Name="PO303" />
+					<Field Name="PO304" />
+					<Field Name="PO305" />
+					<Field Name="PO306" />
+					<Field Name="PO307" />
+					<Field Name="PO308" />
+				</Component>
+				<Component Name="PID" minOccurs="0" maxOccurs="1" TagIdentifier="PID" >
+					<Field Name="PID01" />
+					<Field Name="PID02" />
+					<Field Name="PID03" />
+					<Field Name="PID04" />
+					<Field Name="PID05" />
+				</Component>
+				<Component Name="REF" minOccurs="0" maxOccurs="unbounded" TagIdentifier="REF" >
+					<Field Name="REF01" />
+					<Field Name="REF02" />
+					<Field Name="REF03" />
+					<Field Name="REF04" />
+				</Component>
+				<Component Name="DTM" minOccurs="0" maxOccurs="10" TagIdentifier="DTM" >
+					<Field Name="DTM01" />
+					<Field Name="DTM02" />
+				</Component>
+				<Component Name="TC2" minOccurs="0" maxOccurs="unbounded" TagIdentifier="TC2" >
+					<Field Name="TC201" />
+					<Field Name="TC202" />
+				</Component>
+				<Component Name="TD5" minOccurs="0" maxOccurs="unbounded" TagIdentifier="TD5" >
+					<Field Name="TD501" />
+					<Field Name="TD502" />
+					<Field Name="TD503" />
+					<Field Name="TD504" />
+					<Field Name="TD505" />
+					<Field Name="TD506" />
+					<Field Name="TD507" />
+					<Field Name="TD508" />
+					<Field Name="TD509" />
+					<Field Name="TD510" />
+					<Field Name="TD511" />
+					<Field Name="TD512" />
+					<Field Name="TD513" />
+					<Field Name="TD514" />
+					<Field Name="TD515" />
+				</Component>
+				<Component Name="SCH" minOccurs="0" maxOccurs="100" TagIdentifier="SCH" >
+					<Field Name="s1" />
+					<Field Name="s2" />
+					<Field Name="s3" />
+					<Field Name="s4" />
+					<Field Name="s5" />
+					<Field Name="s6" />
+					<Field Name="s7" />
+					<Field Name="s8" />
+					<Field Name="s9" />
+				</Component>
+				<Component Name="SLN" minOccurs="0" maxOccurs="unbounded" TagIdentifier="SLN" >
+					<Field Name="SLN01" />
+					<Field Name="SLN02" />
+					<Field Name="SLN03" />
+					<Field Name="SLN04" />
+					<Field Name="SLN05" />
+					<Field Name="SLN06" />
+					<Field Name="SLN07" />
+					<Field Name="SLN08" />
+					<Field Name="SLN09" />
+					<Field Name="SLN10" />
+					<Field Name="SLN11" />
+					<Field Name="SLN12" />
+					<Field Name="SLN13" />
+					<Field Name="SLN14" />
+					<Field Name="SLN15" />
+					<Field Name="SLN16" />
+					<Field Name="SLN17" />
+					<Field Name="SLN18" />
+					<Field Name="SLN19" />
+					<Field Name="SLN20" />
+					<Field Name="SLN21" />
+					<Field Name="SLN22" />
+					<Field Name="SLN23" />
+					<Field Name="SLN24" />
+					<Field Name="SLN25" />
+					<Field Name="SLN26" />
+					<Field Name="SLN27" />
+					<Field Name="SLN28" />
+				</Component>
+				<Component Name="MSG" minOccurs="0" maxOccurs="1000" TagIdentifier="MSG" >
+					<Field Name="MSG01" />
+				</Component>
+			</Component>
+			<Component Name="CTT" minOccurs="0" maxOccurs="unbounded" TagIdentifier="CTT" >
+				<Field Name="CTT01" />
+			</Component>
+			<Component Name="AMT" minOccurs="0" TagIdentifier="AMT" >
+				<Field Name="AMT01" />
+				<Field Name="AMT02" />
+			</Component>
+			<Component Name="SE" TagIdentifier="SE" >
+				<Field Name="SE01" />
+				<Field Name="SE02" />
+			</Component>
+		</Component>
+		<Component Name="Summary" >
+			<Component Name="GE" TagIdentifier="GE" >
+				<Field Name="GE01" />
+				<Field Name="GE02" />
+			</Component>
+			<Component Name="IEA" TagIdentifier="IEA" >
+				<Field Name="IEA01" />
+				<Field Name="IEA02" />
+			</Component>
+		</Component>
+	</Component>
+</E2XDefinition>

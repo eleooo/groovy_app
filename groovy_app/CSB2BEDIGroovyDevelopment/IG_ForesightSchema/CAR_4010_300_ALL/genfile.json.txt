@@ -1,0 +1,17 @@
+{
+  "schemaFileName": "CAR_4010_300.xsd",
+  "sefFileName": "CAR_4010_300.sef",
+  "escapeChar": "",
+  "x12ReplacementChar":"0X20",
+  "subelementDelimiter": "",
+  "elementDelimiter": "*",
+  "recordDelimiter": "~",
+  "isFieldValueTrimRightSpace":"false",
+  "isFieldValueTrimLeadingSpace":"false",
+  "devName": "Ben",
+  "isOutgoingEDI": true,
+  "ediVersionInfo": "4010",
+  "teamName": "CAR",
+  "msgName": "300",
+  "ediCustomerSpecialInfo": "ALL"
+}

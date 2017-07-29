@@ -1,0 +1,6 @@
+Update project on 2016-06-13, by Bruce Chan.
+The jar use for common b2b edi mapping engine.
+
+Changed:
+1, Add the cs.b2b.core.common.file package
+2, Add the cs.b2b.core.msglogger package

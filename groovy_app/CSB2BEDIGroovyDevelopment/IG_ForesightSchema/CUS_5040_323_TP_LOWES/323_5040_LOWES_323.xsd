@@ -1,0 +1,1381 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://www.tibco.com/ns/Foresight/2010/20" xmlns="http://www.tibco.com/ns/Foresight/2010/20" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xsd:annotation>
+<xsd:documentation>
+Created: Exported from EDISIM 6.13.0 HF-002 05/31/2017 16:06:21.976
+Type: X
+VRI: 005 040
+Desc: Standards Approved for Publication by ASC X12 Procedures Review Board through October 2006
+</xsd:documentation>
+</xsd:annotation>
+  <xsd:simpleType name="BasicTypeA">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\p{L}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="EDITypeA">
+    <xsd:simpleContent>
+      <xsd:extension base="BasicTypeA">
+        <xsd:attribute name="ObjType" default="e" type="xsd:string" />
+        <xsd:attribute name="ObjID" type="xsd:string" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="EDITypeAN">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="ObjType" default="e" type="xsd:string" />
+        <xsd:attribute name="ObjID" type="xsd:string" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="EDITypeB">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:base64Binary">
+        <xsd:attribute name="ObjType" default="e" type="xsd:string" />
+        <xsd:attribute name="ObjID" type="xsd:string" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="EDITypeDT">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="ObjType" default="e" type="xsd:string" />
+        <xsd:attribute name="ObjID" type="xsd:string" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="EDITypeN">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:integer">
+        <xsd:attribute name="ObjType" default="e" type="xsd:string" />
+        <xsd:attribute name="ObjID" type="xsd:string" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="EDITypeR">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:decimal">
+        <xsd:attribute name="ObjType" default="e" type="xsd:string" />
+        <xsd:attribute name="ObjID" type="xsd:string" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="EDITypeTM">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:string">
+        <xsd:attribute name="ObjType" default="e" type="xsd:string" />
+        <xsd:attribute name="ObjID" type="xsd:string" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:element name="T-323">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="L-ISA" minOccurs="0" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="S-ISA" minOccurs="0">
+                  <xsd:annotation>
+                    <xsd:documentation>Interchange Control Header</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="E-I01_ISA_01" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Authorization Information Qualifier</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I01" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I02_ISA_02" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Authorization Information</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="10" />
+                            <xsd:maxLength value="10" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I02" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I03_ISA_03" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Security Information Qualifier</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I03" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I04_ISA_04" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Security Information</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="10" />
+                            <xsd:maxLength value="10" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I04" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I05_ISA_05" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange ID Qualifier</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I05" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I06_ISA_06" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange Sender ID</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="15" />
+                            <xsd:maxLength value="15" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I06" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I05_ISA_07" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange ID Qualifier</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I05" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I07_ISA_08" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange Receiver ID</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="15" />
+                            <xsd:maxLength value="15" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I07" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I08_ISA_09" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange Date</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="6" />
+                            <xsd:maxLength value="6" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I08" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I09_ISA_10" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange Time</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="4" />
+                            <xsd:maxLength value="4" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I09" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I65_ISA_11" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Repetition Separator</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="1" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I65" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I11_ISA_12" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange Control Version Number</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="5" />
+                            <xsd:maxLength value="5" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I11" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I12_ISA_13" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange Control Number</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="9" />
+                            <xsd:maxLength value="9" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I12" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I13_ISA_14" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Acknowledgment Requested</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="1" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I13" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I14_ISA_15" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange Usage Indicator</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="1" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I14" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I15_ISA_16" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Component Element Separator</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="1" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I15" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+                  <xsd:attribute name="ObjID" type="xsd:string" default="ISA" />
+                  <xsd:attribute name="ObjOrd" type="xsd:integer" />
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="S-IEA" minOccurs="0">
+                  <xsd:annotation>
+                    <xsd:documentation>Interchange Control Trailer</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="E-I16_IEA_01" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Number of Included Functional Groups</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeN">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I16" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-I12_IEA_02" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Interchange Control Number</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeN">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="I12" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+                  <xsd:attribute name="ObjID" type="xsd:string" default="IEA" />
+                  <xsd:attribute name="ObjOrd" type="xsd:integer" />
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="ObjType" type="xsd:string" default="I" />
+            <xsd:attribute name="ObjID" type="xsd:string" default="ISA" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="L-GS" minOccurs="0" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="S-GS" minOccurs="0">
+                  <xsd:annotation>
+                    <xsd:documentation>Functional Group Header</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="E-479_GS_01" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Functional Identifier Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="479" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-142_GS_02" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Application Sender's Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="15" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="142" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-124_GS_03" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Application Receiver's Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="15" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="124" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-373_GS_04" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Date</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeDT">
+                            <xsd:minLength value="8" />
+                            <xsd:maxLength value="8" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="373" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-337_GS_05" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Time</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeTM">
+                            <xsd:minLength value="4" />
+                            <xsd:maxLength value="8" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="337" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-28_GS_06" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Group Control Number</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeN">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="28" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-455_GS_07" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Responsible Agency Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="455" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-480_GS_08" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Version / Release / Industry Identifier Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="12" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="480" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+                  <xsd:attribute name="ObjID" type="xsd:string" default="GS" />
+                  <xsd:attribute name="ObjOrd" type="xsd:integer" />
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="S-GE" minOccurs="0">
+                  <xsd:annotation>
+                    <xsd:documentation>Functional Group Trailer</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="E-97_GE_01" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Number of Transaction Sets Included</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeN">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="97" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-28_GE_02" minOccurs="0">
+                        <xsd:annotation>
+                          <xsd:documentation>Group Control Number</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeN">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="28" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+                  <xsd:attribute name="ObjID" type="xsd:string" default="GE" />
+                  <xsd:attribute name="ObjOrd" type="xsd:integer" />
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="ObjType" type="xsd:string" default="G" />
+            <xsd:attribute name="ObjID" type="xsd:string" default="GS" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="S-ST_1">
+            <xsd:annotation>
+              <xsd:documentation>Transaction Set Header</xsd:documentation>
+            </xsd:annotation>
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="E-143_1_01">
+                  <xsd:annotation>
+                    <xsd:documentation>Transaction Set Identifier Code</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="3" />
+                      <xsd:maxLength value="3" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="143" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-329_1_02">
+                  <xsd:annotation>
+                    <xsd:documentation>Transaction Set Control Number</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="4" />
+                      <xsd:maxLength value="9" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="329" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-1705_1_03" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Implementation Convention Reference</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="1" />
+                      <xsd:maxLength value="35" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="1705" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+            <xsd:attribute name="ObjID" type="xsd:string" default="ST" />
+            <xsd:attribute name="ObjOrd" type="xsd:integer" default="1" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="S-V1_2">
+            <xsd:annotation>
+              <xsd:documentation>Vessel Identification</xsd:documentation>
+            </xsd:annotation>
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="E-597_2_01" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Vessel Code</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="1" />
+                      <xsd:maxLength value="8" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="597" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-182_2_02" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Vessel Name</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="2" />
+                      <xsd:maxLength value="28" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="182" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-26_2_03" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Country Code</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="2" />
+                      <xsd:maxLength value="3" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="26" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-55_2_04" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Flight/Voyage Number</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="2" />
+                      <xsd:maxLength value="10" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="55" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-140_2_05" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Standard Carrier Alpha Code</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="2" />
+                      <xsd:maxLength value="4" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="140" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-249_2_06" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Vessel Requirement Code</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="1" />
+                      <xsd:maxLength value="1" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="249" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-854_2_07" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Vessel Type Code</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="2" />
+                      <xsd:maxLength value="2" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="854" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-897_2_08" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Vessel Code Qualifier</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="1" />
+                      <xsd:maxLength value="1" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="897" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-91_2_09" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Transportation Method/Type Code</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="1" />
+                      <xsd:maxLength value="2" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="91" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+            <xsd:attribute name="ObjID" type="xsd:string" default="V1" />
+            <xsd:attribute name="ObjOrd" type="xsd:integer" default="2" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="S-K1_3" minOccurs="0" maxOccurs="2">
+            <xsd:annotation>
+              <xsd:documentation>Remarks</xsd:documentation>
+            </xsd:annotation>
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="E-61_3_01">
+                  <xsd:annotation>
+                    <xsd:documentation>Free-form Information</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="1" />
+                      <xsd:maxLength value="30" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="61" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-61_3_02" minOccurs="0" nillable="true">
+                  <xsd:annotation>
+                    <xsd:documentation>Free-form Information</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="1" />
+                      <xsd:maxLength value="30" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="61" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+            <xsd:attribute name="ObjID" type="xsd:string" default="K1" />
+            <xsd:attribute name="ObjOrd" type="xsd:integer" default="3" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="L-R4_4" minOccurs="0" maxOccurs="999">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="S-R4_4">
+                  <xsd:annotation>
+                    <xsd:documentation>Port or Terminal</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="E-115_4_01">
+                        <xsd:annotation>
+                          <xsd:documentation>Port or Terminal Function Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="1" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="115" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-309_4_02" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Location Qualifier</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="309" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-310_4_03" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Location Identifier</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="30" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="310" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-114_4_04" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Port Name</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="24" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="114" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-26_4_05" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Country Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="3" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="26" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-174_4_06" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Terminal Name</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="30" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="174" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-113_4_07" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Pier Number</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="4" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="113" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-156_4_08" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>State or Province Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="156" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+                  <xsd:attribute name="ObjID" type="xsd:string" default="R4" />
+                  <xsd:attribute name="ObjOrd" type="xsd:integer" default="4" />
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="S-DTM_5" minOccurs="0" maxOccurs="15">
+                  <xsd:annotation>
+                    <xsd:documentation>Date/Time Reference</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="E-374_5_01">
+                        <xsd:annotation>
+                          <xsd:documentation>Date/Time Qualifier</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="3" />
+                            <xsd:maxLength value="3" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="374" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-373_5_02" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Date</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeDT">
+                            <xsd:minLength value="8" />
+                            <xsd:maxLength value="8" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="373" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-337_5_03" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Time</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeTM">
+                            <xsd:minLength value="4" />
+                            <xsd:maxLength value="8" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="337" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-623_5_04" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Time Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="623" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-1250_5_05" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Date Time Period Format Qualifier</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="3" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="1250" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-1251_5_06" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Date Time Period</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="35" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="1251" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+                  <xsd:attribute name="ObjID" type="xsd:string" default="DTM" />
+                  <xsd:attribute name="ObjOrd" type="xsd:integer" default="5" />
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="S-V9_6" maxOccurs="5">
+                  <xsd:annotation>
+                    <xsd:documentation>Event Detail</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="E-304_6_01">
+                        <xsd:annotation>
+                          <xsd:documentation>Event Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="3" />
+                            <xsd:maxLength value="3" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="304" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-106_6_02" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Event</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="25" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="106" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-373_6_03" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Date</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeDT">
+                            <xsd:minLength value="8" />
+                            <xsd:maxLength value="8" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="373" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-337_6_04" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Time</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeTM">
+                            <xsd:minLength value="4" />
+                            <xsd:maxLength value="8" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="337" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-19_6_05" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>City Name</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="30" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="19" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-156_6_06" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>State or Province Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="156" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-26_6_07" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Country Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="3" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="26" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-641_6_08" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Status Reason Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="3" />
+                            <xsd:maxLength value="3" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="641" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-154_6_09" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Standard Point Location Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="6" />
+                            <xsd:maxLength value="9" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="154" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-380_6_10" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Quantity</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeR">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="380" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-1274_6_11" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Train Delay Reason Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="3" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="1274" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-61_6_12" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Free-form Information</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="1" />
+                            <xsd:maxLength value="30" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="61" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-623_6_13" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Time Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="2" />
+                            <xsd:maxLength value="2" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="623" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-380_6_14" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Quantity</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeR">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="380" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-154_6_15" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Standard Point Location Code</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeAN">
+                            <xsd:minLength value="6" />
+                            <xsd:maxLength value="9" />
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="154" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-86_6_16" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Total Equipment</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeN">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="86" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-86_6_17" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Total Equipment</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeN">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="86" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-86_6_18" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Total Equipment</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeN">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="86" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-81_6_19" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Weight</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeR">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="81" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="E-82_6_20" minOccurs="0" nillable="true">
+                        <xsd:annotation>
+                          <xsd:documentation>Length</xsd:documentation>
+                        </xsd:annotation>
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:restriction base="EDITypeR">
+                            <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                            <xsd:attribute name="ObjID" type="xsd:string" default="82" />
+                          </xsd:restriction>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+                  <xsd:attribute name="ObjID" type="xsd:string" default="V9" />
+                  <xsd:attribute name="ObjOrd" type="xsd:integer" default="6" />
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="ObjType" type="xsd:string" default="l" />
+            <xsd:attribute name="ObjID" type="xsd:string" default="R4" />
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="S-SE_7">
+            <xsd:annotation>
+              <xsd:documentation>Transaction Set Trailer</xsd:documentation>
+            </xsd:annotation>
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="E-96_7_01">
+                  <xsd:annotation>
+                    <xsd:documentation>Number of Included Segments</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeN">
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="96" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="E-329_7_02">
+                  <xsd:annotation>
+                    <xsd:documentation>Transaction Set Control Number</xsd:documentation>
+                  </xsd:annotation>
+                <xsd:complexType>
+                  <xsd:simpleContent>
+                    <xsd:restriction base="EDITypeAN">
+                      <xsd:minLength value="4" />
+                      <xsd:maxLength value="9" />
+                      <xsd:attribute name="ObjType" type="xsd:string" default="e" />
+                      <xsd:attribute name="ObjID" type="xsd:string" default="329" />
+                    </xsd:restriction>
+                  </xsd:simpleContent>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="ObjType" type="xsd:string" default="s" />
+            <xsd:attribute name="ObjID" type="xsd:string" default="SE" />
+            <xsd:attribute name="ObjOrd" type="xsd:integer" default="7" />
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="ObjType" type="xsd:string" default="t" />
+      <xsd:attribute name="ObjID" type="xsd:string" default="323" />
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

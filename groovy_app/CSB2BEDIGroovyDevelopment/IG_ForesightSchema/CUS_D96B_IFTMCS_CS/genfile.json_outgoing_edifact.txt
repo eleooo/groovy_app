@@ -1,0 +1,16 @@
+{
+  "schemaFileName": "CS-SYSINT-CUST-IFTMCS-EDIFACT_D96B_20140730_JO_IFTMCS.xsd",
+  "sefFileName": "CS-SYSINT-CUST-IFTMCS-EDIFACT_D96B_20140730_JO.sef",
+  "escapeChar": "?",
+  "subelementDelimiter": ":",
+  "elementDelimiter": "+",
+  "recordDelimiter": "0x27 0x0d 0x0a",
+  "isFieldValueTrimRightSpace":"false",
+  "isFieldValueTrimLeadingSpace":"false",
+  "devName": "Gawing",
+  "isOutgoingEDI": true,
+  "ediVersionInfo": "d96b",
+  "teamName": "CUS",
+  "msgName": "IFTMCS",
+  "ediCustomerSpecialInfo": "CS"
+}

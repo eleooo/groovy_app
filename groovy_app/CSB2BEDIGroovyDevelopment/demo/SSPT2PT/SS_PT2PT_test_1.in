@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ns2:Message xmlns:ns2="http://schedulingsmart.com/namespace">
+    <TemplateDescription>
+        <TemplateName>SSM_XML_PT_PT_Schedule_Template</TemplateName>
+        <TemplateType>Schedule</TemplateType>
+        <Release>1</Release>
+        <CreationDateTime>30/09/2016 19:41:39</CreationDateTime>
+    </TemplateDescription>
+    <Identification>
+        <RefNo>20160930_2016093020161223_GTNEXUSPORT_454</RefNo>
+        <ScheduleType>Point2PointSchedule</ScheduleType>
+        <VersionNumber>1</VersionNumber>
+        <CreationDateTime>30/09/2016 19:41:39</CreationDateTime>
+        <TransmissionDateTime>30/09/2016 19:41:39</TransmissionDateTime>
+        <Sender>
+            <SenderName>SchedulingSmart</SenderName>
+            <SenderCode>SSM</SenderCode>
+        </Sender>
+        <Receiver>
+            <ReceiverName>GTNEXUS (Extract by Port Pair)</ReceiverName>
+            <ReceiverCode>GTNEXUSPORT</ReceiverCode>
+        </Receiver>
+    </Identification>
+    <RouteGroup>
+        <SearchCriteria>
+            <OriginUnlocode>USSAV</OriginUnlocode>
+            <DestinationUnlocode>TWTXG</DestinationUnlocode>
+            <DateRangeType>SAILING</DateRangeType>
+            <FromDate>30/09/2016</FromDate>
+            <ToDate>23/12/2016</ToDate>
+            <ExtractionDate>30/09/2016 17:52:29</ExtractionDate>
+        </SearchCriteria>
+        <Route>
+            <Origin>
+                <City>
+                    <City>Wellington</City>
+                    <County></County>
+                    <State>Wellington</State>
+                    <Country>New Zealand</Country>
+                    <UNLOCODE>NZWLG</UNLOCODE>
+                </City>
+                <Event>
+                    <Name>Default_Cutoff</Name>
+                    <LocalDateTime>24/11/2016 17:00:00</LocalDateTime>
+                </Event>
+                <HaulageIndicator>C</HaulageIndicator>
+            </Origin>
+            <Destination>
+                <City>
+                    <City>Dublin</City>
+                    <County></County>
+                    <State></State>
+                    <Country>The Republic of Ireland</Country>
+                    <UNLOCODE>IEDUB</UNLOCODE>
+                </City>
+                <Event>
+                    <Name>Default_Availability</Name>
+                    <LocalDateTime>24/01/2017 20:00:00</LocalDateTime>
+                </Event>
+                <HaulageIndicator>B</HaulageIndicator>
+            </Destination>
+            <Carrier>
+                <SCAC>OOLU</SCAC>
+                <Name>OOCL</Name>
+            </Carrier>
+            <OceanComponent>
+                <oceanleg>
+                    <LegSequence>1</LegSequence>
+                    <POL>
+                        <PortName>first pol port</PortName>
+                        <UNLOCODE>first pol un</UNLOCODE>
+                        <FacilityCode>WEL01</FacilityCode>
+                        <Address>
+                            <AddressLines></AddressLines>
+                        </Address>
+                        <Event>
+                            <Name>Estimate Berth Departure</Name>
+                            <LocalDateTime>11/11/2016 20:00:00</LocalDateTime>
+                        </Event>
+                        <Event>
+                            <Name>Default_Cutoff</Name>
+                            <LocalDateTime>24/11/2016 17:00:00</LocalDateTime>
+                        </Event>
+                    </POL>
+                    <POD>
+                        <PortName>Singapore</PortName>
+                        <UNLOCODE>SGSIN</UNLOCODE>
+                        <FacilityCode>SIN01</FacilityCode>
+                        <Address>
+                            <AddressLines></AddressLines>
+                        </Address>
+                        <Event>
+                            <Name>Estimate Berth Arrival</Name>
+                            <LocalDateTime>15/12/2016 02:00:00</LocalDateTime>
+                        </Event>
+                    </POD>
+                    <service>
+                        <trade>AUT</trade>
+                        <tradeLane>AUT</tradeLane>
+                        <ServiceCode>NZS</ServiceCode>
+                    </service>
+                    <Vessel>
+                        <LloydsNumber>9326794</LloydsNumber>
+                        <Code>ANH</Code>
+                        <Name>ANL WARATAH</Name>
+                    </Vessel>
+                    <Voyage>
+                        <InternalVoyageNumber>120</InternalVoyageNumber>
+                        <ExternalVoyageNumber>120</ExternalVoyageNumber>
+                    </Voyage>
+                    <Direction>N</Direction>
+                </oceanleg>
+                <oceanleg>
+                    <LegSequence>2</LegSequence>
+                    <POL>
+                        <PortName>Southampton</PortName>
+                        <UNLOCODE>GBSOU</UNLOCODE>
+                        <FacilityCode>STN01</FacilityCode>
+                        <Address>
+                            <AddressLines></AddressLines>
+                        </Address>
+                        <Event>
+                            <Name>Estimate Berth Departure</Name>
+                            <LocalDateTime>19/01/2017 18:00:00</LocalDateTime>
+                        </Event>
+                        <Event>
+                            <Name>Default_Cutoff</Name>
+                            <LocalDateTime>19/01/2017 06:00:00</LocalDateTime>
+                        </Event>
+                    </POL>
+                    <POD>
+                        <PortName>last port</PortName>
+                        <UNLOCODE>LAST UN</UNLOCODE>
+                        <FacilityCode>DUB04</FacilityCode>
+                        <Address>
+                            <AddressLines></AddressLines>
+                        </Address>
+                        <Event>
+                            <Name>Estimate Berth Arrival</Name>
+                            <LocalDateTime>22/22/2017 06:00:00</LocalDateTime>
+                        </Event>
+                    </POD>
+                    <service>
+                        <trade>AUT</trade>
+                        <tradeLane>AUT</tradeLane>
+                        <ServiceCode>last ServiceCode</ServiceCode>
+                    </service>
+                    <Vessel>
+                        <LloydsNumber>last LloydsNumber</LloydsNumber>
+                        <Code></Code>
+                        <Name>last name</Name>
+                    </Vessel>
+                    <Voyage>
+                        <InternalVoyageNumber>last</InternalVoyageNumber>
+                        <ExternalVoyageNumber>last ExternalVoyageNumber</ExternalVoyageNumber>
+                    </Voyage>
+                    <Direction>S</Direction>
+                </oceanleg>
+            </OceanComponent>
+            <EstimatedTransitTimeInDays>59</EstimatedTransitTimeInDays>
+            <RouteStatus>0</RouteStatus>
+        </Route>
+        <TotalCounts>72551</TotalCounts>
+        <FromCount>72481</FromCount>
+        <ToCount>72551</ToCount>
+        <Remarks></Remarks>
+    </RouteGroup>
+</ns2:Message>

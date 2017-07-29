@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ContainerMovement xmlns:ns0="http://www.cargosmart.com/route">
+    <ns0:Header>
+        <ns1:MsgDT xmlns:ns1="http://www.cargosmart.com/common">
+            <ns1:GMT>2016-09-02T07:36:21.229+08:00</ns1:GMT>
+            <ns1:LocDT TimeZone="HKT" CSTimeZone="HKT">2016-09-02T15:36:21.229+08:00</ns1:LocDT>
+        </ns1:MsgDT>
+        <ns1:MsgDirection xmlns:ns1="http://www.cargosmart.com/common">O</ns1:MsgDirection>
+        <ns1:MsgType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:MsgType>
+        <ns1:SenderID xmlns:ns1="http://www.cargosmart.com/common">CargoSmart</ns1:SenderID>
+        <ns1:ReceiverID xmlns:ns1="http://www.cargosmart.com/common">BENNETTDSG</ns1:ReceiverID>
+        <ns1:Action xmlns:ns1="http://www.cargosmart.com/common">NEW</ns1:Action>
+        <ns1:Version xmlns:ns1="http://www.cargosmart.com/common">24</ns1:Version>
+        <ns1:InterchangeMessageID xmlns:ns1="http://www.cargosmart.com/common">BENNETTDSG_CT_20160902153621_91216184</ns1:InterchangeMessageID>
+        <ns1:DataSource xmlns:ns1="http://www.cargosmart.com/common">CS2 db</ns1:DataSource>
+    </ns0:Header>
+    <ns0:Body>
+        <ns0:TransactionInformation>
+            <ns1:MessageID xmlns:ns1="http://www.cargosmart.com/common">BENNETTDSG_CT_20160902153621_91216184_91216184</ns1:MessageID>
+            <ns1:InterchangeTransactionID xmlns:ns1="http://www.cargosmart.com/common">91216184</ns1:InterchangeTransactionID>
+        </ns0:TransactionInformation>
+        <ns0:Event>
+            <ns0:CarrEventCode>Empty picked up, but not full return</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_emp_pickup</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Empty container picked up but not returned to carrier</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Container Corporation of India Ltd.</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Ahmedabad</ns0:City>
+                    <ns0:State>Gujarat</ns0:State>
+                    <ns0:Country>India</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">INAMD</ns1:UNLocationCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2546702</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GJ</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">IN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-31T02:10:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="INT">2016-08-31T07:40:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CurrentShipmentLeg>1</ns0:CurrentShipmentLeg>
+            <ns0:CarrierUniqueMovementID>10100328199476-1-28</ns0:CarrierUniqueMovementID>
+            <ns0:ContraIndicator>INITIAL</ns0:ContraIndicator>
+            <ns0:CS1Event>CS010</ns0:CS1Event>
+        </ns0:Event>
+        <ns0:GeneralInformation>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Truck</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:Label>Empty Equipment Despatched</ns0:Label>
+            <ns0:ProposedAction>ADD_CNTR_STATUS_NOTIFY</ns0:ProposedAction>
+            <ns0:TimeOfIssue>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-31T02:10:00+08:00</ns1:GMT>
+            </ns0:TimeOfIssue>
+            <ns0:IsCSCustomer>1</ns0:IsCSCustomer>
+        </ns0:GeneralInformation>
+        <ns0:Container>
+            <ns0:ContainerNumber>OOLU914968</ns0:ContainerNumber>
+            <ns0:ContainerCheckDigit>8</ns0:ContainerCheckDigit>
+            <ns0:CarrCntrSizeType>45G1</ns0:CarrCntrSizeType>
+            <ns0:CSContainerSizeType>45G1</ns0:CSContainerSizeType>
+            <ns0:Seal>
+                <ns1:SealType xmlns:ns1="http://www.cargosmart.com/common">HS</ns1:SealType>
+                <ns1:SealNumber xmlns:ns1="http://www.cargosmart.com/common">OOLDHJ3371</ns1:SealNumber>
+            </ns0:Seal>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:CSS_CNTR_UUID>2000000003713407981</ns0:CSS_CNTR_UUID>
+            <ns0:CS1ContainerSizeType>40HQ</ns0:CS1ContainerSizeType>
+            <ns0:EmptyReturnFacilityCode>SAV03</ns0:EmptyReturnFacilityCode>
+        </ns0:Container>
+        <ns0:BookingGeneralInfo>
+            <ns0:CarrierBookingNumber>2577392130</ns0:CarrierBookingNumber>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:BookingOffice>Mundra</ns0:BookingOffice>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">PK</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">48</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">1X40' FCL Container Containing
+TOTAL 48 PACKAGES
+TOTAL 8915 PIECES PACKED IN 48
+BALES.
+PP WOVEN SACKS
+AS PER BUYER PURCHASE ORDER 
+NUMBER 11803 ,DATED :-12/07/2016.
+DELIVERY TERMS: FOB MUNDRA 
+PORT,INDIA
+HS CODE 39232990
+FREIGHT  COLLECT</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BookingGeneralInfo>
+        <ns0:BLGeneralInfo>
+            <ns0:BLNumber>2577392130</ns0:BLNumber>
+            <ns0:BLIssueDT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common">2016-09-07T00:00:00+08:00</ns1:LocDT>
+            </ns0:BLIssueDT>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:CustomsClearanceLocationCode>1703</ns0:CustomsClearanceLocationCode>
+            <ns0:BLSVVD>
+                <ns1:Service xmlns:ns1="http://www.cargosmart.com/common">IEX</ns1:Service>
+                <ns1:Vessel xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:Vessel>
+                <ns1:VesselName xmlns:ns1="http://www.cargosmart.com/common">CMA CGM NERVAL</ns1:VesselName>
+                <ns1:Voyage xmlns:ns1="http://www.cargosmart.com/common">004</ns1:Voyage>
+                <ns1:Direction xmlns:ns1="http://www.cargosmart.com/common">W</ns1:Direction>
+                <ns0:ServiceName>INDIA EAST COAST EXPRESS</ns0:ServiceName>
+            </ns0:BLSVVD>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">PK</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">48</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">1X40' FCL Container Containing TOTAL 48 PACKAGES TOTAL 8915 PIECES PACKED IN 48 BALES. PP WOVEN SACKS AS PER BUYER PURCHASE ORDER NUMBER 11803 ,DATED :-12/07/2016. DELIVERY TERMS: FOB MUNDRA PORT,INDIA HS CODE 39232990 FREIGHT COLLECT</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BLGeneralInfo>
+        <ns0:Route>
+            <ns0:POR>
+                <ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Mundra</ns1:LocationName>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Mundra</ns1:City>
+                    <ns1:State>Gujarat</ns1:State>
+                    <ns1:Country>India</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>INMUN</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>INMUN</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>53306</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>PIP02</ns1:FacilityCode>
+                    <ns1:FacilityName>Mundra International Container Terminal</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2540832</ns1:CSParentCityID>
+                    <ns1:CSStateCode>GJ</ns1:CSStateCode>
+                    <ns1:CSCountryCode>IN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>AS</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+            </ns0:POR>
+            <ns0:FND>
+                <ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Savannah</ns1:LocationName>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Savannah</ns1:City>
+                    <ns1:County>Chatham</ns1:County>
+                    <ns1:State>Georgia</ns1:State>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>USSAV</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>USSAV</ns1:UNLocationCode>
+                        <ns1:SchedKDType>D</ns1:SchedKDType>
+                        <ns1:SchedKDCode>1703</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>SAV03</ns1:FacilityCode>
+                    <ns1:FacilityName>Garden City Terminal</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2531528</ns1:CSParentCityID>
+                    <ns1:CSStateCode>GA</ns1:CSStateCode>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>NA</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+                <ns0:ArrivalDT Indicator="E">
+                    <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-02T11:00:00+08:00</ns1:GMT>
+                    <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EDT" CSTimeZone="EDT">2016-10-02T07:00:00+08:00</ns1:LocDT>
+                </ns0:ArrivalDT>
+            </ns0:FND>
+            <ns0:FirstPOL>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Mundra</ns1:PortName>
+                    <ns1:PortCode>MUN</ns1:PortCode>
+                    <ns1:City>Mundra</ns1:City>
+                    <ns1:State>Gujarat</ns1:State>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>INMUN</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>53306</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>India</ns1:Country>
+                    <ns1:CSPortID>197</ns1:CSPortID>
+                    <ns1:CSCountryCode>IN</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>PIP02</ns1:FacilityCode>
+                    <ns1:FacilityName>Mundra International Container Terminal</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSStateCode>GJ</ns0:CSStateCode>
+                <ns0:CSParentCityID>2540832</ns0:CSParentCityID>
+            </ns0:FirstPOL>
+            <ns0:LastPOD>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Savannah</ns1:PortName>
+                    <ns1:PortCode>SAV</ns1:PortCode>
+                    <ns1:City>Savannah</ns1:City>
+                    <ns1:County>Chatham</ns1:County>
+                    <ns1:State>Georgia</ns1:State>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>USSAV</ns1:UNLocationCode>
+                        <ns1:SchedKDType>D</ns1:SchedKDType>
+                        <ns1:SchedKDCode>1703</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:CSPortID>440</ns1:CSPortID>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>SAV03</ns1:FacilityCode>
+                    <ns1:FacilityName>Garden City Terminal</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSStateCode>GA</ns0:CSStateCode>
+                <ns0:CSParentCityID>2531528</ns0:CSParentCityID>
+            </ns0:LastPOD>
+            <ns0:ArrivalAtFinalHub Indicator="E">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-02T11:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EDT" CSTimeZone="EDT">2016-10-02T07:00:00+08:00</ns1:LocDT>
+            </ns0:ArrivalAtFinalHub>
+            <ns0:FullReturnCutoffDT Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-09-06T18:30:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="IST" CSTimeZone="INT">2016-09-07T00:00:00+08:00</ns1:LocDT>
+            </ns0:FullReturnCutoffDT>
+            <ns0:CargoDeliveryDT Indicator="E">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-02T11:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EDT" CSTimeZone="EDT">2016-10-02T07:00:00+08:00</ns1:LocDT>
+            </ns0:CargoDeliveryDT>
+            <ns0:OceanLeg>
+                <ns0:LegSeq>1</ns0:LegSeq>
+                <ns0:POL>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Mundra</ns1:PortName>
+                        <ns1:City>Mundra</ns1:City>
+                        <ns1:State>Gujarat</ns1:State>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>INMUN</ns1:UNLocationCode>
+                            <ns1:SchedKDType>K</ns1:SchedKDType>
+                            <ns1:SchedKDCode>53306</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>India</ns1:Country>
+                        <ns1:CSPortID>197</ns1:CSPortID>
+                        <ns1:CSCountryCode>IN</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>PIP02</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:DepartureDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-09-07T15:30:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="IST" CSTimeZone="INT">2016-09-07T21:00:00+08:00</ns1:LocDT>
+                    </ns0:DepartureDT>
+                    <ns0:CSStateCode>GJ</ns0:CSStateCode>
+                    <ns0:CSParentCityID>2540832</ns0:CSParentCityID>
+                </ns0:POL>
+                <ns0:POD>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Savannah</ns1:PortName>
+                        <ns1:City>Savannah</ns1:City>
+                        <ns1:County>Chatham</ns1:County>
+                        <ns1:State>Georgia</ns1:State>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>USSAV</ns1:UNLocationCode>
+                            <ns1:SchedKDType>D</ns1:SchedKDType>
+                            <ns1:SchedKDCode>1703</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>United States</ns1:Country>
+                        <ns1:CSPortID>440</ns1:CSPortID>
+                        <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>SAV03</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:ArrivalDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-10-01T22:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="EDT" CSTimeZone="EDT">2016-10-01T18:00:00+08:00</ns1:LocDT>
+                    </ns0:ArrivalDT>
+                    <ns0:CSStateCode>GA</ns0:CSStateCode>
+                    <ns0:CSParentCityID>2531528</ns0:CSParentCityID>
+                </ns0:POD>
+                <ns0:SVVD>
+                    <ns0:Loading>
+                        <ns0:Service>IEX</ns0:Service>
+                        <ns0:ServiceName>INDIA EAST COAST EXPRESS</ns0:ServiceName>
+                        <ns0:Vessel>CGN</ns0:Vessel>
+                        <ns0:VesselName>CMA CGM NERVAL</ns0:VesselName>
+                        <ns0:Voyage>004</ns0:Voyage>
+                        <ns0:Direction>West</ns0:Direction>
+                        <ns0:LloydsNumber>9406623</ns0:LloydsNumber>
+                        <ns0:CallSign>9HA2361</ns0:CallSign>
+                        <ns0:RegistrationCountry>Malta</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>MT</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>6135</ns0:ExternalVoyage>
+                    </ns0:Loading>
+                    <ns0:Discharge>
+                        <ns0:Service>IEX</ns0:Service>
+                        <ns0:ServiceName>INDIA EAST COAST EXPRESS</ns0:ServiceName>
+                        <ns0:Vessel>CGN</ns0:Vessel>
+                        <ns0:VesselName>CMA CGM NERVAL</ns0:VesselName>
+                        <ns0:Voyage>004</ns0:Voyage>
+                        <ns0:Direction>East</ns0:Direction>
+                        <ns0:LloydsNumber>9406623</ns0:LloydsNumber>
+                        <ns0:CallSign>9HA2361</ns0:CallSign>
+                        <ns0:RegistrationCountry>Malta</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>MT</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>6235</ns0:ExternalVoyage>
+                    </ns0:Discharge>
+                </ns0:SVVD>
+            </ns0:OceanLeg>
+        </ns0:Route>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>CSBKG</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>CS5355369712</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription>CS Reference Number</ns0:ReferenceDescription>
+        </ns0:ExternalReference>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>SC</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>PE164235v000</ns0:ReferenceNumber>
+        </ns0:ExternalReference>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">BPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sar Transport Systems(P) Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">SARTIN630750359</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6613358000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:ContactEmailAddress>mundra@sartransport.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>New Delhi</ns1:City>
+                <ns1:State>Delhi</ns1:State>
+                <ns1:Country>IN</ns1:Country>
+                <ns1:PostalCode>110019</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>504, Mansarovar Building&#xD;
+90 Nehru Place</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sar Transport Systems(P) Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">SARTIN630750359</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6613358000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>New Delhi</ns1:City>
+                <ns1:State>Delhi</ns1:State>
+                <ns1:Country>IN</ns1:Country>
+                <ns1:PostalCode>110019</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>504, Mansarovar Building&#xD;
+90 Nehru Place</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sar Transport Systems(P) Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">SARTIN630750359</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6613358000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>New Delhi</ns1:City>
+                <ns1:State>Delhi</ns1:State>
+                <ns1:Country>IN</ns1:Country>
+                <ns1:PostalCode>110019</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>504, Mansarovar Building&#xD;
+90 Nehru Place</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sar Transport Systems(P) Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">SARTIN630750359</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6613358000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>New Delhi</ns1:City>
+                <ns1:State>Delhi</ns1:State>
+                <ns1:Country>IN</ns1:Country>
+                <ns1:PostalCode>110019</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>504, Mansarovar Building&#xD;
+90 Nehru Place</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sar Transport Systems(P) Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">SARTIN630750359</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6613358000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>New Delhi</ns1:City>
+                <ns1:State>Delhi</ns1:State>
+                <ns1:Country>IN</ns1:Country>
+                <ns1:PostalCode>110019</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>504, Mansarovar Building&#xD;
+90 Nehru Place</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CCP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sar Transport Systems(P) Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">SARTIN630750359</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6613358000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>New Delhi</ns1:City>
+                <ns1:State>Delhi</ns1:State>
+                <ns1:Country>IN</ns1:Country>
+                <ns1:PostalCode>110019</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>504, Mansarovar Building&#xD;
+90 Nehru Place</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">NPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Bennett International Transport, L.L.C.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">BENNUS1659432588</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3147065000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Tricia</ns1:FirstName>
+                <ns1:LastName>Reynolds</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>770</ns1:AreaCode>
+                    <ns1:Number>9573395</ns1:Number>
+                </ns1:ContactPhone>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Mc Donough</ns1:City>
+                <ns1:County>Henry</ns1:County>
+                <ns1:State>Georgia</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>30253</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>1001 Industrial Parkway</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Bennett International Transport, L.L.C.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">BENNUS1659432588</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3147065000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Tricia</ns1:FirstName>
+                <ns1:LastName>Reynolds</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>770</ns1:AreaCode>
+                    <ns1:Number>9573395</ns1:Number>
+                </ns1:ContactPhone>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Mc Donough</ns1:City>
+                <ns1:County>Henry</ns1:County>
+                <ns1:State>Georgia</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>30253</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>1001 Industrial Parkway</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sar Transport Systems(P) Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">SARTIN630750359</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6613358000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>New Delhi</ns1:City>
+                <ns1:State>Delhi</ns1:State>
+                <ns1:Country>IN</ns1:Country>
+                <ns1:PostalCode>110019</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>504, Mansarovar Building&#xD;
+90 Nehru Place</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sar Transport Systems(P) Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">SARTIN630750359</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6613358000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>New Delhi</ns1:City>
+                <ns1:State>Delhi</ns1:State>
+                <ns1:Country>IN</ns1:Country>
+                <ns1:PostalCode>110019</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>504, Mansarovar Building&#xD;
+90 Nehru Place</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sar Transport Systems(P) Ltd.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">SARTIN630750359</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6613358000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>New Delhi</ns1:City>
+                <ns1:State>Delhi</ns1:State>
+                <ns1:Country>IN</ns1:Country>
+                <ns1:PostalCode>110019</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>504, Mansarovar Building&#xD;
+90 Nehru Place</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Cargo>
+            <ns1:CargoNature xmlns:ns1="http://www.cargosmart.com/common">GC</ns1:CargoNature>
+            <ns1:CargoDescription xmlns:ns1="http://www.cargosmart.com/common">PP FLEXIBLE INTERMEDIATES</ns1:CargoDescription>
+            <ns1:Packaging xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:PackageType>PK</ns1:PackageType>
+                <ns1:PackageQty>48</ns1:PackageQty>
+                <ns1:PackageDesc>1X40' FCL Container Containing
+TOTAL 48 PACKAGES
+TOTAL 8915 PIECES PACKED IN 48
+BALES.
+PP WOVEN SACKS
+AS PER BUYER PURCHASE ORDER 
+NUMBER 11803 ,DATED :-12/07/2016.
+DELIVERY TERMS: FOB MUNDRA 
+PORT,INDIA
+HS CODE 39232990
+FREIGHT  COLLECT</ns1:PackageDesc>
+            </ns1:Packaging>
+            <ns1:GrossWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>19395</ns1:Weight>
+                <ns1:WeightUnit>KGS</ns1:WeightUnit>
+            </ns1:GrossWeight>
+            <ns1:NetWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>19347</ns1:Weight>
+                <ns1:WeightUnit>KGS</ns1:WeightUnit>
+            </ns1:NetWeight>
+            <ns1:Volume xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Volume>40</ns1:Volume>
+                <ns1:VolumeUnit>CBM</ns1:VolumeUnit>
+            </ns1:Volume>
+        </ns0:Cargo>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>Empty picked up, but not full return</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_emp_pickup</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Empty container picked up but not returned to carrier</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Container Corporation of India Ltd.</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Ahmedabad</ns0:City>
+                    <ns0:State>Gujarat</ns0:State>
+                    <ns0:Country>India</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">INAMD</ns1:UNLocationCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2546702</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GJ</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">IN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-31T02:10:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="INT">2016-08-31T07:40:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>10100328199476-1-28</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Truck</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS010</ns0:CS1Event>
+        </ns0:MileStones>
+    </ns0:Body>
+</ns0:ContainerMovement>

@@ -1,0 +1,1589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<E2XDefinition ElementDelimiter="+" ElementType="delimited"
+    EscapeChar="?" OutXMLTargetNameSpace=""
+    OutXMLTargetNameSpacePrefix="" RecordDelimiter="0x27 0x0d 0x0a"
+    SubElementDelimiter=":" isEdifact="true"
+    isFieldValueTrimRightSpace="true" isOutputForesightXML="true"
+    isSuppressEmptyNodes="true"
+    xmlns="http://www.cargosmart.com/b2b/transformparser/e2x" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Component Name="Transactions">
+        <Component Name="Reordered-Transaction">
+            <Component IsTransactionEnvelope="true" Name="T-IFTMBC"
+                ObjID="S-UNA" ObjOrd="0" ObjType="S"
+                OnValidationFailBehaviour="FailCompleteMessage"
+                OutXMLTargetNameSapce="http://www.tibco.com/ns/Foresight/2010/20"
+                TagIdentifier="UNA" maxOccurs="unbounded">
+                <!-- for txn envelop behavior, OnValidationFailBehaviour possible value are: 'FailCompleteMessage' or 'IgnoreProblematicTransactions' -->
+                <Component Name="S-UNA" ObjID="S-UNA" ObjOrd="0"
+                    ObjType="S" TagIdentifier="UNA" maxOccurs="99999999" minOccurs="0">
+                    <Field Name="E-UNA01" ObjType="e"/>
+                    <Field Name="E-UNA02" ObjType="e"/>
+                    <Field Name="E-UNA03" ObjType="e"/>
+                    <Field Name="E-UNA04" ObjType="e"/>
+                    <Field Name="E-UNA05" ObjType="e"/>
+                    <Field Name="E-UNA06" ObjType="e"/>
+                </Component>
+                <Component Name="L-UNB" ObjID="UNB" ObjType="I"
+                    TagIdentifier="UNB" maxOccurs="99999999" minOccurs="0">
+                    <Component Name="S-UNB" ObjID="UNB" ObjType="s"
+                        TagIdentifier="UNB" minOccurs="0">
+                        <Field Name="C-S001_UNB_01" ObjID="S001"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-0001_UNB_01.01"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0002_UNB_01.02"
+                                ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-S002_UNB_02" ObjID="S002"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-0004_UNB_02.01"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0007_UNB_02.02"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0008_UNB_02.03"
+                                ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-S003_UNB_03" ObjID="S003"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-0010_UNB_03.01"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0007_UNB_03.02"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0014_UNB_03.03"
+                                ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-S004_UNB_04" ObjID="S004"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-0017_UNB_04.01"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0019_UNB_04.02"
+                                ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-0020_UNB_05" ObjType="e" minOccurs="0"/>
+                        <Field Name="C-S005_UNB_06" ObjID="S005"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-0022_UNB_06.01"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0025_UNB_06.02"
+                                ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-0026_UNB_07" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-0029_UNB_08" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-0031_UNB_09" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-0032_UNB_10" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-0035_UNB_11" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-UNZ" ObjID="UNZ" ObjType="s"
+                        TagIdentifier="UNZ" minOccurs="0">
+                        <Field Name="E-0036_UNZ_01" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-0020_UNZ_02" ObjType="e" minOccurs="0"/>
+                    </Component>
+                </Component>
+                <Component Name="L-UNG" ObjID="UNG" ObjType="G"
+                    TagIdentifier="UNG" maxOccurs="99999999" minOccurs="0">
+                    <Component Name="S-UNG" ObjID="UNG" ObjType="s"
+                        TagIdentifier="UNG" minOccurs="0">
+                        <Field Name="E-0038_UNG_01" ObjType="e" minOccurs="0"/>
+                        <Field Name="C-S006_UNG_02" ObjID="S006"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-0040_UNG_02.01"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0007_UNG_02.02"
+                                ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-S007_UNG_03" ObjID="S007"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-0044_UNG_03.01"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0007_UNG_03.02"
+                                ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-S004_UNG_04" ObjID="S004"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-0017_UNG_04.01"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0019_UNG_04.02"
+                                ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-0048_UNG_05" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-0051_UNG_06" ObjType="e" minOccurs="0"/>
+                        <Field Name="C-S008_UNG_07" ObjID="S008"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-0052_UNG_07.01"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0054_UNG_07.02"
+                                ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-0057_UNG_07.03"
+                                ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-0058_UNG_08" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-UNE" ObjID="UNE" ObjType="s"
+                        TagIdentifier="UNE" minOccurs="0">
+                        <Field Name="E-0060_UNE_01" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-0048_UNE_02" ObjType="e" minOccurs="0"/>
+                    </Component>
+                </Component>
+                <Component Name="S-UNH_1" ObjID="UNH" ObjOrd="1"
+                    ObjType="s" TagIdentifier="UNH">
+                    <Field Name="E-0062_1_01" ObjType="e"/>
+                    <Field Name="C-S009_1_02" ObjID="S009" ObjType="c" minOccurs="0">
+                        <SubField Name="E-0065_1_02.01" ObjType="e"/>
+                        <SubField Name="E-0052_1_02.02" ObjType="e"/>
+                        <SubField Name="E-0054_1_02.03" ObjType="e"/>
+                        <SubField Name="E-0051_1_02.04" ObjType="e"/>
+                        <SubField Name="E-0057_1_02.05" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-0110_1_02.06" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-0113_1_02.07" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="E-0068_1_03" ObjType="e" minOccurs="0"/>
+                    <Field Name="C-S010_1_04" ObjID="S010" ObjType="c" minOccurs="0">
+                        <SubField Name="E-0070_1_04.01" ObjType="e"/>
+                        <SubField Name="E-0073_1_04.02" ObjType="e" minOccurs="0"/>
+                    </Field>
+                </Component>
+                <Component Name="S-BGM_2" ObjID="BGM" ObjOrd="2"
+                    ObjType="s" TagIdentifier="BGM">
+                    <Field Name="C-C002_2_01" ObjID="C002" ObjType="c" minOccurs="0">
+                        <SubField Name="E-1001_2_01.01" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1131_2_01.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_2_01.03" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1000_2_01.04" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="C-C106_2_02" ObjID="C106" ObjType="c" minOccurs="0">
+                        <SubField Name="E-1004_2_02.01" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1056_2_02.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1060_2_02.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="E-1225_2_03" ObjType="e" minOccurs="0"/>
+                    <Field Name="E-4343_2_04" ObjType="e" minOccurs="0"/>
+                </Component>
+                <Component Name="S-CTA_3" ObjID="CTA" ObjOrd="3"
+                    ObjType="s" TagIdentifier="CTA" minOccurs="0">
+                    <Field Name="E-3139_3_01" ObjType="e" minOccurs="0"/>
+                    <Field Name="C-C056_3_02" ObjID="C056" ObjType="c" minOccurs="0">
+                        <SubField Name="E-3413_3_02.01" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3412_3_02.02" ObjType="e" minOccurs="0"/>
+                    </Field>
+                </Component>
+                <Component Name="S-COM_4" ObjID="COM" ObjOrd="4"
+                    ObjType="s" TagIdentifier="COM" maxOccurs="9" minOccurs="0">
+                    <Field Name="C-C076_4_01" ObjID="C076" ObjType="c" maxOccurs="3">
+                        <SubField Name="E-3148_4_01.01" ObjType="e"/>
+                        <SubField Name="E-3155_4_01.02" ObjType="e"/>
+                    </Field>
+                </Component>
+                <Component Name="S-DTM_5" ObjID="DTM" ObjOrd="5"
+                    ObjType="s" TagIdentifier="DTM" maxOccurs="9" minOccurs="0">
+                    <Field Name="C-C507_5_01" ObjID="C507" ObjType="c">
+                        <SubField Name="E-2005_5_01.01" ObjType="e"/>
+                        <SubField Name="E-2380_5_01.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-2379_5_01.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                </Component>
+                <Component Name="S-TSR_6" ObjID="TSR" ObjOrd="6"
+                    ObjType="s" TagIdentifier="TSR" maxOccurs="9" minOccurs="0">
+                    <Field Name="C-C536_6_01" ObjID="C536" ObjType="c" minOccurs="0">
+                        <SubField Name="E-4065_6_01.01" ObjType="e"/>
+                        <SubField Name="E-1131_6_01.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_6_01.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="C-C233_6_02" ObjID="C233" ObjType="c" minOccurs="0">
+                        <SubField Name="E-7273_6_02.01" ObjType="e"/>
+                        <SubField Name="E-1131_6_02.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_6_02.03" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-7273_6_02.04" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1131_6_02.05" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_6_02.06" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="C-C537_6_03" ObjID="C537" ObjType="c" minOccurs="0">
+                        <SubField Name="E-4219_6_03.01" ObjType="e"/>
+                        <SubField Name="E-1131_6_03.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_6_03.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="C-C703_6_04" ObjID="C703" ObjType="c" minOccurs="0">
+                        <SubField Name="E-7085_6_04.01" ObjType="e"/>
+                        <SubField Name="E-1131_6_04.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_6_04.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                </Component>
+                <Component Name="S-FTX_7" ObjID="FTX" ObjOrd="7"
+                    ObjType="s" TagIdentifier="FTX" maxOccurs="99" minOccurs="0">
+                    <Field Name="E-4451_7_01" ObjType="e"/>
+                    <Field Name="E-4453_7_02" ObjType="e" minOccurs="0"/>
+                    <Field Name="C-C107_7_03" ObjID="C107" ObjType="c" minOccurs="0">
+                        <SubField Name="E-4441_7_03.01" ObjType="e"/>
+                        <SubField Name="E-1131_7_03.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_7_03.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="C-C108_7_04" ObjID="C108" ObjType="c" minOccurs="0">
+                        <SubField Name="E-4440_7_04.01" ObjType="e"/>
+                        <SubField Name="E-4440_7_04.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-4440_7_04.03" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-4440_7_04.04" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-4440_7_04.05" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="E-3453_7_05" ObjType="e" minOccurs="0"/>
+                    <Field Name="E-4447_7_06" ObjType="e" minOccurs="0"/>
+                </Component>
+                <Component Name="S-CNT_8" ObjID="CNT" ObjOrd="8"
+                    ObjType="s" TagIdentifier="CNT" maxOccurs="9" minOccurs="0">
+                    <Field Name="C-C270_8_01" ObjID="C270" ObjType="c">
+                        <SubField Name="E-6069_8_01.01" ObjType="e"/>
+                        <SubField Name="E-6066_8_01.02" ObjType="e"/>
+                        <SubField Name="E-6411_8_01.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                </Component>
+                <Component Name="S-GDS_9" ObjID="GDS" ObjOrd="9"
+                    ObjType="s" TagIdentifier="GDS" maxOccurs="9" minOccurs="0">
+                    <Field Name="C-C703_9_01" ObjID="C703" ObjType="c" minOccurs="0">
+                        <SubField Name="E-7085_9_01.01" ObjType="e"/>
+                        <SubField Name="E-1131_9_01.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_9_01.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                </Component>
+                <Component Name="L-LOC_11" ObjID="Group1" ObjType="l"
+                    TagIdentifier="Group1" maxOccurs="99" minOccurs="0">
+                    <Component Name="S-LOC_11" ObjID="LOC" ObjOrd="11"
+                        ObjType="s" TagIdentifier="LOC">
+                        <Field Name="E-3227_11_01" ObjType="e"/>
+                        <Field Name="C-C517_11_02" ObjID="C517"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3225_11_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_11_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_11_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3224_11_02.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C519_11_03" ObjID="C519"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3223_11_03.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_11_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_11_03.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3222_11_03.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C553_11_04" ObjID="C553"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3233_11_04.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_11_04.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_11_04.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3232_11_04.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-5479_11_05" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-DTM_12" ObjID="DTM" ObjOrd="12"
+                        ObjType="s" TagIdentifier="DTM" maxOccurs="9" minOccurs="0">
+                        <Field Name="C-C507_12_01" ObjID="C507" ObjType="c">
+                            <SubField Name="E-2005_12_01.01" ObjType="e"/>
+                            <SubField Name="E-2380_12_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-2379_12_01.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                </Component>
+                <Component Name="L-RFF_14" ObjID="Group2" ObjType="l"
+                    TagIdentifier="Group2" maxOccurs="99" minOccurs="0">
+                    <Component Name="S-RFF_14" ObjID="RFF" ObjOrd="14"
+                        ObjType="s" TagIdentifier="RFF">
+                        <Field Name="C-C506_14_01" ObjID="C506" ObjType="c">
+                            <SubField Name="E-1153_14_01.01" ObjType="e"/>
+                            <SubField Name="E-1154_14_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1156_14_01.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4000_14_01.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1060_14_01.05" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-DTM_15" ObjID="DTM" ObjOrd="15"
+                        ObjType="s" TagIdentifier="DTM" maxOccurs="9" minOccurs="0">
+                        <Field Name="C-C507_15_01" ObjID="C507" ObjType="c">
+                            <SubField Name="E-2005_15_01.01" ObjType="e"/>
+                            <SubField Name="E-2380_15_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-2379_15_01.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                </Component>
+                <Component Name="S-TCC_16" ObjID="TCC" ObjOrd="16"
+                    ObjType="s" TagIdentifier="TCC" maxOccurs="9" minOccurs="0">
+                    <Field Name="C-C200_16_01" ObjID="C200" ObjType="c" minOccurs="0">
+                        <SubField Name="E-8023_16_01.01" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1131_16_01.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_16_01.03" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-8022_16_01.04" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-4237_16_01.05" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-7140_16_01.06" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="C-C203_16_02" ObjID="C203" ObjType="c" minOccurs="0">
+                        <SubField Name="E-5243_16_02.01" ObjType="e"/>
+                        <SubField Name="E-1131_16_02.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_16_02.03" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-5242_16_02.04" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-5275_16_02.05" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1131_16_02.06" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_16_02.07" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-5275_16_02.08" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1131_16_02.09" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_16_02.10" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="C-C528_16_03" ObjID="C528" ObjType="c" minOccurs="0">
+                        <SubField Name="E-7357_16_03.01" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1131_16_03.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_16_03.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                    <Field Name="C-C554_16_04" ObjID="C554" ObjType="c" minOccurs="0">
+                        <SubField Name="E-5243_16_04.01" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-1131_16_04.02" ObjType="e" minOccurs="0"/>
+                        <SubField Name="E-3055_16_04.03" ObjType="e" minOccurs="0"/>
+                    </Field>
+                </Component>
+                <Component Name="L-TDT_18" ObjID="Group3" ObjType="l"
+                    TagIdentifier="Group3" maxOccurs="99" minOccurs="0">
+                    <Component Name="S-TDT_18" ObjID="TDT" ObjOrd="18"
+                        ObjType="s" TagIdentifier="TDT">
+                        <Field Name="E-8051_18_01" ObjType="e"/>
+                        <Field Name="E-8028_18_02" ObjType="e" minOccurs="0"/>
+                        <Field Name="C-C220_18_03" ObjID="C220"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-8067_18_03.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-8066_18_03.02" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C228_18_04" ObjID="C228"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-8179_18_04.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-8178_18_04.02" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C040_18_05" ObjID="C040"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3127_18_05.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_18_05.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_18_05.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3128_18_05.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-8101_18_06" ObjType="e" minOccurs="0"/>
+                        <Field Name="C-C401_18_07" ObjID="C401"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-8457_18_07.01" ObjType="e"/>
+                            <SubField Name="E-8459_18_07.02" ObjType="e"/>
+                            <SubField Name="E-7130_18_07.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C222_18_08" ObjID="C222"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-8213_18_08.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_18_08.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_18_08.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-8212_18_08.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-8453_18_08.05" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-8281_18_09" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-DTM_19" ObjID="DTM" ObjOrd="19"
+                        ObjType="s" TagIdentifier="DTM" maxOccurs="9" minOccurs="0">
+                        <Field Name="C-C507_19_01" ObjID="C507" ObjType="c">
+                            <SubField Name="E-2005_19_01.01" ObjType="e"/>
+                            <SubField Name="E-2380_19_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-2379_19_01.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-TSR_20" ObjID="TSR" ObjOrd="20"
+                        ObjType="s" TagIdentifier="TSR" maxOccurs="9" minOccurs="0">
+                        <Field Name="C-C536_20_01" ObjID="C536"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-4065_20_01.01" ObjType="e"/>
+                            <SubField Name="E-1131_20_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_20_01.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C233_20_02" ObjID="C233"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7273_20_02.01" ObjType="e"/>
+                            <SubField Name="E-1131_20_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_20_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7273_20_02.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_20_02.05" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_20_02.06" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C537_20_03" ObjID="C537"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-4219_20_03.01" ObjType="e"/>
+                            <SubField Name="E-1131_20_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_20_03.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C703_20_04" ObjID="C703"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7085_20_04.01" ObjType="e"/>
+                            <SubField Name="E-1131_20_04.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_20_04.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="L-LOC_22" ObjID="Group4"
+                        ObjType="l" TagIdentifier="Group4"
+                        maxOccurs="99" minOccurs="0">
+                        <Component Name="S-LOC_22" ObjID="LOC"
+                            ObjOrd="22" ObjType="s" TagIdentifier="LOC">
+                            <Field Name="E-3227_22_01" ObjType="e"/>
+                            <Field Name="C-C517_22_02" ObjID="C517"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3225_22_02.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_22_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_22_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3224_22_02.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C519_22_03" ObjID="C519"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3223_22_03.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_22_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_22_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3222_22_03.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C553_22_04" ObjID="C553"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3233_22_04.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_22_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_22_04.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3232_22_04.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-5479_22_05" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="S-DTM_23" ObjID="DTM"
+                            ObjOrd="23" ObjType="s" TagIdentifier="DTM"
+                            maxOccurs="9" minOccurs="0">
+                            <Field Name="C-C507_23_01" ObjID="C507" ObjType="c">
+                                <SubField Name="E-2005_23_01.01" ObjType="e"/>
+                                <SubField Name="E-2380_23_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-2379_23_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                    </Component>
+                    <Component Name="L-RFF_25" ObjID="Group5"
+                        ObjType="l" TagIdentifier="Group5" maxOccurs="9" minOccurs="0">
+                        <Component Name="S-RFF_25" ObjID="RFF"
+                            ObjOrd="25" ObjType="s" TagIdentifier="RFF">
+                            <Field Name="C-C506_25_01" ObjID="C506" ObjType="c">
+                                <SubField Name="E-1153_25_01.01" ObjType="e"/>
+                                <SubField Name="E-1154_25_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1156_25_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4000_25_01.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1060_25_01.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                        <Component Name="S-DTM_26" ObjID="DTM"
+                            ObjOrd="26" ObjType="s" TagIdentifier="DTM" minOccurs="0">
+                            <Field Name="C-C507_26_01" ObjID="C507" ObjType="c">
+                                <SubField Name="E-2005_26_01.01" ObjType="e"/>
+                                <SubField Name="E-2380_26_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-2379_26_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                    </Component>
+                </Component>
+                <Component Name="L-NAD_28" ObjID="Group6" ObjType="l"
+                    TagIdentifier="Group6" maxOccurs="99" minOccurs="0">
+                    <Component Name="S-NAD_28" ObjID="NAD" ObjOrd="28"
+                        ObjType="s" TagIdentifier="NAD">
+                        <Field Name="E-3035_28_01" ObjType="e"/>
+                        <Field Name="C-C082_28_02" ObjID="C082"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3039_28_02.01" ObjType="e"/>
+                            <SubField Name="E-1131_28_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_28_02.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C058_28_03" ObjID="C058"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3124_28_03.01" ObjType="e"/>
+                            <SubField Name="E-3124_28_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3124_28_03.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3124_28_03.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3124_28_03.05" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C080_28_04" ObjID="C080"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3036_28_04.01" ObjType="e"/>
+                            <SubField Name="E-3036_28_04.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3036_28_04.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3036_28_04.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3036_28_04.05" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3045_28_04.06" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C059_28_05" ObjID="C059"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3042_28_05.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3042_28_05.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3042_28_05.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3042_28_05.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-3164_28_06" ObjType="e" minOccurs="0"/>
+                        <Field Name="C-C819_28_07" ObjID="C819"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3229_28_07.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_28_07.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_28_07.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3228_28_07.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-3251_28_08" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-3207_28_09" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-LOC_29" ObjID="LOC" ObjOrd="29"
+                        ObjType="s" TagIdentifier="LOC" maxOccurs="9" minOccurs="0">
+                        <Field Name="E-3227_29_01" ObjType="e"/>
+                        <Field Name="C-C517_29_02" ObjID="C517"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3225_29_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_29_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_29_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3224_29_02.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C519_29_03" ObjID="C519"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3223_29_03.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_29_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_29_03.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3222_29_03.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C553_29_04" ObjID="C553"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3233_29_04.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_29_04.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_29_04.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3232_29_04.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-5479_29_05" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="L-CTA_31" ObjID="Group7"
+                        ObjType="l" TagIdentifier="Group7" maxOccurs="9" minOccurs="0">
+                        <Component Name="S-CTA_31" ObjID="CTA"
+                            ObjOrd="31" ObjType="s" TagIdentifier="CTA">
+                            <Field Name="E-3139_31_01" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C056_31_02" ObjID="C056"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3413_31_02.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3412_31_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                        <Component Name="S-COM_32" ObjID="COM"
+                            ObjOrd="32" ObjType="s" TagIdentifier="COM"
+                            maxOccurs="9" minOccurs="0">
+                            <Field Name="C-C076_32_01" ObjID="C076"
+                                ObjType="c" maxOccurs="3">
+                                <SubField Name="E-3148_32_01.01" ObjType="e"/>
+                                <SubField Name="E-3155_32_01.02" ObjType="e"/>
+                            </Field>
+                        </Component>
+                    </Component>
+                    <Component Name="L-TSR_34" ObjID="Group8"
+                        ObjType="l" TagIdentifier="Group8"
+                        maxOccurs="99" minOccurs="0">
+                        <Component Name="S-TSR_34" ObjID="TSR"
+                            ObjOrd="34" ObjType="s" TagIdentifier="TSR">
+                            <Field Name="C-C536_34_01" ObjID="C536"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-4065_34_01.01" ObjType="e"/>
+                                <SubField Name="E-1131_34_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_34_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C233_34_02" ObjID="C233"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-7273_34_02.01" ObjType="e"/>
+                                <SubField Name="E-1131_34_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_34_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-7273_34_02.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_34_02.05"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_34_02.06"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C537_34_03" ObjID="C537"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-4219_34_03.01" ObjType="e"/>
+                                <SubField Name="E-1131_34_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_34_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C703_34_04" ObjID="C703"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-7085_34_04.01" ObjType="e"/>
+                                <SubField Name="E-1131_34_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_34_04.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                        <Component Name="S-RFF_35" ObjID="RFF"
+                            ObjOrd="35" ObjType="s" TagIdentifier="RFF" minOccurs="0">
+                            <Field Name="C-C506_35_01" ObjID="C506" ObjType="c">
+                                <SubField Name="E-1153_35_01.01" ObjType="e"/>
+                                <SubField Name="E-1154_35_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1156_35_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4000_35_01.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1060_35_01.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                        <Component Name="S-LOC_36" ObjID="LOC"
+                            ObjOrd="36" ObjType="s" TagIdentifier="LOC" minOccurs="0">
+                            <Field Name="E-3227_36_01" ObjType="e"/>
+                            <Field Name="C-C517_36_02" ObjID="C517"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3225_36_02.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_36_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_36_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3224_36_02.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C519_36_03" ObjID="C519"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3223_36_03.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_36_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_36_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3222_36_03.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C553_36_04" ObjID="C553"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3233_36_04.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_36_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_36_04.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3232_36_04.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-5479_36_05" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="S-TPL_37" ObjID="TPL"
+                            ObjOrd="37" ObjType="s" TagIdentifier="TPL" minOccurs="0">
+                            <Field Name="C-C222_37_01" ObjID="C222" ObjType="c">
+                                <SubField Name="E-8213_37_01.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_37_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_37_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8212_37_01.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8453_37_01.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                        <Component Name="S-FTX_38" ObjID="FTX"
+                            ObjOrd="38" ObjType="s" TagIdentifier="FTX"
+                            maxOccurs="9" minOccurs="0">
+                            <Field Name="E-4451_38_01" ObjType="e"/>
+                            <Field Name="E-4453_38_02" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C107_38_03" ObjID="C107"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-4441_38_03.01" ObjType="e"/>
+                                <SubField Name="E-1131_38_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_38_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C108_38_04" ObjID="C108"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-4440_38_04.01" ObjType="e"/>
+                                <SubField Name="E-4440_38_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4440_38_04.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4440_38_04.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4440_38_04.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-3453_38_05" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-4447_38_06" ObjType="e" minOccurs="0"/>
+                        </Component>
+                    </Component>
+                </Component>
+                <Component Name="L-GID_40" ObjID="Group9" ObjType="l"
+                    TagIdentifier="Group9" maxOccurs="999" minOccurs="0">
+                    <Component Name="S-GID_40" ObjID="GID" ObjOrd="40"
+                        ObjType="s" TagIdentifier="GID">
+                        <Field Name="E-1496_40_01" ObjType="e" minOccurs="0"/>
+                        <Field Name="C-C213_40_02" ObjID="C213"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7224_40_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7065_40_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_40_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_40_02.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7064_40_02.05" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7233_40_02.06" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C213_40_03" ObjID="C213"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7224_40_03.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7065_40_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_40_03.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_40_03.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7064_40_03.05" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7233_40_03.06" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C213_40_04" ObjID="C213"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7224_40_04.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7065_40_04.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_40_04.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_40_04.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7064_40_04.05" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7233_40_04.06" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C213_40_05" ObjID="C213"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7224_40_05.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7065_40_05.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_40_05.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_40_05.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7064_40_05.05" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7233_40_05.06" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C213_40_06" ObjID="C213"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7224_40_06.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7065_40_06.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_40_06.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_40_06.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7064_40_06.05" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7233_40_06.06" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-HAN_41" ObjID="HAN" ObjOrd="41"
+                        ObjType="s" TagIdentifier="HAN" minOccurs="0">
+                        <Field Name="C-C524_41_01" ObjID="C524"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-4079_41_01.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_41_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_41_01.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4078_41_01.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C218_41_02" ObjID="C218"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7419_41_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_41_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_41_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7418_41_02.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-TMP_42" ObjID="TMP" ObjOrd="42"
+                        ObjType="s" TagIdentifier="TMP" minOccurs="0">
+                        <Field Name="E-6245_42_01" ObjType="e"/>
+                        <Field Name="C-C239_42_02" ObjID="C239"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-6246_42_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6411_42_02.02" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-RNG_43" ObjID="RNG" ObjOrd="43"
+                        ObjType="s" TagIdentifier="RNG" minOccurs="0">
+                        <Field Name="E-6167_43_01" ObjType="e"/>
+                        <Field Name="C-C280_43_02" ObjID="C280"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-6411_43_02.01" ObjType="e"/>
+                            <SubField Name="E-6162_43_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6152_43_02.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-TMD_44" ObjID="TMD" ObjOrd="44"
+                        ObjType="s" TagIdentifier="TMD" minOccurs="0">
+                        <Field Name="C-C219_44_01" ObjID="C219"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-8335_44_01.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-8334_44_01.02" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-8332_44_02" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-8341_44_03" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-LOC_45" ObjID="LOC" ObjOrd="45"
+                        ObjType="s" TagIdentifier="LOC" maxOccurs="9" minOccurs="0">
+                        <Field Name="E-3227_45_01" ObjType="e"/>
+                        <Field Name="C-C517_45_02" ObjID="C517"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3225_45_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_45_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_45_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3224_45_02.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C519_45_03" ObjID="C519"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3223_45_03.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_45_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_45_03.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3222_45_03.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C553_45_04" ObjID="C553"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-3233_45_04.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_45_04.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_45_04.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3232_45_04.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-5479_45_05" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-FTX_46" ObjID="FTX" ObjOrd="46"
+                        ObjType="s" TagIdentifier="FTX" maxOccurs="9" minOccurs="0">
+                        <Field Name="E-4451_46_01" ObjType="e"/>
+                        <Field Name="E-4453_46_02" ObjType="e" minOccurs="0"/>
+                        <Field Name="C-C107_46_03" ObjID="C107"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-4441_46_03.01" ObjType="e"/>
+                            <SubField Name="E-1131_46_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_46_03.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C108_46_04" ObjID="C108"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-4440_46_04.01" ObjType="e"/>
+                            <SubField Name="E-4440_46_04.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4440_46_04.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4440_46_04.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4440_46_04.05" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-3453_46_05" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-4447_46_06" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-PCD_47" ObjID="PCD" ObjOrd="47"
+                        ObjType="s" TagIdentifier="PCD" maxOccurs="9" minOccurs="0">
+                        <Field Name="C-C501_47_01" ObjID="C501" ObjType="c">
+                            <SubField Name="E-5245_47_01.01" ObjType="e"/>
+                            <SubField Name="E-5482_47_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-5249_47_01.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_47_01.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_47_01.05" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="L-NAD_49" ObjID="Group10"
+                        ObjType="l" TagIdentifier="Group10"
+                        maxOccurs="9" minOccurs="0">
+                        <Component Name="S-NAD_49" ObjID="NAD"
+                            ObjOrd="49" ObjType="s" TagIdentifier="NAD">
+                            <Field Name="E-3035_49_01" ObjType="e"/>
+                            <Field Name="C-C082_49_02" ObjID="C082"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3039_49_02.01" ObjType="e"/>
+                                <SubField Name="E-1131_49_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_49_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C058_49_03" ObjID="C058"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3124_49_03.01" ObjType="e"/>
+                                <SubField Name="E-3124_49_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3124_49_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3124_49_03.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3124_49_03.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C080_49_04" ObjID="C080"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3036_49_04.01" ObjType="e"/>
+                                <SubField Name="E-3036_49_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3036_49_04.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3036_49_04.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3036_49_04.05"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3045_49_04.06"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C059_49_05" ObjID="C059"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3042_49_05.01" ObjType="e"/>
+                                <SubField Name="E-3042_49_05.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3042_49_05.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3042_49_05.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-3164_49_06" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C819_49_07" ObjID="C819"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3229_49_07.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_49_07.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_49_07.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3228_49_07.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-3251_49_08" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-3207_49_09" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="S-DTM_50" ObjID="DTM"
+                            ObjOrd="50" ObjType="s" TagIdentifier="DTM" minOccurs="0">
+                            <Field Name="C-C507_50_01" ObjID="C507" ObjType="c">
+                                <SubField Name="E-2005_50_01.01" ObjType="e"/>
+                                <SubField Name="E-2380_50_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-2379_50_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                    </Component>
+                    <Component Name="S-GDS_51" ObjID="GDS" ObjOrd="51"
+                        ObjType="s" TagIdentifier="GDS" maxOccurs="9" minOccurs="0">
+                        <Field Name="C-C703_51_01" ObjID="C703"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7085_51_01.01" ObjType="e"/>
+                            <SubField Name="E-1131_51_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_51_01.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="L-MEA_53" ObjID="Group11"
+                        ObjType="l" TagIdentifier="Group11"
+                        maxOccurs="99" minOccurs="0">
+                        <Component Name="S-MEA_53" ObjID="MEA"
+                            ObjOrd="53" ObjType="s" TagIdentifier="MEA">
+                            <Field Name="E-6311_53_01" ObjType="e"/>
+                            <Field Name="C-C502_53_02" ObjID="C502"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-6313_53_02.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6321_53_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6155_53_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6154_53_02.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C174_53_03" ObjID="C174"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-6411_53_03.01" ObjType="e"/>
+                                <SubField Name="E-6314_53_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6162_53_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6152_53_03.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6432_53_03.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-7383_53_04" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="S-EQN_54" ObjID="EQN"
+                            ObjOrd="54" ObjType="s" TagIdentifier="EQN" minOccurs="0">
+                            <Field Name="C-C523_54_01" ObjID="C523" ObjType="c">
+                                <SubField Name="E-6350_54_01.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6353_54_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                    </Component>
+                    <Component Name="L-DIM_56" ObjID="Group12"
+                        ObjType="l" TagIdentifier="Group12"
+                        maxOccurs="99" minOccurs="0">
+                        <Component Name="S-DIM_56" ObjID="DIM"
+                            ObjOrd="56" ObjType="s" TagIdentifier="DIM">
+                            <Field Name="E-6145_56_01" ObjType="e"/>
+                            <Field Name="C-C211_56_02" ObjID="C211" ObjType="c">
+                                <SubField Name="E-6411_56_02.01" ObjType="e"/>
+                                <SubField Name="E-6168_56_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6140_56_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6008_56_02.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                        <Component Name="S-EQN_57" ObjID="EQN"
+                            ObjOrd="57" ObjType="s" TagIdentifier="EQN" minOccurs="0">
+                            <Field Name="C-C523_57_01" ObjID="C523" ObjType="c">
+                                <SubField Name="E-6350_57_01.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6353_57_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                    </Component>
+                    <Component Name="L-RFF_59" ObjID="Group13"
+                        ObjType="l" TagIdentifier="Group13"
+                        maxOccurs="9" minOccurs="0">
+                        <Component Name="S-RFF_59" ObjID="RFF"
+                            ObjOrd="59" ObjType="s" TagIdentifier="RFF">
+                            <Field Name="C-C506_59_01" ObjID="C506" ObjType="c">
+                                <SubField Name="E-1153_59_01.01" ObjType="e"/>
+                                <SubField Name="E-1154_59_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1156_59_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4000_59_01.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1060_59_01.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                        <Component Name="S-DTM_60" ObjID="DTM"
+                            ObjOrd="60" ObjType="s" TagIdentifier="DTM"
+                            maxOccurs="9" minOccurs="0">
+                            <Field Name="C-C507_60_01" ObjID="C507" ObjType="c">
+                                <SubField Name="E-2005_60_01.01" ObjType="e"/>
+                                <SubField Name="E-2380_60_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-2379_60_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                    </Component>
+                    <Component Name="L-DOC_62" ObjID="Group14"
+                        ObjType="l" TagIdentifier="Group14"
+                        maxOccurs="9" minOccurs="0">
+                        <Component Name="S-DOC_62" ObjID="DOC"
+                            ObjOrd="62" ObjType="s" TagIdentifier="DOC">
+                            <Field Name="C-C002_62_01" ObjID="C002" ObjType="c">
+                                <SubField Name="E-1001_62_01.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_62_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_62_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1000_62_01.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C503_62_02" ObjID="C503"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-1004_62_02.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1373_62_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1366_62_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3453_62_02.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1056_62_02.05"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1060_62_02.06"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-3153_62_03" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-1220_62_04" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-1218_62_05" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="S-DTM_63" ObjID="DTM"
+                            ObjOrd="63" ObjType="s" TagIdentifier="DTM"
+                            maxOccurs="9" minOccurs="0">
+                            <Field Name="C-C507_63_01" ObjID="C507" ObjType="c">
+                                <SubField Name="E-2005_63_01.01" ObjType="e"/>
+                                <SubField Name="E-2380_63_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-2379_63_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                    </Component>
+                    <Component Name="L-DGS_65" ObjID="Group15"
+                        ObjType="l" TagIdentifier="Group15"
+                        maxOccurs="99" minOccurs="0">
+                        <Component Name="S-DGS_65" ObjID="DGS"
+                            ObjOrd="65" ObjType="s" TagIdentifier="DGS">
+                            <Field Name="E-8273_65_01" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C205_65_02" ObjID="C205"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-8351_65_02.01" ObjType="e"/>
+                                <SubField Name="E-8078_65_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8092_65_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C234_65_03" ObjID="C234"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-7124_65_03.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-7088_65_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C223_65_04" ObjID="C223"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-7106_65_04.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6411_65_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-8339_65_05" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8364_65_06" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8410_65_07" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8126_65_08" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C235_65_09" ObjID="C235"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-8158_65_09.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8186_65_09.02"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C236_65_10" ObjID="C236"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-8246_65_10.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8246_65_10.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8246_65_10.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-8255_65_11" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8325_65_12" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8211_65_13" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="S-FTX_66" ObjID="FTX"
+                            ObjOrd="66" ObjType="s" TagIdentifier="FTX"
+                            maxOccurs="99" minOccurs="0">
+                            <Field Name="E-4451_66_01" ObjType="e"/>
+                            <Field Name="E-4453_66_02" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C107_66_03" ObjID="C107"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-4441_66_03.01" ObjType="e"/>
+                                <SubField Name="E-1131_66_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_66_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C108_66_04" ObjID="C108"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-4440_66_04.01" ObjType="e"/>
+                                <SubField Name="E-4440_66_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4440_66_04.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4440_66_04.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4440_66_04.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-3453_66_05" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-4447_66_06" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="L-CTA_68" ObjID="Group16"
+                            ObjType="l" TagIdentifier="Group16"
+                            maxOccurs="9" minOccurs="0">
+                            <Component Name="S-CTA_68" ObjID="CTA"
+                                ObjOrd="68" ObjType="s" TagIdentifier="CTA">
+                                <Field Name="E-3139_68_01" ObjType="e" minOccurs="0"/>
+                                <Field Name="C-C056_68_02" ObjID="C056"
+                                    ObjType="c" minOccurs="0">
+                                    <SubField Name="E-3413_68_02.01"
+                                    ObjType="e" minOccurs="0"/>
+                                    <SubField Name="E-3412_68_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                </Field>
+                            </Component>
+                            <Component Name="S-COM_69" ObjID="COM"
+                                ObjOrd="69" ObjType="s"
+                                TagIdentifier="COM" maxOccurs="9" minOccurs="0">
+                                <Field Name="C-C076_69_01" ObjID="C076"
+                                    ObjType="c" maxOccurs="3">
+                                    <SubField Name="E-3148_69_01.01" ObjType="e"/>
+                                    <SubField Name="E-3155_69_01.02" ObjType="e"/>
+                                </Field>
+                            </Component>
+                        </Component>
+                        <Component Name="L-MEA_71" ObjID="Group17"
+                            ObjType="l" TagIdentifier="Group17"
+                            maxOccurs="9" minOccurs="0">
+                            <Component Name="S-MEA_71" ObjID="MEA"
+                                ObjOrd="71" ObjType="s" TagIdentifier="MEA">
+                                <Field Name="E-6311_71_01" ObjType="e"/>
+                                <Field Name="C-C502_71_02" ObjID="C502"
+                                    ObjType="c" minOccurs="0">
+                                    <SubField Name="E-6313_71_02.01"
+                                    ObjType="e" minOccurs="0"/>
+                                    <SubField Name="E-6321_71_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                    <SubField Name="E-6155_71_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                                    <SubField Name="E-6154_71_02.04"
+                                    ObjType="e" minOccurs="0"/>
+                                </Field>
+                                <Field Name="C-C174_71_03" ObjID="C174"
+                                    ObjType="c" minOccurs="0">
+                                    <SubField Name="E-6411_71_03.01" ObjType="e"/>
+                                    <SubField Name="E-6314_71_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                    <SubField Name="E-6162_71_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                                    <SubField Name="E-6152_71_03.04"
+                                    ObjType="e" minOccurs="0"/>
+                                    <SubField Name="E-6432_71_03.05"
+                                    ObjType="e" minOccurs="0"/>
+                                </Field>
+                                <Field Name="E-7383_71_04" ObjType="e" minOccurs="0"/>
+                            </Component>
+                            <Component Name="S-EQN_72" ObjID="EQN"
+                                ObjOrd="72" ObjType="s"
+                                TagIdentifier="EQN" minOccurs="0">
+                                <Field Name="C-C523_72_01" ObjID="C523" ObjType="c">
+                                    <SubField Name="E-6350_72_01.01"
+                                    ObjType="e" minOccurs="0"/>
+                                    <SubField Name="E-6353_72_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                </Field>
+                            </Component>
+                        </Component>
+                    </Component>
+                </Component>
+                <Component Name="L-EQD_74" ObjID="Group18" ObjType="l"
+                    TagIdentifier="Group18" maxOccurs="999" minOccurs="0">
+                    <Component Name="S-EQD_74" ObjID="EQD" ObjOrd="74"
+                        ObjType="s" TagIdentifier="EQD">
+                        <Field Name="E-8053_74_01" ObjType="e"/>
+                        <Field Name="C-C237_74_02" ObjID="C237"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-8260_74_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_74_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_74_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3207_74_02.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C224_74_03" ObjID="C224"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-8155_74_03.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_74_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_74_03.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-8154_74_03.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-8077_74_04" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-8249_74_05" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-8169_74_06" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-EQN_75" ObjID="EQN" ObjOrd="75"
+                        ObjType="s" TagIdentifier="EQN" minOccurs="0">
+                        <Field Name="C-C523_75_01" ObjID="C523" ObjType="c">
+                            <SubField Name="E-6350_75_01.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6353_75_01.02" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-TMD_76" ObjID="TMD" ObjOrd="76"
+                        ObjType="s" TagIdentifier="TMD" minOccurs="0">
+                        <Field Name="C-C219_76_01" ObjID="C219"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-8335_76_01.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-8334_76_01.02" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-8332_76_02" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-8341_76_03" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-MEA_77" ObjID="MEA" ObjOrd="77"
+                        ObjType="s" TagIdentifier="MEA" maxOccurs="9" minOccurs="0">
+                        <Field Name="E-6311_77_01" ObjType="e"/>
+                        <Field Name="C-C502_77_02" ObjID="C502"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-6313_77_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6321_77_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6155_77_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6154_77_02.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C174_77_03" ObjID="C174"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-6411_77_03.01" ObjType="e"/>
+                            <SubField Name="E-6314_77_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6162_77_03.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6152_77_03.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6432_77_03.05" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-7383_77_04" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-DIM_78" ObjID="DIM" ObjOrd="78"
+                        ObjType="s" TagIdentifier="DIM" maxOccurs="9" minOccurs="0">
+                        <Field Name="E-6145_78_01" ObjType="e"/>
+                        <Field Name="C-C211_78_02" ObjID="C211" ObjType="c">
+                            <SubField Name="E-6411_78_02.01" ObjType="e"/>
+                            <SubField Name="E-6168_78_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6140_78_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6008_78_02.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-HAN_79" ObjID="HAN" ObjOrd="79"
+                        ObjType="s" TagIdentifier="HAN" minOccurs="0">
+                        <Field Name="C-C524_79_01" ObjID="C524"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-4079_79_01.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_79_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_79_01.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4078_79_01.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C218_79_02" ObjID="C218"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-7419_79_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1131_79_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_79_02.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-7418_79_02.04" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-TMP_80" ObjID="TMP" ObjOrd="80"
+                        ObjType="s" TagIdentifier="TMP" minOccurs="0">
+                        <Field Name="E-6245_80_01" ObjType="e"/>
+                        <Field Name="C-C239_80_02" ObjID="C239"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-6246_80_02.01" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6411_80_02.02" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-RNG_81" ObjID="RNG" ObjOrd="81"
+                        ObjType="s" TagIdentifier="RNG" maxOccurs="9" minOccurs="0">
+                        <Field Name="E-6167_81_01" ObjType="e"/>
+                        <Field Name="C-C280_81_02" ObjID="C280"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-6411_81_02.01" ObjType="e"/>
+                            <SubField Name="E-6162_81_02.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-6152_81_02.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="S-FTX_82" ObjID="FTX" ObjOrd="82"
+                        ObjType="s" TagIdentifier="FTX" maxOccurs="9" minOccurs="0">
+                        <Field Name="E-4451_82_01" ObjType="e"/>
+                        <Field Name="E-4453_82_02" ObjType="e" minOccurs="0"/>
+                        <Field Name="C-C107_82_03" ObjID="C107"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-4441_82_03.01" ObjType="e"/>
+                            <SubField Name="E-1131_82_03.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-3055_82_03.03" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="C-C108_82_04" ObjID="C108"
+                            ObjType="c" minOccurs="0">
+                            <SubField Name="E-4440_82_04.01" ObjType="e"/>
+                            <SubField Name="E-4440_82_04.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4440_82_04.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4440_82_04.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4440_82_04.05" ObjType="e" minOccurs="0"/>
+                        </Field>
+                        <Field Name="E-3453_82_05" ObjType="e" minOccurs="0"/>
+                        <Field Name="E-4447_82_06" ObjType="e" minOccurs="0"/>
+                    </Component>
+                    <Component Name="S-RFF_83" ObjID="RFF" ObjOrd="83"
+                        ObjType="s" TagIdentifier="RFF" maxOccurs="9" minOccurs="0">
+                        <Field Name="C-C506_83_01" ObjID="C506" ObjType="c">
+                            <SubField Name="E-1153_83_01.01" ObjType="e"/>
+                            <SubField Name="E-1154_83_01.02" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1156_83_01.03" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-4000_83_01.04" ObjType="e" minOccurs="0"/>
+                            <SubField Name="E-1060_83_01.05" ObjType="e" minOccurs="0"/>
+                        </Field>
+                    </Component>
+                    <Component Name="L-NAD_85" ObjID="Group19"
+                        ObjType="l" TagIdentifier="Group19"
+                        maxOccurs="9" minOccurs="0">
+                        <Component Name="S-NAD_85" ObjID="NAD"
+                            ObjOrd="85" ObjType="s" TagIdentifier="NAD">
+                            <Field Name="E-3035_85_01" ObjType="e"/>
+                            <Field Name="C-C082_85_02" ObjID="C082"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3039_85_02.01" ObjType="e"/>
+                                <SubField Name="E-1131_85_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_85_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C058_85_03" ObjID="C058"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3124_85_03.01" ObjType="e"/>
+                                <SubField Name="E-3124_85_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3124_85_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3124_85_03.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3124_85_03.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C080_85_04" ObjID="C080"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3036_85_04.01" ObjType="e"/>
+                                <SubField Name="E-3036_85_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3036_85_04.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3036_85_04.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3036_85_04.05"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3045_85_04.06"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C059_85_05" ObjID="C059"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3042_85_05.01" ObjType="e"/>
+                                <SubField Name="E-3042_85_05.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3042_85_05.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3042_85_05.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-3164_85_06" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C819_85_07" ObjID="C819"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-3229_85_07.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-1131_85_07.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_85_07.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3228_85_07.04"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-3251_85_08" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-3207_85_09" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="S-DTM_86" ObjID="DTM"
+                            ObjOrd="86" ObjType="s" TagIdentifier="DTM" minOccurs="0">
+                            <Field Name="C-C507_86_01" ObjID="C507" ObjType="c">
+                                <SubField Name="E-2005_86_01.01" ObjType="e"/>
+                                <SubField Name="E-2380_86_01.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-2379_86_01.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                        </Component>
+                    </Component>
+                    <Component Name="L-DGS_88" ObjID="Group20"
+                        ObjType="l" TagIdentifier="Group20"
+                        maxOccurs="99" minOccurs="0">
+                        <Component Name="S-DGS_88" ObjID="DGS"
+                            ObjOrd="88" ObjType="s" TagIdentifier="DGS">
+                            <Field Name="E-8273_88_01" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C205_88_02" ObjID="C205"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-8351_88_02.01" ObjType="e"/>
+                                <SubField Name="E-8078_88_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8092_88_02.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C234_88_03" ObjID="C234"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-7124_88_03.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-7088_88_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C223_88_04" ObjID="C223"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-7106_88_04.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-6411_88_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-8339_88_05" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8364_88_06" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8410_88_07" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8126_88_08" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C235_88_09" ObjID="C235"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-8158_88_09.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8186_88_09.02"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C236_88_10" ObjID="C236"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-8246_88_10.01"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8246_88_10.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-8246_88_10.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-8255_88_11" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8325_88_12" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-8211_88_13" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="S-FTX_89" ObjID="FTX"
+                            ObjOrd="89" ObjType="s" TagIdentifier="FTX"
+                            maxOccurs="9" minOccurs="0">
+                            <Field Name="E-4451_89_01" ObjType="e"/>
+                            <Field Name="E-4453_89_02" ObjType="e" minOccurs="0"/>
+                            <Field Name="C-C107_89_03" ObjID="C107"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-4441_89_03.01" ObjType="e"/>
+                                <SubField Name="E-1131_89_03.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-3055_89_03.03"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="C-C108_89_04" ObjID="C108"
+                                ObjType="c" minOccurs="0">
+                                <SubField Name="E-4440_89_04.01" ObjType="e"/>
+                                <SubField Name="E-4440_89_04.02"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4440_89_04.03"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4440_89_04.04"
+                                    ObjType="e" minOccurs="0"/>
+                                <SubField Name="E-4440_89_04.05"
+                                    ObjType="e" minOccurs="0"/>
+                            </Field>
+                            <Field Name="E-3453_89_05" ObjType="e" minOccurs="0"/>
+                            <Field Name="E-4447_89_06" ObjType="e" minOccurs="0"/>
+                        </Component>
+                        <Component Name="L-CTA_91" ObjID="Group21"
+                            ObjType="l" TagIdentifier="Group21"
+                            maxOccurs="9" minOccurs="0">
+                            <Component Name="S-CTA_91" ObjID="CTA"
+                                ObjOrd="91" ObjType="s" TagIdentifier="CTA">
+                                <Field Name="E-3139_91_01" ObjType="e" minOccurs="0"/>
+                                <Field Name="C-C056_91_02" ObjID="C056"
+                                    ObjType="c" minOccurs="0">
+                                    <SubField Name="E-3413_91_02.01"
+                                    ObjType="e" minOccurs="0"/>
+                                    <SubField Name="E-3412_91_02.02"
+                                    ObjType="e" minOccurs="0"/>
+                                </Field>
+                            </Component>
+                            <Component Name="S-COM_92" ObjID="COM"
+                                ObjOrd="92" ObjType="s"
+                                TagIdentifier="COM" maxOccurs="9" minOccurs="0">
+                                <Field Name="C-C076_92_01" ObjID="C076"
+                                    ObjType="c" maxOccurs="3">
+                                    <SubField Name="E-3148_92_01.01" ObjType="e"/>
+                                    <SubField Name="E-3155_92_01.02" ObjType="e"/>
+                                </Field>
+                            </Component>
+                        </Component>
+                    </Component>
+                </Component>
+                <Component Name="S-UNT_93" ObjID="UNT" ObjOrd="93"
+                    ObjType="s" TagIdentifier="UNT">
+                    <Field Name="E-0074_93_01" ObjType="e"/>
+                    <Field Name="E-0062_93_02" ObjType="e"/>
+                </Component>
+            </Component>
+        </Component>
+    </Component>
+</E2XDefinition>
+<!-- Beluga Parser Definition XML -->
+<!-- Created By: David -->

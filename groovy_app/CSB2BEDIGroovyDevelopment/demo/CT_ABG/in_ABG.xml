@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ContainerMovement xmlns:ns0="http://www.cargosmart.com/route">
+	<ns0:Header>
+		<ns1:MsgDT xmlns:ns1="http://www.cargosmart.com/common">
+			<ns1:GMT>2011-09-01T02:17:46.585+08:00</ns1:GMT>
+			<ns1:LocDT TimeZone="HKT" CSTimeZone="HKT">2011-09-01T10:17:46.585+08:00</ns1:LocDT>
+		</ns1:MsgDT>
+		<ns1:MsgDirection xmlns:ns1="http://www.cargosmart.com/common">O</ns1:MsgDirection>
+		<ns1:MsgType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:MsgType>
+		<ns1:SenderID xmlns:ns1="http://www.cargosmart.com/common">CARGOSMART</ns1:SenderID>
+		<ns1:ReceiverID xmlns:ns1="http://www.cargosmart.com/common">CARGOSMARTABG</ns1:ReceiverID>
+		<ns1:Action xmlns:ns1="http://www.cargosmart.com/common">NEW</ns1:Action>
+		<ns1:Version xmlns:ns1="http://www.cargosmart.com/common">24</ns1:Version>
+		<ns1:InterchangeMessageID xmlns:ns1="http://www.cargosmart.com/common">113291769_CT_20110901101746_7902</ns1:InterchangeMessageID>
+		<ns1:DataSource xmlns:ns1="http://www.cargosmart.com/common">CS2 db</ns1:DataSource>
+	</ns0:Header>
+	<ns0:Body>
+		<ns0:TransactionInformation>
+			<ns1:MessageID xmlns:ns1="http://www.cargosmart.com/common">113291769_CT_20110901101746_7902_7902</ns1:MessageID>
+			<ns1:InterchangeTransactionID xmlns:ns1="http://www.cargosmart.com/common">7902</ns1:InterchangeTransactionID>
+		</ns0:TransactionInformation>
+		<ns0:Event>
+			<ns0:CarrEventCode>Outbound intermodal leg arrived</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_arrived_at_ob_iml</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container at first vessel loading port</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Hong Kong</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Hong Kong</ns0:City>
+					<ns0:Country>Hong Kong</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNWUH</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57013</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2531499</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">HK</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>189</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-16T12:59:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="HKT">2011-08-16T20:59:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647111070208-1-31</ns0:CarrierUniqueMovementID>
+			<ns0:ContraIndicator>INITIAL</ns0:ContraIndicator>
+			<ns0:CS1Event>CS060</ns0:CS1Event>
+		</ns0:Event>
+		<ns0:GeneralInformation>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+		</ns0:GeneralInformation>
+		<ns0:Container>
+			<ns0:ContainerNumber>OOCL080806</ns0:ContainerNumber>
+			<ns0:ContainerCheckDigit>0</ns0:ContainerCheckDigit>
+			<ns0:CarrCntrSizeType>2210</ns0:CarrCntrSizeType>
+			<ns0:CSContainerSizeType>20GP</ns0:CSContainerSizeType>
+			<ns0:Haulage>
+				<ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+				<ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+			</ns0:Haulage>
+			<ns0:CS1ContainerSizeType>20GP</ns0:CS1ContainerSizeType>
+		</ns0:Container>
+		<ns0:BookingGeneralInfo>
+			<ns0:CarrierBookingNumber>2061029877</ns0:CarrierBookingNumber>
+			<ns0:Haulage>
+				<ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+				<ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+			</ns0:Haulage>
+			<ns0:BookingOffice>Hong Kong</ns0:BookingOffice>
+			<ns0:Packaging>
+				<ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">PK</ns1:PackageType>
+				<ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">0</ns1:PackageQty>
+			</ns0:Packaging>
+		</ns0:BookingGeneralInfo>
+		<ns0:Route>
+			<ns0:POR>
+				<ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:City>Hong Kong</ns1:City>
+					<ns1:Country>Hong Kong</ns1:Country>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>HKHKG</ns1:UNLocationCode>
+					</ns1:LocationCode>
+				</ns1:CityDetails>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>HKG88</ns1:FacilityCode>
+					<ns1:FacilityName>Dummy Depot (On Street)</ns1:FacilityName>
+				</ns1:Facility>
+				<ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:CSParentCityID>2531499</ns1:CSParentCityID>
+					<ns1:CSCountryCode>HK</ns1:CSCountryCode>
+					<ns1:CSContinentCode>AS</ns1:CSContinentCode>
+				</ns1:CSStandardCity>
+			</ns0:POR>
+			<ns0:FND>
+				<ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:City>Singapore</ns1:City>
+					<ns1:Country>Singapore</ns1:Country>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>55976</ns1:SchedKDCode>
+					</ns1:LocationCode>
+				</ns1:CityDetails>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>SIN06</ns1:FacilityCode>
+					<ns1:FacilityName>PSA Depot Service Centre</ns1:FacilityName>
+				</ns1:Facility>
+				<ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:CSParentCityID>2530507</ns1:CSParentCityID>
+					<ns1:CSCountryCode>SG</ns1:CSCountryCode>
+					<ns1:CSContinentCode>AS</ns1:CSContinentCode>
+				</ns1:CSStandardCity>
+				<ns0:ArrivalDT Indicator="A">
+					<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-24T23:02:00+08:00</ns1:GMT>
+					<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="SGT">2011-08-25T07:02:00+08:00</ns1:LocDT>
+				</ns0:ArrivalDT>
+			</ns0:FND>
+			<ns0:FirstPOL>
+				<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:PortName>Hong Kong</ns1:PortName>
+					<ns1:PortCode>HKG</ns1:PortCode>
+					<ns1:City>Hong Kong</ns1:City>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>HKHKG</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>58201</ns1:SchedKDCode>
+					</ns1:LocationCode>
+					<ns1:Country>Hong Kong</ns1:Country>
+					<ns1:CSPortID>189</ns1:CSPortID>
+					<ns1:CSCountryCode>HK</ns1:CSCountryCode>
+				</ns1:Port>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>HKG01</ns1:FacilityCode>
+					<ns1:FacilityName>Modern Terminal Limited (MTL)</ns1:FacilityName>
+				</ns1:Facility>
+				<ns0:CSParentCityID>2531499</ns0:CSParentCityID>
+			</ns0:FirstPOL>
+			<ns0:LastPOD>
+				<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:PortName>Singapore</ns1:PortName>
+					<ns1:PortCode>SIN</ns1:PortCode>
+					<ns1:City>Singapore</ns1:City>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>55976</ns1:SchedKDCode>
+					</ns1:LocationCode>
+					<ns1:Country>Singapore</ns1:Country>
+					<ns1:CSPortID>355</ns1:CSPortID>
+					<ns1:CSCountryCode>SG</ns1:CSCountryCode>
+				</ns1:Port>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>SIN01</ns1:FacilityCode>
+					<ns1:FacilityName>PSA Corporation Limited</ns1:FacilityName>
+				</ns1:Facility>
+				<ns0:CSParentCityID>2530507</ns0:CSParentCityID>
+			</ns0:LastPOD>
+			<ns0:FullReturnCutoffDT Indicator="A">
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-16T08:10:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="HKT" CSTimeZone="HKT">2011-08-16T16:10:00+08:00</ns1:LocDT>
+			</ns0:FullReturnCutoffDT>
+			<ns0:CargoDeliveryDT Indicator="A">
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-23T23:03:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="SGT">2011-08-24T07:03:00+08:00</ns1:LocDT>
+			</ns0:CargoDeliveryDT>
+			<ns0:OceanLeg>
+				<ns0:LegSeq>1</ns0:LegSeq>
+				<ns0:POL>
+					<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:PortName>Hong Kong</ns1:PortName>
+						<ns1:City>Hong Kong</ns1:City>
+						<ns1:LocationCode>
+							<ns1:UNLocationCode>HKHKG</ns1:UNLocationCode>
+							<ns1:SchedKDType>K</ns1:SchedKDType>
+							<ns1:SchedKDCode>58201</ns1:SchedKDCode>
+						</ns1:LocationCode>
+						<ns1:Country>Hong Kong</ns1:Country>
+						<ns1:CSPortID>189</ns1:CSPortID>
+						<ns1:CSCountryCode>HK</ns1:CSCountryCode>
+					</ns1:Port>
+					<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:FacilityCode>HKG01</ns1:FacilityCode>
+					</ns1:Facility>
+					<ns0:DepartureDT Indicator="E">
+						<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-19T13:00:00+08:00</ns1:GMT>
+						<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="HKT" CSTimeZone="HKT">2011-08-19T21:00:00+08:00</ns1:LocDT>
+					</ns0:DepartureDT>
+					<ns0:CSParentCityID>2531499</ns0:CSParentCityID>
+				</ns0:POL>
+				<ns0:POD>
+					<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:PortName>Singapore</ns1:PortName>
+						<ns1:City>Singapore</ns1:City>
+						<ns1:LocationCode>
+							<ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+							<ns1:SchedKDType>K</ns1:SchedKDType>
+							<ns1:SchedKDCode>55976</ns1:SchedKDCode>
+						</ns1:LocationCode>
+						<ns1:Country>Singapore</ns1:Country>
+						<ns1:CSPortID>355</ns1:CSPortID>
+						<ns1:CSCountryCode>SG</ns1:CSCountryCode>
+					</ns1:Port>
+					<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:FacilityCode>SIN01</ns1:FacilityCode>
+					</ns1:Facility>
+					<ns0:ArrivalDT Indicator="E">
+						<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-22T10:00:00+08:00</ns1:GMT>
+						<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="SGT" CSTimeZone="SGT">2011-08-22T18:00:00+08:00</ns1:LocDT>
+					</ns0:ArrivalDT>
+					<ns0:CSParentCityID>2530507</ns0:CSParentCityID>
+				</ns0:POD>
+				<ns0:SVVD>
+					<ns0:Loading>
+						<ns0:Service>LPA</ns0:Service>
+						<ns0:Vessel>NAD</ns0:Vessel>
+						<ns0:VesselName>NYK ADONIS</ns0:VesselName>
+						<ns0:Voyage>006</ns0:Voyage>
+						<ns0:Direction>West</ns0:Direction>
+						<ns0:LloydsNumber>9468293</ns0:LloydsNumber>
+						<ns0:CallSign>3EUI3</ns0:CallSign>
+						<ns0:RegistrationCountry>PANAMA</ns0:RegistrationCountry>
+						<ns0:RegistrationCountryCode>PA</ns0:RegistrationCountryCode>
+					</ns0:Loading>
+					<ns0:Discharge>
+						<ns0:Service>LPA</ns0:Service>
+						<ns0:Vessel>NAD</ns0:Vessel>
+						<ns0:VesselName>NYK ADONIS</ns0:VesselName>
+						<ns0:Voyage>006</ns0:Voyage>
+						<ns0:Direction>West</ns0:Direction>
+						<ns0:LloydsNumber>9468293</ns0:LloydsNumber>
+						<ns0:CallSign>3EUI3</ns0:CallSign>
+						<ns0:RegistrationCountry>PANAMA</ns0:RegistrationCountry>
+						<ns0:RegistrationCountryCode>PA</ns0:RegistrationCountryCode>
+					</ns0:Discharge>
+				</ns0:SVVD>
+			</ns0:OceanLeg>
+		</ns0:Route>
+		<ns0:ExternalReference>
+			<ns0:CSReferenceType>CSO</ns0:CSReferenceType>
+			<ns0:ReferenceNumber>HKG08931014v99</ns0:ReferenceNumber>
+		</ns0:ExternalReference>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sears Buying Services, Inc.</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3014169003</ns1:CarrierCustomerCode>
+			<ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:FirstName>Ruby</ns1:FirstName>
+				<ns1:LastName>Chan</ns1:LastName>
+				<ns1:ContactPhone>
+					<ns1:CountryCode>852</ns1:CountryCode>
+					<ns1:AreaCode>852</ns1:AreaCode>
+					<ns1:Number>27336215</ns1:Number>
+				</ns1:ContactPhone>
+			</ns1:Contact>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Hong Kong</ns1:City>
+				<ns1:Country>HK</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>11th Floor, New World Office Building, East Wing&#xD;
+24 Salisbury Road</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+			<ns0:PartyLevel>BK</ns0:PartyLevel>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Kohl's Department Stores, Inc.</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3014169003</ns1:CarrierCustomerCode>
+			<ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:LastName>Chan</ns1:LastName>
+			</ns1:Contact>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Menomonee Falls</ns1:City>
+				<ns1:County>Washington</ns1:County>
+				<ns1:State>Wisconsin</ns1:State>
+				<ns1:Country>US</ns1:Country>
+				<ns1:PostalCode>53051</ns1:PostalCode>
+				<ns1:AddressLines>
+					<ns1:AddressLine>N56 W17000 Ridgewood Drive</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+			<ns0:PartyLevel>BK</ns0:PartyLevel>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Restoration Hardware</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7081115000</ns1:CarrierCustomerCode>
+			<ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:FirstName>Kimberly</ns1:FirstName>
+				<ns1:LastName>Kussel</ns1:LastName>
+				<ns1:ContactPhone>
+					<ns1:CountryCode>1</ns1:CountryCode>
+					<ns1:AreaCode>415</ns1:AreaCode>
+					<ns1:Number>9453512</ns1:Number>
+				</ns1:ContactPhone>
+			</ns1:Contact>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Corte Madera</ns1:City>
+				<ns1:County>Marin</ns1:County>
+				<ns1:State>California</ns1:State>
+				<ns1:Country>US</ns1:Country>
+				<ns1:PostalCode>94925</ns1:PostalCode>
+				<ns1:AddressLines>
+					<ns1:AddressLine>15 Koch Road, Suite 1</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+			<ns0:PartyLevel>BK</ns0:PartyLevel>
+		</ns0:Party>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Outbound intermodal leg arrived</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_arrived_at_ob_iml</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container at first vessel loading port</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Hong Kong</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Hong Kong</ns0:City>
+					<ns0:Country>Hong Kong</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">HKHKG</ns1:UNLocationCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2531499</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">HK</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>189</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-16T12:59:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="HKT">2011-08-16T20:59:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647111070208-1-31</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS020</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Discharged at last port of discharge</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_discharged</ns0:CSEventCode>
+				<ns0:DimensionType>Port</ns0:DimensionType>
+				<ns0:DimensionValue>LastPOD</ns0:DimensionValue>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container discharged at last POD</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Singapore</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Singapore</ns0:City>
+					<ns0:Country>Singapore</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">SGSIN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">55976</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2530507</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">SG</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>355</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-22T18:06:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="SGT">2011-08-23T02:06:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647267123200-1-27</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Vessel</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS130</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Empty return</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_emp_return</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container empty returned to facility</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Allied Container (Manufacturer and Engineers) Pte. Ltd</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Singapore</ns0:City>
+					<ns0:Country>Singapore</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">SGSIN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">55976</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2530507</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">SG</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-25T03:03:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="SGT">2011-08-25T11:03:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647360065280-1-29</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS210</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Inbound intermodal leg departed</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_imdl_departed_fm_last_pod</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container departed from first facility or last pod facility &amp; in-transit to next facility</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Singapore</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Singapore</ns0:City>
+					<ns0:Country>Singapore</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">SGSIN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">55976</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2530507</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">SG</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>355</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-23T23:03:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="SGT">2011-08-24T07:03:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647351415552-1-35</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS160</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Loaded on board at first port of load</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_loaded_first_pol</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container is on board vessel</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Hong Kong</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Hong Kong</ns0:City>
+					<ns0:Country>Hong Kong</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">HKHKG</ns1:UNLocationCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2531499</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">HK</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>189</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-17T18:05:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="HKT">2011-08-18T02:05:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647267095808-1-37</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Vessel</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS060</ns0:CS1Event>
+		</ns0:MileStones>
+	</ns0:Body>
+	<ns0:Body>
+		<ns0:TransactionInformation>
+			<ns1:MessageID xmlns:ns1="http://www.cargosmart.com/common">113291769_CT_20110901101746_7902_7902</ns1:MessageID>
+			<ns1:InterchangeTransactionID xmlns:ns1="http://www.cargosmart.com/common">7902</ns1:InterchangeTransactionID>
+		</ns0:TransactionInformation>
+		<ns0:Event>
+			<ns0:CarrEventCode>Outbound intermodal leg arrived</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_arrived_at_ob_iml</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container at first vessel loading port</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Hong Kong</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Hong Kong</ns0:City>
+					<ns0:Country>Hong Kong</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57013</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2531499</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">HK</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>189</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-16T12:59:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="HKT">2011-08-16T20:59:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647111070208-1-31</ns0:CarrierUniqueMovementID>
+			<ns0:ContraIndicator>INITIAL</ns0:ContraIndicator>
+			<ns0:CS1Event>CS060</ns0:CS1Event>
+		</ns0:Event>
+		<ns0:GeneralInformation>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+		</ns0:GeneralInformation>
+		<ns0:Container>
+			<ns0:ContainerNumber>OOCL080806</ns0:ContainerNumber>
+			<ns0:ContainerCheckDigit>0</ns0:ContainerCheckDigit>
+			<ns0:CarrCntrSizeType>2210</ns0:CarrCntrSizeType>
+			<ns0:CSContainerSizeType>20GP</ns0:CSContainerSizeType>
+			<ns0:Haulage>
+				<ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+				<ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+			</ns0:Haulage>
+			<ns0:CS1ContainerSizeType>20GP</ns0:CS1ContainerSizeType>
+		</ns0:Container>
+		<ns0:BookingGeneralInfo>
+			<ns0:CarrierBookingNumber>2061029878</ns0:CarrierBookingNumber>
+			<ns0:Haulage>
+				<ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+				<ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:InBound>
+			</ns0:Haulage>
+			<ns0:BookingOffice>Hong Kong</ns0:BookingOffice>
+			<ns0:Packaging>
+				<ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">PK</ns1:PackageType>
+				<ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">0</ns1:PackageQty>
+			</ns0:Packaging>
+		</ns0:BookingGeneralInfo>
+		<ns0:Route>
+			<ns0:POR>
+				<ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:City>Hong Kong</ns1:City>
+					<ns1:Country>Hong Kong</ns1:Country>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>HKHKG</ns1:UNLocationCode>
+					</ns1:LocationCode>
+				</ns1:CityDetails>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>HKG88</ns1:FacilityCode>
+					<ns1:FacilityName>Dummy Depot (On Street)</ns1:FacilityName>
+				</ns1:Facility>
+				<ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:CSParentCityID>2531499</ns1:CSParentCityID>
+					<ns1:CSCountryCode>HK</ns1:CSCountryCode>
+					<ns1:CSContinentCode>AS</ns1:CSContinentCode>
+				</ns1:CSStandardCity>
+			</ns0:POR>
+			<ns0:FND>
+				<ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:City>Singapore</ns1:City>
+					<ns1:Country>Singapore</ns1:Country>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>55976</ns1:SchedKDCode>
+					</ns1:LocationCode>
+				</ns1:CityDetails>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>SIN06</ns1:FacilityCode>
+					<ns1:FacilityName>PSA Depot Service Centre</ns1:FacilityName>
+				</ns1:Facility>
+				<ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:CSParentCityID>2530507</ns1:CSParentCityID>
+					<ns1:CSCountryCode>SG</ns1:CSCountryCode>
+					<ns1:CSContinentCode>AS</ns1:CSContinentCode>
+				</ns1:CSStandardCity>
+				<ns0:ArrivalDT Indicator="A">
+					<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-24T23:02:00+08:00</ns1:GMT>
+					<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="SGT">2011-08-25T07:02:00+08:00</ns1:LocDT>
+				</ns0:ArrivalDT>
+			</ns0:FND>
+			<ns0:FirstPOL>
+				<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:PortName>Hong Kong</ns1:PortName>
+					<ns1:PortCode>HKG</ns1:PortCode>
+					<ns1:City>Hong Kong</ns1:City>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>HKHKG</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>58201</ns1:SchedKDCode>
+					</ns1:LocationCode>
+					<ns1:Country>Hong Kong</ns1:Country>
+					<ns1:CSPortID>189</ns1:CSPortID>
+					<ns1:CSCountryCode>HK</ns1:CSCountryCode>
+				</ns1:Port>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>HKG01</ns1:FacilityCode>
+					<ns1:FacilityName>Modern Terminal Limited (MTL)</ns1:FacilityName>
+				</ns1:Facility>
+				<ns0:CSParentCityID>2531499</ns0:CSParentCityID>
+			</ns0:FirstPOL>
+			<ns0:LastPOD>
+				<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:PortName>Singapore</ns1:PortName>
+					<ns1:PortCode>SIN</ns1:PortCode>
+					<ns1:City>Singapore</ns1:City>
+					<ns1:LocationCode>
+						<ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+						<ns1:SchedKDType>K</ns1:SchedKDType>
+						<ns1:SchedKDCode>55976</ns1:SchedKDCode>
+					</ns1:LocationCode>
+					<ns1:Country>Singapore</ns1:Country>
+					<ns1:CSPortID>355</ns1:CSPortID>
+					<ns1:CSCountryCode>SG</ns1:CSCountryCode>
+				</ns1:Port>
+				<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+					<ns1:FacilityCode>SIN01</ns1:FacilityCode>
+					<ns1:FacilityName>PSA Corporation Limited</ns1:FacilityName>
+				</ns1:Facility>
+				<ns0:CSParentCityID>2530507</ns0:CSParentCityID>
+			</ns0:LastPOD>
+			<ns0:FullReturnCutoffDT Indicator="A">
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-16T08:10:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="HKT" CSTimeZone="HKT">2011-08-16T16:10:00+08:00</ns1:LocDT>
+			</ns0:FullReturnCutoffDT>
+			<ns0:CargoDeliveryDT Indicator="A">
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-23T23:03:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="SGT">2011-08-24T07:03:00+08:00</ns1:LocDT>
+			</ns0:CargoDeliveryDT>
+			<ns0:OceanLeg>
+				<ns0:LegSeq>1</ns0:LegSeq>
+				<ns0:POL>
+					<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:PortName>Hong Kong</ns1:PortName>
+						<ns1:City>Hong Kong</ns1:City>
+						<ns1:LocationCode>
+							<ns1:UNLocationCode>HKHKG</ns1:UNLocationCode>
+							<ns1:SchedKDType>K</ns1:SchedKDType>
+							<ns1:SchedKDCode>58201</ns1:SchedKDCode>
+						</ns1:LocationCode>
+						<ns1:Country>Hong Kong</ns1:Country>
+						<ns1:CSPortID>189</ns1:CSPortID>
+						<ns1:CSCountryCode>HK</ns1:CSCountryCode>
+					</ns1:Port>
+					<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:FacilityCode>HKG01</ns1:FacilityCode>
+					</ns1:Facility>
+					<ns0:DepartureDT Indicator="E">
+						<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-19T13:00:00+08:00</ns1:GMT>
+						<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="HKT" CSTimeZone="HKT">2011-08-19T21:00:00+08:00</ns1:LocDT>
+					</ns0:DepartureDT>
+					<ns0:CSParentCityID>2531499</ns0:CSParentCityID>
+				</ns0:POL>
+				<ns0:POD>
+					<ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:PortName>Singapore</ns1:PortName>
+						<ns1:City>Singapore</ns1:City>
+						<ns1:LocationCode>
+							<ns1:UNLocationCode>SGSIN</ns1:UNLocationCode>
+							<ns1:SchedKDType>K</ns1:SchedKDType>
+							<ns1:SchedKDCode>55976</ns1:SchedKDCode>
+						</ns1:LocationCode>
+						<ns1:Country>Singapore</ns1:Country>
+						<ns1:CSPortID>355</ns1:CSPortID>
+						<ns1:CSCountryCode>SG</ns1:CSCountryCode>
+					</ns1:Port>
+					<ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+						<ns1:FacilityCode>SIN01</ns1:FacilityCode>
+					</ns1:Facility>
+					<ns0:ArrivalDT Indicator="E">
+						<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-22T10:00:00+08:00</ns1:GMT>
+						<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="SGT" CSTimeZone="SGT">2011-08-22T18:00:00+08:00</ns1:LocDT>
+					</ns0:ArrivalDT>
+					<ns0:CSParentCityID>2530507</ns0:CSParentCityID>
+				</ns0:POD>
+				<ns0:SVVD>
+					<ns0:Loading>
+						<ns0:Service>LPA</ns0:Service>
+						<ns0:Vessel>NAD</ns0:Vessel>
+						<ns0:VesselName>NYK ADONIS</ns0:VesselName>
+						<ns0:Voyage>006</ns0:Voyage>
+						<ns0:Direction>West</ns0:Direction>
+						<ns0:LloydsNumber>9468293</ns0:LloydsNumber>
+						<ns0:CallSign>3EUI3</ns0:CallSign>
+						<ns0:RegistrationCountry>PANAMA</ns0:RegistrationCountry>
+						<ns0:RegistrationCountryCode>PA</ns0:RegistrationCountryCode>
+					</ns0:Loading>
+					<ns0:Discharge>
+						<ns0:Service>LPA</ns0:Service>
+						<ns0:Vessel>NAD</ns0:Vessel>
+						<ns0:VesselName>NYK ADONIS</ns0:VesselName>
+						<ns0:Voyage>006</ns0:Voyage>
+						<ns0:Direction>West</ns0:Direction>
+						<ns0:LloydsNumber>9468293</ns0:LloydsNumber>
+						<ns0:CallSign>3EUI3</ns0:CallSign>
+						<ns0:RegistrationCountry>PANAMA</ns0:RegistrationCountry>
+						<ns0:RegistrationCountryCode>PA</ns0:RegistrationCountryCode>
+					</ns0:Discharge>
+				</ns0:SVVD>
+			</ns0:OceanLeg>
+		</ns0:Route>
+		<ns0:ExternalReference>
+			<ns0:CSReferenceType>CSO</ns0:CSReferenceType>
+			<ns0:ReferenceNumber>HKG08931014v99</ns0:ReferenceNumber>
+		</ns0:ExternalReference>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Sears Buying Services, Inc.</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3014169003</ns1:CarrierCustomerCode>
+			<ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:FirstName>Ruby</ns1:FirstName>
+				<ns1:LastName>Chan</ns1:LastName>
+				<ns1:ContactPhone>
+					<ns1:CountryCode>852</ns1:CountryCode>
+					<ns1:AreaCode>852</ns1:AreaCode>
+					<ns1:Number>27336215</ns1:Number>
+				</ns1:ContactPhone>
+			</ns1:Contact>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Hong Kong</ns1:City>
+				<ns1:Country>HK</ns1:Country>
+				<ns1:AddressLines>
+					<ns1:AddressLine>11th Floor, New World Office Building, East Wing&#xD;
+24 Salisbury Road</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+			<ns0:PartyLevel>BK</ns0:PartyLevel>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Kohl's Department Stores, Inc.</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3014169003</ns1:CarrierCustomerCode>
+			<ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:LastName>Chan</ns1:LastName>
+			</ns1:Contact>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Menomonee Falls</ns1:City>
+				<ns1:County>Washington</ns1:County>
+				<ns1:State>Wisconsin</ns1:State>
+				<ns1:Country>US</ns1:Country>
+				<ns1:PostalCode>53051</ns1:PostalCode>
+				<ns1:AddressLines>
+					<ns1:AddressLine>N56 W17000 Ridgewood Drive</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+			<ns0:PartyLevel>BK</ns0:PartyLevel>
+		</ns0:Party>
+		<ns0:Party>
+			<ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+			<ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Restoration Hardware</ns1:PartyName>
+			<ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7081115000</ns1:CarrierCustomerCode>
+			<ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:FirstName>Kimberly</ns1:FirstName>
+				<ns1:LastName>Kussel</ns1:LastName>
+				<ns1:ContactPhone>
+					<ns1:CountryCode>1</ns1:CountryCode>
+					<ns1:AreaCode>415</ns1:AreaCode>
+					<ns1:Number>9453512</ns1:Number>
+				</ns1:ContactPhone>
+			</ns1:Contact>
+			<ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+				<ns1:City>Corte Madera</ns1:City>
+				<ns1:County>Marin</ns1:County>
+				<ns1:State>California</ns1:State>
+				<ns1:Country>US</ns1:Country>
+				<ns1:PostalCode>94925</ns1:PostalCode>
+				<ns1:AddressLines>
+					<ns1:AddressLine>15 Koch Road, Suite 1</ns1:AddressLine>
+				</ns1:AddressLines>
+			</ns1:Address>
+			<ns0:PartyLevel>BK</ns0:PartyLevel>
+		</ns0:Party>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Outbound intermodal leg arrived</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_arrived_at_ob_iml</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container at first vessel loading port</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Hong Kong</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Hong Kong</ns0:City>
+					<ns0:Country>Hong Kong</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">HKHKG</ns1:UNLocationCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2531499</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">HK</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>189</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-16T12:59:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="HKT">2011-08-16T20:59:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647111070208-1-31</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS020</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Discharged at last port of discharge</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_discharged</ns0:CSEventCode>
+				<ns0:DimensionType>Port</ns0:DimensionType>
+				<ns0:DimensionValue>LastPOD</ns0:DimensionValue>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container discharged at last POD</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Singapore</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Singapore</ns0:City>
+					<ns0:Country>Singapore</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">SGSIN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">55976</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2530507</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">SG</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>355</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-22T18:06:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="SGT">2011-08-23T02:06:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647267123200-1-27</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Vessel</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS130</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Empty return</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_emp_return</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container empty returned to facility</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Allied Container (Manufacturer and Engineers) Pte. Ltd</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Singapore</ns0:City>
+					<ns0:Country>Singapore</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">SGSIN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">55976</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2530507</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">SG</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-25T03:03:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="SGT">2011-08-25T11:03:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647360065280-1-29</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS210</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Inbound intermodal leg departed</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_imdl_departed_fm_last_pod</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container departed from first facility or last pod facility &amp; in-transit to next facility</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Singapore</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Singapore</ns0:City>
+					<ns0:Country>Singapore</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">SGSIN</ns1:UNLocationCode>
+					<ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+					<ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">55976</ns1:SchedKDCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2530507</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">SG</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>355</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-23T23:03:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="SGT">2011-08-24T07:03:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647351415552-1-35</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Truck</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS160</ns0:CS1Event>
+		</ns0:MileStones>
+		<ns0:MileStones>
+			<ns0:CarrEventCode>Loaded on board at first port of load</ns0:CarrEventCode>
+			<ns0:CSEvent>
+				<ns0:CSEventCode>cntr_loaded_first_pol</ns0:CSEventCode>
+				<ns0:EstActIndicator>A</ns0:EstActIndicator>
+			</ns0:CSEvent>
+			<ns0:EventDescription>Container is on board vessel</ns0:EventDescription>
+			<ns0:Location>
+				<ns0:LocationName>Hong Kong</ns0:LocationName>
+				<ns0:CityDetails>
+					<ns0:City>Hong Kong</ns0:City>
+					<ns0:Country>Hong Kong</ns0:Country>
+				</ns0:CityDetails>
+				<ns0:LocationCode>
+					<ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">HKHKG</ns1:UNLocationCode>
+				</ns0:LocationCode>
+				<ns0:CSStandardCity>
+					<ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2531499</ns1:CSParentCityID>
+					<ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">HK</ns1:CSCountryCode>
+					<ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+				</ns0:CSStandardCity>
+				<ns0:CSPortID>189</ns0:CSPortID>
+			</ns0:Location>
+			<ns0:EventDT>
+				<ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2011-08-17T18:05:00+08:00</ns1:GMT>
+				<ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="HKT">2011-08-18T02:05:00+08:00</ns1:LocDT>
+			</ns0:EventDT>
+			<ns0:CarrierUniqueMovementID>2594073647267095808-1-37</ns0:CarrierUniqueMovementID>
+			<ns0:SCAC>OOLU</ns0:SCAC>
+			<ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+			<ns0:TransportMode>Vessel</ns0:TransportMode>
+			<ns0:UpdateParty>OOCL</ns0:UpdateParty>
+			<ns0:CS1Event>CS060</ns0:CS1Event>
+		</ns0:MileStones>
+	</ns0:Body>
+</ns0:ContainerMovement>

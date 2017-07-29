@@ -1,0 +1,599 @@
+.VER 1.61
+.INI
+CS-SYSINT-CARR-BR-IFTMBF_D96B_20121012aKC,,D 96B,UN,D96B,Firm booking message
+.PRIVATE FORESIGHT
+.CTL
+.TDVER 1
+.DATE 05/09/114:16:01:35
+.PUBLIC
+.SETS
+IFTMBF=[!UNH,M][!BGM,M][CTA][COM*1,,9][DTM*1,,9][TSR*1,,9][MOA*1,,9][FTX*1,,99]+150[DOC*1]-140[CNT*1,,9]{:99+10[LOC*1][DTM*1,,9]}{:2[TOD][LOC*1,,9]}{:99[RFF*1][DTM*1,,9]}{:9[GOR][FTX*1,,9]{:9[DOC*1][DTM*1]}}{:99[TCC*1][LOC*1][FTX*1][CUX][PRI][EQN*1][PCD*1][MOA*1,,9][QTY*1,,9]}{:99[TDT][DTM*1,,9][TSR*1,,9]{:99[LOC*1][DTM*1]}{:9[RFF*1][DTM*1]}}{:99[NAD*1][LOC*1,,9]{:9[CTA][COM*1,,9]}{:9[DOC*1][DTM*1]}{:9[RFF*1][DTM*1,,9]}{:9[CPI*1][RFF*1,,99][CUX][LOC*1,,9][MOA*1,,9]}{:99[TSR*1][RFF*1][LOC*1][TPL*1][FTX*1,,9]}}{:999[GID*1][HAN][TMP*1][RNG*1][TMD][LOC*1,,9][MOA*1,,9][PIA*1,,9][FTX*2,,9]{:9[NAD*2][DTM*1]}[GDS,,9]{:99[MEA*1][EQN*1]}{:99[DIM*1][EQN*1]}{:9[RFF*1][DTM*1,,9]}{:9[PCI*1][RFF*1][DTM*1][GIN*1,,9]}{:9[DOC*1][DTM*1,,9]}{:9[TPL*1]{:9[MEA*1][EQN*1]}}{:999[SGP*1]{:9[MEA*1][EQN*1]}}{:9[DGS*1][FTX*1,,99]{:9[CTA][COM*1,,9]}{:9[MEA*1][EQN*1]}{:999[SGP*1]{:9[MEA*1][EQN*1]}}}}{:999[EQD][EQN*1][TMD][MEA*1,,9][DIM*1,,9][TPL*1,,9][HAN][TMP*2][FTX*1,,9]{:9[NAD*2][DTM*1]{:9[CTA][COM*1,,9]}}}[!UNT,M]
+.SEGS
+BGM=[C002][C106][1225][4343]
+CNT=[C270],@M
+COM=[C076],@M
+CPI=[C229][C231][4237],..*1.
+CTA=[3139][C056]
+CUX=[C504][C504][5402][6341]
+DGS=[8273][C205][C234][C223][8339][8364][8410][8126][C235][C236][8255][8325][8211],....*1.........
+DIM=[!6145,M][C211],.@M*1
+DOC=[C002][C503][3153][1220][1218],@M....
+DTM=[C507],@M
+EQD=[!8053,M][C237][C224][8077][8249][8169]
+EQN=[C523],@M
+FTX=[!4451,M][4453][C107][C108][3453],....*1.,....*2.
+GDS=[C703]
+GID=[1496][C213][C213][C213],..*1..
+GIN=[!7405,M][C208][C208][C208][C208][C208],.@M*1.*1.*1.*1.*1
+GOR=[8323][C232][C232][C232][C232]
+HAN=[C524][C218]
+LOC=[!3227,M][C517][C519][C553][5479],..*1...
+MEA=[!6311,M][C502][C174][7383],...*1.
+MOA=[C516],@M
+NAD=[!3035,M][C082][C058][C080][C059][3164][3229][3251][3207],...*1.*1.*1...[:17].,...*1.*2.*1....
+PCD=[C501],@M
+PCI=[4233][C210][8275][C827],..*1..
+PIA=[!4347,M][C212][C212][C212][C212][C212],.@M....
+PRI=[C509][5213]
+QTY=[C186],@M
+RFF=[C506],@M
+RNG=[!6167,M][C280],..*1
+SGP=[C237][7224],@M.
+TCC=[C200][C203][C528][C554],....*1
+TDT=[!8051,M][8028][C220][C228][C040][8101][C401][C222][8281]
+TMD=[C219][8332][8341]
+TMP=[!6245,M][C239],..*1,..*2
+TOD=[4055][4215][C100]
+TPL=[C222],@M
+TSR=[C536][C233][C537][C703],..*1..
+UNB=[!S001,M][!S002,M][!S003,M][!S004,M][!0020,M][S005][0026][0029][0031][0032][0035]
+UNE=[!0060,M][!0048,M]
+UNG=[!0038,M][!S006,M][!S007,M][!S004,M][!0048,M][!0051,M][!S008,M][0058]
+UNH=[!0062,M][S009][0068][S010]
+UNT=[!0074,M][!0062,M]
+UNZ=[!0036,M][!0020,M]
+.COMS
+C002=[1001][1131][3055][1000]
+C040=[3127][1131][3055][3128]
+C056=[3413][3412]
+C058=[!3124,M][!3124,M][!3124,M][!3124,M][!3124,M],.+C+C+C+C
+C059=[!3042,M][!3042,M][!3042,M][!3042,M],.+C+C+C
+C076=[!3148,M][!3155,M]
+C080=[!3036,M][!3036,M][!3036,M][!3036,M][!3036,M][3045],.[:50]+C[:50]+C[:50]+C[:50]+C[:50].,.+C+C+C+C.
+C082=[!3039,M][1131][3055]
+C100=[4053][1131][3055][4052][4052]
+C106=[1004][1056][1060]
+C107=[!4441,M][1131][3055]
+C108=[!4440,M][!4440,M][!4440,M][!4440,M][!4440,M],.[:512]+C[:512]+C[:512]+C[:512]+C[:512],+C[:512]+C[:512]+C[:512]+C[:512]+C[:512]
+C174=[6411][6314][6162][6152][6432],@M....
+C186=[!6063,M][!6060,M][6411]
+C200=[8023][1131][3055][8022][4237][7140]
+C203=[!5243,M][1131][3055][5242][5275][1131][3055][5275][1131][3055]
+C205=[!8351,M][8078][8092]
+C208=[!7402,M][!7402,M],.+C
+C210=[!7102,M][!7102,M][!7102,M][!7102,M][!7102,M][!7102,M][!7102,M][!7102,M][!7102,M][!7102,M],+C+C+C+C+C+C+C+C+C+C
+C211=[6411][6168][6140][6008],@M...
+C212=[7140][7143][1131][3055]
+C213=[7224][7065][1131][3055][7064],....[:6].
+C218=[7419][1131][3055][7418]
+C219=[8335][8334]
+C220=[8067][8066]
+C222=[8213][1131][3055][8212][8453]
+C223=[7106][6411],.[:5].
+C224=[8155][1131][3055][8154]
+C228=[8179][8178]
+C229=[!5237,M][1131][3055]
+C231=[4215][1131][3055],@M..
+C232=[9415][9411][9417][9353]
+C233=[!7273,M][1131][3055][!7273,M][1131][3055],...+C..
+C234=[7124][7088]
+C235=[8158][8186]
+C236=[8246][8246][8246]
+C237=[8260][1131][3055][3207]
+C239=[6246][6411],.[1:5].,.[:7].
+C270=[!6069,M][!6066,M][6411]
+C280=[6411][6162][6152],@M..
+C401=[!8457,M][!8459,M][7130]
+C501=[!5245,M][5482][5249][1131][3055]
+C502=[6313][6321][6155][6154]
+C503=[1004][1373][1366][3453]
+C504=[!6347,M][6345][6343][6348]
+C506=[!1153,M][1154][1156][4000]
+C507=[!2005,M][2380][2379]
+C509=[!5125,M][5118][5375][5387][5284][6411]
+C516=[!5025,M][5004][6345][6343][4405]
+C517=[3225][1131][3055][3224],....[:256]
+C519=[3223][1131][3055][3222]
+C523=[6350][6353]
+C524=[4079][1131][3055][4078]
+C528=[7357][1131][3055]
+C536=[!4065,M][1131][3055]
+C537=[!4219,M][1131][3055]
+C553=[3233][1131][3055][3232]
+C554=[!5243,M][1131][3055],+C..
+C703=[!7085,M][1131][3055]
+C827=[!7511,M][1131][3055]
+S001=[!0001,M][!0002,M]
+S002=[!0004,M][0007][0008]
+S003=[!0010,M][0007][0014]
+S004=[!0017,M][!0019,M]
+S005=[!0022,M][0025]
+S006=[!0040,M][0007]
+S007=[!0044,M][0007]
+S008=[!0052,M][!0054,M][0057]
+S009=[!0065,M][!0052,M][!0054,M][!0051,M][0057]
+S010=[!0070,M][0073]
+.ELMS
+0001=A,4,4
+0002=N,1,1
+0004=AN,1,35
+0007=AN,1,4
+0008=AN,1,14
+0010=AN,1,35
+0014=AN,1,14
+0017=N,6,6
+0019=N,4,4
+0020=AN,1,14
+0022=AN,1,14
+0025=AN,2,2
+0026=AN,1,14
+0029=A,1,1
+0031=N,1,1
+0032=AN,1,35
+0035=N,1,1
+0036=N,1,6
+0038=AN,1,6
+0040=AN,1,35
+0044=AN,1,35
+0048=AN,1,14
+0051=AN,1,2
+0052=AN,1,3
+0054=AN,1,3
+0057=AN,1,6
+0058=AN,1,14
+0060=N,1,6
+0062=AN,1,14
+0065=AN,1,6
+0068=AN,1,35
+0070=R,1,2
+0073=A,1,1
+0074=N,1,6
+1000=AN,1,35
+1001=AN,1,3
+1004=AN,1,35
+1056=AN,1,9
+1060=AN,1,6
+1131=AN,1,3
+1153=AN,1,3
+1154=AN,1,35
+1156=AN,1,6
+1218=R,1,2
+1220=R,1,2
+1225=AN,1,3
+1366=AN,1,35
+1373=AN,1,3
+1496=R,1,5
+2005=AN,1,3
+2379=AN,1,3
+2380=AN,1,35
+3035=AN,1,3
+3036=AN,1,35
+3039=AN,1,35
+3042=AN,1,35
+3045=AN,1,3
+3055=AN,1,3
+3124=AN,1,35
+3127=AN,1,17
+3128=AN,1,35
+3139=AN,1,3
+3148=AN,1,512
+3153=AN,1,3
+3155=AN,1,3
+3164=AN,1,35
+3207=AN,1,3
+3222=AN,1,70
+3223=AN,1,25
+3224=AN,1,70
+3225=AN,1,25
+3227=AN,1,3
+3229=AN,1,9
+3232=AN,1,70
+3233=AN,1,25
+3251=AN,1,17
+3412=AN,1,35
+3413=AN,1,17
+3453=AN,1,3
+4000=AN,1,35
+4052=AN,1,70
+4053=AN,1,3
+4055=AN,1,3
+4065=AN,1,3
+4078=AN,1,70
+4079=AN,1,3
+4215=AN,1,3
+4219=AN,1,3
+4233=AN,1,3
+4237=AN,1,3
+4343=AN,1,3
+4347=AN,1,3
+4405=AN,1,3
+4440=AN,1,70
+4441=AN,1,17
+4451=AN,1,3
+4453=AN,1,3
+5004=R,1,18
+5025=AN,1,3
+5118=R,1,15
+5125=AN,1,3
+5213=AN,1,3
+5237=AN,1,3
+5242=AN,1,35
+5243=AN,1,9
+5245=AN,1,3
+5249=AN,1,3
+5275=AN,1,6
+5284=R,1,9
+5375=AN,1,3
+5387=AN,1,3
+5402=R,1,12
+5479=AN,1,3
+5482=R,1,10
+6008=R,1,15
+6060=R,1,15
+6063=AN,1,3
+6066=R,1,18
+6069=AN,1,3
+6140=R,1,15
+6145=AN,1,3
+6152=R,1,18
+6154=AN,1,70
+6155=AN,1,17
+6162=R,1,18
+6167=AN,1,3
+6168=R,1,15
+6245=AN,1,3
+6246=R,3,3
+6311=AN,1,3
+6313=AN,1,3
+6314=AN,1,18
+6321=AN,1,3
+6341=AN,1,3
+6343=AN,1,3
+6345=AN,1,3
+6347=AN,1,3
+6348=R,1,4
+6350=R,1,15
+6353=AN,1,3
+6411=AN,1,3
+6432=R,1,2
+7064=AN,1,35
+7065=AN,1,17
+7085=AN,1,3
+7088=AN,1,8
+7102=AN,1,35
+7106=R,3,3
+7124=R,4,4
+7130=AN,1,17
+7140=AN,1,35
+7143=AN,1,3
+7224=R,1,8
+7273=AN,1,3
+7357=AN,1,18
+7383=AN,1,3
+7402=AN,1,35
+7405=AN,1,3
+7418=AN,1,35
+7419=AN,1,4
+7511=AN,1,3
+8022=AN,1,26
+8023=AN,1,17
+8028=AN,1,17
+8051=AN,1,3
+8053=AN,1,3
+8066=AN,1,17
+8067=AN,1,3
+8077=AN,1,3
+8078=AN,1,7
+8092=AN,1,10
+8101=AN,1,3
+8126=AN,1,10
+8154=AN,1,35
+8155=AN,1,10
+8158=AN,1,4
+8169=AN,1,3
+8178=AN,1,17
+8179=AN,1,8
+8186=AN,4,4
+8211=AN,1,3
+8212=AN,1,35
+8213=AN,1,9
+8246=AN,1,4
+8249=AN,1,3
+8255=AN,1,3
+8260=AN,1,17
+8273=AN,1,3
+8275=AN,1,3
+8281=AN,1,3
+8323=AN,1,3
+8325=AN,1,3
+8332=AN,1,26
+8334=AN,1,35
+8335=AN,1,3
+8339=AN,1,3
+8341=AN,1,3
+8351=AN,1,7
+8364=AN,1,6
+8410=AN,1,4
+8453=AN,1,3
+8457=AN,1,3
+8459=AN,1,3
+9353=AN,1,3
+9411=AN,1,3
+9415=AN,1,3
+9417=AN,1,3
+.OBJVARS
+///UNB//=UNB
+///UNE//=UNE
+///UNG//=UNG
+///UNH//=UNH1
+///UNT//=UNT
+///UNZ//=UNZ
+.TEXT,SETS
+IFTMBF,0,Firm booking message
+IFTMBF,2,A message from a party definitely booking forwarding and/or  transportservices for a consignment to the party providing  those services. Themessage will contain the conditions  under which the sender of the messages requires the  services to take place.
+.TEXT,SEGS
+BGM,0,BEGINNING OF MESSAGE
+BGM,1,To indicate the type and function of a message and to  transmit the identifying number.
+CNT,0,CONTROL TOTAL
+COM,0,COMMUNICATION CONTACT
+COM,1,To identify a communication number of a department or a  person to whom communication should be directed.
+CPI,0,CHARGE PAYMENT INSTRUCTIONS
+CTA,0,CONTACT INFORMATION
+CTA,1,To identify a person or a department to whom communication  should be directed.
+CUX,0,CURRENCIES
+CUX,1,To specify currencies used in the transaction and relevant  details for the rate of exchange.
+DGS,0,DANGEROUS GOODS
+DIM,0,DIMENSIONS
+DOC,0,DOCUMENT/MESSAGE DETAILS
+DOC,1,To identify documents, either printed, electronically  transferred, or referenced as specified in message  description, including, where relevant, the identification  of the type of transaction that will result from this  message.
+DTM,0,DATE/TIME/PERIOD
+EQD,0,EQUIPMENT DETAILS
+EQN,0,NUMBER OF UNITS
+FTX,0,FREE TEXT
+GDS,0,NATURE OF CARGO
+GID,0,GOODS ITEM DETAILS
+GIN,0,GOODS IDENTITY NUMBER
+GIN,1,To give specific identification numbers, either as single  numbers or ranges.
+GOR,0,GOVERNMENTAL REQUIREMENTS
+GOR,1,To indicate the requirement for a specific govermental  action and/or procedure or which specific procedure is  valid for a specific part of the transport.
+HAN,0,HANDLING INSTRUCTIONS
+LOC,0,PLACE/LOCATION IDENTIFICATION
+LOC,1,To identify a country/place/location/related location  one/related location two.
+MEA,0,MEASUREMENTS
+MEA,1,To specify physical measurements, including dimension  tolerances, weights and counts.
+MOA,0,MONETARY AMOUNT
+NAD,0,NAME AND ADDRESS
+NAD,1,To specify the name/address and their related function,  either by CO82 only and/or unstructured by CO58 or  structured by CO80 thru 3207.
+PCD,0,PERCENTAGE DETAILS
+PCI,0,PACKAGE IDENTIFICATION
+PCI,1,To specify markings and labels on individual packages or  physical units.
+PIA,0,ADDITIONAL PRODUCT ID
+PIA,1,To specify additional or substitutional item identification  codes.
+PRI,0,PRICE DETAILS
+QTY,0,QUANTITY
+RFF,0,REFERENCE
+RNG,0,RANGE DETAILS
+SGP,0,SPLIT GOODS PLACEMENT
+TCC,0,TRANSPORT CHARGE/RATE CALCULATIONS
+TDT,0,DETAILS OF TRANSPORT
+TDT,1,To specify the transport details such as mode of transport,  means of transport, its conveyance reference number and the  identification of the means of transport. The segment may be pointed to by the TPL segment.
+TMD,0,TRANSPORT MOVEMENT DETAILS
+TMD,1,To specify operational transport movement details for a  goods item or equipment (which may differ from the  contractual conditions).
+TMP,0,TEMPERATURE
+TOD,0,TERMS OF DELIVERY OR TRANSPORT
+TPL,0,TRANSPORT PLACEMENT
+TPL,1,To specify placement of goods or equipment in relation to  the transport used. The segment serves as a pointer to the  TDT segment group.
+TSR,0,TRANSPORT SERVICE REQUIREMENTS
+TSR,1,To specify the contract and carriage conditions and service  and priority requirements for the transport.
+UNB,0,INTERCHANGE HEADER
+UNB,1,To start, identify and specify an interchange.
+UNE,0,FUNCTIONAL GROUP TRAILER
+UNE,1,To end and check the completeness of a functional group.
+UNG,0,FUNCTIONAL GROUP HEADER
+UNG,1,To head, identify and specify a functional group.
+UNH,0,MESSAGE HEADER
+UNT,0,MESSAGE TRAILER
+UNZ,0,INTERCHANGE TRAILER
+.TEXT,ELMS
+0007,1,Qualifier referring to the source of codes for the  identifiers of interchanging partners.
+0010,1,Name or coded representation of the recipient of a data  interchange.
+0017,1,Local date when an interchange or a functional group was  prepared.
+0019,1,Local time of day when an interchange or a functional group  was prepared.
+0022,0,Recipient's reference/password
+0025,0,Recipient's reference/password qualifier
+0032,0,Cummunications agreement ID
+0040,0,Application sender's identification
+0051,1,Code identifying the agency controlling the specification,  maintenance and publication of the message type.
+0054,1,Release number within the current message type version  number (0052).
+0057,1,Code, assigned by the association responsible for the  design and maintenance of the message type concerned, which  further identifies the message.
+0065,1,Code identifying a type of message and assigned by its  controlling agency.
+0068,1,Reference serving as a key to relate all subsequent  transfers of data to the same business case or file.
+0070,1,Number assigned by the sender indicating that the message  is an addition or change of a previously sent message  relating to the same topic.
+0073,1,Indication used for the first and last message in a  sequence of the same type of message relating to the same  topic.
+1000,1,Plain language identifier specifying the function of a  document/message.
+1004,1,Reference number assigned to the document/message by the  issuer.
+1153,1,Code giving specific meaning to a reference segment or a  reference number.
+1154,1,Identification number the nature and function of which can  be qualified by an entry in data element 1153 Reference  qualifier.
+1156,1,Number of the line in the document/message referenced in  1154 Reference number.
+1218,1,Specification of the number of originals of a stipulated  document that are required.
+1220,1,Number of originals or copies of a document stipulated or  referred to as being required.
+1366,1,Indication of the source from which the printed information  is to be or has been obtained.
+1496,1,Serial number differentiating each separate goods item  entry of a consignment as contained in one  document/declaration.
+2379,1,Specification of the representation of a date, a date and  time or of a period.
+2380,1,The value of a date, a date and time, a time or of a period  in a specified representation.
+3127,1,Identification of party undertaking or arranging transport  of goods between named points.
+3128,1,Name of party undertaking or arranging transport of goods  between named points.
+3139,1,Code specifying the function of a contact (e.g. department  or person).
+3153,1,Code identifying the type of communication channel being  used.
+3155,1,Code identifying the type of communication channel being  used.
+3207,1,Identification of the name of a country or other  geographical entity as specified in ISO 3166.
+3225,1,Identification of the name of place/location, other than  3164 City name.
+3229,1,Identification of the name of sub-entities (state,  province) defined by appropriate governmental agencies.
+4052,1,Terms agreed between two parties (e.g. seller/buyer,  shipper/carrier)under which a product or service is  provided.
+4053,1,Identification of the terms agreed between two parties  (e.g. seller/buyer, shipper/carrier) under which a product or  service is provided.
+4055,1,Indication whether the terms relate to e.g. price  conditions, delivery conditions, transport conditions, or a  combination of these.
+4078,1,Instructions on how specified goods, packages or containers  should be handled.
+4079,1,Identification of the instructions on how specified goods,  packages or containers should be handled.
+4233,1,Code indicating instructions on how specified packages or  physical units should be marked.
+4237,1,Code indicating whether freight item amount is prepaid or  to be collected.
+4343,1,Code specifying the type of acknowledgment required or  transmitted.
+4440,1,Free text field available to the message sender for  information.
+5118,1,The monetary value associated with a purchase or sale of an  article, product or service.
+5213,1,Code indicating disposition of the price change of a  sub-line item.
+5402,1,The rate at which one specified currency is expressed in  another specified currency.
+6066,1,Value obtained from summing the values specified by the  Control Qualifier throughout the message (Hash total).
+6069,1,Determines the source data elements in the message which  forms the basis for 6066 Control value.
+6145,1,To specify the dimensions applicable to each of the  transportable units.
+6246,1,The actual temperature value in degrees Celsius (e.g. 008,  020).
+6311,1,Specification of the application of the physical  measurement used.
+6341,1,Code identifying the market upon which the currency  exchange rate is based.
+6345,1,Identification of the name or symbol of the monetary unit  involved in the transaction.
+6348,1,Multiplying factor used in expressing the number of  currency units.
+6411,1,Indication of the unit of measurement in which weight  (mass), capacity, length, area, volume or other quantity is  expressed.
+7088,1,Lowest temperature, in the case of dangerous goods, at  which vapour from an inflammable liquid forms an ignitable  mixture with air.
+7106,1,Temperature in centigrade determined by the closed cup test  as per ISO 1523/73 where a vapour is given off that can be  ignited.
+7124,1,Unique serial number assigned within the United Nations to  substances and articles contained in a list of the  dangerous goods most commonly carried.
+7130,1,Customer provided authorization number to allow supplier to  ship goods under specific freight conditions.  This number  will be transmitted back to customer in the dispatch advice  message.
+7224,1,Number of individual parts of a shipment either unpacked,  or packed in such a way that they cannot be divided without  first undoing the packing.
+7273,1,Identification of a service requirement (which may  constitute an additional component to a basic contract).
+7357,1,Code identifying goods for Customs, transport or  statistical purposes(generic term).
+7383,1,Code indicating the surface or layer of a product that is  being described.
+7511,1,To specify the type of marking that reflects the method and  the conventions adhered to for marking.
+8022,1,Plain language statement describing freight and other  charges.
+8023,1,Coded description of freight charges and other charges  (used in combination with 1131/3055).
+8028,1,Unique reference given by the carrier to a certain journey  or departure of a means of transport (generic term).
+8051,1,Qualifier giving a specific meaning to the transport  details.
+8067,1,Coded method of transport used for the carriage of the  goods.
+8078,1,Number giving additional hazard code classification of a  goods item within the applicable dangerous goods regulation.
+8092,1,The version/revision number of date of issuance of the code  used.
+8101,1,Identification of the point of origin and point of  direction.
+8126,1,The identification of a transport emergency card giving  advice for emergency actions.
+8154,1,Plain language description of the size and type of  equipment e.g. unit load device.
+8155,1,Coded description of the size and type of equipment e.g.  unit load device.
+8158,1,The id. number for the Orange Placard (upper part) required  on the means of transport.
+8169,1,To indicate the extent to which the equipment is full or  empty.
+8178,1,Description of the type of the means of transport being  utilized.
+8179,1,Code defining the type of the means of transport being  utilized.
+8186,1,The number for the Orange Placard (lower part) required on  the means of transport.
+8211,1,Code giving evidence that transportation of particular  hazardous cargo is permitted and identifies the  restrictions being put upon a particular transport.
+8246,1,Marking identifying the type of hazardous goods  (substance), Loading/Unloading instructions and advising  actions in case of emergency.
+8255,1,Code defining the quantity and the type of package in which  a product is allowed to be shipped in a passenger or  freight aircraft.
+8260,1,Marks (letters and/or numbers) which identify equipment  e.g. unit load device.
+8273,1,Code indicating the regulation, international or national,  applicable for a means of transport.
+8275,1,Code to identify whether goods of separate description or  comprising separate consignments are contained in the same  external packaging or to indicate that a container or  similar unit load device is empty.
+8323,1,Code indicating the movement of goods (e.g. import, export,  transit).
+8325,1,Identification of the type of means of transport determined  to carry particular goods, not necessarily being hazardous.
+8453,1,Coded name of the country in which a means of transport is  registered.
+9353,1,Code identifying the treatment applied by the government to  goods which are subject to a control.
+9411,1,Indication of requirement and status of government  involvement.
+9417,1,To indicate type of government action such as inspection,  detention, fumigation, security.
+.TEXT,COMS
+C002,0,DOCUMENT/MESSAGE NAME
+C002,1,Identification of a type of document/message by code or  name. Code preferred.
+C040,0,CARRIER
+C040,1,Identification of a carrier by code and/or by name. Code  preferred.
+C056,0,DEPARTMENT OR EMPLOYEE DETAILS
+C056,1,Code and/or name of a department or employee. Code  preferred.
+C058,0,NAME AND ADDRESS
+C059,0,STREET
+C059,1,Street address and/or PO Box number in a structured  address: one to three lines.
+C076,0,COMMUNICATION CONTACT
+C076,1,Communication number of a department or employee in a  specified channel.
+C080,0,PARTY NAME
+C080,1,Identification of a transaction party by name, one to five  lines. Party name may be formatted.
+C082,0,PARTY IDENTIFICATION DETAILS
+C100,0,TERMS OF DELIVERY OR TRANSPORT
+C106,0,DOCUMENT/MESSAGE IDENTIFICATION
+C106,1,Identification of a document/message by its number and  eventually its version or revision.
+C107,0,TEXT REFERENCE
+C108,0,TEXT LITERAL
+C174,0,VALUE/RANGE
+C174,1,Measurement value and relevant minimum and maximum  tolerances in that order.
+C186,0,QUANTITY DETAILS
+C186,1,Quantity information in a transaction, qualified when  relevant.
+C200,0,CHARGE
+C203,0,RATE/TARIFF CLASS
+C205,0,HAZARD CODE
+C208,0,IDENTITY NUMBER RANGE
+C208,1,Goods item identification numbers, start and end of  consecutively numbered range.
+C210,0,MARKS & LABELS
+C211,0,DIMENSIONS
+C212,0,ITEM NUMBER IDENTIFICATION
+C213,0,NUMBER AND TYPE OF PACKAGES
+C218,0,HAZARDOUS MATERIAL
+C219,0,MOVEMENT TYPE
+C220,0,MODE OF TRANSPORT
+C222,0,TRANSPORT IDENTIFICATION
+C223,0,DANGEROUS GOODS SHIPMENT FLASHPOINT
+C223,1,Temperature at which a vapor according to ISO 1523/73 can  be ignited.
+C224,0,EQUIPMENT SIZE AND TYPE
+C224,1,Code and/or name identifying size and type of equipment  used in transport. Code preferred.
+C228,0,TRANSPORT MEANS
+C229,0,CHARGE CATEGORY
+C231,0,METHOD OF PAYMENT
+C232,0,GOVERNMENT ACTION
+C233,0,SERVICE
+C233,1,To identify a service (which may constitute an additional  component to a basic contract).
+C234,0,UNDG INFORMATION
+C234,1,Information on United Nations Dangerous Goods  classification.
+C235,0,HAZARD IDENTIFICATION
+C235,1,Identification of the Orange placard required on the means  of transport.
+C236,0,DANGEROUS GOODS LABEL
+C236,1,Markings identifying the type of hazardous goods and  similar information.
+C237,0,EQUIPMENT IDENTIFICATION
+C237,1,Marks (letters and/or numbers) identifying equipment used  for transport such as a container.
+C239,0,TEMPERATURE SETTING
+C239,1,The temperature under which the goods are (to be) stored or  shipped.
+C270,0,CONTROL
+C270,1,Control total for checking integrity of a message or part  of a message.
+C280,0,RANGE
+C401,0,EXCESS TRANSPORTATION INFORMATION
+C401,1,To provide details of reason for, and responsibility for,  use of transportation other than normally utilized.
+C501,0,PERCENTAGE DETAILS
+C502,0,MEASUREMENT DETAILS
+C503,0,DOCUMENT/MESSAGE DETAILS
+C503,1,Identification of document/message by number, status,  source and/or language.
+C504,0,CURRENCY DETAILS
+C506,0,REFERENCE
+C507,0,DATE/TIME/PERIOD
+C507,1,Date and/or time, or period relevant to the specified  date/time/period type.
+C509,0,PRICE INFORMATION
+C516,0,MONETARY AMOUNT
+C516,1,Amount of goods or services stated as a monetary amount in  a specified currency.
+C517,0,LOCATION IDENTIFICATION
+C519,0,RELATED LOCATION ONE IDENTIFICATION
+C523,0,NUMBER OF UNIT DETAILS
+C524,0,HANDLING INSTRUCTIONS
+C524,1,Instruction for the handling of goods, products or articles  in shipment, storage etc.
+C528,0,COMMODITY/RATE DETAIL
+C536,0,CONTRACT AND CARRIAGE CONDITION
+C537,0,TRANSPORT PRIORITY
+C553,0,RELATED LOCATION TWO IDENTIFICATION
+C554,0,RATE/TARIFF CLASS DETAIL
+C703,0,NATURE OF CARGO
+C827,0,TYPE OF MARKING
+C827,1,Specification of the type of marking that reflects the  method that was used and the conventions adhered to for  marking (e.g. of packages).
+S001,0,SYNTAX IDENTIFIER
+S002,0,INTERCHANGE SENDER
+S003,0,INTERCHANGE RECIPIENT
+S004,0,DATE/TIME OF PREPARATION
+S004,1,Date/time of preparation of the interchange.
+S005,0,RECIPIENTS REFERENCE PASSWORD
+S005,1,Reference or password as agreed between the communicating  partners.
+S006,0,APPLICATION SENDER'S IDENTIFICATION
+S007,0,APPLICATION RECIPIENTS IDENTIFICATION
+S008,0,MESSAGE VERSION
+S009,0,MESSAGE IDENTIFIER
+S009,1,Identification of the type, version etc. of the message  being interchanged.
+S010,0,STATUS OF THE TRANSFER
+S010,1,Statement that the message is one in a sequence of  transfers relating to the same topic.

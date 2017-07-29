@@ -1,0 +1,651 @@
+.VER 1.61
+.INI
+CS-SYSINT-CUS-BL-310-4050_20140730_Kubo,,004 050,X,X12-4050,Freight Receipt and Invoice (Ocean)
+.PRIVATE FORESIGHT
+.CTL
+.TDVER 1
+.DATE 01/11/113:14:58:06
+.PUBLIC
+.SETS
+310=^+100[!ST,M][!B3*1,M][B2A][Y6,,2][G3][N9*1,,15][V1*1,,2][M0*1][M1*1,,5][C2*1][C3*1][Y2*1,,10]{:10[N1*1][N2*1][N3*1,,2][N4*1]}[G61*1,,3]{:20[!R4*1,M][DTM*1,,15]}+90[R2A*1,,25]+10[R2*1,,13]+100[K1*1,,12][H3*1,,6][L5*1]{:20[C8*1][C8C*1,,5]}^{:999+100[!LX,M]{:999[N7*1]+50[QTY*1][V4]+100[N12*1][M7*1,,5][W09*1]{:20[L1*1][C3*1]}[L7*1][X1*1][X2*1][N9*2,,3]{:10[H1*1][H2*1,,10]}{:100+10[LH1*1][LH2*1,,4][LH3,,10][LFH*1,,25][LEP,,3][LH4*1][LHT,,3][LHR*1,,5][PER,,5]}}{:120[L0*1]+100[L5*1,,999]{:20[L1*1][C3*1]}[L7*1][X1*1][X2*1]{:20[C8*1]+10[C8C*1,,5]}{:10+90[H1*2]+100[H2*1,,10]}{:100+10[LH1*1][LH2*1,,4][LH3,,10][LFH*1,,25][LEP,,3][LH4*1][LHT,,3][LHR*1,,5][PER,,5]}}}^+100[L3*1][PWK*1,,25]{:20[L1*2][C3*1]}[V9*1,,10]+50[C8*1,,20][K1*1,,999]+100[L11*1][!SE,M]
+.SEGS
+B2A=[!353,M][346]
+B3=[147][!76,M][145][!146,M][188][!373,M][!193,M][202][32,X][374,X][!140,M][!373,M][375][335]+P0910,..O[:30].....O..O.O.+O..
+C2=[!8,M][!66,M][!67,M][20][7][107][!373,M],......+O
+C3=[!100,M][280][!100,M][!100,M],..+O+O
+C8=[213][246,X][247,X][1302]+R0302,..O.O.
+C8C=[247,X][247,X][247,X],@M.O.O
+DTM=[374,X][!373,M][337,X][623][1250,X][1251,X]+C0403P0506R020305,@M+O.O..O.O
+G3=[315][!317,M][93][201][782][73]
+G61=[!366,M][93][365,X][364,X][443]+P0304,.@M.O.O[:80].
+GE=[!97,M][!28,M]
+GS=[!479,M][!142,M][!124,M][!373,M][337,X][!28,M][!455,M][!480,M]
+H1=[!62,M][209][208][64][63][200][77,X][!355,M][254]+P0708,.......O+O.,.......+O.
+H2=[64][274],@M.
+H3=[152,X][153,X][241][242][257]+E0102,.O.O...
+IEA=[!I16,M][!I12,M]
+ISA=[!I01,M][!I02,M][!I03,M][!I04,M][!I05,M][!I06,M][!I05,M][!I07,M][!I08,M][!I09,M][!I65,M][!I11,M][!I12,M][!I13,M][!I14,M][!I15,M]
+K1=[61][61],@M.
+L0=[213][220,X][221,X][81,X][187,X][183,X][184,X][80][211,X][458][188][56][380,X][211,X][1073]+C1104P0203P0405P0607P0809P1315,..O.O.O.O.O.O..O....O.O.
+L1=[213][60,X][122][58,X][191,X][117,X][120][150][121][39][16][276][257][74][122][372][220,X][221,X][954,X][!100,M][610][148]+P0203P1415P1718R040506,..O..O.O.O...........O.O.O+O..,..O..O..O............O.O+O..
+L11=[127,X][!128,M][352][!373,M][1073]+P0102R0103,.O+O.+O.
+L3=[81,X][187,X][60,X][122][58,X][191,X][117,X][150][183,X][184,X][80][188][171][74][122]+C1201P0102P0304P0910P1415,.O.O.O..O.O.O..O.O.....
+L5=[213][79][22,X][23,X][103][87,X][88][23,X][22,X][595]+C0706P0304P0809,...O.O..O..O.O.
+L7=[213][168][171][172][169][170][59][173][46][!373,M][119][227][294][295][19][156,X],.........+O......O
+LEP=[806][807][156,X][127,X]+P0304
+LFH=[!808,M][!809,M][!809,M][1023][!355,M][380,X][380,X]+P0506,..+O.+X..O
+LH1=[!355,M][80][277][200][22,X][!355,M][380,X][595][665][254][1375],.@M...O+O.O....
+LH2=[215][983][218][222][759][!355,M][408,X][!355,M][408,X][!355,M][408,X][188][267,X]+P0607P0809P1011P1213,.....+X.+X.+X..X.
+LH3=[224,X][984,X][985][1073]+P0102
+LH4=[238,X][364,X][254][230][230][230][271][267,X][805][986][364,X][!355,M]+P0102P0812,...........O+X
+LHR=[!128,M][127,X][!373,M],.@M+O
+LHT=[215][218][222]
+LX=[!554,M]
+M0=[!250,M][!373,M][!373,M][!373,M],.+O+O+O
+M1=[26][14][74][122][98][61][122][782][1004,X][954,X][1004,X][954,X]+P0708P0910P1112,@M........O.O.O.O
+M7=[!225,M][!225,M][!225,M][!225,M][98],.+O+O+O.
+N1=[98][93][!66,M][!67,M][706][98]+P0304R0203,@M@M+O+O..
+N12=[!829,M][C001],.@M*1
+N2=[93][93],@M.
+N3=[!166,M][!166,M],.+O
+N4=[19][156,X][116][26][309,X][310][1715,X]+C0605C0704E0207,..O...O..O
+N7=[206][!207,M][81,X][187,X][167,X][232][205][183,X][184,X][102][40][!140,M][319][219][567][571,X][188][761][56][65][189][!24,M][!140,M][301],.M.[:10].O.O.O...O.O..+O....O.....+O+O.
+N9=[!128,M][127,X][369,X][!373,M][337,X][623][C040]+C0605R0203,.@M.O+O.O..*1,..O.O+O.O..*2
+PER=[!366,M][93][365,X][364,X][365,X][364,X][365,X][364,X][443]+P0304P0506P0708
+PWK=[!755,M][756][757][98][!66,M][!67,M][352][C002][1525]+P0506,....+O+O..*1.
+QTY=[!673,M][380,X][C001][61]+E0204R0204,..O.*1.
+R2=[!140,M][!133,M][19][154][177][91][296,X][296,X][!76,M][!373,M][369,X][56][742]+C0807,.......O.O+O+O.O..
+R2A=[!133,M][!1431,M][91][!140,M][309,X][310][56][1][742][98]+C0506,...+O.O.....
+R4=[!115,M][309,X][310][114][26][174][113][156,X]+P0203,..O......O
+SE=[!96,M][!329,M]
+ST=[!143,M][!329,M][1705]
+V1=[597,X][182,X][26][55][!140,M][249][854][897][91]+C0801R0102,.O.O..+O....
+V4=[!877,M]
+V9=[!304,M][106][!373,M][337,X][19][156,X][26][641][154][380,X][1274,X][61][623][380,X][154][86][86][86][81,X][82]+C0605C1304C1509P1011,..+O.O..O.....O...O.....O.
+W09=[40][408,X][!355,M][408,X][!355,M][3][1122][488][380,X]+P0203P0405,@M.O+O.O+O....O
+X1=[83][50][51][!373,M][52][48][26][141][210][80][148][47][!355,M][212][1306][!67,M][310],...+O........+O..+O.
+X2=[!70,M][!373,M][!373,M][!70,M][!373,M][!373,M]+C0504C0604,.+O+O+O+O+O
+Y2=[!95,M][78][56][!24,M][91][177][!140,M][464][465][466],......+O...
+Y6=[313][!151,M][!275,M]
+.COMS
+C001=[!355,M][1018][649][!355,M][1018][649][!355,M][1018][649][!355,M][1018][649][!355,M][1018][649],...+O..+O..+O..+O..
+C002=[!704,M][!704,M][!704,M][!704,M][!704,M],.+O+O+O+O
+C040=[!128,M][127,X][!128,M][127,X][!128,M][127,X]+P0304P0506,.@M[:30]+O.O[:30]+O.O[:30],.@M+O.O+O.O
+.ELMS
+1=AN,1,13
+3=AN,1,60
+7=AN,6,17
+8=ID,1,1
+14=N0,2,8
+16=ID,1,1
+19=AN,2,30
+20=AN,3,9
+22=AN,1,30
+23=ID,1,1
+24=ID,4,4
+26=ID,2,3
+28=N0,1,9
+32=DT,8,8
+39=ID,1,1
+40=ID,2,2
+46=AN,4,4
+47=ID,1,1
+48=ID,1,1
+50=AN,6,35
+51=ID,1,1
+52=ID,1,2
+55=AN,2,10
+56=ID,2,2
+58=N2,1,12
+59=AN,2,5
+60=AN,1,10
+61=AN,1,30
+62=AN,4,10
+63=AN,1,24
+64=AN,2,30
+65=R,1,8
+66=ID,1,2
+67=AN,2,80
+70=AN,6,30
+73=ID,1,1
+74=N2,2,12
+76=AN,1,22
+77=N,1,3
+78=ID,1,1
+79=AN,1,50
+80=N0,1,7
+81=R,1,10
+82=R,1,8
+83=ID,1,2
+86=N0,1,3
+87=AN,1,48
+88=ID,1,2
+91=ID,1,2
+93=AN,1,60
+95=N0,1,4
+96=N0,1,10
+97=N0,1,6
+98=ID,2,3
+100=ID,3,3
+102=ID,1,1
+103=AN,3,5
+106=AN,1,25
+107=ID,1,2
+113=AN,1,4
+114=AN,2,24
+115=ID,1,1
+116=ID,3,15
+117=N2,1,9
+119=AN,1,6
+120=AN,3,9
+121=ID,1,3
+122=ID,2,2
+124=AN,2,15
+127=AN,1,50
+128=ID,2,3
+133=ID,1,2
+140=ID,2,4
+141=ID,7,10
+142=AN,2,15
+143=ID,3,3
+145=AN,1,30
+146=ID,2,2
+147=ID,1,1
+148=R,2,9
+150=ID,3,3
+151=AN,1,20
+152=ID,2,3
+153=AN,2,30
+154=ID,6,9
+156=ID,2,2
+166=AN,1,55
+167=N0,3,8
+168=ID,1,4
+169=AN,1,16
+170=N0,1,2
+171=AN,1,7
+172=AN,1,2
+173=AN,1,4
+174=AN,2,30
+177=ID,1,2
+182=AN,2,28
+183=R,1,8
+184=ID,1,1
+187=ID,1,2
+188=ID,1,1
+189=R,1,8
+191=N2,1,9
+193=N2,1,12
+200=AN,1,6
+201=ID,1,3
+202=ID,2,2
+205=N0,1,6
+206=AN,1,4
+207=AN,1,15
+208=ID,1,1
+209=AN,1,4
+210=ID,1,1
+211=ID,3,3
+212=R,1,17
+213=N0,1,3
+215=ID,1,30
+218=ID,14,40
+219=AN,1,3
+220=R,1,11
+221=ID,2,2
+222=ID,4,25
+224=AN,1,25
+225=AN,2,15
+227=AN,1,2
+230=ID,1,3
+232=N0,2,6
+238=AN,1,12
+241=ID,1,4
+242=ID,1,7
+246=ID,2,4
+247=AN,2,60
+249=ID,1,1
+250=AN,2,40
+254=ID,1,3
+257=ID,1,1
+267=N0,1,10
+271=ID,1,2
+274=AN,1,30
+275=DT,8,8
+276=AN,2,25
+277=ID,6,6
+280=R,4,10
+294=N0,1,5
+295=ID,1,1
+296=ID,2,4
+301=ID,1,4
+304=ID,3,3
+309=ID,1,2
+310=AN,1,30
+313=ID,2,2
+315=R,2,5
+317=N0,3,10
+319=AN,3,6
+329=AN,4,9
+335=ID,3,3
+337=TM,4,8
+346=ID,2,2
+352=AN,1,80
+353=ID,2,2
+355=ID,2,2
+364=AN,1,256
+365=ID,2,2
+366=ID,2,2
+369=AN,1,45
+372=ID,1,1
+373=DT,8,8
+374=ID,3,3
+375=ID,2,2
+380=R,1,15
+408=R,1,4
+443=AN,1,20
+455=ID,1,2
+458=AN,2,25
+464=ID,3,3
+465=ID,1,1
+466=N0,1,2
+479=ID,2,2
+480=AN,1,12
+488=N0,1,3
+554=N0,1,6
+567=N0,4,5
+571=ID,1,1
+595=ID,1,1
+597=ID,1,8
+610=N2,1,15
+623=ID,2,2
+641=ID,3,3
+649=R,1,10
+665=ID,1,1
+673=ID,2,2
+704=ID,1,2
+706=ID,2,2
+742=AN,1,35
+755=ID,2,2
+756=ID,1,2
+757=N0,1,2
+759=ID,2,2
+761=N0,1,1
+782=R,1,18
+805=AN,1,25
+806=ID,4,6
+807=ID,12,16
+808=ID,3,3
+809=AN,1,25
+829=ID,1,1
+854=ID,2,2
+877=AN,1,12
+897=ID,1,1
+954=R,1,10
+983=ID,1,1
+984=ID,1,1
+985=ID,3,3
+986=ID,1,1
+1004=ID,1,2
+1018=R,1,15
+1023=ID,1,1
+1073=ID,1,1
+1122=ID,1,1
+1250=ID,2,3
+1251=AN,1,35
+1274=AN,2,3
+1302=AN,1,2
+1306=AN,1,1
+1375=AN,1,5
+1431=ID,1,1
+1525=ID,1,2
+1705=AN,1,35
+1715=ID,1,3
+I01=ID,2,2
+I02=AN,10,10
+I03=ID,2,2
+I04=AN,10,10
+I05=ID,2,2
+I06=AN,15,15
+I07=AN,15,15
+I08=DT,6,6
+I09=TM,4,4
+I11=ID,5,5
+I12=N0,9,9
+I13=ID,1,1
+I14=ID,1,1
+I15=AN,1,1
+I16=N0,1,5
+I65=AN,1,1
+.OBJVARS
+///GS//=GSSG
+///ISA//=ISA1
+///ST//=STST
+.TEXT,SETS
+310,2,This X12 Transaction Set contains the format and establishes the data contents of the Freight Receipt and Invoice (Ocean) Transaction Set (310) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide ocean bill of lading information. It is sent by ocean carriers to interested parties and can be used as the receipt for the shipment; to substitute for a paper bill of lading where the parties have agreed that a paper bill of lading is not necessary; to allow shipper or forwarder to verify bill of lading information before an original is printed and released; for information purposes, i.e., as a bill of lading copy; by the carrier to convey manifest information to a terminal operator; and as an invoice for freight. 
+.TEXT,SEGS
+B2A,1,To allow for positive identification of transaction set purpose 
+B3,1,To transmit basic data relating to the carrier's invoice 
+B3~0,1,B306 is the billing date. \r\n\r\nOn collect freight bills the data in B309 will be the actual delivery date. For the shipments invoiced prior to delivery, the B309 will be the estimated date of delivery. \r\n\r\nIf B314 is used, B304 will indicate the party or parties responsible for payment of the transportation terms identified in B314. \r\n\r\n
+C2,1,To specify data required for electronic payment 
+C2~0,2,C207 is the effective payment date. \r\n\r\n
+C3,1,To specify the currency being used in the transaction set 
+C3~0,1,C301 is the billing currency. \r\n\r\nC303 is the payment currency. \r\n\r\nC304 is the rated currency. \r\n\r\n
+C3~0,2,Currency is implied by the code for the country in whose currency the monetary amounts are specified. \r\n\r\n
+C8,1,To specify applicable certifications and clauses 
+C8C,1,To specify additional applicable certifications and clauses 
+DTM,1,To specify pertinent dates and times 
+G3,1,To convey brokerage, freight forwarder compensation, and other compensation information related to shipments 
+G3~0,2,G305 is the amount on which compensation is based. \r\n\r\n
+G61,1,To identify a person or office to whom communications should be directed 
+G61~0,2,G6103 qualifies G6104. \r\n\r\n
+H1,1,To specify information relative to hazardous material 
+H1~0,2,This segment is required when the shipment contains hazardous material. \r\n\r\nH107 is the lowest temperature for hazardous materials. \r\n\r\n
+H2,1,To specify free-form hazardous material descriptive data in addition to the information provided in the H1 segment 
+H3,1,To specify special handling instructions in coded or free-form format 
+K1,1,To transmit information in a free-form format for comment or special instruction 
+L0,1,To specify quantity, weight, volume, and type of service for a line item including applicable "quantity/rate-as" data 
+L0~0,1,L008 is the number of handling units of the line item tendered to the carrier. \r\n\r\nL013 can only be used if the code in L009 is PLT, SKD, or SLP. \r\n\r\nL015 designates whether the carrier will be required to verify the number of units contained on a pallet, slip sheet or skid. Code "Y" indicates that the carrier will be required to verify. Code "N" indicates that the carrier will not be required to verify. \r\n\r\n
+L0~0,2,L013 is used to convey the total number of boxes, cartons, or pieces contained on a pallet, skid, or slip sheet for the line item. \r\n\r\n
+L1,1,To specify rate and charges detail relative to a line item including freight charges, advances, special charges, and entitlements 
+L1~0,1,L119 is the percent used to determine the charge in L104. \r\n\r\nL120, if used, indicates the currency for all monetary amounts in this L1 segment. \r\n\r\nL121 is the origin rated as charge amount. \r\n\r\n
+L11,1,To specify instructions in this business relationship or a reference number 
+L11~0,1,L1104 contains data relating to the qualifier cited in L1102. \r\n\r\nL1105 indicates if the reference numbers included in this transmission were transmitted to the carrier in electronic format or key entered by the carrier. A "Y" indicates the carrier utilized the electronic shipper supplied reference information to create this document.  A "N" indicates the carrier key entered the reference information from a shipper supplied document. \r\n\r\n
+L3,1,To specify the total shipment in terms of weight, volume, rates, charges, advances, and prepaid amounts applicable to one or more line items 
+L3~0,1,L305 is the total charges. \r\n\r\n
+L5,1,To specify the line item in terms of description, quantity, packaging, and marks and numbers 
+L5~0,2,L502 may be used to send quantity information as part of the product description. \r\n\r\n
+L7,1,To reference details of the tariff used to arrive at applicable rates or charge 
+L7~0,1,L710 is the effective date. \r\n\r\nIn L715 and L716, "City" and "State" are used for rate combination city and state. \r\n\r\n
+LEP,1,To specify the Environmental Protection Agency (EPA) information relating to shipments of hazardous material 
+LEP~0,1,LEP03 is used to identify the state or province responsible for the hazardous waste number contained in LEP04. \r\n\r\nLEP04 is the hazardous waste number. \r\n\r\n
+LFH,1,To uniquely identify the variable information required by government regulation covering the transportation of hazardous material shipments 
+LFH~0,1,LFH06 indicates activity of the radioactive material. \r\n\r\nLFH07 indicates transport index of the radioactive material. \r\n\r\n
+LH1,1,To specify the hazardous commodity identification reference number and quantity 
+LH1~0,2,LH101 and LH102 are used to convey the number and type of packages for bulk and nonbulk movements. \r\n\r\nLH106 and LH107 are used to convey the quantity or volume and unit of measure for nonbulk shipments only. \r\n\r\nIn LH109, a value of "R" or "P" requires that the receiver generate the words "residue: last contained" prior to the shipping name in accordance with regulations. \r\n\r\n
+LH2,1,To specify the hazardous notation and endorsement information 
+LH2~0,1,LH206 and LH207 indicate the flashpoint temperature. \r\n\r\nLH208 and LH209 indicate the control temperature. \r\n\r\nLH210 and LH211 indicate the emergency temperature. \r\n\r\nLH212 and LH213 indicate the net explosive weight. \r\n\r\n
+LH3,1,To specify the hazardous material shipping name and additional descriptive requirements 
+LH3~0,1,If LH304 is "Y", then this is an Association of American Railroads Operations and Transportation Bulletin 55 commodity. If "N", it is not an Association of American Railroads Operations and Transportation Bulletin 55 commodity. \r\n\r\n
+LH4,1,To specify additional Transport Canada requirements covering transportation of dangerous goods in Canada 
+LH4~0,1,LH411 is an additional telephone number. \r\n\r\n
+LH4~0,2,LH402 is used for the emergency response plan telephone number. \r\n\r\nLH404 is for the first subsidiary classification. \r\n\r\nLH405 is for the second subsidiary classification. \r\n\r\nLH406 is for the third subsidiary classification. \r\n\r\n
+LHR,1,To transmit specific hazardous material reference numbers 
+LHT,1,To specify the placard information required by the second government agency when shipment is to cross into another country 
+LX,1,To reference a line number in a transaction set 
+M0,1,To transmit letter of credit details 
+M0~0,1,M002 is the date on which a letter of credit was issued. \r\n\r\nM003 is the date on which the letter of credit expires. \r\n\r\nM004 is the date on which cargo was physically placed onboard said ship voyage. \r\n\r\n
+M1,1,To specify details related to insurance 
+M1~0,1,M101 is the code identifying the country in whose currency the insurance is specified. \r\n\r\nM105 (organization identifier) is the code for the beneficiary of the insurance policy. \r\n\r\nM106 is free-form information used to describe the type of insurance coverage. \r\n\r\n
+M1~0,2,M107 through M112 may be used to specify the values to be used in insurance formulas. For example: M107 and M108 may specify the basis of application and the premium rate ($0.25 per hundred), M109 and M110 may specify the value at which insurance is to be obtained (insure at 110% of bill of lading value), and M111 and M112 may specify the premium rate (rate of .015 per dollar). \r\n\r\n
+M7,1,To record seal numbers used and the organization that applied the seals 
+M7~0,2,M705 indicates the name of the organization which applied the seal(s). \r\n\r\n
+N1,1,To identify a party by type of organization, name, and code 
+N1~0,2,This segment, used alone, provides the most efficient method of providing organizational identification. To obtain this efficiency the "ID Code" (N104) must provide a key to the table maintained by the transaction processing party. \r\n\r\nN105 and N106 further define the type of entity in N101. \r\n\r\n
+N12,1,To describe the operating environment of the equipment 
+N2,1,To specify additional names 
+N3,1,To specify the location of the named party 
+N4,1,To specify the geographic place of the named party 
+N4~0,2,A combination of either N401 through N404, or N405 and N406 may be adequate to specify a location. \r\n\r\nN402 is required only if city name (N401) is in the U.S. or Canada. \r\n\r\n
+N7,1,To identify the equipment 
+N7~0,1,N712 is the owner of the equipment. \r\n\r\nN723 is the operator or carrier of the rights of the equipment. \r\n\r\n
+N7~0,2,N701 is mandatory for rail transactions. \r\n\r\nN720 and N721 are expressed in inches. \r\n\r\n
+N9,1,To transmit identifying information as specified by the Reference Identification Qualifier 
+N9~0,1,N906 reflects the time zone which the time reflects. \r\n\r\nN907 contains data relating to the value cited in N902. \r\n\r\n
+PER,1,To identify a person or office to whom administrative communications should be directed 
+PWK,1,To identify the type or transmission or both of paperwork or supporting information 
+PWK~0,2,PWK05 and PWK06 may be used to identify the addressee by a code number. \r\n\r\nPWK07 may be used to indicate special information to be shown on the specified report. \r\n\r\nPWK08 may be used to indicate action pertaining to a report. \r\n\r\n
+QTY,1,To specify quantity information 
+QTY~0,1,QTY04 is used when the quantity is non-numeric. \r\n\r\n
+R2,1,To specify carrier and routing sequences and details 
+R2~0,1,R203 is the station or city name at which carriers interchange shipments. \r\n\r\nR210 is the billing date. \r\n\r\n
+R2A,1,To specify the responsibilities and carrier preference 
+R2A~0,1,R2A05 and R2A06 identify the origin point. \r\n\r\nR2A10 identifies the party to receive the invoice for the route segment. \r\n\r\n
+R4,1,Contractual or operational port or point relevant to the movement of the cargo 
+R4~0,2,R4 is required for each port to be identified. \r\n\r\n
+SE,1,To indicate the end of the transaction set and provide the count of the transmitted segments (including the beginning (ST) and ending (SE) segments) 
+SE~0,2,SE is the last segment of each transaction set. \r\n\r\n
+ST,1,To indicate the start of a transaction set and to assign a control number 
+ST~0,1,The transaction set identifier (ST01) is used by the translation routines of the interchange partners to select the appropriate transaction set definition (e.g., 810 selects the Invoice Transaction Set). \r\n\r\nThe implementation convention reference (ST03) is used by the translation routines of the interchange partners to select the appropriate implementation convention to match the transaction set definition.  When used, this implementation convention reference takes precedence over the implementation reference specified in the GS08. \r\n\r\n
+V1,1,To provide vessel details and voyage number 
+V1~0,1,V103 is the code identifying the country in which the ship (vessel) is registered. \r\n\r\nV105 identifies the ocean carrier. \r\n\r\n
+V4,1,To specify the cargo location on board the vessel 
+V9,1,To specify information about a specific event 
+V9~0,1,V903 is the event date. \r\n\r\nV904 is the event time. \r\n\r\nV909 is the Standard Point Location Code (SPLC) of the event shown in the V901. \r\n\r\nV910 is the length of the time delay expressed in hours. \r\n\r\nV913 reflects the time zone which the event time reflects. \r\n\r\nV914 is the quantity of the fuel in gallons. \r\n\r\nV915 is the Standard Point Location Code (SPLC) of the secondary point of the delay indicated in the V911. \r\n\r\nV916 is the total number of rail cars associated with the event code in V901. \r\n\r\nV917 is the total number of loaded cars associated with the event code in V901. \r\n\r\nV918 is the total number of empty cars associated with the event code in V901. \r\n\r\nV919 is the total Gross Tons of the cars identified in V916.  Includes the gross weight of the loads and the tare weight of the empties. \r\n\r\nV920 is the total outside foot length of the cars identified in V916, rounded off to the nearest foot. \r\n\r\n
+W09,1,To relate equipment type and required temperatures 
+W09~0,1,W0902 is the minimum allowable temperature condition for shipment; (the qualifying temperature scale is specified in W0903). \r\n\r\nW0904 is the maximum allowable temperature condition for shipment; (the qualifying temperature scale is specified in W0905). \r\n\r\nW0906 is used to describe the environment required within an ocean-type, refrigerated container when other than normal air is required. \r\n\r\nW0908 is the humidity percentage. \r\n\r\nW0909 is the number of air exchanges per hour. \r\n\r\n
+X1,1,To transmit information contained on an export license 
+X1~0,1,X104 is the export license expiration date. \r\n\r\nX116 is the export classification code number (ECCN). \r\n\r\nX117 is the Schedule D designation for the central location where the Shipper Export Declarations (SEDs) have been batch filed. \r\n\r\n
+X2,1,To transmit import license number and effective dates 
+X2~0,1,X202 is the date the import license was issued. \r\n\r\nX203 is the date the import license expires. \r\n\r\nX205 is the date the import license was issued. \r\n\r\nX206 is the date the import license expires. \r\n\r\n
+X2~0,2,X204 through X206 are used to transmit letter of credit amendment or addendum information. \r\n\r\n
+Y2,1,To specify container information and transportation service to be used 
+Y6,1,To specify the authority for authorizing an action and the date authentication is made 
+.TEXT,ELMS
+1,1,Mutually defined route code 
+3,1,Free-form text 
+7,1,ID number assigned by bank to its client 
+8,1,Code identifying payee or payer 
+14,1,Carriage value expressed in whole units of the standard monetary denomination for the currency specified 
+16,1,Code defining method of payment 
+19,1,Free-form text for city name 
+20,1,Federal Reserve Routing Code 
+22,1,Code describing a commodity or group of commodities 
+23,1,Code identifying the commodity coding system used for Commodity Code 
+24,1,Code identifying equipment type 
+26,1,Code identifying the country 
+32,1,Date for delivery of cargo to final consignee or to next mode expressed in format CCYYMMDD where CC represents the first two digits of the calendar year 
+39,1,Code identifying entitlement party 
+40,1,Code identifying type of equipment used for shipment 
+46,1,Level of rates as published in the tariff 
+47,1,Code indicating the type of communications with customs 
+48,1,Code indicating the type of control applicable to the export license 
+50,1,Government assigned identification number for exporter 
+51,1,Code defining whether the shipment completes the terms of the license, or the shipment is only a partial delivery relative to the license terms 
+52,1,Code which specifies the export symbol marked on a shipment 
+55,1,Identifying designator for the particular flight or voyage on which the cargo travels 
+56,1,Code specifying extent of transportation service requested 
+58,1,For a line item: freight or special charge; for the total invoice: the total charges -- expressed in the standard monetary denomination for the currency specified 
+59,1,Code indicating generalized classification that applies to one or more items in the shipment, i.e., class 70, 77.5, etc. 
+60,1,Rate that applies to the specific commodity 
+61,1,Free-form information 
+62,1,Code relating to hazardous material code qualifier for regulated hazardous materials 
+63,1,Phone number and name of person or department to contact in case of emergency 
+64,1,Material name, special instructions, and phone number if any 
+65,1,Vertical dimension of an object measured when the object is in the upright position 
+66,1,Code designating the system/method of code structure used for Identification Code (67) 
+67,1,Code identifying a party or other code 
+70,1,Government assigned identification number for importer of foreign shipments 
+73,1,Code indicating type of compensation 
+74,1,Monetary assigned value expressed in the standard monetary denomination for the currency specified 
+76,1,Identifying number assigned by issuer 
+77,1,The flashpoint temperature for hazardous material 
+78,1,Code indicating type of container equipment requested 
+79,1,Description of an item as required for rating and billing purposes 
+80,1,Number of units (pieces) of the lading commodity 
+81,1,Numeric value of weight 
+82,1,Largest horizontal dimension of an object measured when the object is in the upright position 
+83,1,Code identifying a licensing, certification, registration, or accreditation agency. 
+86,1,Total pieces of equipment 
+87,1,Marks and numbers used to identify a shipment or parts of a shipment 
+88,1,Code specifying the application or source of Marks and Numbers (87) 
+91,1,Code specifying the method or type of transportation for the shipment 
+93,1,Free-form name 
+95,1,Number of shipping containers 
+96,1,Total number of segments included in a transaction set including ST and SE segments 
+98,1,Code identifying an organizational entity, a physical location, property or an individual 
+100,1,Code (Standard ISO) for country in whose currency the charges are specified 
+102,1,Code indicating the relationship of equipment to carrier or ownership of equipment 
+103,1,Code identifying the type of packaging; Part 1: Packaging Form, Part 2: Packaging Material; if the Data Element is used, then Part 1 is always required 
+106,1,Free-form description of event 
+107,1,Code identifying type of payment procedures 
+113,1,Identifying number for the pier 
+114,1,Free-form name for the place at which an offshore carrier originates or terminates (by transshipment or otherwise) its actual ocean carriage of property 
+115,1,Code defining function performed at the port or terminal with respect to a shipment 
+116,1,Code defining international postal zone code excluding punctuation and blanks (zip code for United States) 
+117,1,Money paid at point of origin (usually by shipper) expressed in the standard monetary denomination for the currency specified 
+119,1,The (mileage) factor published for rating purposes in the appropriate tariff 
+120,1,The code denoting the connecting station for a joint rate obtained by combining two or more published rates which are used for the calculation of transportation charges 
+121,1,Code identifying specifically designated class of goods; Note: For international air shipments, see IATA Resolution 600k 
+122,1,Code qualifying how to extend charges or interpret value 
+127,1,Reference information as defined for a particular Transaction Set or as specified by the Reference Identification Qualifier 
+128,1,Code qualifying the Reference Identification 
+133,1,Code describing the relationship of a carrier to a specific shipment movement 
+140,1,Standard Carrier Alpha Code 
+141,1,Code identifying commodity number established for international statistical purposes 
+143,1,Code uniquely identifying a Transaction Set 
+145,1,Identification number assigned to the shipment by the shipper that uniquely identifies the shipment from origin to ultimate destination and is not subject to modification; (Does not contain blanks or special characters) 
+146,1,Code identifying payment terms for transportation charges 
+147,1,Code defining relationship of this shipment with respect to other shipments given to the carrier at the same time 
+148,1,Value of shipment for export, expressed in the standard monetary denomination for the currency specified 
+150,1,Code identifying type of special charge or allowance 
+151,1,Name or code of authority for authorizing action or reservation 
+152,1,Code specifying special transportation handling instructions 
+153,1,Free-form additional description of special handling instructions to appear on printed bill if special handling code is not adequate 
+154,1,Code (Standard Point Location) defined by National Motor Freight Tariff Association (NMFTA) or the Canadian Transportation Agency (CTA) point development group as the official code assigned to a city or point (for ratemaking purposes) within a city 
+156,1,Code (Standard State/Province) as defined by appropriate government agency 
+166,1,Address information 
+167,1,Weight of the equipment 
+168,1,Code defining the tariff bureau or tariff publishing agent that governs the rates applied to this shipment 
+169,1,Number assigned in the tariff to specific rate or group of rates that applies to one or more items in the shipment 
+170,1,Number assigned to subsection of a specific tariff item (arbitrary) 
+171,1,Standard tariff number for the tariff which governs the rates applied to the commodity item(s) 
+172,1,Number used as an extension of the basic tariff number to identify the rates published within specific sections of the tariff 
+173,1,Identifier for the tariff supplement which contains the rate used 
+174,1,Free-form field for terminal name 
+177,1,Code identifying the Intermodal Service Plan 
+182,1,Name of ship as documented in "Lloyd's Register of Ships" 
+183,1,Value of volumetric measure 
+184,1,Code identifying the volume unit 
+187,1,Code defining the type of weight 
+188,1,Code specifying the weight unit 
+189,1,Shorter measurement of the two horizontal dimensions measured with the object in the upright position 
+191,1,Incidental charges occurring during transportation which are not generally considered to be freight charges (examples - stop charges, diversion and reconsignment, icing) expressed in the standard monetary denomination for the currency specified 
+193,1,Total charges to be paid by the receiver of this transaction set expressed in the standard monetary denomination for the currency specified 
+200,1,The United Nations page number as required for the international transport of hazardous materials 
+201,1,Code indicating the status of an ocean business transaction as it relates to the processing of ocean bills of lading 
+202,1,Code used to indicate that the transaction set contains information which corrects previous information 
+205,1,Weight of material used to protect lading (even bracings, false floors, etc.) 
+206,1,Prefix or alphabetic part of an equipment unit's identifying number 
+207,1,Sequencing or serial part of an equipment unit's identifying number (pure numeric form for equipment number is preferred) 
+208,1,Code which qualifies the Hazardous Material Class Code (209) 
+209,1,Code specifying the kind of hazard for a material 
+210,1,Code indicating international or domestic shipment 
+211,1,Code for packaging form of the lading quantity 
+212,1,Price per unit of product, service, commodity, etc. 
+213,1,Sequential line number for a lading item 
+215,1,The hazardous classification corresponding to the shipping name of the hazardous commodity 
+218,1,The placard notation corresponding to the hazard class of the hazardous commodity 
+219,1,Relative position of shipment in car, trailer, or container (mutually defined) 
+220,1,Basis for rating (miles, value, volume, etc.); Note: Weight may be defined by either data element 220 or 81 
+221,1,Code identifying the type of quantity or value on which the rate or item pricing is based 
+222,1,The placard endorsement that is to be shown on the shipping papers for the hazardous commodity 
+224,1,The proper shipping name of the hazardous commodity as specified by Title 49 Code of Federal Regulations, or the shipping name of the dangerous good as defined in the Canadian Transportation of Dangerous Goods Act and Regulations, or the international regulations as promulgated by the United Nations 
+225,1,Unique number on seal used to close a shipment 
+227,1,A tariff commodity classification that is used, as a means of control, for grouping of commodities in tariff applications 
+230,1,Code indicating the classification of dangerous goods, other than the primary classification, that is associated with a number or a set of numbers 
+232,1,Allowance made for increased weight due to such factors as snow 
+238,1,The identity number of a specific hazardous emergency response plan that is assigned by the Director General of Canada 
+241,1,Code specifying perishable protective service- rail carriers only 
+242,1,Code specifying vent instructions 
+246,1,Code identifying certification/clause information 
+247,1,Free-form description of commercial invoice certification/clause 
+249,1,Code specifying options for satisfying vessel requirements 
+250,1,Identifying reference number for a letter of credit 
+254,1,Code indicating degree of danger in terms of Roman number I, II or III 
+257,1,Code indicating to which traffic a tariff applies 
+267,1,Net weight of the explosive quantity of the hazardous commodity 
+271,1,Code identifying the type of subsidiary risk 
+274,1,Free-form description of hazardous material classification or division or label requirements 
+275,1,Date authentication is made expressed in format CCYYMMDD where CC represents the first two digits of the calendar year 
+276,1,Identification of special charge; this data element is used whenever an applicable code cannot be found in data element 150 
+277,1,Code identifying the hazardous material identification number as required by Title 49 of the code of Federal Regulations; UN/NA stands for United Nations/North America 
+280,1,Value to be used as a multiplier conversion factor to convert monetary value from one currency to another 
+294,1,Distance on which the rate for a shipment is based 
+295,1,Code identifying the distance unit 
+296,1,Code defining a road which neither originates nor terminates the shipment but provides a switching service between two roadhaul rail carriers (SCAC code for rail switch carrier) 
+301,1,Code specifying type of rail car or intermodal equipment type and its general characteristics 
+304,1,Code identifying the event about which a report is made 
+309,1,Code identifying type of location 
+310,1,Code which identifies a specific location 
+313,1,Code indicating authority for authentication 
+315,1,Commission paid to broker for services rendered 
+317,1,Amount calculated from brokerage amount 
+319,1,Free-form abbreviation of temperature range or flash-point temperature 
+329,1,Identifying control number that must be unique within the transaction set functional group assigned by the originator for a transaction set 
+335,1,Code identifying the trade terms which apply to the shipment transportation responsibility 
+337,1,Time expressed in 24-hour clock time as follows: HHMM, or HHMMSS, or HHMMSSD, or HHMMSSDD, where H = hours (00-23), M = minutes (00-59), S = integer seconds (00-59) and DD = decimal seconds; decimal seconds are expressed as follows: D = tenths (0-9) and DD = hundredths (00-99) 
+346,1,Code identifying an application 
+352,1,A free-form description to clarify the related data elements and their content 
+353,1,Code identifying purpose of transaction set 
+355,1,Code specifying the units in which a value is being expressed, or manner in which a measurement has been taken 
+364,1,Complete communications number including country or area code when applicable 
+365,1,Code identifying the type of communication number 
+366,1,Code identifying the major duty or responsibility of the person or group named 
+369,1,Free-form descriptive text 
+372,1,Code identifying limits of liability 
+373,1,Date expressed as CCYYMMDD where CC represents the first two digits of the calendar year 
+374,1,Code specifying type of date or time, or both date and time 
+375,1,Code specifying the types of services for rating purposes 
+380,1,Numeric value of quantity 
+408,1,Temperature 
+443,1,Additional reference number or description to clarify a contact number 
+458,1,Material used to protect lading 
+464,1,Code indicating origin and destination of transportation and type of container 
+465,1,Code indicating container terms reference 
+466,1,Total number of stop-offs specified for a shipment 
+488,1,Percent given in integer format (e.g., 0 through 100 represents 0% through 100%) 
+554,1,Number assigned for differentiation within a transaction set 
+567,1,Length (in feet and inches) of equipment ordered or used to transport shipment (The format is FFFII where FFF is feet and II is inches; the range for II is 00 through 11) 
+571,1,Code identifying the type of tare 
+595,1,Code identifying the compartment in a compartmentalized tank car 
+597,1,Code identifying vessel 
+610,1,Monetary amount 
+623,1,Code identifying the time. In accordance with International Standards Organization standard 8601, time can be specified by a + or - and an indication in hours in relation to Universal Time Coordinate (UTC) time; since + is a restricted character, + and - are substituted by P and M in the codes that follow 
+641,1,Code indicating the status reason 
+649,1,Value to be used as a multiplier to obtain a new value 
+665,1,Code indicating that the material being described is that which remains in a packaging (including a tank car) after it has been unloaded 
+673,1,Code specifying the type of quantity 
+704,1,Code specifying how the paperwork or report that is identified in the PWK segment relates to the transaction set or to identify the action that is required 
+706,1,Code describing entity relationship 
+742,1,Point to point routing description 
+755,1,Code indicating the title or contents of a document, report or supporting item 
+756,1,Code defining timing, transmission method or format by which reports are to be sent 
+757,1,The number of copies of a report that should be sent to the addressee 
+759,1,Code to identify presence of hazardous substance 
+761,1,Number which designates the check digit applied to a piece of equipment 
+782,1,Monetary amount 
+805,1,Notation required by Canadian regulatory agencies 
+806,1,Waste stream number applicable to the movement of hazardous waste as determined by government regulations 
+807,1,Waste characteristics as defined by regulatory requirements 
+808,1,Qualifier indicating the type of information being passed so that a receiver may format a description of hazardous commodity movements that meets regulatory requirements 
+809,1,Specific information required by law for hazardous material shipments 
+829,1,Code used to identify type of fuel 
+854,1,Code to determine type of vessel 
+877,1,Location of cargo stowed on board an ocean vessel 
+897,1,Code specifying vessel code source 
+954,1,Percentage expressed as a decimal (e.g., 0.0 through 1.0 represents 0% through 100%) 
+983,1,Code qualifying hazardous class 
+984,1,Qualifier indicating the source (regulatory) of the proper shipping name 
+985,1,Code indicating the type of regulatory requirements that apply to a description; N.O.S. stands for Not Otherwise Specified 
+986,1,Code indicating 'Special Commodity' notation on operational waybill as identified by the Transportation of Dangerous Goods Act and Regulation (TDG) 
+1004,1,Code to qualify percent 
+1018,1,Power to which a unit is raised 
+1023,1,Code specifying the Department of Transportation assigned zone designating the Inhalation Toxicity Hazard Zone 
+1073,1,Code indicating a Yes or No condition or response 
+1122,1,Code describing the setting on the air vents on ocean-type containers 
+1250,1,Code indicating the date format, time format, or date and time format 
+1251,1,Expression of a date, a time, or range of dates, times or dates and times 
+1274,1,Code specifying reason for train delay 
+1302,1,Code identifying which Shipper's Export Declaration (SED) requirements are being met 
+1306,1,Code to identify the type of government license involved 
+1375,1,Identifies the current regulatory version number used for hazardous materials shipments 
+1431,1,Code specifying sender's preference 
+1525,1,Code indicating a type of request 
+1705,1,Reference assigned to identify Implementation Convention 
+1715,1,Code identifying the country subdivision 
+.TEXT,COMS
+C001,1,To identify a composite unit of measure (See Figures Appendix for examples of use) 
+C001~0,2,If C001-02 is not used, its value is to be interpreted as 1. \r\nIf C001-03 is not used, its value is to be interpreted as 1. \r\nIf C001-05 is not used, its value is to be interpreted as 1. \r\nIf C001-06 is not used, its value is to be interpreted as 1. \r\nIf C001-08 is not used, its value is to be interpreted as 1. \r\nIf C001-09 is not used, its value is to be interpreted as 1. \r\nIf C001-11 is not used, its value is to be interpreted as 1. \r\nIf C001-12 is not used, its value is to be interpreted as 1. \r\nIf C001-14 is not used, its value is to be interpreted as 1. \r\nIf C001-15 is not used, its value is to be interpreted as 1. \r\n
+C002,1,Actions to be performed on the piece of paperwork identified 
+C040,1,To identify one or more reference numbers or identification numbers as specified by the Reference Qualifier 

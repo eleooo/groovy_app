@@ -1,0 +1,2 @@
+20170203 - XmlBeanParser - fixed xml string one line format.
+ 

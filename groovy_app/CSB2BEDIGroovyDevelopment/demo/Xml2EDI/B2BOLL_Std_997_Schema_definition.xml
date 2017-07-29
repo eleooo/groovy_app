@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- B2B Parser UIF Delimited Definition -->
+<!-- Created By: David -->
+<E2XDefinition ElementType="delimited" RecordDelimiter="~" ElementDelimiter="*" xmlns="http://www.cargosmart.com/b2b/transformparser/e2x" OutXMLTargetNameSpace="http://schemas.microsoft.com/BizTalk/EDI/X12/2006" OutXMLTargetNameSpacePrefix="ns0" >
+	<Component Name="B2BOLL_Std_997_Root" >
+		<Component Name="ISA" TagIdentifier="ISA" >
+			<Field Name="AuthorizationInfoQualifier" minOccurs="0" MinLengthWithPad="2" />
+			<Field Name="AuthorizationInfo" minOccurs="0" MinLengthWithPad="10" />
+			<Field Name="SecurityInfoQualifier" minOccurs="0" MinLengthWithPad="2" />
+			<Field Name="SecurityInfo" minOccurs="0" MinLengthWithPad="10" />
+			<Field Name="InterchangeIDQualifier" minOccurs="0" MinLengthWithPad="2" />
+			<Field Name="InterchangeSenderID" minOccurs="0" MinLengthWithPad="15" />
+			<Field Name="InterchangeIDQualifier2" minOccurs="0" MinLengthWithPad="2" />
+			<Field Name="InterchangeReceiverID" minOccurs="0" MinLengthWithPad="15" />
+			<Field Name="InterchangeDate" minOccurs="0" MinLengthWithPad="6" />
+			<Field Name="InterchangeTime" minOccurs="0" MinLengthWithPad="4" />
+			<Field Name="RepetitionSeparatior" minOccurs="0" MinLengthWithPad="1" />
+			<Field Name="VersionNumber" minOccurs="0" MinLengthWithPad="5" />
+			<Field Name="ControlNumber" minOccurs="0" MinLengthWithPad="9" />
+			<Field Name="AcknowledgmentRequest" minOccurs="0" MinLengthWithPad="1" />
+			<Field Name="UsageIndicator" minOccurs="0" MinLengthWithPad="1" />
+			<Field Name="ElementSeparator" minOccurs="0" MinLengthWithPad="1" />
+		</Component>
+		<Component Name="GS" TagIdentifier="GS" >
+			<Field Name="FunctionalIdentifierCode" />
+			<Field Name="ApplicationSenderCode" />
+			<Field Name="ApplicationReceiverCode" />
+			<Field Name="Date" />
+			<Field Name="Time" />
+			<Field Name="ControlNumber" />
+			<Field Name="AgencyCode" />
+			<Field Name="IdentitierCode" />
+		</Component>
+		<Component Name="MessageBody" maxOccurs="unbounded">
+			<Component Name="ST" TagIdentifier="ST" minOccurs="0">
+				<Field Name="ST01" />
+				<Field Name="ST02" MinLengthWithPad="4" />
+				<Field Name="ST03" minOccurs="0" />
+			</Component>
+			<Component Name="AK1" TagIdentifier="AK1" >
+				<Field Name="AK101" />
+				<Field Name="AK102" />
+			</Component>
+			<Component Name="AK2Loop1" minOccurs="0" maxOccurs="999999" >
+				<Component Name="AK2" TagIdentifier="AK2" >
+					<Field Name="AK201" />
+					<Field Name="AK202" />
+				</Component>
+				<Component Name="AK3Loop1" minOccurs="0" maxOccurs="999999" >
+					<Component Name="AK3" TagIdentifier="AK3" >
+						<Field Name="AK301" />
+						<Field Name="AK302" />
+						<Field Name="AK303" minOccurs="0" />
+						<Field Name="AK304" minOccurs="0" />
+					</Component>
+					<Component Name="AK4" minOccurs="0" maxOccurs="99" TagIdentifier="AK4" >
+						<Field Name="AK401" />
+						<Field Name="AK402" minOccurs="0" />
+						<Field Name="AK403" />
+						<Field Name="AK404" minOccurs="0" />
+					</Component>
+				</Component>
+				<Component Name="AK5" TagIdentifier="AK5" minOccurs="0">
+					<Field Name="AK501" />
+					<Field Name="AK502" minOccurs="0" />
+					<Field Name="AK503" minOccurs="0" />
+					<Field Name="AK504" minOccurs="0" />
+					<Field Name="AK505" minOccurs="0" />
+					<Field Name="AK506" minOccurs="0" />
+				</Component>
+			</Component>
+			<Component Name="AK9" TagIdentifier="AK9" minOccurs="0">
+				<Field Name="AK901" />
+				<Field Name="AK902" />
+				<Field Name="AK903" />
+				<Field Name="AK904" />
+				<Field Name="AK905" minOccurs="0" />
+				<Field Name="AK906" minOccurs="0" />
+				<Field Name="AK907" minOccurs="0" />
+				<Field Name="AK908" minOccurs="0" />
+				<Field Name="AK909" minOccurs="0" />
+			</Component>
+			<Component Name="SE" TagIdentifier="SE" >
+				<Field Name="SE01" AutoFillEDISegmentCount="true" AutoFillEDISegmentCountStartTag="ST" AutoFillEDISegmentCountEndTag="SE"/>
+				<Field Name="SE02" MinLengthWithPad="4"/>
+			</Component>
+		</Component>
+		<Component Name="GE" TagIdentifier="GE" minOccurs="0">
+			<Field Name="GE01" minOccurs="0" />
+			<Field Name="GE02" minOccurs="0" />
+		</Component>
+		<Component Name="IEA" TagIdentifier="IEA" >
+			<Field Name="IEA01" minOccurs="0" />
+			<Field Name="IEA02" minOccurs="0" MinLengthWithPad="9" />
+		</Component>
+	</Component>
+</E2XDefinition>

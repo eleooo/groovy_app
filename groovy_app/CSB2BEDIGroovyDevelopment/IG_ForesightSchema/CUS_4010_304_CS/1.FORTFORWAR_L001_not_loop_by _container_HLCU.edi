@@ -1,0 +1,46 @@
+ISA*00*          *00*          *01*FORTINTL       *01*CARGOSMART     *081006*1601*U*00401*000038261*1*P*^~
+GS*SO*FORTINTL*CARGOSMART*20081006*1601*38380*X*004010~
+ST*304*000038380~
+B2*PP*HLCU**SFX07922**PP*2~
+B2A*00*SI~
+N9*SR*OCECON03256~
+N9*FM*016323~
+N9*SI*SFX07922~
+N9*BN*8002600590~
+N9*E8*ECN08023~
+V1**Yue He**160W****~
+N1*SI*Ocean World Lines, Inc. San Francisco~
+N1*SH*Ocean World Lines, Inc. Long Beach~
+N3*444 W. Ocean Blvd, Suite 1750*Long Beach, CA 90802~
+N3*Tel. +01(562) 983-3880*Fax +01(562) 983-1701~
+N1*CN*Ocean World Lines Japan~
+N3*Daimon Bldg, 8th Floor*1-4-9 Shiba Daimon~
+N3*Tokyo,  105-0012 (Japan)*Tel. +81 (35) 473-8587 Fax +81 (35) 473-8530~
+N1*N1*Ocean World Lines Japan~
+N3*Daimon Bldg, 8th Floor*1-4-9 Shiba Daimon~
+N3*Tokyo,  105-0012 (Japan)*Tel. +81 (35) 473-8587 Fax +81 (35) 473-8530~
+R4*L*UN*USLGB~
+R4*D*UN*JPYOK~
+R2*HLCU*O**********03~
+C8**34*Laden on Board Named Vessel~
+LX*1~
+Y2*1***42G0~
+N7*CBHU*2802666****************6****42G0~
+W09*CZ*0*CE****E**~
+L0*1***44280.000*G***82*DRM**L~
+L5*1*40' High Cube, Reefer Container SLAC:~
+L5*1*Frozen Vegetables, viz Carrot Puree~
+LX*2~
+Y2*2***42G0~
+N7*CBHU*2936053****************3****42G0~
+W09*CZ*50.1*CE****A**0~
+L0*1***43200.000*G***80*DRM**L~
+L5*2*40' High Cube, Reefer Container SLAC:~
+L5*2*Frozen Vegetables, viz Carrot Puree~
+L3*87480.000*G*********162*L~
+K1*AES XTN No.: X20081006040517~
+K1*Freight to be prepaid~
+K1*Non Negotiable Express Bill of*Lading~
+SE*42*000038380~
+GE*1*38380~
+IEA*1*000038261~

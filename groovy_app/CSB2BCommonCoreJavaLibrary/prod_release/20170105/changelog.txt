@@ -1,0 +1,9 @@
+Update project from 2016-12-22 to 2017-01-05, by David Liang, Gawing
+
+Changed:
+1, Remove cs.b2b.core.mapping.util.MappingUtil, no need place a dummy class here, GroovyScriptHelper use pre-load class mode to dynamic compile. 
+2, GroovyScriptHelper, support MessageType Common Script, and JavaBeans Script - non-loop version.
+3, Add cs.b2b.core.mapping.util.XmlBeanParser to fill xml data into javabean. Updated for CS2XML SO support.
+4, added cache data support, CacheItem to carry cache data.
+
+20170105.12
