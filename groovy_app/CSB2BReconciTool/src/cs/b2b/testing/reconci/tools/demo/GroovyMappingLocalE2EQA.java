@@ -1,16 +1,24 @@
 package cs.b2b.testing.reconci.tools.demo;
 
-import cs.b2b.testing.reconci.tools.configure.CSB2BEDIConfigQA;
-import cs.b2b.testing.reconci.tools.model.PMTRecordModel;
-import cs.b2b.testing.reconci.tools.util.FileProcessorQA;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
+import org.apache.log4j.net.SyslogAppender;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.*;
-import java.util.ArrayList;
+import cs.b2b.testing.reconci.tools.configure.CSB2BEDIConfigQA;
+import cs.b2b.testing.reconci.tools.model.PMTRecordModel;
+import cs.b2b.testing.reconci.tools.util.FileProcessorQA;
+import cs.b2b.testing.reconci.tools.util.FunctionHelperQA;
 
 
 public class GroovyMappingLocalE2EQA {
@@ -23,12 +31,7 @@ public class GroovyMappingLocalE2EQA {
 	private static InputStream fis = null;
 	
 	static int workingThreadNumber = 30;
-
-	/**
-	 *
-	 * @param args
-	 * @throws Exception
-	 */
+	
 	public static void main(String[] args) throws Exception {
 		logger.info("E2E Start, pre-setting workingThreadNumber asking: "+workingThreadNumber);
 		
@@ -49,7 +52,7 @@ public class GroovyMappingLocalE2EQA {
 						if (runLine==null || runLine.trim().length()==0 || runLine.startsWith("##")) {
 							continue;
 						}
-						logger.info("==================\r\nTesting with line : " + runLine+"\r\n====================");
+						logger.info("==================\r\nTesting with line : " + runLine+"\r\n===================="); 
 						PMTRecordModel pmtrecordModel = new PMTRecordModel(runLine);
 						CSB2BEDIConfigQA.initalization(pmtrecordModel);
 						String excelPath=CSB2BEDIConfigQA.rootPath+"/"+CSB2BEDIConfigQA.TP_ID+".xlsx";
