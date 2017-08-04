@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/file" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns1="http://www.cargosmart.com/common" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/ns/Foresight/2010/20" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pfx4="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" xmlns:pfx3="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" xmlns:pfx2="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/XML/IncomingToIRIS2_ShippingInstructionFromCargoSmart_Rel12-edna-septfu.xsd" xmlns:pfx="http://www.cargosmart.com/billoflading" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" schemaLocation="/Schemas/EDI/ConvertConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" schemaLocation="/Schemas/EDI/ProcessConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd" schemaLocation="/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd"/>
+    <xsd:import namespace="http://www.cargosmart.com/billoflading" schemaLocation="/Schemas/CS2X/com/cargosmart/documentation/normalizeBillOfLading.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/Foresight/2010/20" schemaLocation="/BCSchemas/EDIEDIFACT/1/D96B/IFTMCS/New_CS-SYSINT-CUST-IFTMCS-EDIFACT_D96B_20140730_JO_IFTMCS.xsd"/>
+    <pd:name>Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group3/getGroup3.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="SCAC_CODE" type="xsd:string"/>
+                    <xsd:element ref="pfx4:Flows"/>
+                    <xsd:element ref="pfx3:ConversionData"/>
+                    <xsd:element ref="pfx:Body-BillOfLading"/>
+                    <xsd:element name="pathPrefix" type="xsd:string"/>
+                    <xsd:element name="INDEX-EDIMAIN" type="xsd:string" minOccurs="0"/>
+                    <xsd:element ref="pfx:Header-BillOfLading"/>
+                    <xsd:element name="tp_id" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>49</pd:startX>
+    <pd:startY>50</pd:startY>
+    <pd:returnBindings>
+        <group>
+            <xsl:copy-of select="$LengthTrim/group/ns:L-RFF_15"/>
+        </group>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="group">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="ns:L-RFF_15" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>772</pd:endX>
+    <pd:endY>49</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1288859285171</pd:targetNamespace>
+    <pd:activity name="mapPath">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>149</pd:x>
+        <pd:y>50</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="pathPrefix" type="xsd:string"/>
+                            <xsd:element name="convertPath" type="xsd:string"/>
+                            <xsd:element name="convertTypeID" type="xsd:string"/>
+                            <xsd:element name="segmentID" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <pathPrefix>
+                    <xsl:value-of select="$Start/root/pathPrefix"/>
+                </pathPrefix>
+                <convertPath>
+                    <xsl:value-of select="&quot;Group3&quot;"/>
+                </convertPath>
+                <convertTypeID>
+                    <xsl:value-of select="&quot;BillOfLading&quot;"/>
+                </convertTypeID>
+                <segmentID>
+                    <xsl:value-of select="&quot;Group3&quot;"/>
+                </segmentID>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="mapLocalFlow">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>251</pd:x>
+        <pd:y>50</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Config" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="SegmentField" type="xsd:string"/>
+                                        <xsd:element name="ProcessId" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:for-each select="$Start/root/Flows/ConvertType[type=$mapPath/root/convertTypeID]/Config[SegmentId=$mapPath/root/segmentID]">
+                    <Config>
+                        <SegmentField>
+                            <xsl:value-of select="SegmentField"/>
+                        </SegmentField>
+                        <ProcessId>
+                            <xsl:value-of select="ProcessId"/>
+                        </ProcessId>
+                    </Config>
+                </xsl:for-each>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:group name="Group3">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>132</pd:x>
+        <pd:y>112</pd:y>
+        <pd:width>516</pd:width>
+        <pd:height>282</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>repeat</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:indexSlot>iGrp3</pd:indexSlot>
+            <pd:outSlot>accGrp3-result</pd:outSlot>
+            <pd:activityOutputName>accMapper</pd:activityOutputName>
+            <pd:repeatCondition>$iGrp3 = $PreGroup3/root/count and $iGrp3 &gt;= 1</pd:repeatCondition>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>REF</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>accMapper</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>REF</pd:from>
+            <pd:to>getREF</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="REF"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>DTM</pd:from>
+            <pd:to>accMapper</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getDTM</pd:from>
+            <pd:to>accMapper</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>DTM</pd:from>
+            <pd:to>getDTM</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>(exists($mapLocalFlow/root/Config[SegmentField="DTM"]) and  $Start/root/tp_id!="MITSUI") or
+(exists($mapLocalFlow/root/Config[SegmentField="DTM"]) and  $Start/root/tp_id="MITSUI" and $getREF/group/ns:S-RFF_15/ns:C-C506_15_01/ns:E-1153_15_01.01="BM" )</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getREF</pd:from>
+            <pd:to>DTM</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>REF</pd:from>
+            <pd:to>DTM</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="REF">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>223</pd:x>
+            <pd:y>176</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getREF">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>235</pd:x>
+            <pd:y>290</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group3/REF/getREF.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <SCAC_CODE>
+                        <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                    </SCAC_CODE>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <GRP-INDEX>
+                        <xsl:value-of select="$iGrp3"/>
+                    </GRP-INDEX>
+                    <RFF_VALUE>
+                        <RFF_01_01>
+                            <xsl:value-of select="$PreGroup3/root/RFF_VALUE[$iGrp3]/RFF_01_01"/>
+                        </RFF_01_01>
+                        <RFF_01_02>
+                            <xsl:value-of select="$PreGroup3/root/RFF_VALUE[$iGrp3]/RFF_01_02"/>
+                        </RFF_01_02>
+                    </RFF_VALUE>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="accMapper">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>570</pd:x>
+            <pd:y>181</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="group">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element ref="ns:L-RFF_15" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <group>
+                    <ns:L-RFF_15>
+                        <xsl:copy-of select="$getREF/group/ns:S-RFF_15"/>
+                        <xsl:if test="exists($getDTM/group/ns:S-DTM_16)">
+                            <xsl:copy-of select="$getDTM/group/ns:S-DTM_16"/>
+                        </xsl:if>
+                    </ns:L-RFF_15>
+                </group>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="DTM">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>422</pd:x>
+            <pd:y>188</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getDTM">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>456</pd:x>
+            <pd:y>284</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group3/DTM/getDTM.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <SCAC_CODE>
+                        <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                    </SCAC_CODE>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <GRP-INDEX>
+                        <xsl:value-of select="$iGrp3"/>
+                    </GRP-INDEX>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:activity name="PreGroup3">
+        <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+        <pd:resourceType>ae.process.subprocess</pd:resourceType>
+        <pd:x>377</pd:x>
+        <pd:y>42</pd:y>
+        <config>
+            <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group3/PreGroup3/InterfacePreGrp3.process</processName>
+            <processNameXPath>concat($mapPath/root/pathPrefix,$mapPath/root/convertPath,'/PreGroup3/Type',$Start/root/Flows/ConvertType/Config[SegmentField="PreGrp3" and SegmentId=$mapPath/root/segmentID]/ProcessId,'.process')</processNameXPath>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <SCAC_CODE>
+                    <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                </SCAC_CODE>
+                <xsl:copy-of select="$Start/root/Flows"/>
+                <xsl:copy-of select="$Start/root/ConversionData"/>
+                <pathPrefix>
+                    <xsl:value-of select="$Start/root/pathPrefix"/>
+                </pathPrefix>
+                <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                <INDEX-EDIMAIN>
+                    <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                </INDEX-EDIMAIN>
+                <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                <xsl:if test="$Start/root/tp_id">
+                    <tp_id>
+                        <xsl:value-of select="$Start/root/tp_id"/>
+                    </tp_id>
+                </xsl:if>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="LengthTrim">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>763</pd:x>
+        <pd:y>167</pd:y>
+        <config>
+            <element>
+                <xsd:element name="group">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="ns:L-RFF_15" maxOccurs="unbounded"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <group>
+                <xsl:copy-of select="$accGrp3-result/AccumulatedOutput/group/ns:L-RFF_15"/>
+            </group>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>mapPath</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapPath</pd:from>
+        <pd:to>mapLocalFlow</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapLocalFlow</pd:from>
+        <pd:to>PreGroup3</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>PreGroup3</pd:from>
+        <pd:to>Group3</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>LengthTrim</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Group3</pd:from>
+        <pd:to>LengthTrim</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

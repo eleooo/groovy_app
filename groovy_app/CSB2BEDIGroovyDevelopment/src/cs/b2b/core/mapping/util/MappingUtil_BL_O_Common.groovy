@@ -159,37 +159,37 @@ class MappingUtil_BL_O_Common {
 		}
 		
 		
-		current_Body?.ExternalReference?.each {current_ExternalReference ->
+		current_Body.ExternalReference.each {current_ExternalReference ->
 			
-			if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "SO" && current_ExternalReference.ReferenceDescription?.toUpperCase()?.trim() == "SHIPPERS ORDER NUMBER" ){
+			if(current_ExternalReference.CSReferenceType?.toUpperCase()?.trim() == "SO" && current_ExternalReference.ReferenceDescription?.toUpperCase()?.trim() == "SHIPPERS ORDER NUMBER" ){
 				extRefKey.add(["SO":current_ExternalReference.getCSReferenceType() + current_ExternalReference.ReferenceNumber + current_ExternalReference.ReferenceDescription])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "BL"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "BL"){
 				extRefKey.add(["BL_NUM":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "SR"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "SR"){
 				extRefKey.add(["SR":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "PO"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "PO"){
 				extRefKey.add(["PRN":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "FR"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "FR"){
 				extRefKey.add(["FR":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "SID"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "SID"){
 				extRefKey.add(["SID":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "INV"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "INV"){
 				extRefKey.add(["INV":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "MVID"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "MVID"){
 				extRefKey.add(["VT":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "CR"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "CR"){
 				extRefKey.add(["CRN":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "CTR"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "CTR"){
 				extRefKey.add(["CT":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "FM"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "FM"){
 				extRefKey.add(["FM":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "CBL"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "CBL"){
 				extRefKey.add(["CBL":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "EXPR"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "EXPR"){
 				extRefKey.add(["ERN":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "CGR"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "CGR"){
 				extRefKey.add(["AT":current_ExternalReference.ReferenceNumber])
-			}else if(current_ExternalReference?.CSReferenceType?.toUpperCase()?.trim() == "UC"){
+			}else if(current_ExternalReference.CSReferenceType.toUpperCase().trim() == "UC"){
 				extRefKey.add(["UC":current_ExternalReference.ReferenceNumber])
 			}
 			
@@ -2689,7 +2689,6 @@ class MappingUtil_BL_O_Common {
 	 * @Tested test by file in OOCLLOGISTICS
 	 */
 	void checkCarrierBookingNumber(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
-		//not(exists(  $ParseNormolizedCS2XML/root/ns1:Body-BillOfLading/ns1:GeneralInformation-Body-BillOfLading/ns1:CarrierBookingNumber-BLInformationType  ))
 		Map<String,String> errorKey = null
 		if(current_Body.GeneralInformation.CarrierBookingNumber == null || current_Body.GeneralInformation.CarrierBookingNumber?.size() == 0){
 			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Missing CarrierBookingNumber,(BookingInformation mandatoty and loopbyBookingNumber)"]
@@ -5371,111 +5370,43 @@ class MappingUtil_BL_O_Common {
 		return retMap
 	}
 
-//  Jake eceplos
-//	void missingBGM_C002_1001(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
-//
-//		Map<String,String> errorKey = null
-//
-//		if(StringUtil.isEmpty(root?.Group_UNH?.BGM?.C002_01?.E1001_01?.text())){
-//			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BGM C002 1001 is missing."]
-//			errorKeyList.add(errorKey)
-//			return
-//		}
-//	}
-
+	
+	/*
+	 *author LINJA
+	 */
 	/**
-	 *
-	 * @param body
+	 * @param root
 	 * @param isError
 	 * @param errorMsg
 	 * @param errorKeyList
-	 * @Tested true
+	 * @RuleName BGM C002 1001 is missing
+	 * @Tested simple test
 	 */
-	void missingGrp12_NAD_C082_3039(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+	void missingBGM_C002_1001(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
 		Map<String,String> errorKey = null
-		//$Start/root/Flows/ConvertType[type="ExceptionHandling"]/Config[SegmentId="Grp12-NAD" and SegmentField="C082-3039"]/ProcessId = "1" and
-		//exists($Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[tib:trim(ns3:PartyType)="SHP" and tib:trim(ns3:CarrierCustomerCode)="" ])
-		//current_Body?.Party?.PartyType=="SHP" && current_Body?.Party?.CarrierCustomerCode==""
-		if(current_Body?.Party?.findAll{it?.PartyType=="SHP" && it?.CarrierCustomerCode?.trim()==""}?.size()>0){
-			//$_globalVariables/ns1:GlobalVariables/AppErrorReport/Action, "
-			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BlPartyType is SHP and BlPartyCode is null."]
+
+		if(root?.Group_UNH?.BGM?.find{it?.C002_01?.E1001_01} == null){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BGM C002 1001 is missing."]
 			errorKeyList.add(errorKey)
 			return
 		}
 	}
 
 	/**
-	 *
-	 * @param body
+	 * @param current_Body
 	 * @param isError
 	 * @param errorMsg
 	 * @param errorKeyList
-	 * @Tested true
+	 * @RuleName check BLType is Memo
+	 * @Tested simple test
 	 */
-	void missingGrp12_NAD_Grp12_NAD(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
-		Map<String,String> errorKey = null
-		//exists($Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[ns3:PartyType="CGN"]) =false() and
-		//exists($Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[ns3:PartyType="SHP"])=false()
-		//current_Body?.Party?.PartyType!="CGN" && current_Body?.Party?.PartyType!="SHP"
-		if(current_Body?.Party?.any{it?.PartyType!="CGN" && it?.PartyType!="SHP"}){
-			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BlParty without PartyType 'SHP' and 'CGN'"]
-			errorKeyList.add(errorKey)
-			return
-		}
-	}
+	void checkBLTypeIsMemo(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
 
-	/**
-	 *
-	 * @param body
-	 * @param isError
-	 * @param errorMsg
-	 * @param errorKeyList
-	 * @Tested true
-	 */
-	void missingGrp12_NAD_3035_1(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
 		Map<String,String> errorKey = null
-		//exists($Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[ns3:PartyType!="SHP" and ns3:PartyType!="CGN"  and ns3:PartyType!="FWD"  and ns3:PartyType!="NPT"   and ns3:PartyType!="ANP"])
-		Map<String,String> mapPartyType=['SHP':'SH','CGN':'CN','FWD':'FW','NPT':'NP','ANP':'AP']
-		if(current_Body?.Party?.findAll{mapPartyType.get(it?.PartyType)==null}?.size()>0){
-			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BlPartyType is neither 'SH', 'CN', 'FW', 'NP', 'AP'."]
-			errorKeyList.add(errorKey)
-			return
-		}
-	}
 
-	/**
-	 *
-	 * @param body
-	 * @param isError
-	 * @param errorMsg
-	 * @param errorKeyList
-	 * @Tested true
-	 */
-	void missingGrp12_NAD_3035_2(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
-		Map<String,String> errorKey = null
-		//exists($Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[ns3:PartyType!="SHP" and ns3:PartyType!="CGN"  and ns3:PartyType!="FWD"  and ns3:PartyType!="NPT"
-		//and ns3:PartyType!="ANP" and ns3:PartyType!="BRK"  and ns3:PartyType!="CCP"  and ns3:PartyType!="CTP"])
-		Map<String,String> mapPartyType=['SHP':'SH','CGN':'CN','FWD':'FW','NPT':'NP','ANP':'AP','BRK':'BR','CCP':'CP','CTP':'CT']
-		if(current_Body?.Party?.findAll{ mapPartyType.get(it.PartyType)==null}?.size()>0){
-			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BlPartyType is neither 'SH', 'CN', 'FW', 'NP', 'AP'"]
-			errorKeyList.add(errorKey)
-			return
-		}
-	}
-
-	/**
-	 *
-	 * @param body
-	 * @param isError
-	 * @param errorMsg
-	 * @param errorKeyList
-	 * @Tested true
-	 */
-	void missingGrp12_NAD_C080_3036(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
-		Map<String,String> errorKey = null
-		//exists($Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[tib:trim(ns3:PartyName)=""])
-		if(current_Body?.Party?.find{it.PartyName?.trim()==""}){
-			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BlPartyName is null"]
+		if(current_Body?.GeneralInformation?.BLType?.toUpperCase()?.equals(("Memo").toUpperCase())){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BLType is Memo."]
 			errorKeyList.add(errorKey)
 			return
 		}
@@ -5486,21 +5417,550 @@ class MappingUtil_BL_O_Common {
 	 * @param isError
 	 * @param errorMsg
 	 * @param errorKeyList
-	 * @RuleName BGM C002 1001 is missing
-	 * @Tested true test by unit test
+	 * @RuleName BGM C106 1004 is missing
+	 * @Tested simple test
 	 */
-	void missingGrp18_GID_1496(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
-		//exists($getGroup18/group/pfx7:L-GID_70/pfx7:S-GID_70[tib:trim(pfx7:E-1496_70_01)=""])=true()
+	void missingBGM_C106_1004(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
 		Map<String,String> errorKey = null
-		println root?.Group_UNH?.Group18_GID?.GID?.E1496_01?.text()
-		if(root?.Group_UNH?.Group18_GID?.find{StringUtil.isEmpty(it?.GID?.E1496_01?.text()?.trim())} != null){
-			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BGM C002 1001 is missing."]
+
+		if(root?.Group_UNH?.BGM?.find{it?.C106_02?.E1004_01} == null){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "BGM C106 1004 is missing."]
 			errorKeyList.add(errorKey)
 			return
 		}
-
 	}
 
+	/**
+	 * @param current_Body
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Not exist CCP party or CCP party's CarrierCustomerCode invalid
+	 * @Tested simple test
+	 */
+	void checkCCP(cs.b2b.core.mapping.bean.bl.Body current_Body, String Ext_Cde, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+		if(current_Body?.Party?.find{it?.PartyType == 'CCP'} == null ||(current_Body?.Party?.find{it?.PartyType == 'CCP' && it?.CarrierCustomerCode == Ext_Cde}) == null){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Not exist CCP party or CCP party's CarrierCustomerCode invalid."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+
+	/**
+	 * @param root
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Charge type not exists
+	 * @Tested simple test
+	 */
+	void checkChargeTypeNotExists(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+		if(root?.Group_UNH?.Group7_TCC?.find{StringUtil.isEmpty(it?.TCC?.C200_01?.E8022_04?.text())} != null){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Charge type not exists."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+	/**
+	 * @param current_Body
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName check No Collect Charge, all BL-RATE-CHARGES.IsPrepaidPayment = 1
+	 * @Tested simple test
+	 */
+	void checkNoCollectCharge(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList) {
+
+		Map<String, String> errorKey = null
+		if (current_Body?.FreightCharge?.find{it?.ChargeType == '0'} == false) {
+			errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "No Collect Charge, all BL-RATE-CHARGES.IsPrepaidPayment = 1."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+	/**
+	 * @param root
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Group18 FTX C108 is missing
+	 * @Tested simple test
+	 */
+	void checkGroup18FTXC108IsMissing(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+		println root?.Group_UNH?.Group18_GID?.FTX?.find{it?.C108_04 == null}
+		if(root?.Group_UNH?.Group18_GID?.find{it?.FTX?.C108_04} == null){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Group18 FTX C108 is missing."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+	/**
+	 * @param root
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Group18 FTX C108 4440 chars >60
+	 * @Tested simple test
+	 */
+	void checkGroup18FTXC108_4440Chars(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+		if(root?.Group_UNH?.Group18_GID?.find{it?.FTX?.C108_04?.E4440_01?.text()?.length() > 60}){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Group18 FTX C108 4440 chars >60."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+	/**
+	 * @param current_Body
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Cargo MarksAndNumbersLine > 240 chars
+	 * @Tested simple test
+	 */
+	void checkCargoMarksAndNumbersLine (cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+		if(current_Body?.Cargo?.find{it?.MarksAndNumbers?.MarksAndNumbersLine?.toString()?.length() > 240}){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Cargo MarksAndNumbersLine > 240 chars."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+	/**
+	 * @param root
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Group 30 DGS C205 8351 is missing.
+	 * @Tested simple test
+	 */
+	void checkGroup30DGSC205_8351IsMissing(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+
+		if(root?.Group_UNH?.Group30_DGS?.DGS?.find{it?.C205_02?.E8351_01?.text() == ''}){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Group 30 DGS C205 8351 is missing."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+	/**
+	 * @param root
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Group18 TMD C219 is missing
+	 * @Tested simple test
+	 */
+	void checkGroup18TMDC219IsMissing(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+
+		if(root?.Group_UNH?.Group18_GID?.find{it?.TMD?.C219_01} == null){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Group18 TMD C219 is missing."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+
+	/**
+	 * @param root
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Group18 TMD C219 8335 is missing
+	 * @Tested simple test
+	 */
+	void checkGroup18TMDC219_8335IsMissing(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+
+		if(root?.Group_UNH?.Group18_GID?.find{StringUtil.isEmpty(it?.TMD?.C219_01?.E8335_01?.text()?.trim())}){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Group18 TMD C219 is missing."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+	/**
+	 * @param root
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Group9 LOC C517 3225 and 3224 are missing
+	 * @Tested simple test
+	 */
+	void checkGroup9LOCC517_3225And3224AreMissing(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+		if(root?.Group_UNH?.Group9_LOC?.find{StringUtil.isEmpty(it?.LOC?.C517_02?.E1131_02?.text()?.trim()) && StringUtil.isEmpty(it?.LOC?.C517_02?.E3224_04?.text()?.trim())}){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Group9 LOC C517 3225 and 3224 are missing."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+	/**
+	 * @param root
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Grp8 TDT C222 8212 is missing
+	 * @Tested simple test
+	 */
+	void checkGrp8TDTC222_8212IsMissing(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+
+		if(root?.Group_UNH?.Group8_TDT?.find{StringUtil.isEmpty(it?.TDT?.C222_08?.E8212_04?.text()?.trim())}){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Grp8 TDT C222 8212 is missing."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+
+
+	/**
+	 * @param root
+	 * @param isError
+	 * @param errorMsg
+	 * @param errorKeyList
+	 * @RuleName Must inbound to US, BL-ROUTE-DestinationCountry!=US
+	 * @Tested simple test
+	 */
+	void checkNotInboundToUS(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+
+		Map<String,String> errorKey = null
+
+		if(root?.Group_UNH?.Group9_LOC?.find{it?.LOC?.E3227_01?.text() == '7' && it?.LOC?.C553_04?.E3233_01?.text() != 'US'}){
+			errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Must inbound to US, BL-ROUTE-DestinationCountry!=US."]
+			errorKeyList.add(errorKey)
+			return
+		}
+	}
+	
+	
+	/**
+    * @author XIEZE
+    */
+
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Group 11 is missing
+    * @Tested True tested by file  in unit test
+    */
+   void missingGroup_11(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+
+      if(StringUtil.isEmpty(root?.Group_UNH?.Group11_NAD?.text())){
+         errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Group 11 is missing"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+
+   /**
+    * @param current_Body
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Party has more than 1 phone no or email address
+    * @Tested True tested by file  in unit test
+    * @tips have problem
+    */
+   void checkGrp11_Grp12_COM(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+
+      if(current_Body?.Party?.findAll{it?.Contact?.ContactPhone?.Number}?.size() > 0 || current_Body?.Party?.findAll{it?.Contact?.ContactEmailAddress}?.size() > 0){
+         errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Party has more than 1 phone no or email address"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Group11 NAD C080 is missing
+    * @Tested True tested by file in unit test
+    */
+   void missingGroup11_NAD_C080(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+
+      if(root?.Group_UNH?.Group11_NAD?.find{StringUtil.isEmpty(it?.NAD?.C080_04?.text())} && root?.Group_UNH?.find{it?.Group11_NAD?.NAD?.E3035_01?.text() != "CA"}){
+         errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Group11 NAD C080 is missing"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Group11 NAD C082 is missing when Group 11 NAD 3035 is CA
+    * @Tested True tested by file  in unit test
+    */
+   void missingGroup11_NAD_C082(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+
+      if(root?.Group_UNH?.Group11_NAD?.find{it?.NAD?.E3035_01?.text() == "CA" && StringUtil.isEmpty(it?.NAD?.C082_02?.text())}){
+            errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Group11 NAD C082 is missing when Group 11 NAD 3035 is CA"]
+            errorKeyList.add(errorKey)
+            return
+
+      }
+   }
+
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName If 3035 is not CA, the max character length is 10 for NAD3039CA
+    * @Tested True tested by file  in unit test
+    */
+   void checkGroup11_NAD3039(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+
+      if(root?.Group_UNH?.Group11_NAD?.find{it?.NAD?.E3035_01?.text() != "CA" && it?.NAD?.C082_02?.E3039_01?.text().length() > 10}){
+            errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "If 3035 is not CA, the max character length is 10 for NAD3039 "]
+            errorKeyList.add(errorKey)
+            return
+      }
+   }
+   /**
+    * @param current_Body
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Bl-Cargo-Description is null
+    * @Tested True tested by file  in unit test
+    */
+   void checkGrp19_FTX(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+        //exists($Start/root/pfx:Body-BillOfLading/pfx:Cargo-Body-BillOfLading[tib:trim(ns3:CargoDescription)=""])
+   if(current_Body?.Cargo?.find{StringUtil.isEmpty(it?.CargoDescription.toString().trim())}){
+      errorKey = [TYPE: isError? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError? YES : NO, VALUE: errorMsg ? errorMsg : "Bl-Cargo-Description is null'"]
+      errorKeyList.add(errorKey)
+      return
+   }
+}
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Grp1 LOC C517 3225 is missing
+    * @Tested True tested by file  in unit test
+    */
+   void missingGrp1_LOC_C517_3225(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+
+      if(root?.Group_UNH?.Group1_LOC?.find{StringUtil.isEmpty(it?.LOC?.C517_02?.E3225_01?.text().trim())} || root?.Group_UNH?.Group1_LOC?.find{it?.LOC?.C517_02?.E3225_01?.text()}==null){
+            errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Grp1 LOC C517 3225 is missing."]
+            errorKeyList.add(errorKey)
+            return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Missing valid CaptureOfficeName and lead to Grp1 LOC(91) C517 3224 mandatory checking error.
+    * @Tested True tested by file  in unit test
+    */
+   void missingGrp1_LOC_C517_91_3224(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(root?.Group_UNH?.Group1_LOC?.find{it?.LOC?.E3227_01?.text() == "91" && StringUtil.isEmpty(it?.LOC?.C517_02?.E3224_04?.text())}){
+            errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Missing valid CaptureOfficeName and lead to Grp1 LOC(91) C517 3224 mandatory checking error."]
+            errorKeyList.add(errorKey)
+            return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Grp1 LOC C517 3224 is missing
+    * @Tested True tested by file  in unit test
+    */
+   void missingGrp1_LOC_C517_Non91_3224(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(root?.Group_UNH?.Group1_LOC?.find{it?.LOC?.E3227_01?.text() != "91"&& StringUtil.isEmpty(it?.LOC?.C517_02?.E3224_04?.text())}){
+            errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Grp1 LOC C517 3224 is missing"]
+            errorKeyList.add(errorKey)
+            return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Group35 EQD C224 is missing
+    * @Tested True tested by file  in unit test
+    */
+   void missingGroup35_EQD_C224(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(root?.Group_UNH?.Group35_EQD?.find{StringUtil.isEmpty(it?.EQD?.C224_03?.text())} &&root?.Group_UNH?.Group35_EQD?.find{it?.EQD}!= null){
+         errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Group35 EQD C224 is missing"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Group35 EQD C224 8155 is missing
+    * @Tested True tested by file  in unit test
+    */
+   void missingGroup35_EQD_C224_8155(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(root?.Group_UNH?.Group35_EQD?.find{StringUtil.isEmpty(it?.EQD?.C224_03?.E8155_01?.text())} &&root?.Group_UNH?.Group35_EQD?.find{it?.EQD}!= null){
+         errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Group35 EQD C224 8155 is missing"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Group35 MEA C174 6314 is missing
+    * @Tested True tested by file  in unit test
+    */
+   void missingGrp35_MEA_C174_6314(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(root?.Group_UNH?.Group35_EQD?.find{StringUtil.isEmpty(it?.MEA?.C174_03?.E6314_02?.text())} &&root?.Group_UNH?.Group35_EQD?.find{it?.MEA}!= null){
+         errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Group35 MEA C174 6314 is missing"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Bl-Container-Number is null
+    * @Tested True tested by file  in unit test
+    */
+   void checkGrp36_EQD(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(current_Body?.Container?.find{StringUtil.isEmpty(it?.ContainerNumber.toString().trim())}){
+         errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Bl-Container-Number is null"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName REF-C506-1154 is missing
+    * @Tested True tested by file  in unit test
+    */
+   void missingGrp3_REF_C506_1154(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(root?.Group_UNH?.Group3_RFF?.find{StringUtil.isEmpty(it?.RFF?.C506_01?.E1154_02?.text())} &&root?.Group_UNH?.Group3_RFF?.find{it?.RFF}!= null){
+         errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "REF-C506-1154 is missing"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+/**
+ * @param root
+ * @param isError
+ * @param errorMsg
+ * @param errorKeyList
+ * @RuleName Group 8 is missing
+ * @Tested True tested by file  in unit test
+ */
+   void missingGrp8(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(root?.Group_UNH?.Group8_TDT?.find{StringUtil.isEmpty(it?.TDT?.text())} &&root?.Group_UNH?.Group8_TDT?.find{it?.TDT}!= null){
+         errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Group 8 is missing"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName Group 9 is missing
+    * @Tested True tested by file  in unit test
+    */
+   void missingGrp9(Node root, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(root?.Group_UNH?.Group8_TDT?.find{it?.Group9_LOC} == null){
+         errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "Group 9 is missing"]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName BL-Ext-reference name is null.
+    * @Tested True tested by file  in unit test
+    */
+   void missingRFF_GROUP4(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(current_Body?.ExternalReference?.find{StringUtil.isEmpty(it?.ReferenceDescription.toString().trim())}){
+         errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "BL-Ext-reference name is null."]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
+   /**
+    * @param root
+    * @param isError
+    * @param errorMsg
+    * @param errorKeyList
+    * @RuleName BL-Ext-reference name or type is null.
+    * @Tested True tested by file  in unit test
+    */
+   void missingRFF_GROUP4_typeorname(cs.b2b.core.mapping.bean.bl.Body current_Body, boolean isError, String errorMsg, List<Map<String,String>> errorKeyList){
+      Map<String,String> errorKey = null
+      if(current_Body?.ExternalReference?.find{StringUtil.isEmpty(it?.ReferenceDescription.toString().trim())}){
+         errorKey = [TYPE: isError ? ERROR_SUPPORT : ERROR_COMPLETE, IS_ERROR: isError ? YES : NO, VALUE: errorMsg ? errorMsg : "BL-Ext-reference name or type is null."]
+         errorKeyList.add(errorKey)
+         return
+      }
+   }
 
 
 }

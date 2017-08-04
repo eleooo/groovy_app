@@ -17,8 +17,9 @@ import java.util.List;
 public class DemoGroovy_Xml2EDI extends DemoBase {
 
 	//1, provide your test file here
-//	static String testInputFileNamePath = "Z:\\1-PANTOS-1-pair.xml";
-	static String testInputFileNamePath = "c:\\EDI2017072009341468-39_1.in";
+	//static String testInputFileNamePath = "c:\\EDI2017072009341468-39_1.in";
+	static String testInputFileNamePath = "D:\\1_B2BEDI_Revamp\\BL\\OUT_XML\\INFODISBVFNL1014430\\InputData\\6-PANTOS-14-OKLEDI201701-OKLEDI0065.1.Reference.uif.xml";
+	//static String testInputFileNamePath = "z:\\4-PANTOS-12-CustomerRffNum_invalid-EDI2014121703154117-90.xml";
 //	static String testInputFileNamePath = "Z:\\490-EASTMANCHEMICAL-baseline_3OceanLeg.xml";
 //	static String testInputFileNamePath = "C:\\Users\\RENGA\\Desktop\\833-MILESTONE-2-BL_CA1366973-B2A01=04_UPDATE.xml";
 
@@ -48,7 +49,6 @@ public class DemoGroovy_Xml2EDI extends DemoBase {
 //static String pmtMappingScriptFile = "./src/cs/b2b/mapping/scripts/CUS_CS2BLXML_310_CARDINALHEALTHAMBER.groovy";
 static String pmtMappingScriptFile = "./src/cs/b2b/mapping/scripts/CUS_CS2BLXML_D96B_INFODISBVFNL1014430.groovy";
 
-//	static String definitionFile = "./IG_Definition/CUS_4010_310_CS.xml";
 	static String definitionFile = "./IG_Definition/CUS_D96B_IFTMCS_CS.xml";
 //	static String definitionFile = "./IG_Definition/CUS_4010_301_CS.xml";
 
@@ -61,7 +61,7 @@ static String pmtMappingScriptFile = "./src/cs/b2b/mapping/scripts/CUS_CS2BLXML_
 				"OriginalSourceFileName="+new File(testInputFileNamePath).getName(),
 				"MSG_REQ_ID=EDI-TEST-001-DUMMY",
 				//for BelugaOcean EDI setting, use PMT info in table table B2B_EDI_TP_LBC_SETTING
-				"TP_ID=DUMMYBLD99Bb",
+				"TP_ID=ACUCUBEDOREL",
 				"MSG_TYPE_ID=BL",
 //				"MSG_TYPE_ID=BC",
 				"DIR_ID=O",

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/file" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns1="http://www.cargosmart.com/common" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/ns/Foresight/2010/20" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:pfx4="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" xmlns:pfx3="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" xmlns:pfx2="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/XML/IncomingToIRIS2_ShippingInstructionFromCargoSmart_Rel12-edna-septfu.xsd" xmlns:pfx="http://www.cargosmart.com/billoflading" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <pd:name>Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/MapPartyType3.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="group">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="NAD_01" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="ShipperFlag" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="ConsigneeFlag" type="xsd:string" minOccurs="0"/>
+                                <xsd:element ref="pfx:Body-BillOfLading"/>
+                                <xsd:element ref="pfx:Header-BillOfLading"/>
+                                <xsd:element name="iParty" type="xsd:int" minOccurs="0"/>
+                                <xsd:element ref="pfx:Party-Body-BillOfLading" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>149</pd:startX>
+    <pd:startY>65</pd:startY>
+    <pd:returnBindings>
+        <root>
+            <group>
+                <xsl:if test="$Map-Data/root/group/NAD_01">
+                    <NAD_01>
+                        <xsl:value-of select="$Map-Data/root/group/NAD_01"/>
+                    </NAD_01>
+                </xsl:if>
+                <xsl:if test="$Map-Data/root/group/ShipperFlag">
+                    <ShipperFlag>
+                        <xsl:value-of select="$Map-Data/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                </xsl:if>
+                <xsl:if test="$Map-Data/root/group/ConsigneeFlag">
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$Map-Data/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                </xsl:if>
+            </group>
+        </root>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="group">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="NAD_01" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="ShipperFlag" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="ConsigneeFlag" type="xsd:string" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>517</pd:endX>
+    <pd:endY>65</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1501481213440</pd:targetNamespace>
+    <pd:activity name="Map Data">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>292</pd:x>
+        <pd:y>83</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="group">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="NAD_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="ShipperFlag" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="ConsigneeFlag" type="xsd:string" minOccurs="0"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:choose>
+                    <xsl:when test="tib:trim($Start/root/group/pfx:Party-Body-BillOfLading/ns1:PartyType)='SHP'">
+                        <group>
+                            <NAD_01>
+                                <xsl:value-of select="'CZ'"/>
+                            </NAD_01>
+                            <ShipperFlag>
+                                <xsl:value-of select="'1'"/>
+                            </ShipperFlag>
+                        </group>
+                    </xsl:when>
+                    <xsl:when test="tib:trim($Start/root/group/pfx:Party-Body-BillOfLading/ns1:PartyType)='CGN'">
+                        <group>
+                            <NAD_01>
+                                <xsl:value-of select="'CN'"/>
+                            </NAD_01>
+                            <ConsigneeFlag>
+                                <xsl:value-of select="'1'"/>
+                            </ConsigneeFlag>
+                        </group>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <group>
+                            <NAD_01>
+                                <xsl:value-of select="''"/>
+                            </NAD_01>
+                        </group>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Map Data</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map Data</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

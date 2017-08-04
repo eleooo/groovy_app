@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <pd:name>Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group8/Group9/LOC_5_02_02/SQLQueryORG (1)/Type1.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="RouteInfomation" minOccurs="0">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="OrgCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="PORCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FNDCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FirstPOL" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FirstPOLCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LastPOD" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LastPODCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="OrgCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="PORCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FNDCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FirstPOLCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LastPODCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="OrgState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="PORState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FNDState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FirstPOLState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LastPODState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="OrgUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FPolUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LPodUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FndUNLOCCode" type="xsd:string" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>147</pd:startX>
+    <pd:startY>75</pd:startY>
+    <pd:returnBindings>
+        <root>
+            <xsl:if test="$Map-Data/root/Org_LOC88_2_02">
+                <Org_LOC88_2_02>
+                    <xsl:value-of select="$Map-Data/root/Org_LOC88_2_02"/>
+                </Org_LOC88_2_02>
+            </xsl:if>
+        </root>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="Org_LOC88_2_02" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>602</pd:endX>
+    <pd:endY>69</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables>
+        <ORGLocation>
+            <xsd:element name="root">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="ROUTE_RouteORGLocCdeUNCnv" type="xsd:string" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </ORGLocation>
+    </pd:processVariables>
+    <pd:targetNamespace>http://xmlns.example.com/1288863870716</pd:targetNamespace>
+    <pd:activity name="Map-Data">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>395</pd:x>
+        <pd:y>72</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Org_LOC88_2_02" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:choose xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+                    <xsl:when test="tib:trim($Start/root/RouteInfomation/OrgCity)!='' or &#xA;tib:trim($Start/root/RouteInfomation/OrgUNLOCCode)!=''&#xA;and&#xA;$FindPortList/resultSet/Record[1]/COUNT>0">
+                        <Org_LOC88_2_02>
+                            <xsl:value-of select="'139'"/>
+                        </Org_LOC88_2_02>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <Org_LOC88_2_02>
+                            <xsl:value-of select="'229'"/>
+                        </Org_LOC88_2_02>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="FindPortList">
+        <pd:type>com.tibco.plugin.jdbc.JDBCQueryActivity</pd:type>
+        <pd:resourceType>ae.activities.JDBCQueryActivity</pd:resourceType>
+        <pd:x>272</pd:x>
+        <pd:y>71</pd:y>
+        <config>
+            <timeout>10</timeout>
+            <commit>true</commit>
+            <maxRows>100</maxRows>
+            <emptyStrAsNil>false</emptyStrAsNil>
+            <statement>select count(*) from cs2_port_list pl where pl.port_name=? and pl.un_location_code=?</statement>
+            <jdbcSharedConfig>/Resources/Main-Connection.sharedjdbc</jdbcSharedConfig>
+            <oraObjects/>
+            <oraTables/>
+            <QueryOutputCachedSchemaColumns>COUNT</QueryOutputCachedSchemaColumns>
+            <QueryOutputCachedSchemaDataTypes>2</QueryOutputCachedSchemaDataTypes>
+            <QueryOutputCachedSchemaDataTypesName>number</QueryOutputCachedSchemaDataTypesName>
+            <QueryOutputCachedSchemaStatus>OptionalElement</QueryOutputCachedSchemaStatus>
+            <Prepared_Param_DataType>
+                <parameter>
+                    <parameterName>Prepared_Param_1</parameterName>
+                    <dataType>VARCHAR</dataType>
+                </parameter>
+                <parameter>
+                    <parameterName>Prepared_Param_2</parameterName>
+                    <dataType>VARCHAR</dataType>
+                </parameter>
+            </Prepared_Param_DataType>
+        </config>
+        <pd:inputBindings>
+            <jdbcQueryActivityInput>
+                <Prepared_Param_1>
+                    <xsl:value-of select="tib:trim($Start/root/RouteInfomation/OrgCity)"/>
+                </Prepared_Param_1>
+                <Prepared_Param_2>
+                    <xsl:choose>
+                        <xsl:when test="exists(tib:trim($Start/root/RouteInfomation/OrgUNLOCCode))">
+                            <xsl:value-of select="tib:trim($Start/root/RouteInfomation/OrgUNLOCCode)"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="xsi:nil">true</xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </Prepared_Param_2>
+            </jdbcQueryActivityInput>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>FindPortList</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map-Data</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>FindPortList</pd:from>
+        <pd:to>Map-Data</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

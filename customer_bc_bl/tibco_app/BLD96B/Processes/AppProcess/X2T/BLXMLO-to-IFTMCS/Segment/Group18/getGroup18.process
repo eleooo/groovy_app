@@ -1,0 +1,1292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/file" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/ns/Foresight/2010/20" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pfx4="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" xmlns:pfx3="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" xmlns:pfx2="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/XML/IncomingToIRIS2_ShippingInstructionFromCargoSmart_Rel12-edna-septfu.xsd" xmlns:pfx="http://www.cargosmart.com/billoflading">
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" schemaLocation="/Schemas/EDI/ConvertConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" schemaLocation="/Schemas/EDI/ProcessConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd" schemaLocation="/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd"/>
+    <xsd:import namespace="http://www.cargosmart.com/billoflading" schemaLocation="/Schemas/CS2X/com/cargosmart/documentation/normalizeBillOfLading.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/Foresight/2010/20" schemaLocation="/BCSchemas/EDIEDIFACT/1/D96B/IFTMCS/New_CS-SYSINT-CUST-IFTMCS-EDIFACT_D96B_20140730_JO_IFTMCS.xsd"/>
+    <pd:name>Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/getGroup18.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="pfx4:Flows"/>
+                    <xsd:element ref="pfx3:ConversionData"/>
+                    <xsd:element ref="pfx:Body-BillOfLading"/>
+                    <xsd:element name="pathPrefix" type="xsd:string"/>
+                    <xsd:element ref="pfx:Header-BillOfLading"/>
+                    <xsd:element name="tp_id" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>50</pd:startX>
+    <pd:startY>50</pd:startY>
+    <pd:returnBindings>
+        <group>
+            <xsl:copy-of select="$Map-Data-1/group/ns:L-GID_70"/>
+        </group>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="group">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="ns:L-GID_70" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>1292</pd:endX>
+    <pd:endY>471</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1291275228183</pd:targetNamespace>
+    <pd:activity name="mapPath">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>150</pd:x>
+        <pd:y>50</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="pathPrefix" type="xsd:string"/>
+                            <xsd:element name="convertPath" type="xsd:string"/>
+                            <xsd:element name="convertTypeID" type="xsd:string"/>
+                            <xsd:element name="segmentID" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <pathPrefix>
+                    <xsl:value-of select="$Start/root/pathPrefix"/>
+                </pathPrefix>
+                <convertPath>
+                    <xsl:value-of select="&quot;Group18&quot;"/>
+                </convertPath>
+                <convertTypeID>
+                    <xsl:value-of select="&quot;BillOfLading&quot;"/>
+                </convertTypeID>
+                <segmentID>
+                    <xsl:value-of select="&quot;Group18&quot;"/>
+                </segmentID>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="mapLocalFlow">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>250</pd:x>
+        <pd:y>50</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Config" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="SegmentField" type="xsd:string"/>
+                                        <xsd:element name="ProcessId" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:for-each select="$Start/root/Flows/ConvertType[type=$mapPath/root/convertTypeID]/Config[SegmentId=$mapPath/root/segmentID]">
+                    <Config>
+                        <SegmentField>
+                            <xsl:value-of select="SegmentField"/>
+                        </SegmentField>
+                        <ProcessId>
+                            <xsl:value-of select="ProcessId"/>
+                        </ProcessId>
+                    </Config>
+                </xsl:for-each>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:group name="Group18">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>50</pd:x>
+        <pd:y>184</pd:y>
+        <pd:width>958</pd:width>
+        <pd:height>440</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>inputLoop</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:over>$Start/root/pfx:Body-BillOfLading/pfx:Cargo-Body-BillOfLading</pd:over>
+            <pd:iterationElementSlot>iGrp18_Cargo_result</pd:iterationElementSlot>
+            <pd:indexSlot>iGrp18_Cargo_cnt</pd:indexSlot>
+            <pd:outSlot>acc_Grp18</pd:outSlot>
+            <pd:activityOutputName>Map Data</pd:activityOutputName>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>GID</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Map Data</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>GID</pd:from>
+            <pd:to>getGID</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="GID"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>TMP</pd:from>
+            <pd:to>getTMP</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="TMP"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>FTX</pd:from>
+            <pd:to>getFTX</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="FTX"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getTMP</pd:from>
+            <pd:to>RNG</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>TMP</pd:from>
+            <pd:to>RNG</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group20</pd:from>
+            <pd:to>getGroup20</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group20"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group20</pd:from>
+            <pd:to>Group21</pd:to>
+            <pd:lineType>Multiple Bends</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup20</pd:from>
+            <pd:to>Group21</pd:to>
+            <pd:lineType>Multiple Bends</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group23</pd:from>
+            <pd:to>getGroup23</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group23"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group23</pd:from>
+            <pd:to>Group24</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup23</pd:from>
+            <pd:to>Group24</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group30</pd:from>
+            <pd:to>getGroup30</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group30"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup30</pd:from>
+            <pd:to>Map Data</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group30</pd:from>
+            <pd:to>Map Data</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>TMD</pd:from>
+            <pd:to>getTMD</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="TMD"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getTMD</pd:from>
+            <pd:to>LOC</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>TMD</pd:from>
+            <pd:to>LOC</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>GID</pd:from>
+            <pd:to>HAN</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGID</pd:from>
+            <pd:to>HAN</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>HAN</pd:from>
+            <pd:to>getHAN</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="HAN"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getHAN</pd:from>
+            <pd:to>TMP</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>HAN</pd:from>
+            <pd:to>TMP</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>RNG</pd:from>
+            <pd:to>getRNG</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="RNG"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getRNG</pd:from>
+            <pd:to>TMD</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>RNG</pd:from>
+            <pd:to>TMD</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>LOC</pd:from>
+            <pd:to>getLOC</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="LOC"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getLOC</pd:from>
+            <pd:to>MOA</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>MOA</pd:from>
+            <pd:to>getMOA</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="MOA"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getMOA</pd:from>
+            <pd:to>PIA</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>MOA</pd:from>
+            <pd:to>PIA</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>LOC</pd:from>
+            <pd:to>MOA</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>PIA</pd:from>
+            <pd:to>getPIA</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="PIA"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getPIA</pd:from>
+            <pd:to>FTX</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>PIA</pd:from>
+            <pd:to>FTX</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getFTX</pd:from>
+            <pd:to>Group19</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>FTX</pd:from>
+            <pd:to>Group19</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group19</pd:from>
+            <pd:to>getGroup19</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group19"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup19</pd:from>
+            <pd:to>GDS</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group19</pd:from>
+            <pd:to>GDS</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>GDS</pd:from>
+            <pd:to>getGDS</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="GDS"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGDS</pd:from>
+            <pd:to>Group20</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>GDS</pd:from>
+            <pd:to>Group20</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group21</pd:from>
+            <pd:to>getGroup21</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group21"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup21</pd:from>
+            <pd:to>Group22</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group21</pd:from>
+            <pd:to>Group22</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group22</pd:from>
+            <pd:to>getGroup22</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group22"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup22</pd:from>
+            <pd:to>Group23</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group22</pd:from>
+            <pd:to>Group23</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group24</pd:from>
+            <pd:to>getGroup24</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group24"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup24</pd:from>
+            <pd:to>Group25</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group24</pd:from>
+            <pd:to>Group25</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group25</pd:from>
+            <pd:to>getGroup25</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group25"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup25</pd:from>
+            <pd:to>Group27</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group25</pd:from>
+            <pd:to>Group27</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group27</pd:from>
+            <pd:to>getGroup27</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group27"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup27</pd:from>
+            <pd:to>Group29</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group27</pd:from>
+            <pd:to>Group29</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group29</pd:from>
+            <pd:to>getGroup29</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group29"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup29</pd:from>
+            <pd:to>Group30</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group29</pd:from>
+            <pd:to>Group30</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="GID">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>164</pd:x>
+            <pd:y>248</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGID">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>188</pd:x>
+            <pd:y>346</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/GID/getGID.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <GID_cnt>
+                        <xsl:value-of select="$iGrp18_Cargo_cnt"/>
+                    </GID_cnt>
+                    <xsl:if test="$Start/root/tp_id">
+                        <tp_id>
+                            <xsl:value-of select="$Start/root/tp_id"/>
+                        </tp_id>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="TMP">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>327</pd:x>
+            <pd:y>248</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getTMP">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>324</pd:x>
+            <pd:y>344</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/TMP/getTMP.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <CGO_cnt>
+                        <xsl:value-of select="$iGrp18_Cargo_cnt"/>
+                    </CGO_cnt>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="FTX">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>734</pd:x>
+            <pd:y>255</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getFTX">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>731</pd:x>
+            <pd:y>339</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/FTX/getFTX.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <CGO_cnt>
+                        <xsl:value-of select="$iGrp18_Cargo_cnt"/>
+                    </CGO_cnt>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Map Data">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>835</pd:x>
+            <pd:y>496</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="group">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element ref="ns:L-GID_70" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <group>
+                    <xsl:if test="exists($getGID/group/ns:S-GID_70)">
+                        <ns:L-GID_70>
+                            <xsl:copy-of select="$getGID/group/ns:S-GID_70"/>
+                            <xsl:if test="exists($getTMP/group/ns:S-TMP_72)">
+                                <xsl:copy-of select="$getTMP/group/ns:S-TMP_72"/>
+                            </xsl:if>
+                            <xsl:if test="exists($getTMD/group/ns:S-TMD_74)">
+                                <xsl:copy-of select="$getTMD/group/ns:S-TMD_74"/>
+                            </xsl:if>
+                            <xsl:if test="exists($getFTX/group/ns:S-FTX_78)">
+                                <xsl:copy-of select="$getFTX/group/ns:S-FTX_78"/>
+                            </xsl:if>
+                            <xsl:if test="exists($getGroup20/group/ns:L-MEA_82)">
+                                <xsl:copy-of select="$getGroup20/group/ns:L-MEA_82"/>
+                            </xsl:if>
+                            <xsl:if test="exists($getGroup23/group/ns:L-PCI_88)">
+                                <xsl:copy-of select="$getGroup23/group/ns:L-PCI_88"/>
+                            </xsl:if>
+                            <xsl:if test="exists($getGroup30/group/ns:L-DGS_109)">
+                                <xsl:copy-of select="$getGroup30/group/ns:L-DGS_109"/>
+                            </xsl:if>
+                        </ns:L-GID_70>
+                    </xsl:if>
+                </group>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group20">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>934</pd:x>
+            <pd:y>253</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup20">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>937</pd:x>
+            <pd:y>343</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group20/getGroup20.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <CGO_cnt>
+                        <xsl:value-of select="$iGrp18_Cargo_cnt"/>
+                    </CGO_cnt>
+                    <xsl:copy-of select="$iGrp18_Cargo_result/pfx:Cargo-Body-BillOfLading"/>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group23">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>327</pd:x>
+            <pd:y>436</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup23">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>328</pd:x>
+            <pd:y>532</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group23/getGroup23.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <CGO_cnt>
+                        <xsl:value-of select="$iGrp18_Cargo_cnt"/>
+                    </CGO_cnt>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="getGroup30">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>680</pd:x>
+            <pd:y>528</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group30/getGroup30.process</processName>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <CGO_cnt>
+                        <xsl:value-of select="$iGrp18_Cargo_cnt"/>
+                    </CGO_cnt>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group30">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>676</pd:x>
+            <pd:y>440</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="TMD">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>462</pd:x>
+            <pd:y>254</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getTMD">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>466</pd:x>
+            <pd:y>352</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/TMD/getTMD.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <CGO_cnt>
+                        <xsl:value-of select="$iGrp18_Cargo_cnt"/>
+                    </CGO_cnt>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="HAN">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>249</pd:x>
+            <pd:y>249</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getHAN">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>252</pd:x>
+            <pd:y>347</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/HAN/getHAN.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="RNG">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>400</pd:x>
+            <pd:y>256</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getRNG">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>393</pd:x>
+            <pd:y>340</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/RNG/getRNG.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="LOC">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>539</pd:x>
+            <pd:y>255</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getLOC">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>536</pd:x>
+            <pd:y>339</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/LOC/getLOC.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="MOA">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>595</pd:x>
+            <pd:y>251</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getMOA">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>603</pd:x>
+            <pd:y>342</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/MOA/getMOA.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="PIA">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>665</pd:x>
+            <pd:y>251</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getPIA">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>676</pd:x>
+            <pd:y>331</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/PIA/getPIA.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group19">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>811</pd:x>
+            <pd:y>253</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup19">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>807</pd:x>
+            <pd:y>339</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group19/getGroup19.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="GDS">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>874</pd:x>
+            <pd:y>255</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGDS">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>871</pd:x>
+            <pd:y>342</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/GDS/getGDS.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group21">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>177</pd:x>
+            <pd:y>434</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup21">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>187</pd:x>
+            <pd:y>534</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group21/getGroup21.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group22">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>252</pd:x>
+            <pd:y>434</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup22">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>258</pd:x>
+            <pd:y>528</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group22/getGroup22.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group24">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>399</pd:x>
+            <pd:y>436</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup24">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>401</pd:x>
+            <pd:y>530</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group24/getGroup24.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group25">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>468</pd:x>
+            <pd:y>433</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup25">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>472</pd:x>
+            <pd:y>528</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group25/getGroup25.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group27">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>535</pd:x>
+            <pd:y>433</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup27">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>543</pd:x>
+            <pd:y>526</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group27/getGroup27.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group29">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>603</pd:x>
+            <pd:y>431</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup29">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>611</pd:x>
+            <pd:y>527</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/Group29/getGroup29.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:activity name="Map-Data-1">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>1144</pd:x>
+        <pd:y>519</pd:y>
+        <config>
+            <element>
+                <xsd:element name="group">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="ns:L-GID_70" minOccurs="0" maxOccurs="unbounded"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <group>
+                <xsl:copy-of select="$acc_Grp18/AccumulatedOutput/group/ns:L-GID_70"/>
+            </group>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>mapPath</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapPath</pd:from>
+        <pd:to>mapLocalFlow</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapLocalFlow</pd:from>
+        <pd:to>Group18</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Group18</pd:from>
+        <pd:to>Map-Data-1</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map-Data-1</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

@@ -1261,17 +1261,17 @@ class MappingUtil {
 	 * @author Jenny
 	 * extend cleanNode(Node node), to support empty tag and empty attriute
 	 */
-	String cleanXml(String xml, boolean nullable, boolean nullattr) {
-		Node root = new XmlParser().parseText(xml)
-		if(nullable && nullattr){
-			cleanNodeNullableNullattr(root)
-		}else if(nullable){
-			cleanNodeNullable (root)
-		}else {
-			cleanNode(root)
-		}
-		XmlUtil.serialize(root)
-	}
+//	String cleanXml(String xml, boolean nullable, boolean nullattr) {
+//		Node root = new XmlParser().parseText(xml)
+//		if(nullable && nullattr){
+//			cleanNodeNullableNullattr(root)
+//		}else if(nullable){
+//			cleanNodeNullable (root)
+//		}else {
+//			cleanNode(root)
+//		}
+//		XmlUtil.serialize(root)
+//	}
 
 	/**
 	 * @param node
@@ -1281,15 +1281,15 @@ class MappingUtil {
 	 * @author Jenny
 	 * extend cleanNode(Node node), to support empty tag and empty attriute
 	 */
-	boolean cleanNode( Node node, boolean nullable , boolean nullattr) {
-		if(nullable && nullattr){
-			return cleanNodeNullableNullattr (node)
-		}else if(nullable){
-			return cleanNodeNullable (node)
-		}else {
-			return cleanNode( node )
-		}
-	}
+//	boolean cleanNode( Node node, boolean nullable , boolean nullattr) {
+//		if(nullable && nullattr){
+//			return cleanNodeNullableNullattr (node)
+//		}else if(nullable){
+//			return cleanNodeNullable (node)
+//		}else {
+//			return cleanNode( node )
+//		}
+//	}
 
 
 	/**
@@ -1331,7 +1331,56 @@ class MappingUtil {
 	 * @author Jenny
 	 * core function for supporting empty tag and empty attribute
 	 */
-	boolean cleanNodeNullableNullattr(Node node){
+
+//	boolean cleanNodeNullableNullattr(Node node){
+//		if(node.attribute("null")?.toString()?.toBoolean()) {
+//			node.attributes().remove("null")
+//			if(node.children().size() > 0) {
+//				if(node.attribute("nullAttr")){
+//					def nullAttr=node.attribute("nullAttr")
+//					node.attributes().remove("nullAttr")
+//					node.attributes().with { a ->
+//						a.findAll { it.key != nullAttr ? !it.value : false }.each { a.remove(it.key) } }
+//				}else{
+//					node.attributes().with { a ->
+//						a.findAll {!it.value }.each {a.remove(it.key)} }
+//				}
+//				node.children().with { kids ->
+//					kids.findAll { it instanceof Node ? !cleanNodeNullableNullattr(it) : false }
+//							.each { kids.remove(it) }
+//				}
+//				return node.attributes() || node.children() || node.text()
+//			}else{
+//				if(node.attribute("nullAttr"))
+//					node.attributes().remove("nullAttr")
+//				return true
+//			}
+//		}else{
+//			if(node.attribute("nullAttr")){
+//				def nullAttr=node.attribute("nullAttr")
+//				node.attributes().remove("nullAttr")
+//				node.attributes().with { a ->
+//					a.findAll { it.key != nullAttr ? !it.value : false }.each { a.remove(it.key) } }
+//			}else{
+//				node.attributes().with { a ->
+//					a.findAll {!it.value }.each {a.remove(it.key)} }
+//			}
+//			node.children().with { kids ->
+//				kids.findAll { it instanceof Node ? !cleanNodeNullableNullattr(it) : false }
+//						.each { kids.remove(it) }
+//			}
+//			return node.attributes() || node.children() || node.text()
+//		}
+//	}
+
+	/**
+	 * @param node
+	 * @return boolean
+	 * @author renga
+	 * core function for supporting empty tag
+	 */
+
+	boolean cleanNodeNullable(Node node){
 		if(node.attribute("null")?.toString()?.toBoolean()) {
 			node.attributes().remove("null")
 			if(node.children().size() > 0) {
@@ -1345,11 +1394,13 @@ class MappingUtil {
 						a.findAll {!it.value }.each {a.remove(it.key)} }
 				}
 				node.children().with { kids ->
-					kids.findAll { it instanceof Node ? !cleanNodeNullableNullattr(it) : false }
+					kids.findAll { it instanceof Node ? !cleanNodeNullable(it) : false }
 							.each { kids.remove(it) }
 				}
 				return node.attributes() || node.children() || node.text()
 			}else{
+				if(node.attribute("nullAttr"))
+					node.attributes().remove("nullAttr")
 				return true
 			}
 		}else{
@@ -1363,45 +1414,40 @@ class MappingUtil {
 					a.findAll {!it.value }.each {a.remove(it.key)} }
 			}
 			node.children().with { kids ->
-				kids.findAll { it instanceof Node ? !cleanNodeNullableNullattr(it) : false }
-						.each { kids.remove(it) }
-			}
-			return node.attributes() || node.children() || node.text()
-		}
-	}
-
-	/**
-	 * @param node
-	 * @return boolean
-	 * @author renga
-	 * core function for supporting empty tag
-	 */
-	boolean cleanNodeNullable(Node node){
-		if(node.attribute("null")?.toString()?.toBoolean()) {
-			node.attributes().remove("null")
-			if(node.children().size() > 0) {
-				node.attributes().with { a ->
-					a.findAll {!it.value  }.each { a.remove(it.key) }
-				}
-				node.children().with { kids ->
-					kids.findAll { it instanceof Node ? !cleanNodeNullable(it) : false }
-							.each { kids.remove(it) }
-				}
-				return node.attributes() || node.children() || node.text()
-			}else{
-				return true
-			}
-		}else{
-			node.attributes().with { a ->
-				a.findAll {!it.value }.each { a.remove(it.key)}
-			}
-			node.children().with { kids ->
 				kids.findAll { it instanceof Node ? !cleanNodeNullable(it) : false }
 						.each { kids.remove(it) }
 			}
 			return node.attributes() || node.children() || node.text()
 		}
 	}
+
+
+//	boolean cleanNodeNullable(Node node){
+//		if(node.attribute("null")?.toString()?.toBoolean()) {
+//			node.attributes().remove("null")
+//			if(node.children().size() > 0) {
+//				node.attributes().with { a ->
+//					a.findAll {!it.value  }.each { a.remove(it.key) }
+//				}
+//				node.children().with { kids ->
+//					kids.findAll { it instanceof Node ? !cleanNodeNullable(it) : false }
+//							.each { kids.remove(it) }
+//				}
+//				return node.attributes() || node.children() || node.text()
+//			}else{
+//				return true
+//			}
+//		}else{
+//			node.attributes().with { a ->
+//				a.findAll {!it.value }.each { a.remove(it.key)}
+//			}
+//			node.children().with { kids ->
+//				kids.findAll { it instanceof Node ? !cleanNodeNullable(it) : false }
+//						.each { kids.remove(it) }
+//			}
+//			return node.attributes() || node.children() || node.text()
+//		}
+//	}
 
 
 	

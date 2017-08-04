@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/ns/Foresight/2010/20" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pfx4="http://www.cargosmart.com/billoflading" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:pfx3="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/UIF/Reordered-Transaction-SIUIFI.xsd" xmlns:pfx2="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" xmlns:pfx="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd">
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" schemaLocation="/Schemas/EDI/ConvertConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" schemaLocation="/Schemas/EDI/ProcessConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd" schemaLocation="/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/Foresight/2010/20" schemaLocation="/BCSchemas/EDITEXT/TEXT/BLUPADTEO/Message-BLUPADTEO.xsd"/>
+    <xsd:import namespace="http://www.cargosmart.com/billoflading" schemaLocation="/Schemas/CS2X/com/cargosmart/documentation/normalizeBillOfLading.xsd"/>
+    <pd:name>Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group8/Group9/DTM/C507/2379/Type2.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="pfx2:Flows"/>
+                    <xsd:element ref="pfx:ConversionData"/>
+                    <xsd:element ref="pfx4:Body-BillOfLading"/>
+                    <xsd:element name="pathPrefix" type="xsd:string"/>
+                    <xsd:element ref="pfx4:Header-BillOfLading"/>
+                    <xsd:element name="iGrp9" type="xsd:int" minOccurs="0"/>
+                    <xsd:element name="RouteInfomation" minOccurs="0">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="OrgCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="PORCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FNDCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FirstPOL" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FirstPOLCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LastPOD" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LastPODCity" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="OrgCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="PORCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FNDCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FirstPOLCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LastPODCountry" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="OrgState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="PORState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FNDState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FirstPOLState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LastPODState" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="OrgUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FPolUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="LPodUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="FndUNLOCCode" type="xsd:string" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="group" minOccurs="0">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="DTM_6_01_01" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="DTM_6_01_02" type="xsd:string" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>150</pd:startX>
+    <pd:startY>204</pd:startY>
+    <pd:returnBindings>
+        <group>
+            <xsl:if test="$Map-Data/root/action">
+                <outputValue>
+                    <xsl:value-of select="$Map-Data/root/action"/>
+                </outputValue>
+            </xsl:if>
+        </group>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="group">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="outputValue" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>451</pd:endX>
+    <pd:endY>204</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1501487270152</pd:targetNamespace>
+    <pd:activity name="Map Data">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>289</pd:x>
+        <pd:y>206</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="action" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <action>
+                    <xsl:value-of select="&quot;203&quot;"/>
+                </action>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Map Data</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map Data</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

@@ -1,0 +1,1445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/file" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns1="http://www.cargosmart.com/common" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/ns/Foresight/2010/20" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:pfx4="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" xmlns:pfx3="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" xmlns:pfx2="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/XML/IncomingToIRIS2_ShippingInstructionFromCargoSmart_Rel12-edna-septfu.xsd" xmlns:pfx="http://www.cargosmart.com/billoflading" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" schemaLocation="/Schemas/EDI/ConvertConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" schemaLocation="/Schemas/EDI/ProcessConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd" schemaLocation="/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd"/>
+    <xsd:import namespace="http://www.cargosmart.com/billoflading" schemaLocation="/Schemas/CS2X/com/cargosmart/documentation/normalizeBillOfLading.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/Foresight/2010/20" schemaLocation="/BCSchemas/EDIEDIFACT/1/D96B/IFTMCS/New_CS-SYSINT-CUST-IFTMCS-EDIFACT_D96B_20140730_JO_IFTMCS.xsd"/>
+    <pd:name>Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group8/Group9/getGroup9.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="pfx4:Flows"/>
+                    <xsd:element ref="pfx3:ConversionData"/>
+                    <xsd:element ref="pfx:Body-BillOfLading"/>
+                    <xsd:element name="pathPrefix" type="xsd:string"/>
+                    <xsd:element ref="pfx:Header-BillOfLading"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>48</pd:startX>
+    <pd:startY>34</pd:startY>
+    <pd:returnBindings>
+        <group>
+            <xsl:copy-of select="$Map-Data-1/group/ns:L-LOC_41"/>
+        </group>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="group">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="ns:L-LOC_41" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>887</pd:endX>
+    <pd:endY>401</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1274083774234</pd:targetNamespace>
+    <pd:group name="Group9">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>285</pd:x>
+        <pd:y>338</pd:y>
+        <pd:width>354</pd:width>
+        <pd:height>231</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>repeat</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:indexSlot>iGrp9</pd:indexSlot>
+            <pd:outSlot>iGrp9_result</pd:outSlot>
+            <pd:activityOutputName>Map Data</pd:activityOutputName>
+            <pd:repeatCondition>$iGrp9 = $PreGrp9/root/LOCCnt and $iGrp9&gt;0</pd:repeatCondition>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>LOC</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Map Data</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>LOC</pd:from>
+            <pd:to>getLOC</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="LOC"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>LOC</pd:from>
+            <pd:to>DTM</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getLOC</pd:from>
+            <pd:to>DTM</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>DTM</pd:from>
+            <pd:to>Map Data</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getDTM</pd:from>
+            <pd:to>Map Data</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>DTM</pd:from>
+            <pd:to>getDTM</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="DTM"])</pd:xpath>
+        </pd:transition>
+        <pd:activity name="LOC">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>374</pd:x>
+            <pd:y>389</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getLOC">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>373</pd:x>
+            <pd:y>493</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group8/Group9/LOC/getLOC.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <group>
+                        <LOC_05_01>
+                            <xsl:value-of select="$PreGrp9/root/group[$iGrp9]/value1"/>
+                        </LOC_05_01>
+                    </group>
+                    <iGrp9>
+                        <xsl:value-of select="$iGrp9"/>
+                    </iGrp9>
+                    <xsl:for-each select="$GetRawData/root/RouteInfomation">
+                        <RouteInfomation>
+                            <OrgCity>
+                                <xsl:value-of select="OrgCity"/>
+                            </OrgCity>
+                            <PORCity>
+                                <xsl:value-of select="PORCity"/>
+                            </PORCity>
+                            <FNDCity>
+                                <xsl:value-of select="FNDCity"/>
+                            </FNDCity>
+                            <FirstPOL>
+                                <xsl:value-of select="FirstPOL"/>
+                            </FirstPOL>
+                            <FirstPOLCity>
+                                <xsl:value-of select="FirstPOLCity"/>
+                            </FirstPOLCity>
+                            <LastPOD>
+                                <xsl:value-of select="LastPOD"/>
+                            </LastPOD>
+                            <LastPODCity>
+                                <xsl:value-of select="LastPODCity"/>
+                            </LastPODCity>
+                            <OrgCountry>
+                                <xsl:value-of select="OrgCountry"/>
+                            </OrgCountry>
+                            <PORCountry>
+                                <xsl:value-of select="PORCountry"/>
+                            </PORCountry>
+                            <FNDCountry>
+                                <xsl:value-of select="FNDCountry"/>
+                            </FNDCountry>
+                            <FirstPOLCountry>
+                                <xsl:value-of select="FirstPOLCountry"/>
+                            </FirstPOLCountry>
+                            <LastPODCountry>
+                                <xsl:value-of select="LastPODCountry"/>
+                            </LastPODCountry>
+                            <OrgState>
+                                <xsl:value-of select="OrgState"/>
+                            </OrgState>
+                            <PORState>
+                                <xsl:value-of select="PORState"/>
+                            </PORState>
+                            <FNDState>
+                                <xsl:value-of select="FNDState"/>
+                            </FNDState>
+                            <FirstPOLState>
+                                <xsl:value-of select="FirstPOLState"/>
+                            </FirstPOLState>
+                            <LastPODState>
+                                <xsl:value-of select="LastPODState"/>
+                            </LastPODState>
+                            <FPolUNLOCCode>
+                                <xsl:value-of select="FPolUNLOCCode"/>
+                            </FPolUNLOCCode>
+                            <LPodUNLOCCode>
+                                <xsl:value-of select="LPodUNLOCCode"/>
+                            </LPodUNLOCCode>
+                            <FndUNLOCCode>
+                                <xsl:value-of select="FndUNLOCCode"/>
+                            </FndUNLOCCode>
+                        </RouteInfomation>
+                    </xsl:for-each>
+                    <mapORG>
+                        <xsl:if test="$mapORG/root/group/LOC_5_02_01">
+                            <LOC_5_02_01>
+                                <xsl:value-of select="$mapORG/root/group/LOC_5_02_01"/>
+                            </LOC_5_02_01>
+                        </xsl:if>
+                        <xsl:if test="$mapORG/root/group/LOC_5_03_01">
+                            <LOC_5_03_01>
+                                <xsl:value-of select="$mapORG/root/group/LOC_5_03_01"/>
+                            </LOC_5_03_01>
+                        </xsl:if>
+                        <xsl:if test="$mapORG/root/group/LOC_5_02_02">
+                            <LOC_5_02_02>
+                                <xsl:value-of select="$mapORG/root/group/LOC_5_02_02"/>
+                            </LOC_5_02_02>
+                        </xsl:if>
+                        <xsl:if test="$mapORG/root/group/LOC_5_02_04">
+                            <LOC_5_02_04>
+                                <xsl:value-of select="$mapORG/root/group/LOC_5_02_04"/>
+                            </LOC_5_02_04>
+                        </xsl:if>
+                        <xsl:if test="$mapORG/root/group/LOC_5_03_04">
+                            <LOC_5_03_04>
+                                <xsl:value-of select="$mapORG/root/group/LOC_5_03_04"/>
+                            </LOC_5_03_04>
+                        </xsl:if>
+                        <xsl:if test="$mapORG/root/group/LOC_5_04_01">
+                            <LOC_5_04_01>
+                                <xsl:value-of select="$mapORG/root/group/LOC_5_04_01"/>
+                            </LOC_5_04_01>
+                        </xsl:if>
+                        <xsl:if test="$mapORG/root/group/LOC_5_04_04">
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$mapORG/root/group/LOC_5_04_04"/>
+                            </LOC_5_04_04>
+                        </xsl:if>
+                    </mapORG>
+                    <mapFirstPOL>
+                        <xsl:if test="$mapFirstPOL/root/group/LOC_5_02_01">
+                            <LOC_5_02_01>
+                                <xsl:value-of select="$mapFirstPOL/root/group/LOC_5_02_01"/>
+                            </LOC_5_02_01>
+                        </xsl:if>
+                        <xsl:if test="$mapFirstPOL/root/group/LOC_5_03_01">
+                            <LOC_5_03_01>
+                                <xsl:value-of select="$mapFirstPOL/root/group/LOC_5_03_01"/>
+                            </LOC_5_03_01>
+                        </xsl:if>
+                        <xsl:if test="$mapFirstPOL/root/group/LOC_5_02_02">
+                            <LOC_5_02_02>
+                                <xsl:value-of select="$mapFirstPOL/root/group/LOC_5_02_02"/>
+                            </LOC_5_02_02>
+                        </xsl:if>
+                        <xsl:if test="$mapFirstPOL/root/group/LOC_5_02_04">
+                            <LOC_5_02_04>
+                                <xsl:value-of select="$mapFirstPOL/root/group/LOC_5_02_04"/>
+                            </LOC_5_02_04>
+                        </xsl:if>
+                        <xsl:if test="$mapFirstPOL/root/group/LOC_5_03_04">
+                            <LOC_5_03_04>
+                                <xsl:value-of select="$mapFirstPOL/root/group/LOC_5_03_04"/>
+                            </LOC_5_03_04>
+                        </xsl:if>
+                        <xsl:if test="$mapFirstPOL/root/group/LOC_5_04_01">
+                            <LOC_5_04_01>
+                                <xsl:value-of select="$mapFirstPOL/root/group/LOC_5_04_01"/>
+                            </LOC_5_04_01>
+                        </xsl:if>
+                        <xsl:if test="$mapFirstPOL/root/group/LOC_5_04_04">
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$mapFirstPOL/root/group/LOC_5_04_04"/>
+                            </LOC_5_04_04>
+                        </xsl:if>
+                    </mapFirstPOL>
+                    <mapLastPOD>
+                        <xsl:if test="$mapLastPOD/root/group/LOC_5_02_01">
+                            <LOC_5_02_01>
+                                <xsl:value-of select="$mapLastPOD/root/group/LOC_5_02_01"/>
+                            </LOC_5_02_01>
+                        </xsl:if>
+                        <xsl:if test="$mapLastPOD/root/group/LOC_5_03_01">
+                            <LOC_5_03_01>
+                                <xsl:value-of select="$mapLastPOD/root/group/LOC_5_03_01"/>
+                            </LOC_5_03_01>
+                        </xsl:if>
+                        <xsl:if test="$mapLastPOD/root/group/LOC_5_02_02">
+                            <LOC_5_02_02>
+                                <xsl:value-of select="$mapLastPOD/root/group/LOC_5_02_02"/>
+                            </LOC_5_02_02>
+                        </xsl:if>
+                        <xsl:if test="$mapLastPOD/root/group/LOC_5_02_04">
+                            <LOC_5_02_04>
+                                <xsl:value-of select="$mapLastPOD/root/group/LOC_5_02_04"/>
+                            </LOC_5_02_04>
+                        </xsl:if>
+                        <xsl:if test="$mapLastPOD/root/group/LOC_5_03_04">
+                            <LOC_5_03_04>
+                                <xsl:value-of select="$mapLastPOD/root/group/LOC_5_03_04"/>
+                            </LOC_5_03_04>
+                        </xsl:if>
+                        <xsl:if test="$mapLastPOD/root/group/LOC_5_04_01">
+                            <LOC_5_04_01>
+                                <xsl:value-of select="$mapLastPOD/root/group/LOC_5_04_01"/>
+                            </LOC_5_04_01>
+                        </xsl:if>
+                        <xsl:if test="$mapLastPOD/root/group/LOC_5_04_04">
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$mapLastPOD/root/group/LOC_5_04_04"/>
+                            </LOC_5_04_04>
+                        </xsl:if>
+                    </mapLastPOD>
+                    <mapFND>
+                        <xsl:if test="$mapFND/root/group/LOC_5_02_01">
+                            <LOC_5_02_01>
+                                <xsl:value-of select="$mapFND/root/group/LOC_5_02_01"/>
+                            </LOC_5_02_01>
+                        </xsl:if>
+                        <xsl:if test="$mapFND/root/group/LOC_5_03_01">
+                            <LOC_5_03_01>
+                                <xsl:value-of select="$mapFND/root/group/LOC_5_03_01"/>
+                            </LOC_5_03_01>
+                        </xsl:if>
+                        <xsl:if test="$mapFND/root/group/LOC_5_02_02">
+                            <LOC_5_02_02>
+                                <xsl:value-of select="$mapFND/root/group/LOC_5_02_02"/>
+                            </LOC_5_02_02>
+                        </xsl:if>
+                        <xsl:if test="$mapFND/root/group/LOC_5_02_04">
+                            <LOC_5_02_04>
+                                <xsl:value-of select="$mapFND/root/group/LOC_5_02_04"/>
+                            </LOC_5_02_04>
+                        </xsl:if>
+                        <xsl:if test="$mapFND/root/group/LOC_5_03_04">
+                            <LOC_5_03_04>
+                                <xsl:value-of select="$mapFND/root/group/LOC_5_03_04"/>
+                            </LOC_5_03_04>
+                        </xsl:if>
+                        <xsl:if test="$mapFND/root/group/LOC_5_04_01">
+                            <LOC_5_04_01>
+                                <xsl:value-of select="$mapFND/root/group/LOC_5_04_01"/>
+                            </LOC_5_04_01>
+                        </xsl:if>
+                        <xsl:if test="$mapFND/root/group/LOC_5_04_04">
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$mapFND/root/group/LOC_5_04_04"/>
+                            </LOC_5_04_04>
+                        </xsl:if>
+                    </mapFND>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Map Data">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>569</pd:x>
+            <pd:y>489</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="group">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element ref="ns:L-LOC_41"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <group>
+                    <ns:L-LOC_41>
+                        <xsl:copy-of select="$getLOC/group/ns:S-LOC_41"/>
+                        <xsl:copy-of select="$getDTM/group/ns:S-DTM_42"/>
+                    </ns:L-LOC_41>
+                </group>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="DTM">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>473</pd:x>
+            <pd:y>393</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getDTM">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>472</pd:x>
+            <pd:y>491</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group8/Group9/DTM/getDTM.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <iGrp9>
+                        <xsl:value-of select="$iGrp9"/>
+                    </iGrp9>
+                    <xsl:for-each select="$GetRawData/root/RouteInfomation">
+                        <RouteInfomation>
+                            <OrgCity>
+                                <xsl:value-of select="OrgCity"/>
+                            </OrgCity>
+                            <PORCity>
+                                <xsl:value-of select="PORCity"/>
+                            </PORCity>
+                            <FNDCity>
+                                <xsl:value-of select="FNDCity"/>
+                            </FNDCity>
+                            <FirstPOL>
+                                <xsl:value-of select="FirstPOL"/>
+                            </FirstPOL>
+                            <FirstPOLCity>
+                                <xsl:value-of select="FirstPOLCity"/>
+                            </FirstPOLCity>
+                            <LastPOD>
+                                <xsl:value-of select="LastPOD"/>
+                            </LastPOD>
+                            <LastPODCity>
+                                <xsl:value-of select="LastPODCity"/>
+                            </LastPODCity>
+                            <OrgCountry>
+                                <xsl:value-of select="OrgCountry"/>
+                            </OrgCountry>
+                            <PORCountry>
+                                <xsl:value-of select="PORCountry"/>
+                            </PORCountry>
+                            <FNDCountry>
+                                <xsl:value-of select="FNDCountry"/>
+                            </FNDCountry>
+                            <FirstPOLCountry>
+                                <xsl:value-of select="FirstPOLCountry"/>
+                            </FirstPOLCountry>
+                            <LastPODCountry>
+                                <xsl:value-of select="LastPODCountry"/>
+                            </LastPODCountry>
+                            <OrgState>
+                                <xsl:value-of select="OrgState"/>
+                            </OrgState>
+                            <PORState>
+                                <xsl:value-of select="PORState"/>
+                            </PORState>
+                            <FNDState>
+                                <xsl:value-of select="FNDState"/>
+                            </FNDState>
+                            <FirstPOLState>
+                                <xsl:value-of select="FirstPOLState"/>
+                            </FirstPOLState>
+                            <LastPODState>
+                                <xsl:value-of select="LastPODState"/>
+                            </LastPODState>
+                            <FPolUNLOCCode>
+                                <xsl:value-of select="FPolUNLOCCode"/>
+                            </FPolUNLOCCode>
+                            <LPodUNLOCCode>
+                                <xsl:value-of select="LPodUNLOCCode"/>
+                            </LPodUNLOCCode>
+                            <FndUNLOCCode>
+                                <xsl:value-of select="FndUNLOCCode"/>
+                            </FndUNLOCCode>
+                        </RouteInfomation>
+                    </xsl:for-each>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:activity name="generate_LOC_5_02_02">
+        <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+        <pd:resourceType>ae.process.subprocess</pd:resourceType>
+        <pd:x>656</pd:x>
+        <pd:y>34</pd:y>
+        <config>
+            <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group8/Group9/LOC_5_02_02/generate_LOC_5_02_02.process</processName>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:for-each select="$GetRawData/root/RouteInfomation">
+                    <RouteInfomation>
+                        <OrgCity>
+                            <xsl:value-of select="OrgCity"/>
+                        </OrgCity>
+                        <PORCity>
+                            <xsl:value-of select="PORCity"/>
+                        </PORCity>
+                        <FNDCity>
+                            <xsl:value-of select="FNDCity"/>
+                        </FNDCity>
+                        <FirstPOL>
+                            <xsl:value-of select="FirstPOL"/>
+                        </FirstPOL>
+                        <FirstPOLCity>
+                            <xsl:value-of select="FirstPOLCity"/>
+                        </FirstPOLCity>
+                        <LastPOD>
+                            <xsl:value-of select="LastPOD"/>
+                        </LastPOD>
+                        <LastPODCity>
+                            <xsl:value-of select="LastPODCity"/>
+                        </LastPODCity>
+                        <OrgCountry>
+                            <xsl:value-of select="OrgCountry"/>
+                        </OrgCountry>
+                        <PORCountry>
+                            <xsl:value-of select="PORCountry"/>
+                        </PORCountry>
+                        <FNDCountry>
+                            <xsl:value-of select="FNDCountry"/>
+                        </FNDCountry>
+                        <FirstPOLCountry>
+                            <xsl:value-of select="FirstPOLCountry"/>
+                        </FirstPOLCountry>
+                        <LastPODCountry>
+                            <xsl:value-of select="LastPODCountry"/>
+                        </LastPODCountry>
+                        <OrgState>
+                            <xsl:value-of select="OrgState"/>
+                        </OrgState>
+                        <PORState>
+                            <xsl:value-of select="PORState"/>
+                        </PORState>
+                        <FNDState>
+                            <xsl:value-of select="FNDState"/>
+                        </FNDState>
+                        <FirstPOLState>
+                            <xsl:value-of select="FirstPOLState"/>
+                        </FirstPOLState>
+                        <LastPODState>
+                            <xsl:value-of select="LastPODState"/>
+                        </LastPODState>
+                        <xsl:if test="PORUNLOCCode">
+                            <OrgUNLOCCode>
+                                <xsl:value-of select="PORUNLOCCode"/>
+                            </OrgUNLOCCode>
+                        </xsl:if>
+                        <FPolUNLOCCode>
+                            <xsl:value-of select="FPolUNLOCCode"/>
+                        </FPolUNLOCCode>
+                        <LPodUNLOCCode>
+                            <xsl:value-of select="LPodUNLOCCode"/>
+                        </LPodUNLOCCode>
+                        <FndUNLOCCode>
+                            <xsl:value-of select="FndUNLOCCode"/>
+                        </FndUNLOCCode>
+                    </RouteInfomation>
+                </xsl:for-each>
+                <xsl:copy-of select="$Start/root/Flows"/>
+                <xsl:copy-of select="$Start/root/ConversionData"/>
+                <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                <pathPrefix>
+                    <xsl:value-of select="$Start/root/pathPrefix"/>
+                </pathPrefix>
+                <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="GetRawData">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>483</pd:x>
+        <pd:y>35</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="RouteInfomation" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="OrgCity" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="PORCity" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FNDCity" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FirstPOL" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FirstPOLCity" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LastPOD" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LastPODCity" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="OrgCountry" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="PORCountry" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FNDCountry" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FirstPOLCountry" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LastPODCountry" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="OrgState" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="PORState" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FNDState" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FirstPOLState" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LastPODState" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="PORUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FPolUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LPodUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FndUNLOCCode" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="OrgCountryCde" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="PORCountryCde" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FNDCountryCde" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="FirstPOLCountryCde" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LastPODCountryCde" type="xsd:string" minOccurs="0"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="DateTime" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="DTM_O_EST" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="TZne_O_EST" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="DTM_O_ACT" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="TZne_O_ACT" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="DTM_L" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="TZne_L" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="DTM_D" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="TZne_D" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="DTM_E_ACT" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="TZne_E_ACT" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="DTM_E_ESTPOD" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="TZne_E_ESTPOD" type="xsd:string" minOccurs="0"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <RouteInfomation>
+                    <OrgCity>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:POR-Route-Body-BillOfLading/ns1:CityDetails/ns1:City)"/>
+                    </OrgCity>
+                    <FNDCity>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FND-Route-Body-BillOfLading/ns1:CityDetails/ns1:City)"/>
+                    </FNDCity>
+                    <FirstPOL>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FirstPOL-Route-Body-BillOfLading/ns1:Port/ns1:PortName)"/>
+                    </FirstPOL>
+                    <FirstPOLCity>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FirstPOL-Route-Body-BillOfLading/ns1:Port/ns1:City)"/>
+                    </FirstPOLCity>
+                    <LastPOD>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:LastPOD-Route-Body-BillOfLading/ns1:Port/ns1:PortName)"/>
+                    </LastPOD>
+                    <LastPODCity>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:LastPOD-Route-Body-BillOfLading/ns1:Port/ns1:City)"/>
+                    </LastPODCity>
+                    <OrgCountry>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:POR-Route-Body-BillOfLading/ns1:CityDetails/ns1:Country)"/>
+                    </OrgCountry>
+                    <FNDCountry>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FND-Route-Body-BillOfLading/ns1:CityDetails/ns1:Country)"/>
+                    </FNDCountry>
+                    <FirstPOLCountry>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FirstPOL-Route-Body-BillOfLading/ns1:Port/ns1:Country)"/>
+                    </FirstPOLCountry>
+                    <LastPODCountry>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:LastPOD-Route-Body-BillOfLading/ns1:Port/ns1:Country)"/>
+                    </LastPODCountry>
+                    <OrgState>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:POR-Route-Body-BillOfLading/ns1:CityDetails/ns1:State)"/>
+                    </OrgState>
+                    <FNDState>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FND-Route-Body-BillOfLading/ns1:CityDetails/ns1:State)"/>
+                    </FNDState>
+                    <FirstPOLState>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FirstPOL-Route-Body-BillOfLading/ns1:Port/ns1:State)"/>
+                    </FirstPOLState>
+                    <LastPODState>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:LastPOD-Route-Body-BillOfLading/ns1:Port/ns1:State)"/>
+                    </LastPODState>
+                    <PORUNLOCCode>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:POR-Route-Body-BillOfLading/ns1:CityDetails/ns1:LocationCode/ns1:UNLocationCode)"/>
+                    </PORUNLOCCode>
+                    <FPolUNLOCCode>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FirstPOL-Route-Body-BillOfLading/ns1:Port/ns1:LocationCode/ns1:UNLocationCode)"/>
+                    </FPolUNLOCCode>
+                    <LPodUNLOCCode>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:LastPOD-Route-Body-BillOfLading/ns1:Port/ns1:LocationCode/ns1:UNLocationCode)"/>
+                    </LPodUNLOCCode>
+                    <FndUNLOCCode>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FND-Route-Body-BillOfLading/ns1:CityDetails/ns1:LocationCode/ns1:UNLocationCode)"/>
+                    </FndUNLOCCode>
+                    <OrgCountryCde>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:POR-Route-Body-BillOfLading/ns1:CSStandardCity/ns1:CSCountryCode)"/>
+                    </OrgCountryCde>
+                    <FNDCountryCde>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FND-Route-Body-BillOfLading/ns1:CSStandardCity/ns1:CSCountryCode)"/>
+                    </FNDCountryCde>
+                    <FirstPOLCountryCde>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FirstPOL-Route-Body-BillOfLading/ns1:Port/ns1:CSCountryCode)"/>
+                    </FirstPOLCountryCde>
+                    <LastPODCountryCde>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:LastPOD-Route-Body-BillOfLading/ns1:Port/ns1:CSCountryCode)"/>
+                    </LastPODCountryCde>
+                </RouteInfomation>
+                <DateTime>
+                    <xsl:if xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FullReturnCutoffDT-Route-Body-BillOfLading/ns1:LocDT) !=&quot;&quot;">
+                        <DTM_O_ACT>
+                            <xsl:value-of select="tib:format-dateTime(&quot;yyyyMMddHHmmss&quot;, tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FullReturnCutoffDT-Route-Body-BillOfLading/ns1:LocDT))"/>
+                        </DTM_O_ACT>
+                    </xsl:if>
+                    <TZne_O_ACT>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:FullReturnCutoffDT-Route-Body-BillOfLading/ns1:LocDT/@TimeZone)"/>
+                    </TZne_O_ACT>
+                    <xsl:if xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:OceanLeg-Route-Body-BillOfLading[1]/ns1:DepartureDT[1]/ns1:LocDT)">
+                        <DTM_L>
+                            <xsl:value-of select="tib:format-dateTime(&quot;yyyyMMddHHmmss&quot;, tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:OceanLeg-Route-Body-BillOfLading[1]/ns1:DepartureDT[1]/ns1:LocDT))"/>
+                        </DTM_L>
+                    </xsl:if>
+                    <TZne_L>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:OceanLeg-Route-Body-BillOfLading[1]/ns1:DepartureDT[1]/ns1:LocDT/@TimeZone)"/>
+                    </TZne_L>
+                    <xsl:if xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:OceanLeg-Route-Body-BillOfLading[last()]/ns1:ArrivalDT[last()]/ns1:LocDT) !=&quot;&quot;">
+                        <DTM_D>
+                            <xsl:value-of select="tib:format-dateTime(&quot;yyyyMMddHHmmss&quot;, tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:OceanLeg-Route-Body-BillOfLading[last()]/ns1:ArrivalDT[last()]/ns1:LocDT))"/>
+                        </DTM_D>
+                    </xsl:if>
+                    <TZne_D>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:OceanLeg-Route-Body-BillOfLading[last()]/ns1:ArrivalDT[last()]/ns1:LocDT/@TimeZone)"/>
+                    </TZne_D>
+                    <xsl:if xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:ArrivalAtFinalHub-Route-Body-BillOfLading[1]/ns1:LocDT) !=&quot;&quot;">
+                        <DTM_E_ESTPOD>
+                            <xsl:value-of select="tib:format-dateTime(&quot;yyyyMMddHHmmss&quot;, tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:ArrivalAtFinalHub-Route-Body-BillOfLading[1]/ns1:LocDT))"/>
+                        </DTM_E_ESTPOD>
+                    </xsl:if>
+                    <TZne_E_ESTPOD>
+                        <xsl:value-of select="tib:trim($Start/root/pfx:Body-BillOfLading/pfx:Route-Body-BillOfLading/pfx:ArrivalAtFinalHub-Route-Body-BillOfLading[last()]/ns1:LocDT)"/>
+                    </TZne_E_ESTPOD>
+                </DateTime>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="ORG_Country">
+        <pd:type>com.tibco.plugin.jdbc.JDBCQueryActivity</pd:type>
+        <pd:resourceType>ae.activities.JDBCQueryActivity</pd:resourceType>
+        <pd:x>258</pd:x>
+        <pd:y>147</pd:y>
+        <config>
+            <timeout>10</timeout>
+            <commit>true</commit>
+            <maxRows>100</maxRows>
+            <emptyStrAsNil>false</emptyStrAsNil>
+            <statement>select cs.cntry_nme from cs2_continent_country cs where cs.cntry_cde=?</statement>
+            <jdbcSharedConfig>/Resources/Main-Connection.sharedjdbc</jdbcSharedConfig>
+            <Prepared_Param_DataType>
+                <parameter>
+                    <parameterName>Country_cde</parameterName>
+                    <dataType>VARCHAR</dataType>
+                </parameter>
+            </Prepared_Param_DataType>
+            <oraObjects/>
+            <oraTables/>
+            <QueryOutputCachedSchemaColumns>CNTRY_NME</QueryOutputCachedSchemaColumns>
+            <QueryOutputCachedSchemaDataTypes>12</QueryOutputCachedSchemaDataTypes>
+            <QueryOutputCachedSchemaDataTypesName>varchar2</QueryOutputCachedSchemaDataTypesName>
+            <QueryOutputCachedSchemaStatus>RequiredElement</QueryOutputCachedSchemaStatus>
+        </config>
+        <pd:inputBindings>
+            <jdbcQueryActivityInput>
+                <Country_cde>
+                    <xsl:choose>
+                        <xsl:when test="exists($GetRawData/root/RouteInfomation/OrgCountryCde)">
+                            <xsl:value-of select="$GetRawData/root/RouteInfomation/OrgCountryCde"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="xsi:nil">true</xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </Country_cde>
+            </jdbcQueryActivityInput>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="POL_County">
+        <pd:type>com.tibco.plugin.jdbc.JDBCQueryActivity</pd:type>
+        <pd:resourceType>ae.activities.JDBCQueryActivity</pd:resourceType>
+        <pd:x>409</pd:x>
+        <pd:y>147</pd:y>
+        <config>
+            <timeout>10</timeout>
+            <commit>true</commit>
+            <maxRows>100</maxRows>
+            <emptyStrAsNil>false</emptyStrAsNil>
+            <jdbcSharedConfig>/Resources/Main-Connection.sharedjdbc</jdbcSharedConfig>
+            <statement>select cs.cntry_nme from cs2_continent_country cs where cs.cntry_cde=?</statement>
+            <Prepared_Param_DataType>
+                <parameter>
+                    <parameterName>Country_cde</parameterName>
+                    <dataType>VARCHAR</dataType>
+                </parameter>
+            </Prepared_Param_DataType>
+            <oraObjects/>
+            <oraTables/>
+            <QueryOutputCachedSchemaColumns>CNTRY_NME</QueryOutputCachedSchemaColumns>
+            <QueryOutputCachedSchemaDataTypes>12</QueryOutputCachedSchemaDataTypes>
+            <QueryOutputCachedSchemaDataTypesName>varchar2</QueryOutputCachedSchemaDataTypesName>
+            <QueryOutputCachedSchemaStatus>RequiredElement</QueryOutputCachedSchemaStatus>
+        </config>
+        <pd:inputBindings>
+            <jdbcQueryActivityInput>
+                <Country_cde>
+                    <xsl:choose>
+                        <xsl:when test="exists($GetRawData/root/RouteInfomation/FirstPOLCountryCde)">
+                            <xsl:value-of select="$GetRawData/root/RouteInfomation/FirstPOLCountryCde"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="xsi:nil">true</xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </Country_cde>
+            </jdbcQueryActivityInput>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="POD-Query">
+        <pd:type>com.tibco.plugin.jdbc.JDBCQueryActivity</pd:type>
+        <pd:resourceType>ae.activities.JDBCQueryActivity</pd:resourceType>
+        <pd:x>553</pd:x>
+        <pd:y>154</pd:y>
+        <config>
+            <timeout>10</timeout>
+            <commit>true</commit>
+            <maxRows>100</maxRows>
+            <emptyStrAsNil>false</emptyStrAsNil>
+            <jdbcSharedConfig>/Resources/Main-Connection.sharedjdbc</jdbcSharedConfig>
+            <statement>select cs.cntry_nme from cs2_continent_country cs where cs.cntry_cde=?</statement>
+            <Prepared_Param_DataType>
+                <parameter>
+                    <parameterName>Country_cde</parameterName>
+                    <dataType>VARCHAR</dataType>
+                </parameter>
+            </Prepared_Param_DataType>
+            <oraObjects/>
+            <oraTables/>
+            <QueryOutputCachedSchemaColumns>CNTRY_NME</QueryOutputCachedSchemaColumns>
+            <QueryOutputCachedSchemaDataTypes>12</QueryOutputCachedSchemaDataTypes>
+            <QueryOutputCachedSchemaDataTypesName>varchar2</QueryOutputCachedSchemaDataTypesName>
+            <QueryOutputCachedSchemaStatus>RequiredElement</QueryOutputCachedSchemaStatus>
+        </config>
+        <pd:inputBindings>
+            <jdbcQueryActivityInput>
+                <Country_cde>
+                    <xsl:choose>
+                        <xsl:when test="exists($GetRawData/root/RouteInfomation/LastPODCountryCde)">
+                            <xsl:value-of select="$GetRawData/root/RouteInfomation/LastPODCountryCde"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="xsi:nil">true</xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </Country_cde>
+            </jdbcQueryActivityInput>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="FND-Country">
+        <pd:type>com.tibco.plugin.jdbc.JDBCQueryActivity</pd:type>
+        <pd:resourceType>ae.activities.JDBCQueryActivity</pd:resourceType>
+        <pd:x>698</pd:x>
+        <pd:y>157</pd:y>
+        <config>
+            <timeout>10</timeout>
+            <commit>true</commit>
+            <maxRows>100</maxRows>
+            <emptyStrAsNil>false</emptyStrAsNil>
+            <jdbcSharedConfig>/Resources/Main-Connection.sharedjdbc</jdbcSharedConfig>
+            <statement>select cs.cntry_nme from cs2_continent_country cs where cs.cntry_cde=?</statement>
+            <Prepared_Param_DataType>
+                <parameter>
+                    <parameterName>Country_cde</parameterName>
+                    <dataType>VARCHAR</dataType>
+                </parameter>
+            </Prepared_Param_DataType>
+            <oraObjects/>
+            <oraTables/>
+            <QueryOutputCachedSchemaColumns>CNTRY_NME</QueryOutputCachedSchemaColumns>
+            <QueryOutputCachedSchemaDataTypes>12</QueryOutputCachedSchemaDataTypes>
+            <QueryOutputCachedSchemaDataTypesName>varchar2</QueryOutputCachedSchemaDataTypesName>
+            <QueryOutputCachedSchemaStatus>RequiredElement</QueryOutputCachedSchemaStatus>
+        </config>
+        <pd:inputBindings>
+            <jdbcQueryActivityInput>
+                <Country_cde>
+                    <xsl:choose>
+                        <xsl:when test="exists($GetRawData/root/RouteInfomation/FNDCountryCde)">
+                            <xsl:value-of select="$GetRawData/root/RouteInfomation/FNDCountryCde"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="xsi:nil">true</xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </Country_cde>
+            </jdbcQueryActivityInput>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="Map-Data-1">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>769</pd:x>
+        <pd:y>481</pd:y>
+        <config>
+            <element>
+                <xsd:element name="group">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="ns:L-LOC_41" maxOccurs="unbounded"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <group>
+                <xsl:copy-of select="$iGrp9_result/AccumulatedOutput/group/ns:L-LOC_41"/>
+            </group>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="mapFirstPOL">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>382</pd:x>
+        <pd:y>265</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="group" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="LOC_5_02_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_03_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_02_02" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_02_04" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_03_04" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_04_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_04_04" type="xsd:string" minOccurs="0"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <group>
+                    <LOC_5_02_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/FPolUNLOCCode"/>
+                    </LOC_5_02_01>
+                    <LOC_5_03_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/FPolUNLOCCode"/>
+                    </LOC_5_03_01>
+                    <LOC_5_02_02>
+                        <xsl:value-of select="$generate_LOC_5_02_02/root/FPOL_LOC88_2_02"/>
+                    </LOC_5_02_02>
+                    <xsl:choose>
+                        <xsl:when test="$GetRawData/root/RouteInfomation/FirstPOL!=&quot;&quot;">
+                            <LOC_5_02_04>
+                                <xsl:value-of select="$GetRawData/root/RouteInfomation/FirstPOL"/>
+                            </LOC_5_02_04>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <LOC_5_02_04>
+                                <xsl:value-of select="$GetRawData/root/RouteInfomation/FirstPOLCity"/>
+                            </LOC_5_02_04>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <LOC_5_03_04>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/FirstPOLCity"/>
+                    </LOC_5_03_04>
+                    <LOC_5_04_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/FirstPOLCountryCde"/>
+                    </LOC_5_04_01>
+                    <xsl:choose>
+                        <xsl:when test="$GetRawData/root/RouteInfomation/FirstPOLCountry!=&quot;&quot;">
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$GetRawData/root/RouteInfomation/FirstPOLCountry"/>
+                            </LOC_5_04_04>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$POL_County/resultSet/Record[1]/CNTRY_NME"/>
+                            </LOC_5_04_04>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </group>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="mapFND">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>674</pd:x>
+        <pd:y>286</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="group" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="LOC_5_02_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_03_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_02_02" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_02_04" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_03_04" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_04_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_04_04" type="xsd:string" minOccurs="0"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <group>
+                    <LOC_5_02_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/FndUNLOCCode"/>
+                    </LOC_5_02_01>
+                    <LOC_5_03_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/FndUNLOCCode"/>
+                    </LOC_5_03_01>
+                    <LOC_5_02_02>
+                        <xsl:value-of select="$generate_LOC_5_02_02/root/FND_LOC88_2_02"/>
+                    </LOC_5_02_02>
+                    <LOC_5_02_04>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/FNDCity"/>
+                    </LOC_5_02_04>
+                    <LOC_5_03_04>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/FNDCity"/>
+                    </LOC_5_03_04>
+                    <LOC_5_04_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/FNDCountryCde"/>
+                    </LOC_5_04_01>
+                    <xsl:choose>
+                        <xsl:when test="$GetRawData/root/RouteInfomation/FNDCountry!=&quot;&quot;">
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$GetRawData/root/RouteInfomation/FNDCountry"/>
+                            </LOC_5_04_04>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$FND-Country/resultSet/Record[1]/CNTRY_NME"/>
+                            </LOC_5_04_04>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </group>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="mapLastPOD">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>550</pd:x>
+        <pd:y>271</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="group" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="LOC_5_02_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_03_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_02_02" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_02_04" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_03_04" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_04_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_04_04" type="xsd:string" minOccurs="0"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <group>
+                    <LOC_5_02_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/LPodUNLOCCode"/>
+                    </LOC_5_02_01>
+                    <LOC_5_03_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/LPodUNLOCCode"/>
+                    </LOC_5_03_01>
+                    <LOC_5_02_02>
+                        <xsl:value-of select="$generate_LOC_5_02_02/root/LPOD_LOC88_2_02"/>
+                    </LOC_5_02_02>
+                    <xsl:choose>
+                        <xsl:when test="$GetRawData/root/RouteInfomation/LastPOD!=&quot;&quot;">
+                            <LOC_5_02_04>
+                                <xsl:value-of select="$GetRawData/root/RouteInfomation/LastPOD"/>
+                            </LOC_5_02_04>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <LOC_5_02_04>
+                                <xsl:value-of select="$GetRawData/root/RouteInfomation/LastPODCity"/>
+                            </LOC_5_02_04>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <LOC_5_03_04>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/LastPODCity"/>
+                    </LOC_5_03_04>
+                    <LOC_5_04_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/LastPODCountryCde"/>
+                    </LOC_5_04_01>
+                    <xsl:choose>
+                        <xsl:when test="$GetRawData/root/RouteInfomation/LastPODCountry!=&quot;&quot;">
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$GetRawData/root/RouteInfomation/LastPODCountry"/>
+                            </LOC_5_04_04>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$POD-Query/resultSet/Record[1]/CNTRY_NME"/>
+                            </LOC_5_04_04>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </group>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="mapLocalFlow">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>249</pd:x>
+        <pd:y>34</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Config" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="SegmentField" type="xsd:string"/>
+                                        <xsd:element name="ProcessId" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:for-each select="$Start/root/Flows/ConvertType[type=$mapPath/root/convertTypeID]/Config[SegmentId=$mapPath/root/segmentID]">
+                    <Config>
+                        <SegmentField>
+                            <xsl:value-of select="SegmentField"/>
+                        </SegmentField>
+                        <ProcessId>
+                            <xsl:value-of select="ProcessId"/>
+                        </ProcessId>
+                    </Config>
+                </xsl:for-each>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="mapORG">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>261</pd:x>
+        <pd:y>266</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="group" minOccurs="0">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="LOC_5_02_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_03_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_02_02" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_02_04" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_03_04" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_04_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="LOC_5_04_04" type="xsd:string" minOccurs="0"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <group>
+                    <LOC_5_02_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/PORUNLOCCode"/>
+                    </LOC_5_02_01>
+                    <LOC_5_03_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/PORUNLOCCode"/>
+                    </LOC_5_03_01>
+                    <LOC_5_02_02>
+                        <xsl:value-of select="$generate_LOC_5_02_02/root/Org_LOC88_2_02"/>
+                    </LOC_5_02_02>
+                    <LOC_5_02_04>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/OrgCity"/>
+                    </LOC_5_02_04>
+                    <LOC_5_03_04>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/OrgCity"/>
+                    </LOC_5_03_04>
+                    <LOC_5_04_01>
+                        <xsl:value-of select="$GetRawData/root/RouteInfomation/OrgCountryCde"/>
+                    </LOC_5_04_01>
+                    <xsl:choose>
+                        <xsl:when test="$GetRawData/root/RouteInfomation/OrgCountry!=&quot;&quot;">
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$GetRawData/root/RouteInfomation/OrgCountry"/>
+                            </LOC_5_04_04>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <LOC_5_04_04>
+                                <xsl:value-of select="$ORG_Country/resultSet/Record[1]/CNTRY_NME"/>
+                            </LOC_5_04_04>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </group>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="mapPath">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>149</pd:x>
+        <pd:y>34</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="pathPrefix" type="xsd:string"/>
+                            <xsd:element name="convertPath" type="xsd:string"/>
+                            <xsd:element name="convertTypeID" type="xsd:string"/>
+                            <xsd:element name="segmentID" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <pathPrefix>
+                    <xsl:value-of select="$Start/root/pathPrefix"/>
+                </pathPrefix>
+                <convertPath>
+                    <xsl:value-of select="&quot;Group8/Group9&quot;"/>
+                </convertPath>
+                <convertTypeID>
+                    <xsl:value-of select="&quot;BillOfLading&quot;"/>
+                </convertTypeID>
+                <segmentID>
+                    <xsl:value-of select="&quot;Group8_Group9&quot;"/>
+                </segmentID>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="PreGrp9">
+        <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+        <pd:resourceType>ae.process.subprocess</pd:resourceType>
+        <pd:x>356</pd:x>
+        <pd:y>34</pd:y>
+        <config>
+            <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group8/Group9/InterfacePreGrp9.process</processName>
+            <processNameXPath>concat($mapPath/root/pathPrefix,$mapPath/root/convertPath,'/PreGrp9/Type',$Start/root/Flows/ConvertType/Config[SegmentField="PreGrp9" and SegmentId=$mapPath/root/segmentID]/ProcessId,'.process')</processNameXPath>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:copy-of select="$Start/root/Flows"/>
+                <xsl:copy-of select="$Start/root/ConversionData"/>
+                <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                <pathPrefix>
+                    <xsl:value-of select="$Start/root/pathPrefix"/>
+                </pathPrefix>
+                <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>mapPath</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapPath</pd:from>
+        <pd:to>mapLocalFlow</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapLocalFlow</pd:from>
+        <pd:to>PreGrp9</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Group9</pd:from>
+        <pd:to>Map-Data-1</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>PreGrp9</pd:from>
+        <pd:to>GetRawData</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapORG</pd:from>
+        <pd:to>Group9</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapFirstPOL</pd:from>
+        <pd:to>Group9</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapLastPOD</pd:from>
+        <pd:to>Group9</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapFND</pd:from>
+        <pd:to>Group9</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map-Data-1</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>GetRawData</pd:from>
+        <pd:to>generate_LOC_5_02_02</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>generate_LOC_5_02_02</pd:from>
+        <pd:to>ORG_Country</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>generate_LOC_5_02_02</pd:from>
+        <pd:to>POL_County</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>generate_LOC_5_02_02</pd:from>
+        <pd:to>POD-Query</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>generate_LOC_5_02_02</pd:from>
+        <pd:to>FND-Country</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>ORG_Country</pd:from>
+        <pd:to>mapORG</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>POL_County</pd:from>
+        <pd:to>mapFirstPOL</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>POD-Query</pd:from>
+        <pd:to>mapLastPOD</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>FND-Country</pd:from>
+        <pd:to>mapFND</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

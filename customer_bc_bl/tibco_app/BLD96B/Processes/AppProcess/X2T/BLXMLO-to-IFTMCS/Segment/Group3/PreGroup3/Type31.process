@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.cargosmart.com/common" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pfx4="http://www.cargosmart.com/billoflading" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:pfx3="http://www.edifecs.com/xdata/100" xmlns:pfx2="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" xmlns:pfx="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <xsd:import namespace="http://www.edifecs.com/xdata/100" schemaLocation="/Schemas/EDI/IX_Consolidated_Schema.xsd"/>
+    <xsd:import namespace="http://www.cargosmart.com/billoflading" schemaLocation="/Schemas/CS2X/com/cargosmart/documentation/normalizeBillOfLading.xsd"/>
+    <pd:name>Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group3/PreGroup3/Type31.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="SCAC_CODE" type="xsd:string"/>
+                    <xsd:element ref="pfx:Flows"/>
+                    <xsd:element ref="pfx2:ConversionData"/>
+                    <xsd:element name="pathPrefix" type="xsd:string"/>
+                    <xsd:element ref="pfx4:Body-BillOfLading"/>
+                    <xsd:element name="INDEX-EDIMAIN" type="xsd:string"/>
+                    <xsd:element ref="pfx4:Header-BillOfLading"/>
+                    <xsd:element name="tp_id" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>51</pd:startX>
+    <pd:startY>207</pd:startY>
+    <pd:returnBindings>
+        <xsl:copy-of select="$Map-Data/root"/>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="count" type="xsd:int"/>
+                    <xsd:element name="RFF_VALUE" minOccurs="0" maxOccurs="unbounded">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="RFF_01_01" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="RFF_01_02" type="xsd:string" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>1038</pd:endX>
+    <pd:endY>163</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1288859254452</pd:targetNamespace>
+    <pd:activity name="mapBL-SHMP">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>315</pd:x>
+        <pd:y>47</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="pfx4:GeneralInformation-Body-BillOfLading" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:copy-of select="$Start/root/pfx4:Body-BillOfLading/pfx4:GeneralInformation-Body-BillOfLading"/>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:group name="EXT-REF">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>35</pd:x>
+        <pd:y>283</pd:y>
+        <pd:width>462</pd:width>
+        <pd:height>178</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>inputLoop</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:over>$Start/root/pfx4:Body-BillOfLading/pfx4:ExternalReference-Body-BillOfLading</pd:over>
+            <pd:iterationElementSlot>iEXTREF-result</pd:iterationElementSlot>
+            <pd:indexSlot>iEXTREF</pd:indexSlot>
+            <pd:outSlot>Acc-mapBL-EXT-REF</pd:outSlot>
+            <pd:activityOutputName>Map-Data-1</pd:activityOutputName>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>mapBL-EXT-REF</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Map-Data-1</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>REF Query</pd:from>
+            <pd:to>Map-Data-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>mapBL-EXT-REF</pd:from>
+            <pd:to>REF Query</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="mapBL-EXT-REF">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>194</pd:x>
+            <pd:y>362</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="root">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element ref="pfx4:ExternalReference-Body-BillOfLading"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$iEXTREF-result/pfx4:ExternalReference-Body-BillOfLading"/>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="REF Query">
+            <pd:type>com.tibco.plugin.jdbc.JDBCQueryActivity</pd:type>
+            <pd:resourceType>ae.activities.JDBCQueryActivity</pd:resourceType>
+            <pd:x>301</pd:x>
+            <pd:y>362</pd:y>
+            <config>
+                <timeout>10</timeout>
+                <commit>true</commit>
+                <maxRows>100</maxRows>
+                <emptyStrAsNil>false</emptyStrAsNil>
+                <jdbcSharedConfig>/Resources/Main-Connection.sharedjdbc</jdbcSharedConfig>
+                <statement>select EXT_CDE from b2b_cde_conversion where upper(INT_CDE) = upper(?) and tp_id =? and DIR_ID = 'O' and MSG_TYPE_ID='BL' and MSG_FMT_ID='EDIFACT'
+and convert_type_id='REFERENCECODECS2'</statement>
+                <Prepared_Param_DataType>
+                    <parameter>
+                        <parameterName>INT_CDE</parameterName>
+                        <dataType>VARCHAR</dataType>
+                    </parameter>
+                    <parameter>
+                        <parameterName>TP_ID</parameterName>
+                        <dataType>VARCHAR</dataType>
+                    </parameter>
+                </Prepared_Param_DataType>
+                <oraObjects/>
+                <oraTables/>
+                <QueryOutputCachedSchemaColumns>EXT_CDE</QueryOutputCachedSchemaColumns>
+                <QueryOutputCachedSchemaDataTypes>12</QueryOutputCachedSchemaDataTypes>
+                <QueryOutputCachedSchemaDataTypesName>varchar2</QueryOutputCachedSchemaDataTypesName>
+                <QueryOutputCachedSchemaStatus>RequiredElement</QueryOutputCachedSchemaStatus>
+            </config>
+            <pd:inputBindings>
+                <jdbcQueryActivityInput>
+                    <INT_CDE>
+                        <xsl:value-of select="tib:trim($mapBL-EXT-REF/root/pfx4:ExternalReference-Body-BillOfLading/ns:CSReferenceType)"/>
+                    </INT_CDE>
+                    <TP_ID>
+                        <xsl:choose>
+                            <xsl:when test="exists($Start/root/tp_id)">
+                                <xsl:value-of select="$Start/root/tp_id"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:attribute name="xsi:nil">true</xsl:attribute>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </TP_ID>
+                </jdbcQueryActivityInput>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Map-Data-1">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>417</pd:x>
+            <pd:y>395</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="root">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="RFF_VALUE" minOccurs="0">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element name="RFF_01_01" type="xsd:string" minOccurs="0"/>
+                                            <xsd:element name="RFF_01_02" type="xsd:string" minOccurs="0"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <xsl:choose>
+                    <xsl:when test="$REF-Query/resultSet/Record/EXT_CDE[1]!='AEV'">
+                        <root>
+                            <xsl:if test="exists($REF-Query/resultSet/Record/EXT_CDE[1])">
+                                <RFF_VALUE>
+                                    <xsl:if test="exists($REF-Query/resultSet/Record/EXT_CDE[1])">
+                                        <xsl:if test="$REF-Query/resultSet/Record[1]/EXT_CDE">
+                                            <RFF_01_01>
+                                                <xsl:value-of select="$REF-Query/resultSet/Record[1]/EXT_CDE"/>
+                                            </RFF_01_01>
+                                        </xsl:if>
+                                    </xsl:if>
+                                    <RFF_01_02>
+                                        <xsl:value-of select="$mapBL-EXT-REF/root/pfx4:ExternalReference-Body-BillOfLading/ns:ReferenceNumber"/>
+                                    </RFF_01_02>
+                                </RFF_VALUE>
+                            </xsl:if>
+                        </root>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <root>
+                            <xsl:if test="exists($REF-Query/resultSet/Record/EXT_CDE[1])">
+                                <RFF_VALUE>
+                                    <RFF_01_01>
+                                        <xsl:value-of select="'SI'"/>
+                                    </RFF_01_01>
+                                    <RFF_01_02>
+                                        <xsl:value-of select="$mapBL-EXT-REF/root/pfx4:ExternalReference-Body-BillOfLading/ns:ReferenceNumber"/>
+                                    </RFF_01_02>
+                                </RFF_VALUE>
+                            </xsl:if>
+                        </root>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:group name="Booking">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>238</pd:x>
+        <pd:y>95</pd:y>
+        <pd:width>311</pd:width>
+        <pd:height>155</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>inputLoop</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:over>$Start/root/pfx4:Body-BillOfLading/pfx4:GeneralInformation-Body-BillOfLading/pfx4:CarrierBookingNumber-BLInformationType</pd:over>
+            <pd:iterationElementSlot>iBKG-result</pd:iterationElementSlot>
+            <pd:indexSlot>iBKG</pd:indexSlot>
+            <pd:outSlot>Acc-mapBL-BKG</pd:outSlot>
+            <pd:activityOutputName>map-SHMP-BKG</pd:activityOutputName>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>mapBL-BKG</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>map-SHMP-BKG</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>mapBL-BKG</pd:from>
+            <pd:to>map-SHMP-BKG</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="mapBL-BKG">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>310</pd:x>
+            <pd:y>171</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="root">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element ref="pfx4:CarrierBookingNumber-BLInformationType" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <pfx4:CarrierBookingNumber-BLInformationType>
+                        <xsl:value-of select="$iBKG-result/pfx4:CarrierBookingNumber-BLInformationType"/>
+                    </pfx4:CarrierBookingNumber-BLInformationType>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="map-SHMP-BKG">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>437</pd:x>
+            <pd:y>168</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="root">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="RFF_VALUE" minOccurs="0">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element name="RFF_01_01" type="xsd:string" minOccurs="0"/>
+                                            <xsd:element name="RFF_01_02" type="xsd:string" minOccurs="0"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <RFF_VALUE>
+                        <xsl:if test="$iBKG!=0">
+                            <RFF_01_01>
+                                <xsl:value-of select="'BN'"/>
+                            </RFF_01_01>
+                        </xsl:if>
+                        <xsl:if test="$iBKG!=0">
+                            <xsl:if test="$Start/root/pfx4:Body-BillOfLading/pfx4:GeneralInformation-Body-BillOfLading/pfx4:CarrierBookingNumber-BLInformationType[$iBKG]">
+                                <RFF_01_02>
+                                    <xsl:value-of select="$Start/root/pfx4:Body-BillOfLading/pfx4:GeneralInformation-Body-BillOfLading/pfx4:CarrierBookingNumber-BLInformationType[$iBKG]"/>
+                                </RFF_01_02>
+                            </xsl:if>
+                        </xsl:if>
+                    </RFF_VALUE>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:activity name="Map Data">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>808</pd:x>
+        <pd:y>203</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="count" type="xsd:int"/>
+                            <xsd:element name="RFF_VALUE" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="RFF_01_01" type="xsd:string" minOccurs="0"/>
+                                        <xsd:element name="RFF_01_02" type="xsd:string" minOccurs="0"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <count>
+                    <xsl:value-of select="count($mapBL-SHMP/root) +&#xA;count($Acc-mapBL-BKG/AccumulatedOutput/root) +&#xA;count($Consolidate-EXT-CARR/root/RFF_VALUE)"/>
+                </count>
+                <xsl:if test="tib:trim($map-SHMP/root/RFF_01_01) !=&quot;&quot;">
+                    <RFF_VALUE>
+                        <xsl:if test="$map-SHMP/root/RFF_01_01">
+                            <RFF_01_01>
+                                <xsl:value-of select="$map-SHMP/root/RFF_01_01"/>
+                            </RFF_01_01>
+                        </xsl:if>
+                        <xsl:if test="$map-SHMP/root/RFF_01_02">
+                            <RFF_01_02>
+                                <xsl:value-of select="$map-SHMP/root/RFF_01_02"/>
+                            </RFF_01_02>
+                        </xsl:if>
+                    </RFF_VALUE>
+                </xsl:if>
+                <xsl:if test="count($Acc-mapBL-BKG/AccumulatedOutput/root) >0">
+                    <xsl:copy-of select="$Acc-mapBL-BKG/AccumulatedOutput/root/RFF_VALUE"/>
+                </xsl:if>
+                <xsl:if test="count($Consolidate-EXT-CARR/root/RFF_VALUE/RFF_01_01) >0">
+                    <xsl:copy-of select="$Consolidate-EXT-CARR/root/RFF_VALUE"/>
+                </xsl:if>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="map-SHMP">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>470</pd:x>
+        <pd:y>46</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="RFF_01_01" type="xsd:string" minOccurs="0"/>
+                            <xsd:element name="RFF_01_02" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:if test="count($mapBL-SHMP/root/pfx4:GeneralInformation-Body-BillOfLading)!=0">
+                    <RFF_01_01>
+                        <xsl:value-of select="'BM'"/>
+                    </RFF_01_01>
+                </xsl:if>
+                <xsl:if test="count($mapBL-SHMP/root/pfx4:GeneralInformation-Body-BillOfLading)!=0">
+                    <xsl:if test="$mapBL-SHMP/root/pfx4:GeneralInformation-Body-BillOfLading/pfx4:BLNumber-BLInformationType">
+                        <RFF_01_02>
+                            <xsl:value-of select="$mapBL-SHMP/root/pfx4:GeneralInformation-Body-BillOfLading/pfx4:BLNumber-BLInformationType"/>
+                        </RFF_01_02>
+                    </xsl:if>
+                </xsl:if>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:group name="foreach carrier rate">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>600</pd:x>
+        <pd:y>315</pd:y>
+        <pd:width>476</pd:width>
+        <pd:height>154</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>inputLoop</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:over>$Start/root/pfx4:Body-BillOfLading/pfx4:CarrierRate-Body-BillOfLading</pd:over>
+            <pd:iterationElementSlot>currentcarrierrate</pd:iterationElementSlot>
+            <pd:indexSlot>a</pd:indexSlot>
+            <pd:outSlot>Acc-mapBL-Carr</pd:outSlot>
+            <pd:activityOutputName>Map-Data-1-1</pd:activityOutputName>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>mapBL-CarrierState</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Map-Data-1-1</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>REF-Query-1</pd:from>
+            <pd:to>Map-Data-1-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>mapBL-CarrierState</pd:from>
+            <pd:to>REF-Query-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="mapBL-CarrierState">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>683</pd:x>
+            <pd:y>380</pd:y>
+            <config>
+                <element>
+                    <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="root">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element ref="pfx4:CarrierRate-Body-BillOfLading"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$currentcarrierrate/pfx4:CarrierRate-Body-BillOfLading"/>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="REF-Query-1">
+            <pd:type>com.tibco.plugin.jdbc.JDBCQueryActivity</pd:type>
+            <pd:resourceType>ae.activities.JDBCQueryActivity</pd:resourceType>
+            <pd:x>826</pd:x>
+            <pd:y>381</pd:y>
+            <config>
+                <timeout>10</timeout>
+                <commit>true</commit>
+                <maxRows>100</maxRows>
+                <emptyStrAsNil>false</emptyStrAsNil>
+                <jdbcSharedConfig>/Resources/Main-Connection.sharedjdbc</jdbcSharedConfig>
+                <statement>select EXT_CDE from b2b_cde_conversion where upper(INT_CDE) = upper(?) and tp_id =? and DIR_ID = 'O' and MSG_TYPE_ID='BL' and MSG_FMT_ID='EDIFACT'
+AND CONVERT_TYPE_ID='REFERENCECODECS2'</statement>
+                <Prepared_Param_DataType>
+                    <parameter>
+                        <parameterName>INT_CDE</parameterName>
+                        <dataType>VARCHAR</dataType>
+                    </parameter>
+                    <parameter>
+                        <parameterName>TP_ID</parameterName>
+                        <dataType>VARCHAR</dataType>
+                    </parameter>
+                </Prepared_Param_DataType>
+                <oraObjects/>
+                <oraTables/>
+                <QueryOutputCachedSchemaColumns>EXT_CDE</QueryOutputCachedSchemaColumns>
+                <QueryOutputCachedSchemaDataTypes>12</QueryOutputCachedSchemaDataTypes>
+                <QueryOutputCachedSchemaDataTypesName>varchar2</QueryOutputCachedSchemaDataTypesName>
+                <QueryOutputCachedSchemaStatus>RequiredElement</QueryOutputCachedSchemaStatus>
+            </config>
+            <pd:inputBindings>
+                <jdbcQueryActivityInput>
+                    <INT_CDE>
+                        <xsl:value-of select="tib:trim($mapBL-CarrierState/root/pfx4:CarrierRate-Body-BillOfLading/ns:CSCarrierRateType)"/>
+                    </INT_CDE>
+                    <TP_ID>
+                        <xsl:choose>
+                            <xsl:when test="exists($Start/root/tp_id)">
+                                <xsl:value-of select="$Start/root/tp_id"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:attribute name="xsi:nil">true</xsl:attribute>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </TP_ID>
+                </jdbcQueryActivityInput>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Map-Data-1-1">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>992</pd:x>
+            <pd:y>401</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="root">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="RFF_VALUE" minOccurs="0">
+                                    <xsd:complexType>
+                                        <xsd:sequence>
+                                            <xsd:element name="RFF_01_01" type="xsd:string" minOccurs="0"/>
+                                            <xsd:element name="RFF_01_02" type="xsd:string" minOccurs="0"/>
+                                        </xsd:sequence>
+                                    </xsd:complexType>
+                                </xsd:element>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <xsl:choose>
+                    <xsl:when test="$REF-Query-1/resultSet/Record/EXT_CDE[1]!='AEV'">
+                        <root>
+                            <xsl:if test="exists($REF-Query-1/resultSet/Record/EXT_CDE[1])">
+                                <RFF_VALUE>
+                                    <xsl:if test="exists($REF-Query-1/resultSet/Record/EXT_CDE[1])">
+                                        <xsl:if test="$REF-Query-1/resultSet/Record[1]/EXT_CDE">
+                                            <RFF_01_01>
+                                                <xsl:value-of select="$REF-Query-1/resultSet/Record[1]/EXT_CDE"/>
+                                            </RFF_01_01>
+                                        </xsl:if>
+                                    </xsl:if>
+                                    <RFF_01_02>
+                                        <xsl:value-of select="$currentcarrierrate/pfx4:CarrierRate-Body-BillOfLading/ns:CarrierRateNumber"/>
+                                    </RFF_01_02>
+                                </RFF_VALUE>
+                            </xsl:if>
+                        </root>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <root>
+                            <xsl:if test="exists($REF-Query-1/resultSet/Record/EXT_CDE[1])">
+                                <RFF_VALUE>
+                                    <RFF_01_01>
+                                        <xsl:value-of select="'SI'"/>
+                                    </RFF_01_01>
+                                    <RFF_01_02>
+                                        <xsl:value-of select="$currentcarrierrate/pfx4:CarrierRate-Body-BillOfLading/ns:CarrierRateNumber"/>
+                                    </RFF_01_02>
+                                </RFF_VALUE>
+                            </xsl:if>
+                        </root>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:activity name="Consolidate-EXT-CARR">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>993</pd:x>
+        <pd:y>261</pd:y>
+        <config>
+            <element>
+                <xs:element xmlns:xs="http://www.w3.org/2001/XMLSchema" name="root">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="RFF_VALUE" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="RFF_01_01" type="xsd:string" minOccurs="0"/>
+                                        <xs:element name="RFF_01_02" type="xsd:string" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:copy-of select="$Acc-mapBL-EXT-REF/AccumulatedOutput/root/RFF_VALUE"/>
+                <xsl:copy-of select="$Acc-mapBL-Carr/AccumulatedOutput/root/RFF_VALUE"/>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>mapBL-SHMP</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapBL-SHMP</pd:from>
+        <pd:to>map-SHMP</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map Data</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>map-SHMP</pd:from>
+        <pd:to>Map Data</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Booking</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>EXT-REF</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Booking</pd:from>
+        <pd:to>Map Data</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>EXT-REF</pd:from>
+        <pd:to>foreach carrier rate</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>foreach carrier rate</pd:from>
+        <pd:to>Consolidate-EXT-CARR</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Consolidate-EXT-CARR</pd:from>
+        <pd:to>Map Data</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

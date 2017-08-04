@@ -33,15 +33,9 @@ public class DemoGroovy_Xml2Xml extends DemoBase {
 //	static String testInputFileNamePath = "./demo/CT_DSGOOGS/in_DSGOODS_CS020.xml";
 //	static String testInputFileNamePath = "Y:\\\\1170-SDV-EDI2011072609273072-71.BL.X.12.CS.HJSC.SDV.BLUPDATEO.2011072609235009.uif.xml";
 //	static String testInputFileNamePath = "\\\\yinem-2-w7\\SVN\\RegressionKukirMig\\Auto\\BL\\XML\\11-ACNI-17-Preparation_In_Progress-EDI2014042210241328-39.xml";
-	//static String testInputFileNamePath = "C:\\Users\\XIEZE\\Desktop\\EXXONELITE_input.in";
-	//static String testInputFileNamePath = "C:\\Users\\XIEZE\\Desktop\\testEDI.in";
-	//
-	//static String testInputFileNamePath = "D:\\1_B2BEDI_Revamp\\BL\\OUT_XML\\EXXONELITE\\InputData\\1-ACNI-1.baseline.xml";
-	//static String testInputFileNamePath = "D:\\1_B2BEDI_Revamp\\BL\\OUT_XML\\EXXONELITE\\InputData\\19-ACNI-22.baseline-CarrierBKNum-mandatory.xml";
-	//EDI2017020910404358-27.in
-	//static String testInputFileNamePath = "D:\\1_B2BEDI_Revamp\\BL\\OUT_XML\\EXXONELITE\\InputData\\EDI2017012022065193-18.in";
-	static String testInputFileNamePath = "D:\\1_B2BEDI_Revamp\\BL\\OUT_XML\\EXXONELITE\\InputData\\EDI2017011611563595-82.in";
-	//static String testInputFileNamePath = "C:\\Users\\XIEZE\\Desktop\\EDI2017071615325216-10_1-1.in";
+	static String testInputFileNamePath = "D:\\1_B2BEDI_Revamp\\BL\\OUT_XML\\EXXONELITE\\InputData\\EDI2017011303342874-44.in";
+
+
 	public void demo() throws Exception {
 		Connection conn = null;
 		GroovyClassDefinition groovyDefClass = null;
@@ -68,7 +62,7 @@ public class DemoGroovy_Xml2Xml extends DemoBase {
 					"B2BSessionID="+appSessionId,
 					"OriginalSourceFileName="+(new File(testInputFileNamePath)).getName(), 
 					"MSG_REQ_ID=TEST-MSG-REQ-ID-0011", 
-					"TP_ID=EXXONELITE",
+					"TP_ID=OOCLLOGISTICS",
 					"MSG_TYPE_ID=BL",
 					"DIR_ID=O"};
 			

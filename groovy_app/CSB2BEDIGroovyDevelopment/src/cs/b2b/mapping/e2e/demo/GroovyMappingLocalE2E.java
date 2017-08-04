@@ -6,13 +6,15 @@ public class GroovyMappingLocalE2E extends DemoBase {
 	
 	public static byte[] mapUtilBytes = null;
 	public static String mapUtilName = null;
+	
 	public static void main(String[] args) {
 		println("E2E Start.");
+		
 		try {
 			//1, Demo for XML to XML mapping
 //			println("------------- 1, XML to XML Start ---------------");
-			DemoGroovy_Xml2Xml x2x = new DemoGroovy_Xml2Xml();
-			x2x.demo();
+//			DemoGroovy_Xml2Xml x2x = new DemoGroovy_Xml2Xml();
+//			x2x.demo();
 //			println("------------- 1, XML to XML Finished ---------------");
 			
 //			//2, Demo for EDI to XML mapping
@@ -23,8 +25,8 @@ public class GroovyMappingLocalE2E extends DemoBase {
 			
 			//3, Demo for XML to EDI
 //			println("------------- 3, XML to EDI Start ---------------");
-//			DemoGroovy_Xml2EDI x2e = new DemoGroovy_Xml2EDI();
-//			x2e.demo();
+			DemoGroovy_Xml2EDI x2e = new DemoGroovy_Xml2EDI();
+			x2e.demo();
 //			println("------------- 3, XML to EDI Finished ---------------");
 			
 		} catch (Exception e) {

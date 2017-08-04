@@ -1,5 +1,10 @@
 package cs.b2b.mapping.unittest
 
+import cs.b2b.core.mapping.bean.Contact
+import cs.b2b.core.mapping.bean.ContactPhone
+import cs.b2b.core.mapping.bean.bl.Cargo
+import cs.b2b.core.mapping.bean.bl.Container
+import cs.b2b.core.mapping.bean.bl.ExternalReference
 import cs.b2b.core.mapping.util.MappingUtil
 import org.junit.Assert
 import org.junit.Before
@@ -1250,7 +1255,7 @@ class BL_common_Util_Unittest {
 
 	@Test
 	public void testcheckNonUSInbound(){
-		
+
 		String normal1 = "<Loop_R4><R4><E115_01>E</E115_01><E26_05>US</E26_05></R4></Loop_R4>";
 		Node node = xmlParserToNode(testXml(normal1));
 		blUtil.checkNonUSInbound(node, true, null, errorKeyList);
@@ -1263,584 +1268,1090 @@ class BL_common_Util_Unittest {
 		blUtil.checkNonUSInbound(node,true, null, errorKeyList);
 		Assert.assertTrue(errorKeyList.size() > 0)
 	}
+	@Test
+	//author LINJA
+	//status success
+	public void testMissingBGM_C002_1001(){
+		errorKeyList.clear();
+		String normal = "<BGM><C002_01><E1001_01></E1001_01></C002_01></BGM>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.missingBGM_C002_1001(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
 
-	/**
-	 * @Author Jenny
-	 * success
-	 */
+		//error case
+		errorKeyList.clear();
+		String errorcaseXML= "<BGM><C002_01></C002_01></BGM>";
+		node = xmlParserToNode(testGroup_UNH(errorcaseXML));
+		blUtil.missingBGM_C002_1001(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//error case
+		errorKeyList.clear();
+		String errorcaseXML1= "<BGM></BGM>";
+		node = xmlParserToNode(testGroup_UNH(errorcaseXML1));
+		blUtil.missingBGM_C002_1001(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+	}
 
 	@Test
-	public void testMissingGrp12_NAD_C082_3039(){
-
-		//if(current_Body?.Party?.PartyType=="SHP" && current_Body?.Party?.CarrierCustomerCode==""){
+	//author LINJA
+	//status success
+	public void testCheckBLTypeIsMemo(){
 		String normal;
 		Node node;
-		cs.b2b.core.mapping.bean.bl.Body current_Body;
-		List<cs.b2b.core.mapping.bean.bl.Party> tmp_party_list;
-		cs.b2b.core.mapping.bean.bl.Party tmp_party;
-		//case 01 praty are null
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		cs.b2b.core.mapping.bean.bl.Body curent_body;
+		List<cs.b2b.core.mapping.bean.bl.GeneralInformation> tem_GeneralInformation_list;
+		cs.b2b.core.mapping.bean.bl.GeneralInformation tem_GeneralInformation;
 
-		tmp_party_list = null
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C082_3039(current_Body, true, null, errorKeyList)
+		errorKeyList.clear();
+		curent_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_GeneralInformation_list = null;
+		curent_body.setGeneralInformation(tem_GeneralInformation_list);
+		blUtil.checkBLTypeIsMemo(curent_body,true,null,errorKeyList);
 		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ---MissingGrp12_NAD_C082_3039-------end----------01'
+		println "--------------case01 end----------------"
 
-		//case 02 PartyType are null and CarrierCustomerCode are null
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
 
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-		current_Body.setParty(tmp_party_list)
+		errorKeyList.clear();
+		curent_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_GeneralInformation = new cs.b2b.core.mapping.bean.bl.GeneralInformation();
+		tem_GeneralInformation_list = new ArrayList<cs.b2b.core.mapping.bean.bl.GeneralInformation>();
+		tem_GeneralInformation_list.add(tem_GeneralInformation);
+		curent_body.setGeneralInformation(tem_GeneralInformation_list);
+		blUtil.checkBLTypeIsMemo(curent_body,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println "--------------case02 end----------------"
 
-		blUtil.missingGrp12_NAD_C082_3039(current_Body, true, null, errorKeyList)
+		errorKeyList.clear();
+		curent_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_GeneralInformation = new cs.b2b.core.mapping.bean.bl.GeneralInformation();
+		tem_GeneralInformation_list = new ArrayList<cs.b2b.core.mapping.bean.bl.GeneralInformation>();
+		tem_GeneralInformation.setBLType("");
+		tem_GeneralInformation_list.add(tem_GeneralInformation);
+		curent_body.setGeneralInformation(tem_GeneralInformation_list);
+		blUtil.checkBLTypeIsMemo(curent_body,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println "--------------case03 end----------------"
+
+		errorKeyList.clear();
+		curent_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_GeneralInformation = new cs.b2b.core.mapping.bean.bl.GeneralInformation();
+		tem_GeneralInformation_list = new ArrayList<cs.b2b.core.mapping.bean.bl.GeneralInformation>();
+		tem_GeneralInformation.setBLType("mem");
+		tem_GeneralInformation_list.add(tem_GeneralInformation);
+		curent_body.setGeneralInformation(tem_GeneralInformation_list);
+		blUtil.checkBLTypeIsMemo(curent_body,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println "--------------case04 end----------------"
+
+		errorKeyList.clear();
+		curent_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_GeneralInformation = new cs.b2b.core.mapping.bean.bl.GeneralInformation();
+		tem_GeneralInformation_list = new ArrayList<cs.b2b.core.mapping.bean.bl.GeneralInformation>();
+		tem_GeneralInformation.setBLType("Memo");
+		tem_GeneralInformation_list.add(tem_GeneralInformation);
+		curent_body.setGeneralInformation(tem_GeneralInformation_list);
+		blUtil.checkBLTypeIsMemo(curent_body,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+		println "--------------case05 end----------------"
+	}
+
+	@Test
+	//author LINJA
+	//status success
+	public void testMissingBGM_C106_1004(){
+		errorKeyList.clear();
+		String normal = "<BGM><C106_02><E1004_01></E1004_01></C106_02></BGM>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.missingBGM_C106_1004(node,true,null,errorKeyList);
 		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------02'
 
-
-		//case 03 PratyType are a and CarrierCustomerCode are ""
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party();
-		tmp_party.setPartyType("a")
-		tmp_party.setCarrierCustomerCode("")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C082_3039(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------03'
-
-		//case 04 PratyType are "SHP" and CarrierCustomerCode are "a"
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party();
-		tmp_party.setPartyType("SHP")
-		tmp_party.setCarrierCustomerCode("a")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-		blUtil.missingGrp12_NAD_C082_3039(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------04'
-
-		//case 05 PratyType are "SHP" and CarrierCustomerCode are ""
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyType("SHP")
-		tmp_party.setCarrierCustomerCode("")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C082_3039(current_Body, true, null, errorKeyList)
+		//error case
+		errorKeyList.clear();
+		String errorcaseXML= "<BGM><C106_02></C106_02></BGM>";
+		node = xmlParserToNode(testGroup_UNH(errorcaseXML));
+		blUtil.missingBGM_C106_1004(node,true,null,errorKeyList);
 		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------05'
 
-		//case 06 PratyType are "SHP" and CarrierCustomerCode are " "
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyType("SHP")
-		tmp_party.setCarrierCustomerCode(" ")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C082_3039(current_Body, true, null, errorKeyList)
+		errorKeyList.clear();
+		String errorcaseXML1= "<BGM></BGM>";
+		node = xmlParserToNode(testGroup_UNH(errorcaseXML1));
+		blUtil.missingBGM_C106_1004(node,true,null,errorKeyList);
 		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------06'
+	}
+
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckCCP(){
+		cs.b2b.core.mapping.bean.bl.Body current_body;
+		List<cs.b2b.core.mapping.bean.bl.Party> tem_Party_list;
+		cs.b2b.core.mapping.bean.bl.Party tem_Party;
+		String Ext_Cde;
+
+		errorKeyList.clear()
+		Ext_Cde = null;
+		current_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_Party = new cs.b2b.core.mapping.bean.bl.Party();
+		tem_Party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>();
+		tem_Party.setPartyType();
+		tem_Party.setCarrierCustomerCode('')
+		tem_Party_list.add(tem_Party);
+		current_body.setParty(tem_Party_list);
+		blUtil.checkCCP(current_body,Ext_Cde,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+		println "--------------case01 end----------------"
+
+		errorKeyList.clear()
+		Ext_Cde = '123456'
+		current_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_Party = new cs.b2b.core.mapping.bean.bl.Party();
+		tem_Party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>();
+		tem_Party.setPartyType('CCP');
+		tem_Party.setCarrierCustomerCode('')
+		tem_Party_list.add(tem_Party);
+		current_body.setParty(tem_Party_list);
+		blUtil.checkCCP(current_body,Ext_Cde,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+		println "--------------case02 end----------------"
+
+		errorKeyList.clear()
+		Ext_Cde = '123456';
+		current_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_Party = new cs.b2b.core.mapping.bean.bl.Party();
+		tem_Party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>();
+		tem_Party.setPartyType('CCP');
+		tem_Party.setCarrierCustomerCode('123456')
+		tem_Party_list.add(tem_Party);
+		current_body.setParty(tem_Party_list);
+		blUtil.checkCCP(current_body,Ext_Cde,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		println "--------------case03 end----------------"
+
+		errorKeyList.clear()
+		Ext_Cde = '123456';
+		current_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_Party = new cs.b2b.core.mapping.bean.bl.Party();
+		tem_Party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>();
+		tem_Party.setPartyType('CCP');
+		tem_Party.setCarrierCustomerCode('123458')
+		tem_Party_list.add(tem_Party);
+		current_body.setParty(tem_Party_list);
+		blUtil.checkCCP(current_body,Ext_Cde,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+		println "--------------case04 end----------------"
+
+		errorKeyList.clear()
+		Ext_Cde = '123456';
+		current_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_Party = new cs.b2b.core.mapping.bean.bl.Party();
+		tem_Party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>();
+		tem_Party.setPartyType('CBP');
+		tem_Party.setCarrierCustomerCode('123456')
+		tem_Party_list.add(tem_Party);
+		current_body.setParty(tem_Party_list);
+		blUtil.checkCCP(current_body,Ext_Cde,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+		println "--------------case05 end----------------"
+	}
+
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckChargeTypeNotExists(){
+
+		errorKeyList.clear()
+		String normal = "<Group7_TCC><TCC><C200_01><E8022_04></E8022_04></C200_01></TCC></Group7_TCC>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.checkChargeTypeNotExists(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+
+		//error case1
+		errorKeyList.clear();
+		String errorcaseXML1 = "<Group7_TCC><TCC><C200_01><E8022_04>1</E8022_04></C200_01></TCC></Group7_TCC>";
+		node = xmlParserToNode(testGroup_UNH(errorcaseXML1));
+		blUtil.checkChargeTypeNotExists(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+	}
+
+
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckNoCollectCharge(){
+
+		cs.b2b.core.mapping.bean.bl.Body current_body;
+		List<cs.b2b.core.mapping.bean.bl.FreightCharge> tem_FreightCharge_list;
+		cs.b2b.core.mapping.bean.bl.FreightCharge tem_FreightCharge;
+
+		errorKeyList.clear()
+		current_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_FreightCharge = new cs.b2b.core.mapping.bean.bl.FreightCharge();
+		tem_FreightCharge_list = new ArrayList<cs.b2b.core.mapping.bean.bl.FreightCharge>();
+		tem_FreightCharge.setChargeType("1");
+		tem_FreightCharge_list.add(tem_FreightCharge);
+		current_body.setFreightCharge(tem_FreightCharge_list);
+		blUtil.checkNoCollectCharge(current_body,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		println "--------------case01 end----------------"
+
+		errorKeyList.clear();
+		current_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_FreightCharge = new cs.b2b.core.mapping.bean.bl.FreightCharge();
+		tem_FreightCharge_list = new ArrayList<cs.b2b.core.mapping.bean.bl.FreightCharge>();
+
+		tem_FreightCharge.setChargeType('0');
+		tem_FreightCharge_list.add(tem_FreightCharge);
+		current_body.setFreightCharge(tem_FreightCharge_list);
+		blUtil.checkNoCollectCharge(current_body,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		println "--------------case02 end----------------"
 
 	}
 
-	/**
-	 * @Author Jenny
-	 * success
-	 */
 	@Test
-	public void testMissingGrp12_NAD_Grp12_NAD(){
+	//author LINJA
+	//status success
+	public void testCheckGroup18FTXC108IsMissing(){
 
-		//if(current_Body?.Party?.PartyType!="CGN" && current_Body?.Party?.PartyType!="SHP")
-		String normal;
-		Node node;
-		cs.b2b.core.mapping.bean.bl.Body current_Body;
-		List<cs.b2b.core.mapping.bean.bl.Party> tmp_party_list;
-		cs.b2b.core.mapping.bean.bl.Party tmp_party;
-		//case 01 praty are null
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		errorKeyList.clear()
+		String normal = "<Group18_GID><FTX><C108_04></C108_04></FTX></Group18_GID>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.checkGroup18FTXC108IsMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case01 end----------------'
 
-		tmp_party_list = null
-		current_Body.setParty(tmp_party_list)
+		errorKeyList.clear()
+		String errorXML = "<Group18_GID><FTX></FTX></Group18_GID>";
+		node = xmlParserToNode(testGroup_UNH(errorXML));
+		blUtil.checkGroup18FTXC108IsMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+		println '------------case02 end----------------'
+	}
 
-		blUtil.missingGrp12_NAD_Grp12_NAD(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ---MissingGrp12_NAD_Grp12_NAD-------end----------01'
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckGroup18FTXC108_4440Chars(){
 
-		//case 02 PartyType are null
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		errorKeyList.clear()
+		String normal = "<Group18_GID><FTX><C108_04><E4440_01>1234567890123456789012345678901234567890123456789012345678901234567890</E4440_01></C108_04></FTX></Group18_GID>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.checkGroup18FTXC108_4440Chars(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+		println '------------case01 end----------------'
 
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-		current_Body.setParty(tmp_party_list)
+		errorKeyList.clear()
+		String errorXML = "<Group18_GID><FTX><C108_04><E4440_01>123456789012345678901234567890123456789012345678901234567890</E4440_01></C108_04></FTX></Group18_GID>";
+		node = xmlParserToNode(testGroup_UNH(errorXML));
+		blUtil.checkGroup18FTXC108_4440Chars(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case02 end----------------'
+	}
 
-		blUtil.missingGrp12_NAD_Grp12_NAD(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------02'
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckCargoMarksAndNumbersLine(){
+		cs.b2b.core.mapping.bean.bl.Body current_body;
+		List<cs.b2b.core.mapping.bean.bl.Cargo> tem_Cargo_list;
+		List<cs.b2b.core.mapping.bean.MarksAndNumbers> tem_MarksAndNumbers_list;
+		cs.b2b.core.mapping.bean.bl.Cargo tem_Cargo;
+		cs.b2b.core.mapping.bean.MarksAndNumbers tem_MarksAndNumbers
 
-		//case 03 PratyType are a
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		errorKeyList.clear()
+		current_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_Cargo = new cs.b2b.core.mapping.bean.bl.Cargo();
+		tem_Cargo_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Cargo>();
+		tem_MarksAndNumbers = new cs.b2b.core.mapping.bean.MarksAndNumbers();
+		tem_MarksAndNumbers_list = new ArrayList<cs.b2b.core.mapping.bean.MarksAndNumbers>();
 
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party();
-		tmp_party.setPartyType("a")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_Grp12_NAD(current_Body, true, null, errorKeyList)
+		tem_MarksAndNumbers.setMarksAndNumbersLine('123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890')
+		tem_MarksAndNumbers_list.add(tem_MarksAndNumbers);
+		tem_Cargo.setMarksAndNumbers(tem_MarksAndNumbers_list);
+		tem_Cargo_list.add(tem_Cargo);
+		current_body.setCargo(tem_Cargo_list);
+		blUtil.checkCargoMarksAndNumbersLine(current_body,true,null,errorKeyList);
 		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------03'
+		println "--------------case01 end----------------"
 
-		//case 04 PratyType are "CGN"
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		errorKeyList.clear()
+		current_body = new cs.b2b.core.mapping.bean.bl.Body();
+		tem_Cargo = new cs.b2b.core.mapping.bean.bl.Cargo();
+		tem_Cargo_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Cargo>();
+		tem_MarksAndNumbers = new cs.b2b.core.mapping.bean.MarksAndNumbers();
+		tem_MarksAndNumbers_list = new ArrayList<cs.b2b.core.mapping.bean.MarksAndNumbers>();
 
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party();
-		tmp_party.setPartyType("CGN")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
+		tem_MarksAndNumbers.setMarksAndNumbersLine('123')
+		tem_MarksAndNumbers_list.add(tem_MarksAndNumbers);
+		tem_Cargo.setMarksAndNumbers(tem_MarksAndNumbers_list);
+		tem_Cargo_list.add(tem_Cargo);
+		current_body.setCargo(tem_Cargo_list);
+		blUtil.checkCargoMarksAndNumbersLine(current_body,true,null,errorKeyList);
 		Assert.assertTrue(errorKeyList.size() == 0)
-		blUtil.missingGrp12_NAD_Grp12_NAD(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------04'
+		println "--------------case02 end----------------"
+	}
 
-		//case 05 partyType are SHP
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckGroup30DGSC205_8351IsMissing(){
+		errorKeyList.clear()
+		String normal = "<Group30_DGS><DGS><C205_02><E8351_01></E8351_01></C205_02></DGS></Group30_DGS>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.checkGroup30DGSC205_8351IsMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+		println '------------case01 end----------------'
 
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
+		errorKeyList.clear()
+		String errorXML = "<Group30_DGS><DGS><C205_02><E8351_01>123</E8351_01></C205_02></DGS></Group30_DGS>";
+		node = xmlParserToNode(testGroup_UNH(errorXML));
+		blUtil.checkGroup30DGSC205_8351IsMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case02 end----------------'
+	}
 
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyType("SHP")
-		tmp_party_list.add(tmp_party)
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckGroup18TMDC219IsMissing(){
+		errorKeyList.clear()
+		String normal = "<Group18_GID><TMD><C219_01></C219_01></TMD></Group18_GID>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.checkGroup18TMDC219IsMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case01 end----------------'
 
-		current_Body.setParty(tmp_party_list)
+		errorKeyList.clear()
+		String errorXML = "<Group18_GID><TMD></TMD></Group18_GID>";
+		node = xmlParserToNode(testGroup_UNH(errorXML));
+		blUtil.checkGroup18TMDC219IsMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+		println '------------case02 end----------------'
+	}
 
-		blUtil.missingGrp12_NAD_Grp12_NAD(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------05'
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckGroup18TMDC219_8335IsMissing(){
+		errorKeyList.clear()
+		String normal = "<Group18_GID><TMD><C219_01><E8335_01></E8335_01></C219_01></TMD></Group18_GID>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.checkGroup18TMDC219_8335IsMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+		println '------------case01 end----------------'
 
-		//case 06 partyType are ""
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		errorKeyList.clear()
+		String errorXML = "<Group18_GID><TMD><C219_01><E8335_01>123</E8335_01></C219_01></TMD></Group18_GID>";
+		node = xmlParserToNode(testGroup_UNH(errorXML));
+		blUtil.checkGroup18TMDC219_8335IsMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case02 end----------------'
+	}
 
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckGroup9LOCC517_3225And3224AreMissing(){
+		errorKeyList.clear()
+		String normal = "<Group9_LOC><LOC><C517_02><E1131_02></E1131_02><E3224_04></E3224_04></C517_02></LOC></Group9_LOC>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.checkGroup9LOCC517_3225And3224AreMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+		println '------------case01 end----------------'
 
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyType("")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_Grp12_NAD(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------06'
+		errorKeyList.clear()
+		String errorXML = "<Group9_LOC><LOC><C517_02><E1131_02>123</E1131_02><E3224_04>123</E3224_04></C517_02></LOC></Group9_LOC>";
+		node = xmlParserToNode(testGroup_UNH(errorXML));
+		blUtil.checkGroup9LOCC517_3225And3224AreMissing(node,true,null,errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case02 end----------------'
 
 	}
 
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckGrp8TDTC222_8212IsMissing() {
+		errorKeyList.clear()
+		String normal = "<Group8_TDT><TDT><C222_08><E8212_04></E8212_04></C222_08></TDT></Group8_TDT>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.checkGrp8TDTC222_8212IsMissing(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+		println '------------case01 end----------------'
+
+		errorKeyList.clear()
+		String errorXML = "<Group8_TDT><TDT><C222_08><E8212_04>123</E8212_04></C222_08></TDT></Group8_TDT>";
+		node = xmlParserToNode(testGroup_UNH(errorXML));
+		blUtil.checkGrp8TDTC222_8212IsMissing(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case02 end----------------'
+	}
+
+	@Test
+	//author LINJA
+	//status success
+	public void testCheckNotInboundToUS() {
+		errorKeyList.clear()
+		String normal = "<Group9_LOC><LOC><E3227_01>7</E3227_01><C553_04><E3233_01>UX</E3233_01></C553_04></LOC></Group9_LOC>";
+		Node node = xmlParserToNode(testGroup_UNH(normal));
+		blUtil.checkNotInboundToUS(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0);
+		println '------------case01 end----------------'
+
+		errorKeyList.clear()
+		String errorXML = "<Group9_LOC><LOC><E3227_01>7</E3227_01><C553_04><E3233_01>US</E3233_01></C553_04></LOC></Group9_LOC>";
+		node = xmlParserToNode(testGroup_UNH(errorXML));
+		blUtil.checkNotInboundToUS(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case02 end----------------'
+
+		errorKeyList.clear()
+		String errorXML1 = "<Group9_LOC><LOC><E3227_01>8</E3227_01><C553_04><E3233_01>US</E3233_01></C553_04></LOC></Group9_LOC>";
+		node = xmlParserToNode(testGroup_UNH(errorXML1));
+		blUtil.checkNotInboundToUS(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case03 end----------------'
+
+		errorKeyList.clear()
+		String errorXML2 = "<Group9_LOC><LOC><E3227_01>8</E3227_01><C553_04><E3233_01>UX</E3233_01></C553_04></LOC></Group9_LOC>";
+		node = xmlParserToNode(testGroup_UNH(errorXML2));
+		blUtil.checkNotInboundToUS(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0);
+		println '------------case04 end----------------'
+	}
+
 	/**
-	 * @Author Jenny
-	 * success
+	 * @author XIEZE
 	 */
 	@Test
-	public void testMissingGrp12_NAD_3035_1(){
+	public void testGroup_11(){
+		//case 1
+		String testcase1XML = "<Group11_NAD>test</Group11_NAD>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGroup_11(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
 
-		//if(current_Body?.Party?.findAll{mapPartyType.get(it?.PartyType)==null}.size()>0){
-		//mapPartyType=['SHP':'SH','CGN':'CN','FWD':'FW','NPT':'NP','ANP':'AP']
+		//case 2
+
+		String testcase2XML = "<Group11_NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup_11(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 3
+
+		String testcase3XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup_11(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+
+	}
+	@Test
+	public void testGroup11_NAD_C080(){
+		//case 1
+		String testcase1XML = "<Group11_NAD><NAD></NAD></Group11_NAD>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C080(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+		//case 2
+		String testcase2XML = "<Group11_NAD><NAD><C080_04>test</C080_04></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C080(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 3
+		String testcase3XML = "<Group11_NAD><NAD><E3035_01>CA</E3035_01></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C080(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 4
+		String testcase4XML = "<Group11_NAD><NAD><C080_04>test</C080_04><E3035_01>CA</E3035_01></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C080(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 5
+		String testcase5XML = "<Group11_NAD><NAD><C080_04>test</C080_04><E3035_01>test</E3035_01></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase5XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C080(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 6
+		String testcase6XML = "<Group11_NAD><NAD><E3035_01>test</E3035_01></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase6XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C080(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+	}
+	@Test
+	public void testGroup11_NAD_C082(){
+		//case 1
+		String testcase1XML = "<Group11_NAD><NAD><E3035_01>test</E3035_01></NAD></Group11_NAD>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C082(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+        //case 2
+		String testcase2XML = "<Group11_NAD><NAD><E3035_01>test</E3035_01><C082_02>test</C082_02></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C082(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 3
+		String testcase3XML = "<Group11_NAD><NAD><E3035_01>CA</E3035_01><C082_02>test</C082_02></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C082(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		// case 4
+		String testcase4XML = "<Group11_NAD><NAD></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C082(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		// case 5
+		String testcase5XML = "<Group11_NAD><NAD><C082_02>test</C082_02></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase5XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C082(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		// case 6
+		String testcase6XML = "<Group11_NAD><NAD><E3035_01>CA</E3035_01></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase6XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup11_NAD_C082(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+
+	}
+	@Test
+	public void testGroup11_NAD3039(){
+		//case 1
+		String testcase1XML = "<Group11_NAD><NAD><E3035_01>test</E3035_01></NAD></Group11_NAD>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.checkGroup11_NAD3039(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 2
+		String testcase2XML = "<Group11_NAD><NAD></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.checkGroup11_NAD3039(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 3
+		String testcase3XML = "<Group11_NAD><NAD><E3035_01>CA</E3035_01></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.checkGroup11_NAD3039(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 4
+		String testcase4XML = "<Group11_NAD><NAD><E3035_01>test</E3035_01><C082_02><E3039_01>t</E3039_01></C082_02></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.checkGroup11_NAD3039(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 5
+		String testcase5XML = "<Group11_NAD><NAD><E3035_01>CA</E3035_01><C082_02><E3039_01>t</E3039_01></C082_02></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase5XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.checkGroup11_NAD3039(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+		//case 6
+		String testcase6XML = "<Group11_NAD><NAD><E3035_01>test</E3035_01><C082_02><E3039_01>testtesttest</E3039_01></C082_02></NAD></Group11_NAD>";
+		node = xmlParserToNode(testGroup_UNH(testcase6XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.checkGroup11_NAD3039(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+	}
+	@Test
+	public void testGrp11_Grp12_COM(){
+
 		String normal;
 		Node node;
 		cs.b2b.core.mapping.bean.bl.Body current_Body;
 		List<cs.b2b.core.mapping.bean.bl.Party> tmp_party_list;
 		cs.b2b.core.mapping.bean.bl.Party tmp_party;
-		cs.b2b.core.mapping.bean.bl.Party t_party;
 		//case 01  party is null
 		errorKeyList = new ArrayList<String,String>();
 		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
 		tmp_party_list = null
 		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_1(current_Body, true, null, errorKeyList)
+		blUtil.checkGrp11_Grp12_COM(current_Body, true, null, errorKeyList)
 		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case --missingGrp12_NAD_3035_1--------end----------01'
+		println 'case ----------end----------01'
 
-		//case 02 partyType is null
+		//case 02 Contact is not exist
 		errorKeyList = new ArrayList<String,String>();
 		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
 		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
 		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_1(current_Body, true, null, errorKeyList)
+		blUtil.checkGrp11_Grp12_COM(current_Body, true, null, errorKeyList)
 		Assert.assertTrue(errorKeyList.size() == 0)
 		println 'case ----------end----------02'
 
-		//case 03 partyType is "SH"
+		//case 03 Contact is null
 		errorKeyList = new ArrayList<String,String>();
 		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
 		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
 		tmp_party = new cs.b2b.core.mapping.bean.bl.Party();
-		tmp_party.setPartyType("SH");
+		tmp_party.setContact(null);
 		tmp_party_list.add(tmp_party)
-
 		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_1(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------03'
-
-		//case 03 partyType is null
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party();
-		tmp_party.setPartyType(null);
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_1(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------03_1'
-
-		//case 04  partyType is SHP
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyType("SHP")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_1(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------04'
-
-		//case 05 partyType are ""
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyType("")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_1(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------05'
-	}
-	/**
-	 * @Author Jenny
-	 * success
-	 */
-	@Test
-	public void testMissingGrp12_NAD_3035_2(){
-
-		//exists($Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[ns3:PartyType!="SHP" and ns3:PartyType!="CGN"  and ns3:PartyType!="FWD"  and ns3:PartyType!="NPT"
-		// and ns3:PartyType!="ANP" and ns3:PartyType!="BRK"  and ns3:PartyType!="CCP"  and ns3:PartyType!="CTP"])
-		String normal;
-		Node node;
-		cs.b2b.core.mapping.bean.bl.Body current_Body;
-		List<cs.b2b.core.mapping.bean.bl.Party> tmp_party_list;
-		cs.b2b.core.mapping.bean.bl.Party tmp_party;
-		cs.b2b.core.mapping.bean.bl.Party t_party;
-		//case 01  party is null
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = null
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_2(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ---testMissingGrp12_NAD_3035_2-------end----------01'
-
-		//case 02 partyType is not exist
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_2(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------02'
-
-		//case 03_1 partyType is null
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party();
-		tmp_party.setPartyType(null);
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_2(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------03_1'
-
-		//case 03_2 partyType is "SH"
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party();
-		tmp_party.setPartyType("SH");
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_2(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------03_2'
-
-		//case 04  partyType is SHP
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyType("SHP")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_2(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------04'
-
-		//case 04_2  partyType is CTP
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyType("CTP")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_2(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------04_2'
-
-
-		//case 05 partyType are ""
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyType("")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_3035_2(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------05'
-	}
-
-	/**
-	 * @Author Jenny
-	 * success
-	 */
-	@Test
-	public void testMissingGrp12_NAD_C080_3036(){
-
-		//if(current_Body?.Party?.find{it.PartyName==""})
-		String normal;
-		Node node;
-		cs.b2b.core.mapping.bean.bl.Body current_Body;
-		List<cs.b2b.core.mapping.bean.bl.Party> tmp_party_list;
-		cs.b2b.core.mapping.bean.bl.Party tmp_party;
-		cs.b2b.core.mapping.bean.bl.Party t_party;
-		//case 01  party is null
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = null
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C080_3036(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ---testMissingGrp12_NAD_C080_3036-------end----------01'
-
-		//case 02 PartyName is not exist
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C080_3036(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
-		println 'case ----------end----------02'
-
-		//case 03 PartyName is null
-		errorKeyList = new ArrayList<String,String>();
-		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party();
-		tmp_party.setPartyName(null);
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C080_3036(current_Body, true, null, errorKeyList)
+		blUtil.checkGrp11_Grp12_COM(current_Body, true, null, errorKeyList)
 		Assert.assertTrue(errorKeyList.size() == 0)
 		println 'case ----------end----------03'
 
 
-		//case 04  PartyName is SHP
+		//case 04  Number.size >1
 		errorKeyList = new ArrayList<String,String>();
 		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
 		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
 		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyName("SHP")
+		Contact contact=new Contact()
+		ContactPhone contactPhone =new ContactPhone()
+		contactPhone.setNumber("test")
+		contact.setContactPhone(contactPhone)
+		tmp_party.setContact(contact)
 		tmp_party_list.add(tmp_party)
-
 		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C080_3036(current_Body, true, null, errorKeyList)
-		Assert.assertTrue(errorKeyList.size() == 0)
+		blUtil.checkGrp11_Grp12_COM(current_Body, true, null, errorKeyList)
+		Assert.assertTrue(errorKeyList.size() > 0)
 		println 'case ----------end----------04'
 
 
-		//case 05 PartyName are ""
+		//case 05 ContactEmailAddress.size >0
 		errorKeyList = new ArrayList<String,String>();
 		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
-
 		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
-
 		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyName("")
+		contact=new Contact()
+		contact.setContactEmailAddress("test")
+		tmp_party.setContact(contact)
 		tmp_party_list.add(tmp_party)
-
 		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C080_3036(current_Body, true, null, errorKeyList)
+		blUtil.checkGrp11_Grp12_COM(current_Body, true, null, errorKeyList)
 		Assert.assertTrue(errorKeyList.size() > 0)
 		println 'case ----------end----------05'
+	}
+	@Test
+	public void testGrp19_FTX(){
 
-
-		//case 06 PartyName are " "
+		String normal;
+		Node node;
+		cs.b2b.core.mapping.bean.bl.Body current_Body;
+		List<cs.b2b.core.mapping.bean.bl.Cargo> tmp_cargo_list;
+		//normal
 		errorKeyList = new ArrayList<String,String>();
 		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		tmp_cargo_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Cargo>()
+        Cargo tmp_cargo = new Cargo()
+		tmp_cargo.setCargoDescription("test")
+		tmp_cargo_list.add(tmp_cargo)
+		current_Body.setCargo(tmp_cargo_list)
+		blUtil.checkGrp19_FTX(current_Body, true, null, errorKeyList)
+		Assert.assertTrue(errorKeyList.size() == 0)
+		println 'case ----------end----------01'
 
-		tmp_party_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Party>()
+		//exception
+		errorKeyList = new ArrayList<String,String>();
+		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		tmp_cargo_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Cargo>()
+		tmp_cargo = new Cargo()
+		tmp_cargo.setCargoDescription("")
+		tmp_cargo_list.add(tmp_cargo)
+		current_Body.setCargo(tmp_cargo_list)
 
-		tmp_party = new cs.b2b.core.mapping.bean.bl.Party()
-		tmp_party.setPartyName("")
-		tmp_party_list.add(tmp_party)
-
-		current_Body.setParty(tmp_party_list)
-
-		blUtil.missingGrp12_NAD_C080_3036(current_Body, true, null, errorKeyList)
+		blUtil.checkGrp19_FTX(current_Body, true, null, errorKeyList)
 		Assert.assertTrue(errorKeyList.size() > 0)
-		println 'case ----------end----------06'
-	}
+		println 'case ----------end----------02'
 
-	/**
-	 *@Author ren
-	 * @return true
-	 */
+	}
 	@Test
-	public void testMissingGrp18_GID_1496(){
-
-		errorKeyList.clear()
-		String error1 = "<root><Group_UNH><Group18_GID><GID><E1496_01></E1496_01></GID></Group18_GID></Group_UNH></root>";
-		Node node = xmlParserToNode(error1);
-		blUtil.missingGrp18_GID_1496(node, true, null, errorKeyList);
-		Assert.assertTrue(errorKeyList.size() != 0)
-
-		errorKeyList.clear()
-		error1 = "<root><Group_UNH><Group18_GID><GID></GID></Group18_GID></Group_UNH></root>";
-		node = xmlParserToNode(error1);
-		blUtil.missingGrp18_GID_1496(node, true, null, errorKeyList);
-		Assert.assertTrue(errorKeyList.size() != 0)
-
-		errorKeyList.clear()
-		error1 = "<root><Group_UNH><Group18_GID></Group18_GID></Group_UNH></root>";
-		node = xmlParserToNode(error1);
-		blUtil.missingGrp18_GID_1496(node, true, null, errorKeyList);
-		Assert.assertTrue(errorKeyList.size() != 0)
-
-		errorKeyList.clear()
-		error1 = "<root><Group_UNH></Group_UNH></root>";
-		node = xmlParserToNode(error1);
-		blUtil.missingGrp18_GID_1496(node, true, null, errorKeyList);
+	public void testGrp1_LOC_C517_3225(){
+		//case 1
+		String testcase1XML = "<Group1_LOC><LOC><C517_02><E3225_01>test</E3225_01></C517_02></LOC></Group1_LOC>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGrp1_LOC_C517_3225(node, true, null, errorKeyList);
 		Assert.assertTrue(errorKeyList.size() == 0)
 
-		errorKeyList.clear()
-		String normal1 = "<root><Group_UNH><Group18_GID><GID><E1496_01>test</E1496_01></GID></Group18_GID></Group_UNH></root>";
-		node = xmlParserToNode(normal1);
-		blUtil.missingGrp18_GID_1496(node, true, null, errorKeyList);
+		//case 2
+
+		String testcase2XML = "<Group1_LOC><LOC><C517_02><E3225_01></E3225_01></C517_02></LOC></Group1_LOC>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp1_LOC_C517_3225(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 3
+
+		String testcase3XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp1_LOC_C517_3225(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+	}
+	@Test
+	public void testGrp1_LOC_C517_91_3224(){
+		//case 1
+		String testcase1XML = "<Group1_LOC><LOC><E3227_01>test</E3227_01><C517_02><E3224_04>test</E3224_04></C517_02></LOC></Group1_LOC>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGrp1_LOC_C517_91_3224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 2
+
+		String testcase2XML = "<Group1_LOC><LOC><E3227_01>91</E3227_01><C517_02><E3224_04></E3224_04></C517_02></LOC></Group1_LOC>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp1_LOC_C517_91_3224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 3
+
+		String testcase3XML = "<Group1_LOC><LOC><E3227_01>91</E3227_01></LOC></Group1_LOC>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp1_LOC_C517_91_3224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 4
+
+		String testcase4XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp1_LOC_C517_91_3224(node, true, null, errorKeyList);
 		Assert.assertTrue(errorKeyList.size() == 0)
 	}
+	@Test
+	public void testGrp1_LOC_C517_Non91_3224(){
+		//case 1
+		String testcase1XML = "<Group1_LOC><LOC><E3227_01>test</E3227_01><C517_02><E3224_04>test</E3224_04></C517_02></LOC></Group1_LOC>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGrp1_LOC_C517_Non91_3224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
 
+		//case 2
+
+		String testcase2XML = "<Group1_LOC><LOC><E3227_01>test</E3227_01><C517_02><E3224_04></E3224_04></C517_02></LOC></Group1_LOC>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp1_LOC_C517_Non91_3224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 3
+
+		String testcase3XML = "<Group1_LOC><LOC><E3227_01>test</E3227_01></LOC></Group1_LOC>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp1_LOC_C517_Non91_3224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 4
+
+		String testcase4XML = "<Group1_LOC><LOC><E3227_01>91</E3227_01></LOC></Group1_LOC>";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp1_LOC_C517_Non91_3224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 5
+
+		String testcase5XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase5XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp1_LOC_C517_Non91_3224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+	}
+	@Test
+	public void testGroup35_EQD_C224(){
+		//case 1
+		String testcase1XML = "<Group35_EQD><EQD><C224_03>test</C224_03></EQD></Group35_EQD>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGroup35_EQD_C224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 2
+		String testcase2XML = "<Group35_EQD><EQD><C224_03></C224_03></EQD></Group35_EQD>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup35_EQD_C224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 3
+		String testcase3XML = "<Group35_EQD></Group35_EQD>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup35_EQD_C224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 4
+		String testcase4XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup35_EQD_C224(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+	}
+	@Test
+	public void testGroup35_EQD_C224_8155(){
+		//case 1
+		String testcase1XML = "<Group35_EQD><EQD><C224_03><E8155_01>test</E8155_01></C224_03></EQD></Group35_EQD>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGroup35_EQD_C224_8155(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 2
+		String testcase2XML = "<Group35_EQD><EQD><C224_03><E8155_01></E8155_01></C224_03></EQD></Group35_EQD>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup35_EQD_C224_8155(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 3
+		String testcase3XML = "<Group35_EQD></Group35_EQD>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup35_EQD_C224_8155(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 4
+		String testcase4XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGroup35_EQD_C224_8155(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+	}
+	@Test
+	public void testGrp35_MEA_C174_6314(){
+		//case 1
+		String testcase1XML = "<Group35_EQD><MEA><C174_03><E6314_02>test</E6314_02></C174_03></MEA></Group35_EQD>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGrp35_MEA_C174_6314(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 2
+		String testcase2XML = "<Group35_EQD><MEA><C174_03><E6314_02></E6314_02></C174_03></MEA></Group35_EQD>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp35_MEA_C174_6314(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 3
+		String testcase3XML = "<Group35_EQD></Group35_EQD>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp35_MEA_C174_6314(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 4
+		String testcase4XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp35_MEA_C174_6314(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+	}
+	@Test
+	public void testcheckGrp36_EQD(){
+
+		String normal;
+		Node node;
+		cs.b2b.core.mapping.bean.bl.Body current_Body;
+		List<cs.b2b.core.mapping.bean.bl.Container> tmp_container_list;
+		//normal
+		errorKeyList = new ArrayList<String,String>();
+		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		tmp_container_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Container>()
+		Container tmp_container = new Container()
+		tmp_container.setContainerNumber("test")
+		tmp_container_list.add(tmp_container)
+		current_Body.setContainer(tmp_container_list)
+		blUtil.checkGrp36_EQD(current_Body, true, null, errorKeyList)
+		Assert.assertTrue(errorKeyList.size() == 0)
+		println 'case ----------end----------01'
+
+		//exception
+		errorKeyList = new ArrayList<String,String>();
+		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		tmp_container_list = new ArrayList<cs.b2b.core.mapping.bean.bl.Container>()
+		tmp_container = new Container()
+		tmp_container.setContainerNumber("")
+		tmp_container_list.add(tmp_container)
+		current_Body.setContainer(tmp_container_list)
+
+		blUtil.checkGrp36_EQD(current_Body, true, null, errorKeyList)
+		Assert.assertTrue(errorKeyList.size() > 0)
+		println 'case ----------end----------02'
+
+	}
+	@Test
+	public void testGrp3_REF_C506_1154(){
+		//case 1
+		String testcase1XML = "<Group3_RFF><RFF><C506_01><E1154_02>test</E1154_02></C506_01></RFF></Group3_RFF>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGrp3_REF_C506_1154(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 2
+		String testcase2XML = "<Group3_RFF><RFF><C506_01><E1154_02></E1154_02></C506_01></RFF></Group3_RFF>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp3_REF_C506_1154(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 3
+		String testcase3XML = "<Group3_RFF></Group3_RFF>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp3_REF_C506_1154(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 4
+		String testcase4XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp3_REF_C506_1154(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+	}
+	@Test
+	public void testGrp8(){
+		//case 1
+		String testcase1XML = "<Group8_TDT><TDT>test</TDT></Group8_TDT>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGrp8(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 2
+		String testcase2XML = "<Group8_TDT><TDT></TDT></Group8_TDT>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp8(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 3
+		String testcase3XML = "<Group8_TDT></Group8_TDT>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp8(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 4
+		String testcase4XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp8(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+	}
+	@Test
+	public void testGrp9(){
+		//case 1
+		String testcase1XML = "<Group8_TDT><Group9_LOC>test</Group9_LOC></Group8_TDT>";
+		Node node = xmlParserToNode(testGroup_UNH(testcase1XML));
+		blUtil.missingGrp9(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 2
+		String testcase2XML = "<Group8_TDT><Group9_LOC></Group9_LOC></Group8_TDT>";
+		node = xmlParserToNode(testGroup_UNH(testcase2XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp9(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() == 0)
+
+		//case 3
+		String testcase3XML = "<Group8_TDT></Group8_TDT>";
+		node = xmlParserToNode(testGroup_UNH(testcase3XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp9(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+		//case 4
+		String testcase4XML = "";
+		node = xmlParserToNode(testGroup_UNH(testcase4XML));
+		errorKeyList = new ArrayList<String,String>();
+		blUtil.missingGrp9(node, true, null, errorKeyList);
+		Assert.assertTrue(errorKeyList.size() > 0)
+
+	}
+	@Test
+	public void testRFF_GROUP4(){
+
+		String normal;
+		Node node;
+		cs.b2b.core.mapping.bean.bl.Body current_Body;
+		List<cs.b2b.core.mapping.bean.bl.ExternalReference> tmp_externalReference_list;
+		//normal
+		errorKeyList = new ArrayList<String,String>();
+		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		tmp_externalReference_list = new ArrayList<cs.b2b.core.mapping.bean.bl.ExternalReference>()
+		ExternalReference tmp_externalReference = new ExternalReference()
+		tmp_externalReference.setReferenceDescription("test")
+		tmp_externalReference_list.add(tmp_externalReference)
+		current_Body.setExternalReference(tmp_externalReference_list)
+		blUtil.missingRFF_GROUP4(current_Body, true, null, errorKeyList)
+		Assert.assertTrue(errorKeyList.size() == 0)
+		println 'case ----------end----------01'
+
+		//exception
+		errorKeyList = new ArrayList<String,String>();
+		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		tmp_externalReference_list = new ArrayList<cs.b2b.core.mapping.bean.bl.ExternalReference>()
+		tmp_externalReference = new ExternalReference()
+		tmp_externalReference.setReferenceDescription("")
+		tmp_externalReference_list.add(tmp_externalReference)
+		current_Body.setExternalReference(tmp_externalReference_list)
+		blUtil.missingRFF_GROUP4(current_Body, true, null, errorKeyList)
+		Assert.assertTrue(errorKeyList.size() > 0)
+		println 'case ----------end----------02'
+
+	}
+	@Test
+	public void testRFF_GROUP4_typeorname(){
+
+		String normal;
+		Node node;
+		cs.b2b.core.mapping.bean.bl.Body current_Body;
+		List<cs.b2b.core.mapping.bean.bl.ExternalReference> tmp_externalReference_list;
+		//normal
+		errorKeyList = new ArrayList<String,String>();
+		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		tmp_externalReference_list = new ArrayList<cs.b2b.core.mapping.bean.bl.ExternalReference>()
+		ExternalReference tmp_externalReference = new ExternalReference()
+		tmp_externalReference.setReferenceDescription("test")
+		tmp_externalReference_list.add(tmp_externalReference)
+		current_Body.setExternalReference(tmp_externalReference_list)
+		blUtil.missingRFF_GROUP4_typeorname(current_Body, true, null, errorKeyList)
+		Assert.assertTrue(errorKeyList.size() == 0)
+		println 'case ----------end----------01'
+
+		//exception
+		errorKeyList = new ArrayList<String,String>();
+		current_Body = new cs.b2b.core.mapping.bean.bl.Body()
+		tmp_externalReference_list = new ArrayList<cs.b2b.core.mapping.bean.bl.ExternalReference>()
+		tmp_externalReference = new ExternalReference()
+		tmp_externalReference.setReferenceDescription("")
+		tmp_externalReference_list.add(tmp_externalReference)
+		current_Body.setExternalReference(tmp_externalReference_list)
+		blUtil.missingRFF_GROUP4_typeorname(current_Body, true, null, errorKeyList)
+		Assert.assertTrue(errorKeyList.size() > 0)
+		println 'case ----------end----------02'
+
+	}
 	protected static String testGroup_UNH(String testFieldBGM){
-		return "<Body>" + testFieldBGM + "</Body>"
+		return "<root><Group_UNH>" + testFieldBGM + "</Group_UNH></root>"
 	}
-	
 	protected static String testXml(String testFieldXml){
 		return "<root><Loop_ST>"+ testFieldXml +"</Loop_ST></root>";
 	}
-
 	protected static Node xmlParserToNode(String testedXml){
 		XmlParser xmlParser = new XmlParser();
 		return xmlParser.parseText(testedXml)

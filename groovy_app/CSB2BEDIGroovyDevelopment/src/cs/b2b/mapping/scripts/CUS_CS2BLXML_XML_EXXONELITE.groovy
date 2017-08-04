@@ -262,7 +262,8 @@ public class CUS_CS2BLXML_XML_EXXONELITE {
 //							'TransportNationality' ''
 						}
 						'Location'('LocationType': 'PlaceOfReceipt') {
-							'LocationCode'('null':'true','nullAttr':'Agency','Agency': current_Body?.Route?.LastPOD?.Port?.LocationCode?.MutuallyDefinedCode, current_Body?.Route?.LastPOD?.Port?.LocationCode?.UNLocationCode)
+							if(current_Body?.Route?.LastPOD?.Port?.LocationCode?.UNLocationCode)
+								'LocationCode'('nullAttr':'Agency','Agency': current_Body?.Route?.LastPOD?.Port?.LocationCode?.MutuallyDefinedCode, current_Body?.Route?.LastPOD?.Port?.LocationCode?.UNLocationCode)
 							'LocationName' current_Body?.Route?.LastPOD?.Port?.City
 							'LocationState' current_Body?.Route?.LastPOD?.Port?.State
 							'LocationCountry' current_Body?.Route?.LastPOD?.Port?.Country
@@ -270,7 +271,8 @@ public class CUS_CS2BLXML_XML_EXXONELITE {
 //							'DateTime' ''
 						}
 						'Location'('LocationType': 'PlaceOfDelivery') {
-							'LocationCode'('null':'true','nullAttr':'Agency','Agency': current_Body?.Route?.FND?.CityDetails?.LocationCode?.MutuallyDefinedCode, current_Body?.Route?.FND?.CityDetails?.LocationCode?.UNLocationCode)
+							if(current_Body?.Route?.FND?.CityDetails?.LocationCode?.UNLocationCode)
+								'LocationCode'('nullAttr':'Agency','Agency': current_Body?.Route?.FND?.CityDetails?.LocationCode?.MutuallyDefinedCode, current_Body?.Route?.FND?.CityDetails?.LocationCode?.UNLocationCode)
 							'LocationName' current_Body?.Route?.FND?.CityDetails?.City
 							'LocationState' current_Body?.Route?.FND?.CityDetails?.State
 							'LocationCountry' current_Body?.Route?.FND?.CityDetails?.Country
@@ -561,8 +563,8 @@ public class CUS_CS2BLXML_XML_EXXONELITE {
 		String result = '';
 
 		if (txnErrorKeys.findAll{it.size == 0}.size != 0) {
-			//result = util.cleanXml(writer?.toString(), true)
-			result = util.cleanXml(writer?.toString(), true,true)
+			result = util.cleanXml(writer?.toString(), true)
+			//result = util.cleanXml(writer?.toString(), true,true)
 //			result = writer?.toString()
 			//promote XML output file name to transportation, xml format need this function
 			//please change the file name pattern base on B2B_EDI_FILENAME setting
@@ -607,9 +609,9 @@ public class CUS_CS2BLXML_XML_EXXONELITE {
 //		blUtil.checkStopOffPickupDetailsFacilityNameLength(current_Body, 35, true, null, errorList)
 //		blUtil.checkStopOffReturnDetailsFacilityNameLength(current_Body, 35, true, null, errorList)
 		//false is O ,true is E
-		CheckAmendent(current_Body, false, null, errorList)
-		CheckContainerNumber(current_Body, true, null, errorList)
-		CheckContainerType(current_Body, true, null, errorList)
+//		CheckAmendent(current_Body, false, null, errorList)
+//		CheckContainerNumber(current_Body, true, null, errorList)
+//		CheckContainerType(current_Body, true, null, errorList)
 		return errorList;
 	}
 
@@ -619,8 +621,8 @@ public class CUS_CS2BLXML_XML_EXXONELITE {
 
 		XmlParser xmlParser = new XmlParser();
 		Node node = xmlParser.parseText(outputXml + "</Message>")
-		//util.cleanNode(node, true)
-		util.cleanNode(node, true,true)
+		util.cleanNode(node, true)
+		//util.cleanNode(node, true,true)
 		String validationResult = validator.xmlValidation('CUS-BLXML-EXXONELITE', XmlUtil.serialize(node))
 		if (validationResult.contains('Validation Failure.')){
 			errorKeyList.add([TYPE: 'ES', IS_ERROR: 'YES', VALUE: validationResult])

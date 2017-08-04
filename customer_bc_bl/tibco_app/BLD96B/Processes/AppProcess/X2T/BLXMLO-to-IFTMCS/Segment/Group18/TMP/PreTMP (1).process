@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns1="http://www.cargosmart.com/common" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns="http://www.tibco.com/ns/Foresight/2010/20" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pfx4="http://www.cargosmart.com/billoflading" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:pfx3="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/UIF/Reordered-Transaction-SIUIFI.xsd" xmlns:pfx2="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" xmlns:pfx="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd">
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" schemaLocation="/Schemas/EDI/ConvertConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" schemaLocation="/Schemas/EDI/ProcessConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd" schemaLocation="/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/Foresight/2010/20" schemaLocation="/BCSchemas/EDITEXT/TEXT/BLUPADTEO/Message-BLUPADTEO.xsd"/>
+    <xsd:import namespace="http://www.cargosmart.com/billoflading" schemaLocation="/Schemas/CS2X/com/cargosmart/documentation/normalizeBillOfLading.xsd"/>
+    <pd:name>Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group18/TMP/PreTMP (1).process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="pfx2:Flows"/>
+                    <xsd:element ref="pfx:ConversionData"/>
+                    <xsd:element ref="pfx4:Body-BillOfLading"/>
+                    <xsd:element name="pathPrefix" type="xsd:string"/>
+                    <xsd:element ref="pfx4:Header-BillOfLading"/>
+                    <xsd:element name="CGO_cnt" type="xsd:int" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>55</pd:startX>
+    <pd:startY>42</pd:startY>
+    <pd:returnBindings>
+        <xsl:choose>
+            <xsl:when test="tib:trim($check_BlDGFlashPt/root/BlDGFlashPt)!='' and&#xA;count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType)!=0 and&#xA;tib:trim(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/ns1:CargoNature)[number(../../../CGO_cnt)])='RD'">
+                <group>
+                    <TMP_6246>
+                        <xsl:value-of select="tib:round-fraction(number($check_BlDGFlashPt/root/BlDGFlashPt), 0)"/>
+                    </TMP_6246>
+                    <xsl:if test="$BlDGFlashPtUnit/root/BlDGFlashPtUnit">
+                        <TMP_6411>
+                            <xsl:value-of select="$BlDGFlashPtUnit/root/BlDGFlashPtUnit"/>
+                        </TMP_6411>
+                    </xsl:if>
+                </group>
+            </xsl:when>
+            <xsl:when test="tib:trim($check_BlDGFlashPt/root/BlDGFlashPt)='' and&#xA;count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType)!=0 and&#xA;tib:trim(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/ns1:CargoNature)[number(../../../CGO_cnt)])='RD'">
+                <group>
+                    <TMP_6246>
+                        <xsl:value-of select="tib:round-fraction(number($check_BlRFTemp/root/BlRFTemp), 0)"/>
+                    </TMP_6246>
+                    <xsl:if test="$BlRFTempUnit/root/BlRFTempUnit">
+                        <TMP_6411>
+                            <xsl:value-of select="$BlRFTempUnit/root/BlRFTempUnit"/>
+                        </TMP_6411>
+                    </xsl:if>
+                </group>
+            </xsl:when>
+            <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType)=0 and&#xA;count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:ReeferCargoSpec-BLCargoType)!=0">
+                <group>
+                    <TMP_6246>
+                        <xsl:value-of select="tib:round-fraction(number($check_BlRFTemp/root/BlRFTemp), 0)"/>
+                    </TMP_6246>
+                    <xsl:if test="$BlRFTempUnit/root/BlRFTempUnit">
+                        <TMP_6411>
+                            <xsl:value-of select="$BlRFTempUnit/root/BlRFTempUnit"/>
+                        </TMP_6411>
+                    </xsl:if>
+                </group>
+            </xsl:when>
+            <xsl:otherwise>
+                <group>
+                    <TMP_6246>
+                        <xsl:value-of select="&quot;&quot;"/>
+                    </TMP_6246>
+                    <TMP_6411>
+                        <xsl:value-of select="&quot;&quot;"/>
+                    </TMP_6411>
+                </group>
+            </xsl:otherwise>
+        </xsl:choose>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="group">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element name="TMP_6246" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="TMP_6411" type="xsd:string" minOccurs="0"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>568</pd:endX>
+    <pd:endY>174</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables>
+        <BlDGFlashPtUnit>
+            <xsd:element name="root">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="BlDGFlashPtUnit" type="xsd:string" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </BlDGFlashPtUnit>
+        <BlRFTempUnit>
+            <xsd:element name="root">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="BlRFTempUnit" type="xsd:string" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </BlRFTempUnit>
+    </pd:processVariables>
+    <pd:targetNamespace>http://xmlns.example.com/1501486170201</pd:targetNamespace>
+    <pd:activity name="Assign_FlashPtUnit">
+        <pd:type>com.tibco.pe.core.AssignActivity</pd:type>
+        <pd:resourceType>ae.activities.assignActivity</pd:resourceType>
+        <pd:x>563</pd:x>
+        <pd:y>40</pd:y>
+        <config>
+            <variableName>BlDGFlashPtUnit</variableName>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:choose>
+                    <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType)!=0 and&#xA;tib:trim(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType/ns1:FlashPoint/ns1:TemperatureUnit)[number(../../../../../CGO_cnt)])='C'">
+                        <BlDGFlashPtUnit>
+                            <xsl:value-of select="&quot;CEL&quot;"/>
+                        </BlDGFlashPtUnit>
+                    </xsl:when>
+                    <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType)!=0 and&#xA;tib:trim(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType/ns1:FlashPoint/ns1:TemperatureUnit)[number(../../../../../CGO_cnt)])='F'">
+                        <BlDGFlashPtUnit>
+                            <xsl:value-of select="&quot;FAH&quot;"/>
+                        </BlDGFlashPtUnit>
+                    </xsl:when>
+                </xsl:choose>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="Assign_TempUnit">
+        <pd:type>com.tibco.pe.core.AssignActivity</pd:type>
+        <pd:resourceType>ae.activities.assignActivity</pd:resourceType>
+        <pd:x>729</pd:x>
+        <pd:y>176</pd:y>
+        <config>
+            <variableName>BlRFTempUnit</variableName>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:choose>
+                    <xsl:when test="tib:trim($check_BlRFTemp/root/BlRFTempUnit)=&quot;C&quot;">
+                        <BlRFTempUnit>
+                            <xsl:value-of select="&quot;CEL&quot;"/>
+                        </BlRFTempUnit>
+                    </xsl:when>
+                    <xsl:when test="tib:trim($check_BlRFTemp/root/BlRFTempUnit)=&quot;F&quot;">
+                        <BlRFTempUnit>
+                            <xsl:value-of select="&quot;FAH&quot;"/>
+                        </BlRFTempUnit>
+                    </xsl:when>
+                </xsl:choose>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="check_BlDGFlashPt">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>425</pd:x>
+        <pd:y>53</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="BlDGFlashPt" type="xsd:string" minOccurs="0"/>
+                            <xsd:element name="BlDGFlashPtUnit" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:if test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType)!=0">
+                    <BlDGFlashPt>
+                        <xsl:value-of select="tib:trim(translate(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType/ns1:FlashPoint/ns1:Temperature)[number(../../../../../CGO_cnt)], '+', ''))"/>
+                    </BlDGFlashPt>
+                </xsl:if>
+                <xsl:if test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType)!=0">
+                    <BlDGFlashPtUnit>
+                        <xsl:value-of select="tib:trim(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:DGCargoSpec-BLCargoType/ns1:FlashPoint/ns1:TemperatureUnit)[number(../../../../../CGO_cnt)])"/>
+                    </BlDGFlashPtUnit>
+                </xsl:if>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="check_BlRFTemp">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>734</pd:x>
+        <pd:y>36</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="BlRFTemp" type="xsd:string" minOccurs="0"/>
+                            <xsd:element name="BlRFTempUnit" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:if test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:ReeferCargoSpec-BLCargoType)!='0'">
+                    <BlRFTemp>
+                        <xsl:value-of select="tib:trim(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:ReeferCargoSpec-BLCargoType/ns1:Temperature/ns1:Temperature)[number(../../../../../CGO_cnt)])"/>
+                    </BlRFTemp>
+                </xsl:if>
+                <xsl:if test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:ReeferCargoSpec-BLCargoType)!='0'">
+                    <BlRFTempUnit>
+                        <xsl:value-of select="tib:trim(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading/pfx4:ReeferCargoSpec-BLCargoType/ns1:Temperature/ns1:TemperatureUnit)[number(../../../../../CGO_cnt)])"/>
+                    </BlRFTempUnit>
+                </xsl:if>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="Reset_BlDG_Units">
+        <pd:type>com.tibco.pe.core.AssignActivity</pd:type>
+        <pd:resourceType>ae.activities.assignActivity</pd:resourceType>
+        <pd:x>728</pd:x>
+        <pd:y>287</pd:y>
+        <config>
+            <variableName>BlDGFlashPtUnit</variableName>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <BlDGFlashPtUnit>
+                    <xsl:value-of select="&quot;&quot;"/>
+                </BlDGFlashPtUnit>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="Reset_BlRF_Units">
+        <pd:type>com.tibco.pe.core.AssignActivity</pd:type>
+        <pd:resourceType>ae.activities.assignActivity</pd:resourceType>
+        <pd:x>568</pd:x>
+        <pd:y>282</pd:y>
+        <config>
+            <variableName>BlRFTempUnit</variableName>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <BlRFTempUnit>
+                    <xsl:value-of select="&quot;&quot;"/>
+                </BlRFTempUnit>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="Map Data">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>136</pd:x>
+        <pd:y>207</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="BlDGFlashPt" type="xsd:string" minOccurs="0"/>
+                            <xsd:element name="BlDGFlashPtUnit" type="xsd:string" minOccurs="0"/>
+                            <xsd:element name="BlRFTemp" type="xsd:string" minOccurs="0"/>
+                            <xsd:element name="BlRFTempUnit" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <xsl:choose>
+                <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType)!=0 and&#xA;tib:trim($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number($Start/root/CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType[1]/ns1:FlashPoint/ns1:TemperatureUnit)='C'">
+                    <root>
+                        <BlDGFlashPt>
+                            <xsl:value-of select="tib:trim(translate(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number($Start/root/CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType[1]/ns1:FlashPoint/ns1:Temperature), '+', ''))"/>
+                        </BlDGFlashPt>
+                        <BlDGFlashPtUnit>
+                            <xsl:value-of select="&quot;CEL&quot;"/>
+                        </BlDGFlashPtUnit>
+                        <BlRFTemp>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlRFTemp>
+                        <BlRFTempUnit>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlRFTempUnit>
+                    </root>
+                </xsl:when>
+                <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType)!=0 and&#xA;tib:trim($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number($Start/root/CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType[1]/ns1:FlashPoint/ns1:TemperatureUnit)='F'">
+                    <root>
+                        <BlDGFlashPt>
+                            <xsl:value-of select="tib:trim(translate(($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number($Start/root/CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType[1]/ns1:FlashPoint/ns1:Temperature), '+', ''))"/>
+                        </BlDGFlashPt>
+                        <BlDGFlashPtUnit>
+                            <xsl:value-of select="&quot;FAH&quot;"/>
+                        </BlDGFlashPtUnit>
+                        <BlRFTemp>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlRFTemp>
+                        <BlRFTempUnit>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlRFTempUnit>
+                    </root>
+                </xsl:when>
+                <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:ReeferCargoSpec-BLCargoType)!=0 and&#xA;tib:trim($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number($Start/root/CGO_cnt)]/pfx4:ReeferCargoSpec-BLCargoType[1]/ns1:Temperature/ns1:TemperatureUnit)='C'">
+                    <root>
+                        <BlDGFlashPt>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlDGFlashPt>
+                        <BlDGFlashPtUnit>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlDGFlashPtUnit>
+                        <BlRFTemp>
+                            <xsl:value-of select="$Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:ReeferCargoSpec-BLCargoType[1]/ns1:Temperature/ns1:Temperature"/>
+                        </BlRFTemp>
+                        <BlRFTempUnit>
+                            <xsl:value-of select="&quot;CEL&quot;"/>
+                        </BlRFTempUnit>
+                    </root>
+                </xsl:when>
+                <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:ReeferCargoSpec-BLCargoType)!=0 and&#xA;tib:trim($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number($Start/root/CGO_cnt)]/pfx4:ReeferCargoSpec-BLCargoType[1]/ns1:Temperature/ns1:TemperatureUnit)='F'">
+                    <root>
+                        <BlDGFlashPt>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlDGFlashPt>
+                        <BlDGFlashPtUnit>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlDGFlashPtUnit>
+                        <BlRFTemp>
+                            <xsl:value-of select="$Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:ReeferCargoSpec-BLCargoType[1]/ns1:Temperature/ns1:Temperature"/>
+                        </BlRFTemp>
+                        <BlRFTempUnit>
+                            <xsl:value-of select="&quot;FAH&quot;"/>
+                        </BlRFTempUnit>
+                    </root>
+                </xsl:when>
+                <xsl:otherwise>
+                    <root>
+                        <BlDGFlashPt>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlDGFlashPt>
+                        <BlDGFlashPtUnit>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlDGFlashPtUnit>
+                        <BlRFTemp>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlRFTemp>
+                        <BlRFTempUnit>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </BlRFTempUnit>
+                    </root>
+                </xsl:otherwise>
+            </xsl:choose>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="Map-Data-1">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>289</pd:x>
+        <pd:y>190</pd:y>
+        <config>
+            <element>
+                <xsd:element name="group">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="TMP_6246" type="xsd:string" minOccurs="0"/>
+                            <xsd:element name="TMP_6411" type="xsd:string" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <xsl:choose>
+                <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType)!=0 and&#xA;tib:trim($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/ns1:CargoNature)=&quot;Reefer Dangerous&quot; and&#xA;$Map-Data/root/BlDGFlashPt!=&quot;&quot;">
+                    <group>
+                        <xsl:if test="$Map-Data/root/BlDGFlashPt">
+                            <TMP_6246>
+                                <xsl:value-of select="$Map-Data/root/BlDGFlashPt"/>
+                            </TMP_6246>
+                        </xsl:if>
+                        <xsl:if test="$Map-Data/root/BlDGFlashPtUnit">
+                            <TMP_6411>
+                                <xsl:value-of select="$Map-Data/root/BlDGFlashPtUnit"/>
+                            </TMP_6411>
+                        </xsl:if>
+                    </group>
+                </xsl:when>
+                <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType)!=0 and&#xA;tib:trim($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/ns1:CargoNature)=&quot;Reefer Dangerous&quot; and&#xA;$Map-Data/root/BlDGFlashPt=&quot;&quot;">
+                    <group>
+                        <xsl:if test="$Map-Data/root/BlRFTemp">
+                            <TMP_6246>
+                                <xsl:value-of select="$Map-Data/root/BlRFTemp"/>
+                            </TMP_6246>
+                        </xsl:if>
+                        <xsl:if test="$Map-Data/root/BlRFTempUnit">
+                            <TMP_6411>
+                                <xsl:value-of select="$Map-Data/root/BlRFTempUnit"/>
+                            </TMP_6411>
+                        </xsl:if>
+                    </group>
+                </xsl:when>
+                <xsl:when test="count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:DGCargoSpec-BLCargoType)!=0 and&#xA;count($Start/root/pfx4:Body-BillOfLading/pfx4:Cargo-Body-BillOfLading[number(../../CGO_cnt)]/pfx4:ReeferCargoSpec-BLCargoType)!=0">
+                    <group>
+                        <xsl:if test="$Map-Data/root/BlRFTemp">
+                            <TMP_6246>
+                                <xsl:value-of select="$Map-Data/root/BlRFTemp"/>
+                            </TMP_6246>
+                        </xsl:if>
+                        <xsl:if test="$Map-Data/root/BlRFTempUnit">
+                            <TMP_6411>
+                                <xsl:value-of select="$Map-Data/root/BlRFTempUnit"/>
+                            </TMP_6411>
+                        </xsl:if>
+                    </group>
+                </xsl:when>
+                <xsl:otherwise>
+                    <group>
+                        <TMP_6246>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </TMP_6246>
+                        <TMP_6411>
+                            <xsl:value-of select="&quot;&quot;"/>
+                        </TMP_6411>
+                    </group>
+                </xsl:otherwise>
+            </xsl:choose>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>check_BlDGFlashPt</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>check_BlDGFlashPt</pd:from>
+        <pd:to>Assign_FlashPtUnit</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Assign_FlashPtUnit</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>otherwise</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Assign_FlashPtUnit</pd:from>
+        <pd:to>check_BlRFTemp</pd:to>
+        <pd:xpathDescription>not FlashPt Units</pd:xpathDescription>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>xpath</pd:conditionType>
+        <pd:xpath>tib:trim($BlDGFlashPtUnit/root/BlDGFlashPtUnit)!="CEL" or
+tib:trim($BlDGFlashPtUnit/root/BlDGFlashPtUnit)!="FAH"</pd:xpath>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>check_BlRFTemp</pd:from>
+        <pd:to>Assign_TempUnit</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Assign_TempUnit</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>otherwise</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Assign_TempUnit</pd:from>
+        <pd:to>Reset_BlDG_Units</pd:to>
+        <pd:xpathDescription>not Temp Unit</pd:xpathDescription>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>xpath</pd:conditionType>
+        <pd:xpath>tib:trim($BlRFTempUnit/root/BlRFTempUnit)!="CEL" or
+tib:trim($BlRFTempUnit/root/BlRFTempUnit)!="FAH"</pd:xpath>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Reset_BlDG_Units</pd:from>
+        <pd:to>Reset_BlRF_Units</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Reset_BlRF_Units</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>Map Data</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map Data</pd:from>
+        <pd:to>Map-Data-1</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map-Data-1</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

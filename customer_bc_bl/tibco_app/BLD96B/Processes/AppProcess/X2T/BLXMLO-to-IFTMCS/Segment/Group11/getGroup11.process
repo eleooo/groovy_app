@@ -1,0 +1,1751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:ns2="http://www.tibco.com/namespaces/tnt/plugins/file" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns1="http://www.cargosmart.com/common" xmlns:ns="http://www.tibco.com/ns/Foresight/2010/20" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:pfx4="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:pfx3="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" xmlns:pfx2="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/XML/IncomingToIRIS2_ShippingInstructionFromCargoSmart_Rel12-edna-septfu.xsd" xmlns:pfx="http://www.cargosmart.com/billoflading" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ConvertConfig.xsd" schemaLocation="/Schemas/EDI/ConvertConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/EDI/ProcessConfig.xsd" schemaLocation="/Schemas/EDI/ProcessConfig.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/no_namespace_schema_location/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd" schemaLocation="/Schemas/UIF/Reordered-Transaction-BKGSUPUIFO.xsd"/>
+    <xsd:import namespace="http://www.cargosmart.com/billoflading" schemaLocation="/Schemas/CS2X/com/cargosmart/documentation/normalizeBillOfLading.xsd"/>
+    <xsd:import namespace="http://www.tibco.com/ns/Foresight/2010/20" schemaLocation="/BCSchemas/EDIEDIFACT/1/D96B/IFTMCS/New_CS-SYSINT-CUST-IFTMCS-EDIFACT_D96B_20140730_JO_IFTMCS.xsd"/>
+    <pd:name>Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/getGroup11.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startType>
+        <xsd:element name="root">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="pfx4:Flows"/>
+                    <xsd:element ref="pfx3:ConversionData"/>
+                    <xsd:element ref="pfx:Body-BillOfLading"/>
+                    <xsd:element name="pathPrefix" type="xsd:string"/>
+                    <xsd:element ref="pfx:Header-BillOfLading"/>
+                    <xsd:element name="INDEX-EDIMAIN" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SCAC_CODE" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:startType>
+    <pd:startX>50</pd:startX>
+    <pd:startY>53</pd:startY>
+    <pd:returnBindings>
+        <group>
+            <xsl:copy-of select="$Map-Data-1/group/ns:L-NAD_45"/>
+            <xsl:copy-of select="$acc_iGrp11/AccumulatedOutput/group/ns:L-NAD_45"/>
+            <xsl:copy-of select="$acc_iGrp11_1/AccumulatedOutput/group/ns:L-NAD_45"/>
+        </group>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType>
+        <xsd:element name="group">
+            <xsd:complexType>
+                <xsd:sequence>
+                    <xsd:element ref="ns:L-NAD_45" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:element>
+    </pd:endType>
+    <pd:endX>1387</pd:endX>
+    <pd:endY>332</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1255421048667</pd:targetNamespace>
+    <pd:activity name="mapPath">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>48</pd:x>
+        <pd:y>175</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="pathPrefix" type="xsd:string"/>
+                            <xsd:element name="convertPath" type="xsd:string"/>
+                            <xsd:element name="convertTypeID" type="xsd:string"/>
+                            <xsd:element name="segmentID" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <pathPrefix>
+                    <xsl:value-of select="$Start/root/pathPrefix"/>
+                </pathPrefix>
+                <convertPath>
+                    <xsl:value-of select="&quot;Group11&quot;"/>
+                </convertPath>
+                <convertTypeID>
+                    <xsl:value-of select="&quot;BillOfLading&quot;"/>
+                </convertTypeID>
+                <segmentID>
+                    <xsl:value-of select="&quot;Group11&quot;"/>
+                </segmentID>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:activity name="mapLocalFlow">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>51</pd:x>
+        <pd:y>260</pd:y>
+        <config>
+            <element>
+                <xsd:element name="root">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Config" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="SegmentField" type="xsd:string"/>
+                                        <xsd:element name="ProcessId" type="xsd:string"/>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <root>
+                <xsl:for-each select="$Start/root/Flows/ConvertType[type=$mapPath/root/convertTypeID]/Config[SegmentId=$mapPath/root/segmentID]">
+                    <Config>
+                        <SegmentField>
+                            <xsl:value-of select="SegmentField"/>
+                        </SegmentField>
+                        <ProcessId>
+                            <xsl:value-of select="ProcessId"/>
+                        </ProcessId>
+                    </Config>
+                </xsl:for-each>
+            </root>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:group name="Group11">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>135</pd:x>
+        <pd:y>65</pd:y>
+        <pd:width>1077</pd:width>
+        <pd:height>297</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>inputLoop</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:over>$Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[ns1:PartyType!='SHP' or ns1:PartyType!='CGN' or ns1:PartyType!='FWD' or ns1:PartyType!='ANP']</pd:over>
+            <pd:iterationElementSlot>iGrp11_result</pd:iterationElementSlot>
+            <pd:indexSlot>iGrp11_party</pd:indexSlot>
+            <pd:outSlot>acc_iGrp11</pd:outSlot>
+            <pd:activityOutputName>Map Data</pd:activityOutputName>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>MapPartyType</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Map Data</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>NAD</pd:from>
+            <pd:to>getNAD</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="NAD"]) and tib:trim($MapPartyType/root/group/NAD_01)!=''</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group12</pd:from>
+            <pd:to>getGroup12</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group12"]) and tib:trim($MapPartyType/root/group/NAD_01)!=''</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getNAD</pd:from>
+            <pd:to>LOC</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>NAD</pd:from>
+            <pd:to>LOC</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group12</pd:from>
+            <pd:to>Group13</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup12</pd:from>
+            <pd:to>Group13</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>MapPartyType</pd:from>
+            <pd:to>NAD</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>LOC</pd:from>
+            <pd:to>getLOC</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="LOC"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getLOC</pd:from>
+            <pd:to>MOA</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>MOA</pd:from>
+            <pd:to>getMOA</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="MOA"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getMOA</pd:from>
+            <pd:to>Group12</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group13</pd:from>
+            <pd:to>getGroup13</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group13"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup13</pd:from>
+            <pd:to>Group14</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group14</pd:from>
+            <pd:to>getGroup14</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group14"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup14</pd:from>
+            <pd:to>Group15</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group15</pd:from>
+            <pd:to>getGroup15</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group15"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup15</pd:from>
+            <pd:to>Group16</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group16</pd:from>
+            <pd:to>getGroup16</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group16"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup16</pd:from>
+            <pd:to>Group17</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group17</pd:from>
+            <pd:to>getGroup17</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group17"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup17</pd:from>
+            <pd:to>Map Data</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group17</pd:from>
+            <pd:to>Map Data</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group16</pd:from>
+            <pd:to>Group17</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group15</pd:from>
+            <pd:to>Group16</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group14</pd:from>
+            <pd:to>Group15</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group13</pd:from>
+            <pd:to>Group14</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>MOA</pd:from>
+            <pd:to>Group12</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>LOC</pd:from>
+            <pd:to>MOA</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="NAD">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>353</pd:x>
+            <pd:y>141</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getNAD">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>347</pd:x>
+            <pd:y>253</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/NAD/getNAD.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party"/>
+                    </iParty>
+                    <SCAC_CODE>
+                        <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                    </SCAC_CODE>
+                    <xsl:copy-of select="$iGrp11_result/pfx:Party-Body-BillOfLading"/>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group12">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>581</pd:x>
+            <pd:y>141</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup12">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>596</pd:x>
+            <pd:y>241</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group12/getGroup12.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                    <xsl:copy-of select="$iGrp11_result/pfx:Party-Body-BillOfLading"/>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Map Data">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>1128</pd:x>
+            <pd:y>181</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="group">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element ref="ns:L-NAD_45" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <group>
+                    <xsl:if test="exists($getNAD/group/ns:S-NAD_45)">
+                        <ns:L-NAD_45>
+                            <xsl:copy-of select="$getNAD/group/ns:S-NAD_45"/>
+                            <xsl:for-each select="$getGroup12/group/ns:L-CTA_48">
+                                <ns:L-CTA_48>
+                                    <xsl:if test="@ObjType">
+                                        <xsl:attribute name="ObjType">
+                                            <xsl:value-of select="@ObjType"/>
+                                        </xsl:attribute>
+                                    </xsl:if>
+                                    <ns:S-CTA_48>
+                                        <xsl:if test="ns:S-CTA_48/ns:E-3139_48_01">
+                                            <ns:E-3139_48_01>
+                                                <xsl:copy-of select="ns:S-CTA_48/ns:E-3139_48_01/@xsi:nil"/>
+                                                <xsl:value-of select="ns:S-CTA_48/ns:E-3139_48_01"/>
+                                            </ns:E-3139_48_01>
+                                        </xsl:if>
+                                        <xsl:copy-of select="ns:S-CTA_48/ns:C-C056_48_02"/>
+                                    </ns:S-CTA_48>
+                                    <xsl:for-each select="ns:S-COM_49">
+                                        <ns:S-COM_49>
+                                            <xsl:if test="@ObjType">
+                                                <xsl:attribute name="ObjType">
+                                                    <xsl:value-of select="@ObjType"/>
+                                                </xsl:attribute>
+                                            </xsl:if>
+                                            <xsl:for-each select="ns:C-C076_49_01">
+                                                <ns:C-C076_49_01>
+                                                    <xsl:if test="@ObjType">
+                                                        <xsl:attribute name="ObjType">
+                                                            <xsl:value-of select="@ObjType"/>
+                                                        </xsl:attribute>
+                                                    </xsl:if>
+                                                    <ns:E-3148_49_01.01>
+                                                        <xsl:if test="ns:E-3148_49_01.01/@ObjType">
+                                                            <xsl:attribute name="ObjType">
+                                                                <xsl:value-of select="ns:E-3148_49_01.01/@ObjType"/>
+                                                            </xsl:attribute>
+                                                        </xsl:if>
+                                                        <xsl:value-of select="ns:E-3148_49_01.01"/>
+                                                    </ns:E-3148_49_01.01>
+                                                    <ns:E-3155_49_01.02>
+                                                        <xsl:if test="ns:E-3155_49_01.02/@ObjType">
+                                                            <xsl:attribute name="ObjType">
+                                                                <xsl:value-of select="ns:E-3155_49_01.02/@ObjType"/>
+                                                            </xsl:attribute>
+                                                        </xsl:if>
+                                                        <xsl:value-of select="ns:E-3155_49_01.02"/>
+                                                    </ns:E-3155_49_01.02>
+                                                </ns:C-C076_49_01>
+                                            </xsl:for-each>
+                                        </ns:S-COM_49>
+                                    </xsl:for-each>
+                                </ns:L-CTA_48>
+                            </xsl:for-each>
+                        </ns:L-NAD_45>
+                    </xsl:if>
+                </group>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="MapPartyType">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>250</pd:x>
+            <pd:y>145</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Interface_MapPartyType.process</processName>
+                <processNameXPath>concat($mapPath/root/pathPrefix,$mapPath/root/convertPath,'/MapPartyType',$Start/root/Flows/ConvertType/Config[SegmentField="MapPartyType" and SegmentId=$mapPath/root/segmentID]/ProcessId,'.process')</processNameXPath>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <group>
+                        <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                        <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                        <iParty>
+                            <xsl:value-of select="$iGrp11_party"/>
+                        </iParty>
+                        <xsl:copy-of select="$iGrp11_result/pfx:Party-Body-BillOfLading"/>
+                    </group>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="LOC">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>429</pd:x>
+            <pd:y>137</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getLOC">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>428</pd:x>
+            <pd:y>246</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/LOC/getLOC.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <xsl:if test="$MapPartyType/root/group/NAD_01">
+                        <NAD_01>
+                            <xsl:value-of select="$MapPartyType/root/group/NAD_01"/>
+                        </NAD_01>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ShipperFlag">
+                        <ShipperFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ShipperFlag"/>
+                        </ShipperFlag>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ConsigneeFlag">
+                        <ConsigneeFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ConsigneeFlag"/>
+                        </ConsigneeFlag>
+                    </xsl:if>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party"/>
+                    </iParty>
+                    <SCAC_CODE>
+                        <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                    </SCAC_CODE>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="MOA">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>509</pd:x>
+            <pd:y>133</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getMOA">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>513</pd:x>
+            <pd:y>244</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/MOA/getMOA.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <xsl:if test="$MapPartyType/root/group/NAD_01">
+                        <NAD_01>
+                            <xsl:value-of select="$MapPartyType/root/group/NAD_01"/>
+                        </NAD_01>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ShipperFlag">
+                        <ShipperFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ShipperFlag"/>
+                        </ShipperFlag>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ConsigneeFlag">
+                        <ConsigneeFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ConsigneeFlag"/>
+                        </ConsigneeFlag>
+                    </xsl:if>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party"/>
+                    </iParty>
+                    <SCAC_CODE>
+                        <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                    </SCAC_CODE>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group13">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>665</pd:x>
+            <pd:y>132</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup13">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>677</pd:x>
+            <pd:y>238</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group13/getGroup13.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <xsl:if test="$MapPartyType/root/group/NAD_01">
+                        <NAD_01>
+                            <xsl:value-of select="$MapPartyType/root/group/NAD_01"/>
+                        </NAD_01>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ShipperFlag">
+                        <ShipperFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ShipperFlag"/>
+                        </ShipperFlag>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ConsigneeFlag">
+                        <ConsigneeFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ConsigneeFlag"/>
+                        </ConsigneeFlag>
+                    </xsl:if>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group14">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>747</pd:x>
+            <pd:y>132</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup14">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>768</pd:x>
+            <pd:y>240</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group14/getGroup14.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <xsl:if test="$MapPartyType/root/group/NAD_01">
+                        <NAD_01>
+                            <xsl:value-of select="$MapPartyType/root/group/NAD_01"/>
+                        </NAD_01>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ShipperFlag">
+                        <ShipperFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ShipperFlag"/>
+                        </ShipperFlag>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ConsigneeFlag">
+                        <ConsigneeFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ConsigneeFlag"/>
+                        </ConsigneeFlag>
+                    </xsl:if>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group15">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>831</pd:x>
+            <pd:y>134</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup15">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>863</pd:x>
+            <pd:y>232</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group15/getGroup15.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <xsl:if test="$MapPartyType/root/group/NAD_01">
+                        <NAD_01>
+                            <xsl:value-of select="$MapPartyType/root/group/NAD_01"/>
+                        </NAD_01>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ShipperFlag">
+                        <ShipperFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ShipperFlag"/>
+                        </ShipperFlag>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ConsigneeFlag">
+                        <ConsigneeFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ConsigneeFlag"/>
+                        </ConsigneeFlag>
+                    </xsl:if>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group16">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>942</pd:x>
+            <pd:y>142</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup16">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>962</pd:x>
+            <pd:y>238</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group16/getGroup16.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <xsl:if test="$MapPartyType/root/group/NAD_01">
+                        <NAD_01>
+                            <xsl:value-of select="$MapPartyType/root/group/NAD_01"/>
+                        </NAD_01>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ShipperFlag">
+                        <ShipperFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ShipperFlag"/>
+                        </ShipperFlag>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ConsigneeFlag">
+                        <ConsigneeFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ConsigneeFlag"/>
+                        </ConsigneeFlag>
+                    </xsl:if>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group17">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>1028</pd:x>
+            <pd:y>140</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup17">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>1047</pd:x>
+            <pd:y>240</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group17/getGroup17.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <xsl:if test="$MapPartyType/root/group/NAD_01">
+                        <NAD_01>
+                            <xsl:value-of select="$MapPartyType/root/group/NAD_01"/>
+                        </NAD_01>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ShipperFlag">
+                        <ShipperFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ShipperFlag"/>
+                        </ShipperFlag>
+                    </xsl:if>
+                    <xsl:if test="$MapPartyType/root/group/ConsigneeFlag">
+                        <ConsigneeFlag>
+                            <xsl:value-of select="$MapPartyType/root/group/ConsigneeFlag"/>
+                        </ConsigneeFlag>
+                    </xsl:if>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:activity name="Map-Data-1">
+        <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+        <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+        <pd:x>1273</pd:x>
+        <pd:y>387</pd:y>
+        <config>
+            <element>
+                <xsd:element name="group">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element ref="ns:L-NAD_45" minOccurs="0" maxOccurs="unbounded"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </element>
+        </config>
+        <pd:inputBindings>
+            <group>
+                <xsl:if test="exists($mapLocalFlow/root/Config[SegmentField=&quot;3035_CA&quot;])">
+                    <ns:L-NAD_45>
+                        <ns:S-NAD_45>
+                            <ns:E-3035_45_01>
+                                <xsl:value-of select="&quot;CA&quot;"/>
+                            </ns:E-3035_45_01>
+                            <ns:C-C082_45_02>
+                                <ns:E-3039_45_02.01>
+                                    <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                                </ns:E-3039_45_02.01>
+                            </ns:C-C082_45_02>
+                        </ns:S-NAD_45>
+                    </ns:L-NAD_45>
+                </xsl:if>
+            </group>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:group name="Group11 (1)">
+        <pd:type>com.tibco.pe.core.LoopGroup</pd:type>
+        <pd:resourceType>ae.process.group</pd:resourceType>
+        <pd:x>166</pd:x>
+        <pd:y>413</pd:y>
+        <pd:width>1028</pd:width>
+        <pd:height>261</pd:height>
+        <pd:collapsedWidth>57</pd:collapsedWidth>
+        <pd:collapsedHeight>70</pd:collapsedHeight>
+        <pd:groupVariables/>
+        <pd:joinToggle>inherit</pd:joinToggle>
+        <config>
+            <pd:groupType>inputLoop</pd:groupType>
+            <pd:serializable>false</pd:serializable>
+            <pd:over>$Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[ns1:PartyType='NPT']</pd:over>
+            <pd:iterationElementSlot>iGrp11_result2</pd:iterationElementSlot>
+            <pd:indexSlot>iGrp11_party_1</pd:indexSlot>
+            <pd:outSlot>acc_iGrp11_1</pd:outSlot>
+            <pd:activityOutputName>Map-Data-2</pd:activityOutputName>
+            <pd:accumulateOutput>true</pd:accumulateOutput>
+        </config>
+        <pd:inputBindings/>
+        <pd:expanded>true</pd:expanded>
+        <pd:transition>
+            <pd:from>start</pd:from>
+            <pd:to>MapPartyType-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Map-Data-2</pd:from>
+            <pd:to>end</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>NAD-1</pd:from>
+            <pd:to>getNAD-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="NAD_1"]) and tib:trim($MapPartyType-1/root/group/NAD_01)!=''</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group12-1</pd:from>
+            <pd:to>getGroup12-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group12_1"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getNAD-1</pd:from>
+            <pd:to>LOC-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>NAD-1</pd:from>
+            <pd:to>LOC-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group12-1</pd:from>
+            <pd:to>Group13-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup12-1</pd:from>
+            <pd:to>Group13-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>MapPartyType-1</pd:from>
+            <pd:to>NAD-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>LOC-1</pd:from>
+            <pd:to>getLOC-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="LOC_1"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getLOC-1</pd:from>
+            <pd:to>MOA-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>MOA-1</pd:from>
+            <pd:to>getMOA-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="MOA_1"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getMOA-1</pd:from>
+            <pd:to>Group12-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group13-1</pd:from>
+            <pd:to>getGroup13-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group13_1"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup13-1</pd:from>
+            <pd:to>Group14-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group14-1</pd:from>
+            <pd:to>getGroup14-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group14_1"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup14-1</pd:from>
+            <pd:to>Group15-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group15-1</pd:from>
+            <pd:to>getGroup15-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group15_1"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup15-1</pd:from>
+            <pd:to>Group16-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group16-1</pd:from>
+            <pd:to>getGroup16-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group16_1"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup16-1</pd:from>
+            <pd:to>Group17-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group17-1</pd:from>
+            <pd:to>getGroup17-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>xpath</pd:conditionType>
+            <pd:xpath>exists($mapLocalFlow/root/Config[SegmentField="Group17_1"])</pd:xpath>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>getGroup17-1</pd:from>
+            <pd:to>Map-Data-2</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>always</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group17-1</pd:from>
+            <pd:to>Map-Data-2</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group16-1</pd:from>
+            <pd:to>Group17-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group15-1</pd:from>
+            <pd:to>Group16-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group14-1</pd:from>
+            <pd:to>Group15-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>Group13-1</pd:from>
+            <pd:to>Group14-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>MOA-1</pd:from>
+            <pd:to>Group12-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:transition>
+            <pd:from>LOC-1</pd:from>
+            <pd:to>MOA-1</pd:to>
+            <pd:lineType>Default</pd:lineType>
+            <pd:lineColor>-16777216</pd:lineColor>
+            <pd:conditionType>otherwise</pd:conditionType>
+        </pd:transition>
+        <pd:activity name="NAD-1">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>341</pd:x>
+            <pd:y>481</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getNAD-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>335</pd:x>
+            <pd:y>593</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/NAD/getNAD.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType-1/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party_1"/>
+                    </iParty>
+                    <SCAC_CODE>
+                        <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                    </SCAC_CODE>
+                    <xsl:copy-of select="$iGrp11_result2/pfx:Party-Body-BillOfLading"/>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group12-1">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>569</pd:x>
+            <pd:y>481</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup12-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>584</pd:x>
+            <pd:y>582</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group12/getGroup12.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType-1/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="count($Start/root/pfx:Body-BillOfLading/pfx:Party-Body-BillOfLading[ns1:PartyType!=&quot;NPT&quot;])+$iGrp11_party_1"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                    <xsl:copy-of select="$iGrp11_result2/pfx:Party-Body-BillOfLading"/>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Map-Data-2">
+            <pd:type>com.tibco.plugin.mapper.MapperActivity</pd:type>
+            <pd:resourceType>ae.activities.MapperActivity</pd:resourceType>
+            <pd:x>1116</pd:x>
+            <pd:y>523</pd:y>
+            <config>
+                <element>
+                    <xsd:element name="group">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element ref="ns:L-NAD_45" minOccurs="0"/>
+                            </xsd:sequence>
+                        </xsd:complexType>
+                    </xsd:element>
+                </element>
+            </config>
+            <pd:inputBindings>
+                <group>
+                    <xsl:if test="exists($getNAD-1/group/ns:S-NAD_45)">
+                        <ns:L-NAD_45>
+                            <xsl:copy-of select="$getNAD-1/group/ns:S-NAD_45"/>
+                            <xsl:for-each select="$getGroup12-1/group/ns:L-CTA_48">
+                                <ns:L-CTA_48>
+                                    <xsl:if test="@ObjType">
+                                        <xsl:attribute name="ObjType">
+                                            <xsl:value-of select="@ObjType"/>
+                                        </xsl:attribute>
+                                    </xsl:if>
+                                    <ns:S-CTA_48>
+                                        <xsl:if test="ns:S-CTA_48/ns:E-3139_48_01">
+                                            <ns:E-3139_48_01>
+                                                <xsl:copy-of select="ns:S-CTA_48/ns:E-3139_48_01/@xsi:nil"/>
+                                                <xsl:value-of select="ns:S-CTA_48/ns:E-3139_48_01"/>
+                                            </ns:E-3139_48_01>
+                                        </xsl:if>
+                                        <xsl:copy-of select="ns:S-CTA_48/ns:C-C056_48_02"/>
+                                    </ns:S-CTA_48>
+                                    <xsl:for-each select="ns:S-COM_49">
+                                        <ns:S-COM_49>
+                                            <xsl:if test="@ObjType">
+                                                <xsl:attribute name="ObjType">
+                                                    <xsl:value-of select="@ObjType"/>
+                                                </xsl:attribute>
+                                            </xsl:if>
+                                            <xsl:for-each select="ns:C-C076_49_01">
+                                                <ns:C-C076_49_01>
+                                                    <ns:E-3148_49_01.01>
+                                                        <xsl:if test="ns:E-3148_49_01.01/@ObjType">
+                                                            <xsl:attribute name="ObjType">
+                                                                <xsl:value-of select="ns:E-3148_49_01.01/@ObjType"/>
+                                                            </xsl:attribute>
+                                                        </xsl:if>
+                                                        <xsl:value-of select="ns:E-3148_49_01.01"/>
+                                                    </ns:E-3148_49_01.01>
+                                                    <ns:E-3155_49_01.02>
+                                                        <xsl:if test="ns:E-3155_49_01.02/@ObjType">
+                                                            <xsl:attribute name="ObjType">
+                                                                <xsl:value-of select="ns:E-3155_49_01.02/@ObjType"/>
+                                                            </xsl:attribute>
+                                                        </xsl:if>
+                                                        <xsl:value-of select="ns:E-3155_49_01.02"/>
+                                                    </ns:E-3155_49_01.02>
+                                                </ns:C-C076_49_01>
+                                            </xsl:for-each>
+                                        </ns:S-COM_49>
+                                    </xsl:for-each>
+                                </ns:L-CTA_48>
+                            </xsl:for-each>
+                        </ns:L-NAD_45>
+                    </xsl:if>
+                </group>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="MapPartyType-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>242</pd:x>
+            <pd:y>492</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Interface_MapPartyType_1.process</processName>
+                <processNameXPath>concat($mapPath/root/pathPrefix,$mapPath/root/convertPath,'/MapPartyType',$Start/root/Flows/ConvertType/Config[SegmentField="MapPartyType_1" and SegmentId=$mapPath/root/segmentID]/ProcessId,'_1.process')</processNameXPath>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <group>
+                        <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                        <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                        <iParty>
+                            <xsl:value-of select="$iGrp11_party_1"/>
+                        </iParty>
+                        <xsl:copy-of select="$iGrp11_result2/pfx:Party-Body-BillOfLading"/>
+                    </group>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="LOC-1">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>417</pd:x>
+            <pd:y>477</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getLOC-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>416</pd:x>
+            <pd:y>587</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/LOC/getLOC.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType-1/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party_1"/>
+                    </iParty>
+                    <SCAC_CODE>
+                        <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                    </SCAC_CODE>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="MOA-1">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>497</pd:x>
+            <pd:y>473</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getMOA-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>501</pd:x>
+            <pd:y>584</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/MOA/getMOA.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType-1/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party_1"/>
+                    </iParty>
+                    <SCAC_CODE>
+                        <xsl:value-of select="$Start/root/SCAC_CODE"/>
+                    </SCAC_CODE>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group13-1">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>653</pd:x>
+            <pd:y>472</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup13-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>665</pd:x>
+            <pd:y>578</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group13/getGroup13.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType-1/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party_1"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group14-1">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>735</pd:x>
+            <pd:y>472</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup14-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>756</pd:x>
+            <pd:y>580</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group14/getGroup14.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType-1/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party_1"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group15-1">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>819</pd:x>
+            <pd:y>474</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup15-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>851</pd:x>
+            <pd:y>572</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group15/getGroup15.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType-1/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party_1"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group16-1">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>930</pd:x>
+            <pd:y>482</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup16-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>950</pd:x>
+            <pd:y>578</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group16/getGroup16.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType-1/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party_1"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+        <pd:activity name="Group17-1">
+            <pd:type>com.tibco.plugin.timer.NullActivity</pd:type>
+            <pd:resourceType>ae.activities.null</pd:resourceType>
+            <pd:x>1016</pd:x>
+            <pd:y>480</pd:y>
+            <config/>
+            <pd:inputBindings/>
+        </pd:activity>
+        <pd:activity name="getGroup17-1">
+            <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+            <pd:resourceType>ae.process.subprocess</pd:resourceType>
+            <pd:x>1021</pd:x>
+            <pd:y>582</pd:y>
+            <config>
+                <processName>/Processes/AppProcess/X2T/BLXMLO-to-IFTMCS/Segment/Group11/Group17/getGroup17.process</processName>
+                <processNameXPath/>
+            </config>
+            <pd:inputBindings>
+                <root>
+                    <xsl:copy-of select="$Start/root/Flows"/>
+                    <xsl:copy-of select="$Start/root/ConversionData"/>
+                    <xsl:copy-of select="$Start/root/pfx:Body-BillOfLading"/>
+                    <pathPrefix>
+                        <xsl:value-of select="$Start/root/pathPrefix"/>
+                    </pathPrefix>
+                    <xsl:copy-of select="$Start/root/pfx:Header-BillOfLading"/>
+                    <NAD_01>
+                        <xsl:value-of select="$MapPartyType-1/root/group/NAD_01"/>
+                    </NAD_01>
+                    <ShipperFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ShipperFlag"/>
+                    </ShipperFlag>
+                    <ConsigneeFlag>
+                        <xsl:value-of select="$MapPartyType-1/root/group/ConsigneeFlag"/>
+                    </ConsigneeFlag>
+                    <iParty>
+                        <xsl:value-of select="$iGrp11_party_1"/>
+                    </iParty>
+                    <xsl:if test="$Start/root/INDEX-EDIMAIN">
+                        <INDEX-EDIMAIN>
+                            <xsl:value-of select="$Start/root/INDEX-EDIMAIN"/>
+                        </INDEX-EDIMAIN>
+                    </xsl:if>
+                </root>
+            </pd:inputBindings>
+        </pd:activity>
+    </pd:group>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>mapPath</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapPath</pd:from>
+        <pd:to>mapLocalFlow</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapLocalFlow</pd:from>
+        <pd:to>Group11</pd:to>
+        <pd:lineType>Multiple Bends</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>xpath</pd:conditionType>
+        <pd:xpath>exists($mapLocalFlow/root/Config)</pd:xpath>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Map-Data-1</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Group11 (1)</pd:from>
+        <pd:to>Map-Data-1</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>Group11</pd:from>
+        <pd:to>Group11 (1)</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>mapLocalFlow</pd:from>
+        <pd:to>Map-Data-1</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>otherwise</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>

@@ -47,7 +47,7 @@ public class CUS_CS2BLXML_310_GTNEXUS_VFCGTN {
 	BigDecimal thousand = new BigDecimal (1000);
 	public void generateBody(Body current_Body, Map<cs.b2b.core.mapping.bean.bl.Container, List<cs.b2b.core.mapping.bean.bl.Cargo>> associateContainerAndCargo,List<FreightCharge> filteredFreightCharge, List<FreightChargeCNTR> filteredFreightChargeCNTR, MarkupBuilder outXml) {
 
-		outXml {
+		outXml.'Loop_ST' {
 			'ST' {
 				'E143_01' '310'
 				'E329_02' '-999'

@@ -1,9 +1,16 @@
-import cs.b2b.core.common.util.StringUtil
-import cs.b2b.core.mapping.bean.bl.*
-import cs.b2b.core.mapping.util.XmlBeanParser
+import com.sun.javafx.binding.StringFormatter
+import cs.b2b.core.mapping.bean.bl.Cargo
 import groovy.xml.MarkupBuilder
 
 import java.sql.Connection
+
+import cs.b2b.core.common.util.StringUtil
+import cs.b2b.core.mapping.bean.bl.BillOfLading
+import cs.b2b.core.mapping.bean.bl.Body
+import cs.b2b.core.mapping.bean.bl.FreightCharge
+import cs.b2b.core.mapping.bean.bl.FreightChargeCNTR
+import cs.b2b.core.mapping.bean.bl.OceanLeg
+import cs.b2b.core.mapping.util.XmlBeanParser
 
 public class CUS_CS2BLXML_D99B_DUMMYBLD99Bb {
 
@@ -53,7 +60,7 @@ public class CUS_CS2BLXML_D99B_DUMMYBLD99Bb {
 			Map<String,String> blTypeMap = ['Original':'705', 'Sea WayBill':'710']
 			Map<String,String> transactionInformationActionMap = ['DEL':'1', 'NEW':'9', 'UPD':'5']
 			'C002_01' {
-				'E1001_01' blTypeMap[current_Body.GeneralInformation.BLType] ?: ""
+				'E1001_01' blTypeMap[current_Body.GeneralInformation.BLType] ? blTypeMap[current_Body.GeneralInformation.BLType] : ""
 				'E1131_02' ''
 				'E3055_03' ''
 				'E1000_04' current_Body.GeneralInformation.BLType
@@ -2752,7 +2759,7 @@ public class CUS_CS2BLXML_D99B_DUMMYBLD99Bb {
 		}
 
 		writer.close();
-
+		
 		return result;
 	}
 
