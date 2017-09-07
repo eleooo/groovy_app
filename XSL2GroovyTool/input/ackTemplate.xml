@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--用XMLSpy v2012产生的 XML文件(http://www.altova.com)-->
+<Acknowledgement xsi:schemaLocation="http://www.cargosmart.com/Acknowledgement Ack.xsd" xmlns="http://www.cargosmart.com/Acknowledgement" xmlns:cs="http://www.cargosmart.com/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header>
+		<cs:ControlNumber>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</cs:ControlNumber>
+		<cs:MsgDT>
+			<cs:GMT>2001-12-17T09:30:47Z</cs:GMT>
+			<cs:LocDT TimeZone="" CSTimeZone="">2001-12-17T09:30:47Z</cs:LocDT>
+		</cs:MsgDT>
+		<cs:MsgDirection>O</cs:MsgDirection>
+		<cs:MsgType>EMAN</cs:MsgType>
+		<cs:SenderID>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</cs:SenderID>
+		<cs:ReceiverID>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</cs:ReceiverID>
+		<cs:Action>RSD</cs:Action>
+		<cs:Version>3.14159265358979E0</cs:Version>
+		<cs:InterchangeMessageID>a</cs:InterchangeMessageID>
+		<cs:FileName/>
+		<cs:DataSource>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</cs:DataSource>
+		<cs:TargetCustomCountryCode>aa</cs:TargetCustomCountryCode>
+		<cs:NVOProperty>
+			<cs:Name>String</cs:Name>
+			<cs:Value>String</cs:Value>
+		</cs:NVOProperty>
+	</Header>
+	<Body>
+		<TransactionInformation>
+			<cs:MessageID>a</cs:MessageID>
+			<cs:GroupControlNumber>a</cs:GroupControlNumber>
+			<cs:InterchangeTransactionID>a</cs:InterchangeTransactionID>
+		</TransactionInformation>
+		<EventInformation>
+			<cs:EventCode>cntr_picked_at_port</cs:EventCode>
+			<cs:EventDescription>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</cs:EventDescription>
+			<cs:EventDT>
+				<cs:GMT>2001-12-17T09:30:47Z</cs:GMT>
+				<cs:LocDT TimeZone="" CSTimeZone="">2001-12-17T09:30:47Z</cs:LocDT>
+			</cs:EventDT>
+		</EventInformation>
+		<GeneralInformation>
+			<CustomerTradingPartnerID>aaaaaaaaaaaaaaaaaaaa</CustomerTradingPartnerID>
+			<MessageID>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</MessageID>
+			<ControlNumber>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</ControlNumber>
+			<InterchangeMessageID>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</InterchangeMessageID>
+			<GroupControlNumber>aaaaaaaaaaaaaaaaaaaa</GroupControlNumber>
+			<InterchangeTransactionID>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</InterchangeTransactionID>
+			<CSReferenceNumber>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</CSReferenceNumber>
+			<MessageStatusCode>E</MessageStatusCode>
+			<MessageStatusDescription>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</MessageStatusDescription>
+			<BookingNumber>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</BookingNumber>
+			<SCAC>aaaaaaaaaaaaaaaaaaaa</SCAC>
+			<SPCompanyID>aaaaaaaaaaaaaaaaaaaa</SPCompanyID>
+		</GeneralInformation>
+		<ExternalReference>
+			<cs:CSReferenceType>SEN</cs:CSReferenceType>
+			<cs:ReferenceNumber>a</cs:ReferenceNumber>
+			<cs:ReferenceDescription/>
+			<EDIReferenceType>aaaaa</EDIReferenceType>
+		</ExternalReference>
+		<Notes>
+			<Code>aaaaa</Code>
+			<Description>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Description>
+			<IsOpenToCustomer>N</IsOpenToCustomer>
+		</Notes>
+	</Body>
+</Acknowledgement>

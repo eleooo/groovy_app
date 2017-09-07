@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!-- OLL Mapping XSLT Definition -->
+<!-- Created By: Jackson -->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:notelog="http://www.oocllogistics.com/notelog" xmlns:ns0="http://www.oocllogistics.com/po" xmlns:datatype="http://www.oocllogistics.com/datatype" xmlns:header="http://www.oocllogistics.com/header" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exclude-result-prefixes="tib OLLMappingLib" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:OLLMappingLib="java://oll.b2b.designer.javacustomfunction.MappingLibrary">
+	<xsl:param name="CdeConversionData"/>
+	<xsl:output method="xml"/>
+	<xsl:template match="/">
+		<xsl:apply-templates select="/Order"/>
+	</xsl:template>
+	<xsl:template match="/Order">
+		<ns0:po_file_root>
+			<ns0:file_header>
+				<xsl:variable name="var_v1" select="OLLMappingLib:OutputFixValue(&quot;CARHARTT&quot;)"/>
+				<header:SENDER_ID>
+					<xsl:value-of select="$var_v1"/>
+				</header:SENDER_ID>
+				<header:RECIPIENT_ID>
+					<xsl:text>POP</xsl:text>
+				</header:RECIPIENT_ID>
+				<xsl:variable name="var_v2" select="substring(current-dateTime(),1,19)"/>
+				<xsl:variable name="var_v3" select="OLLMappingLib:ConvertXMLDateTimetoYYYYMMDD(string($var_v2))"/>
+				<header:MSG_CTRL_REF_NUM>
+					<xsl:value-of select="$var_v3"/>
+				</header:MSG_CTRL_REF_NUM>
+				<xsl:variable name="var_v4" select="substring(current-dateTime(),1,19)"/>
+				<header:MSG_SENT_DATETIME>
+					<xsl:value-of select="$var_v4"/>
+				</header:MSG_SENT_DATETIME>
+				<xsl:variable name="var_v5" select="substring(current-dateTime(),1,19)"/>
+				<header:MSG_REC_DATETIME>
+					<xsl:value-of select="$var_v5"/>
+				</header:MSG_REC_DATETIME>
+				<header:MSG_STATUS>
+					<xsl:text>N</xsl:text>
+				</header:MSG_STATUS>
+				<header:MSG_TYPE>
+					<xsl:text>PO</xsl:text>
+				</header:MSG_TYPE>
+				<header:MSG_DEF_VER>
+					<xsl:text>2.01</xsl:text>
+				</header:MSG_DEF_VER>
+			</ns0:file_header>
+			<xsl:for-each select="orderDetail">
+				<xsl:variable name="var_v13" select="string(orderFunctionCode/text())"/>
+				<!--<xsl:variable name="var_v15" select="substring(current-dateTime(),1,19)"/>-->
+				<xsl:variable name="var_v20" select="OLLMappingLib:LogicalNe(string(orderTerms/shipwindowbegin/text()) , &quot;&quot;)"/>
+				<ns0:po_msg_root>
+					<ns0:msg_header>
+						<xsl:variable name="var_v6" select="OLLMappingLib:OutputFixValue(&quot;CARHARTT&quot;)"/>
+						<header:SENDER_ID>
+							<xsl:value-of select="$var_v6"/>
+						</header:SENDER_ID>
+						<header:RECIPIENT_ID>
+							<xsl:text>POP</xsl:text>
+						</header:RECIPIENT_ID>
+						<xsl:variable name="var_v7" select="substring(current-dateTime(),1,19)"/>
+						<xsl:variable name="var_v8" select="OLLMappingLib:ConvertXMLDateTimetoYYYYMMDD(string($var_v7))"/>
+						<header:MSG_CTRL_REF_NUM>
+							<xsl:value-of select="$var_v8"/>
+						</header:MSG_CTRL_REF_NUM>
+						<xsl:variable name="var_v9" select="substring(current-dateTime(),1,19)"/>
+						<header:MSG_SENT_DATETIME>
+							<xsl:value-of select="$var_v9"/>
+						</header:MSG_SENT_DATETIME>
+						<xsl:variable name="var_v10" select="OLLMappingLib:CodeConversionWithDefaultValue(&quot;Carhartt_PO_OrderFunction-OLLMsgStatus&quot; , string(orderFunctionCode/text()) , &quot;N&quot; ,tib:render-xml($CdeConversionData))"/>
+						<header:MSG_STATUS>
+							<xsl:value-of select="$var_v10"/>
+						</header:MSG_STATUS>
+						<header:MSG_TYPE>
+							<xsl:text>PO</xsl:text>
+						</header:MSG_TYPE>
+						<header:MSG_DEF_VER>
+							<xsl:text>2.01</xsl:text>
+						</header:MSG_DEF_VER>
+						<header:data_header>
+							<header:to>
+								<xsl:text>POP</xsl:text>
+							</header:to>
+							<xsl:variable name="var_v11" select="OLLMappingLib:OutputFixValue(&quot;CARHARTT&quot;)"/>
+							<header:from>
+								<xsl:value-of select="$var_v11"/>
+							</header:from>
+							<xsl:variable name="var_v12" select="substring(current-dateTime(),1,19)"/>
+							<header:time_stamp>
+								<xsl:value-of select="$var_v12"/>
+							</header:time_stamp>
+							<header:header_msg_type>
+								<xsl:text>PO</xsl:text>
+							</header:header_msg_type>
+							<header:body_msg_type>
+								<xsl:text>PO</xsl:text>
+							</header:body_msg_type>
+							<header:msg_ver>
+								<xsl:text>2.01</xsl:text>
+							</header:msg_ver>
+						</header:data_header>
+					</ns0:msg_header>
+					<ns0:ext_po_num>
+						<xsl:value-of select="poNumber/text()"/>
+					</ns0:ext_po_num>
+					<ns0:po_num>
+						<xsl:value-of select="poNumber/text()"/>
+					</ns0:po_num>
+					<ns0:cust>
+						<datatype:PARTNER_NAME>
+							<xsl:text>CARHARTT</xsl:text>
+						</datatype:PARTNER_NAME>
+					</ns0:cust>
+					<ns0:csgn>
+						<datatype:PARTNER_NAME>
+							<xsl:text>CARHARTT</xsl:text>
+						</datatype:PARTNER_NAME>
+					</ns0:csgn>
+					<ns0:byr>
+						<datatype:PARTNER_NAME>
+							<xsl:value-of select="orderIdentification/buyerIdentification/buyerName/text()"/>
+						</datatype:PARTNER_NAME>
+						<datatype:PARTNER_EXT_REF_NUM>
+							<xsl:value-of select="orderIdentification/buyerIdentification/buyerCode/text()"/>
+						</datatype:PARTNER_EXT_REF_NUM>
+						<datatype:ADDR>
+							<datatype:country_name>
+								<xsl:value-of select="orderIdentification/buyerIdentification/buyerCtry/text()"/>
+							</datatype:country_name>
+							<datatype:state_code>
+								<xsl:value-of select="orderIdentification/buyerIdentification/buyerStateCd/text()"/>
+							</datatype:state_code>
+							<datatype:city>
+								<datatype:LOC_NAME>
+									<xsl:value-of select="orderIdentification/buyerIdentification/buyerCity/text()"/>
+								</datatype:LOC_NAME>
+							</datatype:city>
+							<datatype:postal_code>
+								<xsl:value-of select="orderIdentification/buyerIdentification/buyerZip/text()"/>
+							</datatype:postal_code>
+							<datatype:ADDR_LINE>
+								<xsl:value-of select="orderIdentification/buyerIdentification/buyerAdd1/text()"/>
+							</datatype:ADDR_LINE>
+							<xsl:if test="orderIdentification/buyerIdentification/buyerAdd2">
+								<datatype:ADDR_LINE>
+									<xsl:value-of select="orderIdentification/buyerIdentification/buyerAdd2/text()"/>
+								</datatype:ADDR_LINE>
+							</xsl:if>
+							<xsl:if test="orderIdentification/buyerIdentification/buyerAdd3">
+								<datatype:ADDR_LINE>
+									<xsl:value-of select="orderIdentification/buyerIdentification/buyerAdd3/text()"/>
+								</datatype:ADDR_LINE>
+							</xsl:if>
+						</datatype:ADDR>
+					</ns0:byr>
+					<ns0:vdr>
+						<datatype:PARTNER_NAME>
+							<xsl:value-of select="orderIdentification/sellerIdentification/sellerName/text()"/>
+						</datatype:PARTNER_NAME>
+						<datatype:PARTNER_EXT_REF_NUM>
+							<xsl:value-of select="orderIdentification/sellerIdentification/sellerCode/text()"/>
+						</datatype:PARTNER_EXT_REF_NUM>
+						<datatype:ADDR>
+							<xsl:if test="orderIdentification/sellerIdentification/sellerState">
+								<datatype:state_name>
+									<xsl:value-of select="orderIdentification/sellerIdentification/sellerState/text()"/>
+								</datatype:state_name>
+							</xsl:if>
+							<datatype:city>
+								<xsl:if test="orderIdentification/sellerIdentification/sellerCity">
+									<datatype:LOC_NAME>
+										<xsl:value-of select="orderIdentification/sellerIdentification/sellerCity/text()"/>
+									</datatype:LOC_NAME>
+								</xsl:if>
+								<xsl:if test="orderIdentification/sellerIdentification/sellerCtry">
+									<datatype:COUNTRY_NAME>
+										<xsl:value-of select="orderIdentification/sellerIdentification/sellerCtry/text()"/>
+									</datatype:COUNTRY_NAME>
+								</xsl:if>
+							</datatype:city>
+							<xsl:if test="orderIdentification/sellerIdentification/sellerZip">
+								<datatype:postal_code>
+									<xsl:value-of select="orderIdentification/sellerIdentification/sellerZip/text()"/>
+								</datatype:postal_code>
+							</xsl:if>
+							<datatype:ADDR_LINE>
+								<xsl:value-of select="orderIdentification/sellerIdentification/sellerAdd1/text()"/>
+							</datatype:ADDR_LINE>
+							<xsl:if test="orderIdentification/sellerIdentification/sellerAdd2">
+								<datatype:ADDR_LINE>
+									<xsl:value-of select="orderIdentification/sellerIdentification/sellerAdd2/text()"/>
+								</datatype:ADDR_LINE>
+							</xsl:if>
+							<xsl:if test="orderIdentification/sellerIdentification/sellerAdd3">
+								<datatype:ADDR_LINE>
+									<xsl:value-of select="orderIdentification/sellerIdentification/sellerAdd3/text()"/>
+								</datatype:ADDR_LINE>
+							</xsl:if>
+						</datatype:ADDR>
+					</ns0:vdr>
+					<ns0:po_attr>
+						<xsl:variable name="var_v14" select="OLLMappingLib:CodeConversionWithDefaultValue(&quot;Carhartt_PO_OrderFunction-OLLMsgDataStatusCode&quot; , $var_v13 , &quot;STATUS_ACTIVE&quot; ,tib:render-xml($CdeConversionData))"/>
+						<datatype:data_status_code>
+							<xsl:value-of select="$var_v14"/>
+						</datatype:data_status_code>
+						<xsl:variable name="var_v15" select="OLLMappingLib:ConvertDatetimeFormat(string(orderTerms/issueDate/text()) , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+						<xsl:variable name="var_v16" select="OLLMappingLib:LogicalNe(string($var_v15) , &quot;&quot;)"/>
+						<xsl:if test="$var_v16">
+							<xsl:variable name="var_v17" select="string(orderTerms/issueDate/text())"/>
+							<datatype:issue_date>
+								<xsl:variable name="var_v18" select="OLLMappingLib:ConvertDatetimeFormat($var_v17 , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+								<datatype:record_datetime>
+									<xsl:value-of select="$var_v18"/>
+								</datatype:record_datetime>
+							</datatype:issue_date>
+						</xsl:if>
+					</ns0:po_attr>
+					<xsl:for-each select="orderTerms/paymentterms">
+						<xsl:variable name="var_v19" select="OLLMappingLib:LogicalNe(string(./text()) , &quot;&quot;)"/>
+						<xsl:if test="$var_v19">
+							<ns0:payment_method>
+								<datatype:payment_method_code>
+									<xsl:value-of select="./text()"/>
+								</datatype:payment_method_code>
+							</ns0:payment_method>
+						</xsl:if>
+					</xsl:for-each>
+					<ns0:ship_via>
+						<datatype:ship_via_ext_ref>
+							<xsl:value-of select="orderTerms/shipmentMethodCode/text()"/>
+						</datatype:ship_via_ext_ref>
+					</ns0:ship_via>
+					<ns0:por>
+						<datatype:cust_ref>
+							<xsl:value-of select="orderTerms/incotermLocationCode/text()"/>
+						</datatype:cust_ref>
+					</ns0:por>
+					<xsl:call-template name="FNDTemplate">
+						<xsl:with-param name="FinalDestination" select="string(orderTerms/shipmentFinalDestination/text())"/>
+						<xsl:with-param name="ShipmentDestinationKey" select="string(orderTerms/shipmentDestination/destinationKey/text())"/>
+						<xsl:with-param name="ShipmentDestinationName" select="string(orderTerms/shipmentDestination/destName/text())"/>
+					</xsl:call-template>
+					<ns0:ship_window>
+						<xsl:if test="$var_v20">
+							<xsl:variable name="var_v21" select="string(orderTerms/shipwindowbegin/text())"/>
+							<datatype:earliest_pol_etd_date>
+								<xsl:variable name="var_v22" select="OLLMappingLib:ConvertYYYYMMDDtoXMLDateTime($var_v21)"/>
+								<datatype:record_datetime>
+									<xsl:value-of select="$var_v22"/>
+								</datatype:record_datetime>
+							</datatype:earliest_pol_etd_date>
+						</xsl:if>
+						<xsl:for-each select="orderTerms/reference">
+							<xsl:variable name="var_v23" select="OLLMappingLib:LogicalEq(string(type/text()) , &quot;RECEIVE_DT&quot;)"/>
+							<xsl:variable name="var_v24" select="OLLMappingLib:ConvertDatetimeFormat(string(value/text()) , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+							<xsl:variable name="var_v25" select="string(value/text())"/>
+							<xsl:variable name="var_v26" select="OLLMappingLib:ConvertDatetimeFormat($var_v25 , &quot;yyyy-MM-dd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+							<xsl:variable name="var_v27" select="OLLMappingLib:returnFNDDate(string($var_v24) , string($var_v26))"/>
+							<xsl:variable name="var_v28" select="OLLMappingLib:LogicalNe(string($var_v27) , &quot;&quot;)"/>
+							<xsl:variable name="var_v29" select="OLLMappingLib:LogicalAnd(string($var_v23) , string($var_v28))"/>
+							<xsl:if test="$var_v29">
+								<datatype:target_pol_etd_date>
+									<xsl:variable name="var_v30" select="OLLMappingLib:ConvertDatetimeFormat($var_v25 , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+									<xsl:variable name="var_v31" select="OLLMappingLib:ConvertDatetimeFormat($var_v25 , &quot;yyyy-MM-dd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+									<xsl:variable name="var_v32" select="OLLMappingLib:returnFNDDate(string($var_v30) , string($var_v31))"/>
+									<datatype:record_datetime>
+										<xsl:value-of select="$var_v32"/>
+									</datatype:record_datetime>
+								</datatype:target_pol_etd_date>
+							</xsl:if>
+						</xsl:for-each>
+					</ns0:ship_window>
+					<ns0:incoterm>
+						<datatype:intcoterm_code>
+							<xsl:value-of select="orderTerms/incotermCode/text()"/>
+						</datatype:intcoterm_code>
+						<datatype:intcoterm_name>
+							<xsl:value-of select="orderTerms/incotermCode/text()"/>
+						</datatype:intcoterm_name>
+						<datatype:intcoterm_ext_ref>
+							<xsl:value-of select="orderTerms/incotermCode/text()"/>
+						</datatype:intcoterm_ext_ref>
+					</ns0:incoterm>
+					<xsl:for-each select="orderTerms/reference">
+						<xsl:variable name="var_v33" select="string(type/text())"/>
+						<xsl:variable name="var_v34" select="OLLMappingLib:LogicalEq($var_v33 , &quot;SEASON&quot;)"/>
+						<xsl:if test="$var_v34">
+							<ns0:cust_event_ref>
+								<xsl:value-of select="value/text()"/>
+							</ns0:cust_event_ref>
+						</xsl:if>
+					</xsl:for-each>
+					<ns0:ship_to>
+						<datatype:PARTNER_NAME>
+							<xsl:value-of select="orderTerms/shipmentDestination/destName/text()"/>
+						</datatype:PARTNER_NAME>
+						<datatype:ADDR>
+							<datatype:country_name>
+								<xsl:value-of select="orderTerms/shipmentDestination/destctrycd/text()"/>
+							</datatype:country_name>
+							<datatype:state_name>
+								<xsl:value-of select="orderTerms/shipmentDestination/deststate/text()"/>
+							</datatype:state_name>
+							<datatype:city>
+								<datatype:LOC_NAME>
+									<xsl:value-of select="orderTerms/shipmentDestination/destcity/text()"/>
+								</datatype:LOC_NAME>
+								<datatype:COUNTRY_NAME>
+									<xsl:value-of select="orderTerms/shipmentDestination/destctrycd/text()"/>
+								</datatype:COUNTRY_NAME>
+							</datatype:city>
+							<datatype:postal_code>
+								<xsl:value-of select="orderTerms/shipmentDestination/destzip/text()"/>
+							</datatype:postal_code>
+							<datatype:ADDR_LINE>
+								<xsl:value-of select="orderTerms/shipmentDestination/destAdd1/text()"/>
+							</datatype:ADDR_LINE>
+							<datatype:ADDR_LINE>
+								<xsl:value-of select="orderTerms/shipmentDestination/destAdd2/text()"/>
+							</datatype:ADDR_LINE>
+							<datatype:ADDR_LINE>
+								<xsl:value-of select="orderTerms/shipmentDestination/destAdd3/text()"/>
+							</datatype:ADDR_LINE>
+						</datatype:ADDR>
+					</ns0:ship_to>
+					<xsl:for-each select="orderLineItem">
+						<xsl:variable name="var_v35" select="OLLMappingLib:StringUpperCase(string(itemTypeCode/text()))"/>
+						<xsl:variable name="var_v36" select="OLLMappingLib:LogicalEq(&quot;SUB&quot; , string($var_v35))"/>
+						<xsl:if test="$var_v36">
+							<xsl:variable name="var_v40" select="OLLMappingLib:LogicalNe(string(StandardCaseQty/text()) , &quot;&quot;)"/>
+							<xsl:variable name="var_v43" select="ceiling(baseLineItem[1]/quantity)"/>
+							<xsl:variable name="var_v53" select="string(baseLineItem[1]/quantity/text())"/>
+							<xsl:variable name="var_v54" select="ceiling($var_v53)"/>
+							<ns0:po_item>
+								<datatype:item_num>
+									<xsl:value-of select="baseLineItem[1]/itemSequenceNumber/text()"/>
+								</datatype:item_num>
+								<datatype:sku>
+									<datatype:STYLE_CODE>
+										<xsl:value-of select="parentItemKey/text()"/>
+									</datatype:STYLE_CODE>
+									<xsl:for-each select="baseLineItem[1]/itemReference">
+										<xsl:variable name="var_v37" select="string(type/text())"/>
+										<xsl:variable name="var_v38" select="OLLMappingLib:StringUpperCase($var_v37)"/>
+										<xsl:variable name="var_v39" select="OLLMappingLib:LogicalEq(&quot;SIZE&quot; , string($var_v38))"/>
+										<xsl:if test="$var_v39">
+											<datatype:SIZE_CODE>
+												<xsl:value-of select="value/text()"/>
+											</datatype:SIZE_CODE>
+										</xsl:if>
+									</xsl:for-each>
+									<xsl:call-template name="ItemDescriptionTemplate">
+										<xsl:with-param name="paramParentItemKey" select="string(parentItemKey/text())"/>
+										<xsl:with-param name="paramHTSDEsc" select="string(HTS_Code_Desc/text())"/>
+									</xsl:call-template>
+								</datatype:sku>
+								<xsl:if test="$var_v40">
+									<xsl:variable name="var_v44" select="string(StandardCaseQty/text())"/>
+									<xsl:variable name="var_v45" select="ceiling($var_v44)"/>
+									<datatype:pack_factor>
+										<xsl:value-of select="$var_v45"/>
+									</datatype:pack_factor>
+								</xsl:if>
+								<xsl:variable name="var_v44" select="OLLMappingLib:returnQTY(string($var_v43))"/>
+								<datatype:lowest_uom_qty>
+									<xsl:value-of select="$var_v44"/>
+								</datatype:lowest_uom_qty>
+								<ns0:ship_windows>
+									<xsl:for-each select="baseLineItem[1]/value">
+										<xsl:variable name="var_v45" select="string(./text())"/>
+										<xsl:variable name="var_v46" select="OLLMappingLib:ConvertDatetimeFormat($var_v45 , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+										<xsl:variable name="var_v47" select="OLLMappingLib:LogicalNe(string($var_v46) , &quot;&quot;)"/>
+										<xsl:if test="$var_v47">
+											<datatype:target_pol_etd_date>
+												<xsl:variable name="var_v48" select="OLLMappingLib:ConvertDatetimeFormat($var_v45 , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+												<datatype:record_datetime>
+													<xsl:value-of select="$var_v48"/>
+												</datatype:record_datetime>
+											</datatype:target_pol_etd_date>
+										</xsl:if>
+									</xsl:for-each>
+									<xsl:for-each select="baseLineItem[1]/atpdate">
+										<xsl:variable name="var_v49" select="string(./text())"/>
+										<xsl:variable name="var_v50" select="OLLMappingLib:ConvertDatetimeFormat($var_v49 , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+										<xsl:variable name="var_v51" select="OLLMappingLib:LogicalNe(string($var_v50) , &quot;&quot;)"/>
+										<xsl:if test="$var_v51">
+											<datatype:fnd_eta_date>
+												<xsl:variable name="var_v52" select="OLLMappingLib:ConvertDatetimeFormat($var_v49 , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00'&quot; , &quot;&quot; , &quot;&quot;)"/>
+												<datatype:record_datetime>
+													<xsl:value-of select="$var_v52"/>
+												</datatype:record_datetime>
+											</datatype:fnd_eta_date>
+										</xsl:if>
+									</xsl:for-each>
+								</ns0:ship_windows>
+								<ns0:vdr_sku>
+									<datatype:STYLE_CODE>
+										<xsl:value-of select="baseLineItem[1]/buyerNumber/text()"/>
+									</datatype:STYLE_CODE>
+								</ns0:vdr_sku>
+								<ns0:item_attr>
+									<xsl:variable name="var_v55" select="OLLMappingLib:ReturnItemStatus(string($var_v54))"/>
+									<datatype:data_status_code>
+										<xsl:value-of select="$var_v55"/>
+									</datatype:data_status_code>
+								</ns0:item_attr>
+								<xsl:call-template name="LowestUOMCostTemplate">
+									<xsl:with-param name="paramUnitPrice" select="string(lineItemPrice/pricePerUnit/text())"/>
+								</xsl:call-template>
+								<xsl:call-template name="LowestUOMPriceTemplate">
+									<xsl:with-param name="paramUnitPrice" select="string(lineItemPrice/pricePerUnit/text())"/>
+								</xsl:call-template>
+								<ns0:upc_ref>
+									<xsl:value-of select="UPCnumber/text()"/>
+								</ns0:upc_ref>
+								<xsl:call-template name="DetailCustomizedFieldTemplate"/>
+							</ns0:po_item>
+						</xsl:if>
+					</xsl:for-each>
+					<xsl:call-template name="HeaderCustomizedFieldsTemplate">
+						<xsl:with-param name="paramDestinationState" select="string(orderTerms/shipmentDestination/deststate/text())"/>
+						<xsl:with-param name="UPCnumber1" select="orderLineItem/UPCnumber1/text()"/>
+						<xsl:with-param name="paramOrderType" select="string(../header/orderType/text())"/>
+						<xsl:with-param name="paramMoveType" select="string(orderTerms/movetype/text())"/>
+						<xsl:with-param name="paramDestCity" select="string(orderTerms/shipmentDestination/destcity/text())"/>
+					</xsl:call-template>
+					<xsl:for-each select="orderTerms/additionalCondition">
+						<xsl:variable name="var_v56" select="position()"/>
+						<xsl:variable name="var_v57" select="concat(string(additionalConditionText/text()) , &quot; - &quot; , string(additionalConditionAcknowledgementCode/text()))"/>
+						<ns0:po_remark>
+							<xsl:attribute name="xsi:type"><xsl:value-of select="'datatype:_remark'"/></xsl:attribute>
+							<datatype:seq>
+								<xsl:value-of select="$var_v56"/>
+							</datatype:seq>
+							<datatype:remark_code>
+								<xsl:text>REMARK</xsl:text>
+							</datatype:remark_code>
+							<datatype:remark_text>
+								<xsl:value-of select="$var_v57"/>
+							</datatype:remark_text>
+						</ns0:po_remark>
+					</xsl:for-each>
+				</ns0:po_msg_root>
+			</xsl:for-each>
+		</ns0:po_file_root>
+	</xsl:template>
+	<xsl:template name="HeaderCustomizedFieldsTemplate">
+		<xsl:param name="paramDestinationState"/>
+		<xsl:param name="paramOrderType"/>
+		<xsl:param name="paramMoveType"/>
+		<xsl:param name="paramDestCity"/>
+		<xsl:param name="UPCnumber1"/>
+		<!--<xsl:variable name="sType" select="orderTerms/reference[1]/type/text()"/>-->
+		<xsl:variable name="sSeason" select="orderTerms/reference[type='SEASON']/value/text()"/>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_HEADER_GF_01'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="$paramDestinationState"/>
+			</xsl:element>
+		</xsl:element>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_HEADER_GF_02'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="$paramOrderType"/>
+			</xsl:element>
+		</xsl:element>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_HEADER_GF_03'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="$paramDestCity"/>
+			</xsl:element>
+		</xsl:element>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_HEADER_GF_04'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="$paramMoveType"/>
+			</xsl:element>
+		</xsl:element>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_HEADER_GF_05'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="$sSeason"/>
+			</xsl:element>
+		</xsl:element>
+	</xsl:template>
+	<!--<xsl:template name="ReturnIssueDate">
+		<xsl:param name="paramDateFormat1"/>
+		<xsl:param name="paramDateFormat2"/>
+		<xsl:choose>
+			<xsl:when test="string-length($paramDateFormat1) &gt; 0">
+				<xsl:element name="datatype:issue_date">
+					<xsl:element name="datatype:record_datetime">
+						<xsl:value-of select="$paramDateFormat1"/>
+					</xsl:element>
+				</xsl:element>
+			</xsl:when>
+			<xsl:when test="string-length($paramDateFormat2) &gt; 0">
+				<xsl:element name="datatype:issue_date">
+					<xsl:element name="datatype:record_datetime">
+						<xsl:value-of select="$paramDateFormat2"/>
+					</xsl:element>
+				</xsl:element>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>-->
+	<xsl:template name="FNDTemplate">
+		<xsl:param name="FinalDestination"/>
+		<xsl:param name="ShipmentDestinationKey"/>
+		<xsl:param name="ShipmentDestinationName"/>
+		<xsl:variable name="FNDName">
+			<xsl:choose>
+				<xsl:when test="$FinalDestination!=''">
+					<xsl:value-of select="$FinalDestination"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$ShipmentDestinationName"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:variable name="FNDCode">
+			<xsl:choose>
+				<xsl:when test="$FinalDestination!=''">
+					<xsl:value-of select="$FinalDestination"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="$ShipmentDestinationKey"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<xsl:element name="ns0:fnd">
+			<xsl:element name="datatype:LOC_NAME">
+				<xsl:value-of select="$FNDName"/>
+			</xsl:element>
+			<xsl:element name="datatype:cust_ref">
+				<xsl:value-of select="$FNDCode"/>
+			</xsl:element>
+		</xsl:element>
+	</xsl:template>
+	<xsl:template name="ItemDescriptionTemplate">
+		<xsl:param name="paramParentItemKey"/>
+		<xsl:param name="paramHTSDEsc"/>
+		<xsl:if test="$paramHTSDEsc!=''">
+			<xsl:element name="datatype:DESC">
+				<xsl:value-of select="$paramHTSDEsc"/>
+			</xsl:element>
+		</xsl:if>
+		<xsl:if test="$paramHTSDEsc=''">
+			<xsl:element name="datatype:DESC">
+				<xsl:value-of select="../orderLineItem[itemTypeCode='Main' and itemKey=$paramParentItemKey][1]/baseLineItem/shortDescription/text()"/>
+			</xsl:element>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template name="LowestUOMCostTemplate">
+		<xsl:param name="paramUnitPrice"/>
+		<xsl:if test="string-length($paramUnitPrice) &gt; 0">
+			<xsl:element name="ns0:lowest_uom_cost">
+				<xsl:element name="datatype:cur_code">
+					<xsl:value-of select="'USD'"/>
+				</xsl:element>
+				<xsl:element name="datatype:amt">
+					<xsl:value-of select="$paramUnitPrice"/>
+				</xsl:element>
+			</xsl:element>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template name="DetailCustomizedFieldTemplate">
+		<xsl:variable name="smallcase" select="'abcdefghijklmnopqrstuvwxyz'"/>
+		<xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_DETAIL_GF_06'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="baseLineItem[1]/itemReference[translate(type,$smallcase,$uppercase)='DIM']/value/text()"/>
+				<xsl:value-of select="baseLineItem[1]/itemReference[translate(type,$smallcase,$uppercase)='SIZE']/value/text()"/>
+			</xsl:element>
+		</xsl:element>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_DETAIL_GF_07'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="baseLineItem[1]/itemReference[translate(type,$smallcase,$uppercase)='DIM']/value/text()"/>
+			</xsl:element>
+		</xsl:element>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_DETAIL_GF_08'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="UPCnumber1/text()"/>
+			</xsl:element>
+		</xsl:element>
+	</xsl:template>
+	<xsl:template name="LowestUOMPriceTemplate">
+		<xsl:param name="paramUnitPrice"/>
+		<xsl:if test="string-length($paramUnitPrice) &gt; 0">
+			<xsl:element name="ns0:lowest_uom_price">
+				<xsl:element name="datatype:cur_code">
+					<xsl:value-of select="'USD'"/>
+				</xsl:element>
+				<xsl:element name="datatype:amt">
+					<xsl:value-of select="$paramUnitPrice"/>
+				</xsl:element>
+			</xsl:element>
+		</xsl:if>
+	</xsl:template>
+</xsl:stylesheet>

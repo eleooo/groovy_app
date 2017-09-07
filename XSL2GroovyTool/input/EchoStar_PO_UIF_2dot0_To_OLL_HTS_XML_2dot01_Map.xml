@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!-- OLL Mapping XSLT Definition -->
+<!-- Created By: Jackson -->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:pfx8="http://www.oocllogistics.com/EchoStar_PO_UIF_2dot0_Schema" xmlns:notelog="http://www.oocllogistics.com/notelog" xmlns:datatype="http://www.oocllogistics.com/datatype" xmlns:ns0="http://www.oocllogistics.com/hts" xmlns:header="http://www.oocllogistics.com/header" exclude-result-prefixes="tib pfx8 OLLMappingLib" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:OLLMappingLib="java://oll.b2b.designer.javacustomfunction.MappingLibrary">
+	<xsl:param name="CdeConversionData"/>
+	<xsl:output method="xml"/>
+	<xsl:template match="/">
+		<xsl:apply-templates select="/pfx8:EchoStar_PO_MsgRoot"/>
+	</xsl:template>
+	<xsl:template match="/pfx8:EchoStar_PO_MsgRoot">
+		<ns0:hts_file_root>
+			<ns0:file_header>
+				<header:SENDER_ID>
+					<xsl:text>ECHOSTAR</xsl:text>
+				</header:SENDER_ID>
+				<header:RECIPIENT_ID>
+					<xsl:text>PLLP</xsl:text>
+				</header:RECIPIENT_ID>
+				<xsl:variable name="var_v1" select="substring(current-dateTime(),1,19)"/>
+				<xsl:variable name="var_v2" select="OLLMappingLib:ConvertDatetimeFormat(string($var_v1) , &quot;&quot; , &quot;yyyyMMdd&quot; , &quot;&quot; , &quot;&quot;)"/>
+				<xsl:variable name="var_v9" select="position()"/>
+				<header:MSG_CTRL_REF_NUM>
+					<xsl:value-of select="$var_v2"/>
+				</header:MSG_CTRL_REF_NUM>
+				<xsl:variable name="var_v3" select="substring(current-dateTime(),1,19)"/>
+				<header:MSG_SENT_DATETIME>
+					<xsl:value-of select="$var_v3"/>
+				</header:MSG_SENT_DATETIME>
+				<xsl:variable name="var_v4" select="substring(current-dateTime(),1,19)"/>
+				<header:MSG_REC_DATETIME>
+					<xsl:value-of select="$var_v4"/>
+				</header:MSG_REC_DATETIME>
+				<header:MSG_STATUS>
+					<xsl:text>N</xsl:text>
+				</header:MSG_STATUS>
+				<header:MSG_TYPE>
+					<xsl:text>HTS</xsl:text>
+				</header:MSG_TYPE>
+				<header:MSG_DEF_VER>
+					<xsl:text>2.01</xsl:text>
+				</header:MSG_DEF_VER>
+			</ns0:file_header>
+			<xsl:for-each select="Detail[TC2[TC01='J'][1]/TC02 != '']">
+				<ns0:hts_msg_root>
+					<ns0:msg_header>
+						<header:SENDER_ID>
+							<xsl:text>ECHOSTAR</xsl:text>
+						</header:SENDER_ID>
+						<header:RECIPIENT_ID>
+							<xsl:text>PLLP</xsl:text>
+						</header:RECIPIENT_ID>
+						<xsl:variable name="var_v5" select="substring(current-dateTime(),1,19)"/>
+						<xsl:variable name="var_v6" select="OLLMappingLib:ConvertDatetimeFormat(string($var_v5) , &quot;&quot; , &quot;yyyyMMdd&quot; , &quot;&quot; , &quot;&quot;)"/>
+						<header:MSG_CTRL_REF_NUM>
+							<xsl:value-of select="$var_v6"/>
+						</header:MSG_CTRL_REF_NUM>
+						<xsl:variable name="var_v7" select="substring(current-dateTime(),1,19)"/>
+						<header:MSG_SENT_DATETIME>
+							<xsl:value-of select="$var_v7"/>
+						</header:MSG_SENT_DATETIME>
+						<header:MSG_STATUS>
+							<xsl:text>N</xsl:text>
+						</header:MSG_STATUS>
+						<header:MSG_TYPE>
+							<xsl:text>HTS</xsl:text>
+						</header:MSG_TYPE>
+						<header:MSG_DEF_VER>
+							<xsl:text>2.01</xsl:text>
+						</header:MSG_DEF_VER>
+						<header:data_header>
+							<header:to>
+								<xsl:text>PLLP</xsl:text>
+							</header:to>
+							<header:from>
+								<xsl:text>ECHOSTAR</xsl:text>
+							</header:from>
+							<xsl:variable name="var_v8" select="substring(current-dateTime(),1,19)"/>
+							<header:time_stamp>
+								<xsl:value-of select="$var_v8"/>
+							</header:time_stamp>
+							<header:header_msg_type>
+								<xsl:text>HTS</xsl:text>
+							</header:header_msg_type>
+							<header:body_msg_type>
+								<xsl:text>HTS</xsl:text>
+							</header:body_msg_type>
+							
+							<!--<xsl:variable name="var_v9" select="OLLMappingLib:SetVersionNumber()"/>-->
+							<header:msg_ver>
+								<xsl:value-of select="$var_v9"/>
+							</header:msg_ver>
+						</header:data_header>
+					</ns0:msg_header>
+					
+						<!--<xsl:variable name="var_v10" select="OLLMappingLib:chargePO109ExistInCurrentMsg(string(PO1/PO109/text()))"/>
+						<xsl:variable name="var_v11" select="OLLMappingLib:LogicalEq(string($var_v10) , &quot;false&quot;)"/>
+						<xsl:if test="$var_v11">-->
+							<xsl:variable name="var_v12" select="string(PO1/PO109/text())"/>
+							<ns0:hts_record>
+							<xsl:for-each-group select="PO1Loop[string(PO1/PO109/text())!='']" group-by="string(PO1/PO109/text())">
+								<ns0:cust>
+									<datatype:PARTNER_NAME>
+										<xsl:text>ECHOSTAR</xsl:text>
+									</datatype:PARTNER_NAME>
+									<datatype:PARTNER_EXT_REF_NUM>
+										<xsl:text>ECHOSTAR</xsl:text>
+									</datatype:PARTNER_EXT_REF_NUM>
+								</ns0:cust>
+					        </xsl:for-each-group>
+								<!--<xsl:variable name="var_v13" select="OLLMappingLib:getSKU(string(PO1/PO108/text()) , $var_v12)"/>
+								<xsl:variable name="var_v14" select="OLLMappingLib:LogicalNe(string($var_v13) , &quot;&quot;)"/>
+								<xsl:if test="$var_v14">-->
+								<xsl:for-each-group select="../PO1Loop[string(PO1/PO108/text())!='']" group-by="string(PO1/PO108/text())">
+									<xsl:variable name="var_v15" select="string(PO1/PO108/text())"/>
+									<ns0:sku>
+										<xsl:variable name="var_v16" select="string($var_v12)"/>
+										<datatype:SKU_CODE>
+											<xsl:if test = "$var_v9!=0 and $var_v15='BP'">
+												<xsl:value-of select="$var_v16"/>
+											</xsl:if>
+										</datatype:SKU_CODE>
+										<xsl:variable name="var_v17" select="string($var_v12)"/>
+										<datatype:STYLE_CODE>
+											<xsl:if test = "$var_v9!=0 and $var_v15='BP'">
+												<xsl:value-of select="$var_v17"/>
+											</xsl:if>
+										</datatype:STYLE_CODE>
+									</ns0:sku>
+									<!--</xsl:if>-->
+								</xsl:for-each-group>
+								<xsl:for-each select="../TC2">
+									<xsl:variable name="var_v18" select="OLLMappingLib:LogicalEq(string(TC01/text()) , &quot;J&quot;)"/>
+									<xsl:if test="$var_v18">
+										<ns0:hts>
+											<xsl:variable name="var_v19" select="position()"/>
+											<ns0:seq>
+												<xsl:value-of select="$var_v19"/>
+											</ns0:seq>
+											<xsl:if test="TC02">
+												<ns0:hts_num>
+													<xsl:value-of select="TC02/text()"/>
+												</ns0:hts_num>
+											</xsl:if>
+										</ns0:hts>
+									</xsl:if>
+								</xsl:for-each>
+							</ns0:hts_record>
+						<!--</xsl:if>
+					</xsl:for-each>-->
+					
+				</ns0:hts_msg_root>
+			</xsl:for-each>
+		</ns0:hts_file_root>
+	</xsl:template>
+</xsl:stylesheet>

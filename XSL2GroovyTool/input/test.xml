@@ -1,0 +1,14 @@
+<ns0:Header>
+	<ns1:MsgDT xmlns:ns1="http://www.cargosmart.com/common">
+		<ns1:GMT>2009-12-01T01:26:54.69+08:00</ns1:GMT>
+		<ns1:LocDT TimeZone="HKT" CSTimeZone="HKT">2009-12-01T09:26:54.69+08:00</ns1:LocDT>
+	</ns1:MsgDT>
+	<ns1:MsgDirection xmlns:ns1="http://www.cargosmart.com/common">O</ns1:MsgDirection>
+	<ns1:MsgType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:MsgType>
+	<ns1:SenderID xmlns:ns1="http://www.cargosmart.com/common">CARGOSMART</ns1:SenderID>
+	<ns1:ReceiverID xmlns:ns1="http://www.cargosmart.com/common">PRLAUREN</ns1:ReceiverID>
+	<ns1:Action xmlns:ns1="http://www.cargosmart.com/common">NEW</ns1:Action>
+	<ns1:Version xmlns:ns1="http://www.cargosmart.com/common">12</ns1:Version>
+	<ns1:InterchangeMessageID xmlns:ns1="http://www.cargosmart.com/common">1259630814690#2102</ns1:InterchangeMessageID>
+	<ns1:DataSource xmlns:ns1="http://www.cargosmart.com/common">CS2 db</ns1:DataSource>
+</ns0:Header>
