@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!-- OLL Mapping XSLT Definition -->
+<!-- Created By: Jackson -->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:notelog="http://www.oocllogistics.com/notelog" xmlns:ns0="http://www.oocllogistics.com/po" xmlns:datatype="http://www.oocllogistics.com/datatype" xmlns:header="http://www.oocllogistics.com/header" xmlns:pfx8="http://www.oocllogistics.com/AgeGroup_850_4dot10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exclude-result-prefixes="tib pfx8 OLLMappingLib" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:OLLMappingLib="java://oll.b2b.designer.javacustomfunction.MappingLibrary">
+	<xsl:param name="CdeConversionData"/>
+	<xsl:output method="xml"/>
+	<xsl:template match="/">
+		<xsl:apply-templates select="/pfx8:AgeGroup_PO_MSG_Root"/>
+	</xsl:template>
+	<xsl:template match="/pfx8:AgeGroup_PO_MSG_Root">
+		<xsl:variable name="var_v1" select="OLLMappingLib:StringConcat(string(Header/ISA/ISA09/text()) , string(Header/ISA/ISA10/text()))"/>
+		<ns0:po_file_root>
+			<ns0:file_header>
+				<header:SENDER_ID>
+					<xsl:text>AGEGROUP</xsl:text>
+				</header:SENDER_ID>
+				<header:RECIPIENT_ID>
+					<xsl:text>POP</xsl:text>
+				</header:RECIPIENT_ID>
+				<header:MSG_CTRL_REF_NUM>
+					<xsl:value-of select="Header/ISA/ISA13/text()"/>
+				</header:MSG_CTRL_REF_NUM>
+				<xsl:variable name="var_v2" select="OLLMappingLib:ConvertDatetimeFormat(string($var_v1) , &quot;yyMMddHHmm&quot; , &quot;yyyy-MM-dd'T'HH:mm:ss'.'S&quot; , &quot;&quot; , &quot;exception&quot;)"/>
+				<header:MSG_SENT_DATETIME>
+					<xsl:value-of select="$var_v2"/>
+				</header:MSG_SENT_DATETIME>
+				<xsl:variable name="var_v3" select="substring(current-dateTime(),1,19)"/>
+				<xsl:variable name="var_v4" select="OLLMappingLib:ConvertDatetimeFormat(string($var_v3) , &quot;&quot; , &quot;yyyy-MM-dd'T00:00:00.0'&quot; , &quot;&quot; , &quot;exception&quot;)"/>
+				<header:MSG_REC_DATETIME>
+					<xsl:value-of select="$var_v4"/>
+				</header:MSG_REC_DATETIME>
+				<header:MSG_STATUS>
+					<xsl:text>N</xsl:text>
+				</header:MSG_STATUS>
+				<header:MSG_TYPE>
+					<xsl:text>PO</xsl:text>
+				</header:MSG_TYPE>
+				<header:MSG_DEF_VER>
+					<xsl:text>2.01</xsl:text>
+				</header:MSG_DEF_VER>
+			</ns0:file_header>
+			<xsl:for-each select="Detail">
+				<xsl:variable name="var_v10" select="substring(current-dateTime(),1,19)"/>
+				<xsl:variable name="var_v19" select="string(BEG/BEG01/text())"/>
+				<ns0:po_msg_root>
+					<ns0:msg_header>
+						<header:SENDER_ID>
+							<xsl:text>AGEGROUP</xsl:text>
+						</header:SENDER_ID>
+						<header:RECIPIENT_ID>
+							<xsl:text>POP</xsl:text>
+						</header:RECIPIENT_ID>
+						<xsl:variable name="var_v5" select="substring(current-dateTime(),1,19)"/>
+						<xsl:variable name="var_v6" select="OLLMappingLib:ConvertXMLDateTimetoYYYYMMDD(string($var_v5))"/>
+						<header:MSG_CTRL_REF_NUM>
+							<xsl:value-of select="$var_v6"/>
+						</header:MSG_CTRL_REF_NUM>
+						<xsl:variable name="var_v7" select="substring(current-dateTime(),1,19)"/>
+						<xsl:variable name="var_v8" select="OLLMappingLib:ConvertDatetimeFormat(string($var_v7) , &quot;&quot; , &quot;yyyy-MM-dd'T00:00:00.0'&quot; , &quot;&quot; , &quot;exception&quot;)"/>
+						<header:MSG_SENT_DATETIME>
+							<xsl:value-of select="$var_v8"/>
+						</header:MSG_SENT_DATETIME>
+						<xsl:variable name="var_v9" select="OLLMappingLib:CodeConversionWithDefaultValue(&quot;AgeGroupBEG01-OLLXMLMsgStatus&quot; , string(BEG/BEG01/text()) , &quot;NEW&quot; ,tib:render-xml($CdeConversionData))"/>
+						<header:MSG_STATUS>
+							<xsl:value-of select="$var_v9"/>
+						</header:MSG_STATUS>
+						<header:MSG_TYPE>
+							<xsl:text>PO</xsl:text>
+						</header:MSG_TYPE>
+						<header:MSG_DEF_VER>
+							<xsl:text>2.01</xsl:text>
+						</header:MSG_DEF_VER>
+						<header:data_header>
+							<header:to>
+								<xsl:text>POP</xsl:text>
+							</header:to>
+							<header:from>
+								<xsl:text>AGEGROUP</xsl:text>
+							</header:from>
+							<header:time_stamp>
+								<xsl:value-of select="$var_v10"/>
+							</header:time_stamp>
+							<header:header_msg_type>
+								<xsl:text>PO</xsl:text>
+							</header:header_msg_type>
+							<header:body_msg_type>
+								<xsl:text>PO</xsl:text>
+							</header:body_msg_type>
+							<header:msg_ver>
+								<xsl:text>2.01</xsl:text>
+							</header:msg_ver>
+						</header:data_header>
+					</ns0:msg_header>
+					<ns0:ext_po_num>
+						<xsl:value-of select="BEG/BEG03/text()"/>
+					</ns0:ext_po_num>
+					<ns0:po_num>
+						<xsl:value-of select="BEG/BEG03/text()"/>
+					</ns0:po_num>
+					<xsl:for-each select="NameAndAddressLoop">
+						<xsl:variable name="var_v11" select="OLLMappingLib:LogicalEq(&quot;BS&quot; , string(N1/N101/text()))"/>
+						<xsl:if test="$var_v11">
+							<ns0:cust>
+								<datatype:PARTNER_NAME>
+									<xsl:value-of select="N1/N102/text()"/>
+								</datatype:PARTNER_NAME>
+								<xsl:if test="N1/N104">
+									<datatype:PARTNER_EXT_REF_NUM>
+										<xsl:value-of select="N1/N104/text()"/>
+									</datatype:PARTNER_EXT_REF_NUM>
+								</xsl:if>
+								<datatype:ADDR>
+									<xsl:if test="N4/N404">
+										<datatype:country_name>
+											<xsl:value-of select="N4/N404/text()"/>
+										</datatype:country_name>
+									</xsl:if>
+									<xsl:if test="N4/N402">
+										<datatype:state_name>
+											<xsl:value-of select="N4/N402/text()"/>
+										</datatype:state_name>
+									</xsl:if>
+									<datatype:city>
+										<xsl:if test="N4/N401">
+											<datatype:LOC_NAME>
+												<xsl:value-of select="N4/N401/text()"/>
+											</datatype:LOC_NAME>
+										</xsl:if>
+									</datatype:city>
+									<xsl:if test="N4/N403">
+										<datatype:postal_code>
+											<xsl:value-of select="N4/N403/text()"/>
+										</datatype:postal_code>
+									</xsl:if>
+									<datatype:ADDR_LINE>
+										<xsl:value-of select="N3/N301/text()"/>
+									</datatype:ADDR_LINE>
+									<xsl:if test="N3/N302">
+										<datatype:ADDR_LINE>
+											<xsl:value-of select="N3/N302/text()"/>
+										</datatype:ADDR_LINE>
+									</xsl:if>
+								</datatype:ADDR>
+							</ns0:cust>
+						</xsl:if>
+					</xsl:for-each>
+					<xsl:for-each select="NameAndAddressLoop">
+						<xsl:variable name="var_v12" select="string(N1/N101/text())"/>
+						<xsl:variable name="var_v13" select="OLLMappingLib:LogicalEq(&quot;BS&quot; , $var_v12)"/>
+						<xsl:if test="$var_v13">
+							<ns0:csgn>
+								<datatype:PARTNER_NAME>
+									<xsl:value-of select="N1/N102/text()"/>
+								</datatype:PARTNER_NAME>
+								<xsl:if test="N1/N104">
+									<datatype:PARTNER_EXT_REF_NUM>
+										<xsl:value-of select="N1/N104/text()"/>
+									</datatype:PARTNER_EXT_REF_NUM>
+								</xsl:if>
+								<datatype:ADDR>
+									<xsl:if test="N4/N404">
+										<datatype:country_code>
+											<xsl:value-of select="N4/N404/text()"/>
+										</datatype:country_code>
+									</xsl:if>
+									<xsl:if test="N4/N404">
+										<datatype:country_name>
+											<xsl:value-of select="N4/N404/text()"/>
+										</datatype:country_name>
+									</xsl:if>
+									<xsl:if test="N4/N402">
+										<datatype:state_code>
+											<xsl:value-of select="N4/N402/text()"/>
+										</datatype:state_code>
+									</xsl:if>
+									<xsl:if test="N4/N402">
+										<datatype:state_name>
+											<xsl:value-of select="N4/N402/text()"/>
+										</datatype:state_name>
+									</xsl:if>
+									<datatype:city>
+										<xsl:if test="N4/N401">
+											<datatype:LOC_NAME>
+												<xsl:value-of select="N4/N401/text()"/>
+											</datatype:LOC_NAME>
+										</xsl:if>
+									</datatype:city>
+									<xsl:if test="N4/N403">
+										<datatype:postal_code>
+											<xsl:value-of select="N4/N403/text()"/>
+										</datatype:postal_code>
+									</xsl:if>
+									<datatype:ADDR_LINE>
+										<xsl:value-of select="N3/N301/text()"/>
+									</datatype:ADDR_LINE>
+									<xsl:if test="N3/N302">
+										<datatype:ADDR_LINE>
+											<xsl:value-of select="N3/N302/text()"/>
+										</datatype:ADDR_LINE>
+									</xsl:if>
+								</datatype:ADDR>
+								<xsl:for-each select="../REF">
+									<xsl:variable name="var_v14" select="OLLMappingLib:LogicalEq(string(REF01/text()) , &quot;DP&quot;)"/>
+									<xsl:if test="$var_v14">
+										<xsl:if test="REF02">
+											<ns0:dept>
+												<xsl:value-of select="REF02/text()"/>
+											</ns0:dept>
+										</xsl:if>
+									</xsl:if>
+								</xsl:for-each>
+							</ns0:csgn>
+						</xsl:if>
+					</xsl:for-each>
+					<xsl:for-each select="NameAndAddressLoop">
+						<xsl:variable name="var_v15" select="string(N1/N101/text())"/>
+						<xsl:variable name="var_v16" select="OLLMappingLib:LogicalEq($var_v15 , &quot;VN&quot;)"/>
+						<xsl:if test="$var_v16">
+							<ns0:vdr>
+								<datatype:PARTNER_NAME>
+									<xsl:value-of select="N1/N102/text()"/>
+								</datatype:PARTNER_NAME>
+								<xsl:if test="N1/N104">
+									<datatype:PARTNER_EXT_REF_NUM>
+										<xsl:value-of select="N1/N104/text()"/>
+									</datatype:PARTNER_EXT_REF_NUM>
+								</xsl:if>
+								<datatype:ADDR>
+									<xsl:if test="N4/N404">
+										<datatype:country_code>
+											<xsl:value-of select="N4/N404/text()"/>
+										</datatype:country_code>
+									</xsl:if>
+									<xsl:if test="N4/N404">
+										<datatype:country_name>
+											<xsl:value-of select="N4/N404/text()"/>
+										</datatype:country_name>
+									</xsl:if>
+									<xsl:if test="N4/N402">
+										<datatype:state_name>
+											<xsl:value-of select="N4/N402/text()"/>
+										</datatype:state_name>
+									</xsl:if>
+									<datatype:city>
+										<xsl:if test="N4/N401">
+											<datatype:LOC_NAME>
+												<xsl:value-of select="N4/N401/text()"/>
+											</datatype:LOC_NAME>
+										</xsl:if>
+									</datatype:city>
+									<xsl:if test="N4/N403">
+										<datatype:postal_code>
+											<xsl:value-of select="N4/N403/text()"/>
+										</datatype:postal_code>
+									</xsl:if>
+									<datatype:ADDR_LINE>
+										<xsl:value-of select="N3/N301/text()"/>
+									</datatype:ADDR_LINE>
+									<xsl:if test="N3/N302">
+										<datatype:ADDR_LINE>
+											<xsl:value-of select="N3/N302/text()"/>
+										</datatype:ADDR_LINE>
+									</xsl:if>
+								</datatype:ADDR>
+							</ns0:vdr>
+						</xsl:if>
+					</xsl:for-each>
+					<xsl:for-each select="NameAndAddressLoop">
+						<xsl:variable name="var_v17" select="string(N1/N101/text())"/>
+						<xsl:variable name="var_v18" select="OLLMappingLib:LogicalEq($var_v17 , &quot;BT&quot;)"/>
+						<xsl:if test="$var_v18">
+							<ns0:billto>
+								<datatype:PARTNER_NAME>
+									<xsl:value-of select="N1/N102/text()"/>
+								</datatype:PARTNER_NAME>
+								<xsl:if test="N1/N104">
+									<datatype:PARTNER_EXT_REF_NUM>
+										<xsl:value-of select="N1/N104/text()"/>
+									</datatype:PARTNER_EXT_REF_NUM>
+								</xsl:if>
+							</ns0:billto>
+						</xsl:if>
+					</xsl:for-each>
+					<ns0:po_attr>
+						<xsl:variable name="var_v20" select="OLLMappingLib:CodeConversionWithDefaultValue(&quot;AgeGroupBEG01-OLLDataStatus&quot; , $var_v19 , &quot;STATUS_ACTIVE&quot; ,tib:render-xml($CdeConversionData))"/>
+						<datatype:data_status_code>
+							<xsl:value-of select="$var_v20"/>
+						</datatype:data_status_code>
+						<datatype:crt_date>
+							<xsl:variable name="var_v21" select="substring(current-dateTime(),1,19)"/>
+							<datatype:record_datetime>
+								<xsl:value-of select="$var_v21"/>
+							</datatype:record_datetime>
+						</datatype:crt_date>
+						<datatype:issue_date>
+							<xsl:variable name="var_v22" select="OLLMappingLib:ConvertYYYYMMDDtoXMLDateTime(string(BEG/BEG05/text()))"/>
+							<datatype:record_datetime>
+								<xsl:value-of select="$var_v22"/>
+							</datatype:record_datetime>
+						</datatype:issue_date>
+					</ns0:po_attr>
+					<ns0:payment_method>
+						<xsl:variable name="var_v23" select="OLLMappingLib:fobvalue(string(FOB/FOB01/text()))"/>
+						<datatype:payment_method_code>
+							<xsl:value-of select="$var_v23"/>
+						</datatype:payment_method_code>
+						<xsl:variable name="var_v24" select="string(FOB/FOB01/@xsi:nil) = 'true'"/>
+						<xsl:if test="string($var_v24)='true'">
+							<datatype:ext_ref>
+								<xsl:attribute name="xsi:nil"><xsl:value-of select="'true'"/></xsl:attribute>
+							</datatype:ext_ref>
+						</xsl:if>
+						<xsl:if test="string($var_v24)='false'">
+							<datatype:ext_ref>
+								<xsl:value-of select="FOB/FOB01/text()"/>
+							</datatype:ext_ref>
+						</xsl:if>
+					</ns0:payment_method>
+					<ns0:ship_via>
+						<xsl:variable name="var_v25" select="OLLMappingLib:TD504(string(TD5/TD504/text()))"/>
+						<datatype:ship_via_code>
+							<xsl:value-of select="$var_v25"/>
+						</datatype:ship_via_code>
+						<xsl:if test="TD5/TD504">
+							<datatype:ship_via_ext_ref>
+								<xsl:value-of select="TD5/TD504/text()"/>
+							</datatype:ship_via_ext_ref>
+						</xsl:if>
+					</ns0:ship_via>
+					<xsl:for-each select="REF">
+						<xsl:variable name="var_v26" select="string(REF01/text())"/>
+						<xsl:variable name="var_v27" select="OLLMappingLib:LogicalEq($var_v26 , &quot;4B&quot;)"/>
+						<xsl:if test="$var_v27">
+							<ns0:por>
+								<xsl:if test="REF02">
+									<datatype:LOC_NAME>
+										<xsl:value-of select="REF02/text()"/>
+									</datatype:LOC_NAME>
+								</xsl:if>
+								<xsl:if test="../FOB/FOB07">
+									<xsl:variable name="var_v28" select="string(../FOB/FOB07/@xsi:nil) = 'true'"/>
+									<xsl:if test="string($var_v28)='true'">
+										<datatype:LOC_NAME>
+											<xsl:attribute name="xsi:nil"><xsl:value-of select="'true'"/></xsl:attribute>
+										</datatype:LOC_NAME>
+									</xsl:if>
+									<xsl:if test="string($var_v28)='false'">
+										<datatype:LOC_NAME>
+											<xsl:value-of select="../FOB/FOB07/text()"/>
+										</datatype:LOC_NAME>
+									</xsl:if>
+								</xsl:if>
+								<xsl:if test="REF02">
+									<datatype:cust_ref>
+										<xsl:value-of select="REF02/text()"/>
+									</datatype:cust_ref>
+								</xsl:if>
+								<xsl:if test="../FOB/FOB07">
+									<xsl:variable name="var_v29" select="string(../FOB/FOB07/@xsi:nil) = 'true'"/>
+									<xsl:if test="string($var_v29)='true'">
+										<datatype:cust_ref>
+											<xsl:attribute name="xsi:nil"><xsl:value-of select="'true'"/></xsl:attribute>
+										</datatype:cust_ref>
+									</xsl:if>
+									<xsl:if test="string($var_v29)='false'">
+										<datatype:cust_ref>
+											<xsl:value-of select="../FOB/FOB07/text()"/>
+										</datatype:cust_ref>
+									</xsl:if>
+								</xsl:if>
+							</ns0:por>
+						</xsl:if>
+					</xsl:for-each>
+					<xsl:for-each select="NameAndAddressLoop">
+						<xsl:variable name="var_v30" select="string(N1/N101/text())"/>
+						<xsl:variable name="var_v31" select="OLLMappingLib:LogicalEq(&quot;BS&quot; , $var_v30)"/>
+						<xsl:if test="$var_v31">
+							<ns0:fnd>
+								<xsl:if test="N4/N401">
+									<datatype:LOC_NAME>
+										<xsl:value-of select="N4/N401/text()"/>
+									</datatype:LOC_NAME>
+								</xsl:if>
+								<xsl:if test="N4/N401">
+									<datatype:cust_ref>
+										<xsl:value-of select="N4/N401/text()"/>
+									</datatype:cust_ref>
+								</xsl:if>
+							</ns0:fnd>
+						</xsl:if>
+					</xsl:for-each>
+					<xsl:for-each select="PO1Loop">
+						<xsl:variable name="var_v32" select="OLLMappingLib:LogicalNe(string(PO1/PO102/text()) , &quot;&quot;)"/>
+						<xsl:variable name="var_v48" select="OLLMappingLib:LogicalEq(string(../FOB/FOB01/text()) , &quot;CC&quot;)"/>
+						<xsl:variable name="var_v50" select="string(../FOB/FOB01/text())"/>
+						<xsl:variable name="var_v51" select="OLLMappingLib:LogicalEq($var_v50 , &quot;CC&quot;)"/>
+						<xsl:variable name="var_v53" select="string(TD5/TD504/text())"/>
+						<ns0:po_item>
+							<datatype:sku>
+								<xsl:if test="PO1/PO107">
+									<datatype:STYLE_CODE>
+										<xsl:value-of select="PO1/PO107/text()"/>
+									</datatype:STYLE_CODE>
+								</xsl:if>
+								<xsl:if test="PO1/PO117">
+									<datatype:COLOR_CODE>
+										<xsl:value-of select="PO1/PO117/text()"/>
+									</datatype:COLOR_CODE>
+								</xsl:if>
+								<xsl:if test="PO1/PO119">
+									<datatype:SIZE_CODE>
+										<xsl:value-of select="PO1/PO119/text()"/>
+									</datatype:SIZE_CODE>
+								</xsl:if>
+								<xsl:if test="PO1/PO109">
+									<datatype:DESC>
+										<xsl:value-of select="PO1/PO109/text()"/>
+									</datatype:DESC>
+								</xsl:if>
+							</datatype:sku>
+							<datatype:lowest_uom>
+								<xsl:if test="PO1/PO103">
+									<datatype:UOM_CODE>
+										<xsl:value-of select="PO1/PO103/text()"/>
+									</datatype:UOM_CODE>
+								</xsl:if>
+								<xsl:if test="PO1/PO103">
+									<datatype:uom_ext_ref>
+										<xsl:value-of select="PO1/PO103/text()"/>
+									</datatype:uom_ext_ref>
+								</xsl:if>
+							</datatype:lowest_uom>
+							<xsl:if test="string($var_v32)='true'">
+								<xsl:variable name="var_v33" select="PO1/PO102/text()"/>
+								<datatype:lowest_uom_qty>
+									<xsl:value-of select="$var_v33"/>
+								</datatype:lowest_uom_qty>
+							</xsl:if>
+							<ns0:ship_windows>
+								<xsl:for-each select="DTM">
+									<xsl:variable name="var_v34" select="OLLMappingLib:LogicalEq(string(DTM01/text()) , &quot;037&quot;)"/>
+									<xsl:if test="$var_v34">
+										<datatype:earliest_pol_etd_date>
+											<xsl:variable name="var_v35" select="OLLMappingLib:ConvertDatetimeFormat(string(DTM02/text()) , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00.0'&quot; , &quot;&quot; , &quot;exception&quot;)"/>
+											<datatype:record_datetime>
+												<xsl:value-of select="$var_v35"/>
+											</datatype:record_datetime>
+										</datatype:earliest_pol_etd_date>
+									</xsl:if>
+								</xsl:for-each>
+								<xsl:for-each select="DTM">
+									<xsl:variable name="var_v36" select="string(DTM01/text())"/>
+									<xsl:variable name="var_v37" select="OLLMappingLib:LogicalEq($var_v36 , &quot;037&quot;)"/>
+									<xsl:if test="$var_v37">
+										<xsl:variable name="var_v38" select="string(DTM02/text())"/>
+										<datatype:target_pol_etd_date>
+											<xsl:variable name="var_v39" select="OLLMappingLib:ConvertDatetimeFormat($var_v38 , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00.0'&quot; , &quot;&quot; , &quot;exception&quot;)"/>
+											<datatype:record_datetime>
+												<xsl:value-of select="$var_v39"/>
+											</datatype:record_datetime>
+										</datatype:target_pol_etd_date>
+									</xsl:if>
+								</xsl:for-each>
+								<xsl:for-each select="DTM">
+									<xsl:variable name="var_v40" select="string(DTM01/text())"/>
+									<xsl:variable name="var_v41" select="OLLMappingLib:LogicalEq($var_v40 , &quot;038&quot;)"/>
+									<xsl:if test="$var_v41">
+										<xsl:variable name="var_v42" select="string(DTM02/text())"/>
+										<datatype:latest_pol_etd_date>
+											<xsl:variable name="var_v43" select="OLLMappingLib:ConvertDatetimeFormat($var_v42 , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00.0'&quot; , &quot;&quot; , &quot;exception&quot;)"/>
+											<datatype:record_datetime>
+												<xsl:value-of select="$var_v43"/>
+											</datatype:record_datetime>
+										</datatype:latest_pol_etd_date>
+									</xsl:if>
+								</xsl:for-each>
+								<xsl:for-each select="DTM">
+									<xsl:variable name="var_v44" select="string(DTM01/text())"/>
+									<xsl:variable name="var_v45" select="OLLMappingLib:LogicalEq($var_v44 , &quot;996&quot;)"/>
+									<xsl:if test="$var_v45">
+										<xsl:variable name="var_v46" select="string(DTM02/text())"/>
+										<datatype:fnd_eta_date>
+											<xsl:variable name="var_v47" select="OLLMappingLib:ConvertDatetimeFormat($var_v46 , &quot;yyyyMMdd&quot; , &quot;yyyy-MM-dd'T00:00:00.0'&quot; , &quot;&quot; , &quot;exception&quot;)"/>
+											<datatype:record_datetime>
+												<xsl:value-of select="$var_v47"/>
+											</datatype:record_datetime>
+										</datatype:fnd_eta_date>
+									</xsl:if>
+								</xsl:for-each>
+							</ns0:ship_windows>
+							<ns0:origin>
+								<xsl:if test="string($var_v48)='true'">
+									<xsl:variable name="var_v49" select="../FOB/FOB07/text()"/>
+									<datatype:LOC_NAME>
+										<xsl:value-of select="$var_v49"/>
+									</datatype:LOC_NAME>
+								</xsl:if>
+								<xsl:if test="string($var_v51)='true'">
+									<xsl:variable name="var_v52" select="../FOB/FOB07/text()"/>
+									<datatype:cust_ref>
+										<xsl:value-of select="$var_v52"/>
+									</datatype:cust_ref>
+								</xsl:if>
+							</ns0:origin>
+							<ns0:ship_via>
+								<xsl:variable name="var_v54" select="OLLMappingLib:CodeConversionWithOriginalValue(&quot;AGEGROUPShipVia-OLLShipVia&quot; , $var_v53 ,tib:render-xml($CdeConversionData))"/>
+								<datatype:ship_via_code>
+									<xsl:value-of select="$var_v54"/>
+								</datatype:ship_via_code>
+								<xsl:if test="TD5/TD504">
+									<datatype:ship_via_ext_ref>
+										<xsl:value-of select="TD5/TD504/text()"/>
+									</datatype:ship_via_ext_ref>
+								</xsl:if>
+							</ns0:ship_via>
+							<ns0:lowest_uom_cost>
+								<datatype:cur_code>
+									<xsl:attribute name="xsi:nil"><xsl:value-of select="'true'"/></xsl:attribute>
+								</datatype:cur_code>
+								<xsl:if test="PO1/PO104">
+									<datatype:amt>
+										<xsl:value-of select="PO1/PO104/text()"/>
+									</datatype:amt>
+								</xsl:if>
+							</ns0:lowest_uom_cost>
+							<xsl:if test="PO1/PO111">
+								<ns0:hts_ref>
+									<xsl:value-of select="PO1/PO111/text()"/>
+								</ns0:hts_ref>
+							</xsl:if>
+							<xsl:if test="SLN/SLN10">
+								<ns0:upc_ref>
+									<xsl:value-of select="SLN/SLN10/text()"/>
+								</ns0:upc_ref>
+							</xsl:if>
+							<xsl:if test="PO1/PO101">
+								<ns0:event_ref>
+									<xsl:value-of select="PO1/PO101/text()"/>
+								</ns0:event_ref>
+							</xsl:if>
+							<xsl:call-template name="CustomizedFieldTemplate">
+								<xsl:with-param name="paramGroupCode" select="string(PO1/PO113/text())"/>
+								<xsl:with-param name="paramGroupDesc" select="string(PO1/PO115/text())"/>
+								<xsl:with-param name="paramColorCode" select="string(PO1/PO121/text())"/>
+								<xsl:with-param name="paramLineNum" select="string(PO1/PO101/text())"/>
+							</xsl:call-template>
+							<xsl:call-template name="CountryOfOriginTemplate"/>
+						</ns0:po_item>
+					</xsl:for-each>
+					<xsl:call-template name="HeaderCustomizedFieldsTemplate">
+						<xsl:with-param name="sOriginalPONum" select="string(BEG/BEG03/text())"/>
+					</xsl:call-template>
+				</ns0:po_msg_root>
+			</xsl:for-each>
+		</ns0:po_file_root>
+	</xsl:template>
+	<xsl:template name="HeaderCustomizedFieldsTemplate">
+		<xsl:param name="sOriginalPONum"/>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_HEADER_GF_01'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="$sOriginalPONum"/>
+			</xsl:element>
+		</xsl:element>
+	</xsl:template>
+	<xsl:template name="CountryOfOriginTemplate">
+		<xsl:variable name="N1VN" select="../NameAndAddressLoop[N1/N101='VN']"/>
+		<xsl:variable name="vn301" select="$N1VN[1]/N3/N301/text()"/>
+		<xsl:variable name="vn302" select="$N1VN[1]/N3/N302/text()"/>
+		<xsl:variable name="vn404" select="$N1VN[1]/N4/N404/text()"/>
+		<xsl:if test="string-length($vn404)&gt;1">
+			<xsl:element name="ns0:loc_obj">
+				<xsl:element name="datatype:LOC_TYPE">
+					<xsl:value-of select="'COUNTRY_OF_ORIGIN'"/>
+				</xsl:element>
+				<xsl:element name="datatype:LOC_NAME">
+					<xsl:value-of select="$vn404"/>
+				</xsl:element>
+				<xsl:element name="datatype:COUNTRY_NAME">
+					<xsl:value-of select="$vn404"/>
+				</xsl:element>
+				<xsl:element name="datatype:cust_ref">
+					<xsl:value-of select="$vn404"/>
+				</xsl:element>
+			</xsl:element>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template name="CustomizedFieldTemplate">
+		<xsl:param name="paramGroupCode"/>
+		<xsl:param name="paramGroupDesc"/>
+		<xsl:param name="paramColorCode"/>
+		<xsl:param name="paramLineNum"/>
+		<!--	<xsl:element name="ns0:customized_field">		<xsl:element name="datatype:field_code">			<xsl:value-of select="'PO_DETAIL_GF_01'" />		</xsl:element>		<xsl:element name="datatype:field_value">			<xsl:value-of select="$paramGroupCode" />		</xsl:element>	</xsl:element>-->
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_DETAIL_GF_02'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="$paramGroupDesc"/>
+			</xsl:element>
+		</xsl:element>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_DETAIL_GF_04'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="$paramColorCode"/>
+			</xsl:element>
+		</xsl:element>
+		<xsl:element name="ns0:customized_field">
+			<xsl:element name="datatype:field_code">
+				<xsl:value-of select="'PO_DETAIL_GF_03'"/>
+			</xsl:element>
+			<xsl:element name="datatype:field_value">
+				<xsl:value-of select="$paramLineNum"/>
+			</xsl:element>
+		</xsl:element>
+	</xsl:template>
+</xsl:stylesheet>

@@ -7,6 +7,7 @@ import cs.*
 import java.lang.reflect.Field
 import java.lang.reflect.ParameterizedType
 import java.lang.reflect.Type
+
 ;;
 
 class Tester {
@@ -43,8 +44,9 @@ class Tester {
 
 		Gson gson = new GsonBuilder().create();
 		XmlBeanParser xmlBeanParser = new XmlBeanParser();
-
-		Message message = xmlBeanParser.xmlParser(xml, Message.class)
+		BillOfLading message = xmlBeanParser.xmlParser(xml, BillOfLading.class)
+		//Jenny jenny=xmlBeanParser.xmlParser(xml,Jenny.class)
+		println 'message'+message.toString()
 		println gson.toJson(message);
 
 //		Booking br = xmlBeanParser.xmlParser(xml, Booking.class)

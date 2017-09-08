@@ -1,0 +1,1668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IOCM>
+    <HEADER>
+        <FileId_01>         IOCMUIF </FileId_01>
+    </HEADER>
+    <Loop_AAAA>
+        <AAAA>
+            <FileId_01>    IOCM</FileId_01>
+            <ExternalCustomsId_02>UIF   </ExternalCustomsId_02>
+            <EDICustomsMessageId_05>  0 ENSIT </EDICustomsMessageId_05>
+            <EDICustomsId_06>    EU24DEBRV  </EDICustomsId_06>
+            <FileCreationDate_07>    2017</FileCreationDate_07>
+            <FileCreationTime_08>013112</FileCreationTime_08>
+            <EDIPartnerName_09>2255EU24DEBRV                      </EDIPartnerName_09>
+            <ReferenceNo_12>    DE 1C201701311222</ReferenceNo_12>
+            <ReferenceNoOfAnOriginalMessage_13>5508DE 1C201701311222</ReferenceNoOfAnOriginalMessage_13>
+            <MessageFunction_14>55</MessageFunction_14>
+            <SequenceNo_15>08IT00</SequenceNo_15>
+            <SenderReference_16>0000                               </SenderReference_16>
+            <SenderReferenceVersion_17>    00</SenderReferenceVersion_17>
+            <FileName_18>0000EDIEAM20170131122255986000-DE-PEU110</FileName_18>
+        </AAAA>
+        <MI01>
+            <SenderId_05>           NL821606931             </SenderId_05>
+            <RecipientId_06>           DE002452                </RecipientId_06>
+        </MI01>
+        <VY01>
+            <CallPort_05>    P</CallPort_05>
+            <CallNumber_06>EU</CallNumber_06>
+            <NextPort_07>110NB</NextPort_07>
+            <LastPort_08>RV   </LastPort_08>
+            <ETADate_09> HAM  SS</ETADate_09>
+            <ETATime_10>B  201</ETATime_10>
+            <ATADate_11>70203120</ATADate_11>
+            <ATATime_12>000   </ATATime_12>
+            <ETDTime_14>   201</ETDTime_14>
+            <ATDDate_15>70203110</ATDDate_15>
+            <ATDTime_16>000   </ATDTime_16>
+            <AtTerminal_27> 111 </AtTerminal_27>
+        </VY01>
+        <VY02>
+            <VesselName_01>           PEGASUS            </VesselName_01>
+            <LloydsNumber_02>           9387592  </LloydsNumber_02>
+            <VesselOwnerName_04> V2GK8     BUSS SHIPPING      </VesselOwnerName_04>
+            <VesselRegistrationNumber_07>AG                  </VesselRegistrationNumber_07>
+        </VY02>
+        <VY06>
+            <AgentCode_02>        CA GB5151</AgentCode_02>
+            <Name_03>80374000   OOCL EUROPE LTD         </Name_03>
+            <Address1_04>           OOCL HOUSE, BRIDGE ROAD </Address1_04>
+            <CityName_08>           LEVINGTON               </CityName_08>
+            <PostalCode_10>           I</PostalCode_10>
+            <Country_11>P1</Country_11>
+            <ConsortiumPartnerCarrierCode_12>0 0N</ConsortiumPartnerCarrierCode_12>
+            <SlotCharterId_13>E    GB    </SlotCharterId_13>
+            <ContactPerson_14>           IMPORT DEPARTMENT       </ContactPerson_14>
+            <TelephoneNo_15>           49 </TelephoneNo_15>
+            <AgentBranchCode_16>421 </AgentBranchCode_16>
+            <Filler_17>3018 0 0000          </Filler_17>
+        </VY06>
+        <VY06>
+            <AgentCode_02>        MS NL8216</AgentCode_02>
+            <Name_03>06931      796053362818478420155228</Name_03>
+            <Address1_04>5          33RD FLOOR HARBOUR CENTR</Address1_04>
+            <Address2_05>E          25 HARBOUR ROAD         </Address2_05>
+            <Address3_06>           WANCHAI                 </Address3_06>
+            <Address4_07>           HONG KONG               </Address4_07>
+            <CityName_08>           HONG KONG               </CityName_08>
+            <SlotCharterId_13>     CN    </SlotCharterId_13>
+            <ContactPerson_14>           OOCL HONGKONG           </ContactPerson_14>
+            <TelephoneNo_15>           283</TelephoneNo_15>
+            <AgentBranchCode_16>3388</AgentBranchCode_16>
+            <Filler_17>8      0000          </Filler_17>
+        </VY06>
+        <VY06>
+            <AgentCode_02>        PL NL8216</AgentCode_02>
+            <Name_03>06931      OOCL HK                 </Name_03>
+            <Address1_04>           33RD FLOOR HARBOUR CENTR</Address1_04>
+            <Address2_05>E          25 HARBOUR ROAD         </Address2_05>
+            <Address3_06>           WANCHAI                 </Address3_06>
+            <Address4_07>           HONG KONG               </Address4_07>
+            <CityName_08>           HONG KONG               </CityName_08>
+            <SlotCharterId_13>     CN    </SlotCharterId_13>
+            <ContactPerson_14>           OOCL HK                 </ContactPerson_14>
+            <TelephoneNo_15>           283</TelephoneNo_15>
+            <AgentBranchCode_16>3388</AgentBranchCode_16>
+            <Filler_17>8      0000          </Filler_17>
+        </VY06>
+        <VY06>
+            <AgentCode_02>        CM DE0024</AgentCode_02>
+            <Name_03>52                                 </Name_03>
+            <CityName_08>           BREMERHAVEN             </CityName_08>
+            <SlotCharterId_13>     DE    </SlotCharterId_13>
+        </VY06>
+        <VY07>
+            <ETADate_04>BRV  C  </ETADate_04>
+            <CTOEstablishmentId_10>00000</CTOEstablishmentId_10>
+            <CargoDischargeIndicator_11>0</CargoDischargeIndicator_11>
+            <LineActionCode_12>0</LineActionCode_12>
+            <ETDDate_13>0000    </ETDDate_13>
+            <CustomsOfficeEntry2_16>   DE004</CustomsOfficeEntry2_16>
+            <CustomsOfficeEntry3_17>851LTLU9</CustomsOfficeEntry3_17>
+            <CustomsOfficeEntry4_18>000     </CustomsOfficeEntry4_18>
+        </VY07>
+        <BA01_BA01>
+            <BA01>
+                <BLNoOrBKNo_02>       00012</BLNoOrBKNo_02>
+                <MasterBLNumber_03>582531010   </MasterBLNumber_03>
+                <PortofLoadingOriginal_06> BRV </PortofLoadingOriginal_06>
+                <PlaceofReceiptDescription_10> SSB       SANKT PETERBURG                                  </PlaceofReceiptDescription_10>
+                <PlaceofReceiptCountryCode_13> SS</PlaceofReceiptCountryCode_13>
+                <FinalDestination_14>B       RU NEW YORK                                         </FinalDestination_14>
+                <FinalDestinationCountryCode_17> NY</FinalDestinationCountryCode_17>
+                <ShipperExportDeclarationFlag_18>C</ShipperExportDeclarationFlag_18>
+                <PreviousPOLATD_19>  NY   U</PreviousPOLATD_19>
+                <BLBoundType_20>S</BLBoundType_20>
+                <GroupCode_27>  3</GroupCode_27>
+                <ModeofTransport_30>  O</ModeofTransport_30>
+                <TallyFlag_31>O</TallyFlag_31>
+            </BA01>
+            <BA02>
+                <PortofDischarge_03>  000</PortofDischarge_03>
+                <PortofDischargeStateCode_04>1    </PortofDischargeStateCode_04>
+                <PartnerCode_05> DEHAMHH          </PartnerCode_05>
+                <Placeoflodgmentofdocuments_08>           BREMERHAVEN                                      </Placeoflodgmentofdocuments_08>
+                <TotalGrossWeight_12>        Y  </TotalGrossWeight_12>
+                <GrossWeightUnit_13>000</GrossWeightUnit_13>
+                <TotalNumberofPackage_14>12553800K</TotalNumberofPackage_14>
+                <PackageUnit_15>G 0</PackageUnit_15>
+                <TotalNumberofContainer_16>0000</TotalNumberofContainer_16>
+                <UnloadPlace_17>4800B</UnloadPlace_17>
+                <PackageUnitAbbreviation_18>G 0006     </PackageUnitAbbreviation_18>
+                <ArticleNumber_19>           1        </ArticleNumber_19>
+            </BA02>
+            <BA03>
+                <PortofLoadingDescription_02>       0001SAINT PETERSBURG                                 </PortofLoadingDescription_02>
+                <PortofDischargeDescription_05>        RU HAMBURG                                          </PortofDischargeDescription_05>
+                <FinalDestinationCountryName_09>  DE      Y </FinalDestinationCountryName_09>
+                <BLIssueDate_12>   20170</BLIssueDate_12>
+                <CustomsReturnReferenceNumber_13>2012017020117DE245272728694I9      </CustomsReturnReferenceNumber_13>
+                <ReferenceNumber_14>           OOLUENS002</ReferenceNumber_14>
+                <OriginalReferenceNo_15>2582531010 OOLUENS002</OriginalReferenceNo_15>
+                <EstimatedDateofLoading_16>25825310</EstimatedDateofLoading_16>
+                <EstimatedTimeofLoading_17>10  </EstimatedTimeofLoading_17>
+                <PortofLoading_23> RULED</PortofLoading_23>
+                <PortofDischarge_24>USNYC </PortofDischarge_24>
+                <SONo_29> BRV          </SONo_29>
+                <TotalGrossWeight_34>           0</TotalGrossWeight_34>
+                <GrossWeightUnit_35>001</GrossWeightUnit_35>
+                <TSPortofLoadCountryCode_36>255</TSPortofLoadCountryCode_36>
+                <ChangeDescription_37>38000KG                                                     </ChangeDescription_37>
+            </BA03>
+            <BA06>
+                <ImporterNumber_03>    0001       </ImporterNumber_03>
+                <RoutingCountryCode6_17> R</RoutingCountryCode6_17>
+                <RoutingCountryCode7_18>UD</RoutingCountryCode7_18>
+                <RoutingCountryCode8_19>E </RoutingCountryCode8_19>
+                <ControlRefNo_32>           820</ControlRefNo_32>
+                <UniqueConsignmentReference_33>05035392851                        </UniqueConsignmentReference_33>
+            </BA06>
+            <PA01>
+                <AgentCode_03>     000101         </AgentCode_03>
+                <Name_06>        NL VIVOCHEM B.V.           </Name_06>
+                <PostalCode_07>           7</PostalCode_07>
+                <TelephoneNo_08>609 RL     577</TelephoneNo_08>
+                <FaxNo_09>774           </FaxNo_09>
+                <ContactFirstName_10>           UNKNOWN                 </ContactFirstName_10>
+                <ContactLastName_11>           UNKNOWN                 </ContactLastName_11>
+                <CityName_12>           ALMELO                  </CityName_12>
+                <LongName_15> 2582531010                                                           </LongName_15>
+            </PA01>
+            <PA01>
+                <AgentCode_03>     000102         </AgentCode_03>
+                <Name_06>        CA INTERATLAS CHEMICAL INC </Name_06>
+                <PostalCode_07>           L</PostalCode_07>
+                <TelephoneNo_08>2R 3C4     684</TelephoneNo_08>
+                <FaxNo_09>9991          </FaxNo_09>
+                <ContactFirstName_10>           PAUL                    </ContactFirstName_10>
+                <ContactLastName_11>           BOZEK                   </ContactLastName_11>
+                <CityName_12>           SAINT CATHARINES        </CityName_12>
+                <EmailID_13>           PAUL.BOZE</EmailID_13>
+                <SAPID_14>K@INTERATL</SAPID_14>
+                <LongName_15>A2582531010                                                           </LongName_15>
+            </PA01>
+            <PA01>
+                <AgentCode_03>     000103         </AgentCode_03>
+                <Name_06>        US INTERATLAS LOGISTICS    </Name_06>
+                <PostalCode_07>           0</PostalCode_07>
+                <TelephoneNo_08>7112       732</TelephoneNo_08>
+                <FaxNo_09>9786          </FaxNo_09>
+                <ContactFirstName_10>           UNKNOWN                 </ContactFirstName_10>
+                <ContactLastName_11>           UNKNOWN                 </ContactLastName_11>
+                <CityName_12>           NEWARK                  </CityName_12>
+                <LongName_15> 2582531010                                                           </LongName_15>
+            </PA01>
+            <PA01>
+                <AgentCode_03>     000105         </AgentCode_03>
+                <Name_06>        RU SOYUZKHIMTRANS INTERNATI</Name_06>
+                <PostalCode_07>ONAL       1</PostalCode_07>
+                <TelephoneNo_08>98095      600</TelephoneNo_08>
+                <FaxNo_09>1001          </FaxNo_09>
+                <ContactFirstName_10>           UNKNOWN                 </ContactFirstName_10>
+                <ContactLastName_11>           UNKNOWN                 </ContactLastName_11>
+                <CityName_12>           SANKT PETERBURG         </CityName_12>
+                <LongName_15> 2582531010                                                           </LongName_15>
+            </PA01>
+            <PA02>
+                <Address1_03>     000101DARWIN 5                </Address1_03>
+                <Address2_04>           7609 RL  ALMELO         </Address2_04>
+            </PA02>
+            <PA02>
+                <Address1_03>     00010263 CHURCH ST., SUITE 301</Address1_03>
+                <Address2_04>           SAINT CATHARINES, ON - L</Address2_04>
+                <Address3_05>2R 3C4     CANADA                  </Address3_05>
+            </PA02>
+            <PA02>
+                <Address1_03>     000103320 ELIZABETH AVE.      </Address1_03>
+                <Address2_04>           NEWARK, NJ - 07112      </Address2_04>
+                <Address3_05>           UNITED STATES           </Address3_05>
+            </PA02>
+            <PA02>
+                <Address1_03>     000105MARSHALA GOVOROVA STREET</Address1_03>
+                <Address2_04>, 43       198095                  </Address2_04>
+                <Address3_05>           TEL:7(812)600-1001      </Address3_05>
+                <Address4_06>           E-MAIL:SHTRANS@SKTINT.CO</Address4_06>
+            </PA02>
+            <CG01>
+                <ChargeType_02>       0001OCEA</ChargeType_02>
+                <FreightType_03>N FRE</FreightType_03>
+                <FreightChargeType_04>IGHT                </FreightChargeType_04>
+                <TotalAmount_07>           00</TotalAmount_07>
+                <PaymentLocation_08>000</PaymentLocation_08>
+                <Payer_09>00000000                           </Payer_09>
+                <Basis_13>           00</Basis_13>
+                <Rate_14>00000000000000000</Rate_14>
+                <Currency_15>000</Currency_15>
+                <BaseRate_16>00000000   000</BaseRate_16>
+                <BaseRateCurrency_17>000</BaseRateCurrency_17>
+                <PaymentCurrency_18>000</PaymentCurrency_18>
+                <BasisUnit_19>000</BasisUnit_19>
+                <PayableElsewhere_20>0</PayableElsewhere_20>
+                <MethodofPayment_21>0  </MethodofPayment_21>
+            </CG01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0001 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100014.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                    <ItemDescriptions_03>           6X20' S.T.C.:                                              </ItemDescriptions_03>
+                </ID01>
+                <ID01>
+                    <MarksandNos_02>       0002    </MarksandNos_02>
+                    <ItemDescriptions_03>           UROTROPINE TECHNICAL IMO 4.1                               </ItemDescriptions_03>
+                </ID01>
+                <ID01>
+                    <MarksandNos_02>       0003    </MarksandNos_02>
+                    <ItemDescriptions_03>           UN NO 1328                                                 </ItemDescriptions_03>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU1139997</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>36</Type2_04>
+                        <SealNo2_05>26             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0002 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100024.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU0376802</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>36</Type2_04>
+                        <SealNo2_05>28             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0003 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100034.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU2984078</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>36</Type2_04>
+                        <SealNo2_05>44             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0004 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100044.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU1364690</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>52</Type2_04>
+                        <SealNo2_05>02             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0005 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100054.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU1646435</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>52</Type2_04>
+                        <SealNo2_05>04             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0006 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100064.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU0114401</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>52</Type2_04>
+                        <SealNo2_05>06             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+        </BA01_BA01>
+        <S9999>
+            <RecordCount_02>   IOCM</RecordCount_02>
+            <ContainerCount_03>UIF 000</ContainerCount_03>
+            <BLCount_04>0002000</BLCount_04>
+            <SenderId_05>00180000002                        </SenderId_05>
+        </S9999>
+    </Loop_AAAA>
+    <Loop_AAAA>
+        <AAAA>
+            <FileId_01>    IOCM</FileId_01>
+            <ExternalCustomsId_02>UIF   </ExternalCustomsId_02>
+            <EDICustomsMessageId_05>  0 ENSIT </EDICustomsMessageId_05>
+            <EDICustomsId_06>    EU24DEBRV  </EDICustomsId_06>
+            <FileCreationDate_07>    2017</FileCreationDate_07>
+            <FileCreationTime_08>013112</FileCreationTime_08>
+            <EDIPartnerName_09>2255EU24DEBRV                      </EDIPartnerName_09>
+            <ReferenceNo_12>    DE 1C201701311222</ReferenceNo_12>
+            <ReferenceNoOfAnOriginalMessage_13>5508DE 1C201701311222</ReferenceNoOfAnOriginalMessage_13>
+            <MessageFunction_14>55</MessageFunction_14>
+            <SequenceNo_15>08IT00</SequenceNo_15>
+            <SenderReference_16>0000                               </SenderReference_16>
+            <SenderReferenceVersion_17>    00</SenderReferenceVersion_17>
+            <FileName_18>0000EDIEAM20170131122255986000-DE-PEU110</FileName_18>
+        </AAAA>
+        <MI01>
+            <SenderId_05>           NL821606931             </SenderId_05>
+            <RecipientId_06>           DE002452                </RecipientId_06>
+        </MI01>
+        <VY01>
+            <CallPort_05>    P</CallPort_05>
+            <CallNumber_06>EU</CallNumber_06>
+            <NextPort_07>110NB</NextPort_07>
+            <LastPort_08>RV   </LastPort_08>
+            <ETADate_09> HAM  SS</ETADate_09>
+            <ETATime_10>B  201</ETATime_10>
+            <ATADate_11>70203120</ATADate_11>
+            <ATATime_12>000   </ATATime_12>
+            <ETDTime_14>   201</ETDTime_14>
+            <ATDDate_15>70203110</ATDDate_15>
+            <ATDTime_16>000   </ATDTime_16>
+            <AtTerminal_27> 111 </AtTerminal_27>
+        </VY01>
+        <VY02>
+            <VesselName_01>           PEGASUS            </VesselName_01>
+            <LloydsNumber_02>           9387592  </LloydsNumber_02>
+            <VesselOwnerName_04> V2GK8     BUSS SHIPPING      </VesselOwnerName_04>
+            <VesselRegistrationNumber_07>AG                  </VesselRegistrationNumber_07>
+        </VY02>
+        <VY06>
+            <AgentCode_02>        CA GB5151</AgentCode_02>
+            <Name_03>80374000   OOCL EUROPE LTD         </Name_03>
+            <Address1_04>           OOCL HOUSE, BRIDGE ROAD </Address1_04>
+            <CityName_08>           LEVINGTON               </CityName_08>
+            <PostalCode_10>           I</PostalCode_10>
+            <Country_11>P1</Country_11>
+            <ConsortiumPartnerCarrierCode_12>0 0N</ConsortiumPartnerCarrierCode_12>
+            <SlotCharterId_13>E    GB    </SlotCharterId_13>
+            <ContactPerson_14>           IMPORT DEPARTMENT       </ContactPerson_14>
+            <TelephoneNo_15>           49 </TelephoneNo_15>
+            <AgentBranchCode_16>421 </AgentBranchCode_16>
+            <Filler_17>3018 0 0000          </Filler_17>
+        </VY06>
+        <VY06>
+            <AgentCode_02>        MS NL8216</AgentCode_02>
+            <Name_03>06931      796053362818478420155228</Name_03>
+            <Address1_04>5          33RD FLOOR HARBOUR CENTR</Address1_04>
+            <Address2_05>E          25 HARBOUR ROAD         </Address2_05>
+            <Address3_06>           WANCHAI                 </Address3_06>
+            <Address4_07>           HONG KONG               </Address4_07>
+            <CityName_08>           HONG KONG               </CityName_08>
+            <SlotCharterId_13>     CN    </SlotCharterId_13>
+            <ContactPerson_14>           OOCL HONGKONG           </ContactPerson_14>
+            <TelephoneNo_15>           283</TelephoneNo_15>
+            <AgentBranchCode_16>3388</AgentBranchCode_16>
+            <Filler_17>8      0000          </Filler_17>
+        </VY06>
+        <VY06>
+            <AgentCode_02>        PL NL8216</AgentCode_02>
+            <Name_03>06931      OOCL HK                 </Name_03>
+            <Address1_04>           33RD FLOOR HARBOUR CENTR</Address1_04>
+            <Address2_05>E          25 HARBOUR ROAD         </Address2_05>
+            <Address3_06>           WANCHAI                 </Address3_06>
+            <Address4_07>           HONG KONG               </Address4_07>
+            <CityName_08>           HONG KONG               </CityName_08>
+            <SlotCharterId_13>     CN    </SlotCharterId_13>
+            <ContactPerson_14>           OOCL HK                 </ContactPerson_14>
+            <TelephoneNo_15>           283</TelephoneNo_15>
+            <AgentBranchCode_16>3388</AgentBranchCode_16>
+            <Filler_17>8      0000          </Filler_17>
+        </VY06>
+        <VY06>
+            <AgentCode_02>        CM DE0024</AgentCode_02>
+            <Name_03>52                                 </Name_03>
+            <CityName_08>           BREMERHAVEN             </CityName_08>
+            <SlotCharterId_13>     DE    </SlotCharterId_13>
+        </VY06>
+        <VY07>
+            <ETADate_04>BRV  C  </ETADate_04>
+            <CTOEstablishmentId_10>00000</CTOEstablishmentId_10>
+            <CargoDischargeIndicator_11>0</CargoDischargeIndicator_11>
+            <LineActionCode_12>0</LineActionCode_12>
+            <ETDDate_13>0000    </ETDDate_13>
+            <CustomsOfficeEntry2_16>   DE004</CustomsOfficeEntry2_16>
+            <CustomsOfficeEntry3_17>851LTLU9</CustomsOfficeEntry3_17>
+            <CustomsOfficeEntry4_18>000     </CustomsOfficeEntry4_18>
+        </VY07>
+        <BA01_BA01>
+            <BA01>
+                <BLNoOrBKNo_02>       00012</BLNoOrBKNo_02>
+                <MasterBLNumber_03>582531010   </MasterBLNumber_03>
+                <PortofLoadingOriginal_06> BRV </PortofLoadingOriginal_06>
+                <PlaceofReceiptDescription_10> SSB       SANKT PETERBURG                                  </PlaceofReceiptDescription_10>
+                <PlaceofReceiptCountryCode_13> SS</PlaceofReceiptCountryCode_13>
+                <FinalDestination_14>B       RU NEW YORK                                         </FinalDestination_14>
+                <FinalDestinationCountryCode_17> NY</FinalDestinationCountryCode_17>
+                <ShipperExportDeclarationFlag_18>C</ShipperExportDeclarationFlag_18>
+                <PreviousPOLATD_19>  NY   U</PreviousPOLATD_19>
+                <BLBoundType_20>S</BLBoundType_20>
+                <GroupCode_27>  3</GroupCode_27>
+                <ModeofTransport_30>  O</ModeofTransport_30>
+                <TallyFlag_31>O</TallyFlag_31>
+            </BA01>
+            <BA02>
+                <PortofDischarge_03>  000</PortofDischarge_03>
+                <PortofDischargeStateCode_04>1    </PortofDischargeStateCode_04>
+                <PartnerCode_05> DEHAMHH          </PartnerCode_05>
+                <Placeoflodgmentofdocuments_08>           BREMERHAVEN                                      </Placeoflodgmentofdocuments_08>
+                <TotalGrossWeight_12>        Y  </TotalGrossWeight_12>
+                <GrossWeightUnit_13>000</GrossWeightUnit_13>
+                <TotalNumberofPackage_14>12553800K</TotalNumberofPackage_14>
+                <PackageUnit_15>G 0</PackageUnit_15>
+                <TotalNumberofContainer_16>0000</TotalNumberofContainer_16>
+                <UnloadPlace_17>4800B</UnloadPlace_17>
+                <PackageUnitAbbreviation_18>G 0006     </PackageUnitAbbreviation_18>
+                <ArticleNumber_19>           1        </ArticleNumber_19>
+            </BA02>
+            <BA03>
+                <PortofLoadingDescription_02>       0001SAINT PETERSBURG                                 </PortofLoadingDescription_02>
+                <PortofDischargeDescription_05>        RU HAMBURG                                          </PortofDischargeDescription_05>
+                <FinalDestinationCountryName_09>  DE      Y </FinalDestinationCountryName_09>
+                <BLIssueDate_12>   20170</BLIssueDate_12>
+                <CustomsReturnReferenceNumber_13>2012017020117DE245272728694I9      </CustomsReturnReferenceNumber_13>
+                <ReferenceNumber_14>           OOLUENS002</ReferenceNumber_14>
+                <OriginalReferenceNo_15>2582531010 OOLUENS002</OriginalReferenceNo_15>
+                <EstimatedDateofLoading_16>25825310</EstimatedDateofLoading_16>
+                <EstimatedTimeofLoading_17>10  </EstimatedTimeofLoading_17>
+                <PortofLoading_23> RULED</PortofLoading_23>
+                <PortofDischarge_24>USNYC </PortofDischarge_24>
+                <SONo_29> BRV          </SONo_29>
+                <TotalGrossWeight_34>           0</TotalGrossWeight_34>
+                <GrossWeightUnit_35>001</GrossWeightUnit_35>
+                <TSPortofLoadCountryCode_36>255</TSPortofLoadCountryCode_36>
+                <ChangeDescription_37>38000KG                                                     </ChangeDescription_37>
+            </BA03>
+            <BA06>
+                <ImporterNumber_03>    0001       </ImporterNumber_03>
+                <RoutingCountryCode6_17> R</RoutingCountryCode6_17>
+                <RoutingCountryCode7_18>UD</RoutingCountryCode7_18>
+                <RoutingCountryCode8_19>E </RoutingCountryCode8_19>
+                <ControlRefNo_32>           820</ControlRefNo_32>
+                <UniqueConsignmentReference_33>05035392851                        </UniqueConsignmentReference_33>
+            </BA06>
+            <PA01>
+                <AgentCode_03>     000101         </AgentCode_03>
+                <Name_06>        NL VIVOCHEM B.V.           </Name_06>
+                <PostalCode_07>           7</PostalCode_07>
+                <TelephoneNo_08>609 RL     577</TelephoneNo_08>
+                <FaxNo_09>774           </FaxNo_09>
+                <ContactFirstName_10>           UNKNOWN                 </ContactFirstName_10>
+                <ContactLastName_11>           UNKNOWN                 </ContactLastName_11>
+                <CityName_12>           ALMELO                  </CityName_12>
+                <LongName_15> 2582531010                                                           </LongName_15>
+            </PA01>
+            <PA01>
+                <AgentCode_03>     000102         </AgentCode_03>
+                <Name_06>        CA INTERATLAS CHEMICAL INC </Name_06>
+                <PostalCode_07>           L</PostalCode_07>
+                <TelephoneNo_08>2R 3C4     684</TelephoneNo_08>
+                <FaxNo_09>9991          </FaxNo_09>
+                <ContactFirstName_10>           PAUL                    </ContactFirstName_10>
+                <ContactLastName_11>           BOZEK                   </ContactLastName_11>
+                <CityName_12>           SAINT CATHARINES        </CityName_12>
+                <EmailID_13>           PAUL.BOZE</EmailID_13>
+                <SAPID_14>K@INTERATL</SAPID_14>
+                <LongName_15>A2582531010                                                           </LongName_15>
+            </PA01>
+            <PA01>
+                <AgentCode_03>     000103         </AgentCode_03>
+                <Name_06>        US INTERATLAS LOGISTICS    </Name_06>
+                <PostalCode_07>           0</PostalCode_07>
+                <TelephoneNo_08>7112       732</TelephoneNo_08>
+                <FaxNo_09>9786          </FaxNo_09>
+                <ContactFirstName_10>           UNKNOWN                 </ContactFirstName_10>
+                <ContactLastName_11>           UNKNOWN                 </ContactLastName_11>
+                <CityName_12>           NEWARK                  </CityName_12>
+                <LongName_15> 2582531010                                                           </LongName_15>
+            </PA01>
+            <PA01>
+                <AgentCode_03>     000105         </AgentCode_03>
+                <Name_06>        RU SOYUZKHIMTRANS INTERNATI</Name_06>
+                <PostalCode_07>ONAL       1</PostalCode_07>
+                <TelephoneNo_08>98095      600</TelephoneNo_08>
+                <FaxNo_09>1001          </FaxNo_09>
+                <ContactFirstName_10>           UNKNOWN                 </ContactFirstName_10>
+                <ContactLastName_11>           UNKNOWN                 </ContactLastName_11>
+                <CityName_12>           SANKT PETERBURG         </CityName_12>
+                <LongName_15> 2582531010                                                           </LongName_15>
+            </PA01>
+            <PA02>
+                <Address1_03>     000101DARWIN 5                </Address1_03>
+                <Address2_04>           7609 RL  ALMELO         </Address2_04>
+            </PA02>
+            <PA02>
+                <Address1_03>     00010263 CHURCH ST., SUITE 301</Address1_03>
+                <Address2_04>           SAINT CATHARINES, ON - L</Address2_04>
+                <Address3_05>2R 3C4     CANADA                  </Address3_05>
+            </PA02>
+            <PA02>
+                <Address1_03>     000103320 ELIZABETH AVE.      </Address1_03>
+                <Address2_04>           NEWARK, NJ - 07112      </Address2_04>
+                <Address3_05>           UNITED STATES           </Address3_05>
+            </PA02>
+            <PA02>
+                <Address1_03>     000105MARSHALA GOVOROVA STREET</Address1_03>
+                <Address2_04>, 43       198095                  </Address2_04>
+                <Address3_05>           TEL:7(812)600-1001      </Address3_05>
+                <Address4_06>           E-MAIL:SHTRANS@SKTINT.CO</Address4_06>
+            </PA02>
+            <CG01>
+                <ChargeType_02>       0001OCEA</ChargeType_02>
+                <FreightType_03>N FRE</FreightType_03>
+                <FreightChargeType_04>IGHT                </FreightChargeType_04>
+                <TotalAmount_07>           00</TotalAmount_07>
+                <PaymentLocation_08>000</PaymentLocation_08>
+                <Payer_09>00000000                           </Payer_09>
+                <Basis_13>           00</Basis_13>
+                <Rate_14>00000000000000000</Rate_14>
+                <Currency_15>000</Currency_15>
+                <BaseRate_16>00000000   000</BaseRate_16>
+                <BaseRateCurrency_17>000</BaseRateCurrency_17>
+                <PaymentCurrency_18>000</PaymentCurrency_18>
+                <BasisUnit_19>000</BasisUnit_19>
+                <PayableElsewhere_20>0</PayableElsewhere_20>
+                <MethodofPayment_21>0  </MethodofPayment_21>
+            </CG01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0001 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100014.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                    <ItemDescriptions_03>           6X20' S.T.C.:                                              </ItemDescriptions_03>
+                </ID01>
+                <ID01>
+                    <MarksandNos_02>       0002    </MarksandNos_02>
+                    <ItemDescriptions_03>           UROTROPINE TECHNICAL IMO 4.1                               </ItemDescriptions_03>
+                </ID01>
+                <ID01>
+                    <MarksandNos_02>       0003    </MarksandNos_02>
+                    <ItemDescriptions_03>           UN NO 1328                                                 </ItemDescriptions_03>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU1139997</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>36</Type2_04>
+                        <SealNo2_05>26             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0002 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100024.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU0376802</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>36</Type2_04>
+                        <SealNo2_05>28             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0003 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100034.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU2984078</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>36</Type2_04>
+                        <SealNo2_05>44             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0004 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100044.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU1364690</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>52</Type2_04>
+                        <SealNo2_05>02             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0005 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100054.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU1646435</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>52</Type2_04>
+                        <SealNo2_05>04             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+            <IT01_IT01>
+                <IT01>
+                    <NoofPackage_03>    0006 </NoofPackage_03>
+                    <PackageUnit_04>  0</PackageUnit_04>
+                    <BriefDescriptions_05>00000800BG UROTROPINE IMO 4.1 / UN </BriefDescriptions_05>
+                    <FullDescriptions_06>1328       UROTROPINE TECHNICAL UN 1328                     </FullDescriptions_06>
+                    <NetWeightUnit_08>000</NetWeightUnit_08>
+                    <GrossWeight_09>02000000KG </GrossWeight_09>
+                    <GrossWeightUnit_10>000</GrossWeightUnit_10>
+                    <Length_11>02092300K</Length_11>
+                    <LengthUnit_12>G</LengthUnit_12>
+                    <Width_13> 00000000</Width_13>
+                    <WidthUnit_14>0</WidthUnit_14>
+                    <Height_15>M00000000</Height_15>
+                    <HeightUnit_16>0</HeightUnit_16>
+                    <Volume_17>M00000000</Volume_17>
+                    <VolumeUnit_18>0M0</VolumeUnit_18>
+                    <TransshipmentInd_19>0</TransshipmentInd_19>
+                    <FumigationInd_20>0</FumigationInd_20>
+                    <PerishableInd_21>0</PerishableInd_21>
+                    <FlammableLiquidInd_22>0</FlammableLiquidInd_22>
+                    <PersonalEffectInd_23>0</PersonalEffectInd_23>
+                    <TimberInd_24>0</TimberInd_24>
+                    <HazardousInd_25>0</HazardousInd_25>
+                    <ReeferInd_26>0</ReeferInd_26>
+                    <NegativeTemperatureInd_27>C</NegativeTemperatureInd_27>
+                    <ReeferTemperature_28>BMNNNN</ReeferTemperature_28>
+                    <ReeferTemperatureUnit_29>N</ReeferTemperatureUnit_29>
+                    <DGInd_30>N</DGInd_30>
+                    <HarmonizedCode_31>NN 000000 Y2</HarmonizedCode_31>
+                    <CustomsStatusofGoods_32>933</CustomsStatusofGoods_32>
+                    <CargoNature_33>69</CargoNature_33>
+                    <InlandMoveID_35> T2   </InlandMoveID_35>
+                </IT01>
+                <DG01>
+                    <IMCOClass_03>   0</IMCOClass_03>
+                    <UNNo_04>00100064.1</UNNo_04>
+                    <FlashPoint_06>1328  </FlashPoint_06>
+                    <DangerousGoodsLabel1_08>   N000000                    </DangerousGoodsLabel1_08>
+                    <TechnicalName_12>           UROTROPINE TECHNICAL                                                                                                                                                     </TechnicalName_12>
+                    <EmergencyContactName_13>           METAFRAKS LLC           </EmergencyContactName_13>
+                    <EmergencyContactNumber1_14>           7342484</EmergencyContactNumber1_14>
+                    <ProperShippingName_15>0338       HEXAMETHYLENETETRAMINE                           </ProperShippingName_15>
+                    <MFAG_18>      III </MFAG_18>
+                    <GrossWeight_19>           0000</GrossWeight_19>
+                    <GrossWeightUnit_20>000</GrossWeightUnit_20>
+                    <NoofPackages_21>20923000K</NoofPackages_21>
+                    <PackagingCode_22>G 0</PackagingCode_22>
+                    <EmergencyScheduledReference_23>000008</EmergencyScheduledReference_23>
+                    <MarinePollutant_24>0</MarinePollutant_24>
+                    <NetExplosiveWeight_25>0PG F-A, S 0000</NetExplosiveWeight_25>
+                    <NetExplosiveWeightUnit_26>000</NetExplosiveWeightUnit_26>
+                    <HandlingCode_27>000</HandlingCode_27>
+                    <HandlingInstruction_28>00000                                                                                                                     </HandlingInstruction_28>
+                    <NetWeightUnit_31>000</NetWeightUnit_31>
+                    <PackageCodeDescription_32>00000000   PG                      </PackageCodeDescription_32>
+                    <SubsidiaryRisk1_36>    N   </SubsidiaryRisk1_36>
+                </DG01>
+                <ID01>
+                    <MarksandNos_02>       0001N/M </MarksandNos_02>
+                </ID01>
+                <CT21_CT21>
+                    <CT21>
+                        <ContainerNo_02>       0001O</ContainerNo_02>
+                        <VINNumber_03>OLU0114401</VINNumber_03>
+                        <FCLIndicator_06>Y</FCLIndicator_06>
+                        <NoofPackage_11>     YNN </NoofPackage_11>
+                        <PackageUnit_12>HH0</PackageUnit_12>
+                        <Bay_13>000</Bay_13>
+                        <Row_14>01</Row_14>
+                        <Tier_15>60</Tier_15>
+                        <SizeType_16>0PC </SizeType_16>
+                        <ContainerTareWeight_21>        F </ContainerTareWeight_21>
+                        <ContainerTareWeightUnit_22>N00</ContainerTareWeightUnit_22>
+                        <ContainerGrossWeight_23>00220000KG</ContainerGrossWeight_23>
+                        <ContainerGrossWeightUnit_24> 00</ContainerGrossWeightUnit_24>
+                        <ContainerMaterial_25>0</ContainerMaterial_25>
+                        <ReeferIndicator_26>4</ReeferIndicator_26>
+                        <NegativeTemperatureInd_27>1</NegativeTemperatureInd_27>
+                        <ReeferTemperature_28>84600K</ReeferTemperature_28>
+                        <ReeferTemperatureUnit_29>G</ReeferTemperatureUnit_29>
+                        <OverLength_31>S</OverLength_31>
+                        <OverwidthRight_32>N</OverwidthRight_32>
+                        <OverwidthLeft_33>N</OverwidthLeft_33>
+                        <UnderbondIndicator_34>0</UnderbondIndicator_34>
+                        <SOCIndicator_35>0</SOCIndicator_35>
+                        <DirectDeliveryIndicator_36>0</DirectDeliveryIndicator_36>
+                        <ContainerRemarks_37>000C     N                                               </ContainerRemarks_37>
+                    </CT21>
+                    <SL21>
+                        <SealNo1_03>     0001SHB054</SealNo1_03>
+                        <Type2_04>52</Type2_04>
+                        <SealNo2_05>06             </SealNo2_05>
+                    </SL21>
+                </CT21_CT21>
+            </IT01_IT01>
+        </BA01_BA01>
+        <S9999>
+            <RecordCount_02>   IOCM</RecordCount_02>
+            <ContainerCount_03>UIF 000</ContainerCount_03>
+            <BLCount_04>0002000</BLCount_04>
+            <SenderId_05>00180000002                        </SenderId_05>
+        </S9999>
+    </Loop_AAAA>
+</IOCM>

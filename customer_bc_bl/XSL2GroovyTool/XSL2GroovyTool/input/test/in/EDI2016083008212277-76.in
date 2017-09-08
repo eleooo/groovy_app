@@ -1,0 +1,1539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:ContainerMovement xmlns:ns0="http://www.cargosmart.com/route">
+    <ns0:Header>
+        <ns1:MsgDT xmlns:ns1="http://www.cargosmart.com/common">
+            <ns1:GMT>2016-08-30T08:21:22.595+08:00</ns1:GMT>
+            <ns1:LocDT TimeZone="HKT" CSTimeZone="HKT">2016-08-30T16:21:22.595+08:00</ns1:LocDT>
+        </ns1:MsgDT>
+        <ns1:MsgDirection xmlns:ns1="http://www.cargosmart.com/common">O</ns1:MsgDirection>
+        <ns1:MsgType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:MsgType>
+        <ns1:SenderID xmlns:ns1="http://www.cargosmart.com/common">CargoSmart</ns1:SenderID>
+        <ns1:ReceiverID xmlns:ns1="http://www.cargosmart.com/common">DSGOODS</ns1:ReceiverID>
+        <ns1:Action xmlns:ns1="http://www.cargosmart.com/common">NEW</ns1:Action>
+        <ns1:Version xmlns:ns1="http://www.cargosmart.com/common">24</ns1:Version>
+        <ns1:InterchangeMessageID xmlns:ns1="http://www.cargosmart.com/common">DSGOODS_CT_20160830162122_90759086</ns1:InterchangeMessageID>
+        <ns1:DataSource xmlns:ns1="http://www.cargosmart.com/common">CS2 db</ns1:DataSource>
+    </ns0:Header>
+    <ns0:Body>
+        <ns0:TransactionInformation>
+            <ns1:MessageID xmlns:ns1="http://www.cargosmart.com/common">DSGOODS_CT_20160830162122_90759086_90759086</ns1:MessageID>
+            <ns1:InterchangeTransactionID xmlns:ns1="http://www.cargosmart.com/common">90759086</ns1:InterchangeTransactionID>
+        </ns0:TransactionInformation>
+        <ns0:Event>
+            <ns0:CarrEventCode>Loaded on board at first port of load</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_loaded_first_pol</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Container is on board vessel</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Yantian</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Yantian</ns0:City>
+                    <ns0:County>Shenzhen</ns0:County>
+                    <ns0:State>Guangdong</ns0:State>
+                    <ns0:Country>China</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNYTN</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57078</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>508</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T07:35:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-30T15:35:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CurrentShipmentLeg>1</ns0:CurrentShipmentLeg>
+            <ns0:CarrierUniqueMovementID>30000074459086-1-37</ns0:CarrierUniqueMovementID>
+            <ns0:ContraIndicator>INITIAL</ns0:ContraIndicator>
+            <ns0:CS1Event>CS060</ns0:CS1Event>
+        </ns0:Event>
+        <ns0:GeneralInformation>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Vessel</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:Label>Loaded at First POL</ns0:Label>
+            <ns0:ProposedAction>ADD_CNTR_STATUS_NOTIFY</ns0:ProposedAction>
+            <ns0:TimeOfIssue>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T07:35:00+08:00</ns1:GMT>
+            </ns0:TimeOfIssue>
+            <ns0:IsCSCustomer>1</ns0:IsCSCustomer>
+        </ns0:GeneralInformation>
+        <ns0:Container>
+            <ns0:ContainerNumber>TEMU697603</ns0:ContainerNumber>
+            <ns0:ContainerCheckDigit>7</ns0:ContainerCheckDigit>
+            <ns0:CarrCntrSizeType>45G1</ns0:CarrCntrSizeType>
+            <ns0:CSContainerSizeType>45G1</ns0:CSContainerSizeType>
+            <ns0:Seal>
+                <ns1:SealType xmlns:ns1="http://www.cargosmart.com/common">CA</ns1:SealType>
+                <ns1:SealNumber xmlns:ns1="http://www.cargosmart.com/common">OOLEEX2997</ns1:SealNumber>
+            </ns0:Seal>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">C</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:CSS_CNTR_UUID>2000000003638374688</ns0:CSS_CNTR_UUID>
+            <ns0:CS1ContainerSizeType>40HQ</ns0:CS1ContainerSizeType>
+            <ns0:EmptyReturnFacilityCode>PHX10</ns0:EmptyReturnFacilityCode>
+        </ns0:Container>
+        <ns0:BookingGeneralInfo>
+            <ns0:CarrierBookingNumber>2576794122</ns0:CarrierBookingNumber>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">C</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:BookingOffice>Shenzhen</ns0:BookingOffice>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">74</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">SPORTING GOODS
+DICKS CHILD PO 595001504
+TREADMILL</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BookingGeneralInfo>
+        <ns0:BLGeneralInfo>
+            <ns0:BLNumber>2576794122</ns0:BLNumber>
+            <ns0:BLIssueDT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T00:00:00+08:00</ns1:LocDT>
+            </ns0:BLIssueDT>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">C</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:CustomsClearanceLocationCode>2709</ns0:CustomsClearanceLocationCode>
+            <ns0:BLSVVD>
+                <ns1:Service xmlns:ns1="http://www.cargosmart.com/common">SC2</ns1:Service>
+                <ns1:Vessel xmlns:ns1="http://www.cargosmart.com/common">OHC</ns1:Vessel>
+                <ns1:VesselName xmlns:ns1="http://www.cargosmart.com/common">OOCL HO CHI MINH CITY</ns1:VesselName>
+                <ns1:Voyage xmlns:ns1="http://www.cargosmart.com/common">008</ns1:Voyage>
+                <ns1:Direction xmlns:ns1="http://www.cargosmart.com/common">E</ns1:Direction>
+                <ns0:ServiceName>SOUTH CHINA 2</ns0:ServiceName>
+            </ns0:BLSVVD>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">74</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">SPORTING GOODS DICKS CHILD PO 595001504 TREADMILL</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BLGeneralInfo>
+        <ns0:Route>
+            <ns0:POR>
+                <ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Yantian</ns1:LocationName>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Yantian</ns1:City>
+                    <ns1:County>Shenzhen</ns1:County>
+                    <ns1:State>Guangdong</ns1:State>
+                    <ns1:Country>China</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>CNYTN</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>CNYTN</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>57078</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>YAT01</ns1:FacilityCode>
+                    <ns1:FacilityName>Yantian Port</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode>GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode>CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>AS</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+            </ns0:POR>
+            <ns0:FND>
+                <ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Goodyear</ns1:LocationName>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Goodyear</ns1:City>
+                    <ns1:County>Maricopa</ns1:County>
+                    <ns1:State>Arizona</ns1:State>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>USGYR</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>USGYR</ns1:UNLocationCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>LGB10</ns1:FacilityCode>
+                    <ns1:FacilityName>Long Beach Container Terminal (Pier E)</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2537998</ns1:CSParentCityID>
+                    <ns1:CSStateCode>AZ</ns1:CSStateCode>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>NA</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+            </ns0:FND>
+            <ns0:FirstPOL>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Yantian</ns1:PortName>
+                    <ns1:PortCode>YAT</ns1:PortCode>
+                    <ns1:City>Yantian</ns1:City>
+                    <ns1:County>Shenzhen</ns1:County>
+                    <ns1:State>Guangdong</ns1:State>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>CNYTN</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>57078</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>China</ns1:Country>
+                    <ns1:CSPortID>508</ns1:CSPortID>
+                    <ns1:CSCountryCode>CN</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>YAT01</ns1:FacilityCode>
+                    <ns1:FacilityName>Yantian Port</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSStateCode>GD</ns0:CSStateCode>
+                <ns0:CSParentCityID>2534801</ns0:CSParentCityID>
+            </ns0:FirstPOL>
+            <ns0:LastPOD>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Long Beach</ns1:PortName>
+                    <ns1:PortCode>LGB</ns1:PortCode>
+                    <ns1:City>Long Beach</ns1:City>
+                    <ns1:County>Los Angeles</ns1:County>
+                    <ns1:State>California</ns1:State>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>USLGB</ns1:UNLocationCode>
+                        <ns1:SchedKDType>D</ns1:SchedKDType>
+                        <ns1:SchedKDCode>2709</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:CSPortID>425</ns1:CSPortID>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>LGB10</ns1:FacilityCode>
+                    <ns1:FacilityName>Long Beach Container Terminal (Pier E)</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSStateCode>CA</ns0:CSStateCode>
+                <ns0:CSParentCityID>2533284</ns0:CSParentCityID>
+            </ns0:LastPOD>
+            <ns0:ArrivalAtFinalHub Indicator="E">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-09-18T00:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="PDT" CSTimeZone="PDT">2016-09-17T17:00:00+08:00</ns1:LocDT>
+            </ns0:ArrivalAtFinalHub>
+            <ns0:FullReturnCutoffDT Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-29T01:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-08-29T09:00:00+08:00</ns1:LocDT>
+            </ns0:FullReturnCutoffDT>
+            <ns0:CargoReceiptDT Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-24T06:40:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-24T14:40:00+08:00</ns1:LocDT>
+            </ns0:CargoReceiptDT>
+            <ns0:OceanLeg>
+                <ns0:LegSeq>1</ns0:LegSeq>
+                <ns0:POL>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Yantian</ns1:PortName>
+                        <ns1:City>Yantian</ns1:City>
+                        <ns1:County>Shenzhen</ns1:County>
+                        <ns1:State>Guangdong</ns1:State>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>CNYTN</ns1:UNLocationCode>
+                            <ns1:SchedKDType>K</ns1:SchedKDType>
+                            <ns1:SchedKDCode>57078</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>China</ns1:Country>
+                        <ns1:CSPortID>508</ns1:CSPortID>
+                        <ns1:CSCountryCode>CN</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>YAT01</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:DepartureDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T14:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-08-30T22:00:00+08:00</ns1:LocDT>
+                    </ns0:DepartureDT>
+                    <ns0:CSStateCode>GD</ns0:CSStateCode>
+                    <ns0:CSParentCityID>2534801</ns0:CSParentCityID>
+                </ns0:POL>
+                <ns0:POD>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Long Beach</ns1:PortName>
+                        <ns1:City>Long Beach</ns1:City>
+                        <ns1:County>Los Angeles</ns1:County>
+                        <ns1:State>California</ns1:State>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>USLGB</ns1:UNLocationCode>
+                            <ns1:SchedKDType>D</ns1:SchedKDType>
+                            <ns1:SchedKDCode>2709</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>United States</ns1:Country>
+                        <ns1:CSPortID>425</ns1:CSPortID>
+                        <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>LGB10</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:ArrivalDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-09-14T01:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="PDT" CSTimeZone="PDT">2016-09-13T18:00:00+08:00</ns1:LocDT>
+                    </ns0:ArrivalDT>
+                    <ns0:CSStateCode>CA</ns0:CSStateCode>
+                    <ns0:CSParentCityID>2533284</ns0:CSParentCityID>
+                </ns0:POD>
+                <ns0:SVVD>
+                    <ns0:Loading>
+                        <ns0:Service>SC2</ns0:Service>
+                        <ns0:ServiceName>SOUTH CHINA 2</ns0:ServiceName>
+                        <ns0:Vessel>OHC</ns0:Vessel>
+                        <ns0:VesselName>OOCL HO CHI MINH CITY</ns0:VesselName>
+                        <ns0:Voyage>008</ns0:Voyage>
+                        <ns0:Direction>East</ns0:Direction>
+                        <ns0:LloydsNumber>9613599</ns0:LloydsNumber>
+                        <ns0:CallSign>VROK8</ns0:CallSign>
+                        <ns0:RegistrationCountry>Hong kong</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>HK</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>008E</ns0:ExternalVoyage>
+                    </ns0:Loading>
+                    <ns0:Discharge>
+                        <ns0:Service>SC2</ns0:Service>
+                        <ns0:ServiceName>SOUTH CHINA 2</ns0:ServiceName>
+                        <ns0:Vessel>OHC</ns0:Vessel>
+                        <ns0:VesselName>OOCL HO CHI MINH CITY</ns0:VesselName>
+                        <ns0:Voyage>008</ns0:Voyage>
+                        <ns0:Direction>East</ns0:Direction>
+                        <ns0:LloydsNumber>9613599</ns0:LloydsNumber>
+                        <ns0:CallSign>VROK8</ns0:CallSign>
+                        <ns0:RegistrationCountry>Hong kong</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>HK</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>008E</ns0:ExternalVoyage>
+                    </ns0:Discharge>
+                </ns0:SVVD>
+            </ns0:OceanLeg>
+        </ns0:Route>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>CSBKG</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>CS4883637603</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription>CS Reference Number</ns0:ReferenceDescription>
+        </ns0:ExternalReference>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>SC</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>PE163485v006</ns0:ReferenceNumber>
+        </ns0:ExternalReference>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">BPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">APL Logistics China Ltd</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">APLLCN463339263</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7034288000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:ContactEmailAddress>wendy_wang@apllogistics.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Shenzhen</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Lot 15B, Mingzhu Road,Yantian Port, Shenzhen.</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">APL Logistics China Ltd</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">APLLCN463339263</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7034288000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Vila</ns1:FirstName>
+                <ns1:LastName>Han</ns1:LastName>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Shenzhen</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Lot 15B, Mingzhu Road,Yantian Port, Shenzhen.</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Sporting Goods, Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">DICKUS58374120503015</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7131868000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">APL Logistics China Ltd</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">APLLCN463339263</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7034288000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Vila</ns1:FirstName>
+                <ns1:LastName>Han</ns1:LastName>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Shenzhen</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Lot 15B, Mingzhu Road,Yantian Port, Shenzhen.</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Merchandising and Supply Chain, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7949147000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Casey</ns1:FirstName>
+                <ns1:LastName>Litvin</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>724</ns1:AreaCode>
+                    <ns1:Number>2734902</ns1:Number>
+                </ns1:ContactPhone>
+                <ns1:ContactEmailAddress>cathryn.litvin@dcsg.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CCP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Merchandising and Supply Chain, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7949147000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Casey</ns1:FirstName>
+                <ns1:LastName>Litvin</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>724</ns1:AreaCode>
+                    <ns1:Number>2734902</ns1:Number>
+                </ns1:ContactPhone>
+                <ns1:ContactEmailAddress>cathryn.litvin@dcsg.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">NPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Livingston International, Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">PBBGUS1680242423</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6022571000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Debra</ns1:FirstName>
+                <ns1:LastName>Maggiani</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>516</ns1:AreaCode>
+                    <ns1:Number>8253622 208</ns1:Number>
+                </ns1:ContactPhone>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Valley Stream</ns1:City>
+                <ns1:County>Nassau</ns1:County>
+                <ns1:State>New York</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>11581</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>70 East Sunrise Highway, Suite 411</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">APL Logistics China Ltd</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">APLLCN463339263</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7034288000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Vila</ns1:FirstName>
+                <ns1:LastName>Han</ns1:LastName>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Shenzhen</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Lot 15B, Mingzhu Road,Yantian Port, Shenzhen.</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Merchandising and Supply Chain, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7949147000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Casey</ns1:FirstName>
+                <ns1:LastName>Litvin</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>724</ns1:AreaCode>
+                    <ns1:Number>2734902</ns1:Number>
+                </ns1:ContactPhone>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Merchandising and Supply Chain, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7949147000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Casey</ns1:FirstName>
+                <ns1:LastName>Litvin</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>724</ns1:AreaCode>
+                    <ns1:Number>2734902</ns1:Number>
+                </ns1:ContactPhone>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dyaco International Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">DYACTW91955452567368</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3159477000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Chungshan</ns1:City>
+                <ns1:Country>TW</ns1:Country>
+                <ns1:PostalCode>104</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>12F&#xD;
+No.111, Song Jiang Road,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Cargo>
+            <ns1:CargoNature xmlns:ns1="http://www.cargosmart.com/common">GC</ns1:CargoNature>
+            <ns1:CargoDescription xmlns:ns1="http://www.cargosmart.com/common">SPORTING GODDS</ns1:CargoDescription>
+            <ns1:Packaging xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:PackageType>CT</ns1:PackageType>
+                <ns1:PackageQty>74</ns1:PackageQty>
+                <ns1:PackageDesc>SPORTING GOODS
+DICKS CHILD PO 595001504
+TREADMILL</ns1:PackageDesc>
+            </ns1:Packaging>
+            <ns1:GrossWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>9398</ns1:Weight>
+                <ns1:WeightUnit>KGS</ns1:WeightUnit>
+            </ns1:GrossWeight>
+            <ns1:NetWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>0</ns1:Weight>
+            </ns1:NetWeight>
+            <ns1:Volume xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Volume>66</ns1:Volume>
+                <ns1:VolumeUnit>CBM</ns1:VolumeUnit>
+            </ns1:Volume>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>7</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>MEAS:</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>8</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>86"X36"X17"</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>9</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>UNIT</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>1</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>MODEL NO.:F63</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>10</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>MEAS:</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>6</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>BOX</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>11</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>83"X35"X57"</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>3</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>Q'TY.:1 PC</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>2</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>C/NO.:</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>12</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>MADE IN CHINA</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>4</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>N.W.:253 LBS.</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>5</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>G.W.:280 LBS.</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+        </ns0:Cargo>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>Outbound intermodal leg arrived</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_arrived_at_ob_iml</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Container at first vessel loading port</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Yantian</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Yantian</ns0:City>
+                    <ns0:County>Shenzhen</ns0:County>
+                    <ns0:State>Guangdong</ns0:State>
+                    <ns0:Country>China</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNYTN</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57078</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>508</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-24T06:40:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-24T14:40:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>30000073760275-1-31</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Truck</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS040</ns0:CS1Event>
+        </ns0:MileStones>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>Loaded on board at first port of load</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_loaded_first_pol</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Container is on board vessel</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Yantian</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Yantian</ns0:City>
+                    <ns0:County>Shenzhen</ns0:County>
+                    <ns0:State>Guangdong</ns0:State>
+                    <ns0:Country>China</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNYTN</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57078</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>508</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T07:35:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-30T15:35:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>30000074459086-1-37</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Vessel</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS060</ns0:CS1Event>
+        </ns0:MileStones>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>Full received by carrier</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_rcvd</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Laden Container received by carrier</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Yantian Port</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Yantian</ns0:City>
+                    <ns0:County>Shenzhen</ns0:County>
+                    <ns0:State>Guangdong</ns0:State>
+                    <ns0:Country>China</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNYTN</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57078</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-24T06:40:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-24T14:40:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>30000073760275-1-26</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Truck</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS020</ns0:CS1Event>
+        </ns0:MileStones>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>ssm_vsl_arr_last_pod_est</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>vsl_arrived</ns0:CSEventCode>
+                <ns0:DimensionType>Port</ns0:DimensionType>
+                <ns0:DimensionValue>LastPOD</ns0:DimensionValue>
+                <ns0:EstActIndicator>E</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:Location>
+                <ns0:LocationName>Long Beach</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Long Beach</ns0:City>
+                    <ns0:County>Los Angeles</ns0:County>
+                    <ns0:State>California</ns0:State>
+                    <ns0:Country>United States</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">USLGB</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">D</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">2709</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2533284</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">CA</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">NA</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>425</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-09-14T01:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="PDT">2016-09-13T18:00:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>315454537-1</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS277</ns0:CS1Event>
+        </ns0:MileStones>
+    </ns0:Body>
+    <ns0:Body>
+        <ns0:TransactionInformation>
+            <ns1:MessageID xmlns:ns1="http://www.cargosmart.com/common">DSGOODS_CT_20160830162122_90759086_90759170</ns1:MessageID>
+            <ns1:InterchangeTransactionID xmlns:ns1="http://www.cargosmart.com/common">90759170</ns1:InterchangeTransactionID>
+        </ns0:TransactionInformation>
+        <ns0:Event>
+            <ns0:CarrEventCode>Loaded on board at first port of load</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_loaded_first_pol</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Container is on board vessel</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Yantian</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Yantian</ns0:City>
+                    <ns0:County>Shenzhen</ns0:County>
+                    <ns0:State>Guangdong</ns0:State>
+                    <ns0:Country>China</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNYTN</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57078</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>508</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T07:39:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-30T15:39:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CurrentShipmentLeg>1</ns0:CurrentShipmentLeg>
+            <ns0:CarrierUniqueMovementID>30000074459092-1-37</ns0:CarrierUniqueMovementID>
+            <ns0:ContraIndicator>INITIAL</ns0:ContraIndicator>
+            <ns0:CS1Event>CS060</ns0:CS1Event>
+        </ns0:Event>
+        <ns0:GeneralInformation>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Vessel</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:Label>Loaded at First POL</ns0:Label>
+            <ns0:ProposedAction>ADD_CNTR_STATUS_NOTIFY</ns0:ProposedAction>
+            <ns0:TimeOfIssue>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T07:39:00+08:00</ns1:GMT>
+            </ns0:TimeOfIssue>
+            <ns0:IsCSCustomer>1</ns0:IsCSCustomer>
+        </ns0:GeneralInformation>
+        <ns0:Container>
+            <ns0:ContainerNumber>TCNU558702</ns0:ContainerNumber>
+            <ns0:ContainerCheckDigit>5</ns0:ContainerCheckDigit>
+            <ns0:CarrCntrSizeType>45G1</ns0:CarrCntrSizeType>
+            <ns0:CSContainerSizeType>45G1</ns0:CSContainerSizeType>
+            <ns0:Seal>
+                <ns1:SealType xmlns:ns1="http://www.cargosmart.com/common">CA</ns1:SealType>
+                <ns1:SealNumber xmlns:ns1="http://www.cargosmart.com/common">OOLEEV7561</ns1:SealNumber>
+            </ns0:Seal>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">C</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:CSS_CNTR_UUID>2000000003638374833</ns0:CSS_CNTR_UUID>
+            <ns0:CS1ContainerSizeType>40HQ</ns0:CS1ContainerSizeType>
+            <ns0:EmptyReturnFacilityCode>PHX10</ns0:EmptyReturnFacilityCode>
+        </ns0:Container>
+        <ns0:BookingGeneralInfo>
+            <ns0:CarrierBookingNumber>2576794123</ns0:CarrierBookingNumber>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">C</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:BookingOffice>Shenzhen</ns0:BookingOffice>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">74</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">SPORTING GOODS
+DICKS CHILD PO 595001504
+F63-2017 TREADMILL
+SHIPPER DECLARED:
+NO WOOD PACKAGING MATERIAL</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BookingGeneralInfo>
+        <ns0:BLGeneralInfo>
+            <ns0:BLNumber>2576794122</ns0:BLNumber>
+            <ns0:BLIssueDT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T00:00:00+08:00</ns1:LocDT>
+            </ns0:BLIssueDT>
+            <ns0:Haulage>
+                <ns1:OutBound xmlns:ns1="http://www.cargosmart.com/common">M</ns1:OutBound>
+                <ns1:InBound xmlns:ns1="http://www.cargosmart.com/common">C</ns1:InBound>
+            </ns0:Haulage>
+            <ns0:CustomsClearanceLocationCode>2709</ns0:CustomsClearanceLocationCode>
+            <ns0:BLSVVD>
+                <ns1:Service xmlns:ns1="http://www.cargosmart.com/common">SC2</ns1:Service>
+                <ns1:Vessel xmlns:ns1="http://www.cargosmart.com/common">OHC</ns1:Vessel>
+                <ns1:VesselName xmlns:ns1="http://www.cargosmart.com/common">OOCL HO CHI MINH CITY</ns1:VesselName>
+                <ns1:Voyage xmlns:ns1="http://www.cargosmart.com/common">008</ns1:Voyage>
+                <ns1:Direction xmlns:ns1="http://www.cargosmart.com/common">E</ns1:Direction>
+                <ns0:ServiceName>SOUTH CHINA 2</ns0:ServiceName>
+            </ns0:BLSVVD>
+            <ns0:Packaging>
+                <ns1:PackageType xmlns:ns1="http://www.cargosmart.com/common">CT</ns1:PackageType>
+                <ns1:PackageQty xmlns:ns1="http://www.cargosmart.com/common">74</ns1:PackageQty>
+                <ns1:PackageDesc xmlns:ns1="http://www.cargosmart.com/common">SPORTING GOODS DICKS CHILD PO 595001504 F63-2017 TREADMILL SHIPPER DECLARED: NO WOOD PACKAGING MATERIAL</ns1:PackageDesc>
+            </ns0:Packaging>
+        </ns0:BLGeneralInfo>
+        <ns0:Route>
+            <ns0:POR>
+                <ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Yantian</ns1:LocationName>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Yantian</ns1:City>
+                    <ns1:County>Shenzhen</ns1:County>
+                    <ns1:State>Guangdong</ns1:State>
+                    <ns1:Country>China</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>CNYTN</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>CNYTN</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>57078</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>YAT01</ns1:FacilityCode>
+                    <ns1:FacilityName>Yantian Port</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode>GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode>CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>AS</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+            </ns0:POR>
+            <ns0:FND>
+                <ns1:LocationName xmlns:ns1="http://www.cargosmart.com/common">Goodyear</ns1:LocationName>
+                <ns1:CityDetails xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:City>Goodyear</ns1:City>
+                    <ns1:County>Maricopa</ns1:County>
+                    <ns1:State>Arizona</ns1:State>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:LocationCode>
+                        <ns1:MutuallyDefinedCode>USGYR</ns1:MutuallyDefinedCode>
+                        <ns1:UNLocationCode>USGYR</ns1:UNLocationCode>
+                    </ns1:LocationCode>
+                </ns1:CityDetails>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>LGB10</ns1:FacilityCode>
+                    <ns1:FacilityName>Long Beach Container Terminal (Pier E)</ns1:FacilityName>
+                </ns1:Facility>
+                <ns1:CSStandardCity xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:CSParentCityID>2537998</ns1:CSParentCityID>
+                    <ns1:CSStateCode>AZ</ns1:CSStateCode>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode>NA</ns1:CSContinentCode>
+                </ns1:CSStandardCity>
+            </ns0:FND>
+            <ns0:FirstPOL>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Yantian</ns1:PortName>
+                    <ns1:PortCode>YAT</ns1:PortCode>
+                    <ns1:City>Yantian</ns1:City>
+                    <ns1:County>Shenzhen</ns1:County>
+                    <ns1:State>Guangdong</ns1:State>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>CNYTN</ns1:UNLocationCode>
+                        <ns1:SchedKDType>K</ns1:SchedKDType>
+                        <ns1:SchedKDCode>57078</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>China</ns1:Country>
+                    <ns1:CSPortID>508</ns1:CSPortID>
+                    <ns1:CSCountryCode>CN</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>YAT01</ns1:FacilityCode>
+                    <ns1:FacilityName>Yantian Port</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSStateCode>GD</ns0:CSStateCode>
+                <ns0:CSParentCityID>2534801</ns0:CSParentCityID>
+            </ns0:FirstPOL>
+            <ns0:LastPOD>
+                <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:PortName>Long Beach</ns1:PortName>
+                    <ns1:PortCode>LGB</ns1:PortCode>
+                    <ns1:City>Long Beach</ns1:City>
+                    <ns1:County>Los Angeles</ns1:County>
+                    <ns1:State>California</ns1:State>
+                    <ns1:LocationCode>
+                        <ns1:UNLocationCode>USLGB</ns1:UNLocationCode>
+                        <ns1:SchedKDType>D</ns1:SchedKDType>
+                        <ns1:SchedKDCode>2709</ns1:SchedKDCode>
+                    </ns1:LocationCode>
+                    <ns1:Country>United States</ns1:Country>
+                    <ns1:CSPortID>425</ns1:CSPortID>
+                    <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                </ns1:Port>
+                <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                    <ns1:FacilityCode>LGB10</ns1:FacilityCode>
+                    <ns1:FacilityName>Long Beach Container Terminal (Pier E)</ns1:FacilityName>
+                </ns1:Facility>
+                <ns0:CSStateCode>CA</ns0:CSStateCode>
+                <ns0:CSParentCityID>2533284</ns0:CSParentCityID>
+            </ns0:LastPOD>
+            <ns0:ArrivalAtFinalHub Indicator="E">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-09-18T00:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="PDT" CSTimeZone="PDT">2016-09-17T17:00:00+08:00</ns1:LocDT>
+            </ns0:ArrivalAtFinalHub>
+            <ns0:FullReturnCutoffDT Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-29T01:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-08-29T09:00:00+08:00</ns1:LocDT>
+            </ns0:FullReturnCutoffDT>
+            <ns0:CargoReceiptDT Indicator="A">
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-24T04:34:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-24T12:34:00+08:00</ns1:LocDT>
+            </ns0:CargoReceiptDT>
+            <ns0:OceanLeg>
+                <ns0:LegSeq>1</ns0:LegSeq>
+                <ns0:POL>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Yantian</ns1:PortName>
+                        <ns1:City>Yantian</ns1:City>
+                        <ns1:County>Shenzhen</ns1:County>
+                        <ns1:State>Guangdong</ns1:State>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>CNYTN</ns1:UNLocationCode>
+                            <ns1:SchedKDType>K</ns1:SchedKDType>
+                            <ns1:SchedKDCode>57078</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>China</ns1:Country>
+                        <ns1:CSPortID>508</ns1:CSPortID>
+                        <ns1:CSCountryCode>CN</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>YAT01</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:DepartureDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T14:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="CST" CSTimeZone="CCT">2016-08-30T22:00:00+08:00</ns1:LocDT>
+                    </ns0:DepartureDT>
+                    <ns0:CSStateCode>GD</ns0:CSStateCode>
+                    <ns0:CSParentCityID>2534801</ns0:CSParentCityID>
+                </ns0:POL>
+                <ns0:POD>
+                    <ns1:Port xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:PortName>Long Beach</ns1:PortName>
+                        <ns1:City>Long Beach</ns1:City>
+                        <ns1:County>Los Angeles</ns1:County>
+                        <ns1:State>California</ns1:State>
+                        <ns1:LocationCode>
+                            <ns1:UNLocationCode>USLGB</ns1:UNLocationCode>
+                            <ns1:SchedKDType>D</ns1:SchedKDType>
+                            <ns1:SchedKDCode>2709</ns1:SchedKDCode>
+                        </ns1:LocationCode>
+                        <ns1:Country>United States</ns1:Country>
+                        <ns1:CSPortID>425</ns1:CSPortID>
+                        <ns1:CSCountryCode>US</ns1:CSCountryCode>
+                    </ns1:Port>
+                    <ns1:Facility xmlns:ns1="http://www.cargosmart.com/common">
+                        <ns1:FacilityCode>LGB10</ns1:FacilityCode>
+                    </ns1:Facility>
+                    <ns0:ArrivalDT Indicator="E">
+                        <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-09-14T01:00:00+08:00</ns1:GMT>
+                        <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" TimeZone="PDT" CSTimeZone="PDT">2016-09-13T18:00:00+08:00</ns1:LocDT>
+                    </ns0:ArrivalDT>
+                    <ns0:CSStateCode>CA</ns0:CSStateCode>
+                    <ns0:CSParentCityID>2533284</ns0:CSParentCityID>
+                </ns0:POD>
+                <ns0:SVVD>
+                    <ns0:Loading>
+                        <ns0:Service>SC2</ns0:Service>
+                        <ns0:ServiceName>SOUTH CHINA 2</ns0:ServiceName>
+                        <ns0:Vessel>OHC</ns0:Vessel>
+                        <ns0:VesselName>OOCL HO CHI MINH CITY</ns0:VesselName>
+                        <ns0:Voyage>008</ns0:Voyage>
+                        <ns0:Direction>East</ns0:Direction>
+                        <ns0:LloydsNumber>9613599</ns0:LloydsNumber>
+                        <ns0:CallSign>VROK8</ns0:CallSign>
+                        <ns0:RegistrationCountry>Hong kong</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>HK</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>008E</ns0:ExternalVoyage>
+                    </ns0:Loading>
+                    <ns0:Discharge>
+                        <ns0:Service>SC2</ns0:Service>
+                        <ns0:ServiceName>SOUTH CHINA 2</ns0:ServiceName>
+                        <ns0:Vessel>OHC</ns0:Vessel>
+                        <ns0:VesselName>OOCL HO CHI MINH CITY</ns0:VesselName>
+                        <ns0:Voyage>008</ns0:Voyage>
+                        <ns0:Direction>East</ns0:Direction>
+                        <ns0:LloydsNumber>9613599</ns0:LloydsNumber>
+                        <ns0:CallSign>VROK8</ns0:CallSign>
+                        <ns0:RegistrationCountry>Hong kong</ns0:RegistrationCountry>
+                        <ns0:RegistrationCountryCode>HK</ns0:RegistrationCountryCode>
+                        <ns0:ExternalVoyage>008E</ns0:ExternalVoyage>
+                    </ns0:Discharge>
+                </ns0:SVVD>
+            </ns0:OceanLeg>
+        </ns0:Route>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>CSBKG</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>CS4883637603</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription>CS Reference Number</ns0:ReferenceDescription>
+        </ns0:ExternalReference>
+        <ns0:ExternalReference>
+            <ns0:CSReferenceType>SC</ns0:CSReferenceType>
+            <ns0:ReferenceNumber>PE163485v006</ns0:ReferenceNumber>
+        </ns0:ExternalReference>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">BPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">APL Logistics China Ltd</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">APLLCN463339263</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7034288000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:ContactEmailAddress>wendy_wang@apllogistics.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Shenzhen</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Lot 15B, Mingzhu Road,Yantian Port, Shenzhen.</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">APL Logistics China Ltd</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">APLLCN463339263</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7034288000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Vila</ns1:FirstName>
+                <ns1:LastName>Han</ns1:LastName>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Shenzhen</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Lot 15B, Mingzhu Road,Yantian Port, Shenzhen.</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Sporting Goods, Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">DICKUS58374120503015</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7131868000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">APL Logistics China Ltd</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">APLLCN463339263</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7034288000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Vila</ns1:FirstName>
+                <ns1:LastName>Han</ns1:LastName>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Shenzhen</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Lot 15B, Mingzhu Road,Yantian Port, Shenzhen.</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Merchandising and Supply Chain, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7949147000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Casey</ns1:FirstName>
+                <ns1:LastName>Litvin</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>724</ns1:AreaCode>
+                    <ns1:Number>2734902</ns1:Number>
+                </ns1:ContactPhone>
+                <ns1:ContactEmailAddress>cathryn.litvin@dcsg.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CCP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Merchandising and Supply Chain, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7949147000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Casey</ns1:FirstName>
+                <ns1:LastName>Litvin</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>724</ns1:AreaCode>
+                    <ns1:Number>2734902</ns1:Number>
+                </ns1:ContactPhone>
+                <ns1:ContactEmailAddress>cathryn.litvin@dcsg.com</ns1:ContactEmailAddress>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">NPT</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Livingston International, Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">PBBGUS1680242423</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">6022571000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Debra</ns1:FirstName>
+                <ns1:LastName>Maggiani</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>516</ns1:AreaCode>
+                    <ns1:Number>8253622 208</ns1:Number>
+                </ns1:ContactPhone>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Valley Stream</ns1:City>
+                <ns1:County>Nassau</ns1:County>
+                <ns1:State>New York</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>11581</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>70 East Sunrise Highway, Suite 411</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">FWD</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">APL Logistics China Ltd</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">APLLCN463339263</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7034288000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Vila</ns1:FirstName>
+                <ns1:LastName>Han</ns1:LastName>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Shenzhen</ns1:City>
+                <ns1:Country>CN</ns1:Country>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>Lot 15B, Mingzhu Road,Yantian Port, Shenzhen.</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CTP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Merchandising and Supply Chain, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7949147000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Casey</ns1:FirstName>
+                <ns1:LastName>Litvin</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>724</ns1:AreaCode>
+                    <ns1:Number>2734902</ns1:Number>
+                </ns1:ContactPhone>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">CGN</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dick's Merchandising and Supply Chain, Inc.</ns1:PartyName>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">7949147000</ns1:CarrierCustomerCode>
+            <ns1:Contact xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:FirstName>Casey</ns1:FirstName>
+                <ns1:LastName>Litvin</ns1:LastName>
+                <ns1:ContactPhone>
+                    <ns1:CountryCode>1</ns1:CountryCode>
+                    <ns1:AreaCode>724</ns1:AreaCode>
+                    <ns1:Number>2734902</ns1:Number>
+                </ns1:ContactPhone>
+            </ns1:Contact>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Coraopolis</ns1:City>
+                <ns1:County>Allegheny</ns1:County>
+                <ns1:State>Pennsylvania</ns1:State>
+                <ns1:Country>US</ns1:Country>
+                <ns1:PostalCode>15108</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>345 Court Street</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Party>
+            <ns1:PartyType xmlns:ns1="http://www.cargosmart.com/common">SHP</ns1:PartyType>
+            <ns1:PartyName xmlns:ns1="http://www.cargosmart.com/common">Dyaco International Inc.</ns1:PartyName>
+            <ns1:CSCompanyID xmlns:ns1="http://www.cargosmart.com/common">DYACTW91955452567368</ns1:CSCompanyID>
+            <ns1:CarrierCustomerCode xmlns:ns1="http://www.cargosmart.com/common">3159477000</ns1:CarrierCustomerCode>
+            <ns1:Address xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:City>Chungshan</ns1:City>
+                <ns1:Country>TW</ns1:Country>
+                <ns1:PostalCode>104</ns1:PostalCode>
+                <ns1:AddressLines>
+                    <ns1:AddressLine>12F&#xD;
+No.111, Song Jiang Road,</ns1:AddressLine>
+                </ns1:AddressLines>
+            </ns1:Address>
+            <ns0:PartyLevel>BL</ns0:PartyLevel>
+        </ns0:Party>
+        <ns0:Cargo>
+            <ns1:CargoNature xmlns:ns1="http://www.cargosmart.com/common">GC</ns1:CargoNature>
+            <ns1:CargoDescription xmlns:ns1="http://www.cargosmart.com/common">SPORTING GODDS</ns1:CargoDescription>
+            <ns1:Packaging xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:PackageType>CT</ns1:PackageType>
+                <ns1:PackageQty>74</ns1:PackageQty>
+                <ns1:PackageDesc>SPORTING GOODS
+DICKS CHILD PO 595001504
+F63-2017 TREADMILL
+SHIPPER DECLARED:
+NO WOOD PACKAGING MATERIAL</ns1:PackageDesc>
+            </ns1:Packaging>
+            <ns1:GrossWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>9398</ns1:Weight>
+                <ns1:WeightUnit>KGS</ns1:WeightUnit>
+            </ns1:GrossWeight>
+            <ns1:NetWeight xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Weight>0</ns1:Weight>
+            </ns1:NetWeight>
+            <ns1:Volume xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:Volume>66</ns1:Volume>
+                <ns1:VolumeUnit>CBM</ns1:VolumeUnit>
+            </ns1:Volume>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>3</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>Q'TY.:1 PC</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>12</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>MADE IN CHINA</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>1</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>MODEL NO.:F63</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>8</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>86"X36"X17"</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>5</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>G.W.:280 LBS.</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>2</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>C/NO.:</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>9</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>UNIT</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>4</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>N.W.:253 LBS.</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>7</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>MEAS:</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>11</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>83"X35"X57"</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>10</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>MEAS:</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+            <ns1:MarksAndNumbers xmlns:ns1="http://www.cargosmart.com/common">
+                <ns1:SeqNumber>6</ns1:SeqNumber>
+                <ns1:MarksAndNumbersLine>BOX</ns1:MarksAndNumbersLine>
+            </ns1:MarksAndNumbers>
+        </ns0:Cargo>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>Outbound intermodal leg arrived</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_arrived_at_ob_iml</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Container at first vessel loading port</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Yantian</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Yantian</ns0:City>
+                    <ns0:County>Shenzhen</ns0:County>
+                    <ns0:State>Guangdong</ns0:State>
+                    <ns0:Country>China</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNYTN</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57078</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>508</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-24T04:34:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-24T12:34:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>30000073745154-1-31</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Truck</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS040</ns0:CS1Event>
+        </ns0:MileStones>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>Loaded on board at first port of load</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_loaded_first_pol</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Container is on board vessel</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Yantian</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Yantian</ns0:City>
+                    <ns0:County>Shenzhen</ns0:County>
+                    <ns0:State>Guangdong</ns0:State>
+                    <ns0:Country>China</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNYTN</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57078</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>508</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-30T07:39:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-30T15:39:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>30000074459092-1-37</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Vessel</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS060</ns0:CS1Event>
+        </ns0:MileStones>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>Full received by carrier</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>cntr_rcvd</ns0:CSEventCode>
+                <ns0:EstActIndicator>A</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:EventDescription>Laden Container received by carrier</ns0:EventDescription>
+            <ns0:Location>
+                <ns0:LocationName>Yantian Port</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Yantian</ns0:City>
+                    <ns0:County>Shenzhen</ns0:County>
+                    <ns0:State>Guangdong</ns0:State>
+                    <ns0:Country>China</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">CNYTN</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">K</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">57078</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2534801</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">GD</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">CN</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">AS</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-08-24T04:34:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="CCT">2016-08-24T12:34:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>30000073745154-1-26</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:TransportMode>Truck</ns0:TransportMode>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS020</ns0:CS1Event>
+        </ns0:MileStones>
+        <ns0:MileStones>
+            <ns0:CarrEventCode>ssm_vsl_arr_last_pod_est</ns0:CarrEventCode>
+            <ns0:CSEvent>
+                <ns0:CSEventCode>vsl_arrived</ns0:CSEventCode>
+                <ns0:DimensionType>Port</ns0:DimensionType>
+                <ns0:DimensionValue>LastPOD</ns0:DimensionValue>
+                <ns0:EstActIndicator>E</ns0:EstActIndicator>
+            </ns0:CSEvent>
+            <ns0:Location>
+                <ns0:LocationName>Long Beach</ns0:LocationName>
+                <ns0:CityDetails>
+                    <ns0:City>Long Beach</ns0:City>
+                    <ns0:County>Los Angeles</ns0:County>
+                    <ns0:State>California</ns0:State>
+                    <ns0:Country>United States</ns0:Country>
+                </ns0:CityDetails>
+                <ns0:LocationCode>
+                    <ns1:UNLocationCode xmlns:ns1="http://www.cargosmart.com/common">USLGB</ns1:UNLocationCode>
+                    <ns1:SchedKDType xmlns:ns1="http://www.cargosmart.com/common">D</ns1:SchedKDType>
+                    <ns1:SchedKDCode xmlns:ns1="http://www.cargosmart.com/common">2709</ns1:SchedKDCode>
+                </ns0:LocationCode>
+                <ns0:CSStandardCity>
+                    <ns1:CSParentCityID xmlns:ns1="http://www.cargosmart.com/common">2533284</ns1:CSParentCityID>
+                    <ns1:CSStateCode xmlns:ns1="http://www.cargosmart.com/common">CA</ns1:CSStateCode>
+                    <ns1:CSCountryCode xmlns:ns1="http://www.cargosmart.com/common">US</ns1:CSCountryCode>
+                    <ns1:CSContinentCode xmlns:ns1="http://www.cargosmart.com/common">NA</ns1:CSContinentCode>
+                </ns0:CSStandardCity>
+                <ns0:CSPortID>425</ns0:CSPortID>
+            </ns0:Location>
+            <ns0:EventDT>
+                <ns1:GMT xmlns:ns1="http://www.cargosmart.com/common">2016-09-14T01:00:00+08:00</ns1:GMT>
+                <ns1:LocDT xmlns:ns1="http://www.cargosmart.com/common" CSTimeZone="PDT">2016-09-13T18:00:00+08:00</ns1:LocDT>
+            </ns0:EventDT>
+            <ns0:CarrierUniqueMovementID>315454537-1</ns0:CarrierUniqueMovementID>
+            <ns0:SCAC>OOLU</ns0:SCAC>
+            <ns0:SPCompanyID>ORIEHK41514112426815</ns0:SPCompanyID>
+            <ns0:UpdateParty>OOCL</ns0:UpdateParty>
+            <ns0:CS1Event>CS277</ns0:CS1Event>
+        </ns0:MileStones>
+    </ns0:Body>
+</ns0:ContainerMovement>

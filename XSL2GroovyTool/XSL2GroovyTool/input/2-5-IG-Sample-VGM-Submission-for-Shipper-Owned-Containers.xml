@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<n1:SubmitVGM xmlns:n1="http://xml.inttra.com/vgm/services/01/publication">
+	<MessageGuid>45234401</MessageGuid>
+	<MessageDateTime>2016-04-05T13:47:47Z</MessageDateTime>
+	<MessageVersion>0.8</MessageVersion>
+	<State>Original</State>
+	<Submitter>
+		<PartyID>
+			<IDType>INTTRACompanyID</IDType>
+			<ID>801345</ID>
+		</PartyID>
+		<PartyName1>SHIPPER NAME</PartyName1>
+	</Submitter>
+	<SubmitterReference>BN220398</SubmitterReference>
+	<ContainerNumber>MRKU3019284</ContainerNumber>
+	<VerifiedGrossMass>
+		<Mass>13401.5</Mass>
+		<UOM>KGM</UOM>
+	</VerifiedGrossMass>
+	<VerificationDetails>
+		<VerificationSignature>JOHN ADAMS</VerificationSignature>
+		<VerificationDateTime>2016-04-04T09:30:47</VerificationDateTime>
+		<Delegated>false</Delegated>
+	</VerificationDetails>
+	<VGMDeterminationDateTime>2016-03-31T07:35:47</VGMDeterminationDateTime>
+	<ResponsibleParty>
+		<PartyID>
+			<IDType>INTTRACompanyID</IDType>
+			<ID>801345</ID>
+		</PartyID>
+		<PartyName1>SHIPPER NAME</PartyName1>
+	</ResponsibleParty>
+	<Carrier>
+		<PartyID>
+			<IDType>PartnerAlias</IDType>
+			<ID>OOLU</ID>
+		</PartyID>
+		<PartyName1>CARRIER NAME</PartyName1>
+	</Carrier>
+	<Shipper>
+		<PartyID>
+			<IDType>INTTRACompanyID</IDType>
+			<ID>802441</ID>
+		</PartyID>
+		<PartyName1>SHIPPER NAME</PartyName1>
+		<InformationContact>
+			<Name>JANE DOE</Name>
+		</InformationContact>
+	</Shipper>
+	<BookingNumber>BN220398</BookingNumber>
+	<ShippersReferenceNumber>BN220398</ShippersReferenceNumber>
+	<ContainerDetails>
+		<ShipperOwned>true</ShipperOwned>
+		<ISOContainerType>22G1</ISOContainerType>
+		<ShipperSeal>SH093888</ShipperSeal>
+	</ContainerDetails>
+</n1:SubmitVGM>

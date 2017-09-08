@@ -1,0 +1,10 @@
+
+	//mapping logic end
+		
+//	def outxml = XmlUtil.serialize(writer.toString());
+//	return outxml;
+	
+	return writer.toString();
+	
+}
+

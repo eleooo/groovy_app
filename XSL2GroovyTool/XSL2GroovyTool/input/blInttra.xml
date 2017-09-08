@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--用XMLSpy v2012产生的 XML文件(http://www.altova.com)-->
+<Message xsi:noNamespaceSchemaLocation="XML_Bill_Of_Lading_OUT_v22.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Header>
+		<MessageType MessageVersion="0.0">String</MessageType>
+		<DocumentIdentifier>String</DocumentIdentifier>
+		<DateTime DateType="Message">2147483647</DateTime>
+		<Parties>
+			<PartnerInformation PartnerRole="ContractParty">
+				<PartnerIdentifier Agency="AssignedBySender">String</PartnerIdentifier>
+				<PartnerName/>
+				<ContactInformation>
+					<ContactName ContactType="Informational">String</ContactName>
+					<CommunicationValue CommunicationType="Email">String</CommunicationValue>
+				</ContactInformation>
+				<AddressInformation>
+					<AddressLine/>
+				</AddressInformation>
+				<ChargeDetails>
+					<ChargeCategory PrepaidorCollectIndicator="Collect" ChargeType="DestinationHaulageCharges">String</ChargeCategory>
+					<ChargeInvoice>INVOICE NUM</ChargeInvoice>
+					<ChargeLocation LocationType="ChargePaymentLocation">
+						<LocationCode Agency="String">String</LocationCode>
+						<LocationName>a</LocationName>
+						<LocationState>a</LocationState>
+						<LocationCountry>a</LocationCountry>
+						<LocationCountryCode>a</LocationCountryCode>
+					</ChargeLocation>
+					<ChargeAmount Currency="String">3.14159E0</ChargeAmount>
+				</ChargeDetails>
+			</PartnerInformation>
+		</Parties>
+	</Header>
+	<MessageBody>
+		<MessageProperties>
+			<ShipmentID>
+				<ShipmentIdentifier MessageStatus="Final" MessageIdentifier="SeaWaybill">String</ShipmentIdentifier>
+				<DocumentVersion>a</DocumentVersion>
+			</ShipmentID>
+			<DateTime DateType="Message">2147483647</DateTime>
+			<ShipmentDeclaredValue Currency="String">3.14159E0</ShipmentDeclaredValue>
+			<LetterOfCreditDetails>
+				<LetterOfCreditNumber>a</LetterOfCreditNumber>
+				<DateTime DateType="Document">2147483647</DateTime>
+				<LCIssueDateFreeText>a</LCIssueDateFreeText>
+				<LCExpiryDateFreeText>a</LCExpiryDateFreeText>
+			</LetterOfCreditDetails>
+			<ExportLicenseDetails>
+				<ExportLicenseNumber>a</ExportLicenseNumber>
+				<DateTime DateType="ShippedOnBoard">2147483647</DateTime>
+			</ExportLicenseDetails>
+			<BlLocations>
+				<Location LocationType="PlaceOfDelivery">
+					<LocationCode Agency="String">String</LocationCode>
+					<LocationName>a</LocationName>
+					<LocationState>a</LocationState>
+					<LocationCountry>a</LocationCountry>
+					<LocationCountryCode>a</LocationCountryCode>
+					<DateTime DateType="BlReleaseDate">2147483647</DateTime>
+				</Location>
+			</BlLocations>
+			<ReferenceInformation ReferenceType="TransactionReferenceNumber">String</ReferenceInformation>
+			<Instructions>
+				<ShipmentComments CommentType="RoutingInstructions" ClauseType="String">String</ShipmentComments>
+			</Instructions>
+			<ControlTotal>
+				<NumberOfEquipment>0</NumberOfEquipment>
+				<NumberOfPackages>0</NumberOfPackages>
+				<GrossWeight UOM="LBS">String</GrossWeight>
+				<GrossVolume UOM="FTQ">String</GrossVolume>
+			</ControlTotal>
+			<HaulageDetails MovementType="DoorToPort" ServiceType="FullLoad"/>
+			<TransportationDetails TransportMode="InlandWaterTransport" TransportStage="Main">
+				<ConveyanceInformation>
+					<ConveyanceName>a</ConveyanceName>
+					<VoyageTripNumber>a</VoyageTripNumber>
+					<CarrierSCAC>a</CarrierSCAC>
+					<TransportIdentification TransportIdentificationType="LloydsCode">String</TransportIdentification>
+					<TransportMeans TransportMeansType="RailExpress">String</TransportMeans>
+					<TransportNationality>aa</TransportNationality>
+				</ConveyanceInformation>
+				<Location LocationType="PortOfDischarge">
+					<LocationCode Agency="String">String</LocationCode>
+					<LocationName>a</LocationName>
+					<LocationState>a</LocationState>
+					<LocationCountry>a</LocationCountry>
+					<LocationCountryCode>a</LocationCountryCode>
+					<DateTime DateType="Message">2147483647</DateTime>
+				</Location>
+				<Location LocationType="PortOfDischarge">
+					<LocationCode Agency="String">String</LocationCode>
+					<LocationName>a</LocationName>
+					<LocationState>a</LocationState>
+					<LocationCountry>a</LocationCountry>
+					<LocationCountryCode>a</LocationCountryCode>
+					<DateTime DateType="IssueDate">2147483647</DateTime>
+				</Location>
+			</TransportationDetails>
+			<Parties>
+				<PartnerInformation PartnerRole="Carrier">
+					<PartnerIdentifier Agency="AssignedByRecipient">String</PartnerIdentifier>
+					<PartnerName/>
+					<ContactInformation>
+						<ContactName ContactType="Emergency">String</ContactName>
+						<CommunicationValue CommunicationType="Fax">String</CommunicationValue>
+					</ContactInformation>
+					<AddressInformation>
+						<AddressLine/>
+					</AddressInformation>
+					<ChargeDetails>
+						<ChargeCategory PrepaidorCollectIndicator="Collect" ChargeType="OriginHaulageCharges">String</ChargeCategory>
+						<ChargeInvoice>INVOICE NUM</ChargeInvoice>
+						<ChargeLocation LocationType="ChargePaymentLocation">
+							<LocationCode Agency="String">String</LocationCode>
+							<LocationName>a</LocationName>
+							<LocationState>a</LocationState>
+							<LocationCountry>a</LocationCountry>
+							<LocationCountryCode>a</LocationCountryCode>
+						</ChargeLocation>
+						<ChargeAmount Currency="String">3.14159E0</ChargeAmount>
+					</ChargeDetails>
+				</PartnerInformation>
+			</Parties>
+		</MessageProperties>
+		<MessageDetails>
+			<EquipmentDetails>
+				<LineNumber>0</LineNumber>
+				<EquipmentIdentifier EquipmentSupplier="Carrier">String</EquipmentIdentifier>
+				<EquipmentType>
+					<EquipmentTypeCode NonActiveReefer="Y">String</EquipmentTypeCode>
+					<EquipmentDescription/>
+				</EquipmentType>
+				<EquipmentGrossWeight UOM="LBS">String</EquipmentGrossWeight>
+				<EquipmentGrossVolume UOM="MTQ">String</EquipmentGrossVolume>
+				<EquipmentTemperature UOM="CEL">3.14159E0</EquipmentTemperature>
+				<EquipmentNonActive>NonActiveReefer</EquipmentNonActive>
+				<EquipmentAirFlow UOM="CBM">String</EquipmentAirFlow>
+				<EquipmentSeal SealingParty="Customs">String</EquipmentSeal>
+				<EquipmentComments CommentType="Equipment">String</EquipmentComments>
+				<EquipmentReferenceInformation ReferenceType="VehicleIdentificationNumber">String</EquipmentReferenceInformation>
+				<EquipmentHazardousGoods PackingGroupCode="GreatDanger">
+					<IMOClassCode/>
+					<IMDGPageNumber>a</IMDGPageNumber>
+					<UNDGNumber>a</UNDGNumber>
+					<FlashpointTemperature UOM="CEL">String</FlashpointTemperature>
+					<EMSNumber/>
+					<HazardousGoodsComments CommentType="HazardousPlacard">String</HazardousGoodsComments>
+					<EmergencyResponseContact>
+						<ContactInformation>
+							<ContactName ContactType="Informational">String</ContactName>
+							<CommunicationValue CommunicationType="Telephone">String</CommunicationValue>
+						</ContactInformation>
+					</EmergencyResponseContact>
+				</EquipmentHazardousGoods>
+			</EquipmentDetails>
+			<GoodsDetails>
+				<LineNumber>0</LineNumber>
+				<PackageDetail Level="InnerInner">
+					<NumberOfPackages>0</NumberOfPackages>
+					<PackageTypeCode>a</PackageTypeCode>
+					<PackageTypeDescription>a</PackageTypeDescription>
+				</PackageDetail>
+				<PackageDetailComments CommentType="GoodsDescription">String</PackageDetailComments>
+				<ProductId ItemTypeIdCode="HarmonizedSystem">String</ProductId>
+				<PackageDetailGrossVolume UOM="FTQ">String</PackageDetailGrossVolume>
+				<PackageDetailGrossWeight UOM="LBS">String</PackageDetailGrossWeight>
+				<DetailsReferenceInformation ReferenceType="TariffNumber">String</DetailsReferenceInformation>
+				<ExportLicenseDetails>
+					<ExportLicenseNumber>a</ExportLicenseNumber>
+					<DateTime DateType="ShippedOnBoard">2147483647</DateTime>
+				</ExportLicenseDetails>
+				<PackageMarks>
+					<Marks/>
+				</PackageMarks>
+				<SplitGoodsDetails>
+					<EquipmentIdentifier EquipmentSupplier="Carrier">String</EquipmentIdentifier>
+					<SplitGoodsNumberOfPackages>0</SplitGoodsNumberOfPackages>
+					<SplitGoodsGrossVolume UOM="MTQ">String</SplitGoodsGrossVolume>
+					<SplitGoodsGrossWeight UOM="LBS">String</SplitGoodsGrossWeight>
+				</SplitGoodsDetails>
+				<HazardousGoods PackingGroupCode="MediumDanger">
+					<IMOClassCode/>
+					<IMDGPageNumber>a</IMDGPageNumber>
+					<UNDGNumber>a</UNDGNumber>
+					<FlashpointTemperature UOM="FAH">String</FlashpointTemperature>
+					<EMSNumber/>
+					<HazardousGoodsComments CommentType="HazardousPlacard">String</HazardousGoodsComments>
+					<EmergencyResponseContact>
+						<ContactInformation>
+							<ContactName ContactType="Emergency">String</ContactName>
+							<CommunicationValue CommunicationType="Fax">String</CommunicationValue>
+						</ContactInformation>
+					</EmergencyResponseContact>
+				</HazardousGoods>
+			</GoodsDetails>
+		</MessageDetails>
+	</MessageBody>
+</Message>

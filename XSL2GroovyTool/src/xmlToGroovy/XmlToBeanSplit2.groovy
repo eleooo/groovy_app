@@ -11,6 +11,7 @@ class XmlToBeanSplit2 {
 	static Set<String> elementFlag = new HashSet<String>();
 	static Set<String> elementAttrFlag = new HashSet<String>();
 	static Set<String> multiElementList = [];
+	static boolean NodeFlag=true
 
 	static Map<String,Set<String>> AdapterFlag = new HashMap<String,Set<String>>()
 	
@@ -44,6 +45,7 @@ class XmlToBeanSplit2 {
 
 		StringBuffer pmtSb = new StringBuffer()
 		StringBuffer commonSb = new StringBuffer()
+       //System.setOut(new PrintStream(new File("""src/cs/Message.groovy""")))
 
 		pmtSb.append("import java.io.Serializable;\n");
 		pmtSb.append("import java.util.ArrayList;\n")
@@ -56,19 +58,27 @@ class XmlToBeanSplit2 {
 		//println pmtSb.toString()
 		nodeTranserse(document.getDocumentElement(),pmtSb,commonSb);
 		nodeAddAdapter(AdapterFlag,pmtSb)
-		println pmtSb.toString()
-	//	println commonSb.toString()
 
-	//	println '之前'+multiElementList
+		//println '之前'+multiElementList
 		for(i in 0..<multiElementList.size()){
 			String temp=multiElementList[0]
 			multiElementList.remove(temp)
 			multiElementList.add('"'+temp+'"')
 		}
 
-		println '之后'+multiElementList
+		String pmtSbString=pmtSb.toString().replace("1111111111111111111111111111111111------1111111111111111111111111111111111111111","\tpublic static final Set<String> MultiElementList = "+multiElementList)
+		//pmtSb
+		println pmtSbString
+	//	println commonSb.toString()
 
-		println AdapterFlag
+
+
+
+		//println '之后'+multiElementList
+
+		//println AdapterFlag
+
+
 	}
 
 
@@ -94,6 +104,10 @@ class XmlToBeanSplit2 {
 			if(node.getNodeType()==org.w3c.dom.Node.ELEMENT_NODE){
 				if(rNodeName.contains("cs:")){
 					commonSb.append("class " + rNodeName.replace("cs:","") + " implements Serializable {\n")
+					if(NodeFlag==true){
+						commonSb.append("1111111111111111111111111111111111------1111111111111111111111111111111111111111\n")
+						NodeFlag=false
+					}
 					
 					if(node.hasAttributes()){
 						node.getAttributes().each { curNode ->
@@ -109,7 +123,10 @@ class XmlToBeanSplit2 {
 				}
 				else{
 					pmtSb.append("class " + rNodeName + " implements Serializable {\n")
-					
+					if(NodeFlag==true){
+						pmtSb.append("1111111111111111111111111111111111------1111111111111111111111111111111111111111\n")
+						NodeFlag=false
+					}
 					if(node.hasAttributes()){
 						node.getAttributes().each { curNode ->
 							for(i in 0..<curNode.getLength()){
@@ -140,7 +157,7 @@ class XmlToBeanSplit2 {
 						}
 					}
 				}
-				//println 'map '+map
+
 				
 				StringBuffer tmpSB = new StringBuffer();
 				//add childNode
@@ -152,7 +169,7 @@ class XmlToBeanSplit2 {
 
 						//println 'childNodeName '+childNodeName
 						//if childNode have ChildNode and do not have attributes
-						if(childNode.getChildNodes().getLength()   && !childNode.hasAttributes()){
+						if(childNode.getChildNodes().getLength() <=1  && !childNode.hasAttributes()){
 							if(map.get(childNodeName) > 0 && !flag.contains(childNodeName)) {
 								flag.add(childNodeName)
 								if(childNode.parentNode.getNodeName().contains("cs:")){
@@ -187,7 +204,10 @@ class XmlToBeanSplit2 {
 										tmpSB.append("@JsonAdapter("+childNodeName+"Adapter.class)\n")
 									}
 									tmpSB.append("class " + childNodeName.replace("cs:","") + " implements Serializable {\n")
-									
+									if(NodeFlag==true){
+										tmpSB.append("1111111111111111111111111111111111------1111111111111111111111111111111111111111\n")
+										NodeFlag=false
+									}
 									childNode.getAttributes().each { curNode ->
 										for(i in 0..<curNode.getLength()){
 											String attrName =  "attr_" + curNode.item(i).getNodeName()
@@ -273,7 +293,7 @@ class XmlToBeanSplit2 {
 			}
 
 		}
-	//	println 'map2 '+map
+
 		if(map.findAll{it.value > 0}){
 			multiElementList.addAll(map.findAll{it.value > 0}.keySet())
 		}
@@ -351,6 +371,54 @@ class XmlToBeanSplit2 {
 			pmtSb.append("}\n")
 			}
 		}
+
+	public static void getmultiElementList(org.w3c.dom.Node node){
+
+		Map<String,Integer> map = new HashMap<String, Integer>();
+		//childNode flag
+		Set<Boolean> flag ;
+
+		//childNode attributes
+
+		String rNodeName=node.getNodeName();
+
+		NodeList allNodes=node.getChildNodes();
+		int size=allNodes.getLength();
+
+		if(!elementFlag.contains(rNodeName)){
+			elementFlag.add(rNodeName)
+			//add childNode
+			if(size>0){
+				//add multiElementList
+				for(int i=0;i<size;i++){
+					org.w3c.dom.Node childNode=allNodes.item(i);
+					if(childNode.getNodeType()==org.w3c.dom.Node.ELEMENT_NODE){
+						String childNodeName = childNode.getNodeName()
+						if(map.containsKey(childNodeName)){
+							map.put(childNodeName, map.get(childNodeName) + 1)
+						}else{
+							map.put(childNodeName, 0)
+						}
+					}
+				}
+			}
+
+			flag = new HashSet<Boolean>();
+
+			for(int j=0;j<size;j++){
+				org.w3c.dom.Node childNode=allNodes.item(j);
+				String childNodeName = childNode.getNodeName()
+				if(childNode.getChildNodes().getLength() > 1 && !flag.contains(childNodeName)){
+					flag.add(childNodeName);
+					getmultiElementList(childNode);
+				}
+			}
+		}
+
+		if(map.findAll{it.value > 0}){
+			multiElementList.addAll(map.findAll{it.value > 0}.keySet())
+		}
+	}
 	}
 /**
 public class TotalAmtInPmtCurrencyAdapter extends TypeAdapter<TotalAmtInPmtCurrency> {

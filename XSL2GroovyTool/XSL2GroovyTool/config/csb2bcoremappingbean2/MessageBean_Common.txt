@@ -1,0 +1,1 @@
+cs:MsgDT,cs:LocDT,cs:NVOProperty,cs:CityDetails,cs:LocationCode,cs:Facility,cs:CSStandardCity,cs:Port,cs:Contact,cs:ContactPhone,cs:ContactFax,cs:Address,cs:AddressLines,cs:Reference,cs:Packaging,cs:GrossWeight,cs:NetWeight,cs:Volume,cs:MarksAndNumbers,

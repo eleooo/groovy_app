@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:pfx8="PLLP_eCI_XLS" xmlns:ns0="http://www.oocllogistics.com/shipstatus" xmlns:datatype="http://www.oocllogistics.com/datatype" xmlns:header="http://www.oocllogistics.com/header" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exclude-result-prefixes="tib pfx8 OLLMappingLib" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:OLLMappingLib="java://oll.b2b.designer.javacustomfunction.MappingLibrary">
+	<xsl:output method="xml"/>
+	<xsl:template match="/">
+		<xsl:apply-templates select="/pfx8:PLLP_eCI_UIF_Root"/>
+	</xsl:template>
+	<xsl:template match="/pfx8:PLLP_eCI_UIF_Root">
+		<iv:ivMessageRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:iv="http://www.oocllogistics.com/customer_iv_151" xsi:schemaLocation="http://www.oocllogistics.com/customer_iv_151 oll_customer_iv_151.xsd">
+			<iv:TransactionHeader>
+				<iv:SenderID>OOCLLOGISTICS</iv:SenderID>
+				<iv:RecipientID>HOBBYLOBBY</iv:RecipientID>
+				<iv:MessageType>IV</iv:MessageType>
+				<xsl:variable name="sCurrentDT" select="current-dateTime()"/>
+				<xsl:variable name="sControlNum" select="OLLMappingLib:ConvertXMLDateTimetoYYYYMMDD(substring(current-dateTime(),1,19))"/>
+				<iv:ControlNumber>
+					<xsl:value-of select="$sControlNum"/>
+				</iv:ControlNumber>
+				<iv:TransactionDateTime>
+					<xsl:value-of select="$sCurrentDT"/>
+				</iv:TransactionDateTime>
+				<iv:MessageInstruction>NEW</iv:MessageInstruction>
+			</iv:TransactionHeader>
+			<xsl:for-each-group select="Record" group-by="m_inv_num">
+				<xsl:variable name="sCurrentInvNum" select="m_inv_num"/>
+				<iv:Invoice>
+					<iv:InvoiceNumber>
+						<xsl:value-of select="m_inv_num"/>
+					</iv:InvoiceNumber>
+					<iv:InvoiceIssueDate>
+						<xsl:value-of select="m_issue_date"/>
+					</iv:InvoiceIssueDate>
+					<iv:Issuer>
+						<iv:Name>
+							<xsl:value-of select="sp_prty_name"/>
+						</iv:Name>
+						<iv:AddressLine>
+							<xsl:value-of select="sp_addr_1"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="sp_addr_2"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="sp_addr_3"/>
+						</iv:AddressLine>
+					</iv:Issuer>
+					<!--
+					<iv:FOB>
+						<xsl:value-of select="h_fob"/>
+					</iv:FOB>
+					-->
+					<iv:FreightPaymentMethod>
+						<xsl:value-of select="m_payment_term"/>
+					</iv:FreightPaymentMethod>
+					<iv:Consignee>
+						<iv:Name>
+							<xsl:value-of select="cp_prty_name"/>
+						</iv:Name>
+						<iv:AddressLine>
+							<xsl:value-of select="cp_addr_1"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="cp_addr_2"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="cp_addr_3"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="cp_addr_4"/>
+						</iv:AddressLine>
+					</iv:Consignee>
+					<iv:Shipper>
+						<iv:Name>
+							<xsl:value-of select="sp_prty_name"/>
+						</iv:Name>
+						<iv:AddressLine>
+							<xsl:value-of select="sp_addr_1"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="sp_addr_2"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="sp_addr_3"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="sp_addr_4"/>
+						</iv:AddressLine>
+					</iv:Shipper>
+					<iv:NotifyingParty>
+						<iv:Name>
+							<xsl:value-of select="np_prty_name"/>
+						</iv:Name>
+						<iv:AddressLine>
+							<xsl:value-of select="np_addr_1"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="np_addr_2"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="np_addr_3"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="np_addr_4"/>
+						</iv:AddressLine>
+					</iv:NotifyingParty>
+					<iv:ForAccountAndRiskofMessers>
+						<iv:Name>
+							<xsl:value-of select="mp_prty_name"/>
+						</iv:Name>
+						<iv:AddressLine>
+							<xsl:value-of select="mp_addr_1"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="mp_addr_2"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="mp_addr_3"/>
+						</iv:AddressLine>
+						<iv:AddressLine>
+							<xsl:value-of select="mp_addr_4"/>
+						</iv:AddressLine>
+					</iv:ForAccountAndRiskofMessers>
+					<iv:Transportation>
+						<iv:Leg>
+							<iv:Sequence>1</iv:Sequence>
+							<iv:ShipViaCode>S</iv:ShipViaCode>
+							<iv:VesselName>
+								<xsl:value-of select="m_vsl_name"/>
+							</iv:VesselName>
+							<iv:VoyageNumber>
+								<xsl:value-of select="m_voy_code"/>
+							</iv:VoyageNumber>
+							<iv:LoadingLocation>
+								<iv:Name>
+									<xsl:value-of select="pol_loc_name"/>
+								</iv:Name>
+								<iv:ETD>
+									<xsl:value-of select="m_pol_etd"/>
+								</iv:ETD>
+							</iv:LoadingLocation>
+						</iv:Leg>
+						<iv:FinalDestination>
+							<iv:Name>
+								<xsl:value-of select="fnd_loc_name"/>
+							</iv:Name>
+						</iv:FinalDestination>
+					</iv:Transportation>
+					<xsl:for-each select="../Record[m_inv_num=$sCurrentInvNum]">
+						<xsl:sort select="h_disp_seq"/>
+						<iv:ItemDetails>
+							<iv:PurchaseOrderNumber><xsl:value-of select="i_po_num"/></iv:PurchaseOrderNumber>
+							<iv:Style><xsl:value-of select="i_buyer_item_num"/></iv:Style>
+							<!--<iv:VendorStyle/>-->
+							<iv:Color><xsl:value-of select="i_color"/></iv:Color>
+							<iv:Size><xsl:value-of select="i_item_size"/></iv:Size>
+							<iv:ItemDescription><xsl:value-of select="i_descr"/></iv:ItemDescription>
+							<!--<iv:PlaceOfReceipt/>-->
+							<!--<iv:PlaceOfDestination/>-->
+							<iv:NumberOfPacks>
+								<xsl:attribute name="UOMCode">
+									<xsl:value-of select="ctn_abbr"/>
+								</xsl:attribute>
+								<xsl:attribute name="UOMCode2">
+									<xsl:value-of select="ctn_abbr2"/>
+								</xsl:attribute>
+								<xsl:value-of select="i_pack_qty"/>
+							</iv:NumberOfPacks>
+							<!--<iv:UnitPerPack/>-->
+							<!--<iv:NetWeightPerPack/>-->
+							<!--<iv:GrossWeightPerPack/>-->
+							<!--<iv:VolumePerPack/>-->
+							<iv:NumberOfUnits UOMCode="PCS">
+								<xsl:value-of select="i_qty"/>
+							</iv:NumberOfUnits>
+							<!--<iv:iv:UnitCost/>-->
+							<iv:UnitPrice>
+								<iv:Amount><xsl:value-of select="i_unit_price"/></iv:Amount>
+								<iv:CurrencyCode>USD</iv:CurrencyCode>
+							</iv:UnitPrice>
+							<iv:SubtotalPrice>
+								<iv:Amount>
+									<xsl:value-of select="h_ttl_amount"/>
+								</iv:Amount>
+								<iv:CurrencyCode>USD</iv:CurrencyCode>
+							</iv:SubtotalPrice>
+							<iv:MarksNumbersAndGoodsDescription>
+								<iv:MarksAndNumbersText>
+									<xsl:value-of select="i_marks_no"/>
+								</iv:MarksAndNumbersText>
+								<iv:CargoDescriptions>
+									<xsl:value-of select="i_descr"/>
+								</iv:CargoDescriptions>
+							</iv:MarksNumbersAndGoodsDescription>
+						</iv:ItemDetails>
+					</xsl:for-each>
+					<iv:Remarks>
+						<xsl:value-of select="m_remarks"/>
+					</iv:Remarks>
+				</iv:Invoice>
+			</xsl:for-each-group>
+		</iv:ivMessageRoot>
+	</xsl:template>
+</xsl:stylesheet>

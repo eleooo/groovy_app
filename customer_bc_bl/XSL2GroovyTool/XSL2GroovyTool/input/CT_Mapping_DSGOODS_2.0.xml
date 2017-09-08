@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="2.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ct0="http://www.cargosmart.com/route"
+	xmlns:ct1="http://www.cargosmart.com/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:ns0="http://www.tibco.com/schemas/transformation-ctxml-315/Schemas/AppProces/Schema.xsd"
+	xmlns:ns1="http://www.tibco.com/ns/Foresight/2010/20"
+	xmlns:ns2= "http://www.tibco.com/schemas/message-processing/Schemas/System/BizKeyTrack.xsd"
+	xmlns:ns3= "http://www.tibco.com/schemas/MessageConsumer/Shared.Resources/AppErrorReport.xsd"
+	xmlns:fn="http://www.w3.org/2005/02/xpath-functions" xmlns:eg="http://example.com/namespace">
+	    <xsl:for-each select="ct0:ContainerMovement/ct0:Body">
+			<ns1:T-315 ObjType="t" ObjID="315">
+				<ns1:S-ST_1 ObjType="s" ObjID="ST" ObjOrd="1">
+					<ns1:E-143_1_01 ObjType="e" ObjID="143">
+						<xsl:value-of select="&quot;315&quot;" />
+					</ns1:E-143_1_01>
+					<ns1:E-329_1_02 ObjType="e" ObjID="329">
+						<xsl:value-of select="&quot;-999&quot;" />
+					</ns1:E-329_1_02>
+				</ns1:S-ST_1>
+				<ns1:S-B4_2 ObjType="s" ObjID="B4" ObjOrd="2">
+					<ns1:E-157_2_03 ObjType="e" ObjID="157">
+						<xsl:value-of
+							select="$CdeConversionData/CodeConversion/Record[CONVERT_TYPE_ID='EventStatusCode' and INT_CDE=$event]/EXT_CDE" />
+					</ns1:E-157_2_03>
+					<ns1:E-373_2_04 ObjType="e" ObjID="373">
+						<xsl:value-of
+							select="format-dateTime($currentBody/ct0:Event/ct0:EventDT/ct1:LocDT,'[Y0001][M01][D01]')" />
+					</ns1:E-373_2_04>
+					<ns1:E-161_2_05 ObjType="e" ObjID="161">
+						<xsl:value-of
+							select="format-dateTime($currentBody/ct0:Event/ct0:EventDT/ct1:LocDT,'[H01][m01]')" />
+					</ns1:E-161_2_05>
+					<ns1:E-159_2_06 ObjType="e" ObjID="159">
+						<xsl:value-of
+							select="eg:lpad($currentBody/ct0:Event/ct0:Location/ct0:LocationCode/ct1:UNLocationCode,&quot; &quot;,5)" />
+					</ns1:E-159_2_06>
+					<ns1:E-206_2_07 ObjType="e" ObjID="206">
+						<xsl:value-of
+							select="eg:lpad($currentBody/ct0:Container/ct0:ContainerNumber,&quot; &quot;,4)" />
+					</ns1:E-206_2_07>
+					<ns1:E-207_2_08 ObjType="e" ObjID="207">
+						<xsl:value-of
+							select="concat(substring($currentBody/ct0:Container/ct0:ContainerNumber,5),($currentBody/ct0:Container/ct0:ContainerCheckDigit))" />
+					</ns1:E-207_2_08>
+					<xsl:choose>
+						<xsl:when
+							test="exists($currentBody/ct0:Container/ct0:ContainerStatus) and eg:trim($currentBody/ct0:Container/ct0:ContainerStatus)='Empty'">
+							<ns1:E-578_2_09 ObjType="e" ObjID="578">
+								<xsl:value-of select="'E'" />
+							</ns1:E-578_2_09>
+						</xsl:when>
+						<xsl:when
+							test="exists($currentBody/ct0:Container/ct0:ContainerStatus) and eg:trim($currentBody/ct0:Container/ct0:ContainerStatus)='Laden'">
+							<ns1:E-578_2_09 ObjType="e" ObjID="578">
+								<xsl:value-of select="'L'" />
+							</ns1:E-578_2_09>
+						</xsl:when>
+						<xsl:when test="$event ='CS210'">
+							<ns1:E-578_2_09 ObjType="e" ObjID="578">
+								<xsl:value-of select="'E'" />
+							</ns1:E-578_2_09>
+						</xsl:when>
+						<xsl:otherwise>
+							<ns1:E-578_2_09 ObjType="e" ObjID="578">
+								<xsl:value-of select="'L'" />
+							</ns1:E-578_2_09>
+						</xsl:otherwise>
+					</xsl:choose>
+					<ns1:E-24_2_10 ObjType="e" ObjID="24">
+						<xsl:value-of
+							select="substring($currentBody/ct0:Container/ct0:CarrCntrSizeType,1,4)" />
+					</ns1:E-24_2_10>
+					<xsl:choose>
+						<xsl:when
+							test="exists($currentBody/ct0:Event/ct0:Location/ct0:CityDetails/ct0:City) and eg:trim($currentBody/ct0:Event/ct0:Location/ct0:CityDetails/ct0:City)!=''">
+							<ns1:E-310_2_11 ObjType="e" ObjID="310">
+								<xsl:value-of
+									select="upper-case(substring($currentBody/ct0:Event/ct0:Location/ct0:CityDetails/ct0:City,1,30))" />
+							</ns1:E-310_2_11>
+						</xsl:when>
+						<xsl:when
+							test="exists($currentBody/ct0:Event/ct0:Location/ct0:LocationName) and eg:trim($currentBody/ct0:Event/ct0:Location/ct0:LocationName)!=''">
+							<ns1:E-310_2_11 ObjType="e" ObjID="310">
+								<xsl:value-of
+									select="upper-case(substring($currentBody/ct0:Event/ct0:Location/ct0:LocationName,1,30))" />
+							</ns1:E-310_2_11>
+						</xsl:when>
+						<xsl:when
+							test="exists($currentBody/ct0:Event/ct0:Location/ct0:LocationCode/ct1:UNLocationCode) and eg:trim($currentBody/ct0:Event/ct0:Location/ct0:LocationCode/ct1:UNLocationCode)!=''">
+							<ns1:E-310_2_11 ObjType="e" ObjID="310">
+								<xsl:value-of
+									select="upper-case($currentBody/ct0:Event/ct0:Location/ct0:LocationCode/ct1:UNLocationCode)" />
+							</ns1:E-310_2_11>
+						</xsl:when>
+					</xsl:choose>
+					<ns1:E-309_2_12 ObjType="e" ObjID="309">
+						<xsl:value-of select="'UN'" />
+					</ns1:E-309_2_12>
+				</ns1:S-B4_2>
+				<xsl:variable name="blIndex" select="position()" />
+				<xsl:for-each select="$currentBody/ct0:BLGeneralInfo[$blIndex]">
+					<xsl:if test="eg:existsAndTrim(current()/ct0:BLNumber)!=''">
+						<ns1:S-N9_3 ObjType="s" ObjID="N9" ObjOrd="3">
+							<ns1:E-128_3_01 ObjType="e" ObjID="128">
+								<xsl:value-of select="'BM'" />
+							</ns1:E-128_3_01>
+							<ns1:E-127_3_02 ObjType="e" ObjID="127">
+								<xsl:value-of select="eg:existsAndTrim(current()/ct0:BLNumber)" />
+							</ns1:E-127_3_02>
+						</ns1:S-N9_3>
+					</xsl:if>
+					<xsl:if
+						test="eg:existsAndTrim(current()/ct0:CustomsReferenceNumber)!='' and eg:existsAndTrim(current()/ct0:CustomsReferenceType) = 'IT'">
+						<ns1:S-N9_3 ObjType="s" ObjID="N9" ObjOrd="3">
+							<ns1:E-128_3_01 ObjType="e" ObjID="128">
+								<xsl:value-of select="'IB'" />
+							</ns1:E-128_3_01>
+							<ns1:E-127_3_02 ObjType="e" ObjID="127">
+								<xsl:value-of
+									select="eg:existsAndTrim(current()/ct0:CustomsReferenceNumber)" />
+							</ns1:E-127_3_02>
+						</ns1:S-N9_3>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:for-each select="$currentBody/ct0:BookingGeneralInfo">
+					<xsl:if
+						test="eg:existsAndTrim(current()/ct0:CarrierBookingNumber)!=''">
+						<ns1:S-N9_3 ObjType="s" ObjID="N9" ObjOrd="3">
+							<ns1:E-128_3_01 ObjType="e" ObjID="128">
+								<xsl:value-of select="'BN'" />
+							</ns1:E-128_3_01>
+							<ns1:E-127_3_02 ObjType="e" ObjID="127">
+								<xsl:value-of
+									select="eg:existsAndTrim(current()/ct0:CarrierBookingNumber)" />
+							</ns1:E-127_3_02>
+						</ns1:S-N9_3>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:if test="$CdeConversionData/CodeConversion/Record[CONVERT_TYPE_ID='N9' and INT_CDE='EQ']/EXT_CDE = 'ContainerNumber'">
+					<ns1:S-N9_3 ObjType="s" ObjID="N9" ObjOrd="3">
+						<ns1:E-128_3_01 ObjType="e" ObjID="128">
+							<xsl:value-of select="'EQ'" />
+						</ns1:E-128_3_01>
+						<ns1:E-127_3_02 ObjType="e" ObjID="127">
+							<xsl:value-of select="concat($currentBody/ct0:Container/ct0:ContainerNumber,$currentBody/ct0:Container/ct0:ContainerCheckDigit)" />
+						</ns1:E-127_3_02>
+					</ns1:S-N9_3>
+				</xsl:if>
+				<xsl:if
+					test="$CdeConversionData/CodeConversion/Record[CONVERT_TYPE_ID='N9' and INT_CDE='EQ']/EXT_CDE='PickupNumber' and $currentBody/ct0:Container/ct0:RailPickupNumber !=''">
+					<ns1:S-N9_3 ObjType="s" ObjID="N9" ObjOrd="3">
+						<ns1:E-128_3_01 ObjType="e" ObjID="128">
+							<xsl:value-of select="'P8'" />
+						</ns1:E-128_3_01>
+						<ns1:E-127_3_02 ObjType="e" ObjID="127">
+							<xsl:value-of
+								select="eg:existsAndTrim($currentBody/ct0:Container/ct0:RailPickupNumber)" />
+						</ns1:E-127_3_02>
+					</ns1:S-N9_3>
+				</xsl:if>
+				<xsl:if test="exists($currentBody/ct0:Party[ct1:PartyType='CGN' and eg:trim(ct1:CarrierCustomerCode)!=''])">
+				    <ns1:S-N9_3 ObjType="s" ObjID="N9" ObjOrd="3">
+						<ns1:E-128_3_01 ObjType="e" ObjID="128">
+							<xsl:value-of select="'IC'" />
+						</ns1:E-128_3_01>
+						<ns1:E-127_3_02 ObjType="e" ObjID="127">
+							<xsl:value-of select="eg:trim($currentBody/ct0:Party[ct1:PartyType='CGN' and eg:trim(ct1:CarrierCustomerCode)!=''][1]/ct1:CarrierCustomerCode)" />
+						</ns1:E-127_3_02>
+					</ns1:S-N9_3>
+				</xsl:if>
+				<xsl:for-each select="$currentBody/ct0:ExternalReference">
+					<xsl:if
+						test="eg:existsAndTrim($CdeConversionData/CodeConversion/Record[CONVERT_TYPE_ID='ExternalReference' and INT_CDE=current()/ct0:CSReferenceType]/EXT_CDE) !=''">
+						<ns1:S-N9_3 ObjType="s" ObjID="N9" ObjOrd="3">
+							<ns1:E-128_3_01 ObjType="e" ObjID="128">
+								<xsl:value-of
+									select="$CdeConversionData/CodeConversion/Record[CONVERT_TYPE_ID='ExternalReference' and INT_CDE=current()/ct0:CSReferenceType]/EXT_CDE" />
+							</ns1:E-128_3_01>
+							<ns1:E-127_3_02 ObjType="e" ObjID="127">
+								<xsl:value-of
+									select="eg:existsAndTrim(current()/ct0:ReferenceNumber)" />
+							</ns1:E-127_3_02>
+						</ns1:S-N9_3>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:for-each select="$currentBody/ct0:Container/ct0:Seal">
+					<xsl:if
+						test="eg:existsAndTrim(current()/ct1:SealNumber) !='' and string-length(current()/ct1:SealNumber) >= 4">
+						<ns1:S-N9_3 ObjType="s" ObjID="N9" ObjOrd="3">
+							<ns1:E-128_3_01 ObjType="e" ObjID="128">
+								<xsl:value-of select="'SN'" />
+							</ns1:E-128_3_01>
+							<ns1:E-127_3_02 ObjType="e" ObjID="127">
+								<xsl:value-of select="eg:existsAndTrim(current()/ct1:SealNumber)" />
+							</ns1:E-127_3_02>
+						</ns1:S-N9_3>
+					</xsl:if>
+				</xsl:for-each>
+				<xsl:variable name="shipDir"
+					select="$CdeConversionData/CodeConversion/Record[CONVERT_TYPE_ID='EventDirection' and INT_CDE=$event]/EXT_CDE" />
+				<xsl:variable name="lastOceanLeg"
+					select="$currentBody/ct0:Route/ct0:OceanLeg[last()]" />
+				<xsl:variable name="firstOceanLeg"
+					select="$currentBody/ct0:Route/ct0:OceanLeg[1]" />
+				<xsl:choose>
+					<xsl:when
+						test="$shipDir='I' or ($shipDir='OB' and $currentBody/ct0:Route/ct0:FND/ct1:CSStandardCity/ct1:CSContinentCode !='' and $currentBody/ct0:Route/ct0:FND/ct1:CSStandardCity/ct1:CSCountryCode = $currentBody/ct0:Event/ct0:Location/ct0:CSStandardCity/ct1:CSCountryCode)">
+						<ns1:S-Q2_4 ObjType="s" ObjID="Q2" ObjOrd="4">
+							<xsl:if
+								test="eg:existsAndTrim($lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:LloydsNumber) !=''">
+								<ns1:E-597_4_01 ObjType="e" ObjID="597">
+									<xsl:value-of
+										select="substring($lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:LloydsNumber,1,7)" />
+								</ns1:E-597_4_01>
+							</xsl:if>
+							<xsl:if
+								test="eg:existsAndTrim($lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:RegistrationCountryCode) !=''">
+								<ns1:E-26_4_02 ObjType="e" ObjID="26">
+									<xsl:value-of
+										select="$lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:RegistrationCountryCode" />
+								</ns1:E-26_4_02>
+							</xsl:if>
+							<xsl:choose>
+								<xsl:when
+									test="eg:existsAndTrim($lastOceanLeg/ct0:POL/ct0:DepartureDT[@Indicator='A']/ct1:LocDT) !=''">
+									<ns1:E-373_4_04 ObjType="e" ObjID="373">
+										<xsl:value-of
+											select="format-dateTime($lastOceanLeg/ct0:POL/ct0:DepartureDT[@Indicator='A']/ct1:LocDT,'[Y0001][M01][D01]')" />
+									</ns1:E-373_4_04>
+								</xsl:when>
+								<xsl:when
+									test="eg:existsAndTrim($lastOceanLeg/ct0:POL/ct0:DepartureDT[@Indicator='E']/ct1:LocDT) !=''">
+									<ns1:E-373_4_04 ObjType="e" ObjID="373">
+										<xsl:value-of
+											select="format-dateTime($lastOceanLeg/ct0:POL/ct0:DepartureDT[@Indicator='E']/ct1:LocDT,'[Y0001][M01][D01]')" />
+									</ns1:E-373_4_04>
+								</xsl:when>
+							</xsl:choose>
+							<xsl:choose>
+								<xsl:when
+									test="eg:existsAndTrim($lastOceanLeg/ct0:POD/ct0:ArrivalDT[@Indicator='A']/ct1:LocDT) !=''">
+									<ns1:E-373_4_05 ObjType="e" ObjID="373">
+										<xsl:value-of
+											select="format-dateTime($lastOceanLeg/ct0:POD/ct0:ArrivalDT[@Indicator='A']/ct1:LocDT ,'[Y0001][M01][D01]')" />
+									</ns1:E-373_4_05>
+								</xsl:when>
+								<xsl:when
+									test="eg:existsAndTrim($lastOceanLeg/ct0:POD/ct0:ArrivalDT[@Indicator='E']/ct1:LocDT) !=''">
+									<ns1:E-373_4_05 ObjType="e" ObjID="373">
+										<xsl:value-of
+											select="format-dateTime($lastOceanLeg/ct0:POD/ct0:ArrivalDT[@Indicator='E']/ct1:LocDT,'[Y0001][M01][D01]')" />
+									</ns1:E-373_4_05>
+								</xsl:when>
+							</xsl:choose>
+							<xsl:if
+								test="eg:existsAndTrim($lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:Voyage) != '' or  eg:existsAndTrim($lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:Direction) !=''">
+								<ns1:E-55_4_09 ObjType="e" ObjID="55">
+									<xsl:value-of
+										select="concat($lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:Voyage, $lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:Direction)" />
+								</ns1:E-55_4_09>
+							</xsl:if>
+							<ns1:E-127_4_11 ObjType="e" ObjID="127">
+								<xsl:value-of select="$currentBody/ct0:GeneralInformation/ct0:SCAC" />
+							</ns1:E-127_4_11>
+							<ns1:E-897_4_12 ObjType="e" ObjID="897">
+								<xsl:value-of select="'L'" />
+							</ns1:E-897_4_12>
+							<xsl:if
+								test="eg:existsAndTrim($lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:VesselName) !=&quot;&quot;">
+								<xsl:if
+									test="$lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:VesselName">
+									<ns1:E-182_4_13 ObjType="e" ObjID="182">
+										<xsl:value-of
+											select="$lastOceanLeg/ct0:SVVD/ct0:Discharge/ct0:VesselName" />
+									</ns1:E-182_4_13>
+								</xsl:if>
+							</xsl:if>
+						</ns1:S-Q2_4>
+					</xsl:when>
+					<xsl:when test="$shipDir='O' or $shipDir='OB'">
+						<ns1:S-Q2_4 ObjType="s" ObjID="Q2" ObjOrd="4">
+							<xsl:if
+								test="eg:existsAndTrim($firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:LloydsNumber) !=''">
+								<ns1:E-597_4_01 ObjType="e" ObjID="597">
+									<xsl:value-of
+										select="substring($firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:LloydsNumber,1,7)" />
+								</ns1:E-597_4_01>
+							</xsl:if>
+							<xsl:if
+								test="eg:existsAndTrim($firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:RegistrationCountryCode) !=''">
+								<ns1:E-26_4_02 ObjType="e" ObjID="26">
+									<xsl:value-of
+										select="$firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:RegistrationCountryCode" />
+								</ns1:E-26_4_02>
+							</xsl:if>
+							<xsl:choose>
+								<xsl:when
+									test="eg:existsAndTrim($firstOceanLeg/ct0:POL/ct0:DepartureDT[@Indicator='A']/ct1:LocDT) !=''">
+									<ns1:E-373_4_04 ObjType="e" ObjID="373">
+										<xsl:value-of
+											select="format-dateTime($firstOceanLeg/ct0:POL/ct0:DepartureDT[@Indicator='A']/ct1:LocDT,'[Y0001][M01][D01]')" />
+									</ns1:E-373_4_04>
+								</xsl:when>
+								<xsl:when
+									test="eg:existsAndTrim($firstOceanLeg/ct0:POL/ct0:DepartureDT[@Indicator='E']/ct1:LocDT) !=''">
+									<ns1:E-373_4_04 ObjType="e" ObjID="373">
+										<xsl:value-of
+											select="format-dateTime($firstOceanLeg/ct0:POL/ct0:DepartureDT[@Indicator='E']/ct1:LocDT,'[Y0001][M01][D01]')" />
+									</ns1:E-373_4_04>
+								</xsl:when>
+							</xsl:choose>
+							<xsl:choose>
+								<xsl:when
+									test="eg:existsAndTrim($firstOceanLeg/ct0:POD/ct0:ArrivalDT[@Indicator='A']/ct1:LocDT) !=''">
+									<ns1:E-373_4_05 ObjType="e" ObjID="373">
+										<xsl:value-of
+											select="format-dateTime($firstOceanLeg/ct0:POD/ct0:ArrivalDT[@Indicator='A']/ct1:LocDT,'[Y0001][M01][D01]')" />
+									</ns1:E-373_4_05>
+								</xsl:when>
+								<xsl:when
+									test="eg:existsAndTrim($firstOceanLeg/ct0:POD/ct0:ArrivalDT[@Indicator='E']/ct1:LocDT) !=''">
+									<ns1:E-373_4_05 ObjType="e" ObjID="373">
+										<xsl:value-of
+											select="format-dateTime($firstOceanLeg/ct0:POD/ct0:ArrivalDT[@Indicator='E']/ct1:LocDT,'[Y0001][M01][D01]')" />
+									</ns1:E-373_4_05>
+								</xsl:when>
+							</xsl:choose>
+							<xsl:if
+								test="eg:existsAndTrim($firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:Voyage) != '' or eg:existsAndTrim($firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:Direction) !=''">
+								<ns1:E-55_4_09 ObjType="e" ObjID="55">
+									<xsl:value-of
+										select="concat($firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:Voyage, $firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:Direction)" />
+								</ns1:E-55_4_09>
+							</xsl:if>
+							<ns1:E-127_4_11 ObjType="e" ObjID="127">
+								<xsl:value-of select="$currentBody/ct0:GeneralInformation/ct0:SCAC" />
+							</ns1:E-127_4_11>
+							<ns1:E-897_4_12 ObjType="e" ObjID="897">
+								<xsl:value-of select="'L'" />
+							</ns1:E-897_4_12>
+							<xsl:if
+								test="eg:existsAndTrim($firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:VesselName) !=&quot;&quot;">
+								<xsl:if test="$firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:VesselName">
+									<ns1:E-182_4_13 ObjType="e" ObjID="182">
+										<xsl:value-of
+											select="$firstOceanLeg/ct0:SVVD/ct0:Loading/ct0:VesselName" />
+									</ns1:E-182_4_13>
+								</xsl:if>
+							</xsl:if>
+						</ns1:S-Q2_4>
+					</xsl:when>
+				</xsl:choose>
+				<xsl:variable name="POR" select="$currentBody/ct0:Route/ct0:POR" />
+				<xsl:variable name="firstPOL"
+					select="$currentBody/ct0:Route/ct0:FirstPOL" />
+				<xsl:variable name="lastPOD"
+					select="$currentBody/ct0:Route/ct0:LastPOD" />
+				<xsl:variable name="FND" select="$currentBody/ct0:Route/ct0:FND" />
+				<ns1:L-R4_6 ObjType="l" ObjID="R4">
+					<ns1:S-R4_6 ObjType="s" ObjID="R4" ObjOrd="6">
+						<ns1:E-115_6_01 ObjType="e" ObjID="115">
+							<xsl:value-of select="'R'" />
+						</ns1:E-115_6_01>
+						<xsl:choose>
+							<xsl:when
+								test="eg:existsAndTrim($POR/ct1:CityDetails/ct1:LocationCode/ct1:UNLocationCode) !=''">
+								<ns1:E-309_6_02 ObjType="e" ObjID="309">
+									<xsl:value-of select="'UN'" />
+								</ns1:E-309_6_02>
+							</xsl:when>
+							<xsl:when
+								test="eg:existsAndTrim($POR/ct1:CityDetails/ct1:LocationCode/ct1:SchedKDCode) !=''">
+								<ns1:E-309_6_02 ObjType="e" ObjID="309">
+									<xsl:value-of
+										select="$POR/ct1:CityDetails/ct1:LocationCode/ct1:SchedKDType" />
+								</ns1:E-309_6_02>
+							</xsl:when>
+						</xsl:choose>
+						<xsl:choose>
+							<xsl:when
+								test="eg:existsAndTrim($POR/ct1:CityDetails/ct1:LocationCode/ct1:UNLocationCode) !=''">
+								<xsl:if
+									test="$POR/ct1:CityDetails/ct1:LocationCode/ct1:UNLocationCode">
+									<ns1:E-310_6_03 ObjType="e" ObjID="310">
+										<xsl:value-of
+											select="$POR/ct1:CityDetails/ct1:LocationCode/ct1:UNLocationCode" />
+									</ns1:E-310_6_03>
+								</xsl:if>
+							</xsl:when>
+							<xsl:when
+								test="eg:existsAndTrim($POR/ct1:CityDetails/ct1:LocationCode/ct1:SchedKDCode) !=''">
+								<xsl:if
+									test="$POR/ct1:CityDetails/ct1:LocationCode/ct1:SchedKDCode">
+									<ns1:E-310_6_03 ObjType="e" ObjID="310">
+										<xsl:value-of
+											select="$POR/ct1:CityDetails/ct1:LocationCode/ct1:SchedKDCode" />
+									</ns1:E-310_6_03>
+								</xsl:if>
+							</xsl:when>
+						</xsl:choose>
+						<xsl:if test="eg:existsAndTrim($POR/ct1:CityDetails/ct1:City) !=''">
+							<ns1:E-114_6_04 ObjType="e" ObjID="114">
+								<xsl:value-of
+									select="upper-case(substring($POR/ct1:CityDetails/ct1:City,1,24))" />
+							</ns1:E-114_6_04>
+						</xsl:if>
+						<xsl:if
+							test="eg:existsAndTrim($POR/ct1:CSStandardCity/ct1:CSCountryCode) !='' and string-length($POR/ct1:CSStandardCity/ct1:CSCountryCode) >= 2">
+							<ns1:E-26_6_05 ObjType="e" ObjID="26">
+								<xsl:value-of select="$POR/ct1:CSStandardCity/ct1:CSCountryCode" />
+							</ns1:E-26_6_05>
+						</xsl:if>
+						<xsl:if
+							test="eg:existsAndTrim($POR/ct1:CSStandardCity/ct1:CSStateCode) !=''">
+							<ns1:E-156_6_08 ObjType="e" ObjID="156">
+								<xsl:value-of select="$POR/ct1:CSStandardCity/ct1:CSStateCode" />
+							</ns1:E-156_6_08>
+						</xsl:if>
+					</ns1:S-R4_6>
+				</ns1:L-R4_6>
+				<ns1:L-R4_6 ObjType="l" ObjID="R4">
+					<ns1:S-R4_6 ObjType="s" ObjID="R4" ObjOrd="6">
+						<ns1:E-115_6_01 ObjType="e" ObjID="115">
+							<xsl:value-of select="'L'" />
+						</ns1:E-115_6_01>
+						<xsl:choose>
+							<xsl:when
+								test="eg:existsAndTrim($firstPOL/ct1:Port/ct1:LocationCode/ct1:UNLocationCode) !=''">
+								<ns1:E-309_6_02 ObjType="e" ObjID="309">
+									<xsl:value-of select="'UN'" />
+								</ns1:E-309_6_02>
+							</xsl:when>
+							<xsl:when
+								test="eg:existsAndTrim($firstPOL/ct1:Port/ct1:LocationCode/ct1:SchedKDCode) !=''">
+								<ns1:E-309_6_02 ObjType="e" ObjID="309">
+									<xsl:value-of
+										select="$firstPOL/ct1:Port/ct1:LocationCode/ct1:SchedKDType" />
+								</ns1:E-309_6_02>
+							</xsl:when>
+						</xsl:choose>
+						<xsl:choose>
+							<xsl:when
+								test="eg:existsAndTrim($firstPOL/ct1:Port/ct1:LocationCode/ct1:UNLocationCode) !=''">
+								<ns1:E-310_6_03 ObjType="e" ObjID="310">
+									<xsl:value-of
+										select="$firstPOL/ct1:Port/ct1:LocationCode/ct1:UNLocationCode" />
+								</ns1:E-310_6_03>
+							</xsl:when>
+							<xsl:when
+								test="eg:existsAndTrim($firstPOL/ct1:Port/ct1:LocationCode/ct1:SchedKDCode) !=''">
+								<ns1:E-310_6_03 ObjType="e" ObjID="310">
+									<xsl:value-of
+										select="$firstPOL/ct1:Port/ct1:LocationCode/ct1:SchedKDCode" />
+								</ns1:E-310_6_03>
+							</xsl:when>
+						</xsl:choose>
+						<xsl:if test="eg:existsAndTrim($firstPOL/ct1:Port/ct1:City) !=''">
+							<ns1:E-114_6_04 ObjType="e" ObjID="114">
+								<xsl:value-of
+									select="upper-case(substring($firstPOL/ct1:Port/ct1:City,1,24))" />
+							</ns1:E-114_6_04>
+						</xsl:if>
+						<xsl:if
+							test="eg:existsAndTrim($firstPOL/ct1:Port/ct1:CSCountryCode) !='' and string-length($firstPOL/ct1:Port/ct1:CSCountryCode) >= 2">
+							<ns1:E-26_6_05 ObjType="e" ObjID="26">
+								<xsl:value-of select="$firstPOL/ct1:Port/ct1:CSCountryCode" />
+							</ns1:E-26_6_05>
+						</xsl:if>
+						<xsl:if test="eg:existsAndTrim($firstPOL/ct0:CSStateCode) !=''">
+							<ns1:E-156_6_08 ObjType="e" ObjID="156">
+								<xsl:value-of select="$firstPOL/ct0:CSStateCode" />
+							</ns1:E-156_6_08>
+						</xsl:if>
+					</ns1:S-R4_6>
+					<xsl:choose>
+						<xsl:when
+							test="eg:existsAndTrim($firstOceanLeg/ct0:POL/ct0:DepartureDT[1]/@Indicator) = 'A' and eg:existsAndTrim($firstOceanLeg/ct0:POL/ct0:DepartureDT[1]/ct1:LocDT) !=''">
+							<ns1:S-DTM_7 ObjType="s" ObjID="DTM" ObjOrd="7">
+								<ns1:E-374_7_01 ObjType="e" ObjID="374">
+									<xsl:value-of select="'370'" />
+								</ns1:E-374_7_01>
+								<ns1:E-373_7_02 ObjType="e" ObjID="373">
+									<xsl:value-of
+										select="format-dateTime($firstOceanLeg/ct0:POL/ct0:DepartureDT[1]/ct1:LocDT,'[Y0001][M01][D01]')" />
+								</ns1:E-373_7_02>
+								<ns1:E-337_7_03 ObjType="e" ObjID="337">
+									<xsl:value-of
+										select="format-dateTime($firstOceanLeg/ct0:POL/ct0:DepartureDT[1]/ct1:LocDT, '[H01][m01]')" />
+								</ns1:E-337_7_03>
+								<ns1:E-623_7_04 ObjType="e" ObjID="623">
+									<xsl:value-of select="'LT'" />
+								</ns1:E-623_7_04>
+							</ns1:S-DTM_7>
+						</xsl:when>
+						<xsl:when
+							test="eg:existsAndTrim($firstOceanLeg/ct0:POL/ct0:DepartureDT[1]/@Indicator) = 'E' and eg:existsAndTrim($firstOceanLeg/ct0:POL/ct0:DepartureDT[1]/ct1:LocDT) !=''">
+							<ns1:S-DTM_7 ObjType="s" ObjID="DTM" ObjOrd="7">
+								<ns1:E-374_7_01 ObjType="e" ObjID="374">
+									<xsl:value-of select="'369'" />
+								</ns1:E-374_7_01>
+								<ns1:E-373_7_02 ObjType="e" ObjID="373">
+									<xsl:value-of
+										select="format-dateTime($firstOceanLeg/ct0:POL/ct0:DepartureDT[1]/ct1:LocDT,'[Y0001][M01][D01]')" />
+								</ns1:E-373_7_02>
+								<ns1:E-337_7_03 ObjType="e" ObjID="337">
+									<xsl:value-of
+										select="format-dateTime($firstOceanLeg/ct0:POL/ct0:DepartureDT[1]/ct1:LocDT, '[H01][m01]')" />
+								</ns1:E-337_7_03>
+								<ns1:E-623_7_04 ObjType="e" ObjID="623">
+									<xsl:value-of select="'LT'" />
+								</ns1:E-623_7_04>
+							</ns1:S-DTM_7>
+						</xsl:when>
+					</xsl:choose>
+				</ns1:L-R4_6>
+				<ns1:L-R4_6 ObjType="l" ObjID="R4">
+					<ns1:S-R4_6 ObjType="s" ObjID="R4" ObjOrd="6">
+						<ns1:E-115_6_01 ObjType="e" ObjID="115">
+							<xsl:value-of select="'D'" />
+						</ns1:E-115_6_01>
+						<xsl:choose>
+							<xsl:when
+								test="eg:existsAndTrim($lastPOD/ct1:Port/ct1:LocationCode/ct1:UNLocationCode) !=''">
+								<ns1:E-309_6_02 ObjType="e" ObjID="309">
+									<xsl:value-of select="'UN'" />
+								</ns1:E-309_6_02>
+							</xsl:when>
+							<xsl:when
+								test="eg:existsAndTrim($lastPOD/ct1:Port/ct1:LocationCode/ct1:SchedKDCode) !=''">
+								<ns1:E-309_6_02 ObjType="e" ObjID="309">
+									<xsl:value-of
+										select="$lastPOD/ct1:Port/ct1:LocationCode/ct1:SchedKDType" />
+								</ns1:E-309_6_02>
+							</xsl:when>
+						</xsl:choose>
+						<xsl:choose>
+							<xsl:when
+								test="eg:existsAndTrim($lastPOD/ct1:Port/ct1:LocationCode/ct1:UNLocationCode) !=''">
+								<ns1:E-310_6_03 ObjType="e" ObjID="310">
+									<xsl:value-of
+										select="$lastPOD/ct1:Port/ct1:LocationCode/ct1:UNLocationCode" />
+								</ns1:E-310_6_03>
+							</xsl:when>
+							<xsl:when
+								test="eg:existsAndTrim($lastPOD/ct1:Port/ct1:LocationCode/ct1:SchedKDCode) !=''">
+								<ns1:E-310_6_03 ObjType="e" ObjID="310">
+									<xsl:value-of
+										select="$lastPOD/ct1:Port/ct1:LocationCode/ct1:SchedKDCode" />
+								</ns1:E-310_6_03>
+							</xsl:when>
+						</xsl:choose>
+						<xsl:if test="eg:existsAndTrim($lastPOD/ct1:Port/ct1:City) !=''">
+							<ns1:E-114_6_04 ObjType="e" ObjID="114">
+								<xsl:value-of
+									select="upper-case(substring($lastPOD/ct1:Port/ct1:City,1,24))" />
+							</ns1:E-114_6_04>
+						</xsl:if>
+						<xsl:if
+							test="eg:existsAndTrim($lastPOD/ct1:Port/ct1:CSCountryCode) !='' and string-length($lastPOD/ct1:Port/ct1:CSCountryCode) >= 2">
+							<ns1:E-26_6_05 ObjType="e" ObjID="26">
+								<xsl:value-of select="$lastPOD/ct1:Port/ct1:CSCountryCode" />
+							</ns1:E-26_6_05>
+						</xsl:if>
+						<xsl:if test="eg:existsAndTrim($lastPOD/ct0:CSStateCode) !=''">
+							<ns1:E-156_6_08 ObjType="e" ObjID="156">
+								<xsl:value-of select="$lastPOD/ct0:CSStateCode" />
+							</ns1:E-156_6_08>
+						</xsl:if>
+					</ns1:S-R4_6>
+					<xsl:choose>
+						<xsl:when
+							test="eg:existsAndTrim($lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/@Indicator) = 'A' and eg:existsAndTrim($lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/ct1:LocDT) !=''">
+							<ns1:S-DTM_7 ObjType="s" ObjID="DTM" ObjOrd="7">
+								<ns1:E-374_7_01 ObjType="e" ObjID="374">
+									<xsl:value-of select="'370'" />
+								</ns1:E-374_7_01>
+								<ns1:E-373_7_02 ObjType="e" ObjID="373">
+									<xsl:value-of
+										select="format-dateTime( $lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/ct1:LocDT,'[Y0001][M01][D01]')" />
+								</ns1:E-373_7_02>
+								<ns1:E-337_7_03 ObjType="e" ObjID="337">
+									<xsl:value-of
+										select="format-dateTime($lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/ct1:LocDT, '[H01][m01]')" />
+								</ns1:E-337_7_03>
+								<ns1:E-623_7_04 ObjType="e" ObjID="623">
+									<xsl:value-of select="'LT'" />
+								</ns1:E-623_7_04>
+							</ns1:S-DTM_7>
+						</xsl:when>
+						<xsl:when
+							test="eg:existsAndTrim($lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/@Indicator) = 'E' and eg:existsAndTrim($lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/ct1:LocDT) !=''">
+							<ns1:S-DTM_7 ObjType="s" ObjID="DTM" ObjOrd="7">
+								<ns1:E-374_7_01 ObjType="e" ObjID="374">
+									<xsl:value-of select="'369'" />
+								</ns1:E-374_7_01>
+								<ns1:E-373_7_02 ObjType="e" ObjID="373">
+									<xsl:value-of
+										select="format-dateTime($lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/ct1:LocDT,'[Y0001][M01][D01]')" />
+								</ns1:E-373_7_02>
+								<ns1:E-337_7_03 ObjType="e" ObjID="337">
+									<xsl:value-of
+										select="format-dateTime($lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/ct1:LocDT, '[H01][m01]')" />
+								</ns1:E-337_7_03>
+								<ns1:E-623_7_04 ObjType="e" ObjID="623">
+									<xsl:value-of select="'LT'" />
+								</ns1:E-623_7_04>
+							</ns1:S-DTM_7>
+						</xsl:when>
+					</xsl:choose>
+					<xsl:if
+						test="$currentBody/ct0:BLGeneralInfo/ct0:CustomsReferenceNumber !='' and $currentBody/ct0:BLGeneralInfo/ct0:CustomsReferenceType='IT'">
+						<ns1:S-DTM_7 ObjType="s" ObjID="DTM" ObjOrd="7">
+							<ns1:E-374_7_01 ObjType="e" ObjID="374">
+								<xsl:value-of select="'059'" />
+							</ns1:E-374_7_01>
+							<ns1:E-373_7_02 ObjType="e" ObjID="373">
+								<xsl:value-of
+									select="format-dateTime($lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/ct1:LocDT,'[Y0001][M01][D01]')" />
+							</ns1:E-373_7_02>
+							<ns1:E-337_7_03 ObjType="e" ObjID="337">
+								<xsl:value-of
+									select="format-dateTime($lastOceanLeg/ct0:POD/ct0:ArrivalDT[1]/ct1:LocDT,'[H01][m01]')" />
+							</ns1:E-337_7_03>
+							<ns1:E-623_7_04 ObjType="e" ObjID="623">
+								<xsl:value-of select="'LT'" />
+							</ns1:E-623_7_04>
+						</ns1:S-DTM_7>
+					</xsl:if>
+				</ns1:L-R4_6>
+				<ns1:L-R4_6 ObjType="l" ObjID="R4">
+					<ns1:S-R4_6 ObjType="s" ObjID="R4" ObjOrd="6">
+						<ns1:E-115_6_01 ObjType="e" ObjID="115">
+							<xsl:value-of select="'E'" />
+						</ns1:E-115_6_01>
+						<xsl:choose>
+							<xsl:when
+								test="eg:existsAndTrim($FND/ct1:CityDetails/ct1:LocationCode/ct1:UNLocationCode) !=''">
+								<ns1:E-309_6_02 ObjType="e" ObjID="309">
+									<xsl:value-of select="'UN'" />
+								</ns1:E-309_6_02>
+							</xsl:when>
+							<xsl:when
+								test="eg:existsAndTrim($FND/ct1:CityDetails/ct1:LocationCode/ct1:SchedKDCode) !=''">
+								<ns1:E-309_6_02 ObjType="e" ObjID="309">
+									<xsl:value-of
+										select="$FND/ct1:CityDetails/ct1:LocationCode/ct1:SchedKDType" />
+								</ns1:E-309_6_02>
+							</xsl:when>
+						</xsl:choose>
+						<xsl:choose>
+							<xsl:when
+								test="eg:existsAndTrim($FND/ct1:CityDetails/ct1:LocationCode/ct1:UNLocationCode) !=''">
+								<ns1:E-310_6_03 ObjType="e" ObjID="310">
+									<xsl:value-of
+										select="$FND/ct1:CityDetails/ct1:LocationCode/ct1:UNLocationCode" />
+								</ns1:E-310_6_03>
+							</xsl:when>
+							<xsl:when
+								test="eg:existsAndTrim($FND/ct1:CityDetails/ct1:LocationCode/ct1:SchedKDCode) !=''">
+								<ns1:E-310_6_03 ObjType="e" ObjID="310">
+									<xsl:value-of
+										select="$FND/ct1:CityDetails/ct1:LocationCode/ct1:SchedKDCode" />
+								</ns1:E-310_6_03>
+							</xsl:when>
+						</xsl:choose>
+						<xsl:if test="eg:existsAndTrim($FND/ct1:CityDetails/ct1:City) !=''">
+							<ns1:E-114_6_04 ObjType="e" ObjID="114">
+								<xsl:value-of
+									select="upper-case(substring($FND/ct1:CityDetails/ct1:City,1,24))" />
+							</ns1:E-114_6_04>
+						</xsl:if>
+						<xsl:if
+							test="eg:existsAndTrim($FND/ct1:CSStandardCity/ct1:CSCountryCode) !='' and string-length($FND/ct1:CSStandardCity/ct1:CSCountryCode) >= 2">
+							<ns1:E-26_6_05 ObjType="e" ObjID="26">
+								<xsl:value-of select="$FND/ct1:CSStandardCity/ct1:CSCountryCode" />
+							</ns1:E-26_6_05>
+						</xsl:if>
+						<xsl:if
+							test="eg:existsAndTrim($FND/ct1:CSStandardCity/ct1:CSStateCode) !=''">
+							<ns1:E-156_6_08 ObjType="e" ObjID="156">
+								<xsl:value-of select="$FND/ct1:CSStandardCity/ct1:CSStateCode" />
+							</ns1:E-156_6_08>
+						</xsl:if>
+					</ns1:S-R4_6>
+				</ns1:L-R4_6>
+				<ns1:S-SE_9 ObjType="s" ObjID="SE" ObjOrd="9">
+					<ns1:E-96_9_01 ObjType="e" ObjID="96">
+						<xsl:value-of select="-999" />
+					</ns1:E-96_9_01>
+					<ns1:E-329_9_02 ObjType="e" ObjID="329">
+						<xsl:value-of select="-999" />
+					</ns1:E-329_9_02>
+				</ns1:S-SE_9>
+			</ns1:T-315>
+	    </xsl:for-each>
+</xsl:stylesheet>

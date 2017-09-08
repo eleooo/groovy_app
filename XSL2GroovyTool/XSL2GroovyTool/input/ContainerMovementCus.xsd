@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 sp1 (http://www.altova.com) by Nickey (Orient Overseas Container Line Ltd.) -->
+<xs:schema xmlns="http://www.cargosmart.com/route" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:cs="http://www.cargosmart.com/common" targetNamespace="http://www.cargosmart.com/route" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.cargosmart.com/common" schemaLocation="../common/ShipmentContextType.xsd"/>
+	<xs:element name="ContainerMovement">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header" type="cs:HeaderType"/>
+				<xs:element name="Body" type="CntrMvmtCusBodyType" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CntrMvmtEventType">
+		<xs:sequence>
+			<xs:element name="CarrEventCode">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="120"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CSEvent" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CSEventCode">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50"/>
+									<xs:enumeration value="carrier_rel"/>
+									<xs:enumeration value="cntr_act_door_delivery"/>
+									<xs:enumeration value="cntr_act_door_pickup"/>
+									<xs:enumeration value="cntr_arrived_at_fcl"/>
+									<xs:enumeration value="cntr_arrived_at_ob_iml"/>
+									<xs:enumeration value="cntr_arrived_last_hub_ib"/>
+									<xs:enumeration value="cntr_arrived_rail_hub"/>
+									<xs:enumeration value="cntr_available_ib"/>
+									<xs:enumeration value="cntr_departed_fm_first_hub"/>
+									<xs:enumeration value="cntr_departed_from_fcl"/>
+									<xs:enumeration value="cntr_devan_ib"/>
+									<xs:enumeration value="cntr_devan_ob"/>
+									<xs:enumeration value="cntr_discharge"/>
+									<xs:enumeration value="cntr_discharged"/>
+									<xs:enumeration value="cntr_emp_pickup"/>
+									<xs:enumeration value="cntr_emp_return"/>
+									<xs:enumeration value="cntr_first_loaded_rail"/>
+									<xs:enumeration value="cntr_imdl_departed_fm_last_pod"/>
+									<xs:enumeration value="cntr_last_deramp_ib"/>
+									<xs:enumeration value="cntr_last_deramp_ob"/>
+									<xs:enumeration value="cntr_load_at_port"/>
+									<xs:enumeration value="cntr_load_on_truck"/>
+									<xs:enumeration value="cntr_load_vsl"/>
+									<xs:enumeration value="cntr_loaded"/>
+									<xs:enumeration value="cntr_loaded_first_pol"/>
+									<xs:enumeration value="cntr_loaded_on_rail"/>
+									<xs:enumeration value="cntr_picked_at_fnd"/>
+									<xs:enumeration value="cntr_picked_at_port"/>
+									<xs:enumeration value="cntr_rcvd"/>
+									<xs:enumeration value="cntr_repack_from"/>
+									<xs:enumeration value="cntr_repack_to"/>
+									<xs:enumeration value="cntr_transferred"/>
+									<xs:enumeration value="cntr_van_ib"/>
+									<xs:enumeration value="cntr_van_ob"/>
+									<xs:enumeration value="cust_hold_ib"/>
+									<xs:enumeration value="cust_hold_ob"/>
+									<xs:enumeration value="cust_rel_ib"/>
+									<xs:enumeration value="cust_rel_ob"/>
+									<xs:enumeration value="custom_ack_ob"/>
+									<xs:enumeration value="emp_cntr_arrived_at_cust_origin"/>
+									<xs:enumeration value="first_loaded_on_rail_ib"/>
+									<xs:enumeration value="first_loaded_on_rail_ob"/>
+									<xs:enumeration value="gate_in_inland"/>
+									<xs:enumeration value="gate_out_inland"/>
+									<xs:enumeration value="rail_move"/>
+									<xs:enumeration value="vsl_arrived"/>
+									<xs:enumeration value="vsl_departure"/>
+									<xs:enumeration value="carrier_customs_released"/>
+									<xs:enumeration value="freight_charge_settled"/>
+									<xs:enumeration value="spotted_at_customer_warehouse"/>
+									<xs:enumeration value="arrival_at_inland_hub"/>
+									<xs:enumeration value="departure_from_inland_hub"/>
+									<xs:enumeration value="carrier_hold"/>
+									<xs:enumeration value="freight_release"/>
+									<xs:enumeration value="empty_cntr_released"/>
+									<xs:enumeration value="equip_delay_due_transport"/>
+									<xs:enumeration value="Detention_Free_Time_to_Expire"/>
+									<xs:enumeration value="Demurrage_Free_Time_to_Expire"/>
+									<xs:enumeration value="Detention_Free_Time_Expired"/>
+									<xs:enumeration value="Demurrage_Free_Time_Expired"/>
+									<xs:enumeration value="rail_arrival_at_in_transit_yard"/>
+									<xs:enumeration value="rail_bad_order"/>
+									<xs:enumeration value="rail_highway_arrival"/>
+									<xs:enumeration value="rail_arrival_at_destination"/>
+									<xs:enumeration value="rail_highway_departure"/>
+									<xs:enumeration value="rail_flatcar_bad_order"/>
+									<xs:enumeration value="rail_bad_order_release"/>
+									<xs:enumeration value="rail_car_delayed_or_held"/>
+									<xs:enumeration value="rail_equip_offer_in_interchange"/>
+									<xs:enumeration value="rail_junction_delivery"/>
+									<xs:enumeration value="rail_intermodal_interchange"/>
+									<xs:enumeration value="rail_motor_carrier_arrival"/>
+									<xs:enumeration value="rail_motor_carrier_move"/>
+									<xs:enumeration value="rail_no_bill"/>
+									<xs:enumeration value="rail_departure"/>
+									<xs:enumeration value="rail_flatcar_bad_order_released"/>
+									<xs:enumeration value="rail_junction_released"/>
+									<xs:enumeration value="rail_storage"/>
+									<xs:enumeration value="rail_on_truck_line"/>
+									<xs:enumeration value="rail_ramped"/>
+									<xs:enumeration value="rail_deramped"/>
+									<xs:enumeration value="rail_released"/>
+									<xs:enumeration value="rail_pull"/>
+									<xs:enumeration value="rail_construction_placement"/>
+									<xs:enumeration value="rail_actual_placement"/>
+									<xs:enumeration value="rail_return_of_rail_container_trailer"/>
+									<xs:enumeration value="rail_yard_move"/>
+									<xs:enumeration value="rail_advance_eta"/>
+									<xs:enumeration value="rail_lading_transfer_to"/>
+									<xs:enumeration value="rail_lading_transfer_from"/>
+									<xs:enumeration value="rail_release_from_hold_other_than_bad_order"/>
+									<xs:enumeration value="gate_out_origin"/>
+									<xs:enumeration value="arrival_at_cfs"/>
+									<xs:enumeration value="cargo_rcvd_at_org"/>
+									<xs:enumeration value="arrival_at_customs"/>
+									<xs:enumeration value="departed_fm_delivery_lct"/>
+									<xs:enumeration value="scheduled_arrival"/>
+									<xs:enumeration value="actual_arrival_at_ori"/>
+									<xs:enumeration value="scheduled_departure"/>
+									<xs:enumeration value="hbl_mbl_update"/>
+									<xs:enumeration value="si_cutoff_date"/>
+									<xs:enumeration value="carrier_hold"/>
+									<xs:enumeration value="cntr_available_ib_intermodal"/>
+									<xs:enumeration value="door_pick_up_appt"/>
+									<xs:enumeration value="door_delivery_appt"/>
+									<xs:enumeration value="empty_available_at_customer_premise"/>
+									<xs:enumeration value="booking_confirmed"/>
+									<xs:enumeration value="gate_in_pickup_loc"/>
+									<xs:enumeration value="gate_out_pickup_loc"/>
+									<xs:enumeration value="gate_in_delivery_loc"/>
+									<xs:enumeration value="gate_out_delivery_loc"/>
+									<xs:enumeration value="cust_ens_submit"/>
+									<xs:enumeration value="cust_mrn_return"/>
+									<xs:enumeration value="cust_dnl_return"/>
+									<xs:enumeration value="cntr_loaded_at_port_on_por"/>
+									<xs:enumeration value="vsl_arrived_fnd"/>
+									<xs:enumeration value="estimated_arrived_fnd"/>
+									<xs:enumeration value="last_loaded_on_rail_ib"/>
+									<xs:enumeration value="availability_update"/>
+									<xs:enumeration value="brk_agri_hold"/>
+									<xs:enumeration value="brk_agri_hold_rmvd"/>
+									<xs:enumeration value="brk_manifest_hold"/>
+									<xs:enumeration value="brk_manifest_hold_rmvd"/>
+									<xs:enumeration value="brk_rls_date_rmvd_exam"/>
+									<xs:enumeration value="brk_rls_date_rmvd_review"/>
+									<xs:enumeration value="brk_cust_exam"/>
+									<xs:enumeration value="brk_cust_exam_complete"/>
+									<xs:enumeration value="brk_rls_date_update"/>
+									<xs:enumeration value="brk_isf_bill_on_file"/>
+									<xs:enumeration value="brk_isf_bill_not_on_file"/>
+									<xs:enumeration value="brk_isf_bill_on_file_rescinded"/>
+									<xs:enumeration value="brk_fda_exam"/>
+									<xs:enumeration value="brk_fda_exam_complete"/>
+									<xs:enumeration value="brk_fda_hold"/>
+									<xs:enumeration value="brk_fda_rejected"/>
+									<xs:enumeration value="brk_fda_released"/>
+									<xs:enumeration value="brk_fda_detained"/>
+									<xs:enumeration value="brk_fda_may_proceed"/>
+									<xs:enumeration value="brk_ref_exam"/>
+									<xs:enumeration value="brk_b3_created"/>
+									<xs:enumeration value="brk_b3_sent"/>
+									<xs:enumeration value="brk_b3_accepted"/>
+									<xs:enumeration value="brk_b3_rejected"/>
+									<xs:enumeration value="arrival_notice_at_fnd"/>
+									<xs:enumeration value="in_gate"/>
+									<xs:enumeration value="on_board_date"/>
+									<xs:enumeration value="actual_departure"/>
+									<xs:enumeration value="on_water"/>
+									<xs:enumeration value="gate_out_origin"/>
+									<xs:enumeration value="arrival_at_cfs"/>
+									<xs:enumeration value="cargo_rcvd_at_org"/>
+									<xs:enumeration value="roll_over_fpol"/>
+									<xs:enumeration value="roll_over_tranship"/>
+									<xs:enumeration value="detection_ob"/>
+									<xs:enumeration value="detection_ib"/>
+									<xs:enumeration value="demurrage_ib"/>
+									<xs:enumeration value="unplanned_tranship"/>
+									<xs:enumeration value="original_bl_printed"/>
+									<xs:enumeration value="brk_fda_review"/>
+									<xs:enumeration value="cust_hold_ib/cust_hold_ob (NB)"/>
+									<xs:enumeration value="inform_inspection"/>
+									<xs:enumeration value="vsl_change"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="DimensionType" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="20"/>
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="DimensionValue" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="20"/>
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="EstActIndicator">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1"/>
+									<xs:enumeration value="A"/>
+									<xs:enumeration value="E"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EventDescription" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="240"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Location" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="CntrMvmtLocationType"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EventDT" type="cs:CSDateTimeType" minOccurs="0"/>
+			<xs:element name="CurrentShipmentLeg" type="xs:int" minOccurs="0"/>
+			<xs:element name="CarrierUniqueMovementID" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="28"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ContraIndicator" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+						<xs:enumeration value="INITIAL"/>
+						<xs:enumeration value="UPDATED"/>
+						<xs:enumeration value="DELETED"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtLocationType">
+		<xs:sequence>
+			<xs:element name="LocationName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="80"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CityDetails" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="City" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="0"/>
+									<xs:maxLength value="60"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="County" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="0"/>
+									<xs:maxLength value="35"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="State" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="0"/>
+									<xs:maxLength value="35"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="Country" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="35"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="LocationCode" type="cs:LocationCodeType" minOccurs="0"/>
+			<xs:element name="CSStandardCity" type="cs:CSStandardCityIDType" minOccurs="0"/>
+			<xs:element name="CSPortID" type="xs:long" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusRouteType">
+		<xs:sequence>
+			<xs:element name="POR" type="cs:OriginDestinationType" minOccurs="0"/>
+			<xs:element name="FND" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cs:OriginDestinationType">
+							<xs:sequence>
+								<xs:element name="ArrivalDT" type="cs:EstActCSDateTimeType" minOccurs="0" maxOccurs="2"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FirstPOL" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cs:POLPODType">
+							<xs:sequence>
+								<xs:element name="CSStateCode" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="3"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="CSParentCityID" type="xs:long" minOccurs="0"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="LastPOD" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cs:POLPODType">
+							<xs:sequence>
+								<xs:element name="CSStateCode" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="3"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="CSParentCityID" type="xs:long" minOccurs="0"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ArrivalAtFinalHub" type="cs:EstActCSDateTimeType" minOccurs="0" maxOccurs="2"/>
+			<xs:element name="FullPickupDT" type="cs:EstActCSDateTimeType" minOccurs="0" maxOccurs="2"/>
+			<xs:element name="FullReturnCutoffDT" type="cs:EstActCSDateTimeType" minOccurs="0" maxOccurs="2"/>
+			<xs:element name="CargoReceiptDT" type="cs:EstActCSDateTimeType" minOccurs="0" maxOccurs="2"/>
+			<xs:element name="CargoDeliveryDT" type="cs:EstActCSDateTimeType" minOccurs="0" maxOccurs="2"/>
+			<xs:element name="OceanLeg" type="CntrMvmtOceanLegType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Inbound_intermodal_indicator" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Outbound_intermodal_indicator" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtOceanLegType">
+		<xs:sequence>
+			<xs:element name="LegSeq" type="xs:int"/>
+			<xs:element name="POL" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cs:POLPODType">
+							<xs:sequence>
+								<xs:element name="DepartureDT" type="cs:EstActCSDateTimeType" minOccurs="0" maxOccurs="2"/>
+								<xs:element name="CSStateCode" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="3"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="CSParentCityID" type="xs:long" minOccurs="0"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="POD" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cs:POLPODType">
+							<xs:sequence>
+								<xs:element name="ArrivalDT" type="cs:EstActCSDateTimeType" minOccurs="0" maxOccurs="2"/>
+								<xs:element name="CSStateCode" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="3"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="CSParentCityID" type="xs:long" minOccurs="0"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="SVVD" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Loading" minOccurs="0">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="SimpleSVVDCusType">
+										<xs:sequence>
+											<xs:element name="ExternalVoyage" minOccurs="0">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:maxLength value="20"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+										</xs:sequence>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Discharge" minOccurs="0">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="SimpleSVVDCusType">
+										<xs:sequence>
+											<xs:element name="ExternalVoyage" minOccurs="0">
+												<xs:simpleType>
+													<xs:restriction base="xs:string">
+														<xs:maxLength value="20"/>
+													</xs:restriction>
+												</xs:simpleType>
+											</xs:element>
+										</xs:sequence>
+									</xs:extension>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SimpleSVVDCusType">
+		<xs:sequence>
+			<xs:element name="Service" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ServiceName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="150"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Vessel" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="VesselName" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Voyage" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Direction" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LloydsNumber" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CallSign" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="RegistrationCountry" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="60"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="RegistrationCountryCode" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="2"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtExtReferenceType">
+		<xs:sequence>
+			<xs:element name="CSReferenceType">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="5"/>
+						<xs:enumeration value="AR"/>
+						<xs:enumeration value="ABT"/>
+						<xs:enumeration value="BH"/>
+						<xs:enumeration value="BKG"/>
+						<xs:enumeration value="BL"/>
+						<xs:enumeration value="BRF"/>
+						<xs:enumeration value="CBL"/>
+						<xs:enumeration value="CGO"/>
+						<xs:enumeration value="CGR"/>
+						<xs:enumeration value="CR"/>
+						<xs:enumeration value="CTR"/>
+						<xs:enumeration value="CTRP"/>
+						<xs:enumeration value="CUS"/>
+						<xs:enumeration value="CUSI"/>
+						<xs:enumeration value="DCN"/>
+						<xs:enumeration value="ECN"/>
+						<xs:enumeration value="EX"/>
+						<xs:enumeration value="EXPR"/>
+						<xs:enumeration value="FCBL"/>
+						<xs:enumeration value="FID"/>
+						<xs:enumeration value="FM"/>
+						<xs:enumeration value="FR"/>
+						<xs:enumeration value="GEN"/>
+						<xs:enumeration value="GRN"/>
+						<xs:enumeration value="HDS"/>
+						<xs:enumeration value="IBSB"/>
+						<xs:enumeration value="ICR"/>
+						<xs:enumeration value="INV"/>
+						<xs:enumeration value="LEC"/>
+						<xs:enumeration value="MB"/>
+						<xs:enumeration value="MBL"/>
+						<xs:enumeration value="MVID"/>
+						<xs:enumeration value="OTH"/>
+						<xs:enumeration value="PBN"/>
+						<xs:enumeration value="PO"/>
+						<xs:enumeration value="PRA"/>
+						<xs:enumeration value="ROI"/>
+						<xs:enumeration value="RP"/>
+						<xs:enumeration value="SC"/>
+						<xs:enumeration value="SCA"/>
+						<xs:enumeration value="SID"/>
+						<xs:enumeration value="SIR"/>
+						<xs:enumeration value="SN"/>
+						<xs:enumeration value="SO"/>
+						<xs:enumeration value="SR"/>
+						<xs:enumeration value="TN"/>
+						<xs:enumeration value="TVR"/>
+						<xs:enumeration value="UC"/>
+						<xs:enumeration value="WARG"/>
+						<xs:enumeration value="CSBKG"/>
+						<xs:enumeration value="CUSIN"/>
+						<xs:enumeration value="SCN"/>
+						<xs:enumeration value="TAIN"/>
+						<xs:enumeration value="CE"/>
+						<xs:enumeration value="CH"/>
+						<xs:enumeration value="DO"/>
+						<xs:enumeration value="ED"/>
+						<xs:enumeration value="EI"/>
+						<xs:enumeration value="HO"/>
+						<xs:enumeration value="IB"/>
+						<xs:enumeration value="KL"/>
+						<xs:enumeration value="MA"/>
+						<xs:enumeration value="OU"/>
+						<xs:enumeration value="PR"/>
+						<xs:enumeration value="TG"/>
+						<xs:enumeration value="TJ"/>
+						<xs:enumeration value="CIN"/>
+						<xs:enumeration value="VAN"/>
+						<xs:enumeration value="IX"/>
+						<xs:enumeration value="SKU"/>
+						<xs:enumeration value="RPN"/>
+						<xs:enumeration value="ITN"/>
+						<xs:enumeration value="PB"/>
+						<xs:enumeration value="CSO"/>
+						<xs:enumeration value="TARIF"/>
+						<xs:enumeration value="QUOT"/>
+						<xs:enumeration value="SC"/>
+						<xs:enumeration value="CSA"/>
+						<xs:enumeration value="OBKG"/>
+						<xs:enumeration value="CSLR"/>
+						<xs:enumeration value="ADU"/>
+						<xs:enumeration value="AGT "/>
+						<xs:enumeration value="ANPEN"/>
+						<xs:enumeration value="ARR"/>
+						<xs:enumeration value="CEN"/>
+						<xs:enumeration value="CINV"/>
+						<xs:enumeration value="CLBL"/>
+						<xs:enumeration value="FEN"/>
+						<xs:enumeration value="FI"/>
+						<xs:enumeration value="HBLAS"/>
+						<xs:enumeration value="IMO"/>
+						<xs:enumeration value="LRN"/>
+						<xs:enumeration value="MRN"/>
+						<xs:enumeration value="MT"/>
+						<xs:enumeration value="NPEN"/>
+						<xs:enumeration value="SEN"/>
+						<xs:enumeration value="TO"/>
+						<xs:enumeration value="UCR"/>
+						<xs:enumeration value="VID"/>
+						<xs:enumeration value="VOY"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ReferenceNumber">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="70"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ReferenceDescription" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0"/>
+						<xs:maxLength value="60"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusEventType">
+		<xs:complexContent>
+			<xs:extension base="CntrMvmtEventType">
+				<xs:sequence>
+					<xs:element name="CS1Event" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:minLength value="1"/>
+								<xs:maxLength value="20"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ResendInformation" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Description" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="100"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="EDIFileName" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="100"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusGeneralInfoType">
+		<xs:sequence>
+			<xs:element name="SCAC">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SPCompanyID" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TransportMode" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TransportCarrier" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="UpdateParty" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="210"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="IsCopy" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Indicator for that the event is copied for container transfer or not</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Label" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ProposedAction" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ActionType" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TimeOfIssue" type="cs:CSDateTimeType" minOccurs="0"/>
+			<xs:element name="IsCSCustomer" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PartnerID" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusContainerType">
+		<xs:sequence>
+			<xs:element name="ContainerNumber" type="cs:ContainerNumberType" minOccurs="0"/>
+			<xs:element name="ContainerCheckDigit" type="cs:ContainerCheckDigitType" minOccurs="0"/>
+			<xs:element name="ContainerStatus" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+						<xs:enumeration value="Empty"/>
+						<xs:enumeration value="Laden"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TransferFromBookingNumber" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TransferToBookingNumber" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="RepackContainerNumber" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LadingQuantity" type="xs:double" minOccurs="0"/>
+			<xs:element name="CarrCntrSizeType" type="cs:ContainerSizeType" minOccurs="0"/>
+			<xs:element name="CSContainerSizeType" type="cs:ContainerSizeType" minOccurs="0"/>
+			<xs:element name="Seal" type="cs:SealType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Haulage" type="cs:HaulageType" minOccurs="0"/>
+			<xs:element name="CustomsDeclarationNumber" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CSS_CNTR_UUID" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="RailPickupNumber" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="12"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CS1ContainerSizeType" type="cs:ContainerSizeType" minOccurs="0"/>
+			<xs:element name="EmptyReturnFacilityCode" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusBookingGeneralInfoType">
+		<xs:sequence>
+			<xs:element name="CarrierBookingNumber">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Haulage" type="cs:HaulageType" minOccurs="0"/>
+			<xs:element name="BookingOffice" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Packaging" type="cs:PackagingType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusPartyType">
+		<xs:complexContent>
+			<xs:extension base="cs:PartyType">
+				<xs:sequence>
+					<xs:element name="PartyLevel" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="2"/>
+								<xs:enumeration value="BK"/>
+								<xs:enumeration value="BL"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CustomsReferenceType">
+		<xs:sequence>
+			<xs:element name="ReferenceNumber" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0"/>
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ReferenceType" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="0"/>
+						<xs:maxLength value="7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ReferenceDT" type="cs:CSDateTimeType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusCargoType">
+		<xs:complexContent>
+			<xs:extension base="cs:CargoInfoType">
+				<xs:sequence>
+					<xs:element name="CustomsReference" type="CustomsReferenceType" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusMileStoneType">
+		<xs:sequence>
+			<xs:element name="CarrEventCode">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="120"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CSEvent" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CSEventCode">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="50"/>
+									<xs:enumeration value="carrier_rel"/>
+									<xs:enumeration value="cntr_act_door_delivery"/>
+									<xs:enumeration value="cntr_act_door_pickup"/>
+									<xs:enumeration value="cntr_arrived_at_fcl"/>
+									<xs:enumeration value="cntr_arrived_at_ob_iml"/>
+									<xs:enumeration value="cntr_arrived_last_hub_ib"/>
+									<xs:enumeration value="cntr_arrived_rail_hub"/>
+									<xs:enumeration value="cntr_available_ib"/>
+									<xs:enumeration value="cntr_departed_fm_first_hub"/>
+									<xs:enumeration value="cntr_departed_from_fcl"/>
+									<xs:enumeration value="cntr_devan_ib"/>
+									<xs:enumeration value="cntr_devan_ob"/>
+									<xs:enumeration value="cntr_discharge"/>
+									<xs:enumeration value="cntr_discharged"/>
+									<xs:enumeration value="cntr_emp_pickup"/>
+									<xs:enumeration value="cntr_emp_return"/>
+									<xs:enumeration value="cntr_first_loaded_rail"/>
+									<xs:enumeration value="cntr_imdl_departed_fm_last_pod"/>
+									<xs:enumeration value="cntr_last_deramp_ib"/>
+									<xs:enumeration value="cntr_last_deramp_ob"/>
+									<xs:enumeration value="cntr_load_at_port"/>
+									<xs:enumeration value="cntr_load_on_truck"/>
+									<xs:enumeration value="cntr_load_vsl"/>
+									<xs:enumeration value="cntr_loaded"/>
+									<xs:enumeration value="cntr_loaded_first_pol"/>
+									<xs:enumeration value="cntr_loaded_on_rail"/>
+									<xs:enumeration value="cntr_picked_at_fnd"/>
+									<xs:enumeration value="cntr_picked_at_port"/>
+									<xs:enumeration value="cntr_rcvd"/>
+									<xs:enumeration value="cntr_repack_from"/>
+									<xs:enumeration value="cntr_repack_to"/>
+									<xs:enumeration value="cntr_transferred"/>
+									<xs:enumeration value="cntr_van_ib"/>
+									<xs:enumeration value="cntr_van_ob"/>
+									<xs:enumeration value="cust_hold_ib"/>
+									<xs:enumeration value="cust_hold_ob"/>
+									<xs:enumeration value="cust_rel_ib"/>
+									<xs:enumeration value="cust_rel_ob"/>
+									<xs:enumeration value="custom_ack_ob"/>
+									<xs:enumeration value="emp_cntr_arrived_at_cust_origin"/>
+									<xs:enumeration value="first_loaded_on_rail_ib"/>
+									<xs:enumeration value="first_loaded_on_rail_ob"/>
+									<xs:enumeration value="gate_in_inland"/>
+									<xs:enumeration value="gate_out_inland"/>
+									<xs:enumeration value="rail_move"/>
+									<xs:enumeration value="vsl_arrived"/>
+									<xs:enumeration value="vsl_departure"/>
+									<xs:enumeration value="carrier_customs_released"/>
+									<xs:enumeration value="freight_charge_settled"/>
+									<xs:enumeration value="spotted_at_customer_warehouse"/>
+									<xs:enumeration value="arrival_at_inland_hub"/>
+									<xs:enumeration value="departure_from_inland_hub"/>
+									<xs:enumeration value="carrier_hold"/>
+									<xs:enumeration value="freight_release"/>
+									<xs:enumeration value="empty_cntr_released"/>
+									<xs:enumeration value="equip_delay_due_transport"/>
+									<xs:enumeration value="Detention_Free_Time_to_Expire"/>
+									<xs:enumeration value="Demurrage_Free_Time_to_Expire"/>
+									<xs:enumeration value="Detention_Free_Time_Expired"/>
+									<xs:enumeration value="Demurrage_Free_Time_Expired"/>
+									<xs:enumeration value="rail_arrival_at_in_transit_yard"/>
+									<xs:enumeration value="rail_bad_order"/>
+									<xs:enumeration value="rail_highway_arrival"/>
+									<xs:enumeration value="rail_arrival_at_destination"/>
+									<xs:enumeration value="rail_highway_departure"/>
+									<xs:enumeration value="rail_flatcar_bad_order"/>
+									<xs:enumeration value="rail_bad_order_release"/>
+									<xs:enumeration value="rail_car_delayed_or_held"/>
+									<xs:enumeration value="rail_equip_offer_in_interchange"/>
+									<xs:enumeration value="rail_junction_delivery"/>
+									<xs:enumeration value="rail_intermodal_interchange"/>
+									<xs:enumeration value="rail_motor_carrier_arrival"/>
+									<xs:enumeration value="rail_motor_carrier_move"/>
+									<xs:enumeration value="rail_no_bill"/>
+									<xs:enumeration value="rail_departure"/>
+									<xs:enumeration value="rail_flatcar_bad_order_released"/>
+									<xs:enumeration value="rail_junction_released"/>
+									<xs:enumeration value="rail_storage"/>
+									<xs:enumeration value="rail_on_truck_line"/>
+									<xs:enumeration value="rail_ramped"/>
+									<xs:enumeration value="rail_deramped"/>
+									<xs:enumeration value="rail_released"/>
+									<xs:enumeration value="rail_pull"/>
+									<xs:enumeration value="rail_construction_placement"/>
+									<xs:enumeration value="rail_actual_placement"/>
+									<xs:enumeration value="rail_return_of_rail_container_trailer"/>
+									<xs:enumeration value="rail_yard_move"/>
+									<xs:enumeration value="rail_advance_eta"/>
+									<xs:enumeration value="rail_lading_transfer_to"/>
+									<xs:enumeration value="rail_lading_transfer_from"/>
+									<xs:enumeration value="rail_release_from_hold_other_than_bad_order"/>
+									<xs:enumeration value="gate_out_origin"/>
+									<xs:enumeration value="arrival_at_cfs"/>
+									<xs:enumeration value="cargo_rcvd_at_org"/>
+									<xs:enumeration value="arrival_at_customs"/>
+									<xs:enumeration value="departed_fm_delivery_lct"/>
+									<xs:enumeration value="scheduled_arrival"/>
+									<xs:enumeration value="actual_arrival_at_ori"/>
+									<xs:enumeration value="scheduled_departure"/>
+									<xs:enumeration value="hbl_mbl_update"/>
+									<xs:enumeration value="si_cutoff_date"/>
+									<xs:enumeration value="carrier_hold"/>
+									<xs:enumeration value="cntr_available_ib_intermodal"/>
+									<xs:enumeration value="door_pick_up_appt"/>
+									<xs:enumeration value="door_delivery_appt"/>
+									<xs:enumeration value="empty_available_at_customer_premise"/>
+									<xs:enumeration value="booking_confirmed"/>
+									<xs:enumeration value="last_loaded_on_rail_ib"/>
+									<xs:enumeration value="availability_update"/>
+									<xs:enumeration value="brk_agri_hold"/>
+									<xs:enumeration value="brk_agri_hold_rmvd"/>
+									<xs:enumeration value="brk_manifest_hold"/>
+									<xs:enumeration value="brk_manifest_hold_rmvd"/>
+									<xs:enumeration value="brk_rls_date_rmvd_exam"/>
+									<xs:enumeration value="brk_rls_date_rmvd_review"/>
+									<xs:enumeration value="brk_cust_exam"/>
+									<xs:enumeration value="brk_cust_exam_complete"/>
+									<xs:enumeration value="brk_rls_date_update"/>
+									<xs:enumeration value="brk_isf_bill_on_file"/>
+									<xs:enumeration value="brk_isf_bill_not_on_file"/>
+									<xs:enumeration value="brk_isf_bill_on_file_rescinded"/>
+									<xs:enumeration value="brk_fda_exam"/>
+									<xs:enumeration value="brk_fda_exam_complete"/>
+									<xs:enumeration value="brk_fda_hold"/>
+									<xs:enumeration value="brk_fda_rejected"/>
+									<xs:enumeration value="brk_fda_released"/>
+									<xs:enumeration value="brk_fda_detained"/>
+									<xs:enumeration value="brk_fda_may_proceed"/>
+									<xs:enumeration value="brk_ref_exam"/>
+									<xs:enumeration value="brk_b3_created"/>
+									<xs:enumeration value="brk_b3_sent"/>
+									<xs:enumeration value="brk_b3_accepted"/>
+									<xs:enumeration value="brk_b3_rejected"/>
+									<xs:enumeration value="arrival_notice_at_fnd"/>
+									<xs:enumeration value="in_gate"/>
+									<xs:enumeration value="on_board_date"/>
+									<xs:enumeration value="actual_departure"/>
+									<xs:enumeration value="on_water"/>
+									<xs:enumeration value="gate_out_origin"/>
+									<xs:enumeration value="arrival_at_cfs"/>
+									<xs:enumeration value="cargo_rcvd_at_org"/>
+									<xs:enumeration value="gate_in_pickup_loc"/>
+									<xs:enumeration value="gate_out_pickup_loc"/>
+									<xs:enumeration value="gate_in_delivery_loc"/>
+									<xs:enumeration value="gate_out_delivery_loc"/>
+									<xs:enumeration value="cust_ens_submit"/>
+									<xs:enumeration value="cust_mrn_return"/>
+									<xs:enumeration value="cust_dnl_return"/>
+									<xs:enumeration value="roll_over_fpol"/>
+									<xs:enumeration value="roll_over_tranship"/>
+									<xs:enumeration value="detection_ob"/>
+									<xs:enumeration value="detection_ib"/>
+									<xs:enumeration value="demurrage_ib"/>
+									<xs:enumeration value="unplanned_tranship"/>
+									<xs:enumeration value="original_bl_printed"/>
+									<xs:enumeration value="cntr_loaded_at_port_on_por"/>
+									<xs:enumeration value="vsl_arrived_fnd"/>
+									<xs:enumeration value="estimated_arrived_fnd"/>
+									<xs:enumeration value="gate_in_pickup_loc"/>
+									<xs:enumeration value="gate_out_pickup_loc"/>
+									<xs:enumeration value="gate_in_delivery_loc"/>
+									<xs:enumeration value="gate_out_delivery_loc"/>
+									<xs:enumeration value="cust_ens_submit"/>
+									<xs:enumeration value="cust_mrn_return"/>
+									<xs:enumeration value="cust_dnl_return"/>
+									<xs:enumeration value="cntr_loaded_at_port_on_por"/>
+									<xs:enumeration value="vsl_arrived_fnd"/>
+									<xs:enumeration value="estimated_arrived_fnd"/>
+									<xs:enumeration value="brk_fda_review"/>
+									<xs:enumeration value="cust_hold_ib/cust_hold_ob (NB)"/>
+									<xs:enumeration value="inform_inspection"/>
+									<xs:enumeration value="vsl_change"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="DimensionType" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="20"/>
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="DimensionValue" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="20"/>
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="EstActIndicator">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="1"/>
+									<xs:enumeration value="A"/>
+									<xs:enumeration value="E"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EventDescription" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="240"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Location" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="CntrMvmtLocationType"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="EventDT" type="cs:CSDateTimeType" minOccurs="0"/>
+			<xs:element name="CurrentShipmentLeg" type="xs:int" minOccurs="0"/>
+			<xs:element name="CarrierUniqueMovementID" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="28"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SCAC">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SPCompanyID" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TransportMode" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="10"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TransportCarrier" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="UpdateParty" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="210"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CS1Event" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusBodyType">
+		<xs:sequence>
+			<xs:element name="TransactionInformation" type="cs:TransactionInfoType"/>
+			<xs:element name="Event" type="CntrMvmtCusEventType"/>
+			<xs:element name="GeneralInformation" type="CntrMvmtCusGeneralInfoType"/>
+			<xs:element name="Container" type="CntrMvmtCusContainerType" minOccurs="0"/>
+			<xs:element name="BookingGeneralInfo" type="CntrMvmtCusBookingGeneralInfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="BLGeneralInfo" type="CntrMvmtCusBLGeneralInfoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Route" type="CntrMvmtCusRouteType" minOccurs="0"/>
+			<xs:element name="ExternalReference" type="CntrMvmtExtReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Party" type="CntrMvmtCusPartyType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="Cargo" type="CntrMvmtCusCargoType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="MileStones" type="CntrMvmtCusMileStoneType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="AssociatedExternalReference" type="AssociatedExternalReferenceType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CntrMvmtCusBLGeneralInfoType">
+		<xs:sequence>
+			<xs:element name="BLNumber">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="BLIssueDT" type="cs:CSDateTimeType" minOccurs="0"/>
+			<xs:element name="Haulage" type="cs:HaulageType" minOccurs="0"/>
+			<xs:element name="CustomsReferenceType" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CustomsReferenceNumber" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="35"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CustomsClearanceLocationCode" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:maxLength value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CustomsReferenceDT" type="cs:CSDateTimeType" minOccurs="0"/>
+			<xs:element name="BLSVVD" minOccurs="0">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="cs:SimpleSVVDType">
+							<xs:sequence>
+								<xs:element name="ServiceName" minOccurs="0">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="150"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Packaging" type="cs:PackagingType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AssociatedExternalReferenceType">
+		<xs:complexContent>
+			<xs:extension base="cs:ExternalReferenceType">
+				<xs:sequence>
+					<xs:element name="EDIReferenceType" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="5"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="EDIReferenceCode" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="3"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ReferenceNumberIndicator" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="1"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="IsShowOnBL" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="MsgType" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="3"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

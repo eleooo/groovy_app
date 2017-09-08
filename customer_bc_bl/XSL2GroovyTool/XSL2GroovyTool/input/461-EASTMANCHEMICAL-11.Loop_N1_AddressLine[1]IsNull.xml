@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BookingConfirm xmlns="http://www.cargosmart.com/bookingconfirm">
+    <Header>
+        <cs:MsgDT xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+            <cs:GMT>2016-09-30T01:07:42</cs:GMT>
+            <cs:LocDT CSTimeZone="HKT" TimeZone="HKT">2016-09-30T09:07:42</cs:LocDT>
+        </cs:MsgDT>
+        <ns0:MsgDirection xmlns:ns0="http://www.cargosmart.com/common">O</ns0:MsgDirection>
+        <ns0:MsgType xmlns:ns0="http://www.cargosmart.com/common">BC</ns0:MsgType>
+        <ns0:SenderID xmlns:ns0="http://www.cargosmart.com/common">CargoSmart</ns0:SenderID>
+        <ns0:ReceiverID xmlns:ns0="http://www.cargosmart.com/common">EASTMANCHEMICAL</ns0:ReceiverID>
+        <ns0:Action xmlns:ns0="http://www.cargosmart.com/common">NEW</ns0:Action>
+        <ns0:Version xmlns:ns0="http://www.cargosmart.com/common">13</ns0:Version>
+        <ns0:InterchangeMessageID xmlns:ns0="http://www.cargosmart.com/common">EASTMANCHEMICAL_BC_4039970830_OOLU_20160930090911_71744386</ns0:InterchangeMessageID>
+        <ns0:DataSource xmlns:ns0="http://www.cargosmart.com/common">CS2 db</ns0:DataSource>
+    </Header>
+    <Body>
+        <TransactionInformation>
+            <ns0:MessageID xmlns:ns0="http://www.cargosmart.com/common">EASTMANCHEMICAL_BC_4039970830_OOLU_20160930090911_71744386_999999999965305701</ns0:MessageID>
+            <ns0:InterchangeTransactionID xmlns:ns0="http://www.cargosmart.com/common">999999999965305701</ns0:InterchangeTransactionID>
+            <Action>UPD</Action>
+        </TransactionInformation>
+        <EventInformation>
+            <ns0:EventCode xmlns:ns0="http://www.cargosmart.com/common">bkg_confirm</ns0:EventCode>
+            <ns0:EventDescription xmlns:ns0="http://www.cargosmart.com/common">UPDATE</ns0:EventDescription>
+            <ns0:EventDT xmlns:ns0="http://www.cargosmart.com/common">
+                <ns0:GMT>2016-09-28T20:34:40</ns0:GMT>
+                <ns0:LocDT TimeZone="EDT" CSTimeZone="CDT">2016-09-28T15:34:40</ns0:LocDT>
+            </ns0:EventDT>
+        </EventInformation>
+        <GeneralInformation>
+            <SPCompanyID>ORIEHK41514112426815</SPCompanyID>
+            <SCACCode>OOLU</SCACCode>
+            <CSBookingRefNumber>CS2436455350</CSBookingRefNumber>
+            <CarrierBookingNumber>4039970830</CarrierBookingNumber>
+            <BookingOffice>Charleston</BookingOffice>
+            <BookingStatus>Pending</BookingStatus>
+            <BookingStatusRemarks>Shipment Pending</BookingStatusRemarks>
+            <BookingStatusDT xmlns="http://www.cargosmart.com/bookingconfirm">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-28T20:34:40</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="EDT">2016-09-28T16:34:40</ns0:LocDT>
+            </BookingStatusDT>
+            <SIStatus>Not Received</SIStatus>
+            <ShipmentCargoType>GC</ShipmentCargoType>
+            <TrafficMode xmlns="http://www.cargosmart.com/bookingconfirm">
+                <ns0:OutBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:OutBound>
+                <ns0:InBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:InBound>
+            </TrafficMode>
+            <IsOBCustomsRequired>false</IsOBCustomsRequired>
+            <CntrAggregateStatus>Fully Covered</CntrAggregateStatus>
+            <LastModifiedDT xmlns="http://www.cargosmart.com/bookingconfirm">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-28T20:34:40</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="EDT">2016-09-28T16:34:40</ns0:LocDT>
+            </LastModifiedDT>
+            <CreationDT xmlns="http://www.cargosmart.com/bookingconfirm">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-28T20:34:40</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="EDT">2016-09-28T16:34:40</ns0:LocDT>
+            </CreationDT>
+            <LabelActions xmlns="http://www.cargosmart.com/bookingconfirm">
+                <Seq>1</Seq>
+                <Label>Pending</Label>
+                <ProposedAction>UPDATE_BKG_SHIPMENT</ProposedAction>
+                <ActionType>U</ActionType>
+                <TimeOfIssue>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T01:06:31</ns0:GMT>
+                </TimeOfIssue>
+            </LabelActions>
+            <PartnerID>EASTMANCHEMICAL</PartnerID>
+            <VGMCutOffDT xmlns="http://www.cargosmart.com/bookingconfirm">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-10-12T19:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="PDT">2016-10-12T12:00:00</ns0:LocDT>
+            </VGMCutOffDT>
+        </GeneralInformation>
+        <CarrierRate xmlns="http://www.cargosmart.com/bookingconfirm">
+            <ns0:CSCarrierRateType xmlns:ns0="http://www.cargosmart.com/common">SC</ns0:CSCarrierRateType>
+            <ns0:CarrierRateNumber xmlns:ns0="http://www.cargosmart.com/common">MT166131v000</ns0:CarrierRateNumber>
+        </CarrierRate>
+        <ExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">CSBKG</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">CS2436455350</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">CS Reference Number</ns0:ReferenceDescription>
+        </ExternalReference>
+        <ExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">SR</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">0083192469</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">Shipper Reference</ns0:ReferenceDescription>
+        </ExternalReference>
+        <ExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">SID</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">0083192469</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">Shippers Identity For Shipment (SID)</ns0:ReferenceDescription>
+        </ExternalReference>
+        <ExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">GEN</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">AESPOST 62-1539359/10-16-2016</ns0:ReferenceNumber>
+            <ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">Government Export Number</ns0:ReferenceDescription>
+        </ExternalReference>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">BPT</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Eastman Chemical Company</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">EASTUS1972772590</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3137069000</ns0:CarrierCustomerCode>
+            <cs:Contact xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:ContactEmailAddress>loribunton@eastman.com</cs:ContactEmailAddress>
+            </cs:Contact>
+            <cs:Address xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:City>Kingsport</cs:City>
+                <cs:County>Sullivan</cs:County>
+                <cs:State>Tennessee</cs:State>
+                <cs:Country>US</cs:Country>
+                <cs:PostalCode>37662</cs:PostalCode>
+                <cs:AddressLines>
+                    <cs:AddressLine>200 South Wilcox Drive</cs:AddressLine>
+                    <cs:AddressLine>P.O. Box 431</cs:AddressLine>
+                </cs:AddressLines>
+            </cs:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">SHP</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Eastman Chemical Company</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">EASTUS1972772590</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3137069000</ns0:CarrierCustomerCode>
+            <cs:Contact xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:FirstName>Tami</cs:FirstName>
+                <cs:LastName>Walters</cs:LastName>
+            </cs:Contact>
+            <cs:Address xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:City>Kingsport</cs:City>
+                <cs:County>Sullivan</cs:County>
+                <cs:State>Tennessee</cs:State>
+                <cs:Country>US</cs:Country>
+                <cs:PostalCode>37662</cs:PostalCode>
+                <cs:AddressLines>
+                    <cs:AddressLine>200 South Wilcox Drive</cs:AddressLine>
+                    <cs:AddressLine>P.O. Box 431</cs:AddressLine>
+                </cs:AddressLines>
+            </cs:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">FWD</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">John S. James Company</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">JOHNUS445559818</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">4275123000</ns0:CarrierCustomerCode>
+            <cs:Address xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:City>Garden City</cs:City>
+                <cs:County>Chatham</cs:County>
+                <cs:State>Georgia</cs:State>
+                <cs:Country>US</cs:Country>
+                <cs:PostalCode>31408</cs:PostalCode>
+                <cs:AddressLines>
+                    <cs:AddressLine>Suite 115</cs:AddressLine>
+                    <cs:AddressLine>6002 Commerce Street Blvd</cs:AddressLine>
+                </cs:AddressLines>
+            </cs:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">CGN</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Eastman Chemical Company</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">EASTUS1972772590</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3137069000</ns0:CarrierCustomerCode>
+            <cs:Contact xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:FirstName>Ron</cs:FirstName>
+                <cs:LastName>Keirsey</cs:LastName>
+                <cs:ContactPhone>
+                    <cs:CountryCode>011</cs:CountryCode>
+                    <cs:AreaCode>423</cs:AreaCode>
+                    <cs:Number>2298089</cs:Number>
+                </cs:ContactPhone>
+            </cs:Contact>
+            <cs:Address xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:City>Kingsport</cs:City>
+                <cs:County>Sullivan</cs:County>
+                <cs:State>Tennessee</cs:State>
+                <cs:Country>US</cs:Country>
+                <cs:PostalCode>37662</cs:PostalCode>
+                <cs:AddressLines>
+                    <cs:AddressLine>200 South Wilcox Drive</cs:AddressLine>
+                    <cs:AddressLine>P.O. Box 431</cs:AddressLine>
+                </cs:AddressLines>
+            </cs:Address>
+        </Party>
+        <Party>
+            <ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">CCP</ns0:PartyType>
+            <ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Eastman Chemical Company</ns0:PartyName>
+            <ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">EASTUS1972772590</ns0:CSCompanyID>
+            <ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3137069000</ns0:CarrierCustomerCode>
+            <cs:Contact xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:FirstName>Dena</cs:FirstName>
+                <cs:LastName>DeHart Cunningham</cs:LastName>
+                <cs:ContactPhone>
+                    <cs:CountryCode>011</cs:CountryCode>
+                    <cs:AreaCode>423</cs:AreaCode>
+                    <cs:Number>2298089</cs:Number>
+                </cs:ContactPhone>
+                <cs:ContactEmailAddress>ddclark@eastman.com</cs:ContactEmailAddress>
+            </cs:Contact>
+            <cs:Address xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:City>Kingsport</cs:City>
+                <cs:County>Sullivan</cs:County>
+                <cs:State>Tennessee</cs:State>
+                <cs:Country>US</cs:Country>
+                <cs:PostalCode>37662</cs:PostalCode>
+                <cs:AddressLines>
+                    <cs:AddressLine>200 South Wilcox Drive</cs:AddressLine>
+                    <cs:AddressLine>P.O. Box 431</cs:AddressLine>
+                </cs:AddressLines>
+            </cs:Address>
+        </Party>
+        <ContainerGroup>
+            <Container>
+                <ns0:ContainerNumber xmlns:ns0="http://www.cargosmart.com/common">OOLU196685</ns0:ContainerNumber>
+                <ns0:ContainerCheckDigit xmlns:ns0="http://www.cargosmart.com/common">0</ns0:ContainerCheckDigit>
+                <ns0:CSContainerSizeType xmlns:ns0="http://www.cargosmart.com/common">22GP</ns0:CSContainerSizeType>
+                <ns0:CarrCntrSizeType xmlns:ns0="http://www.cargosmart.com/common">22G1</ns0:CarrCntrSizeType>
+                <ns0:IsSOC xmlns:ns0="http://www.cargosmart.com/common">false</ns0:IsSOC>
+                <cs:GrossWeight xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                    <cs:Weight>15960</cs:Weight>
+                    <cs:WeightUnit>KGS</cs:WeightUnit>
+                </cs:GrossWeight>
+                <cs:Haulage xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                    <cs:OutBound>M</cs:OutBound>
+                    <cs:InBound>M</cs:InBound>
+                </cs:Haulage>
+                <cs:TrafficMode xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                    <cs:OutBound>FCL</cs:OutBound>
+                    <cs:InBound>FCL</cs:InBound>
+                </cs:TrafficMode>
+                <IsTriangulatedIndicator>false</IsTriangulatedIndicator>
+                <CS1ContainerSizeType>22G1</CS1ContainerSizeType>
+                <OOCLCntrSizeType>20GP</OOCLCntrSizeType>
+                <VerifiedGrossMass xmlns="http://www.cargosmart.com/bookingconfirm">
+                    <Status>Not Received</Status>
+                </VerifiedGrossMass>
+            </Container>
+            <ContainerFlowInstruction>
+                <EmptyPickup>
+                    <NumberOfContainers>1</NumberOfContainers>
+                    <ISOSizeType>22G1</ISOSizeType>
+                    <CSContainerSizeType>22GP</CSContainerSizeType>
+                    <Facility>
+                        <ns0:FacilityCode xmlns:ns0="http://www.cargosmart.com/common">HOU08</ns0:FacilityCode>
+                        <ns0:FacilityName xmlns:ns0="http://www.cargosmart.com/common">Wwinners Container Services Inc.</ns0:FacilityName>
+                    </Facility>
+                    <MvmtDT>
+                        <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common">2016-10-04T18:00:00+08:00</ns0:LocDT>
+                    </MvmtDT>
+                    <Address>
+                        <ns0:City xmlns:ns0="http://www.cargosmart.com/common">Houston</ns0:City>
+                        <ns0:County xmlns:ns0="http://www.cargosmart.com/common">Harris</ns0:County>
+                        <ns0:State xmlns:ns0="http://www.cargosmart.com/common">Texas</ns0:State>
+                        <ns0:Country xmlns:ns0="http://www.cargosmart.com/common">United States</ns0:Country>
+                        <ns0:LocationCode xmlns:ns0="http://www.cargosmart.com/common"/>
+                        <ns0:PostalCode xmlns:ns0="http://www.cargosmart.com/common">77001</ns0:PostalCode>
+                        <ns0:AddressLines xmlns:ns0="http://www.cargosmart.com/common">
+                            <ns0:AddressLine></ns0:AddressLine>
+                            <ns0:AddressLine>10000 Wallisville Road,</ns0:AddressLine>
+                            <ns0:AddressLine>Houston TX 77013</ns0:AddressLine>
+                            <ns0:AddressLine>United States</ns0:AddressLine>
+                            <ns0:AddressLine>Contact: Hershal Bradley</ns0:AddressLine>
+                        </ns0:AddressLines>
+                    </Address>
+                </EmptyPickup>
+                <EmptyReturn>
+                    <NumberOfContainers>1</NumberOfContainers>
+                    <ISOSizeType>22G1</ISOSizeType>
+                    <CSContainerSizeType>22GP</CSContainerSizeType>
+                    <Facility>
+                        <ns0:FacilityCode xmlns:ns0="http://www.cargosmart.com/common"/>
+                    </Facility>
+                </EmptyReturn>
+                <FullReturn>
+                    <NumberOfContainers>1</NumberOfContainers>
+                    <Facility>
+                        <ns0:FacilityCode xmlns:ns0="http://www.cargosmart.com/common">HOU20</ns0:FacilityCode>
+                        <ns0:FacilityName xmlns:ns0="http://www.cargosmart.com/common">BNSF</ns0:FacilityName>
+                    </Facility>
+                    <MvmtDT>
+                        <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common">2016-10-05T18:00:00+08:00</ns0:LocDT>
+                    </MvmtDT>
+                    <Address>
+                        <ns0:City xmlns:ns0="http://www.cargosmart.com/common">Houston</ns0:City>
+                        <ns0:County xmlns:ns0="http://www.cargosmart.com/common">Harris</ns0:County>
+                        <ns0:State xmlns:ns0="http://www.cargosmart.com/common">Texas</ns0:State>
+                        <ns0:Country xmlns:ns0="http://www.cargosmart.com/common">United States</ns0:Country>
+                        <ns0:LocationCode xmlns:ns0="http://www.cargosmart.com/common"/>
+                        <ns0:PostalCode xmlns:ns0="http://www.cargosmart.com/common">77001</ns0:PostalCode>
+                        <ns0:AddressLines xmlns:ns0="http://www.cargosmart.com/common">
+                            <ns0:AddressLine></ns0:AddressLine>
+                            <ns0:AddressLine>214 Brisbane Street</ns0:AddressLine>
+                            <ns0:AddressLine>Houston, TX 77061</ns0:AddressLine>
+                            <ns0:AddressLine>United States</ns0:AddressLine>
+                        </ns0:AddressLines>
+                    </Address>
+                </FullReturn>
+            </ContainerFlowInstruction>
+        </ContainerGroup>
+        <Cargo>
+            <ns0:CargoNature xmlns:ns0="http://www.cargosmart.com/common">GC</ns0:CargoNature>
+            <ns0:CargoDescription xmlns:ns0="http://www.cargosmart.com/common">CHEMICALS (ALIPHATIC-AROMATIC ORGAN</ns0:CargoDescription>
+            <cs:GrossWeight xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:Weight>0</cs:Weight>
+            </cs:GrossWeight>
+            <cs:NetWeight xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:Weight>15960</cs:Weight>
+                <cs:WeightUnit>KGS</cs:WeightUnit>
+            </cs:NetWeight>
+            <cs:Volume xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                <cs:Volume>0</cs:Volume>
+            </cs:Volume>
+        </Cargo>
+        <Route>
+            <Haulage xmlns="http://www.cargosmart.com/bookingconfirm">
+                <ns0:OutBound xmlns:ns0="http://www.cargosmart.com/common">M</ns0:OutBound>
+                <ns0:InBound xmlns:ns0="http://www.cargosmart.com/common">M</ns0:InBound>
+            </Haulage>
+            <OBDropAndPull>false</OBDropAndPull>
+            <FullReturnCutoff xmlns="http://www.cargosmart.com/bookingconfirm">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-10-05T23:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CDT" CSTimeZone="CDT">2016-10-05T18:00:00</ns0:LocDT>
+            </FullReturnCutoff>
+            <ArrivalAtFinalHub xmlns="http://www.cargosmart.com/bookingconfirm" Indicator="E">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-11-23T16:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="WIB">2016-11-23T23:00:00</ns0:LocDT>
+            </ArrivalAtFinalHub>
+            <ArrivalAtFND xmlns="http://www.cargosmart.com/bookingconfirm" Indicator="E">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-11-23T16:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="WIB">2016-11-23T23:00:00</ns0:LocDT>
+            </ArrivalAtFND>
+            <ArrivalAtFirstPOLDT xmlns="http://www.cargosmart.com/bookingconfirm" Indicator="E">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-10-13T14:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" CSTimeZone="PDT">2016-10-13T07:00:00</ns0:LocDT>
+            </ArrivalAtFirstPOLDT>
+            <POR>
+                <ns0:CityDetails xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:City>Houston</ns0:City>
+                    <ns0:County>Harris</ns0:County>
+                    <ns0:State>Texas</ns0:State>
+                    <ns0:Country>United States</ns0:Country>
+                    <ns0:LocationCode>
+                        <ns0:MutuallyDefinedCode>USHOU</ns0:MutuallyDefinedCode>
+                        <ns0:UNLocationCode>USHOU</ns0:UNLocationCode>
+                        <ns0:SchedKDType>D</ns0:SchedKDType>
+                        <ns0:SchedKDCode>5301</ns0:SchedKDCode>
+                    </ns0:LocationCode>
+                </ns0:CityDetails>
+                <cs:Facility xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                    <cs:FacilityCode>HOU20</cs:FacilityCode>
+                    <cs:FacilityName>BNSF</cs:FacilityName>
+                </cs:Facility>
+                <cs:CSStandardCity xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                    <cs:CSParentCityID>2550140</cs:CSParentCityID>
+                    <cs:CSStateCode>TX</cs:CSStateCode>
+                    <cs:CSCountryCode>US</cs:CSCountryCode>
+                    <cs:CSContinentCode>NA</cs:CSContinentCode>
+                </cs:CSStandardCity>
+            </POR>
+            <FirstPOL>
+                <ns0:Port xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:PortName>Los Angeles</ns0:PortName>
+                    <ns0:PortCode>LAS</ns0:PortCode>
+                    <ns0:City>Los Angeles</ns0:City>
+                    <ns0:County>Los Angeles</ns0:County>
+                    <ns0:State>California</ns0:State>
+                    <ns0:LocationCode>
+                        <ns0:UNLocationCode>USLAX</ns0:UNLocationCode>
+                        <ns0:SchedKDType>D</ns0:SchedKDType>
+                        <ns0:SchedKDCode>2704</ns0:SchedKDCode>
+                    </ns0:LocationCode>
+                    <ns0:Country>United States</ns0:Country>
+                    <ns0:CSPortID>426</ns0:CSPortID>
+                    <ns0:CSCountryCode>US</ns0:CSCountryCode>
+                </ns0:Port>
+                <cs:Facility xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                    <cs:FacilityCode>LAS03</cs:FacilityCode>
+                    <cs:FacilityName>Yusen Terminals, Inc. (Yti)</cs:FacilityName>
+                </cs:Facility>
+                <OutboundSVVD>
+                    <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">SE3</ns0:Service>
+                    <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">NAR</ns0:Vessel>
+                    <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">NYK ARTEMIS</ns0:VesselName>
+                    <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">089</ns0:Voyage>
+                    <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">W</ns0:Direction>
+                    <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9247742</ns0:LloydsNumber>
+                    <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">HOVU</ns0:CallSign>
+                    <ns0:VesselNationality xmlns:ns0="http://www.cargosmart.com/common">Panama</ns0:VesselNationality>
+                    <DirectionName>West</DirectionName>
+                    <VesselNationalityCode>PA</VesselNationalityCode>
+                </OutboundSVVD>
+                <DepartureDT xmlns="http://www.cargosmart.com/bookingconfirm">
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="PDT">2016-10-16T08:00:00</ns0:LocDT>
+                </DepartureDT>
+            </FirstPOL>
+            <LastPOD>
+                <ns0:Port xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:PortName>Jakarta</ns0:PortName>
+                    <ns0:PortCode>JKT</ns0:PortCode>
+                    <ns0:City>Jakarta</ns0:City>
+                    <ns0:LocationCode>
+                        <ns0:UNLocationCode>IDJKT</ns0:UNLocationCode>
+                        <ns0:SchedKDType>K</ns0:SchedKDType>
+                        <ns0:SchedKDCode>56033</ns0:SchedKDCode>
+                    </ns0:LocationCode>
+                    <ns0:Country>Indonesia</ns0:Country>
+                    <ns0:CSPortID>207</ns0:CSPortID>
+                    <ns0:CSCountryCode>ID</ns0:CSCountryCode>
+                </ns0:Port>
+                <cs:Facility xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                    <cs:FacilityCode>JKT09</cs:FacilityCode>
+                    <cs:FacilityName>TPK Koja (UTC III)</cs:FacilityName>
+                </cs:Facility>
+                <InboundSVVD>
+                    <ns0:Service xmlns:ns0="http://www.cargosmart.com/common">KTX3</ns0:Service>
+                    <ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">ONX</ns0:Vessel>
+                    <ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">OOCL NAGOYA</ns0:VesselName>
+                    <ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">085</ns0:Voyage>
+                    <ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">S</ns0:Direction>
+                    <ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9445538</ns0:LloydsNumber>
+                    <ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">VRFX8</ns0:CallSign>
+                    <ns0:VesselNationality xmlns:ns0="http://www.cargosmart.com/common">Hong Kong SAR of China</ns0:VesselNationality>
+                    <DirectionName>South</DirectionName>
+                </InboundSVVD>
+                <ArrivalDT xmlns="http://www.cargosmart.com/bookingconfirm">
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="WIB">2016-11-22T15:00:00</ns0:LocDT>
+                </ArrivalDT>
+            </LastPOD>
+            <FND>
+                <ns0:CityDetails xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:City>Jakarta</ns0:City>
+                    <ns0:Country>Indonesia</ns0:Country>
+                    <ns0:LocationCode>
+                        <ns0:MutuallyDefinedCode>IDJKT</ns0:MutuallyDefinedCode>
+                        <ns0:UNLocationCode>IDJKT</ns0:UNLocationCode>
+                        <ns0:SchedKDType>K</ns0:SchedKDType>
+                        <ns0:SchedKDCode>56033</ns0:SchedKDCode>
+                    </ns0:LocationCode>
+                </ns0:CityDetails>
+                <cs:Facility xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                    <cs:FacilityCode>JKT09</cs:FacilityCode>
+                    <cs:FacilityName>TPK Koja (UTC III)</cs:FacilityName>
+                </cs:Facility>
+                <cs:CSStandardCity xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common">
+                    <cs:CSParentCityID>2531181</cs:CSParentCityID>
+                    <cs:CSCountryCode>ID</cs:CSCountryCode>
+                    <cs:CSContinentCode>AS</cs:CSContinentCode>
+                </cs:CSStandardCity>
+            </FND>
+            <OceanLeg>
+                <ns0:LegSeq xmlns:ns0="http://www.cargosmart.com/common">1</ns0:LegSeq>
+                <ns0:POL xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:Port>
+                        <ns0:PortName>Los Angeles</ns0:PortName>
+                        <ns0:City>Los Angeles</ns0:City>
+                        <ns0:County>Los Angeles</ns0:County>
+                        <ns0:State>California</ns0:State>
+                        <ns0:LocationCode>
+                            <ns0:UNLocationCode>USLAX</ns0:UNLocationCode>
+                            <ns0:SchedKDType>D</ns0:SchedKDType>
+                            <ns0:SchedKDCode>2704</ns0:SchedKDCode>
+                        </ns0:LocationCode>
+                        <ns0:Country>United States</ns0:Country>
+                        <ns0:CSPortID>426</ns0:CSPortID>
+                        <ns0:CSCountryCode>US</ns0:CSCountryCode>
+                    </ns0:Port>
+                    <ns0:Facility>
+                        <ns0:FacilityCode>LAS03</ns0:FacilityCode>
+                        <ns0:FacilityName>Yusen Terminals, Inc. (Yti)</ns0:FacilityName>
+                    </ns0:Facility>
+                </ns0:POL>
+                <ns0:POD xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:Port>
+                        <ns0:PortName>Singapore</ns0:PortName>
+                        <ns0:City>Singapore</ns0:City>
+                        <ns0:LocationCode>
+                            <ns0:UNLocationCode>SGSIN</ns0:UNLocationCode>
+                            <ns0:SchedKDType>K</ns0:SchedKDType>
+                            <ns0:SchedKDCode>55976</ns0:SchedKDCode>
+                        </ns0:LocationCode>
+                        <ns0:Country>Singapore</ns0:Country>
+                        <ns0:CSPortID>355</ns0:CSPortID>
+                        <ns0:CSCountryCode>SG</ns0:CSCountryCode>
+                    </ns0:Port>
+                    <ns0:Facility>
+                        <ns0:FacilityCode>SIN01</ns0:FacilityCode>
+                        <ns0:FacilityName>PSA Corporation Limited</ns0:FacilityName>
+                    </ns0:Facility>
+                </ns0:POD>
+                <ns0:SVVD xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:Loading>
+                        <ns0:Service>SE3</ns0:Service>
+                        <ns0:Vessel>NAR</ns0:Vessel>
+                        <ns0:VesselName>NYK ARTEMIS</ns0:VesselName>
+                        <ns0:Voyage>089</ns0:Voyage>
+                        <ns0:Direction>W</ns0:Direction>
+                        <ns0:LloydsNumber>9247742</ns0:LloydsNumber>
+                        <ns0:CallSign>HOVU</ns0:CallSign>
+                        <ns0:CallNumber>1</ns0:CallNumber>
+                        <ns0:VesselNationality>Panama</ns0:VesselNationality>
+                    </ns0:Loading>
+                    <ns0:Discharge>
+                        <ns0:Service>SE3</ns0:Service>
+                        <ns0:Vessel>NAR</ns0:Vessel>
+                        <ns0:VesselName>NYK ARTEMIS</ns0:VesselName>
+                        <ns0:Voyage>090</ns0:Voyage>
+                        <ns0:Direction>E</ns0:Direction>
+                        <ns0:LloydsNumber>9247742</ns0:LloydsNumber>
+                        <ns0:CallSign>HOVU</ns0:CallSign>
+                        <ns0:CallNumber>1</ns0:CallNumber>
+                        <ns0:VesselNationality>Panama</ns0:VesselNationality>
+                    </ns0:Discharge>
+                    <ns0:VesselVoyageType>OUTBOUND</ns0:VesselVoyageType>
+                </ns0:SVVD>
+                <ns0:DepartureDT xmlns:ns0="http://www.cargosmart.com/common" Indicator="E">
+                    <ns0:GMT>2016-10-16T15:00:00</ns0:GMT>
+                    <ns0:LocDT CSTimeZone="PDT">2016-10-16T08:00:00</ns0:LocDT>
+                </ns0:DepartureDT>
+                <cs:ArrivalDT xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common" Indicator="E">
+                    <cs:GMT>2016-11-15T01:00:00</cs:GMT>
+                    <cs:LocDT CSTimeZone="SGT">2016-11-15T09:00:00</cs:LocDT>
+                </cs:ArrivalDT>
+                <CarrierExtractDT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T09:07:42</ns0:LocDT>
+                </CarrierExtractDT>
+                <BlockCode/>
+                <LoadingDirectionName>West</LoadingDirectionName>
+                <LoadingVesselNationalityCode>PA</LoadingVesselNationalityCode>
+                <DischargeDirectionName>East</DischargeDirectionName>
+                <DischargeVesselNationalityCode>PA</DischargeVesselNationalityCode>
+                <POLCSStateCode>CA</POLCSStateCode>
+                <POLCSParentCityID>2532344</POLCSParentCityID>
+                <PODCSParentCityID>2530507</PODCSParentCityID>
+                <LoadingExtVoyage>089W</LoadingExtVoyage>
+                <DischargeExtVoyage>090E</DischargeExtVoyage>
+            </OceanLeg>
+            <OceanLeg>
+                <ns0:LegSeq xmlns:ns0="http://www.cargosmart.com/common">2</ns0:LegSeq>
+                <ns0:POL xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:Port>
+                        <ns0:PortName>Singapore</ns0:PortName>
+                        <ns0:City>Singapore</ns0:City>
+                        <ns0:LocationCode>
+                            <ns0:UNLocationCode>SGSIN</ns0:UNLocationCode>
+                            <ns0:SchedKDType>K</ns0:SchedKDType>
+                            <ns0:SchedKDCode>55976</ns0:SchedKDCode>
+                        </ns0:LocationCode>
+                        <ns0:Country>Singapore</ns0:Country>
+                        <ns0:CSPortID>355</ns0:CSPortID>
+                        <ns0:CSCountryCode>SG</ns0:CSCountryCode>
+                    </ns0:Port>
+                    <ns0:Facility>
+                        <ns0:FacilityCode>SIN01</ns0:FacilityCode>
+                        <ns0:FacilityName>PSA Corporation Limited</ns0:FacilityName>
+                    </ns0:Facility>
+                </ns0:POL>
+                <ns0:POD xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:Port>
+                        <ns0:PortName>Jakarta</ns0:PortName>
+                        <ns0:City>Jakarta</ns0:City>
+                        <ns0:LocationCode>
+                            <ns0:UNLocationCode>IDJKT</ns0:UNLocationCode>
+                            <ns0:SchedKDType>K</ns0:SchedKDType>
+                            <ns0:SchedKDCode>56033</ns0:SchedKDCode>
+                        </ns0:LocationCode>
+                        <ns0:Country>Indonesia</ns0:Country>
+                        <ns0:CSPortID>207</ns0:CSPortID>
+                        <ns0:CSCountryCode>ID</ns0:CSCountryCode>
+                    </ns0:Port>
+                    <ns0:Facility>
+                        <ns0:FacilityCode>JKT09</ns0:FacilityCode>
+                        <ns0:FacilityName>TPK Koja (UTC III)</ns0:FacilityName>
+                    </ns0:Facility>
+                </ns0:POD>
+                <ns0:SVVD xmlns:ns0="http://www.cargosmart.com/common">
+                    <ns0:Loading>
+                        <ns0:Service>KTX3</ns0:Service>
+                        <ns0:Vessel>ONX</ns0:Vessel>
+                        <ns0:VesselName>OOCL NAGOYA</ns0:VesselName>
+                        <ns0:Voyage>085</ns0:Voyage>
+                        <ns0:Direction>S</ns0:Direction>
+                        <ns0:LloydsNumber>9445538</ns0:LloydsNumber>
+                        <ns0:CallSign>VRFX8</ns0:CallSign>
+                        <ns0:CallNumber>1</ns0:CallNumber>
+                        <ns0:VesselNationality>Hong Kong SAR of China</ns0:VesselNationality>
+                    </ns0:Loading>
+                    <ns0:Discharge>
+                        <ns0:Service>KTX3</ns0:Service>
+                        <ns0:Vessel>ONX</ns0:Vessel>
+                        <ns0:VesselName>OOCL NAGOYA</ns0:VesselName>
+                        <ns0:Voyage>085</ns0:Voyage>
+                        <ns0:Direction>S</ns0:Direction>
+                        <ns0:LloydsNumber>9445538</ns0:LloydsNumber>
+                        <ns0:CallSign>VRFX8</ns0:CallSign>
+                        <ns0:CallNumber>1</ns0:CallNumber>
+                        <ns0:VesselNationality>Hong Kong SAR of China</ns0:VesselNationality>
+                    </ns0:Discharge>
+                    <ns0:VesselVoyageType>INBOUND</ns0:VesselVoyageType>
+                </ns0:SVVD>
+                <ns0:DepartureDT xmlns:ns0="http://www.cargosmart.com/common" Indicator="E">
+                    <ns0:GMT>2016-11-20T15:00:00</ns0:GMT>
+                    <ns0:LocDT CSTimeZone="SGT">2016-11-20T23:00:00</ns0:LocDT>
+                </ns0:DepartureDT>
+                <cs:ArrivalDT xmlns="http://www.cargosmart.com/shipment/bookingconfirm" xmlns:cs="http://www.cargosmart.com/common" Indicator="E">
+                    <cs:GMT>2016-11-22T08:00:00</cs:GMT>
+                    <cs:LocDT CSTimeZone="WIB">2016-11-22T15:00:00</cs:LocDT>
+                </cs:ArrivalDT>
+                <CarrierExtractDT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T09:07:42</ns0:LocDT>
+                </CarrierExtractDT>
+                <BlockCode/>
+                <LoadingDirectionName>South</LoadingDirectionName>
+                <DischargeDirectionName>South</DischargeDirectionName>
+                <POLCSParentCityID>2530507</POLCSParentCityID>
+                <PODCSParentCityID>2531181</PODCSParentCityID>
+                <LoadingExtVoyage>085S</LoadingExtVoyage>
+                <DischargeExtVoyage>085S</DischargeExtVoyage>
+            </OceanLeg>
+        </Route>
+        <DnD Type="Detention">
+            <ContainerNumber>OOLU196685</ContainerNumber>
+            <ContainerCheckDigit>0</ContainerCheckDigit>
+            <FreeTimeStartDT xmlns="http://www.cargosmart.com/bookingconfirm">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T00:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CDT" CSTimeZone="PDT">2016-09-29T17:00:00</ns0:LocDT>
+            </FreeTimeStartDT>
+            <FreeTimeEndDT xmlns="http://www.cargosmart.com/bookingconfirm" Indicator="A">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-10-21T04:59:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CDT" CSTimeZone="PDT">2016-10-20T21:59:00</ns0:LocDT>
+            </FreeTimeEndDT>
+            <FreeTime>21</FreeTime>
+            <FreeTimeType>C</FreeTimeType>
+            <IsCombo>false</IsCombo>
+        </DnD>
+        <DnD Type="Demurrage">
+            <ContainerNumber>OOLU196685</ContainerNumber>
+            <ContainerCheckDigit>0</ContainerCheckDigit>
+            <DemFreeReceivedDT xmlns="http://www.cargosmart.com/bookingconfirm" Indicator="A">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-29T05:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CDT" CSTimeZone="PDT">2016-09-28T22:00:00</ns0:LocDT>
+            </DemFreeReceivedDT>
+            <EarliestEmptyPickupDT xmlns="http://www.cargosmart.com/bookingconfirm" Indicator="A">
+                <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-07T05:00:00</ns0:GMT>
+                <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CDT" CSTimeZone="PDT">2016-09-06T22:00:00</ns0:LocDT>
+            </EarliestEmptyPickupDT>
+            <FreeTime>6</FreeTime>
+            <FreeTimeType>C</FreeTimeType>
+            <IsCombo>false</IsCombo>
+        </DnD>
+        <DocumentInformation xmlns="http://www.cargosmart.com/bookingconfirm">
+            <RequiredDocument>
+                <DocumentType>AES (for US laden cargo)</DocumentType>
+                <UpdatedDT>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T01:07:09</ns0:GMT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="HKT" CSTimeZone="HKT">2016-09-30T09:07:09</ns0:LocDT>
+                </UpdatedDT>
+                <DueDT>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-10-12T00:00:00</ns0:GMT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="PDT">2016-10-11T17:00:00</ns0:LocDT>
+                </DueDT>
+                <IsForShipper>true</IsForShipper>
+                <IsForConsignee>false</IsForConsignee>
+                <IsForBookingParty>true</IsForBookingParty>
+                <IsForForwarder>true</IsForForwarder>
+                <IsForNotifyParty>false</IsForNotifyParty>
+                <IsForAlsoNotify>false</IsForAlsoNotify>
+            </RequiredDocument>
+            <RequiredDocument>
+                <DocumentType>Shipping Instruction/BL Master</DocumentType>
+                <UpdatedDT>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T01:07:09</ns0:GMT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="HKT" CSTimeZone="HKT">2016-09-30T09:07:09</ns0:LocDT>
+                </UpdatedDT>
+                <DueDT>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-10-12T00:00:00</ns0:GMT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="PDT">2016-10-11T17:00:00</ns0:LocDT>
+                </DueDT>
+                <IsForShipper>true</IsForShipper>
+                <IsForConsignee>false</IsForConsignee>
+                <IsForBookingParty>true</IsForBookingParty>
+                <IsForForwarder>true</IsForForwarder>
+                <IsForNotifyParty>false</IsForNotifyParty>
+                <IsForAlsoNotify>false</IsForAlsoNotify>
+            </RequiredDocument>
+            <RequiredDocument>
+                <DocumentType>Verified Gross Mass</DocumentType>
+                <UpdatedDT>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T01:07:09</ns0:GMT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="HKT" CSTimeZone="HKT">2016-09-30T09:07:09</ns0:LocDT>
+                </UpdatedDT>
+                <DueDT>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-10-12T19:00:00</ns0:GMT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="PDT">2016-10-12T12:00:00</ns0:LocDT>
+                </DueDT>
+                <IsForShipper>true</IsForShipper>
+                <IsForConsignee>false</IsForConsignee>
+                <IsForBookingParty>true</IsForBookingParty>
+                <IsForForwarder>true</IsForForwarder>
+                <IsForNotifyParty>false</IsForNotifyParty>
+                <IsForAlsoNotify>false</IsForAlsoNotify>
+            </RequiredDocument>
+            <ReceivedDocument IsCompleted="true">
+                <DocumentUUID>3482368</DocumentUUID>
+                <DocumentType>AES (for US laden cargo)</DocumentType>
+                <UpdatedDT>
+                    <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T01:06:31</ns0:GMT>
+                    <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="Ame" CSTimeZone="Ame">2016-09-29T21:06:31</ns0:LocDT>
+                </UpdatedDT>
+                <DocumentReceipt>
+                    <DocumentReceiptUUID>3486857</DocumentReceiptUUID>
+                    <DeliveryChannel>OOCL.com</DeliveryChannel>
+                    <ReceiptDT>
+                        <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T01:06:20</ns0:GMT>
+                        <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="EDT">2016-09-29T21:06:20</ns0:LocDT>
+                    </ReceiptDT>
+                    <UpdatedDT>
+                        <ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2016-09-30T01:06:31</ns0:GMT>
+                        <ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="Ame">2016-09-29T21:06:31</ns0:LocDT>
+                    </UpdatedDT>
+                </DocumentReceipt>
+            </ReceivedDocument>
+        </DocumentInformation>
+        <Remarks>Expected Sailing Date: 20161017</Remarks>
+        <RemarkLines RemarkType="Booking">Expected Sailing Date: 20161017</RemarkLines>
+        <RemarkLines RemarkType="Booking">Latest eta 12/04/2016</RemarkLines>
+        <RemarkLines RemarkType="Booking">:PLS BOOK TO SAIL FROM WEST COA ST LOS ANGELES VIA HOUSTON RAIL RAMP. WE WILL NEED TO PIC K UP EMPTY CONTAINER IN</RemarkLines>
+        <AssociatedExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">SID</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">0083192469</ns0:ReferenceNumber>
+        </AssociatedExternalReference>
+        <AssociatedExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">SR</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">0083192469</ns0:ReferenceNumber>
+        </AssociatedExternalReference>
+        <AssociatedExternalReference>
+            <ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">CTR</ns0:CSReferenceType>
+            <ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">MT166131</ns0:ReferenceNumber>
+        </AssociatedExternalReference>
+    </Body>
+</BookingConfirm>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Message>
+	<templateDescription>
+	<TemplateDescription>
+		<TemplateName>OOCL Template</TemplateName> 
+		<TemplateType>Production</TemplateType> 
+		<Release>1</Release> 
+		<DateTime>04/08/2003 12:37:49</DateTime> 
+	</TemplateDescription>
+	</templateDescription>
+	<identification>
+	<Identification>
+		<RefNo>9941248</RefNo> 
+		<VersionNumber>1</VersionNumber> 
+		<ScheduleType>NewSchedule</ScheduleType> 
+		<FunctionReference>original</FunctionReference> 
+		<CreationDate>08/10/2015 18:16:25</CreationDate> 
+		<sender>
+		<Sender>
+			<SenderName>SchedulingSmart</SenderName> 
+			<Source>OOCL</Source> 
+		</Sender>
+		</sender>
+		<receiver>
+		<Receiver>
+			<ReceiverName>Orient Overseas Container Line</ReceiverName> 
+			<ReceiverCode>OOCL</ReceiverCode> 
+		</Receiver>
+		</receiver>
+	</Identification>
+	</identification>
+	<voyage>
+	<Voyage>
+		<Type>Trunk Vessel</Type> 
+		<VoyageNumber>001</VoyageNumber> 
+		<Direction>W</Direction> 
+		<PreviousService></PreviousService> 
+		<NextService>LP1</NextService> 
+		<CurrentVoyageKey>968909</CurrentVoyageKey> 
+		<CurrentVoyageWeekNumber>42</CurrentVoyageWeekNumber> 
+		<PreviousVoyageReference></PreviousVoyageReference> 
+		<CurrentVoyageReference>001W</CurrentVoyageReference> 
+		<NextVoyageReference>001E</NextVoyageReference> 
+		<PreviousExternalReference></PreviousExternalReference> 
+		<CurrentExternalReference>01W</CurrentExternalReference> 
+		<NextExternalReference>01E</NextExternalReference> 
+		<OldInternalVoyageReference></OldInternalVoyageReference> 
+		<carrier>
+		<Carrier>
+			<ReferenceNumber>733</ReferenceNumber> 
+			<Code>OOCL</Code> 
+			<Name>Orient Overseas Container Line</Name> 
+		</Carrier>
+		</carrier>
+		<vessel>
+		<Vessel>
+			<LloydsNumber>123</LloydsNumber> 
+			<IMONumber></IMONumber> 
+			<Code>E8Y</Code> 
+			<Name>LUOHAE8Y</Name> 
+			<CallLetters></CallLetters> 
+		</Vessel>
+		</vessel>
+		<service>
+		<Service>
+			<Code>LP1</Code> 
+			<Name>ASIA NORTH EUROPE SERVICE</Name> 
+		</Service>
+		</service>
+		<stops>
+			<Stop>
+				<stopDescription>
+				<StopDescription>
+					<Action></Action> 
+					<TargetVoyageReference></TargetVoyageReference> 
+					<Type>Active</Type> 
+					<AllowLoading>Y</AllowLoading> 
+					<AllowDischarge>Y</AllowDischarge> 
+					<DryDock>N</DryDock> 
+				</StopDescription>
+				</stopDescription>
+				<terminal>
+				<Terminal>
+					<PortName>Kobe</PortName> 
+					<PortCode>KOY</PortCode> 
+					<TerminalName>PC-16/17 KICT Kobe (MOL)</TerminalName> 
+					<TerminalCode>KOY04</TerminalCode> 
+					<CallNumber>1</CallNumber> 
+					<OldTerminalName></OldTerminalName> 
+					<OldTerminalCode></OldTerminalCode> 
+					<OldCallNumber></OldCallNumber> 
+				</Terminal>
+				</terminal>
+				<events>
+					<Event>
+						<Name>Long Term Berth Arrival</Name> 
+						<DateTime>10/10/2015 05:00:00</DateTime> 
+					</Event>
+					<Event>
+						<Name>Long Term Berth Departure</Name> 
+						<DateTime>11/10/2015 05:00:00</DateTime> 
+					</Event>
+				</events>
+				<AnchorDropDate></AnchorDropDate> 
+				<AnchorRaiseDate></AnchorRaiseDate> 
+				<VesselDischargeDate></VesselDischargeDate> 
+				<IsScheduleTentative>N</IsScheduleTentative> 
+				<IsPhaseInoutStop>N</IsPhaseInoutStop> 
+				<cargos>
+					<Cargo>
+						<Name>Default_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>Default_Availability</Name> 
+						<DateTime></DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>RF_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>DG_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>GC_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>CFS_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>RF_Availability</Name> 
+						<DateTime></DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>DG_Availability</Name> 
+						<DateTime></DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>GC_Availability</Name> 
+						<DateTime></DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>CFS_Availability</Name> 
+						<DateTime></DateTime> 
+					</Cargo>
+				</cargos>
+				<remarks>
+				</remarks>
+				<ArrivalExtVoyRef></ArrivalExtVoyRef> 
+				<DepExtVoyRef>01W</DepExtVoyRef> 
+			</Stop>
+			<Stop>
+				<stopDescription>
+				<StopDescription>
+					<Action></Action> 
+					<TargetVoyageReference></TargetVoyageReference> 
+					<Type>Active</Type> 
+					<AllowLoading>Y</AllowLoading> 
+					<AllowDischarge>Y</AllowDischarge> 
+					<DryDock>N</DryDock> 
+				</StopDescription>
+				</stopDescription>
+				<terminal>
+				<Terminal>
+					<PortName>Nagoya</PortName> 
+					<PortCode>NGO</PortCode> 
+					<TerminalName>TCB Terminal</TerminalName> 
+					<TerminalCode>NGO10</TerminalCode> 
+					<CallNumber>1</CallNumber> 
+					<OldTerminalName></OldTerminalName> 
+					<OldTerminalCode></OldTerminalCode> 
+					<OldCallNumber></OldCallNumber> 
+				</Terminal>
+				</terminal>
+				<events>
+					<Event>
+						<Name>Long Term Berth Arrival</Name> 
+						<DateTime>11/10/2015 22:00:00</DateTime> 
+					</Event>
+					<Event>
+						<Name>Long Term Berth Departure</Name> 
+						<DateTime>12/10/2015 21:00:00</DateTime> 
+					</Event>
+				</events>
+				<AnchorDropDate></AnchorDropDate> 
+				<AnchorRaiseDate></AnchorRaiseDate> 
+				<VesselDischargeDate>13/10/2015 08:30:00</VesselDischargeDate> 
+				<IsScheduleTentative>N</IsScheduleTentative> 
+				<IsPhaseInoutStop>N</IsPhaseInoutStop> 
+				<cargos>
+					<Cargo>
+						<Name>Default_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>Default_Availability</Name> 
+						<DateTime>13/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>RF_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>DG_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>GC_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>CFS_Cutoff</Name> 
+						<DateTime>07/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>RF_Availability</Name> 
+						<DateTime>13/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>DG_Availability</Name> 
+						<DateTime>13/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>GC_Availability</Name> 
+						<DateTime>13/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>CFS_Availability</Name> 
+						<DateTime>13/10/2015 08:30:00</DateTime> 
+					</Cargo>
+				</cargos>
+				<remarks>
+				</remarks>
+				<ArrivalExtVoyRef>001E35</ArrivalExtVoyRef> 
+				<DepExtVoyRef>01W</DepExtVoyRef> 
+			</Stop>
+			<Stop>
+				<stopDescription>
+				<StopDescription>
+					<Action></Action> 
+					<TargetVoyageReference></TargetVoyageReference> 
+					<Type>Active</Type> 
+					<AllowLoading>Y</AllowLoading> 
+					<AllowDischarge>Y</AllowDischarge> 
+					<DryDock>N</DryDock> 
+				</StopDescription>
+				</stopDescription>
+				<terminal>
+				<Terminal>
+					<PortName>Shimizu</PortName> 
+					<PortCode>SMZ</PortCode> 
+					<TerminalName>Shimizu Berth</TerminalName> 
+					<TerminalCode>SMZ01</TerminalCode> 
+					<CallNumber>1</CallNumber> 
+					<OldTerminalName></OldTerminalName> 
+					<OldTerminalCode></OldTerminalCode> 
+					<OldCallNumber></OldCallNumber> 
+				</Terminal>
+				</terminal>
+				<events>
+					<Event>
+						<Name>Long Term Berth Arrival</Name> 
+						<DateTime>13/10/2015 08:00:00</DateTime> 
+					</Event>
+					<Event>
+						<Name>Long Term Berth Departure</Name> 
+						<DateTime>13/10/2015 22:00:00</DateTime> 
+					</Event>
+				</events>
+				<AnchorDropDate></AnchorDropDate> 
+				<AnchorRaiseDate></AnchorRaiseDate> 
+				<VesselDischargeDate>14/10/2015 08:30:00</VesselDischargeDate> 
+				<IsScheduleTentative>N</IsScheduleTentative> 
+				<IsPhaseInoutStop>N</IsPhaseInoutStop> 
+				<cargos>
+					<Cargo>
+						<Name>Default_Cutoff</Name> 
+						<DateTime>08/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>Default_Availability</Name> 
+						<DateTime>14/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>RF_Cutoff</Name> 
+						<DateTime>08/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>DG_Cutoff</Name> 
+						<DateTime>08/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>GC_Cutoff</Name> 
+						<DateTime>08/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>CFS_Cutoff</Name> 
+						<DateTime>08/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>RF_Availability</Name> 
+						<DateTime>14/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>DG_Availability</Name> 
+						<DateTime>14/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>GC_Availability</Name> 
+						<DateTime>14/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>CFS_Availability</Name> 
+						<DateTime>14/10/2015 08:30:00</DateTime> 
+					</Cargo>
+				</cargos>
+				<remarks>
+				</remarks>
+				<ArrivalExtVoyRef>001E35</ArrivalExtVoyRef> 
+				<DepExtVoyRef>01W</DepExtVoyRef> 
+			</Stop>
+			<Stop>
+				<stopDescription>
+				<StopDescription>
+					<Action></Action> 
+					<TargetVoyageReference></TargetVoyageReference> 
+					<Type>Active</Type> 
+					<AllowLoading>Y</AllowLoading> 
+					<AllowDischarge>Y</AllowDischarge> 
+					<DryDock>N</DryDock> 
+				</StopDescription>
+				</stopDescription>
+				<terminal>
+				<Terminal>
+					<PortName>Tokyo</PortName> 
+					<PortCode>TKY</PortCode> 
+					<TerminalName>OHI-3/4 TICT Berth</TerminalName> 
+					<TerminalCode>TKY03</TerminalCode> 
+					<CallNumber>1</CallNumber> 
+					<OldTerminalName></OldTerminalName> 
+					<OldTerminalCode></OldTerminalCode> 
+					<OldCallNumber></OldCallNumber> 
+				</Terminal>
+				</terminal>
+				<events>
+					<Event>
+						<Name>Long Term Berth Arrival</Name> 
+						<DateTime>14/10/2015 08:00:00</DateTime> 
+					</Event>
+					<Event>
+						<Name>Long Term Berth Departure</Name> 
+						<DateTime>16/10/2015 05:00:00</DateTime> 
+					</Event>
+				</events>
+				<AnchorDropDate></AnchorDropDate> 
+				<AnchorRaiseDate></AnchorRaiseDate> 
+				<VesselDischargeDate>15/10/2015 08:30:00</VesselDischargeDate> 
+				<IsScheduleTentative>N</IsScheduleTentative> 
+				<IsPhaseInoutStop>N</IsPhaseInoutStop> 
+				<cargos>
+					<Cargo>
+						<Name>Default_Cutoff</Name> 
+						<DateTime>09/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>Default_Availability</Name> 
+						<DateTime>15/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>RF_Cutoff</Name> 
+						<DateTime>09/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>DG_Cutoff</Name> 
+						<DateTime>09/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>GC_Cutoff</Name> 
+						<DateTime>09/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>CFS_Cutoff</Name> 
+						<DateTime>09/10/2015 16:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>RF_Availability</Name> 
+						<DateTime>15/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>DG_Availability</Name> 
+						<DateTime>15/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>GC_Availability</Name> 
+						<DateTime>15/10/2015 08:30:00</DateTime> 
+					</Cargo>
+					<Cargo>
+						<Name>CFS_Availability</Name> 
+						<DateTime>15/10/2015 08:30:00</DateTime> 
+					</Cargo>
+				</cargos>
+				<remarks>
+				</remarks>
+				<ArrivalExtVoyRef>001E35</ArrivalExtVoyRef> 
+				<DepExtVoyRef>01W</DepExtVoyRef> 
+			</Stop>
+
+		</stops>
+		<remarks>
+		</remarks>
+		<ScheduleType>LongTerm</ScheduleType>
+	</Voyage>
+	</voyage>
+</Message>

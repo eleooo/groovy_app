@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!-- OLL Mapping XSLT Definition -->
+<!-- Created By: Jackson -->
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns:pfx8="http://www.oocllogistics.com/EchoStar_PO_UIF_2dot0_Schema" xmlns:ns0="http://www.oocllogistics.com/Ethical977_POACK" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exclude-result-prefixes="tib pfx8 OLLMappingLib" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:OLLMappingLib="java://oll.b2b.designer.javacustomfunction.MappingLibrary">
+	<xsl:param name="CdeConversionData"/>
+	<xsl:output method="xml"/>
+	<xsl:template match="/">
+		<xsl:apply-templates select="/pfx8:EchoStar_PO_MsgRoot"/>
+	</xsl:template>
+	<xsl:template match="/pfx8:EchoStar_PO_MsgRoot">
+	     <xsl:variable name="ISAGSControl" select="'##Control_Number#1#Call_Sequence_Method=GetSequenceNextValWithDefault;;EchoStar_997_ISA;;1##%09d##'"/>
+				    <xsl:variable name="STSEControl" select="'##Control_Number#1#Call_Sequence_Method=GetSequenceNextValWithDefault;;EchoStar_997_ISA;;1##%04d##'"/>
+
+		<xsl:variable name="var_v18" select="count(/pfx8:EchoStar_PO_MsgRoot/Detail)"/>
+		<xsl:variable name="var_v19" select="OLLMappingLib:MathMultiply2(&quot;2&quot; , string($var_v18))"/>
+		<xsl:variable name="var_v20" select="OLLMappingLib:MathAdd(string($var_v19) , &quot;4&quot;)"/>
+		<ns0:EchoStar_997_Root>
+			<MSG>
+				<InterchangeControlHeader>
+				   
+				   
+					<ISA>
+						<ISA01>
+							<xsl:text>00</xsl:text>
+						</ISA01>
+						<ISA02>
+							<xsl:text>          </xsl:text>
+						</ISA02>
+						<ISA03>
+							<xsl:text>00</xsl:text>
+						</ISA03>
+						<ISA04>
+							<xsl:text>          </xsl:text>
+						</ISA04>
+						<xsl:variable name="var_v1" select="OLLMappingLib:ReturnSenderQualifer(string(Header/ISA/ISA07/text()))"/>
+						<ISA05>
+							<xsl:value-of select="$var_v1"/>
+						</ISA05>
+						<xsl:variable name="var_v2" select="OLLMappingLib:EchoStar_850_to_997ReturnSenderID(string(Header/ISA/ISA08/text()))"/>
+						<ISA06>
+							<xsl:value-of select="$var_v2"/>
+						</ISA06>
+						<xsl:variable name="var_v3" select="OLLMappingLib:ReturnReceiverQualifer(string(Header/ISA/ISA05/text()))"/>
+						<ISA07>
+							<xsl:value-of select="$var_v3"/>
+						</ISA07>
+						<xsl:variable name="var_v4" select="OLLMappingLib:EchoStar_850_to_997ReturnReceiverID(string(Header/ISA/ISA06/text()))"/>
+						<ISA08>
+							<xsl:value-of select="$var_v4"/>
+						</ISA08>
+						<xsl:variable name="var_v5" select="OLLMappingLib:EchoStar_850_to_997MyConcat2()"/>
+						<ISA09>
+							<xsl:value-of select="$var_v5"/>
+						</ISA09>
+						<xsl:variable name="var_v6" select="OLLMappingLib:EchoStar_850_to_997_MapMyC3oncat()"/>
+						<ISA10>
+							<xsl:value-of select="$var_v6"/>
+						</ISA10>
+						<ISA11>
+							<xsl:text>U</xsl:text>
+						</ISA11>
+						<ISA12>
+							<xsl:text>00400</xsl:text>
+						</ISA12>
+						<xsl:variable name="var_v7" select="&quot;&quot;"/>
+						<xsl:variable name="var_v8" select="&quot;&quot;"/>
+						<ISA13>
+							<xsl:value-of select="$ISAGSControl"/>
+						</ISA13>
+						<ISA14>
+							<xsl:text>0</xsl:text>
+						</ISA14>
+						<ISA15>
+							<xsl:text>P</xsl:text>
+						</ISA15>
+						<ISA16>
+							<xsl:text>&gt;</xsl:text>
+						</ISA16>
+					</ISA>
+					<GS>
+						<GS01>
+							<xsl:text>FA</xsl:text>
+						</GS01>
+						<xsl:variable name="var_v9" select="string(Header/GS/GS03/@xsi:nil) = 'true'"/>
+						<xsl:if test="string($var_v9)='true'">
+							<GS02>
+								<xsl:attribute name="xsi:nil"><xsl:value-of select="'true'"/></xsl:attribute>
+							</GS02>
+						</xsl:if>
+						<xsl:if test="string($var_v9)='false'">
+							<GS02>
+								<xsl:value-of select="Header/GS/GS03/text()"/>
+							</GS02>
+						</xsl:if>
+						<xsl:variable name="var_v10" select="string(Header/GS/GS02/@xsi:nil) = 'true'"/>
+						<xsl:if test="string($var_v10)='true'">
+							<GS03>
+								<xsl:attribute name="xsi:nil"><xsl:value-of select="'true'"/></xsl:attribute>
+							</GS03>
+						</xsl:if>
+						<xsl:if test="string($var_v10)='false'">
+							<GS03>
+								<xsl:value-of select="Header/GS/GS02/text()"/>
+							</GS03>
+						</xsl:if>
+						<xsl:variable name="var_v11" select="OLLMappingLib:EchoStar_850_to_997MyConcat()"/>
+						<GS04>
+							<xsl:value-of select="$var_v11"/>
+						</GS04>
+						<xsl:variable name="var_v12" select="OLLMappingLib:EchoStar_850_to_997_MapMyC3oncat()"/>
+						<GS05>
+							<xsl:value-of select="$var_v12"/>
+						</GS05>
+						<xsl:variable name="var_v13" select="&quot;&quot;"/>
+						<GS06>
+							<xsl:value-of select="$ISAGSControl"/>
+						</GS06>
+						<GS07>
+							<xsl:text>X</xsl:text>
+						</GS07>
+						<GS08>
+							<xsl:text>004010</xsl:text>
+						</GS08>
+					</GS>
+				</InterchangeControlHeader>
+				<Header>
+					<ST>
+						<ST01>
+							<xsl:text>997</xsl:text>
+						</ST01>
+						<xsl:variable name="var_v14" select="&quot;&quot;"/>
+						<xsl:variable name="var_v15" select="&quot;&quot;"/>
+						<ST02>
+							<xsl:value-of select="'##Control_Number#1#Call_Sequence_Method=GetSequenceNextValWithDefault;;EchoStar_997_ISA;;1##%04d##'"/>
+						</ST02>
+					</ST>
+					<AK1>
+						<AK101>
+							<xsl:text>PO</xsl:text>
+						</AK101>
+						<xsl:variable name="var_v16" select="string(Header/GS/GS06/@xsi:nil) = 'true'"/>
+						<xsl:if test="string($var_v16)='true'">
+							<AK102>
+								<xsl:attribute name="xsi:nil"><xsl:value-of select="'true'"/></xsl:attribute>
+							</AK102>
+						</xsl:if>
+						<xsl:if test="string($var_v16)='false'">
+							<AK102>
+								<xsl:value-of select="Header/GS/GS06/text()"/>
+							</AK102>
+						</xsl:if>
+					</AK1>
+				</Header>
+				<Detail>
+					<xsl:for-each select="Detail">
+						<LoopAK2>
+							<AK2>
+								<AK201>
+									<xsl:text>850</xsl:text>
+								</AK201>
+								<xsl:variable name="var_v17" select="OLLMappingLib:MyC2so45ncat(string(ST/ST02/text()))"/>
+								<AK202>
+									<xsl:value-of select="$var_v17"/>
+								</AK202>
+							</AK2>
+							<AK5>
+								<AK501>
+									<xsl:text>A</xsl:text>
+								</AK501>
+							</AK5>
+						</LoopAK2>
+					</xsl:for-each>
+					<AK9>
+						<AK901>
+							<xsl:text>A</xsl:text>
+						</AK901>
+						<AK902>
+							<xsl:value-of select="$var_v18"/>
+						</AK902>
+						<AK903>
+							<xsl:value-of select="$var_v18"/>
+						</AK903>
+						<AK904>
+							<xsl:value-of select="$var_v18"/>
+						</AK904>
+					</AK9>
+				</Detail>
+				<Summary>
+					<SE>
+						<SE01>
+							<xsl:value-of select="floor($var_v20)"/>
+						</SE01>
+						<xsl:variable name="var_v21" select="&quot;&quot;"/>
+						<xsl:variable name="var_v22" select="&quot;&quot;"/>
+						<SE02>
+							<xsl:value-of select="'##Control_Number#1#Call_Sequence_Method=GetSequenceNextValWithDefault;;EchoStar_997_ISA;;1##%04d##'"/>
+						</SE02>
+					</SE>
+				</Summary>
+				<InterchangeControlTrailer>
+					<GE>
+						<GE01>
+							<xsl:text>1</xsl:text>
+						</GE01>
+						<xsl:variable name="var_v23" select="&quot;&quot;"/>
+						<GE02>
+							<xsl:value-of select="$ISAGSControl"/>
+						</GE02>
+					</GE>
+					<IEA>
+						<IEA01>
+							<xsl:text>1</xsl:text>
+						</IEA01>
+						<xsl:variable name="var_v24" select="&quot;&quot;"/>
+						<IEA02>
+							<xsl:value-of select="$ISAGSControl"/>
+						</IEA02>
+					</IEA>
+				</InterchangeControlTrailer>
+			</MSG>
+		</ns0:EchoStar_997_Root>
+	</xsl:template>
+</xsl:stylesheet>

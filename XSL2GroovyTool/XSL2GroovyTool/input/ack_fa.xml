@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--用XMLSpy v2012产生的 XML文件(http://www.altova.com)-->
+<FunctionalAcknowlegment xsi:noNamespaceSchemaLocation="functional_ack.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Information>
+		<SenderId>String</SenderId>
+		<SenderQualifier>String</SenderQualifier>
+		<ReceiverId>String</ReceiverId>
+		<ReceiverQualifier>String</ReceiverQualifier>
+		<Origin>
+			<InterchangeControlNumber>String</InterchangeControlNumber>
+			<GroupControlNumber>String</GroupControlNumber>
+			<FunctionalIdentifierCode>String</FunctionalIdentifierCode>
+		</Origin>
+		<AcitonCode>REJECTED</AcitonCode>
+		<ErrorCode>invalid control number</ErrorCode>
+		<TotalNumberOfTxn>0</TotalNumberOfTxn>
+		<NumberOfReceivedTxn>0</NumberOfReceivedTxn>
+		<NumberOfAcceptedTxn>0</NumberOfAcceptedTxn>
+		<Remark>String</Remark>
+	</Information>
+	<Transactions>
+		<Origin>
+			<Sequence>0</Sequence>
+			<ControlNumber>String</ControlNumber>
+			<MessageType>String</MessageType>
+			<Version>String</Version>
+			<Release>String</Release>
+			<Agency>String</Agency>
+			<AssociationAssignedCode>String</AssociationAssignedCode>
+		</Origin>
+		<ActionCode>ACCEPTED</ActionCode>
+		<ErrorCode>duplicated control number</ErrorCode>
+		<Errors>
+			<Segment>
+				<ID>String</ID>
+				<Position>0</Position>
+				<ErrorCode>unexpected</ErrorCode>
+				<Field>
+					<Position>0</Position>
+					<CompositePosition>0</CompositePosition>
+					<ErrorCode>exclusion condition violated</ErrorCode>
+					<OrigData>String</OrigData>
+					<Remark>text</Remark>
+				</Field>
+				<Field>
+					<Position>0</Position>
+					<CompositePosition>0</CompositePosition>
+					<ErrorCode>too short</ErrorCode>
+					<OrigData>String</OrigData>
+					<Remark>text</Remark>
+				</Field>
+				<Remark>text</Remark>
+			</Segment>
+		</Errors>
+		<Errors>
+			<Segment>
+				<ID>String</ID>
+				<Position>0</Position>
+				<ErrorCode>unexpected</ErrorCode>
+				<Field>
+					<Position>0</Position>
+					<CompositePosition>0</CompositePosition>
+					<ErrorCode>exclusion condition violated</ErrorCode>
+					<OrigData>String</OrigData>
+					<Remark>text</Remark>
+				</Field>
+				<Field>
+					<Position>0</Position>
+					<CompositePosition>0</CompositePosition>
+					<ErrorCode>too short</ErrorCode>
+					<OrigData>String</OrigData>
+					<Remark>text</Remark>
+				</Field>
+				<Remark>text</Remark>
+			</Segment>
+		</Errors>
+		<Remark>text</Remark>
+	</Transactions>
+	<Transactions>
+		<Origin>
+			<Sequence>0</Sequence>
+			<ControlNumber>String</ControlNumber>
+			<MessageType>String</MessageType>
+			<Version>String</Version>
+			<Release>String</Release>
+			<Agency>String</Agency>
+			<AssociationAssignedCode>String</AssociationAssignedCode>
+		</Origin>
+		<ActionCode>REJECTED</ActionCode>
+		<ErrorCode>missing trailer</ErrorCode>
+		<Errors>
+			<Segment>
+				<ID>String</ID>
+				<Position>0</Position>
+				<ErrorCode>loop less then minimum</ErrorCode>
+				<Field>
+					<Position>0</Position>
+					<CompositePosition>0</CompositePosition>
+					<ErrorCode>too short</ErrorCode>
+					<OrigData>String</OrigData>
+					<Remark>text</Remark>
+				</Field>
+				<Field>
+					<Position>0</Position>
+					<CompositePosition>0</CompositePosition>
+					<ErrorCode>invalid time</ErrorCode>
+					<OrigData>String</OrigData>
+					<Remark>text</Remark>
+				</Field>
+				<Remark>text</Remark>
+			</Segment>
+		</Errors>
+		<Errors>
+			<Segment>
+				<ID>String</ID>
+				<Position>0</Position>
+				<ErrorCode>loop over maximum</ErrorCode>
+				<Field>
+					<Position>0</Position>
+					<CompositePosition>0</CompositePosition>
+					<ErrorCode>invalid datatype</ErrorCode>
+					<OrigData>String</OrigData>
+					<Remark>text</Remark>
+				</Field>
+				<Field>
+					<Position>0</Position>
+					<CompositePosition>0</CompositePosition>
+					<ErrorCode>too short</ErrorCode>
+					<OrigData>String</OrigData>
+					<Remark>text</Remark>
+				</Field>
+				<Remark>text</Remark>
+			</Segment>
+		</Errors>
+		<Remark>text</Remark>
+	</Transactions>
+</FunctionalAcknowlegment>
