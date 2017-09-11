@@ -12,6 +12,7 @@ class XmlToBeanSplit2 {
 	static Set<String> elementAttrFlag = new HashSet<String>();
 	static Set<String> multiElementList = [];
 	static boolean NodeFlag=true
+	static String FileName
 
 	static Map<String,Set<String>> AdapterFlag = new HashMap<String,Set<String>>()
 	
@@ -33,7 +34,7 @@ class XmlToBeanSplit2 {
 //		String xslName = "in.xml"
 //		String xslName = "ack.xml"
 //		String xslName = "siCS2xml.xml"
-		String xslName = "EXX.xml"
+		String xslName = "bl.xml"
 
 		File file = new File("""input/${xslName}""");
 		String xsl = file.text
@@ -45,7 +46,7 @@ class XmlToBeanSplit2 {
 
 		StringBuffer pmtSb = new StringBuffer()
 		StringBuffer commonSb = new StringBuffer()
-       //System.setOut(new PrintStream(new File("""src/cs/Message.groovy""")))
+
 
 		pmtSb.append("import java.io.Serializable;\n");
 		pmtSb.append("import java.util.ArrayList;\n")
@@ -57,19 +58,23 @@ class XmlToBeanSplit2 {
 		pmtSb.append("import com.google.gson.stream.JsonWriter;\n")
 		//println pmtSb.toString()
 		nodeTranserse(document.getDocumentElement(),pmtSb,commonSb);
+	//	println AdapterFlag
 		nodeAddAdapter(AdapterFlag,pmtSb)
 
-		//println '之前'+multiElementList
+	//	println '之前'+multiElementList
 		for(i in 0..<multiElementList.size()){
 			String temp=multiElementList[0]
 			multiElementList.remove(temp)
-			multiElementList.add('"'+temp+'"')
+			multiElementList.add('"'+temp.replace("cs:","")+'"')
 		}
 
 		String pmtSbString=pmtSb.toString().replace("1111111111111111111111111111111111------1111111111111111111111111111111111111111","\tpublic static final Set<String> MultiElementList = "+multiElementList)
 		//pmtSb
+
+
+		System.setOut(new PrintStream(new File("""src/cs/"""+FileName+""".groovy""")))
 		println pmtSbString
-	//	println commonSb.toString()
+		//println 'commonSb '+commonSb.toString()
 
 
 
@@ -106,6 +111,7 @@ class XmlToBeanSplit2 {
 					commonSb.append("class " + rNodeName.replace("cs:","") + " implements Serializable {\n")
 					if(NodeFlag==true){
 						commonSb.append("1111111111111111111111111111111111------1111111111111111111111111111111111111111\n")
+						FileName=rNodeName.replace("cs:","")
 						NodeFlag=false
 					}
 					
@@ -125,6 +131,7 @@ class XmlToBeanSplit2 {
 					pmtSb.append("class " + rNodeName + " implements Serializable {\n")
 					if(NodeFlag==true){
 						pmtSb.append("1111111111111111111111111111111111------1111111111111111111111111111111111111111\n")
+						FileName=rNodeName
 						NodeFlag=false
 					}
 					if(node.hasAttributes()){
@@ -206,6 +213,7 @@ class XmlToBeanSplit2 {
 									tmpSB.append("class " + childNodeName.replace("cs:","") + " implements Serializable {\n")
 									if(NodeFlag==true){
 										tmpSB.append("1111111111111111111111111111111111------1111111111111111111111111111111111111111\n")
+										FileName= childNodeName.replace("cs:","")
 										NodeFlag=false
 									}
 									childNode.getAttributes().each { curNode ->
@@ -215,9 +223,9 @@ class XmlToBeanSplit2 {
 											attr_Set.add(attrName)
 										}
 									}
-									if(attr_Set!=null){
-										attr_Set.add(childNodeName.replace("cs:",""))
-										AdapterFlag.put(childNodeName.replace("cs:",""),attr_Set)
+									if(attr_Set!=null && !childNodeName.contains('cs:')){
+										attr_Set.add(childNodeName)
+										AdapterFlag.put(childNodeName,attr_Set)
 									}
 									
 //									if(map.get(childNodeName) > 0 && !flag.contains(childNodeName)) {
@@ -372,6 +380,7 @@ class XmlToBeanSplit2 {
 			}
 		}
 
+
 	public static void getmultiElementList(org.w3c.dom.Node node){
 
 		Map<String,Integer> map = new HashMap<String, Integer>();
@@ -419,6 +428,7 @@ class XmlToBeanSplit2 {
 			multiElementList.addAll(map.findAll{it.value > 0}.keySet())
 		}
 	}
+
 	}
 /**
 public class TotalAmtInPmtCurrencyAdapter extends TypeAdapter<TotalAmtInPmtCurrency> {

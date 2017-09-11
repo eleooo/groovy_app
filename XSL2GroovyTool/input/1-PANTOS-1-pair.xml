@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<BillOfLading xmlns="http://www.cargosmart.com/billoflading">
+	<Header>
+		<cs:MsgDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+			<cs:GMT>2013-01-21T01:59:46</cs:GMT>
+			<cs:LocDT CSTimeZone="HKT" TimeZone="HKT">2013-01-21T09:59:46</cs:LocDT>
+		</cs:MsgDT>
+		<ns0:MsgDirection xmlns:ns0="http://www.cargosmart.com/common">O</ns0:MsgDirection>
+		<ns0:MsgType xmlns:ns0="http://www.cargosmart.com/common">BL</ns0:MsgType>
+		<ns0:SenderID xmlns:ns0="http://www.cargosmart.com/common">CargoSmart</ns0:SenderID>
+		<ns0:ReceiverID xmlns:ns0="http://www.cargosmart.com/common">ADISSEO</ns0:ReceiverID>
+		<ns0:Action xmlns:ns0="http://www.cargosmart.com/common">NEW</ns0:Action>
+		<ns0:Version xmlns:ns0="http://www.cargosmart.com/common">13</ns0:Version>
+		<ns0:InterchangeMessageID xmlns:ns0="http://www.cargosmart.com/common">SDV_BL_2528612841_OOLU_20130121100602_16102050</ns0:InterchangeMessageID>
+		<ns0:DataSource xmlns:ns0="http://www.cargosmart.com/common">CS2 db</ns0:DataSource>
+	</Header>
+	<Body>
+		<TransactionInformation>
+			<ns0:MessageID xmlns:ns0="http://www.cargosmart.com/common">SDV_BL_2528612841_OOLU_20130121100602_16102050_999999999989835475</ns0:MessageID>
+			<ns0:InterchangeTransactionID xmlns:ns0="http://www.cargosmart.com/common">999999999989835475</ns0:InterchangeTransactionID>
+			<Action>UPD</Action>
+		</TransactionInformation>
+		<EventInformation>
+			<ns0:EventCode xmlns:ns0="http://www.cargosmart.com/common">bl_upload</ns0:EventCode>
+			<ns0:EventDescription xmlns:ns0="http://www.cargosmart.com/common">NEW</ns0:EventDescription>
+			<ns0:EventDT xmlns:ns0="http://www.cargosmart.com/common">
+				<ns0:GMT>2013-01-21T01:57:00</ns0:GMT>
+				<ns0:LocDT TimeZone="GMT" CSTimeZone="EST">2013-01-20T20:57:00</ns0:LocDT>
+			</ns0:EventDT>
+		</EventInformation>
+		<GeneralInformation>
+			<SPCompanyID>ORIEHK41514112426815</SPCompanyID>
+			<SCACCode>OOLU</SCACCode>
+			<BLNumber>2528612841</BLNumber>
+			<BLType>Sea WayBill</BLType>
+			<ShipmentCargoType>RF</ShipmentCargoType>
+			<TrafficMode>
+				<ns0:OutBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:OutBound>
+				<ns0:InBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:InBound>
+			</TrafficMode>
+			<ContactOfficeCode>ANR</ContactOfficeCode>
+			<BLReceiptDT>
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-12T06:45:00</ns0:GMT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CST">2013-01-12T14:45:00</ns0:LocDT>
+			</BLReceiptDT>
+			<BLIssueDT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common">2013-01-17T00:00:00</ns0:LocDT>
+			</BLIssueDT>
+			<BLCreationDT>
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-12T06:48:00</ns0:GMT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="GMT">2013-01-12T06:48:00</ns0:LocDT>
+			</BLCreationDT>
+			<BLChangeDT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="GMT">2013-01-21T01:57:00</ns0:LocDT>
+			</BLChangeDT>
+			<BLOnboardDT>
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-17T00:00:00</ns0:GMT>
+			</BLOnboardDT>
+			<OriginalBLReleaseOffice>CHS</OriginalBLReleaseOffice>
+			<BLPaymentOffice>Antwerp</BLPaymentOffice>
+			<BLPaymentOfficeCode>ANR</BLPaymentOfficeCode>
+			<CaptureOffice>ANR</CaptureOffice>
+			<CaptureOfficeName>Antwerp</CaptureOfficeName>
+			<CaptureOfficePhoneNumber>(32)-3-2348888</CaptureOfficePhoneNumber>
+			<CarrierBookingNumber>2528612841</CarrierBookingNumber>
+			<BLGrossWeight>
+				<ns0:Weight xmlns:ns0="http://www.cargosmart.com/common">0</ns0:Weight>
+			</BLGrossWeight>
+			<BLNetWeight>
+				<ns0:Weight xmlns:ns0="http://www.cargosmart.com/common">0</ns0:Weight>
+			</BLNetWeight>
+			<BLVolume>
+				<ns0:Volume xmlns:ns0="http://www.cargosmart.com/common">0</ns0:Volume>
+			</BLVolume>
+			<BLSVVD>
+				<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+				<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+				<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+				<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+				<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+				<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+				<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+			</BLSVVD>
+			<OutBoundROESVVD>
+				<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+				<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+				<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+				<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+				<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+				<ROEPortOfLoad>Montreal</ROEPortOfLoad>
+			</OutBoundROESVVD>
+			<TradeCode>TAT</TradeCode>
+			<BookingOffice>CHI</BookingOffice>
+			<BookingOfficeName>Chicago</BookingOfficeName>
+			<BookingOfficeUNLoc>USCHI</BookingOfficeUNLoc>
+			<LabelActions>
+				<Seq>1</Seq>
+				<Label>B/L Ready</Label>
+				<ProposedAction>UPDATE_BL_SHIPMENT</ProposedAction>
+				<ActionType>U</ActionType>
+				<TimeOfIssue>
+					<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-21T01:57:00</ns0:GMT>
+				</TimeOfIssue>
+			</LabelActions>
+			<LabelActions>
+				<Seq>2</Seq>
+				<Label>Carrier Released</Label>
+				<ProposedAction>UPDATE_SHMT_ATTRIBUTE</ProposedAction>
+				<TimeOfIssue>
+					<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-21T01:57:00</ns0:GMT>
+				</TimeOfIssue>
+			</LabelActions>
+			<LabelActions>
+				<Seq>3</Seq>
+				<Label>Freight Release</Label>
+				<ProposedAction>UPDATE_BL_SHIPMENT</ProposedAction>
+				<TimeOfIssue>
+					<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-21T01:57:00</ns0:GMT>
+				</TimeOfIssue>
+			</LabelActions>
+			<LabelActions>
+				<Seq>4</Seq>
+				<Label>Cargo Released</Label>
+				<ProposedAction>UPDATE_SHMT_ATTRIBUTE</ProposedAction>
+				<TimeOfIssue>
+					<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-21T01:57:00</ns0:GMT>
+				</TimeOfIssue>
+			</LabelActions>
+			<LabelActions>
+				<Seq>5</Seq>
+				<Label>Carrier Released</Label>
+				<ProposedAction>UPDATE_SHMT_ATTRIBUTE</ProposedAction>
+				<TimeOfIssue>
+					<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-21T01:57:00</ns0:GMT>
+				</TimeOfIssue>
+			</LabelActions>
+			<LabelActions>
+				<Seq>6</Seq>
+				<Label>Freight Release</Label>
+				<ProposedAction>UPDATE_BL_SHIPMENT</ProposedAction>
+				<TimeOfIssue>
+					<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-21T01:57:00</ns0:GMT>
+				</TimeOfIssue>
+			</LabelActions>
+		</GeneralInformation>
+		<BLStatus Type="BL_STATUS">
+			<Status>BL Ready</Status>
+			<StatusDT>
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-21T01:57:00</ns0:GMT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="GMT" CSTimeZone="EST">2013-01-20T20:57:00</ns0:LocDT>
+			</StatusDT>
+		</BLStatus>
+		<BLStatus Type="CGO_REL_STATUS">
+			<Status>Released</Status>
+		</BLStatus>
+		<BLStatus Type="IB_COLL_STATUS">
+			<Status>Cleared</Status>
+		</BLStatus>
+		<BLStatus Type="CUST_ENS_STATUS">
+			<Status>Accepted</Status>
+			<StatusDT>
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-14T10:55:00</ns0:GMT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="PST">2013-01-14T05:55:00</ns0:LocDT>
+			</StatusDT>
+		</BLStatus>
+		<BLStatus Type="ORIG_BL_STATUS">
+			<Status>Cleared</Status>
+		</BLStatus>
+		<BLStatus Type="OBL_REL_STATUS">
+			<Status>Cleared</Status>
+			<StatusDT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CHS">2013-01-17T09:43:00</ns0:LocDT>
+			</StatusDT>
+		</BLStatus>
+		<BLStatus Type="CARR_REL_STATUS">
+			<Status>Cleared</Status>
+		</BLStatus>
+		<BLStatus Type="IB_FRT_STATUS">
+			<Status>Cleared</Status>
+		</BLStatus>
+		<Party>
+			<ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">SHP</ns0:PartyType>
+			<ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">SDV Logistiques ( Canada) Inc.</ns0:PartyName>
+			<ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">SDVLCA447039604</ns0:CSCompanyID>
+			<ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3126812007</ns0:CarrierCustomerCode>
+			<ns0:Contact xmlns:ns0="http://www.cargosmart.com/common">
+				<ns0:FirstName>Malek</ns0:FirstName>
+				<ns0:LastName>Boucenna</ns0:LastName>
+				<ns0:ContactPhone>
+					<ns0:CountryCode>1</ns0:CountryCode>
+					<ns0:AreaCode>514</ns0:AreaCode>
+					<ns0:Number>3384699</ns0:Number>
+				</ns0:ContactPhone>
+			</ns0:Contact>
+			<ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+				<ns0:City>Saint Laurent</ns0:City>
+				<ns0:State>Quebec</ns0:State>
+				<ns0:Country>CA</ns0:Country>
+				<ns0:LocationCode>
+					<ns0:UNLocationCode>CASLA</ns0:UNLocationCode>
+				</ns0:LocationCode>
+				<ns0:PostalCode>H4S 1Y6</ns0:PostalCode>
+				<ns0:AddressLines>
+					<ns0:AddressLine>3333 Douglas B Floreani</ns0:AddressLine>
+				</ns0:AddressLines>
+			</ns0:Address>
+		</Party>
+		<Party>
+			<ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">CGN</ns0:PartyType>
+			<ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Sdv Belgium</ns0:PartyName>
+			<ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">SBE1724193892</ns0:CSCompanyID>
+			<ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">4069006000</ns0:CarrierCustomerCode>
+			<ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+				<ns0:City>Antwerpen</ns0:City>
+				<ns0:County>Antwerpen</ns0:County>
+				<ns0:State>Vlaanderen</ns0:State>
+				<ns0:Country>BE</ns0:Country>
+				<ns0:LocationCode>
+					<ns0:UNLocationCode>BEANR</ns0:UNLocationCode>
+				</ns0:LocationCode>
+				<ns0:PostalCode>2000</ns0:PostalCode>
+				<ns0:AddressLines>
+					<ns0:AddressLine>Rijnkaai 37</ns0:AddressLine>
+					<ns0:AddressLine>Postbus 549</ns0:AddressLine>
+				</ns0:AddressLines>
+			</ns0:Address>
+		</Party>
+		<Party>
+			<ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">FWD</ns0:PartyType>
+			<ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">SDV Logistiques ( Canada) Inc.</ns0:PartyName>
+			<ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">SDVLCA447039604</ns0:CSCompanyID>
+			<ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">3126812007</ns0:CarrierCustomerCode>
+			<ns0:Contact xmlns:ns0="http://www.cargosmart.com/common">
+				<ns0:FirstName>Malek</ns0:FirstName>
+				<ns0:LastName>Boucenna</ns0:LastName>
+				<ns0:ContactPhone>
+					<ns0:CountryCode>1</ns0:CountryCode>
+					<ns0:AreaCode>514</ns0:AreaCode>
+					<ns0:Number>3384699</ns0:Number>
+				</ns0:ContactPhone>
+			</ns0:Contact>
+			<ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+				<ns0:City>Saint Laurent</ns0:City>
+				<ns0:State>Quebec</ns0:State>
+				<ns0:Country>CA</ns0:Country>
+				<ns0:LocationCode>
+					<ns0:UNLocationCode>CASLA</ns0:UNLocationCode>
+				</ns0:LocationCode>
+				<ns0:PostalCode>H4S 1Y6</ns0:PostalCode>
+				<ns0:AddressLines>
+					<ns0:AddressLine>3333 Douglas B Floreani</ns0:AddressLine>
+				</ns0:AddressLines>
+			</ns0:Address>
+		</Party>
+		<Party>
+			<ns0:PartyType xmlns:ns0="http://www.cargosmart.com/common">NPT</ns0:PartyType>
+			<ns0:PartyName xmlns:ns0="http://www.cargosmart.com/common">Sdv Belgium</ns0:PartyName>
+			<ns0:CSCompanyID xmlns:ns0="http://www.cargosmart.com/common">SBE1724193892</ns0:CSCompanyID>
+			<ns0:CarrierCustomerCode xmlns:ns0="http://www.cargosmart.com/common">4069006000</ns0:CarrierCustomerCode>
+			<ns0:Address xmlns:ns0="http://www.cargosmart.com/common">
+				<ns0:City>Antwerpen</ns0:City>
+				<ns0:County>Antwerpen</ns0:County>
+				<ns0:State>Vlaanderen</ns0:State>
+				<ns0:Country>BE</ns0:Country>
+				<ns0:LocationCode>
+					<ns0:UNLocationCode>BEANR</ns0:UNLocationCode>
+				</ns0:LocationCode>
+				<ns0:PostalCode>2000</ns0:PostalCode>
+				<ns0:AddressLines>
+					<ns0:AddressLine>Rijnkaai 37</ns0:AddressLine>
+					<ns0:AddressLine>Postbus 549</ns0:AddressLine>
+				</ns0:AddressLines>
+			</ns0:Address>
+		</Party>
+		<CarrierRate>
+			<ns0:CSCarrierRateType xmlns:ns0="http://www.cargosmart.com/common">CSO</ns0:CSCarrierRateType>
+			<ns0:CarrierRateNumber xmlns:ns0="http://www.cargosmart.com/common">CE100978</ns0:CarrierRateNumber>
+		</CarrierRate>
+		<CarrierRate>
+			<ns0:CSCarrierRateType xmlns:ns0="http://www.cargosmart.com/common">SC</ns0:CSCarrierRateType>
+			<ns0:CarrierRateNumber xmlns:ns0="http://www.cargosmart.com/common">CE100978</ns0:CarrierRateNumber>
+		</CarrierRate>
+		<ExternalReference>
+			<ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">OTH</ns0:CSReferenceType>
+			<ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">6105EOOLU6172386130111</ns0:ReferenceNumber>
+			<ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">In Transit Export Number</ns0:ReferenceDescription>
+		</ExternalReference>
+		<ExternalReference>
+			<ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">SIR</ns0:CSReferenceType>
+			<ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">OOC995362670</ns0:ReferenceNumber>
+			<ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">Shipping Instruction Reference</ns0:ReferenceDescription>
+		</ExternalReference>
+		<ExternalReference>
+			<ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">FR</ns0:CSReferenceType>
+			<ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">AYUL135754</ns0:ReferenceNumber>
+			<ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">Forwarder Reference</ns0:ReferenceDescription>
+		</ExternalReference>
+		<ExternalReference>
+			<ns0:CSReferenceType xmlns:ns0="http://www.cargosmart.com/common">CR</ns0:CSReferenceType>
+			<ns0:ReferenceNumber xmlns:ns0="http://www.cargosmart.com/common">PKEXM010</ns0:ReferenceNumber>
+			<ns0:ReferenceDescription xmlns:ns0="http://www.cargosmart.com/common">Customer Reference Number</ns0:ReferenceDescription>
+		</ExternalReference>
+		<Route>
+			<Haulage>
+				<ns0:OutBound xmlns:ns0="http://www.cargosmart.com/common">C</ns0:OutBound>
+				<ns0:InBound xmlns:ns0="http://www.cargosmart.com/common">M</ns0:InBound>
+			</Haulage>
+			<IsOBDropAndPoll>false</IsOBDropAndPoll>
+			<ArrivalAtFinalHub Indicator="E">
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-25T14:02:00</ns0:GMT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CET" CSTimeZone="CET">2013-01-25T15:02:00</ns0:LocDT>
+			</ArrivalAtFinalHub>
+			<FullReturnCutoffDT>
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-12T19:00:00</ns0:GMT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="EST" CSTimeZone="EST">2013-01-12T14:00:00</ns0:LocDT>
+			</FullReturnCutoffDT>
+			<DepartureDT>
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-17T11:50:00</ns0:GMT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="EST" CSTimeZone="EST">2013-01-17T06:50:00</ns0:LocDT>
+			</DepartureDT>
+			<ArrivalDT>
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-24T11:00:00</ns0:GMT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CET" CSTimeZone="CET">2013-01-24T12:00:00</ns0:LocDT>
+			</ArrivalDT>
+			<POR>
+				<ns0:CityDetails xmlns:ns0="http://www.cargosmart.com/common">
+					<ns0:City>Antwerp</ns0:City>
+					<ns0:County>Antwerpen</ns0:County>
+					<ns0:State>Vlaanderen</ns0:State>
+					<ns0:Country>Belgium</ns0:Country>
+					<ns0:LocationCode>
+						<ns0:UNLocationCode>BEANR</ns0:UNLocationCode>
+						<ns0:SchedKDType>K</ns0:SchedKDType>
+						<ns0:SchedKDCode>42305</ns0:SchedKDCode>
+					</ns0:LocationCode>
+				</ns0:CityDetails>
+				<cs:Facility xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+					<cs:FacilityCode>ANR03</cs:FacilityCode>
+					<cs:FacilityName>Europaterminal Kaai 869</cs:FacilityName>
+				</cs:Facility>
+				<cs:CSStandardCity xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+					<cs:CSParentCityID>2532764</cs:CSParentCityID>
+					<cs:CSCountryCode>BE</cs:CSCountryCode>
+					<cs:CSContinentCode>EU</cs:CSContinentCode>
+				</cs:CSStandardCity>
+			</POR>
+			<FND>
+				<ns0:CityDetails xmlns:ns0="http://www.cargosmart.com/common">
+					<ns0:City>Columbus</ns0:City>
+					<ns0:County>Franklin</ns0:County>
+					<ns0:State>Ohio</ns0:State>
+					<ns0:Country>United States</ns0:Country>
+					<ns0:LocationCode>
+						<ns0:UNLocationCode>USCMH</ns0:UNLocationCode>
+						<ns0:SchedKDType>D</ns0:SchedKDType>
+						<ns0:SchedKDCode>4103</ns0:SchedKDCode>
+					</ns0:LocationCode>
+				</ns0:CityDetails>
+				<cs:CSStandardCity xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+					<cs:CSParentCityID>2534264</cs:CSParentCityID>
+					<cs:CSStateCode>OH</cs:CSStateCode>
+					<cs:CSCountryCode>US</cs:CSCountryCode>
+					<cs:CSContinentCode>NA</cs:CSContinentCode>
+				</cs:CSStandardCity>
+			</FND>
+			<FirstPOL>
+				<ns0:Port xmlns:ns0="http://www.cargosmart.com/common">
+					<ns0:PortName>Montreal</ns0:PortName>
+					<ns0:PortCode>MTR</ns0:PortCode>
+					<ns0:City>Montreal</ns0:City>
+					<ns0:State>Quebec</ns0:State>
+					<ns0:LocationCode>
+						<ns0:UNLocationCode>CAMTR</ns0:UNLocationCode>
+						<ns0:SchedKDType>K</ns0:SchedKDType>
+						<ns0:SchedKDCode>1822</ns0:SchedKDCode>
+					</ns0:LocationCode>
+					<ns0:Country>Canada</ns0:Country>
+					<ns0:CSPortID>38</ns0:CSPortID>
+					<ns0:CSCountryCode>CA</ns0:CSCountryCode>
+				</ns0:Port>
+				<cs:Facility xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+					<cs:FacilityCode>MTR02</cs:FacilityCode>
+					<cs:FacilityName>Cast Terminal</cs:FacilityName>
+				</cs:Facility>
+				<OutboundSVVD>
+					<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+					<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+					<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+					<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+					<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+					<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+					<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+					<ns0:VesselNationality xmlns:ns0="http://www.cargosmart.com/common">United Kingdom</ns0:VesselNationality>
+					<DirectionName>East</DirectionName>
+					<VesselNationalityCode>GB</VesselNationalityCode>
+				</OutboundSVVD>
+				<DepartureDT>
+					<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="EST">2013-01-17T06:50:00</ns0:LocDT>
+				</DepartureDT>
+				<CSStateCode>QC</CSStateCode>
+				<CSParentCityID>2536840</CSParentCityID>
+			</FirstPOL>
+			<LastPOD>
+				<ns0:Port xmlns:ns0="http://www.cargosmart.com/common">
+					<ns0:PortName>Montreal</ns0:PortName>
+					<ns0:PortCode>MTR</ns0:PortCode>
+					<ns0:City>Montreal</ns0:City>
+					<ns0:State>Quebec</ns0:State>
+					<ns0:LocationCode>
+						<ns0:UNLocationCode>CAMTR</ns0:UNLocationCode>
+						<ns0:SchedKDType>K</ns0:SchedKDType>
+						<ns0:SchedKDCode>1822</ns0:SchedKDCode>
+					</ns0:LocationCode>
+					<ns0:Country>Canada</ns0:Country>
+					<ns0:CSPortID>38</ns0:CSPortID>
+					<ns0:CSCountryCode>CA</ns0:CSCountryCode>
+				</ns0:Port>
+				<cs:Facility xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+					<cs:FacilityCode>MTR02</cs:FacilityCode>
+					<cs:FacilityName>Cast Terminal</cs:FacilityName>
+				</cs:Facility>
+				<InboundSVVD>
+					<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+					<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+					<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+					<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+					<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+					<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+					<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+					<ns0:VesselNationality xmlns:ns0="http://www.cargosmart.com/common">United Kingdom</ns0:VesselNationality>
+					<DirectionName>East</DirectionName>
+					<VesselNationalityCode>GB</VesselNationalityCode>
+				</InboundSVVD>
+				<ArrivalDT>
+					<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="CET">2013-01-24T12:00:00</ns0:LocDT>
+				</ArrivalDT>
+				<CSStateCode>QC</CSStateCode>
+				<CSParentCityID>2532764</CSParentCityID>
+			</LastPOD>
+			<OceanLeg>
+				<ns0:LegSeq xmlns:ns0="http://www.cargosmart.com/common">1</ns0:LegSeq>
+				<ns0:POL xmlns:ns0="http://www.cargosmart.com/common">
+					<ns0:Port>
+						<ns0:PortName>Montreal</ns0:PortName>
+						<ns0:PortCode>MTR</ns0:PortCode>
+						<ns0:City>Montreal</ns0:City>
+						<ns0:State>Quebec</ns0:State>
+						<ns0:LocationCode>
+							<ns0:UNLocationCode>CAMTR</ns0:UNLocationCode>
+							<ns0:SchedKDType>K</ns0:SchedKDType>
+							<ns0:SchedKDCode>1822</ns0:SchedKDCode>
+						</ns0:LocationCode>
+						<ns0:Country>Canada</ns0:Country>
+						<ns0:CSPortID>38</ns0:CSPortID>
+						<ns0:CSCountryCode>CA</ns0:CSCountryCode>
+					</ns0:Port>
+					<ns0:Facility>
+						<ns0:FacilityCode>MTR02</ns0:FacilityCode>
+						<ns0:FacilityName>Cast Terminal</ns0:FacilityName>
+					</ns0:Facility>
+				</ns0:POL>
+				<ns0:POD xmlns:ns0="http://www.cargosmart.com/common">
+					<ns0:Port>
+						<ns0:PortName>Antwerp</ns0:PortName>
+						<ns0:PortCode>ANR</ns0:PortCode>
+						<ns0:City>Antwerpen</ns0:City>
+						<ns0:County>Antwerpen</ns0:County>
+						<ns0:State>Vlaanderen</ns0:State>
+						<ns0:LocationCode>
+							<ns0:UNLocationCode>BEANR</ns0:UNLocationCode>
+							<ns0:SchedKDType>K</ns0:SchedKDType>
+							<ns0:SchedKDCode>42305</ns0:SchedKDCode>
+						</ns0:LocationCode>
+						<ns0:Country>Belgium</ns0:Country>
+						<ns0:CSPortID>20</ns0:CSPortID>
+						<ns0:CSCountryCode>BE</ns0:CSCountryCode>
+					</ns0:Port>
+					<ns0:Facility>
+						<ns0:FacilityCode>ANR03</ns0:FacilityCode>
+						<ns0:FacilityName>Europaterminal Kaai 869</ns0:FacilityName>
+					</ns0:Facility>
+				</ns0:POD>
+				<ns0:SVVD xmlns:ns0="http://www.cargosmart.com/common">
+					<ns0:Loading>
+						<ns0:Service>GEX2</ns0:Service>
+						<ns0:Vessel>MOX</ns0:Vessel>
+						<ns0:VesselName>MONTREAL EXPRESS</ns0:VesselName>
+						<ns0:Voyage>214</ns0:Voyage>
+						<ns0:Direction>E</ns0:Direction>
+						<ns0:LloydsNumber>9253741</ns0:LloydsNumber>
+						<ns0:CallSign>MAHG5</ns0:CallSign>
+						<ns0:CallNumber>1</ns0:CallNumber>
+						<ns0:VesselNationality>United Kingdom</ns0:VesselNationality>
+					</ns0:Loading>
+					<ns0:Discharge>
+						<ns0:Service>GEX2</ns0:Service>
+						<ns0:Vessel>MOX</ns0:Vessel>
+						<ns0:VesselName>MONTREAL EXPRESS</ns0:VesselName>
+						<ns0:Voyage>214</ns0:Voyage>
+						<ns0:Direction>E</ns0:Direction>
+						<ns0:LloydsNumber>9253741</ns0:LloydsNumber>
+						<ns0:CallSign>MAHG5</ns0:CallSign>
+						<ns0:CallNumber>1</ns0:CallNumber>
+						<ns0:VesselNationality>United Kingdom</ns0:VesselNationality>
+					</ns0:Discharge>
+					<ns0:VesselVoyageType>OUTBOUND</ns0:VesselVoyageType>
+				</ns0:SVVD>
+				<cs:DepartureDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading" Indicator="A">
+					<cs:GMT>2013-01-17T11:50:00</cs:GMT>
+					<cs:LocDT CSTimeZone="EST" TimeZone="EST">2013-01-17T06:50:00</cs:LocDT>
+				</cs:DepartureDT>
+				<cs:DepartureDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading" Indicator="E">
+					<cs:GMT>2013-01-17T13:00:00</cs:GMT>
+					<cs:LocDT CSTimeZone="EST" TimeZone="EST">2013-01-17T08:00:00</cs:LocDT>
+				</cs:DepartureDT>
+				<cs:ArrivalDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading" Indicator="E">
+					<cs:GMT>2013-01-24T11:00:00</cs:GMT>
+					<cs:LocDT CSTimeZone="CET" TimeZone="CET">2013-01-24T12:00:00</cs:LocDT>
+				</cs:ArrivalDT>
+				<CarrierExtractDT>
+					<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="HKT">2013-01-21T09:59:45</ns0:LocDT>
+				</CarrierExtractDT>
+				<LoadingDirectionName>East</LoadingDirectionName>
+				<LoadingVesselNationalityCode>GB</LoadingVesselNationalityCode>
+				<DischargeDirectionName>East</DischargeDirectionName>
+				<DischargeVesselNationalityCode>GB</DischargeVesselNationalityCode>
+				<POLCSStateCode>QC</POLCSStateCode>
+				<POLCSParentCityID>2536840</POLCSParentCityID>
+				<PODCSParentCityID>2532764</PODCSParentCityID>
+			</OceanLeg>
+			<ActualCargoReceiptDT>
+				<ns0:GMT xmlns:ns0="http://www.cargosmart.com/common">2013-01-11T19:56:00+08:00</ns0:GMT>
+				<ns0:LocDT xmlns:ns0="http://www.cargosmart.com/common" TimeZone="" CSTimeZone="EST">2013-01-11T14:56:00+08:00</ns0:LocDT>
+			</ActualCargoReceiptDT>
+		</Route>
+		<Container>
+			<ns0:ContainerNumber xmlns:ns0="http://www.cargosmart.com/common">OOLU617238</ns0:ContainerNumber>
+			<ns0:ContainerCheckDigit xmlns:ns0="http://www.cargosmart.com/common">6</ns0:ContainerCheckDigit>
+			<ns0:CSContainerSizeType xmlns:ns0="http://www.cargosmart.com/common">45RE</ns0:CSContainerSizeType>
+			<ns0:CarrCntrSizeType xmlns:ns0="http://www.cargosmart.com/common">45R1</ns0:CarrCntrSizeType>
+			<ns0:IsSOC xmlns:ns0="http://www.cargosmart.com/common">false</ns0:IsSOC>
+			<cs:GrossWeight xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:Weight>15988.95</cs:Weight>
+				<cs:WeightUnit>KGS</cs:WeightUnit>
+			</cs:GrossWeight>
+			<cs:Seal xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:SealType>SH</cs:SealType>
+				<cs:SealNumber>ul4255573</cs:SealNumber>
+			</cs:Seal>
+			<cs:Haulage xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:OutBound>C</cs:OutBound>
+				<cs:InBound>M</cs:InBound>
+			</cs:Haulage>
+			<DisplaySequenceNumber>1</DisplaySequenceNumber>
+			<PieceCount>
+				<ns0:PieceCount xmlns:ns0="http://www.cargosmart.com/common">77</ns0:PieceCount>
+				<ns0:PieceCountUnit xmlns:ns0="http://www.cargosmart.com/common">RL</ns0:PieceCountUnit>
+			</PieceCount>
+			<InlandMoveIDPrefix>V16</InlandMoveIDPrefix>
+			<SIDeclaredGrossWeight>
+				<ns0:Weight xmlns:ns0="http://www.cargosmart.com/common">15988.95</ns0:Weight>
+				<ns0:WeightUnit xmlns:ns0="http://www.cargosmart.com/common">KGS</ns0:WeightUnit>
+			</SIDeclaredGrossWeight>
+			<LastTransferToBookingNo>2528612841</LastTransferToBookingNo>
+			<BLSeal>
+				<ns0:SealType xmlns:ns0="http://www.cargosmart.com/common">SH</ns0:SealType>
+				<ns0:SealNumber xmlns:ns0="http://www.cargosmart.com/common">ul4255573</ns0:SealNumber>
+			</BLSeal>
+			<CS1ContainerSizeType>40RQ</CS1ContainerSizeType>
+			<OOCLCntrSizeType>40RQ</OOCLCntrSizeType>
+			<CPRSWayBillNumber> </CPRSWayBillNumber>
+		</Container>
+		<ContainerFlowInstruction>
+			<EmptyReturn>
+				<NumberOfContainers>1</NumberOfContainers>
+				<ISOSizeType>45R1</ISOSizeType>
+				<CSContainerSizeType>45RE</CSContainerSizeType>
+				<ContainerNumbers>
+					<ContainerNumber>OOLU617238</ContainerNumber>
+					<CheckDigit>6</CheckDigit>
+				</ContainerNumbers>
+				<Facility>
+					<ns0:FacilityCode xmlns:ns0="http://www.cargosmart.com/common">ANR01</ns0:FacilityCode>
+					<ns0:FacilityName xmlns:ns0="http://www.cargosmart.com/common">Noordzeeterminal Kaai 913</ns0:FacilityName>
+				</Facility>
+			</EmptyReturn>
+		</ContainerFlowInstruction>
+		<Cargo>
+			<ns0:CargoNature xmlns:ns0="http://www.cargosmart.com/common">RF</ns0:CargoNature>
+			<ns0:CargoDescription xmlns:ns0="http://www.cargosmart.com/common">PLASTIC FILMS</ns0:CargoDescription>
+			<cs:Packaging xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:PackageType>RL</cs:PackageType>
+				<cs:PackageQty>77</cs:PackageQty>
+				<cs:PackageDesc>1X40' RQ SLAC 77 ROLLS ON 24 PALLETS PLASTIC FILMS HS CODE; 392030 Temperature set at 20.0 c (68.0 f)Fresh Air Exchange rate set at 0 CubicMeterPerHour (0.0 CubicFeetPerMinute)</cs:PackageDesc>
+			</cs:Packaging>
+			<cs:GrossWeight xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:Weight>15988.95</cs:Weight>
+				<cs:WeightUnit>KGS</cs:WeightUnit>
+			</cs:GrossWeight>
+			<ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+				<ns0:SeqNumber>1</ns0:SeqNumber>
+				<ns0:MarksAndNumbersLine>AES NO;</ns0:MarksAndNumbersLine>
+			</ns0:MarksAndNumbers>
+			<ns0:MarksAndNumbers xmlns:ns0="http://www.cargosmart.com/common">
+				<ns0:SeqNumber>2</ns0:SeqNumber>
+				<ns0:MarksAndNumbersLine>X20130111020928</ns0:MarksAndNumbersLine>
+			</ns0:MarksAndNumbers>
+			<DisplaySequenceNumber>1</DisplaySequenceNumber>
+			<CurrentContainerNumber>OOLU617238</CurrentContainerNumber>
+			<CurrentContainerCheckDigit>6</CurrentContainerCheckDigit>
+			<TrafficModel>
+				<ns0:OutBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:OutBound>
+				<ns0:InBound xmlns:ns0="http://www.cargosmart.com/common">FCL</ns0:InBound>
+			</TrafficModel>
+			<CgoPkgName>Roll</CgoPkgName>
+			<CgoPkgCodeCount>1</CgoPkgCodeCount>
+			<Seal>
+				<ns0:SealType xmlns:ns0="http://www.cargosmart.com/common">SH</ns0:SealType>
+				<ns0:SealNumber xmlns:ns0="http://www.cargosmart.com/common">ul4255573</ns0:SealNumber>
+			</Seal>
+			<ArticleNumber>-1</ArticleNumber>
+			<ReeferCargoSpec>
+				<ns0:AtmosphereType xmlns:ns0="http://www.cargosmart.com/common">NP</ns0:AtmosphereType>
+				<cs:Temperature xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+					<cs:Temperature>20</cs:Temperature>
+					<cs:TemperatureUnit>C</cs:TemperatureUnit>
+				</cs:Temperature>
+				<cs:Ventilation xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+					<cs:Ventilation>0</cs:Ventilation>
+					<cs:VentilationUnit>cbmPerHour</cs:VentilationUnit>
+				</cs:Ventilation>
+				<ns0:GensetType xmlns:ns0="http://www.cargosmart.com/common">CO</ns0:GensetType>
+				<ns0:Remarks xmlns:ns0="http://www.cargosmart.com/common">genset: yes</ns0:Remarks>
+				<ns0:CO2 xmlns:ns0="http://www.cargosmart.com/common">0</ns0:CO2>
+				<ns0:O2 xmlns:ns0="http://www.cargosmart.com/common">0</ns0:O2>
+				<ns0:IsPreCoolingReq xmlns:ns0="http://www.cargosmart.com/common">false</ns0:IsPreCoolingReq>
+				<ns0:IsControlledAtmosphere xmlns:ns0="http://www.cargosmart.com/common">false</ns0:IsControlledAtmosphere>
+				<ns0:IsReeferOperational xmlns:ns0="http://www.cargosmart.com/common">true</ns0:IsReeferOperational>
+				<RFPackageUnit>
+					<ns0:PackageSeqNumber xmlns:ns0="http://www.cargosmart.com/common">1</ns0:PackageSeqNumber>
+					<ns0:PackageUnitQuantity xmlns:ns0="http://www.cargosmart.com/common">77</ns0:PackageUnitQuantity>
+					<ns0:PackageUnitDescription xmlns:ns0="http://www.cargosmart.com/common">1X40' RQ SLAC 77 ROLLS ON 24 PALLETS PLASTIC FILMS HS CODE; 392030 Temperature set at 20.0 c (68.0 f) Fresh Air Exchange rate set at 0 CubicMeterPerHour (0.0 CubicFeetPerMinute)</ns0:PackageUnitDescription>
+				</RFPackageUnit>
+			</ReeferCargoSpec>
+		</Cargo>
+		<Appointment>
+			<cs:Address xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:City>Columbus</cs:City>
+				<cs:County>Franklin</cs:County>
+				<cs:State>Ohio</cs:State>
+				<cs:Country>United States</cs:Country>
+				<cs:AddressLines>
+					<cs:AddressLine>Plastic supplier</cs:AddressLine>
+					<cs:AddressLine>2400 marylin lane,</cs:AddressLine>
+					<cs:AddressLine>Columbus</cs:AddressLine>
+					<cs:AddressLine>Ohio</cs:AddressLine>
+					<cs:AddressLine>United States</cs:AddressLine>
+				</cs:AddressLines>
+			</cs:Address>
+			<cs:Contact xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:FirstName>Stephens, John</cs:FirstName>
+				<cs:ContactPhone>
+					<cs:Number>1-614-4183142</cs:Number>
+				</cs:ContactPhone>
+			</cs:Contact>
+			<ns0:Sequence xmlns:ns0="http://www.cargosmart.com/common">1</ns0:Sequence>
+			<ns0:Type xmlns:ns0="http://www.cargosmart.com/common">PICKUP</ns0:Type>
+			<cs:ActualArrivalDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:GMT>2013-01-11T14:43:00</cs:GMT>
+				<cs:LocDT CSTimeZone="EST" TimeZone="EDT">2013-01-11T09:43:00</cs:LocDT>
+			</cs:ActualArrivalDT>
+			<cs:ActualDepartureDT xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:GMT>2013-01-11T15:50:00</cs:GMT>
+				<cs:LocDT CSTimeZone="EST" TimeZone="EDT">2013-01-11T10:50:00</cs:LocDT>
+			</cs:ActualDepartureDT>
+			<ns0:TransportLegCarrier xmlns:ns0="http://www.cargosmart.com/common">CONGNA</ns0:TransportLegCarrier>
+			<cs:Container xmlns:cs="http://www.cargosmart.com/common" xmlns="http://www.cargosmart.com/shipment/billoflading">
+				<cs:ContainerNumber>OOLU617238</cs:ContainerNumber>
+				<cs:ContainerCheckDigit>6</cs:ContainerCheckDigit>
+				<cs:CSContainerSizeType>45RE</cs:CSContainerSizeType>
+				<cs:CarrCntrSizeType>45R1</cs:CarrCntrSizeType>
+			</cs:Container>
+		</Appointment>
+		<FreightCharge>
+			<DisplaySeqNumber>1</DisplaySeqNumber>
+			<ChargeType>0</ChargeType>
+			<UnBill>true</UnBill>
+			<PayableElseWhere>false</PayableElseWhere>
+			<ChargeCode>DCF</ChargeCode>
+			<ChargePrintLable>I/B DOC FEE</ChargePrintLable>
+			<Basis>1</Basis>
+			<FreightRate>25</FreightRate>
+			<CalculateMethod>Lump Sum</CalculateMethod>
+			<ChargeAmount Currency="EUR">25</ChargeAmount>
+			<PaymentCurrency>EUR</PaymentCurrency>
+			<ControlOfficeCode>512</ControlOfficeCode>
+			<CollectionOfficeCode>ANR</CollectionOfficeCode>
+			<TotalAmount Currency="EUR">25</TotalAmount>
+			<TotalAmtInPmtCurrency Currency="EUR" ExchangeRate="1">25</TotalAmtInPmtCurrency>
+			<ExchRateToEurope>0</ExchRateToEurope>
+			<IsApprovedForCustomer>true</IsApprovedForCustomer>
+			<ChargeDesc>Inbound Documentation Fee</ChargeDesc>
+			<PayByInformation>
+				<PayerName>Sdv Belgium</PayerName>
+				<CarrierCustomerCode>4069006000</CarrierCustomerCode>
+				<CityDetails>
+					<ns0:City xmlns:ns0="http://www.cargosmart.com/common">Antwerpen</ns0:City>
+					<ns0:County xmlns:ns0="http://www.cargosmart.com/common">Antwerpen</ns0:County>
+					<ns0:State xmlns:ns0="http://www.cargosmart.com/common">Vlaanderen</ns0:State>
+					<ns0:Country xmlns:ns0="http://www.cargosmart.com/common">Belgium</ns0:Country>
+				</CityDetails>
+			</PayByInformation>
+			<RatePercentage>100</RatePercentage>
+		</FreightCharge>
+		<FreightCharge>
+			<DisplaySeqNumber>2</DisplaySeqNumber>
+			<ChargeType>1</ChargeType>
+			<UnBill>true</UnBill>
+			<PayableElseWhere>true</PayableElseWhere>
+			<ChargeCode>ENF</ChargeCode>
+			<ChargePrintLable>ENS FILING CHRG</ChargePrintLable>
+			<Basis>1</Basis>
+			<FreightRate>25</FreightRate>
+			<CalculateMethod>Lump Sum</CalculateMethod>
+			<ChargeAmount Currency="USD">25</ChargeAmount>
+			<PaymentCurrency>USD</PaymentCurrency>
+			<ControlOfficeCode>381</ControlOfficeCode>
+			<CollectionOfficeCode>CAQ</CollectionOfficeCode>
+			<TotalAmount Currency="USD">25</TotalAmount>
+			<TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1">25</TotalAmtInPmtCurrency>
+			<SVVD>
+				<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+				<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+				<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+				<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+				<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+				<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+				<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+			</SVVD>
+			<ExchRateToEurope>0</ExchRateToEurope>
+			<OBVoyRef>214 e</OBVoyRef>
+			<IsApprovedForCustomer>true</IsApprovedForCustomer>
+			<ChargeDesc>ENS Filing Charge</ChargeDesc>
+			<PayByInformation>
+				<PayerName>SDV Logistiques ( Canada) Inc.</PayerName>
+				<CarrierCustomerCode>3126812007</CarrierCustomerCode>
+				<CityDetails>
+					<ns0:City xmlns:ns0="http://www.cargosmart.com/common">Saint Laurent</ns0:City>
+					<ns0:State xmlns:ns0="http://www.cargosmart.com/common">Quebec</ns0:State>
+					<ns0:Country xmlns:ns0="http://www.cargosmart.com/common">Canada</ns0:Country>
+				</CityDetails>
+			</PayByInformation>
+			<RatePercentage>100</RatePercentage>
+		</FreightCharge>
+		<FreightCharge>
+			<DisplaySeqNumber>3</DisplaySeqNumber>
+			<ChargeType>1</ChargeType>
+			<UnBill>true</UnBill>
+			<PayableElseWhere>true</PayableElseWhere>
+			<ChargeCode>SEO</ChargeCode>
+			<ChargePrintLable>ORIG SEC SURCH</ChargePrintLable>
+			<Basis>1</Basis>
+			<FreightRate>7</FreightRate>
+			<CalculateMethod>40RQ</CalculateMethod>
+			<ChargeAmount Currency="CAD">7</ChargeAmount>
+			<PaymentCurrency>USD</PaymentCurrency>
+			<ControlOfficeCode>381</ControlOfficeCode>
+			<CollectionOfficeCode>CAQ</CollectionOfficeCode>
+			<TotalAmount Currency="CAD">7</TotalAmount>
+			<TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1.014302">7.1</TotalAmtInPmtCurrency>
+			<SVVD>
+				<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+				<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+				<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+				<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+				<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+				<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+				<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+			</SVVD>
+			<ExchRateToEurope>0</ExchRateToEurope>
+			<OBVoyRef>214 e</OBVoyRef>
+			<IsApprovedForCustomer>true</IsApprovedForCustomer>
+			<ChargeDesc>Security Surcharge at Origin</ChargeDesc>
+			<PayByInformation>
+				<PayerName>SDV Logistiques ( Canada) Inc.</PayerName>
+				<CarrierCustomerCode>3126812007</CarrierCustomerCode>
+				<CityDetails>
+					<ns0:City xmlns:ns0="http://www.cargosmart.com/common">Saint Laurent</ns0:City>
+					<ns0:State xmlns:ns0="http://www.cargosmart.com/common">Quebec</ns0:State>
+					<ns0:Country xmlns:ns0="http://www.cargosmart.com/common">Canada</ns0:Country>
+				</CityDetails>
+			</PayByInformation>
+			<RatePercentage>100</RatePercentage>
+		</FreightCharge>
+		<FreightCharge>
+			<DisplaySeqNumber>4</DisplaySeqNumber>
+			<ChargeType>1</ChargeType>
+			<UnBill>true</UnBill>
+			<PayableElseWhere>true</PayableElseWhere>
+			<ChargeCode>BAF</ChargeCode>
+			<ChargePrintLable>BUNKER ADJUST</ChargePrintLable>
+			<Basis>1</Basis>
+			<FreightRate>510</FreightRate>
+			<CalculateMethod>40RQ</CalculateMethod>
+			<ChargeAmount Currency="USD">510</ChargeAmount>
+			<PaymentCurrency>USD</PaymentCurrency>
+			<ControlOfficeCode>381</ControlOfficeCode>
+			<CollectionOfficeCode>CAQ</CollectionOfficeCode>
+			<TotalAmount Currency="USD">510</TotalAmount>
+			<TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1">510</TotalAmtInPmtCurrency>
+			<SVVD>
+				<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+				<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+				<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+				<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+				<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+				<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+				<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+			</SVVD>
+			<ExchRateToEurope>0</ExchRateToEurope>
+			<OBVoyRef>214 e</OBVoyRef>
+			<IsApprovedForCustomer>true</IsApprovedForCustomer>
+			<ChargeDesc>Bunker Adjustment Factor</ChargeDesc>
+			<PayByInformation>
+				<PayerName>SDV Logistiques ( Canada) Inc.</PayerName>
+				<CarrierCustomerCode>3126812007</CarrierCustomerCode>
+				<CityDetails>
+					<ns0:City xmlns:ns0="http://www.cargosmart.com/common">Saint Laurent</ns0:City>
+					<ns0:State xmlns:ns0="http://www.cargosmart.com/common">Quebec</ns0:State>
+					<ns0:Country xmlns:ns0="http://www.cargosmart.com/common">Canada</ns0:Country>
+				</CityDetails>
+			</PayByInformation>
+			<RatePercentage>100</RatePercentage>
+		</FreightCharge>
+		<FreightCharge>
+			<DisplaySeqNumber>5</DisplaySeqNumber>
+			<ChargeType>1</ChargeType>
+			<UnBill>true</UnBill>
+			<PayableElseWhere>true</PayableElseWhere>
+			<ChargeCode>Ocean Freight</ChargeCode>
+			<ChargePrintLable>Ocean Freight</ChargePrintLable>
+			<Basis>1</Basis>
+			<FreightRate>3993</FreightRate>
+			<CalculateMethod>40RQ</CalculateMethod>
+			<ChargeAmount Currency="USD">3993</ChargeAmount>
+			<PaymentCurrency>USD</PaymentCurrency>
+			<ControlOfficeCode>381</ControlOfficeCode>
+			<CollectionOfficeCode>CAQ</CollectionOfficeCode>
+			<TotalAmount Currency="USD">3993</TotalAmount>
+			<TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1">3993</TotalAmtInPmtCurrency>
+			<SVVD>
+				<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+				<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+				<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+				<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+				<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+				<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+				<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+			</SVVD>
+			<ExchRateToEurope>0</ExchRateToEurope>
+			<OBVoyRef>214 e</OBVoyRef>
+			<IsApprovedForCustomer>true</IsApprovedForCustomer>
+			<ChargeDesc>Ocean Freight</ChargeDesc>
+			<PayByInformation>
+				<PayerName>SDV Logistiques ( Canada) Inc.</PayerName>
+				<CarrierCustomerCode>3126812007</CarrierCustomerCode>
+				<CityDetails>
+					<ns0:City xmlns:ns0="http://www.cargosmart.com/common">Saint Laurent</ns0:City>
+					<ns0:State xmlns:ns0="http://www.cargosmart.com/common">Quebec</ns0:State>
+					<ns0:Country xmlns:ns0="http://www.cargosmart.com/common">Canada</ns0:Country>
+				</CityDetails>
+			</PayByInformation>
+			<RatePercentage>100</RatePercentage>
+		</FreightCharge>
+		<FreightChargeCNTR>
+			<DisplaySeqNumber>3</DisplaySeqNumber>
+			<ChargeType>1</ChargeType>
+			<UnBill>true</UnBill>
+			<PayableElseWhere>true</PayableElseWhere>
+			<ChargeCode>SEO</ChargeCode>
+			<ChargePrintLable>ORIG SEC SURCH</ChargePrintLable>
+			<Basis>1</Basis>
+			<FreightRate>7</FreightRate>
+			<CalculateMethod>40RQ</CalculateMethod>
+			<ChargeAmount Currency="CAD">7</ChargeAmount>
+			<PaymentCurrency>USD</PaymentCurrency>
+			<ControlOfficeCode>381</ControlOfficeCode>
+			<CollectionOfficeCode>CAQ</CollectionOfficeCode>
+			<TotalAmount Currency="CAD">7</TotalAmount>
+			<TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1.014302">7.1</TotalAmtInPmtCurrency>
+			<SVVD>
+				<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+				<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+				<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+				<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+				<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+				<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+				<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+			</SVVD>
+			<ExchRateToEurope>0</ExchRateToEurope>
+			<OBVoyRef>214 e</OBVoyRef>
+			<IsApprovedForCustomer>true</IsApprovedForCustomer>
+			<ChargeDesc>Security Surcharge at Origin</ChargeDesc>
+			<PayByInformation>
+				<PayerName>SDV Logistiques ( Canada) Inc.</PayerName>
+				<CarrierCustomerCode>3126812007</CarrierCustomerCode>
+				<CityDetails>
+					<ns0:City xmlns:ns0="http://www.cargosmart.com/common">Saint Laurent</ns0:City>
+					<ns0:State xmlns:ns0="http://www.cargosmart.com/common">Quebec</ns0:State>
+					<ns0:Country xmlns:ns0="http://www.cargosmart.com/common">Canada</ns0:Country>
+				</CityDetails>
+			</PayByInformation>
+			<RatePercentage>100</RatePercentage>
+			<ContainerNumber>OOLU617238</ContainerNumber>
+			<ContainerCheckDigit>6</ContainerCheckDigit>
+			<CarrCntrSizeType>45R1</CarrCntrSizeType>
+			<OOCLCntrSizeType>40RQ</OOCLCntrSizeType>
+		</FreightChargeCNTR>
+		<FreightChargeCNTR>
+			<DisplaySeqNumber>4</DisplaySeqNumber>
+			<ChargeType>1</ChargeType>
+			<UnBill>true</UnBill>
+			<PayableElseWhere>true</PayableElseWhere>
+			<ChargeCode>BAF</ChargeCode>
+			<ChargePrintLable>BUNKER ADJUST</ChargePrintLable>
+			<Basis>1</Basis>
+			<FreightRate>510</FreightRate>
+			<CalculateMethod>40RQ</CalculateMethod>
+			<ChargeAmount Currency="USD">510</ChargeAmount>
+			<PaymentCurrency>USD</PaymentCurrency>
+			<ControlOfficeCode>381</ControlOfficeCode>
+			<CollectionOfficeCode>CAQ</CollectionOfficeCode>
+			<TotalAmount Currency="USD">510</TotalAmount>
+			<TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1">510</TotalAmtInPmtCurrency>
+			<SVVD>
+				<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+				<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+				<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+				<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+				<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+				<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+				<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+			</SVVD>
+			<ExchRateToEurope>0</ExchRateToEurope>
+			<OBVoyRef>214 e</OBVoyRef>
+			<IsApprovedForCustomer>true</IsApprovedForCustomer>
+			<ChargeDesc>Bunker Adjustment Factor</ChargeDesc>
+			<PayByInformation>
+				<PayerName>SDV Logistiques ( Canada) Inc.</PayerName>
+				<CarrierCustomerCode>3126812007</CarrierCustomerCode>
+				<CityDetails>
+					<ns0:City xmlns:ns0="http://www.cargosmart.com/common">Saint Laurent</ns0:City>
+					<ns0:State xmlns:ns0="http://www.cargosmart.com/common">Quebec</ns0:State>
+					<ns0:Country xmlns:ns0="http://www.cargosmart.com/common">Canada</ns0:Country>
+				</CityDetails>
+			</PayByInformation>
+			<RatePercentage>100</RatePercentage>
+			<ContainerNumber>OOLU617238</ContainerNumber>
+			<ContainerCheckDigit>6</ContainerCheckDigit>
+			<CarrCntrSizeType>45R1</CarrCntrSizeType>
+			<OOCLCntrSizeType>40RQ</OOCLCntrSizeType>
+		</FreightChargeCNTR>
+		<FreightChargeCNTR>
+			<DisplaySeqNumber>5</DisplaySeqNumber>
+			<ChargeType>1</ChargeType>
+			<UnBill>true</UnBill>
+			<PayableElseWhere>true</PayableElseWhere>
+			<ChargeCode>Ocean Freight</ChargeCode>
+			<ChargePrintLable>Ocean Freight</ChargePrintLable>
+			<Basis>1</Basis>
+			<FreightRate>3993</FreightRate>
+			<CalculateMethod>40RQ</CalculateMethod>
+			<ChargeAmount Currency="USD">3993</ChargeAmount>
+			<PaymentCurrency>USD</PaymentCurrency>
+			<ControlOfficeCode>381</ControlOfficeCode>
+			<CollectionOfficeCode>CAQ</CollectionOfficeCode>
+			<TotalAmount Currency="USD">3993</TotalAmount>
+			<TotalAmtInPmtCurrency Currency="USD" ExchangeRate="1">3993</TotalAmtInPmtCurrency>
+			<SVVD>
+				<ns0:Service xmlns:ns0="http://www.cargosmart.com/common">GEX2</ns0:Service>
+				<ns0:Vessel xmlns:ns0="http://www.cargosmart.com/common">MOX</ns0:Vessel>
+				<ns0:VesselName xmlns:ns0="http://www.cargosmart.com/common">MONTREAL EXPRESS</ns0:VesselName>
+				<ns0:Voyage xmlns:ns0="http://www.cargosmart.com/common">214</ns0:Voyage>
+				<ns0:Direction xmlns:ns0="http://www.cargosmart.com/common">E</ns0:Direction>
+				<ns0:LloydsNumber xmlns:ns0="http://www.cargosmart.com/common">9253741</ns0:LloydsNumber>
+				<ns0:CallSign xmlns:ns0="http://www.cargosmart.com/common">MAHG5</ns0:CallSign>
+			</SVVD>
+			<ExchRateToEurope>0</ExchRateToEurope>
+			<OBVoyRef>214 e</OBVoyRef>
+			<IsApprovedForCustomer>true</IsApprovedForCustomer>
+			<ChargeDesc>Ocean Freight</ChargeDesc>
+			<PayByInformation>
+				<PayerName>SDV Logistiques ( Canada) Inc.</PayerName>
+				<CarrierCustomerCode>3126812007</CarrierCustomerCode>
+				<CityDetails>
+					<ns0:City xmlns:ns0="http://www.cargosmart.com/common">Saint Laurent</ns0:City>
+					<ns0:State xmlns:ns0="http://www.cargosmart.com/common">Quebec</ns0:State>
+					<ns0:Country xmlns:ns0="http://www.cargosmart.com/common">Canada</ns0:Country>
+				</CityDetails>
+			</PayByInformation>
+			<RatePercentage>100</RatePercentage>
+			<ContainerNumber>OOLU617238</ContainerNumber>
+			<ContainerCheckDigit>6</ContainerCheckDigit>
+			<CarrCntrSizeType>45R1</CarrCntrSizeType>
+			<OOCLCntrSizeType>40RQ</OOCLCntrSizeType>
+		</FreightChargeCNTR>
+	</Body>
+</BillOfLading>
