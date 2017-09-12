@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--示例 XML 文件由 XMLSpy v2006 U 创建 (http://www.altova.com)-->
+<Booking xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\home\tibco\B2BEDI\appchema\com\b2b\customer\bc\XML\CS-SYSINT-STD-IG-BC.XML.xsd">
+	<InterchangeControlHeader>
+		<ControlNumber>String</ControlNumber>
+		<SenderId>String</SenderId>
+		<ReceiverId>String</ReceiverId>
+		<DateTime>String</DateTime>
+		<ControlVersion>Strin</ControlVersion>
+		<UsageIndicator>S</UsageIndicator>
+		<MessageSessionId>String</MessageSessionId>
+	</InterchangeControlHeader>
+	<Confirmation>
+		<MessageHeader>
+			<TransactionInfo>
+				<BatchNumber>String</BatchNumber>
+				<MessageSender>String</MessageSender>
+				<MessageRecipient>String</MessageRecipient>
+				<MessageID>String</MessageID>
+				<DateCreated TimeZone="String">String</DateCreated>
+				<FileName>String</FileName>
+				<Version>String</Version>
+			</TransactionInfo>
+			<MessageFunction>Confirmed</MessageFunction>
+			<BookingNumber>String</BookingNumber>
+			<BookingOffice>String</BookingOffice>
+			<SCAC>String</SCAC>
+			<StatusDate TimeZone="String">String</StatusDate>
+			<TrafficMode>
+				<OutBound>LCL</OutBound>
+				<InBound>LCL</InBound>
+			</TrafficMode>
+		</MessageHeader>
+		<MessageBody>
+			<PartyInformation>
+				<Party>
+					<PartyType>SH</PartyType>
+					<PartyName>String</PartyName>
+					<CustomerUserID>String</CustomerUserID>
+					<CarrierCustomerCode>String</CarrierCustomerCode>
+					<PartyLocation>
+						<Address>
+							<AddressLines>String</AddressLines>
+						</Address>
+						<Street>String</Street>
+						<City>String</City>
+						<County>String</County>
+						<StateProvinceCode>Str</StateProvinceCode>
+						<StateProvince>String</StateProvince>
+						<CountryCode>String</CountryCode>
+						<CountryName>String</CountryName>
+						<LocationCode>
+							<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+							<UNLocationCode>Strin</UNLocationCode>
+							<SchedKDCode Type="K">Strin</SchedKDCode>
+						</LocationCode>
+						<PostalCode>String</PostalCode>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>String</FirstName>
+						<LastName>String</LastName>
+						<Phone>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>String</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>String</Number>
+						</Fax>
+						<Email>String</Email>
+						<Type>OutBound</Type>
+					</ContactPerson>
+				</Party>
+				<Party>
+					<PartyType>SH</PartyType>
+					<PartyName>String</PartyName>
+					<CustomerUserID>String</CustomerUserID>
+					<CarrierCustomerCode>String</CarrierCustomerCode>
+					<PartyLocation>
+						<Address>
+							<AddressLines>String</AddressLines>
+						</Address>
+						<Street>String</Street>
+						<City>String</City>
+						<County>String</County>
+						<StateProvinceCode>Str</StateProvinceCode>
+						<StateProvince>String</StateProvince>
+						<CountryCode>String</CountryCode>
+						<CountryName>String</CountryName>
+						<LocationCode>
+							<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+							<UNLocationCode>Strin</UNLocationCode>
+							<SchedKDCode Type="K">Strin</SchedKDCode>
+						</LocationCode>
+						<PostalCode>String</PostalCode>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>String</FirstName>
+						<LastName>String</LastName>
+						<Phone>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>String</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>String</Number>
+						</Fax>
+						<Email>String</Email>
+						<Type>OutBound</Type>
+					</ContactPerson>
+				</Party>
+			</PartyInformation>
+			<ShipmentDetails>
+				<RouteInformation>
+					<EventDate>
+						<FullPickup TimeZone="String">String</FullPickup>
+						<FullReturnCutoff TimeZone="String">String</FullReturnCutoff>
+						<ArrivalAtFinalHub TimeZone="String">String</ArrivalAtFinalHub>
+						<DeliveryDate TimeZone="String">String</DeliveryDate>
+						<ReqDeliveryDate TimeZone="String">String</ReqDeliveryDate>
+						<VGMCutOffDate TimeZone="String">String</VGMCutOffDate>
+					</EventDate>
+					<Haulage>
+						<Outbound>M</Outbound>
+						<Inbound>M</Inbound>
+					</Haulage>
+					<LocationDetails>
+						<FunctionCode>ORG</FunctionCode>
+						<LocationName>String</LocationName>
+						<LocationDetails>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>String</Street>
+							<City>String</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<PostalCode>String</PostalCode>
+						</LocationDetails>
+						<EventDate>
+							<Departure TimeZone="String">String</Departure>
+							<Arrival TimeZone="String">String</Arrival>
+						</EventDate>
+					</LocationDetails>
+					<PortDetails>
+						<FunctionCode>POL</FunctionCode>
+						<LocationName>String</LocationName>
+						<LocationDetails>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>String</Street>
+							<City>String</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<PostalCode>String</PostalCode>
+						</LocationDetails>
+						<EventDate>
+							<Departure TimeZone="String" EstActIndicator="0">String</Departure>
+							<Arrival TimeZone="String" EstActIndicator="0">String</Arrival>
+						</EventDate>
+						<SequenceNumber>1</SequenceNumber>
+						<VesselVoyageInformation>
+							<VoyageEvent>String</VoyageEvent>
+							<ServiceName Code="Strin">String</ServiceName>
+							<VoyageNumberDirection>String</VoyageNumberDirection>
+							<VesselInformation>
+								<VesselCode CallSign="String" LloydsCode="String">Strin</VesselCode>
+								<VesselName>String</VesselName>
+								<VesselRegistrationCountry>String</VesselRegistrationCountry>
+							</VesselInformation>
+						</VesselVoyageInformation>
+					</PortDetails>
+					<StopOff>
+						<SequenceNumber>1</SequenceNumber>
+						<PickupDetails>
+							<FacilityCode>Strin</FacilityCode>
+							<FacilityName>String</FacilityName>
+							<Location>String</Location>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<CityName>String</CityName>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<County>String</County>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<PostalCode>String</PostalCode>
+						</PickupDetails>
+						<ReturnDetails>
+							<FacilityCode>Strin</FacilityCode>
+							<FacilityName>String</FacilityName>
+							<Location>String</Location>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<CityName>String</CityName>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<County>String</County>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<PostalCode>String</PostalCode>
+						</ReturnDetails>
+					</StopOff>
+				</RouteInformation>
+				<EquipmentInformation>
+					<Containers>
+						<IsSOC>0</IsSOC>
+						<ContainerType>Stri</ContainerType>
+						<ContainerNumber CheckDigit="St">String</ContainerNumber>
+						<SealNumber Type="St">String</SealNumber>
+						<Weight Units="String" Qualifier="Gross">3.1415</Weight>
+						<Volume Units="CBF">3.1415</Volume>
+						<TrafficMode>
+							<OutBound>LCL</OutBound>
+							<InBound>LCL</InBound>
+						</TrafficMode>
+					</Containers>
+					<ContainerMovement>
+						<EmptyPickup Type="Stri" Number="0">
+							<LocationDetails>
+								<FacilityCode>Strin</FacilityCode>
+								<FacilityName>String</FacilityName>
+								<Location>String</Location>
+								<LocationCode>
+									<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<Address>
+									<AddressLines>String</AddressLines>
+								</Address>
+								<CityName>String</CityName>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<County>String</County>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<PostalCode>String</PostalCode>
+							</LocationDetails>
+							<EventDate TimeZone="String">String</EventDate>
+						</EmptyPickup>
+						<EmptyReturn Type="Stri" Number="0">
+							<LocationDetails>
+								<FacilityCode>Strin</FacilityCode>
+								<FacilityName>String</FacilityName>
+								<Location>String</Location>
+								<LocationCode>
+									<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<Address>
+									<AddressLines>String</AddressLines>
+								</Address>
+								<CityName>String</CityName>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<County>String</County>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<PostalCode>String</PostalCode>
+							</LocationDetails>
+							<EventDate TimeZone="String">String</EventDate>
+						</EmptyReturn>
+						<FullPickup Type="Stri" Number="0">
+							<LocationDetails>
+								<FacilityCode>Strin</FacilityCode>
+								<FacilityName>String</FacilityName>
+								<Location>String</Location>
+								<LocationCode>
+									<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<Address>
+									<AddressLines>String</AddressLines>
+								</Address>
+								<CityName>String</CityName>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<County>String</County>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<PostalCode>String</PostalCode>
+							</LocationDetails>
+							<EventDate TimeZone="String">String</EventDate>
+						</FullPickup>
+						<FullReturn Type="Stri" Number="0">
+							<LocationDetails>
+								<FacilityCode>Strin</FacilityCode>
+								<FacilityName>String</FacilityName>
+								<Location>String</Location>
+								<LocationCode>
+									<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<Address>
+									<AddressLines>String</AddressLines>
+								</Address>
+								<CityName>String</CityName>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<County>String</County>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<PostalCode>String</PostalCode>
+							</LocationDetails>
+							<EventDate TimeZone="String">String</EventDate>
+						</FullReturn>
+					</ContainerMovement>
+					<DetentionDemurrage>
+						<Type>DEM</Type>
+						<ContainerNumber CheckDigit="St">String</ContainerNumber>
+						<EventDate>
+							<FreeDemurrageStartDate TimeZone="String">String</FreeDemurrageStartDate>
+							<FreeDetentionStartDate TimeZone="String">String</FreeDetentionStartDate>
+						</EventDate>
+						<FreeTime Type="C">0</FreeTime>
+					</DetentionDemurrage>
+				</EquipmentInformation>
+				<CargoInformation>
+					<CargoGroup>
+						<CargoNature>String</CargoNature>
+						<CommodityCode>String</CommodityCode>
+						<Weight Units="String" Qualifier="Gross">3.1415</Weight>
+						<Volume Units="CBF">3.1415</Volume>
+						<Package Type="String">String</Package>
+						<ContainerNumber CheckDigit="St">String</ContainerNumber>
+						<CargoDescription>
+							<DescriptionLine>String</DescriptionLine>
+							<DescriptionLine>String</DescriptionLine>
+						</CargoDescription>
+						<MarksAndNumbers>
+							<MarksAndNumbersLine>String</MarksAndNumbersLine>
+						</MarksAndNumbers>
+						<DangerousCargo>
+							<DangerousCargoInfo>
+								<HazardousMaterial>
+									<DGRegulator>ADR</DGRegulator>
+									<IMCOClass>String</IMCOClass>
+									<IMDGPage>String</IMDGPage>
+									<UNNumber>String</UNNumber>
+									<TechnicalShippingName>String</TechnicalShippingName>
+									<ProperShippingName>String</ProperShippingName>
+									<EMSNumber>String</EMSNumber>
+									<PSAClass>String</PSAClass>
+									<MFAGPageNumber>String</MFAGPageNumber>
+									<FlashPoint Units="C">3.14</FlashPoint>
+									<DGElevationTemperature Units="C">3.14</DGElevationTemperature>
+									<State>String</State>
+									<ApprovalCode>String</ApprovalCode>
+									<Label>String</Label>
+									<Weight Units="String" Qualifier="Gross">3.141</Weight>
+									<NetExplosiveWeight Units="TON">3.141</NetExplosiveWeight>
+									<Indicators>
+										<isMarinePollutant>0</isMarinePollutant>
+										<isInhalationHazardous>0</isInhalationHazardous>
+										<isLimitedQuantity>0</isLimitedQuantity>
+										<isReportableQuantity>0</isReportableQuantity>
+										<isEmptyUnclean>0</isEmptyUnclean>
+									</Indicators>
+									<Package>
+										<PackagingGroupCode>I</PackagingGroupCode>
+										<InnerPackageDescription Type="String">String</InnerPackageDescription>
+										<OuterPackageDescription Type="String">String</OuterPackageDescription>
+									</Package>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</HazardousMaterial>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</DangerousCargoInfo>
+						</DangerousCargo>
+						<ReeferCargo>
+							<ReeferCargoInfo>
+								<ReeferSettings AtmosphereType="CA" VentSettingCode="A" GenSetType="NR">
+									<Temperature Units="C">3.1415</Temperature>
+									<Ventilation Units="degrees">0</Ventilation>
+									<SensitiveCargoDesc>String</SensitiveCargoDesc>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</ReeferSettings>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</ReeferCargoInfo>
+						</ReeferCargo>
+						<AwkwardCargo>
+							<AwkwardCargoInfo>
+								<AwkwardCargoDetails>
+									<Height Units="String">3.141</Height>
+									<Width Units="String">3.141</Width>
+									<Length Units="String">3.141</Length>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</AwkwardCargoDetails>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</AwkwardCargoInfo>
+						</AwkwardCargo>
+					</CargoGroup>
+					<CargoGroup>
+						<CargoNature>String</CargoNature>
+						<CommodityCode>String</CommodityCode>
+						<Weight Units="String" Qualifier="Gross">3.1415</Weight>
+						<Volume Units="CBF">3.1415</Volume>
+						<Package Type="String">String</Package>
+						<ContainerNumber CheckDigit="St">String</ContainerNumber>
+						<CargoDescription>
+							<DescriptionLine>String</DescriptionLine>
+							<DescriptionLine>String</DescriptionLine>
+						</CargoDescription>
+						<MarksAndNumbers>
+							<MarksAndNumbersLine>String</MarksAndNumbersLine>
+						</MarksAndNumbers>
+						<DangerousCargo>
+							<DangerousCargoInfo>
+								<HazardousMaterial>
+									<DGRegulator>ADR</DGRegulator>
+									<IMCOClass>String</IMCOClass>
+									<IMDGPage>String</IMDGPage>
+									<UNNumber>String</UNNumber>
+									<TechnicalShippingName>String</TechnicalShippingName>
+									<ProperShippingName>String</ProperShippingName>
+									<EMSNumber>String</EMSNumber>
+									<PSAClass>String</PSAClass>
+									<MFAGPageNumber>String</MFAGPageNumber>
+									<FlashPoint Units="C">3.14</FlashPoint>
+									<DGElevationTemperature Units="C">3.14</DGElevationTemperature>
+									<State>String</State>
+									<ApprovalCode>String</ApprovalCode>
+									<Label>String</Label>
+									<Weight Units="String" Qualifier="Gross">3.141</Weight>
+									<NetExplosiveWeight Units="TON">3.141</NetExplosiveWeight>
+									<Indicators>
+										<isMarinePollutant>0</isMarinePollutant>
+										<isInhalationHazardous>0</isInhalationHazardous>
+										<isLimitedQuantity>0</isLimitedQuantity>
+										<isReportableQuantity>0</isReportableQuantity>
+										<isEmptyUnclean>0</isEmptyUnclean>
+									</Indicators>
+									<Package>
+										<PackagingGroupCode>I</PackagingGroupCode>
+										<InnerPackageDescription Type="String">String</InnerPackageDescription>
+										<OuterPackageDescription Type="String">String</OuterPackageDescription>
+									</Package>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</HazardousMaterial>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</DangerousCargoInfo>
+						</DangerousCargo>
+						<ReeferCargo>
+							<ReeferCargoInfo>
+								<ReeferSettings AtmosphereType="CA" PreCooling="0" ROIndicator="0" Humidity="0" CO2="10" O2="10" VentSettingCode="A" GenSetType="NR" CAIndicator="0">
+									<Temperature Units="C">3.1415</Temperature>
+									<Ventilation Units="degrees">0</Ventilation>
+									<SensitiveCargoDesc>String</SensitiveCargoDesc>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</ReeferSettings>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</ReeferCargoInfo>
+						</ReeferCargo>
+						<AwkwardCargo>
+							<AwkwardCargoInfo>
+								<AwkwardCargoDetails>
+									<Height Units="String">3.141</Height>
+									<Width Units="String">3.141</Width>
+									<Length Units="String">3.141</Length>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</AwkwardCargoDetails>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</AwkwardCargoInfo>
+						</AwkwardCargo>
+					</CargoGroup>
+				</CargoInformation>
+				<ExternalReferences>
+					<References>
+						<ReferenceType>SO</ReferenceType>
+						<ReferenceName>String</ReferenceName>
+						<ReferenceNumber>String</ReferenceNumber>
+					</References>
+				</ExternalReferences>
+				<AppointmentInformation>
+					<AppointmentInfo>
+						<SequenceNumber>0</SequenceNumber>
+						<Type>PICKUP</Type>
+						<CustomerSiteName>String</CustomerSiteName>
+						<LocationDetails>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>String</Street>
+							<City>String</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<PostalCode>String</PostalCode>
+						</LocationDetails>
+						<CargoSmartCityID>Strin</CargoSmartCityID>
+						<ContactName>String</ContactName>
+						<ContactPhoneNumber>String</ContactPhoneNumber>
+						<AppointmentDateTime TimeZone="String">String</AppointmentDateTime>
+					</AppointmentInfo>
+				</AppointmentInformation>
+				<DocumentInformation>
+					<RequiredDocuments>
+						<DocumentType>String</DocumentType>
+						<DueDate TimeZone="String">String</DueDate>
+					</RequiredDocuments>
+				</DocumentInformation>
+			</ShipmentDetails>
+		</MessageBody>
+		<SummaryDetails>
+			<OtherRemarks>
+				<RemarksLines>String</RemarksLines>
+			</OtherRemarks>
+		</SummaryDetails>
+	</Confirmation>
+	<Confirmation>
+		<MessageHeader>
+			<TransactionInfo>
+				<BatchNumber>String</BatchNumber>
+				<MessageSender>String</MessageSender>
+				<MessageRecipient>String</MessageRecipient>
+				<MessageID>String</MessageID>
+				<DateCreated TimeZone="String">String</DateCreated>
+				<FileName>String</FileName>
+				<Version>String</Version>
+			</TransactionInfo>
+			<MessageFunction>Confirmed</MessageFunction>
+			<BookingNumber>String</BookingNumber>
+			<BookingOffice>String</BookingOffice>
+			<SCAC>String</SCAC>
+			<StatusDate TimeZone="String">String</StatusDate>
+			<TrafficMode>
+				<OutBound>LCL</OutBound>
+				<InBound>LCL</InBound>
+			</TrafficMode>
+		</MessageHeader>
+		<MessageBody>
+			<PartyInformation>
+				<Party>
+					<PartyType>SH</PartyType>
+					<PartyName>String</PartyName>
+					<CustomerUserID>String</CustomerUserID>
+					<CarrierCustomerCode>String</CarrierCustomerCode>
+					<PartyLocation>
+						<Address>
+							<AddressLines>String</AddressLines>
+						</Address>
+						<Street>String</Street>
+						<City>String</City>
+						<County>String</County>
+						<StateProvinceCode>Str</StateProvinceCode>
+						<StateProvince>String</StateProvince>
+						<CountryCode>String</CountryCode>
+						<CountryName>String</CountryName>
+						<LocationCode>
+							<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+							<UNLocationCode>Strin</UNLocationCode>
+							<SchedKDCode Type="K">Strin</SchedKDCode>
+						</LocationCode>
+						<PostalCode>String</PostalCode>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>String</FirstName>
+						<LastName>String</LastName>
+						<Phone>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>String</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>String</Number>
+						</Fax>
+						<Email>String</Email>
+						<Type>OutBound</Type>
+					</ContactPerson>
+				</Party>
+				<Party>
+					<PartyType>SH</PartyType>
+					<PartyName>String</PartyName>
+					<CustomerUserID>String</CustomerUserID>
+					<CarrierCustomerCode>String</CarrierCustomerCode>
+					<PartyLocation>
+						<Address>
+							<AddressLines>String</AddressLines>
+						</Address>
+						<Street>String</Street>
+						<City>String</City>
+						<County>String</County>
+						<StateProvinceCode>Str</StateProvinceCode>
+						<StateProvince>String</StateProvince>
+						<CountryCode>String</CountryCode>
+						<CountryName>String</CountryName>
+						<LocationCode>
+							<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+							<UNLocationCode>Strin</UNLocationCode>
+							<SchedKDCode Type="K">Strin</SchedKDCode>
+						</LocationCode>
+						<PostalCode>String</PostalCode>
+					</PartyLocation>
+					<ContactPerson>
+						<FirstName>String</FirstName>
+						<LastName>String</LastName>
+						<Phone>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>String</Number>
+						</Phone>
+						<Fax>
+							<CountryCode>Str</CountryCode>
+							<AreaCode>Strin</AreaCode>
+							<Number>String</Number>
+						</Fax>
+						<Email>String</Email>
+						<Type>OutBound</Type>
+					</ContactPerson>
+				</Party>
+			</PartyInformation>
+			<ShipmentDetails>
+				<RouteInformation>
+					<EventDate>
+						<FullPickup TimeZone="String">String</FullPickup>
+						<FullReturnCutoff TimeZone="String">String</FullReturnCutoff>
+						<ArrivalAtFinalHub TimeZone="String">String</ArrivalAtFinalHub>
+						<DeliveryDate TimeZone="String">String</DeliveryDate>
+						<ReqDeliveryDate TimeZone="String">String</ReqDeliveryDate>
+						<VGMCutOffDate TimeZone="String">String</VGMCutOffDate>
+					</EventDate>
+					<Haulage>
+						<Outbound>M</Outbound>
+						<Inbound>M</Inbound>
+					</Haulage>
+					<LocationDetails>
+						<FunctionCode>ORG</FunctionCode>
+						<LocationName>String</LocationName>
+						<LocationDetails>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>String</Street>
+							<City>String</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<PostalCode>String</PostalCode>
+						</LocationDetails>
+						<EventDate>
+							<Departure TimeZone="String">String</Departure>
+							<Arrival TimeZone="String">String</Arrival>
+						</EventDate>
+					</LocationDetails>
+					<PortDetails>
+						<FunctionCode>POL</FunctionCode>
+						<LocationName>String</LocationName>
+						<LocationDetails>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>String</Street>
+							<City>String</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<PostalCode>String</PostalCode>
+						</LocationDetails>
+						<EventDate>
+							<Departure TimeZone="String" EstActIndicator="0">String</Departure>
+							<Arrival TimeZone="String" EstActIndicator="0">String</Arrival>
+						</EventDate>
+						<SequenceNumber>1</SequenceNumber>
+						<VesselVoyageInformation>
+							<VoyageEvent>String</VoyageEvent>
+							<ServiceName Code="Strin">String</ServiceName>
+							<VoyageNumberDirection>String</VoyageNumberDirection>
+							<VesselInformation>
+								<VesselCode CallSign="String" LloydsCode="String">Strin</VesselCode>
+								<VesselName>String</VesselName>
+								<VesselRegistrationCountry>String</VesselRegistrationCountry>
+							</VesselInformation>
+						</VesselVoyageInformation>
+					</PortDetails>
+					<StopOff>
+						<SequenceNumber>1</SequenceNumber>
+						<PickupDetails>
+							<FacilityCode>Strin</FacilityCode>
+							<FacilityName>String</FacilityName>
+							<Location>String</Location>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<CityName>String</CityName>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<County>String</County>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<PostalCode>String</PostalCode>
+						</PickupDetails>
+						<ReturnDetails>
+							<FacilityCode>Strin</FacilityCode>
+							<FacilityName>String</FacilityName>
+							<Location>String</Location>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<CityName>String</CityName>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<County>String</County>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<PostalCode>String</PostalCode>
+						</ReturnDetails>
+					</StopOff>
+				</RouteInformation>
+				<EquipmentInformation>
+					<Containers>
+						<IsSOC>0</IsSOC>
+						<ContainerType>Stri</ContainerType>
+						<ContainerNumber CheckDigit="St">String</ContainerNumber>
+						<SealNumber Type="St">String</SealNumber>
+						<Weight Units="String" Qualifier="Gross">3.1415</Weight>
+						<Volume Units="CBF">3.1415</Volume>
+						<TrafficMode>
+							<OutBound>LCL</OutBound>
+							<InBound>LCL</InBound>
+						</TrafficMode>
+					</Containers>
+					<ContainerMovement>
+						<EmptyPickup Type="Stri" Number="0">
+							<LocationDetails>
+								<FacilityCode>Strin</FacilityCode>
+								<FacilityName>String</FacilityName>
+								<Location>String</Location>
+								<LocationCode>
+									<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<Address>
+									<AddressLines>String</AddressLines>
+								</Address>
+								<CityName>String</CityName>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<County>String</County>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<PostalCode>String</PostalCode>
+							</LocationDetails>
+							<EventDate TimeZone="String">String</EventDate>
+						</EmptyPickup>
+						<EmptyReturn Type="Stri" Number="0">
+							<LocationDetails>
+								<FacilityCode>Strin</FacilityCode>
+								<FacilityName>String</FacilityName>
+								<Location>String</Location>
+								<LocationCode>
+									<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<Address>
+									<AddressLines>String</AddressLines>
+								</Address>
+								<CityName>String</CityName>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<County>String</County>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<PostalCode>String</PostalCode>
+							</LocationDetails>
+							<EventDate TimeZone="String">String</EventDate>
+						</EmptyReturn>
+						<FullPickup Type="Stri" Number="0">
+							<LocationDetails>
+								<FacilityCode>Strin</FacilityCode>
+								<FacilityName>String</FacilityName>
+								<Location>String</Location>
+								<LocationCode>
+									<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<Address>
+									<AddressLines>String</AddressLines>
+								</Address>
+								<CityName>String</CityName>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<County>String</County>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<PostalCode>String</PostalCode>
+							</LocationDetails>
+							<EventDate TimeZone="String">String</EventDate>
+						</FullPickup>
+						<FullReturn Type="Stri" Number="0">
+							<LocationDetails>
+								<FacilityCode>Strin</FacilityCode>
+								<FacilityName>String</FacilityName>
+								<Location>String</Location>
+								<LocationCode>
+									<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+									<UNLocationCode>Strin</UNLocationCode>
+									<SchedKDCode Type="K">Strin</SchedKDCode>
+								</LocationCode>
+								<Address>
+									<AddressLines>String</AddressLines>
+								</Address>
+								<CityName>String</CityName>
+								<StateProvinceCode>Str</StateProvinceCode>
+								<StateProvince>String</StateProvince>
+								<County>String</County>
+								<CountryCode>String</CountryCode>
+								<CountryName>String</CountryName>
+								<PostalCode>String</PostalCode>
+							</LocationDetails>
+							<EventDate TimeZone="String">String</EventDate>
+						</FullReturn>
+					</ContainerMovement>
+					<DetentionDemurrage>
+						<Type>DEM</Type>
+						<ContainerNumber CheckDigit="St">String</ContainerNumber>
+						<EventDate>
+							<FreeDemurrageStartDate TimeZone="String">String</FreeDemurrageStartDate>
+							<FreeDetentionStartDate TimeZone="String">String</FreeDetentionStartDate>
+						</EventDate>
+						<FreeTime Type="C">0</FreeTime>
+					</DetentionDemurrage>
+				</EquipmentInformation>
+				<CargoInformation>
+					<CargoGroup>
+						<CargoNature>String</CargoNature>
+						<CommodityCode>String</CommodityCode>
+						<Weight Units="String" Qualifier="Gross">3.1415</Weight>
+						<Volume Units="CBF">3.1415</Volume>
+						<Package Type="String">String</Package>
+						<ContainerNumber CheckDigit="St">String</ContainerNumber>
+						<CargoDescription>
+							<DescriptionLine>String</DescriptionLine>
+							<DescriptionLine>String</DescriptionLine>
+						</CargoDescription>
+						<MarksAndNumbers>
+							<MarksAndNumbersLine>String</MarksAndNumbersLine>
+						</MarksAndNumbers>
+						<DangerousCargo>
+							<DangerousCargoInfo>
+								<HazardousMaterial>
+									<DGRegulator>ADR</DGRegulator>
+									<IMCOClass>String</IMCOClass>
+									<IMDGPage>String</IMDGPage>
+									<UNNumber>String</UNNumber>
+									<TechnicalShippingName>String</TechnicalShippingName>
+									<ProperShippingName>String</ProperShippingName>
+									<EMSNumber>String</EMSNumber>
+									<PSAClass>String</PSAClass>
+									<MFAGPageNumber>String</MFAGPageNumber>
+									<FlashPoint Units="C">3.14</FlashPoint>
+									<DGElevationTemperature Units="C">3.14</DGElevationTemperature>
+									<State>String</State>
+									<ApprovalCode>String</ApprovalCode>
+									<Label>String</Label>
+									<Weight Units="String" Qualifier="Gross">3.141</Weight>
+									<NetExplosiveWeight Units="TON">3.141</NetExplosiveWeight>
+									<Indicators>
+										<isMarinePollutant>0</isMarinePollutant>
+										<isInhalationHazardous>0</isInhalationHazardous>
+										<isLimitedQuantity>0</isLimitedQuantity>
+										<isReportableQuantity>0</isReportableQuantity>
+										<isEmptyUnclean>0</isEmptyUnclean>
+									</Indicators>
+									<Package>
+										<PackagingGroupCode>I</PackagingGroupCode>
+										<InnerPackageDescription Type="String">String</InnerPackageDescription>
+										<OuterPackageDescription Type="String">String</OuterPackageDescription>
+									</Package>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</HazardousMaterial>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</DangerousCargoInfo>
+						</DangerousCargo>
+						<ReeferCargo>
+							<ReeferCargoInfo>
+								<ReeferSettings AtmosphereType="CA" PreCooling="0" ROIndicator="0" Humidity="0" CO2="10" O2="10" VentSettingCode="A" GenSetType="NR" CAIndicator="0">
+									<Temperature Units="C">3.1415</Temperature>
+									<Ventilation Units="degrees">0</Ventilation>
+									<SensitiveCargoDesc>String</SensitiveCargoDesc>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</ReeferSettings>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</ReeferCargoInfo>
+						</ReeferCargo>
+						<AwkwardCargo>
+							<AwkwardCargoInfo>
+								<AwkwardCargoDetails>
+									<Height Units="String">3.141</Height>
+									<Width Units="String">3.141</Width>
+									<Length Units="String">3.141</Length>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</AwkwardCargoDetails>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</AwkwardCargoInfo>
+						</AwkwardCargo>
+					</CargoGroup>
+					<CargoGroup>
+						<CargoNature>String</CargoNature>
+						<CommodityCode>String</CommodityCode>
+						<Weight Units="String" Qualifier="Gross">3.1415</Weight>
+						<Volume Units="CBF">3.1415</Volume>
+						<Package Type="String">String</Package>
+						<ContainerNumber CheckDigit="St">String</ContainerNumber>
+						<CargoDescription>
+							<DescriptionLine>String</DescriptionLine>
+							<DescriptionLine>String</DescriptionLine>
+						</CargoDescription>
+						<MarksAndNumbers>
+							<MarksAndNumbersLine>String</MarksAndNumbersLine>
+						</MarksAndNumbers>
+						<DangerousCargo>
+							<DangerousCargoInfo>
+								<HazardousMaterial>
+									<DGRegulator>ADR</DGRegulator>
+									<IMCOClass>String</IMCOClass>
+									<IMDGPage>String</IMDGPage>
+									<UNNumber>String</UNNumber>
+									<TechnicalShippingName>String</TechnicalShippingName>
+									<ProperShippingName>String</ProperShippingName>
+									<EMSNumber>String</EMSNumber>
+									<PSAClass>String</PSAClass>
+									<MFAGPageNumber>String</MFAGPageNumber>
+									<FlashPoint Units="C">3.14</FlashPoint>
+									<DGElevationTemperature Units="C">3.14</DGElevationTemperature>
+									<State>String</State>
+									<ApprovalCode>String</ApprovalCode>
+									<Label>String</Label>
+									<Weight Units="String" Qualifier="Gross">3.141</Weight>
+									<NetExplosiveWeight Units="TON">3.141</NetExplosiveWeight>
+									<Indicators>
+										<isMarinePollutant>0</isMarinePollutant>
+										<isInhalationHazardous>0</isInhalationHazardous>
+										<isLimitedQuantity>0</isLimitedQuantity>
+										<isReportableQuantity>0</isReportableQuantity>
+										<isEmptyUnclean>0</isEmptyUnclean>
+									</Indicators>
+									<Package>
+										<PackagingGroupCode>I</PackagingGroupCode>
+										<InnerPackageDescription Type="String">String</InnerPackageDescription>
+										<OuterPackageDescription Type="String">String</OuterPackageDescription>
+									</Package>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</HazardousMaterial>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</DangerousCargoInfo>
+						</DangerousCargo>
+						<ReeferCargo>
+							<ReeferCargoInfo>
+								<ReeferSettings AtmosphereType="CA" PreCooling="0" ROIndicator="0" Humidity="0" CO2="1" O2="1" VentSettingCode="A" GenSetType="NR" CAIndicator="0">
+									<Temperature Units="C">3.1415</Temperature>
+									<Ventilation Units="degrees">0</Ventilation>
+									<SensitiveCargoDesc>String</SensitiveCargoDesc>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</ReeferSettings>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</ReeferCargoInfo>
+						</ReeferCargo>
+						<AwkwardCargo>
+							<AwkwardCargoInfo>
+								<AwkwardCargoDetails>
+									<Height Units="String">3.141</Height>
+									<Width Units="String">3.141</Width>
+									<Length Units="String">3.141</Length>
+									<Remarks>
+										<RemarksLines>String</RemarksLines>
+									</Remarks>
+								</AwkwardCargoDetails>
+								<ContactDetails>
+									<FirstName>String</FirstName>
+									<LastName>String</LastName>
+									<Phone>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Phone>
+									<Fax>
+										<CountryCode>Str</CountryCode>
+										<AreaCode>Strin</AreaCode>
+										<Number>String</Number>
+									</Fax>
+									<Email>String</Email>
+									<Type>OutBound</Type>
+								</ContactDetails>
+							</AwkwardCargoInfo>
+						</AwkwardCargo>
+					</CargoGroup>
+				</CargoInformation>
+				<ExternalReferences>
+					<References>
+						<ReferenceType>SO</ReferenceType>
+						<ReferenceName>String</ReferenceName>
+						<ReferenceNumber>String</ReferenceNumber>
+					</References>
+				</ExternalReferences>
+				<AppointmentInformation>
+					<AppointmentInfo>
+						<SequenceNumber>0</SequenceNumber>
+						<Type>PICKUP</Type>
+						<CustomerSiteName>String</CustomerSiteName>
+						<LocationDetails>
+							<Address>
+								<AddressLines>String</AddressLines>
+							</Address>
+							<Street>String</Street>
+							<City>String</City>
+							<County>String</County>
+							<StateProvinceCode>Str</StateProvinceCode>
+							<StateProvince>String</StateProvince>
+							<CountryCode>String</CountryCode>
+							<CountryName>String</CountryName>
+							<LocationCode>
+								<MutuallyDefinedCode>Strin</MutuallyDefinedCode>
+								<UNLocationCode>Strin</UNLocationCode>
+								<SchedKDCode Type="K">Strin</SchedKDCode>
+							</LocationCode>
+							<PostalCode>String</PostalCode>
+						</LocationDetails>
+						<CargoSmartCityID>Strin</CargoSmartCityID>
+						<ContactName>String</ContactName>
+						<ContactPhoneNumber>String</ContactPhoneNumber>
+						<AppointmentDateTime TimeZone="String">String</AppointmentDateTime>
+					</AppointmentInfo>
+				</AppointmentInformation>
+				<DocumentInformation>
+					<RequiredDocuments>
+						<DocumentType>String</DocumentType>
+						<DueDate TimeZone="String">String</DueDate>
+					</RequiredDocuments>
+				</DocumentInformation>
+			</ShipmentDetails>
+		</MessageBody>
+		<SummaryDetails>
+			<OtherRemarks>
+				<RemarksLines>String</RemarksLines>
+			</OtherRemarks>
+		</SummaryDetails>
+	</Confirmation>
+</Booking>

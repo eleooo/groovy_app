@@ -11,8 +11,13 @@ class XmlToBeanSplit2 {
 	static Set<String> elementFlag = new HashSet<String>();
 	static Set<String> elementAttrFlag = new HashSet<String>();
 	static Set<String> multiElementList = [];
+	//add multiElementList class
 	static boolean NodeFlag=true
+	//create FileName
 	static String FileName
+
+	//duplication name'
+	static Set<String> ElementList = new HashSet<String>();
 
 	static Map<String,Set<String>> AdapterFlag = new HashMap<String,Set<String>>()
 	
@@ -34,7 +39,7 @@ class XmlToBeanSplit2 {
 //		String xslName = "in.xml"
 //		String xslName = "ack.xml"
 //		String xslName = "siCS2xml.xml"
-		String xslName = "bl.xml"
+		String xslName = "EDI_CS_IFTMCS.xml"
 
 		File file = new File("""input/${xslName}""");
 		String xsl = file.text
@@ -61,20 +66,37 @@ class XmlToBeanSplit2 {
 	//	println AdapterFlag
 		nodeAddAdapter(AdapterFlag,pmtSb)
 
-	//	println '之前'+multiElementList
+		println '之前'+multiElementList
+
+
+		for(i in 0..<multiElementList.size()){
+			String temp=multiElementList[0]
+			multiElementList.remove(temp)
+			multiElementList.add(temp.replace("cs:",""))
+		}
+		println '去命名空间'+multiElementList
+
+		//elementFlag.clear()
+		//elementAttrFlag.clear()
+
+
+		//标记是否重名
+		//getmultiElementList(document.getDocumentElement())
+		//添加父节点
+	//	println "加父节点"+multiElementList
+
 		for(i in 0..<multiElementList.size()){
 			String temp=multiElementList[0]
 			multiElementList.remove(temp)
 			multiElementList.add('"'+temp.replace("cs:","")+'"')
 		}
-
+		println '加引号'+multiElementList
 		String pmtSbString=pmtSb.toString().replace("1111111111111111111111111111111111------1111111111111111111111111111111111111111","\tpublic static final Set<String> MultiElementList = "+multiElementList)
 		//pmtSb
 
-
 		System.setOut(new PrintStream(new File("""src/cs/"""+FileName+""".groovy""")))
 		println pmtSbString
-		//println 'commonSb '+commonSb.toString()
+		println commonSb.toString()
 
 
 
@@ -102,6 +124,7 @@ class XmlToBeanSplit2 {
 		NodeList allNodes=node.getChildNodes();
 		int size=allNodes.getLength();
 
+		//如果不存在这个节点的名字 下面开始生成这个对于的classs了
 		if(!elementFlag.contains(rNodeName)){
 			elementFlag.add(rNodeName)
 			//println 'node.getNodeType() '+node.getNodeType()
@@ -145,7 +168,6 @@ class XmlToBeanSplit2 {
 						}
 					}
 				}
-			
 			}
 			//println 'pmtSb '+pmtSb
 			//add childNode
@@ -223,10 +245,15 @@ class XmlToBeanSplit2 {
 											attr_Set.add(attrName)
 										}
 									}
-									if(attr_Set!=null && !childNodeName.contains('cs:')){
+									if(attr_Set!=null){
 										attr_Set.add(childNodeName)
 										AdapterFlag.put(childNodeName,attr_Set)
 									}
+
+//									if(attr_Set!=null && !childNodeName.contains('cs:')){
+//										attr_Set.add(childNodeName)
+//										AdapterFlag.put(childNodeName,attr_Set)
+//									}
 									
 //									if(map.get(childNodeName) > 0 && !flag.contains(childNodeName)) {
 //										flag.add(childNodeName)
@@ -384,10 +411,8 @@ class XmlToBeanSplit2 {
 	public static void getmultiElementList(org.w3c.dom.Node node){
 
 		Map<String,Integer> map = new HashMap<String, Integer>();
-		//childNode flag
-		Set<Boolean> flag ;
+		Set<Boolean> flag = new HashSet<Boolean>();
 
-		//childNode attributes
 
 		String rNodeName=node.getNodeName();
 
@@ -396,17 +421,55 @@ class XmlToBeanSplit2 {
 
 		if(!elementFlag.contains(rNodeName)){
 			elementFlag.add(rNodeName)
-			//add childNode
+
 			if(size>0){
-				//add multiElementList
-				for(int i=0;i<size;i++){
-					org.w3c.dom.Node childNode=allNodes.item(i);
+
+//				StringBuffer tmpSB = new StringBuffer();
+				for(int j=0;j<size;j++){
+					org.w3c.dom.Node childNode=allNodes.item(j);
+
 					if(childNode.getNodeType()==org.w3c.dom.Node.ELEMENT_NODE){
 						String childNodeName = childNode.getNodeName()
-						if(map.containsKey(childNodeName)){
-							map.put(childNodeName, map.get(childNodeName) + 1)
-						}else{
-							map.put(childNodeName, 0)
+						//该节点没有子节点 而且没有属性
+						if(childNode.getChildNodes().getLength() <=1 && !childNode.hasAttributes()){
+							if(!flag.contains(childNodeName)){
+								if(childNode.parentNode.getNodeName().contains("cs:")) {
+									if (childNodeName.contains("cs:")) {
+										if (multiElementList.contains(childNodeName.replace("cs:", ""))) {
+											multiElementList.remove(childNodeName.replace("cs:", ""))
+											multiElementList.add(childNode.parentNode.getNodeName().replace("cs:", "") + "." + childNodeName.replace("cs:", ""))
+										}
+									}else{
+										if (multiElementList.contains(childNodeName)) {
+											multiElementList.remove(childNodeName)
+											multiElementList.add(childNode.parentNode.getNodeName() + "." + childNodeName)
+										}
+									}
+								} else {
+									if (multiElementList.contains(childNodeName)) {
+										multiElementList.remove(childNodeName)
+										multiElementList.add(childNode.parentNode.getNodeName() + "." + childNodeName)
+									}
+								}
+							}
+						} else{
+							if(map.get(childNodeName) > 0 && !flag.contains(childNodeName)) {
+								flag.add(childNodeName)
+							} else if(!flag.contains(childNodeName)){
+								if(childNode.parentNode.getNodeName().contains("cs:")) {
+									if (childNodeName.contains("cs:")) {
+										if (multiElementList.contains(childNodeName.replace("cs:", ""))) {
+											multiElementList.remove(childNodeName.replace("cs:", ""))
+											multiElementList.add(childNode.parentNode.getNodeName().replace("cs:", "") + "." + childNodeName.replace("cs:", ""))
+										}
+									}
+								} else {
+									if (multiElementList.contains(childNodeName)) {
+										multiElementList.remove(childNodeName)
+										multiElementList.add(childNode.parentNode.getNodeName() + "." + childNodeName)
+									}
+								}
+							}
 						}
 					}
 				}
@@ -421,11 +484,9 @@ class XmlToBeanSplit2 {
 					flag.add(childNodeName);
 					getmultiElementList(childNode);
 				}
-			}
-		}
 
-		if(map.findAll{it.value > 0}){
-			multiElementList.addAll(map.findAll{it.value > 0}.keySet())
+			}
+
 		}
 	}
 
